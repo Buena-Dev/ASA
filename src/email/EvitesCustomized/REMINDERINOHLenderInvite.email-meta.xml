@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>false</available>
+    <description>REMINDER:  IN &amp; OH Lender Invite</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>BlankLetterhead</letterhead>
+    <name>REMINDER:  IN &amp; OH Lender Invite</name>
+    <style>freeForm</style>
+    <subject>Still time to register for ASA&apos;s Partnership Dialogue Series!</subject>
+    <textOnly>Dear {!Contact.FirstName},
+
+It&apos;s not too late for you to RSVP to participate in ASA&apos;s Partnership Dialogue Series: A Focus on Consolidation.
+
+As part of our Partnership Dialogue Series, we’re proud to host an exchange among our colleagues in Indiana and Ohio on February 6th and 7th.  This series will afford you the opportunity to join in an interactive presentation on consolidation loans followed by small round table discussions.  Hear what schools have to say about one of the hottest topics affecting financial aid offices.  We will then spend some time in the afternoon discussing why the guarantor chosen by a school matters, and how we can better partner with our Strategic Lender Partners.  
+
+ 
+Agenda:
+08:30 – 09:00    Continental Breakfast (schools &amp; lenders)
+09:00 – 12:00    Discussion and Exchange of Ideas (schools &amp; lenders)
+12:00 – 01:00    Lunch (schools &amp; lenders)
+01:00 – 03:00    Understanding ASA (lenders only)
+
+Tuesday, February 6, 2007
+Hilton Garden Inn Hotel Indianapolis/Carmel Indiana
+13090 N. Pennsylvania Street
+Carmel, IN 46032
+
+Wednesday, February 7, 2007
+Crowne Plaza Hotel
+600 Metro Place North
+Dublin, OH 43017
+
+Please RSVP by emailing or calling me.  I hope you are able to join us, and look forward to seeing you there.
+
+Thank you,
+Nancy 
+ 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Nancy M. Jordan
+Manager of Strategic Lender Partnerships
+American Student Assistance
+800.999.9080 x.4677
+617.728.4677 direct
+617.645.2225 cell
+njordan@amsa.com  
+www.amsa.com 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The content of the e-mail is confidential and proprietary to American Student Assistance. It is intended only for the above-named individual or entity and for the purpose indicated and may not be reproduced or distributed without permission of the sender. Please notify the sender or ASA if you received this e-mail in error.</textOnly>
+    <type>html</type>
+</EmailTemplate>

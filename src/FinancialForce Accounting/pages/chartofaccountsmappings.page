@@ -1,0 +1,110 @@
+<apex:page standardController="c2g__ChartOfAccountsMapping__c" extensions="c2g.ChartOfAccountsMappingController" sidebar="false" showHeader="true" standardStylesheets="false" docType="html-5.0">	
+	<!-- User Locale -->
+    <c:fflib_bridgeUserInfo />
+
+    <!-- ExtJS Application -->
+    <c:fflib_extBootstrap applicationName="ChartOfAccountsMappings" staticResource="{!$Resource.c2g__ChartOfAccountsMappings}" developmentPrefix="{!$Setup.ClientDeveloperSettings__c.ResourcePrefix__c}" frameworkPath="../../ext">
+    	<c:TranslationHelper />
+    	<script>
+			window.$RemoteAction = window.$RemoteAction || {};
+			window.$Params = window.$Params || {};
+			window.$Label = window.$Label || {};
+			window.$Global = window.$Global || {};
+			
+			/** Remote Actions **/
+			$RemoteAction.ChartOfAccountsMappingController = $RemoteAction.ChartOfAccountsMappingController || {};
+			$RemoteAction.ChartOfAccountsMappingController.saveMappings = '{!$RemoteAction.ChartOfAccountsMappingController.saveMappings}';
+			$RemoteAction.ChartOfAccountsMappingController.getMappingHistory = '{!$RemoteAction.ChartOfAccountsMappingController.getMappingHistory}';
+			$RemoteAction.ChartOfAccountsMappingController.getAllLocalGLAs = '{!$RemoteAction.ChartOfAccountsMappingController.getAllLocalGLAs}';
+			$RemoteAction.ChartOfAccountsMappingController.getSavedMappings = '{!$RemoteAction.ChartOfAccountsMappingController.getSavedMappings}';
+			
+			/** Labels **/
+			//Toolbar
+			$Label.Title = '{!JSENCODE($Label.ChartOfAccountsMappingsPageTitle)}';
+			$Label.Save = '{!JSENCODE($Label.SaveButton)}';
+			$Label.Back = '{!JSENCODE($Label.BackPage)}';
+			$Label.Search = '{!JSENCODE($Label.Search)}';
+			$Label.SaveMessage = '{!JSENCODE($Label.ChartOfAccountsMappingsPageSaveMessage)}';
+			$Label.NoRecordFound = '{!JSENCODE($Label.ChartOfAccountsMappingsPageNoRecordFound)}';
+			$Label.ExportMappings = '{!JSENCODE($Label.ChartOfAccountsMappingsPageExportMappings)}';			
+			$Label.DataExportAsExcel = '{!JSENCODE($Label.DataExportAsExcel)}';
+			$Label.DataExportAsPDF = '{!JSENCODE($Label.DataExportAsPDF)}';
+			$Label.DataExportAsCSV = '{!JSENCODE($Label.DataExportAsCSV)}';
+			$Label.GoBackConfirmation = '{!JSENCODE($Label.ChartOfAccountsMappingsPageGoBackConfirmation)}';			
+			$Label.Yes = '{!JSENCODE($Label.Yes)}';
+			$Label.No = '{!JSENCODE($Label.No)}';
+			
+			//GLAs grid
+			$Label.CorporateGLAsTitle = '{!JSENCODE($Label.ChartOfAccountsMappingsPageCorporateGLAsTitle)}';
+			$Label.LocalGLAsTitle = '{!JSENCODE($Label.ChartOfAccountsMappingsPageLocalGLAsTitle)}';
+			$Label.Name = '{!JSENCODE($ObjectType.codaGeneralLedgerAccount__c.fields.Name.label)}';
+			$Label.Type = '{!JSENCODE($ObjectType.codaGeneralLedgerAccount__c.fields.Type__c.label)}';
+			$Label.ChartOfAccount = '{!JSENCODE($ObjectType.codaGeneralLedgerAccount__c.fields.ChartOfAccountsStructure__c.label)}';
+			$Label.TrialBalance1 = '{!JSENCODE($ObjectType.codaGeneralLedgerAccount__c.fields.TrialBalance1__c.label)}';
+			$Label.ReportingCode = '{!JSENCODE($ObjectType.codaGeneralLedgerAccount__c.fields.ReportingCode__c.label)}';		
+			
+			//Mapping grid
+			$Label.CorporateGLA = '{!JSENCODE($ObjectType.ChartOfAccountsMapping__c.fields.CorporateGLA__c.label)}';
+			$Label.LocalGLA = '{!JSENCODE($ObjectType.ChartOfAccountsMapping__c.fields.LocalGLA__c.label)}';
+			$Label.CreatedOn = '{!JSENCODE($Label.ChartOfAccountsMappingsPageCreatedOn)}';
+			$Label.CreatedMappingsTitle = '{!JSENCODE($Label.ChartOfAccountsMappingsPageCreatedMappingsTitle)}';
+			
+			//Mapping History grid
+			$Label.Action = '{!JSENCODE($ObjectType.ChartOfAccountsMappingHistory__c.fields.Action__c.label)}';
+			$Label.Field = '{!JSENCODE($ObjectType.ChartOfAccountsMappingHistory__c.fields.Field__c.label)}';
+			$Label.NewValue = '{!JSENCODE($ObjectType.ChartOfAccountsMappingHistory__c.fields.NewValue__c.label)}';
+			$Label.OldValue = '{!JSENCODE($ObjectType.ChartOfAccountsMappingHistory__c.fields.OldValue__c.label)}';
+			$Label.Reason = '{!JSENCODE($ObjectType.ChartOfAccountsMappingHistory__c.fields.Reason__c.label)}';
+			$Label.MappingsHistoryTitle = '{!JSENCODE($Label.ChartOfAccountsMappingsHistoryTitle)}';
+			
+			//GLAs details
+			$Label.GLADetailsTitle = '{!JSENCODE($Label.ChartOfAccountsMappingsPageGLADetailsTitle)}';
+			$Label.NoMappingSelected = '{!JSENCODE($Label.ChartOfAccountsMappingsPageNoMappingSelected)}';
+			$Label.Date = '{!JSENCODE($Label.ByDate)}';
+			
+			//Dimensions
+			$Label.DimensionsTitle = '{!JSENCODE($Label.ChartOfAccountsMappingsPageDimensionsTitle)}';
+			$Label.Dimension = '{!JSENCODE($Label.Dimension)}';
+			$Label.Value = '{!JSENCODE($Label.Value)}';
+			$Label.NotApplicable = '{!JSENCODE($Label.NotApplicable)}';
+			$Label.Dimension1 = '{!JSENCODE($Label.codaDimension1)}';
+			$Label.Dimension2 = '{!JSENCODE($Label.codaDimension2)}';
+			$Label.Dimension3 = '{!JSENCODE($Label.codaDimension3)}';
+			$Label.Dimension4 = '{!JSENCODE($Label.codaDimension4)}';
+			$Label.ChartOfAccountsMappingDimensionNotSelected = '{!JSENCODE($Label.ChartOfAccountsMappingDimensionNotSelected)}';
+			$Label.ChartOfAccountsMappingCorporateConflict = '{!JSENCODE($Label.ChartOfAccountsMappingCorporateConflict)}';
+			$Label.ChartOfAccountsMappingLocalConflict = '{!JSENCODE($Label.ChartOfAccountsMappingLocalConflict)}';
+			$Label.MappingExistForCorporateGLADimensionsAndCOA = '{!JSENCODE($Label.ChartOfAccountsMappingExistForCorporateGLADimensionsAndCOA)}';
+			$Label.ChartOfAccountsMappingExist = '{!JSENCODE($Label.ChartOfAccountsMappingExist)}';
+			$Label.ChartOfAccountMappingExistsForLocalGLAAndDimension = '{!JSENCODE($Label.ChartOfAccountMappingExistsForLocalGLAAndDimension)}';
+			
+			//Windows
+        	$Label.ChartOfAccountsMappingsDeleteConfirmation = '{!JSENCODE($Label.ChartOfAccountsMappingsDeleteConfirmation)}';
+        	$Label.ChartOfAccountsMappingHasBeenDeleted = '{!JSENCODE($Label.ChartOfAccountsMappingHasBeenDeleted)}';
+        	$Label.ChartofAccountsMappingDimensionFieldMandatoryToEdit = '{!JSENCODE($Label.ChartofAccountsMappingDimensionFieldMandatoryToEdit)}';
+        	$Label.Cancel = '{!JSENCODE($Label.codaCancel)}';
+        	$Label.Delete = '{!JSENCODE($Label.codaDeleteButton)}';
+        	$Label.Undo = '{!JSENCODE($Label.UndoButton)}';
+        	$Label.EditMappingTitle = '{!JSENCODE($Label.EditMappingTitle)}';
+        	$Label.DeleteMappingTitle = '{!JSENCODE($Label.DeleteMappingTitle)}';
+        	$Label.ChartOfAccountsMappingReasonMandatory = '{!JSENCODE($Label.ChartOfAccountsMappingReasonMandatory)}';
+			
+			/** Params **/
+            $Params.dateFormat = '{!JSENCODE(SenchaDateLocaleFormat)}';
+            $Params.CorporateGLAs = '{!JSENCODE(CorporateGLAs)}';
+            $Params.HasCreatePermissions = Boolean({!hasCreatePermissions});
+            $Params.HasUpdatePermissions = Boolean({!hasUpdatePermissions});        
+			$Params.ReturnURL = '{!JSENCODE(returnURL)}';  
+            $Params.AlternateAccountFeatureActiveStatus = Boolean ({!alternateAccountFeatureActiveStatus});
+            $Params.ErrorMessageWhenAlternateChartOfAccountFeatureDeactive = '{!JSENCODE(ErrorMessageWhenAlternateChartOfAccountFeatureDeactive)}';
+			$Params.Dimensions1 = '{!JSENCODE(Dimensions1)}';
+			$Params.Dimensions2 = '{!JSENCODE(Dimensions2)}';
+			$Params.Dimensions3 = '{!JSENCODE(Dimensions3)}';
+			$Params.Dimensions4 = '{!JSENCODE(Dimensions4)}';
+			$Params.DIMENSION_TYPE_VALUE_SEPARATOR  = '{!JSENCODE(DIMENSION_TYPE_VALUE_SEPARATOR)}';
+			$Params.RECORDS_ROW_LIMIT  = {!RECORDS_ROW_LIMIT};
+			$Params.PARAM_REPORT_TYPE  = '{!JSENCODE(PARAM_REPORT_TYPE)}';
+			$Params.ExportURL = '{!JSENCODE(exportURL)}';
+		</script>
+	</c:fflib_extBootstrap>
+</apex:page>

@@ -1,0 +1,96 @@
+<!-- codaamendcreditnoteheader.page -->
+<apex:page standardController="c2g__codaCreditNote__c" extensions="c2g.CODAHelpLoaderController,c2g.CODAAmendCreditNoteController">
+	<script src="{!URLFOR($Resource.coda2go,'coda2go/web/script/lib.js')}" type="text/javascript"></script>	
+	<apex:stylesheet value="{!URLFOR($Resource.c2g__coda2go,'coda2go/web/css/style.css')}"/>
+	<script>
+		var CODA2GoButtons = new CODA2GoPage();
+		var CODA2GoBtnSaveValue = "{!$Label.codaPageCreditNoteViewProcessing}";
+	</script>
+	<apex:form onsubmit="if(CODA2GoButtons.disableSaveButtons){ return CODA2GoButtons.disableSaveButtons(); }">
+		
+		<!-- Header -->
+		<apex:sectionHeader title="{!$Label.c2g__codapagecreditnoteamenddocument}" subtitle="{!viewState.dto.Name}" help="{!redirectForHelp1021}"/>		
+		
+		<!-- CreditNote Detail -->
+		<apex:pageBlock title="{!$Label.c2g__codapagecreditnoteviewcreditnotedetail2}">			
+			<apex:pageBlockButtons >				
+				<apex:commandButton value="{!$Label.c2g__codapagecreditnoteamendsave}" action="{!amend}" id="amend_h" styleclass="hiddensubmit"/>
+				<apex:commandButton value="{!$Label.c2g__codapagecreditnoteamendcancel}" action="{!cancel}" id="cancel_h" styleclass="hiddensubmit" immediate="true" reRender=""/>
+				<apex:commandButton value="{!$Label.c2g__codapagecreditnoteamendsave}" id="amend" 
+					onclick="document.getElementById('{!$Component.amend_h}').click();return false;" rerender="" rendered="{!!viewState.HasErrors}"/>				
+				<apex:commandButton value="{!$Label.c2g__codapagecreditnoteamendcancel}" id="cancel" rerender="" 
+					onclick="if(!CODA.queing()){document.getElementById('{!$Component.cancel_h}').click()};return false;"/>
+				<script>
+	                if (document.getElementById("{!$Component.amend}"))
+	                	CODA2GoButtons.initButtons(["{!$Component.amend}","{!$Component.cancel}"]);
+	                else
+	                	CODA2GoButtons.initButtons(["{!$Component.cancel}"]);
+				</script>
+			</apex:pageBlockButtons>
+			
+			<!-- Messages -->
+			<apex:PageMessages />
+
+			<apex:pageBlockSection title="{!$Label.c2g__codapagecreditnoteviewaccountdetail}" rendered="{!!viewstate.HasErrors}">								
+				<!-- Account Detail -->																
+				<apex:outputField value="{!viewState.dto.c2g__Account__c}"/>																	
+				<apex:pageBlockSectionItem >
+					<apex:outputLabel value="{!$Label.c2g__codapageopportunityconvertopportunity}"/>
+					<apex:outputField value="{!viewState.dto.c2g__Opportunity__c}"/>
+				</apex:pageBlockSectionItem>  						
+				<apex:pageBlockSectionItem rendered="{!viewstate.isSalesAndUse}">
+					<apex:outputLabel value="{!$Label.c2g__codapagecreditnoteviewtaxcodes}"/>										
+					<apex:outputText value="{!viewstate.taxCodesAsString}"/>
+				</apex:pageBlockSectionItem> 
+				<apex:pageBlockSectionItem rendered="{!viewstate.isSalesAndUse}">&nbsp;</apex:pageBlockSectionItem>				 							
+				<apex:pageBlockSectionItem >
+					<apex:outputLabel value="{!$Label.c2g__codapagecreditnoteviewinvoicenumber}"/>
+					<apex:outputField value="{!viewState.dto.c2g__Invoice__c}"/>
+				</apex:pageBlockSectionItem>
+				<apex:pageBlockSectionItem >
+					<apex:outputLabel value="{!$Label.c2g__codapagecreditnoteviewbillingaddress}"/>
+					<apex:outputPanel >
+						<apex:outputText value="{!viewstate.billingAddress.fullAddress}"/>&nbsp;
+					</apex:outputPanel>
+				</apex:pageBlockSectionItem>
+				<apex:pageBlockSectionItem >
+					<apex:outputLabel value="{!$Label.c2g__codapagecreditnoteviewshippingaddress}"/>
+					<apex:outputPanel >
+						<apex:outputText value="{!viewstate.shippingAddress.fullAddress}"/>&nbsp;
+					</apex:outputPanel>
+				</apex:pageBlockSectionItem>
+				<apex:pageBlockSectionItem >
+					<apex:outputLabel value="{!$Label.c2g__codapagecreditnoteviewinvoiceemail}"/>
+					<apex:outputText value="{!viewstate.account.Dto.c2g__CODAInvoiceEmail__c}"/> 					
+				</apex:pageBlockSectionItem>
+			</apex:pageBlockSection>		
+			
+			<!-- CreditNote Detail -->
+			<apex:pageBlockSection title="{!$Label.c2g__codapagecreditnoteviewcreditnotedetail3}" rendered="{!!viewstate.HasErrors}">	
+				<apex:outputField value="{!viewState.dto.Name}"/>
+				<apex:outputField value="{!viewState.dto.c2g__Transaction__c}"/>
+				<apex:outputField value="{!viewState.dto.c2g__CreditNoteDate__c}"/>								
+				<apex:outputField value="{!viewState.dto.c2g__Period__c}"/>															
+				<apex:pageBlockSectionItem >
+					<apex:outputLabel value="{!$Label.c2g__codapagecreditnoteviewcustomerreferenc}"/>
+					<apex:outputPanel >
+						<apex:inputField id="customerReference" value="{!viewState.dto.c2g__CustomerReference__c}"/>&nbsp;
+					</apex:outputPanel>
+				</apex:pageBlockSectionItem>				
+				<apex:inputField value="{!viewState.dto.c2g__DueDate__c}"/>
+				<apex:inputField value="{!viewState.dto.c2g__CreditNoteReason__c}"/>	
+				<apex:pageBlockSectionItem id="currencyblock">
+					<apex:outputLabel value="{!$Label.c2g__codapageinvoiceamendinvoicecurrency}"/>
+					<apex:outputText value="{!viewState.creditNoteCurrency.Name}"/>
+				</apex:pageBlockSectionItem>
+				<apex:pageBlockSectionItem rendered="{!viewstate.isConvertedFromInvoice}">
+					<apex:outputLabel value="{!$Label.c2g__codapagecreditnoteviewinvoicedate}"/>
+					<apex:outputField value="{!viewState.dto.c2g__InvoiceDate__c}"/>
+				</apex:pageBlockSectionItem>															
+			</apex:pageBlockSection>
+			
+			<!-- Notes and Analysis -->
+			<c:SubAnalysis record="{!viewState.dto}" title="{!$Label.c2g__codanotesandanalysis}" id="headerDimensionBlock" readOnly="false" amend="true" override-desc="CreditNoteDescription__c" rendered="{!!viewstate.hasErrors}"/>
+		</apex:pageBlock>
+	</apex:form>
+</apex:page>

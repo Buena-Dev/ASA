@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>false</available>
+    <description>Idaho Professional Development Day</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>BlankLetterhead</letterhead>
+    <name>Register Now - Idaho PDD</name>
+    <style>freeForm</style>
+    <subject>Register Now - Idaho PDD</subject>
+    <type>html</type>
+</EmailTemplate>

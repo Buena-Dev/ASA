@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Account$Name</field>
+    </columns>
+    <columns>
+        <field>Account.Opportunities$StageName</field>
+    </columns>
+    <columns>
+        <field>Account.Opportunities$CloseDate</field>
+    </columns>
+    <columns>
+        <field>Account$Description</field>
+    </columns>
+    <columns>
+        <field>Account$Owner</field>
+    </columns>
+    <columns>
+        <field>Account.Opportunities$NextStep</field>
+    </columns>
+    <description>This report rolls up Member Benefits: Content, Capability, Career, Personal/Self Discovery</description>
+    <filter>
+        <criteriaItems>
+            <column>Account$RecordType</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Account.Strategic_Partner</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account$Type</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Strategic Partnership</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Member Benefits (Roll Up)</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Accounts_and_Opps__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <sortColumn>Account$Name</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>Account$Contract_End__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

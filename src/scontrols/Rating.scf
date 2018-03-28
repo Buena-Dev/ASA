@@ -1,0 +1,6 @@
+&lt;script language=&quot;JavaScript&quot;&gt;
+function redirect() {
+parent.frames.location.replace(&quot;/006/e?retURL=%2F006%2Fo&amp;RecordType=001300000082uXQ&amp;00N30000000hWci={!Account.Rating}
+}
+redirect();
+&lt;/script&gt;

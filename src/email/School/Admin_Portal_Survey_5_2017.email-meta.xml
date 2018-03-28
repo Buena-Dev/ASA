@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Salt_School_Channel</letterhead>
+    <name>Admin Portal Survey 5-2017</name>
+    <style>freeForm</style>
+    <subject>Salt Administrator Portal Survey</subject>
+    <textOnly>Dear {!Receiving_User.FirstName}:
+
+
+Thank you for registering to use to the Salt Administrator Portal.
+
+As we continue to develop and add new features to the Admin Portal we’d love to get your input on how we’re doing so far. Please take this short survey (http://app.keysurvey.com/f/1134406/87f5/) to provide us feedback on the Admin Portal and what additional features you might want to see added.
+
+
+Thank You,
+
+Salt Admin Portal Team</textOnly>
+    <type>html</type>
+</EmailTemplate>

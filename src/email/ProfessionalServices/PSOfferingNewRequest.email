@@ -1,0 +1,7 @@
+{!Pro_Services_Offering__c.PS_OfferingRequestedBy__c} has requested that an event on the topic "{!Pro_Services_Offering__c.PS_OfferingTopic__c}" be scheduled on {!Pro_Services_Offering__c.PS_OfferingTargetDate__c}.  
+
+Event Name:  {!Pro_Services_Offering__c.Name}
+Delivery Method: {!Pro_Services_Offering__c.PS_OfferingDeliveryMethod__c}
+Requested Presenter: {!Pro_Services_Offering__c.PS_OfferingRequestedPresenter__c}
+
+{!Pro_Services_Offering__c.Link}

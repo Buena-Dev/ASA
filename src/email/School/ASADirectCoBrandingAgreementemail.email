@@ -1,0 +1,14 @@
+<table width="600" cellpadding="5" height="400" border="0" cellspacing="5" >
+<tr height="50" valign="top" >
+<td locked="0" style=" font-family:arial; bLabel:main; color:#000000; font-size:12pt; bEditID:r3st1; background-color:#FFFFFF;" aEditID="c1r1" tEditID="c1r1" >
+<![CDATA[<SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: Arial">Dear {!Contact.FirstName},</SPAN>]]></td>
+</tr>
+<tr height="300" valign="top" >
+<td locked="0" style=" font-family:arial; bLabel:main; color:#000000; font-size:12pt; bEditID:r3st1; background-color:#FFFFFF;" aEditID="c1r2" tEditID="c1r2" >
+<![CDATA[<FONT face=Geneva,Arial,Sans-Serif><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: Arial">Thank you for your intest in branding ASA Direct for {!Account.Name}.&nbsp; Attached is a copy of the ASA Direct Co-Branding Agreement.&nbsp;This agreement has to be completed, signed and returned to&nbsp;American Student Assistance&nbsp;by {!Account.Name} before we can start branding ASA Direct with your school's graphic, colors and text elements.<BR><BR>Once the agreement has been executed, ASA will then create the school-branded site and provide you with the URL.<BR><BR>Please feel free to contact me if you have any questions about branding ASA Direct for <SPAN style="mso-field-code: ' MERGEFIELD  ACCOUNT_NAME  * MERGEFORMAT '"><SPAN style="mso-no-proof: yes">«ACCOUNT_NAME».<BR><BR><BR>Sincerely,<BR><BR>{!User.Name}<BR>{!User.Title}<BR>American Student Assistance<BR>{!User.Phone}<BR>{!User.Email}<BR><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: Arial"><A title=http://www.amsa.com/ href="http://www.amsa.com/"><SPAN style="FONT-SIZE: 12pt; COLOR: purple; FONT-FAMILY: 'Times New Roman'">http://www.amsa.com</SPAN></A><BR><?xml:namespace prefix = o ns = "urn:schemas-microsoft-com:office:office" /><o:p><BR></o:p></SPAN></SPAN></SPAN></SPAN></FONT>]]></td>
+</tr>
+<tr height="50" valign="top" >
+<td locked="0" style=" font-family:arial; bLabel:main; color:#000000; font-size:12pt; bEditID:r3st1; background-color:#FFFFFF;" aEditID="c1r3" tEditID="c1r3" >
+<![CDATA[<P><FONT size=2>The content of the e-mail is confidential and propietary to American Student Assistance. It is intended only for the above-named individual or entity and for the purpose indicated and may not be reproduced or distributed without permission of the sender.&nbsp;Please notify the sender or ASA if you received this e-mail in error.</FONT></P>]]></td>
+</tr>
+</table>

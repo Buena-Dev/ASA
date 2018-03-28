@@ -1,0 +1,10 @@
+<table width="550" cellpadding="5" height="400" border="0" cellspacing="5" >
+<tr height="400" valign="top" >
+<td locked="0" style=" font-family:arial; bLabel:main; color:#000000; font-size:12pt; bEditID:r3st1; background-color:#FFFFFF;" aEditID="c1r1" tEditID="c1r1" >
+<![CDATA[<P><BR>Dear {!Contact.FirstName},</P>
+<P>On behalf of American Student Assistance, thank you for taking time out of your busy schedule to attend the&nbsp;NYSFAAA Region 4 &amp; 5 Novice Training Event.&nbsp; Now that you’ve returned to the office, you’re probably thinking about ways you can make the upcoming year less stressful for your students and your staff.&nbsp; I would like to take this opportunity to tell you how we can assist you in that goal.&nbsp; </P>
+<P>American Student Assistance has developed a comprehensive series of trainings and workshops on topics that matter most to the financial aid professional.&nbsp; We’ve designed our trainings with your needs in mind.&nbsp; All ASA trainings are offered free of charge to schools and partners because we know that budgets are tight.&nbsp; ASA courses are perfect for state association events, staff retreats, and office planning days.&nbsp; We can also design customized trainings to meet your institution’s specific needs.</P>
+<P>If you are interested in learning more about ASA or would like to schedule an individual training at your institution, we invite you to view our website at <A href="http://www.amsa.com">www.amsa.com</A> or feel free to contact me directly if you have any questions.&nbsp; I look forward to speaking with you soon.</P>
+<P>Sincerely,<BR><BR>{!Contact.OwnerFullName}<BR>{!Contact.OwnerTitle}<BR>{!Contact.OwnerPhone}<BR>American Student Assistance<BR><BR></P>]]></td>
+</tr>
+</table>

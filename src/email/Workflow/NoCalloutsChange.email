@@ -1,0 +1,16 @@
+{!Account.Name} (OE Code: {!Account.OE_Code__c}) has changed their "No Call Outs" response on their account. 
+
+The new value for No Call Outs = {!Account.00N30000000sqbq} *
+
+*  0 = Call Outs Permitted
+   1 = No Call Outs
+
+Launch the link to review {!Account.Name}'s account: {!Account.Link}. 
+
+
+
+Changed by:
+{!User.Name} 
+{!User.Phone} 
+
+via Salesforce

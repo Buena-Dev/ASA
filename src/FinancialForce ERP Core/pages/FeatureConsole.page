@@ -1,0 +1,111 @@
+<apex:page tabStyle="FeatureConsole__tab" controller="fferpcore.FeatureConsoleController">
+    <apex:stylesheet value="{!URLFOR($Resource.fferpcore__FeatureConsole,'stylesheets/featureconsole.css')}"/>
+    <apex:sectionHeader title="{!$Label.fferpcore__featureconsole}" help="{!helpUrl}"/>
+
+    <c:RemoteSiteVerifier siteUrl="{!MetadataApiUrl}"
+        siteName="{!$Label.fferpcore__remotesitemetadataapiname}"
+        siteDescription="{!$Label.fferpcore__remotesitemetadataapidescription}"
+        message="{!RemoteSiteVerifierFeatureConsoleNeedsAccessMessage}"
+        rendered="{!NOT(IsRemoteSiteSettingConfigured)}"/>
+
+    <apex:form >
+
+        <!-- *** LOADING INDICATOR *** -->
+
+        <c:fflib_LoadIndicator startLoadFn="startLoad" stopLoadFn="stopLoad"/>
+
+        <!-- *** ANALYTICS *** -->
+
+        <c:fflib_AnalyticsAgent />
+
+        <!-- *** FEATURES *** -->
+    
+        <apex:pageBlock title="{!$ObjectType.fferpcore__FeatureConsoleFeature__mdt.LabelPlural}">
+
+            <!-- *** FILTERS *** -->
+            <apex:pageBlockSection title="{!$Label.fferpcore__featureconsolefilters}" columns="1">
+                <apex:outputPanel styleClass="ffdc-fc-filters">
+                    <!-- Filters -->
+                    <apex:outputLabel value="{!$Label.fferpcore__featureconsoleenablementstatus}"/>
+                    <apex:selectList value="{!selectedFilterStatus}" multiselect="false" size="1">
+                        <apex:selectOptions value="{!filtersStatus}"/>
+                    </apex:selectList>
+                    <!-- Filter buttons -->
+                    <apex:commandButton value="{!$Label.fferpcore__featureconsolefilterapply}"
+                        action="{!applyFilters}"
+                        rerender="featuresPanel"
+                        onclick="startLoad('{!$Label.fferpcore__featureconsoleloadstartapplyfilter}');"
+                        oncomplete="stopLoad('{!$Label.fferpcore__featureconsoleloadstartapplyfilter}', '{!$Label.fferpcore__featureconsoleloadstopapplyfilter}');"
+                    />
+                    <apex:commandButton value="{!$Label.fferpcore__featureconsolefilterclear}"
+                        action="{!resetFilters}"
+                        rerender="featuresPanel"
+                        onclick="startLoad('{!$Label.fferpcore__featureconsoleloadstartclearfilter}');"
+                        oncomplete="stopLoad('{!$Label.fferpcore__featureconsoleloadstartclearfilter}', '{!$Label.fferpcore__featureconsoleloadstopclearfilter}');"
+                    />
+                </apex:outputPanel>
+            </apex:pageBlockSection>
+
+            <apex:pageBlockSection title="{!$ObjectType.fferpcore__FeatureConsoleFeature__mdt.LabelPlural}" columns="1" id="featuresPanel">
+
+                <!-- *** ACTUAL FEATURES *** -->
+                <apex:pageBlockTable value="{!displayFeatures}" var="feature">
+                    <apex:column headerValue="{!$ObjectType.fferpcore__FeatureConsoleFeatureStep__mdt.fields.fferpcore__Feature__c.Label}">
+                        <apex:commandLink action="{!goToFeature}" value="{!feature.Record.MasterLabel}">
+                            <apex:param name="targetFeature" value="{!feature.Record.Id}" assignTo="{!TargetFeature}"/>
+                        </apex:commandLink>
+                    </apex:column>
+                    <apex:column headerValue="{!$ObjectType.fferpcore__FeatureConsoleFeature__mdt.fields.fferpcore__FeatureDescription__c.Label}" value="{!feature.Description}"/>
+                    <apex:column headerValue="{!$Label.fferpcore__featureconsoleenablementstatus}" styleClass="ffdc-fc-status-column ffdc-fc-feature-status">
+                        <apex:outputLabel value="{!$Label.fferpcore__featureconsolefilteroptionstatusdisabled}" styleClass="ffdc-fc-feature-status-off {!IF(feature.IsActive, 'ffdc-fc-hidden', '')}"/>
+                        <apex:outputLabel value="{!$Label.fferpcore__featureconsolefilteroptionstatusenabled}" styleClass="ffdc-fc-feature-status-on {!IF(feature.IsActive, '', 'ffdc-fc-hidden')}"/>
+                    </apex:column>
+                    <apex:column styleClass="ffdc-fc-status-column">
+                        <apex:variable var="statusStyle"
+                            value="{!IF(feature.IsInProgress, 'ffdc-fc-status-paused',
+                                IF(feature.HasErrors, 'ffdc-fc-status-has-errors',
+                                IF(feature.HasWarnings, 'ffdc-fc-status-has-warnings',
+                                IF(feature.HasInfo, 'ffdc-fc-status-has-info',
+                                'ffdc-fc-status-none'))))} ffdc-fc-status"
+                        />
+                        <apex:outputPanel styleClass="{!statusStyle}"/>
+                    </apex:column>
+                </apex:pageBlockTable>
+
+                <!-- PAGE CONTROLS -->
+                <apex:outputPanel styleClass="ffdc-fc-page-controls">
+                    <apex:commandButton image="{!URLFOR($Resource.fferpcore__FeatureConsole,'img/back-to-first.svg')}"
+                        action="{!goToPageStart}"
+                        disabled="{!isOnStartPage}"
+                        rerender="featuresPanel"
+                        alt="{!$Label.fferpcore__featureconsolepagefirst}"
+                        styleClass="{!IF(isOnStartPage, ', ffdc-fc-page-controls-disabled', '')}"
+                    />
+                    <apex:commandButton image="{!URLFOR($Resource.fferpcore__FeatureConsole,'img/back.svg')}"
+                        action="{!goToPagePrevious}"
+                        disabled="{!isOnStartPage}"
+                        rerender="featuresPanel"
+                        alt="{!$Label.fferpcore__featureconsolepageprevious}"
+                        styleClass="{!IF(isOnStartPage, ', ffdc-fc-page-controls-disabled', '')}"
+                    />
+                    <apex:outputLabel value="{!pageCountSummary}"/>
+                    <apex:commandButton image="{!URLFOR($Resource.fferpcore__FeatureConsole,'img/next.svg')}"
+                        action="{!goToPageNext}"
+                        disabled="{!isOnEndPage}"
+                        rerender="featuresPanel"
+                        alt="{!$Label.fferpcore__featureconsolepagenext}"
+                        styleClass="{!IF(isOnEndPage, ', ffdc-fc-page-controls-disabled', '')}"
+                    />
+                    <apex:commandButton image="{!URLFOR($Resource.fferpcore__FeatureConsole,'img/next-to-last.svg')}"
+                        action="{!goToPageEnd}"
+                        disabled="{!isOnEndPage}"
+                        rerender="featuresPanel"
+                        alt="{!$Label.fferpcore__featureconsolepagelast}"
+                        styleClass="{!IF(isOnEndPage, ', ffdc-fc-page-controls-disabled', '')}"
+                    />
+                </apex:outputPanel>
+
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

@@ -1,0 +1,11 @@
+<apex:page standardController="c2g__codaPurchaseCreditNote__c" extensions="c2g.PayableCreditNoteController" sidebar="false" action="{!classicEdit}">
+	<apex:sectionHeader title="{!$ObjectType.c2g__codaPurchaseCreditNote__c.Label}" subtitle="{!c2g__codaPurchaseCreditNote__c.Name}"/>
+	<apex:pagemessages />
+	<apex:form >
+		<apex:pageBlock >
+			<apex:pageBlockButtons >
+				<apex:commandButton action="{!cancel}" value="{!$Label.c2g__cancel}"/>
+			</apex:pageBlockButtons>
+		</apex:pageBlock>
+	</apex:form>
+</apex:page>

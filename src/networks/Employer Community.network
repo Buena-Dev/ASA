@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Network xmlns="http://soap.sforce.com/2006/04/metadata">
+    <allowMembersToFlag>false</allowMembersToFlag>
+    <branding>
+        <loginFooterText>asa.org</loginFooterText>
+        <loginLogo>Communities_Shared_Document_Folder/SALT_ASA_LOGO_WHITE_PNG_250x125_png.png</loginLogo>
+        <primaryColor>#1797C0</primaryColor>
+        <primaryComplementColor>#FFFFFF</primaryComplementColor>
+        <quaternaryColor>#B1BAC1</quaternaryColor>
+        <quaternaryComplementColor>#222222</quaternaryComplementColor>
+        <secondaryColor>#51606E</secondaryColor>
+        <tertiaryColor>#DDE4E9</tertiaryColor>
+        <tertiaryComplementColor>#222222</tertiaryComplementColor>
+        <zeronaryColor>#51606E</zeronaryColor>
+        <zeronaryComplementColor>#FFFFFF</zeronaryComplementColor>
+    </branding>
+    <changePasswordTemplate>Employer_Community_Templates/CommunityChangePasswordEmailTemplate</changePasswordTemplate>
+    <emailSenderAddress>asksalt@saltmoney.org</emailSenderAddress>
+    <emailSenderName>Ask Salt</emailSenderName>
+    <enableGuestChatter>false</enableGuestChatter>
+    <enableInvitation>false</enableInvitation>
+    <enableKnowledgeable>false</enableKnowledgeable>
+    <enableNicknameDisplay>false</enableNicknameDisplay>
+    <enablePrivateMessages>false</enablePrivateMessages>
+    <enableReputation>false</enableReputation>
+    <enableSiteAsContainer>true</enableSiteAsContainer>
+    <forgotPasswordTemplate>Employer_Community_Templates/CommunityForgotPasswordEmailTemplate</forgotPasswordTemplate>
+    <networkMemberGroups>
+        <profile>admin</profile>
+        <profile>community (employer b):hr manager</profile>
+        <profile>community-(employer b):employee</profile>
+        <profile>community-(employer a):employee</profile>
+        <profile>community-(employer a):hr manager</profile>
+        <profile>asa - qa uat</profile>
+    </networkMemberGroups>
+    <picassoSite>Employer_Community1</picassoSite>
+    <selfRegProfile>community-(employer a):employee</selfRegProfile>
+    <selfRegistration>true</selfRegistration>
+    <sendWelcomeEmail>false</sendWelcomeEmail>
+    <site>Employer_Community</site>
+    <status>Live</status>
+    <tabs>
+        <defaultTab>Chatter</defaultTab>
+        <standardTab>Chatter</standardTab>
+    </tabs>
+    <urlPathPrefix>employerCommunity</urlPathPrefix>
+    <welcomeTemplate>Employer_Community_Templates/CommunityWelcomeEmailTemplate</welcomeTemplate>
+</Network>

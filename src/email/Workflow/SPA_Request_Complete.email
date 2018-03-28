@@ -1,0 +1,9 @@
+The CSA Request type: {!CSARequests__c.CSA_Request__c}, which was assigned to: {!CSARequests__c.Assigned_to__c}.
+
+Has completed: {!CSARequests__c.Name}
+
+ {!CSARequests__c.Details__c}
+
+Completed on (date): {!CSARequests__c.Completed_Date__c}
+
+Link to the CSA: {!CSARequests__c.Link}

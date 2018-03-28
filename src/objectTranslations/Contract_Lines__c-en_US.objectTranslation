@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Contract Lines</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Contract Lines</value>
+    </caseValues>
+    <fields>
+        <label><!-- Account Elements --></label>
+        <name>Account_Elements__c</name>
+        <relationshipLabel><!-- Contract Lines --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Account --></label>
+        <name>Account__c</name>
+    </fields>
+    <fields>
+        <help><!-- Used by trigger that scans contract lines looking at Nxt Inv Dates and turns Ready to Invoice to Y when Next Invoice Date&lt;=TODAY. By adding this field, closed Contract with no more billing can be turned Inactive and the trigger doesn&apos;t have to scan them. --></help>
+        <label><!-- Active --></label>
+        <name>Active__c</name>
+    </fields>
+    <fields>
+        <label><!-- Base Invoice Date --></label>
+        <name>Base_Invoice_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contract_Elements --></label>
+        <name>Contract_Elements__c</name>
+        <relationshipLabel><!-- Contract Lines (Contract_Elements) --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- This date is automatically populated based on the Contract object - Contract End Date --></help>
+        <label><!-- Contract End Date --></label>
+        <name>Contract_End_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contract End Date do not use 2 --></label>
+        <name>Contract_End_Date_do_not_use_2__c</name>
+    </fields>
+    <fields>
+        <help><!-- This date is automatically populated based on the Contract object - Contract Start Date --></help>
+        <label><!-- Contract Start Date --></label>
+        <name>Contract_Start_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contract Start Date do  not use 2 --></label>
+        <name>Contract_Start_Date_do_not_use_2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contract --></label>
+        <name>Contract__c</name>
+        <relationshipLabel><!-- Contract Lines (Contract) --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- After invoicing, updates to next invoice date based on frequency --></help>
+        <label><!-- DNU Next Invoice Date --></label>
+        <name>DNU_Next_Invoice_Date__c</name>
+    </fields>
+    <fields>
+        <help><!-- Auto filled with system date the last invoice generated.  Informational only. --></help>
+        <label><!-- Date Last Invoice Generated --></label>
+        <name>Date_Last_Invoice_Generated__c</name>
+    </fields>
+    <fields>
+        <label><!-- Frequency of Invoicing --></label>
+        <name>Frequency_of_Invoicing__c</name>
+        <picklistValues>
+            <masterLabel>Annually</masterLabel>
+            <translation><!-- Annually --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Monthly</masterLabel>
+            <translation><!-- Monthly --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Quarterly</masterLabel>
+            <translation><!-- Quarterly --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Semi-Annually</masterLabel>
+            <translation><!-- Semi-Annually --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Automatically turned on when invoice has been generated.   Then automatically turned off awaiting next invoice. --></help>
+        <label><!-- Has Been Invoiced --></label>
+        <name>Has_Been_Invoiced__c</name>
+    </fields>
+    <fields>
+        <label><!-- Income Schedule Definition lookup name --></label>
+        <name>Income_Schedule_Definition__c</name>
+        <relationshipLabel><!-- Contract Lines --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Indicates number of months between billing.  Should be in sync with Invoice Frequency. --></help>
+        <label><!-- Income Schedule --></label>
+        <name>Income_Schedule__c</name>
+    </fields>
+    <fields>
+        <help><!-- Auto generated count of how many invoices have been generated for this line --></help>
+        <label><!-- Invoice Count --></label>
+        <name>Invoice_Count__c</name>
+    </fields>
+    <fields>
+        <label><!-- Invoice Freq # --></label>
+        <name>Invoice_Freq__c</name>
+    </fields>
+    <fields>
+        <help><!-- Billing frequency for this line --></help>
+        <label><!-- Invoice Frequency --></label>
+        <name>Invoice_Frequency__c</name>
+        <picklistValues>
+            <masterLabel>1 Time</masterLabel>
+            <translation><!-- 1 Time --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2 Year (Single Payment)</masterLabel>
+            <translation><!-- 2 Year (Single Payment) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3 Year (Single Payment)</masterLabel>
+            <translation><!-- 3 Year (Single Payment) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Annually</masterLabel>
+            <translation><!-- Annually --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Daily</masterLabel>
+            <translation><!-- Daily --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Monthly</masterLabel>
+            <translation><!-- Monthly --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Quarterly</masterLabel>
+            <translation><!-- Quarterly --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Semi-Annually</masterLabel>
+            <translation><!-- Semi-Annually --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Invoice has been created? --></label>
+        <name>Invoice_has_been_created__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Invoice Date --></label>
+        <name>Last_Invoice_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Max Count --></label>
+        <name>Max_Count__c</name>
+    </fields>
+    <fields>
+        <label><!-- Next Invoice Date --></label>
+        <name>Next_Invoice_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Product --></label>
+        <name>Product__c</name>
+        <relationshipLabel><!-- Contract Lines --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Quantity --></label>
+        <name>Quantity__c</name>
+    </fields>
+    <fields>
+        <help><!-- Automatically flagged when a contract line reaches it&apos;s Next Invoice date --></help>
+        <label><!-- Ready to Invoice --></label>
+        <name>Ready_to_Invoice__c</name>
+    </fields>
+    <fields>
+        <label><!-- Ready to Process? --></label>
+        <name>Ready_to_Process__c</name>
+    </fields>
+    <fields>
+        <help><!-- Number of future invoices still to generate for this line --></help>
+        <label><!-- Remaining Invoices --></label>
+        <name>Remaining_Invoices__c</name>
+    </fields>
+    <fields>
+        <help><!-- Link to line item on last invoice generated for this contract line --></help>
+        <label><!-- Sales Invoice Line --></label>
+        <name>Sales_Invoice_Line__c</name>
+        <relationshipLabel><!-- Contract Lines --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Last invoice number generated for this line --></help>
+        <label><!-- Sales Invoice Number --></label>
+        <name>Sales_Invoice_Number__c</name>
+    </fields>
+    <fields>
+        <help><!-- Total number of invoices that will generate over life of line --></help>
+        <label><!-- Total # Invoices --></label>
+        <name>Total_number_invoices__c</name>
+    </fields>
+    <fields>
+        <label><!-- Unit Price --></label>
+        <name>Unit_Price__c</name>
+    </fields>
+    <layouts>
+        <layout>Contract Lines Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Invoice Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Vowel</startsWith>
+</CustomObjectTranslation>

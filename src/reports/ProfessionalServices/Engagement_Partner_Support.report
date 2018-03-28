@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>Pro_Services_Offering__c.PS_OfferingTargetDate__c</field>
+    </columns>
+    <columns>
+        <field>FK_NAME</field>
+    </columns>
+    <columns>
+        <field>Pro_Services_Offering__c.PS_OfferingRequestedBy__c</field>
+    </columns>
+    <columns>
+        <field>Pro_Services_Offering__c.PS_OfferingAssignedTo__c</field>
+    </columns>
+    <columns>
+        <field>Pro_Services_Offering__c.PS_OfferingStatus__c</field>
+    </columns>
+    <columns>
+        <field>Pro_Services_Offering__c.PS_OfferingCompleted__c</field>
+    </columns>
+    <description>List of PE&amp;E Offerings that support the Enngagement Partner team</description>
+    <filter>
+        <booleanFilter>1 OR 2</booleanFilter>
+        <criteriaItems>
+            <column>FK_NAME</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>contains</operator>
+            <value>Engagement Partner</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FK_NAME</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>contains</operator>
+            <value>Partner Training</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Engagement Partner Support</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$Pro_Services_Offering__c@Pro_Services_Offering__c.PS_OfferingTopic__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Pro_Services_Offering__c.PS_OfferingTargetDate__c</dateColumn>
+        <interval>INTERVAL_CURFY</interval>
+    </timeFrameFilter>
+</Report>

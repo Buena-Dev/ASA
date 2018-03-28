@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>false</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>The Partnership Exchange 0109</name>
+    <style>none</style>
+    <subject>ASA&apos;s Partnership Exchange &amp; Year-End Review</subject>
+    <type>text</type>
+</EmailTemplate>

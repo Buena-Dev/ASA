@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>CSA Requests</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>CSA Requests</value>
+    </caseValues>
+    <fields>
+        <label><!-- Account --></label>
+        <name>Account__c</name>
+        <relationshipLabel><!-- CSA Requests --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Assigned to --></label>
+        <name>Assigned_to__c</name>
+        <relationshipLabel><!-- CSA Requests --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Attachment --></label>
+        <name>Attachment__c</name>
+    </fields>
+    <fields>
+        <label><!-- Request Type --></label>
+        <name>CSA_Request__c</name>
+        <picklistValues>
+            <masterLabel>Add/Edit Salesforce contacts</masterLabel>
+            <translation><!-- Add/Edit Salesforce contacts --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Advisory Board Support</masterLabel>
+            <translation><!-- Advisory Board Support --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ambassador Program Request</masterLabel>
+            <translation><!-- Ambassador Program Request --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Business Cards</masterLabel>
+            <translation><!-- Business Cards --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Campaign Assistance</masterLabel>
+            <translation><!-- Campaign Assistance --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Campus Activation Event</masterLabel>
+            <translation><!-- Campus Activation Event --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Check Request</masterLabel>
+            <translation><!-- Check Request --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Client Forum Support</masterLabel>
+            <translation><!-- Client Forum Support --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Collateral or Presentations</masterLabel>
+            <translation><!-- Collateral or Presentations --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Conference</masterLabel>
+            <translation><!-- Conference --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Conference Presentation Assistance</masterLabel>
+            <translation><!-- Conference Presentation Assistance --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Conference Presentation Proposal</masterLabel>
+            <translation><!-- Conference Presentation Proposal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Conference Registration</masterLabel>
+            <translation><!-- Conference Registration --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Create Brand Name</masterLabel>
+            <translation><!-- Create Brand Name --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Data Depersonalization Request</masterLabel>
+            <translation><!-- Data Depersonalization Request --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Miscellaneous Marketing Request</masterLabel>
+            <translation><!-- Miscellaneous Marketing Request --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Miscellaneous Research</masterLabel>
+            <translation><!-- Miscellaneous Research --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New Collateral</masterLabel>
+            <translation><!-- New Collateral --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New/Renew Association Membership</masterLabel>
+            <translation><!-- New/Renew Association Membership --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Off-board Client</masterLabel>
+            <translation><!-- Off-board Client --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pre-Conference Email</masterLabel>
+            <translation><!-- Pre-Conference Email --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pre-Sales Meeting / In-Person Support</masterLabel>
+            <translation><!-- Pre-Sales Meeting / In-Person Support --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Presentation Content Assistance</masterLabel>
+            <translation><!-- Presentation Content Assistance --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>President Pre-Renewal Letter</masterLabel>
+            <translation><!-- President Pre-Renewal Letter --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Print/Copy Materials</masterLabel>
+            <translation><!-- Print/Copy Materials --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Purchasing Assistance</masterLabel>
+            <translation><!-- Purchasing Assistance --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Reports</masterLabel>
+            <translation><!-- Reports --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Return School Copy of Contract</masterLabel>
+            <translation><!-- Return School Copy of Contract --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SALT Courses Data Request</masterLabel>
+            <translation><!-- SALT Courses Data Request --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Salesforce Admininstrator Request</masterLabel>
+            <translation><!-- Salesforce Admininstrator Request --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Salt Demo / Webinar</masterLabel>
+            <translation><!-- Salt Demo / Webinar --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Salt Store New Contact</masterLabel>
+            <translation><!-- Salt Store New Contact --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>School Profile Creation</masterLabel>
+            <translation><!-- School Profile Creation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Shipping Assistance</masterLabel>
+            <translation><!-- Shipping Assistance --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Special invoicing request</masterLabel>
+            <translation><!-- Special invoicing request --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Stakeholder meeting packets</masterLabel>
+            <translation><!-- Stakeholder meeting packets --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tabulate survey results</masterLabel>
+            <translation><!-- Tabulate survey results --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Training meeting packets</masterLabel>
+            <translation><!-- Training meeting packets --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Campaign --></label>
+        <name>Campaign__c</name>
+        <relationshipLabel><!-- CSA Requests --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Case --></label>
+        <name>Case__c</name>
+        <relationshipLabel><!-- CSA Requests --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- City --></label>
+        <name>City__c</name>
+    </fields>
+    <fields>
+        <label><!-- Completed Date --></label>
+        <name>Completed_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Conference End Date --></label>
+        <name>Conference_End_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Conference Start Date --></label>
+        <name>Conference_Start_Date__c</name>
+    </fields>
+    <fields>
+        <help><!-- Please put in the details here --></help>
+        <label><!-- Details --></label>
+        <name>Details__c</name>
+    </fields>
+    <fields>
+        <label><!-- Due/Proposal Deadline --></label>
+        <name>Due_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- End Date --></label>
+        <name>End_Date__c</name>
+    </fields>
+    <fields>
+        <help><!-- Select this checkbox if the request being submitted is specifically for ENGAGEMENT PARTNERS only - otherwise, leave this field blank. --></help>
+        <label><!-- Engagement Partner Request --></label>
+        <name>Engagement_Partner_Request__c</name>
+    </fields>
+    <fields>
+        <label><!-- Expected Attendees --></label>
+        <name>Expected_Attendees__c</name>
+    </fields>
+    <fields>
+        <label><!-- Link to Proposal Site --></label>
+        <name>Link_to_Proposal_Site__c</name>
+    </fields>
+    <fields>
+        <label><!-- Meeting Date --></label>
+        <name>Meeting_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Opportunity --></label>
+        <name>Opportunity__c</name>
+        <relationshipLabel><!-- CSA Requests --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Proposed Presenter --></label>
+        <name>Proposed_Presenter__c</name>
+        <relationshipLabel><!-- CSA Requests --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Start Date --></label>
+        <name>Start_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- State --></label>
+        <name>State__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>Status__c</name>
+        <picklistValues>
+            <masterLabel>Cancelled</masterLabel>
+            <translation><!-- Cancelled --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Completed</masterLabel>
+            <translation><!-- Completed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In Progress</masterLabel>
+            <translation><!-- In Progress --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Opened</masterLabel>
+            <translation><!-- Opened --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Suggested Topic --></label>
+        <name>Suggested_Topic__c</name>
+    </fields>
+    <layouts>
+        <layout>Conf Presentation Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>SPA Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- CSA Request --></label>
+        <name>CSA_Request</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Pro Services Request --></label>
+        <name>Pro_Services_Request</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Due/Proposal Deadline,Start Date,EndDate,Expected Attendees are required fields for this Request Type . --></errorMessage>
+        <name>Conf_Presentation_Prop_Required_Fields</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Details and Meeting Date are required fields for this Request Type. --></errorMessage>
+        <name>Pre_Sales_Meeting_Required_Fields</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Due/Proposal Deadline and Details are required fields for this Request Type . --></errorMessage>
+        <name>Presentation_Content_Required_Fields</name>
+    </validationRules>
+</CustomObjectTranslation>

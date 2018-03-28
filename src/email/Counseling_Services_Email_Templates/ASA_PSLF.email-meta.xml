@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>BPM_ASA_Letterhead</letterhead>
+    <name>ASA PSLF</name>
+    <style>formalLetter</style>
+    <subject>Public Service Loan Forgiveness (PSLF) program</subject>
+    <textOnly>Dear {!Contact.FirstName},
+
+To follow up on our earlier conversation, here is some information about the Public Service Loan Forgiveness (PSLF) program.
+
+To have your loans forgiven under PSLF, you must work full time in a qualifying public service job for 10 years and make qualifying payments the entire time. Qualifying payments are those made at or above the standard (10-year) payment amount or those made under an income-driven repayment plan.
+
+Not all loans and not all jobs are eligible for this program, so be sure to review the complete list of rules at the Department of Education aid website, studentaid.ed.gov.
+If you have any other questions, you can email us at AskASA@asa.org. 
+
+Thank you,
+
+American Student Assistance
+
+
+Call Center Hours: Monday – Thursday: 8:00 a.m. – 8:00 p.m. ET; Friday: 8:00 a.m. – 5:00 p.m. ET
+
+You are receiving this message because of your relationship with American Student Assistance® (ASA). It is confidential and proprietary to ASA® and intended as a private communication. Do not reproduce or distribute it without permission from ASA. If you are not the intended recipient, please notify ASA immediately by replying to this message, then destroy all copies of it without reading or disclosing its contents.
+
+American Student Assistance, ASA, Salt, &quot;Education Unlocked. Dreams Unlimited.&quot;, Delta-A, and corresponding logos are registered trademarks of American Student Assistance. Other marks are the property of their respective owners.
+
+American Student Assistance, 100 Cambridge Street, Suite 1600, Boston, MA 02114, USA 
+©2017 American Student Assistance. All rights reserved.
+Privacy Policy</textOnly>
+    <type>html</type>
+</EmailTemplate>

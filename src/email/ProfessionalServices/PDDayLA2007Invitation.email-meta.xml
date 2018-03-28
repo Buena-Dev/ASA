@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>false</available>
+    <description>LA PD Day 2007 Invitation</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>EmailLetterhead</letterhead>
+    <name>PD Day - LA - 2007 (Invitation)</name>
+    <style>freeForm</style>
+    <subject>Save the date - American Student Assistance Training Event</subject>
+    <textOnly>Join ASA next month! We are coming to Louisiana with our popular professional development workshop. 
+
+Louisiana Training Event
+
+National FFELP guarantor American Student Assistance® has designed an all-day training event for Louisiana. Now is the time to improve your skills at our professional development seminars. Join us to enhance core skills and stay ahead of evolving trends. 
+We are offering a full day of professional development classes designed for all college administrators who are looking to improve their performance at work and add skills to their personal “tool box.” 
+
+9/14/2007 New Orleans, LA  – Xavier University 
+
+Sessions:  Emotional Intelligence and Top Ten Financial Aid Pitfalls and How to Avoid Them
+ 
+Agenda 
+
+8:30am Continental Breakfast 
+9:00am Emotional Intelligence
+12:00pm Lunch 
+1:00pm Top Ten Financial Aid Pitfalls and How to Avoid Them
+3:00pm Adjourn
+ 
+Course Descriptions: 
+Emotional Intelligence
+This workshop takes Emotional Intelligence into the workplace. Business leaders and outstanding performers are not defined by their IQs or even their job skills, but by their &quot;emotional intelligence,” a set of competencies that distinguishes how people manage feelings, interact, and communicate. Analyses done by dozens of experts in 500 corporations, government agencies, and nonprofit organizations worldwide conclude that emotional intelligence is the barometer of excellence on virtually any job. We&apos;ll explain what emotional intelligence is and review its competencies and skills, including control of one&apos;s impulses, self-motivation, empathy, and social competence in interpersonal relationships.
+ 
+Top Ten Financial Aid Pitfalls and How to Avoid Them
+Are you aware of the most common pitfalls in the administration of financial aid? Join us in this session to learn about the most common errors that are made in the Financial Aid Office. Notification, funding, verification, regulatory issues hear about the most frequent errors and how to correct them. This course was created in response to client requests to American Student Assistance and feedback from training evaluation surveys. Walk away with a checklist to evaluate your institution and a resource list to guide your next steps.
+ 
+ Who Should Attend 
+
+Any financial aid administrator that is interested in professional development and how to avoid common financial aid pitfalls.
+
+How You Will Benefit 
+You will learn about the most common errors that are made in the Financial Aid Office and positively manage emotions in yourself and others.
+
+How to register or for additional information, including driving directions 
+
+· Register Online at http://www.amsa.com/fap/training 
+· Email: send your name, phone number and enrollment details to 
+training@amsa.com 
+· Phone: call the Training Department at (800) 999-9080, ext. 3099 
+
+All American Student Assistance training events are offered free of charge.</textOnly>
+    <type>html</type>
+</EmailTemplate>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Account$Name</field>
+    </columns>
+    <columns>
+        <field>Account$Contract_End__c</field>
+    </columns>
+    <columns>
+        <field>Account.Contacts$Name</field>
+    </columns>
+    <columns>
+        <field>Account.Contacts$Title</field>
+    </columns>
+    <columns>
+        <field>Account$Owner</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>Account$RecordType</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Account.School</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account$Name</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>notContain</operator>
+            <value>ASA University</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Contacts$Title</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>President</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Contract Exp in FY18 - Presidents</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Accounts_with_Contacts_and_Owner_Info__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Account$Contract_End__c</dateColumn>
+        <interval>INTERVAL_NEXTFY</interval>
+    </timeFrameFilter>
+</Report>

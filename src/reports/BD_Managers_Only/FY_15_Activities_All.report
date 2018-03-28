@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>SUBJECT</field>
+    </columns>
+    <columns>
+        <field>DUE_DATE</field>
+    </columns>
+    <columns>
+        <field>ACCOUNT.NAME</field>
+    </columns>
+    <description>All active RAEs activities for FY 15</description>
+    <filter>
+        <criteriaItems>
+            <column>ASSIGNED</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>contains</operator>
+            <value>Wallen,St. Julien,Arslanian,Tanaro,Drechsler,Scalise,Hagerman,Darcy Esau</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>ASSIGNED</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>TASK_TYPE</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>FY 15 Activities - All</name>
+    <params>
+        <name>closed</name>
+        <value>all</value>
+    </params>
+    <params>
+        <name>type</name>
+        <value>e</value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>OpportunityActivity</reportType>
+    <roleHierarchyFilter>TopLevel</roleHierarchyFilter>
+    <scope>organization</scope>
+    <showDetails>false</showDetails>
+    <timeFrameFilter>
+        <dateColumn>DUE_DATE</dateColumn>
+        <interval>INTERVAL_AGO2FY</interval>
+    </timeFrameFilter>
+</Report>

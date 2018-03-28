@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>false</available>
+    <description>ASA Symposium 2006 Save the date postcard 1</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>BlankLetterhead</letterhead>
+    <name>ASA Symposium Save the Date Postcard1</name>
+    <style>freeForm</style>
+    <subject>Save the Date - ASA Symposium</subject>
+    <textOnly>June 19 &amp; 20, 2006
+
+American Student Assistance®
+
+21st Annual Symposium · Boston, MA  
+
+Insights:  A Conversation on Student Debt
+
+Join your colleagues from around the country in a thoughtful discussion on the short- and long-term impacts of debt on students.  Does the possibility of excessive debt play a role in students’ decisions to attend college?  Where to attend college?  Or even what career path to pursue after college?  And for some students, do the drawbacks of debt actually cancel out the benefits of a higher education?  Let’s talk about what we as an industry can do to lessen the impact of debt—so that students make the life choices they want rather than those they must for financial reasons.
+
+The symposium will be conveniently located at the Hyatt Harborside at Boston’s Logan Airport—minutes away from downtown Boston, Faneuil Hall Marketplace and more!  
+
+Online registration coming in March! Watch for more details at www.amsa.com/events or call 800 999 9080 for more information.</textOnly>
+    <type>html</type>
+</EmailTemplate>

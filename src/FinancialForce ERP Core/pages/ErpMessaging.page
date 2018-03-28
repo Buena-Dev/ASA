@@ -1,0 +1,203 @@
+<apex:page controller="fferpcore.AdminEndPointsController" extensions="fferpcore.ErpArchivingController,fferpcore.AdminSchedulingController,fferpcore.AuthorisationController" showHeader="true" sidebar="false">
+	<c:fflib_extBootstrap applicationName="ERPMessaging" staticResource="{!$Resource.fferpcore__ERPMessaging}" developmentPrefix="{!$Setup.ErpProtectedSettings__c.LocalServer__c}" frameworkPath="../../ext">
+		<script type="text/javascript">
+			/* globals $RemoteAction $Label */
+			window['$RemoteAction'] = window['$RemoteAction'] || {};
+			window['$Params'] = window['$Params'] || {};
+			window['$Label'] = window['$Label'] || {};
+
+			$Params.Authorised = {!isAuthorised};
+			$Params.Dormant = {!isDormant};
+			$Params.CanReadEndPoints = {!canReadEndPoints};
+			$Params.CanEditEndPoints = {!canEditEndPoints};
+			$Params.CanReadRetention = {!canReadRetention};
+			$Params.CanEditRetention = {!canEditRetention};
+			$Params.CanReadScheduling = {!canReadScheduling};
+			$Params.CanEditScheduling = {!canEditScheduling};
+			$Params.CanRunScheduling = {!canRunScheduling};
+
+			//Publications & Subscriptions Remote Actions
+
+			$RemoteAction.AdminEndPointsController = $RemoteAction.AdminEndPointsController || {};
+			$RemoteAction.AdminEndPointsController.getTreeData = '{!$RemoteAction.AdminEndPointsController.getTreeData}';
+			$RemoteAction.AdminEndPointsController.saveTreeData = '{!$RemoteAction.AdminEndPointsController.saveTreeData}';
+
+			//Message Retention Remote Actions
+
+			$RemoteAction.ErpArchivingController = $RemoteAction.ErpArchivingController || {};
+			$RemoteAction.ErpArchivingController.save = '{!$RemoteAction.ErpArchivingController.save}';
+			$RemoteAction.ErpArchivingController.load = '{!$RemoteAction.ErpArchivingController.load}';
+
+			//Scheduling Remote Actions
+
+			$RemoteAction.AdminSchedulingController = $RemoteAction.AdminSchedulingController || {};
+			$RemoteAction.AdminSchedulingController.getScheduledJobs = '{!$RemoteAction.AdminSchedulingController.getScheduledJobs}';
+			$RemoteAction.AdminSchedulingController.saveScheduledJobs = '{!$RemoteAction.AdminSchedulingController.saveScheduledJobs}';
+			$RemoteAction.AdminSchedulingController.runScheduledJob = '{!$RemoteAction.AdminSchedulingController.runScheduledJob}';
+
+			//Authorisation Remote Actions
+
+			$RemoteAction.AuthorisationController = $RemoteAction.AuthorisationController || {};
+			$RemoteAction.AuthorisationController.setDormant = '{!$RemoteAction.AuthorisationController.setDormant}';
+
+			//Generic Labels
+
+			$Label.ErpAdminHelp = '{!JSENCODE($Label.ErpAdminHelp)}';
+			$Label.ErpAdminTitle = '{!JSENCODE($Label.ErpAdminTitle)}';
+			$Label.ErpAdminToggleFullscreen = '{!JSENCODE($Label.ErpAdminToggleFullscreen)}';
+			$Label.ErpSubscriptionValidationCannotEnableCustomSubscription = '{!JSENCODE($Label.ErpSubscriptionValidationCannotEnableCustomSubscription)}';
+			$Label.ErpPublicationValidationCannotEnableCustomPublication = '{!JSENCODE($Label.ErpPublicationValidationCannotEnableCustomPublication)}';
+			$Label.ErpNotAuthorisedUI = '{!JSENCODE($Label.ErpNotAuthorisedUI)}';
+			$Label.ErpNotAuthorisedUIDormant = '{!JSENCODE($Label.ErpNotAuthorisedUIDormant)}';
+			$Label.ErpNotAuthorisedUINotDormant = '{!JSENCODE($Label.ErpNotAuthorisedUINotDormant)}';
+			$Label.ErpNotAuthorisedUIDisableButton = '{!JSENCODE($Label.ErpNotAuthorisedUIDisableButton)}';
+			$Label.ErpErrorMessageBoxTitle = '{!JSENCODE($Label.ErpErrorMessageBoxTitle)}';
+
+			//Publications & Subscriptions Labels
+
+			$Label.ErpAdminEndPointsBadFilters = '{!JSENCODE($Label.ErpAdminEndPointsBadFilters)}';
+			$Label.ErpAdminEndPointsConfirmationMessage = '{!JSENCODE($Label.ErpAdminEndPointsConfirmationMessage)}';
+			$Label.ErpAdminEndPointsConfirmationNo = '{!JSENCODE($Label.ErpAdminEndPointsConfirmationNo)}';
+			$Label.ErpAdminEndPointsConfirmationTitle = '{!JSENCODE($Label.ErpAdminEndPointsConfirmationTitle)}';
+			$Label.ErpAdminEndPointsConfirmationYes = '{!JSENCODE($Label.ErpAdminEndPointsConfirmationYes)}';
+			$Label.ErpSavingLabel = '{!JSENCODE($Label.ErpSavingLabel)}';
+			$Label.ErpLoadingLabel = '{!JSENCODE($Label.ErpLoadingLabel)}';
+			$Label.ErpAdminEndPointsMessageTypeHeading = '{!JSENCODE($Label.ErpAdminEndPointsMessageTypeHeading)}';
+			$Label.ErpAdminEndPointsNoDescription = '{!JSENCODE($Label.ErpAdminEndPointsNoDescription)}';
+			$Label.ErpAdminEndPointsNoEndPoints = '{!JSENCODE($Label.ErpAdminEndPointsNoEndPoints)}';
+			$Label.ErpAdminEndPointsNoMessageTypes = '{!JSENCODE($Label.ErpAdminEndPointsNoMessageTypes)}';
+			$Label.ErpAdminEndPointsOptionBoth = '{!JSENCODE($Label.ErpAdminEndPointsOptionBoth)}';
+			$Label.ErpAdminEndPointsOptionDisabled = '{!JSENCODE($Label.ErpAdminEndPointsOptionDisabled)}';
+			$Label.ErpAdminEndPointsOptionPublish = '{!JSENCODE($Label.ErpAdminEndPointsOptionPublish)}';
+			$Label.ErpAdminEndPointsOptionSubscribe = '{!JSENCODE($Label.ErpAdminEndPointsOptionSubscribe)}';
+			$Label.ErpAdminEndPointsRefresh = '{!JSENCODE($Label.ErpAdminEndPointsRefresh)}';
+			$Label.ErpAdminEndPointsSave = '{!JSENCODE($Label.ErpAdminEndPointsSave)}';
+			$Label.ErpAdminEndPointsTitle = '{!JSENCODE($Label.ErpAdminEndPointsTitle)}';
+			$Label.ErpAdminEndPointsDescriptionHeading = '{!JSENCODE($Label.ErpAdminEndPointsDescriptionHeading)}';
+			$Label.ErpAdminEndPointsPublishing = '{!JSENCODE($Label.ErpAdminEndPointsPublishing)}';
+			$Label.ErpAdminEndPointsSubscribing = '{!JSENCODE($Label.ErpAdminEndPointsSubscribing)}';
+			$Label.ErpAdminEndPointsNotEnabled = '{!JSENCODE($Label.ErpAdminEndPointsNotEnabled)}';
+
+			//EndPoint Panel Labels
+
+			$Label.ErpAdminEndpointsProxyHeading = '{!JSENCODE($Label.ErpAdminEndpointsProxyHeading)}';
+			$Label.ErpAdminEndpointsIdentifierHeading = '{!JSENCODE($Label.ErpAdminEndpointsIdentifierHeading)}';
+			$Label.ErpAdminEndpointsPublishHeading = '{!JSENCODE($Label.ErpAdminEndpointsPublishHeading)}';
+			$Label.ErpAdminEndpointsSubscribeHeading = '{!JSENCODE($Label.ErpAdminEndpointsSubscribeHeading)}';
+			$Label.ErpAdminEndpointsProxyTooltip = '{!JSENCODE($Label.ErpAdminEndpointsProxyTooltip)}';
+			$Label.ErpAdminEndpointsIdentifierTooltip = '{!JSENCODE($Label.ErpAdminEndpointsIdentifierTooltip)}';
+			$Label.ErpAdminEndPointsEmpty = '{!JSENCODE($Label.ErpAdminEndPointsEmpty)}';
+
+			//Subscription Message Type Component Labels
+
+			$Label.ErpSubscriptionMessageTypesMessageTypeColumn = '{!JSENCODE($Label.ErpSubscriptionMessageTypesMessageTypeColumn)}';
+			$Label.ErpSubscriptionMessageTypesEnabledColumn = '{!JSENCODE($Label.ErpSubscriptionMessageTypesEnabledColumn)}';
+
+			//Message Retention Labels
+
+			$Label.ErpAdminRetentionTitle = '{!JSENCODE($Label.ErpAdminRetentionTitle)}';
+			$Label.ErpAdminRetentionGlobalSettingTitle = '{!JSENCODE($Label.ErpAdminRetentionGlobalSettingTitle)}';
+			$Label.ErpAdminRetentionModeNone = '{!JSENCODE($Label.ErpAdminRetentionModeNone)}';
+			$Label.ErpAdminRetentionModeErrors = '{!JSENCODE($Label.ErpAdminRetentionModeErrors)}';
+			$Label.ErpAdminRetentionModeAll = '{!JSENCODE($Label.ErpAdminRetentionModeAll)}';
+			$Label.ErpAdminRetentionPeriodTitle = '{!JSENCODE($Label.ErpAdminRetentionPeriodTitle)}';
+			$Label.ErpAdminRetentionColumnMessageType = '{!JSENCODE($Label.ErpAdminRetentionColumnMessageType)}';
+			$Label.ErpAdminRetentionColumnValue = '{!JSENCODE($Label.ErpAdminRetentionColumnValue)}';
+			$Label.ErpAdminRetentionValueInherit = '{!JSENCODE($Label.ErpAdminRetentionValueInherit)}';
+			$Label.ErpAdminRetentionValueNever = '{!JSENCODE($Label.ErpAdminRetentionValueNever)}';
+			$Label.ErpAdminRetentionValueImmediate = '{!JSENCODE($Label.ErpAdminRetentionValueImmediate)}';
+			$Label.ErpAdminRetentionValueMonthSingle = '{!JSENCODE($Label.ErpAdminRetentionValueMonthSingle)}';
+			$Label.ErpAdminRetentionValueMonths = '{!JSENCODE($Label.ErpAdminRetentionValueMonths)}';
+			$Label.ErpAdminRetentionOptionInherit = '{!JSENCODE($Label.ErpAdminRetentionOptionInherit)}';
+			$Label.ErpAdminRetentionOptionNever = '{!JSENCODE($Label.ErpAdminRetentionOptionNever)}';
+			$Label.ErpAdminRetentionOptionImmediate = '{!JSENCODE($Label.ErpAdminRetentionOptionImmediate)}';
+			$Label.ErpAdminRetentionOptionMonths = '{!JSENCODE($Label.ErpAdminRetentionOptionMonths)}';
+			$Label.ErpAdminReloadConfirmationTitle = '{!JSENCODE($Label.ErpAdminReloadConfirmationTitle)}';
+			$Label.ErpAdminReloadConfirmationMessage = '{!JSENCODE($Label.ErpAdminReloadConfirmationMessage)}';
+			$Label.ErpAdminUnloadConfirmation = '{!JSENCODE($Label.ErpAdminUnloadConfirmation)}';
+
+			//Scheduled Jobs Labels
+
+			$Label.ErpAdminSchedulingTitle = '{!JSENCODE($Label.ErpAdminSchedulingTitle)}';
+			$Label.ErpAdminSchedulingNameColumn = '{!JSENCODE($Label.ErpAdminSchedulingNameColumn)}';
+			$Label.ErpAdminSchedulingNextRunColumn = '{!JSENCODE($Label.ErpAdminSchedulingNextRunColumn)}';
+			$Label.ErpAdminSchedulingLastRunColumn = '{!JSENCODE($Label.ErpAdminSchedulingLastRunColumn)}';
+			$Label.ErpAdminSchedulingScheduledColumn = '{!JSENCODE($Label.ErpAdminSchedulingScheduledColumn)}';
+			$Label.ErpAdminSchedulingActionsColumn = '{!JSENCODE($Label.ErpAdminSchedulingActionsColumn)}';
+			$Label.ErpAdminSchedulingStatusColumn = '{!JSENCODE($Label.ErpAdminSchedulingStatusColumn)}';
+			$Label.ErpAdminSchedulingNextRunEmpty = '{!JSENCODE($Label.ErpAdminSchedulingNextRunEmpty)}';
+			$Label.ErpAdminSchedulingLastRunEmpty = '{!JSENCODE($Label.ErpAdminSchedulingLastRunEmpty)}';
+			$Label.ErpAdminSchedulingSummaryActionTooltip = '{!JSENCODE($Label.ErpAdminSchedulingSummaryActionTooltip)}';
+			$Label.ErpAdminSchedulingEditActionTooltip = '{!JSENCODE($Label.ErpAdminSchedulingEditActionTooltip)}';
+			$Label.ErpAdminSchedulingRunNowActionTooltip = '{!JSENCODE($Label.ErpAdminSchedulingRunNowActionTooltip)}';
+			$Label.ErpAdminSchedulingInProgressActionTooltip = '{!JSENCODE($Label.ErpAdminSchedulingInProgressActionTooltip)}';
+			$Label.ErpAdminSchedulingFinishedActionTooltip = '{!JSENCODE($Label.ErpAdminSchedulingFinishedActionTooltip)}';
+			$Label.ErpAdminSchedulingScheduleSummaryTitle = '{!JSENCODE($Label.ErpAdminSchedulingScheduleSummaryTitle)}';
+			$Label.ErpAdminSchedulingScheduleSummaryTime = '{!JSENCODE($Label.ErpAdminSchedulingScheduleSummaryTime)}';
+			$Label.ErpAdminSchedulingScheduleSummaryDayDate = '{!JSENCODE($Label.ErpAdminSchedulingScheduleSummaryDayDate)}';
+			$Label.ErpAdminSchedulingScheduleSummaryMonth = '{!JSENCODE($Label.ErpAdminSchedulingScheduleSummaryMonth)}';
+			$Label.ErpAdminSchedulingScheduleSummaryYear = '{!JSENCODE($Label.ErpAdminSchedulingScheduleSummaryYear)}';
+			$Label.ErpAdminSchedulingScheduleSummaryCron = '{!JSENCODE($Label.ErpAdminSchedulingScheduleSummaryCron)}';
+			$Label.ErpAdminSchedulingNextRunFormat = '{!JSENCODE($Label.ErpAdminSchedulingNextRunFormat)}';
+			$Label.ErpAdminSchedulingLastRunFormat = '{!JSENCODE($Label.ErpAdminSchedulingLastRunFormat)}';
+			$Label.ErpAdminSchedulingNoScheduledJobs = '{!JSENCODE($Label.ErpAdminSchedulingNoScheduledJobs)}';
+
+			//Cron Picker Labels
+
+			$Label.CronPickerInvalid = '{!JSENCODE($Label.CronPickerInvalid)}';
+			$Label.CronPickerInvalidColumn = '{!JSENCODE($Label.CronPickerInvalidColumn)}';
+			$Label.CronPickerInvalidOptionGroup = '{!JSENCODE($Label.CronPickerInvalidOptionGroup)}';
+			$Label.CronPickerYearOptionGroup = '{!JSENCODE($Label.CronPickerYearOptionGroup)}';
+			$Label.CronPickerYearAnyOption = '{!JSENCODE($Label.CronPickerYearAnyOption)}';
+			$Label.CronPickerYearAnySummary = '{!JSENCODE($Label.CronPickerYearAnySummary)}';
+			$Label.CronPickerYearIncrementOption = '{!JSENCODE($Label.CronPickerYearIncrementOption)}';
+			$Label.CronPickerYearIncrementSummary = '{!JSENCODE($Label.CronPickerYearIncrementSummary)}';
+			$Label.CronPickerYearListRangeOption = '{!JSENCODE($Label.CronPickerYearListRangeOption)}';
+			$Label.CronPickerYearListRangeEmpty = '{!JSENCODE($Label.CronPickerYearListRangeEmpty)}';
+			$Label.CronPickerYearListRangeInvalid = '{!JSENCODE($Label.CronPickerYearListRangeInvalid)}';
+			$Label.CronPickerYearListRangeSummary = '{!JSENCODE($Label.CronPickerYearListRangeSummary)}';
+			$Label.CronPickerTimeOptionGroup = '{!JSENCODE($Label.CronPickerTimeOptionGroup)}';
+			$Label.CronPickerTimeIncrementOption = '{!JSENCODE($Label.CronPickerTimeIncrementOption)}';
+			$Label.CronPickerTimeIncrementSummary = '{!JSENCODE($Label.CronPickerTimeIncrementSummary)}';
+			$Label.CronPickerTimeIncrementStarts = '{!JSENCODE($Label.CronPickerTimeIncrementStarts)}';
+			$Label.CronPickerTimeListRangeOption = '{!JSENCODE($Label.CronPickerTimeListRangeOption)}';
+			$Label.CronPickerTimeListRangeEmpty = '{!JSENCODE($Label.CronPickerTimeListRangeEmpty)}';
+			$Label.CronPickerTimeListRangeInvalid = '{!JSENCODE($Label.CronPickerTimeListRangeInvalid)}';
+			$Label.CronPickerTimeListRangeSummary = '{!JSENCODE($Label.CronPickerTimeListRangeSummary)}';
+			$Label.CronPickerTimeSpecificOption = '{!JSENCODE($Label.CronPickerTimeSpecificOption)}';
+			$Label.CronPickerTimeSpecificSummary = '{!JSENCODE($Label.CronPickerTimeSpecificSummary)}';
+			$Label.CronPickerMonthOptionGroup = '{!JSENCODE($Label.CronPickerMonthOptionGroup)}';
+			$Label.CronPickerMonthAnyOption = '{!JSENCODE($Label.CronPickerMonthAnyOption)}';
+			$Label.CronPickerMonthAnySummary = '{!JSENCODE($Label.CronPickerMonthAnySummary)}';
+			$Label.CronPickerMonthIncrementOption = '{!JSENCODE($Label.CronPickerMonthIncrementOption)}';
+			$Label.CronPickerMonthIncrementSummary = '{!JSENCODE($Label.CronPickerMonthIncrementSummary)}';
+			$Label.CronPickerMonthIncrementStarts = '{!JSENCODE($Label.CronPickerMonthIncrementStarts)}';
+			$Label.CronPickerMonthListOption = '{!JSENCODE($Label.CronPickerMonthListOption)}';
+			$Label.CronPickerMonthListSummary = '{!JSENCODE($Label.CronPickerMonthListSummary)}';
+			$Label.CronPickerMonthListValues = '{!JSENCODE($Label.CronPickerMonthListValues)}';
+			$Label.CronPickerDayDateOptionGroup = '{!JSENCODE($Label.CronPickerDayDateOptionGroup)}';
+			$Label.CronPickerDateAnyOption = '{!JSENCODE($Label.CronPickerDateAnyOption)}';
+			$Label.CronPickerDateAnySummary = '{!JSENCODE($Label.CronPickerDateAnySummary)}';
+			$Label.CronPickerDateIncrementOption = '{!JSENCODE($Label.CronPickerDateIncrementOption)}';
+			$Label.CronPickerDateIncrementSummary = '{!JSENCODE($Label.CronPickerDateIncrementSummary)}';
+			$Label.CronPickerDateIncrementStarts = '{!JSENCODE($Label.CronPickerDateIncrementStarts)}';
+			$Label.CronPickerDateListRangeOption = '{!JSENCODE($Label.CronPickerDateListRangeOption)}';
+			$Label.CronPickerDateListRangeEmpty = '{!JSENCODE($Label.CronPickerDateListRangeEmpty)}';
+			$Label.CronPickerDateListRangeInvalid = '{!JSENCODE($Label.CronPickerDateListRangeInvalid)}';
+			$Label.CronPickerDateListRangeSummary = '{!JSENCODE($Label.CronPickerDateListRangeSummary)}';
+			$Label.CronPickerDateSpecificOption = '{!JSENCODE($Label.CronPickerDateSpecificOption)}';
+			$Label.CronPickerDateSpecificSummary = '{!JSENCODE($Label.CronPickerDateSpecificSummary)}';
+			$Label.CronPickerDateSpecificDays = '{!JSENCODE($Label.CronPickerDateSpecificDays)}';
+			$Label.CronPickerDayListOption = '{!JSENCODE($Label.CronPickerDayListOption)}';
+			$Label.CronPickerDayListSummary = '{!JSENCODE($Label.CronPickerDayListSummary)}';
+			$Label.CronPickerDayListValues = '{!JSENCODE($Label.CronPickerDayListValues)}';
+			$Label.CronPickerDaySpecificOption = '{!JSENCODE($Label.CronPickerDaySpecificOption)}';
+			$Label.CronPickerDaySpecificSummary = '{!JSENCODE($Label.CronPickerDaySpecificSummary)}';
+			$Label.CronPickerDaySpecificWeeks = '{!JSENCODE($Label.CronPickerDaySpecificWeeks)}';
+			$Label.CronPickerDaySpecificDays = '{!JSENCODE($Label.CronPickerDaySpecificDays)}';
+			$Label.CronPickerWindowTitle = '{!JSENCODE($Label.CronPickerWindowTitle)}';
+			$Label.CronPickerWindowCancelButton = '{!JSENCODE($Label.CronPickerWindowCancelButton)}';
+			$Label.CronPickerWindowSaveButton = '{!JSENCODE($Label.CronPickerWindowSaveButton)}';
+		</script>
+	</c:fflib_extBootstrap>
+</apex:page>

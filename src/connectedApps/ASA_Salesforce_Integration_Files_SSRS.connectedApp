@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConnectedApp xmlns="http://soap.sforce.com/2006/04/metadata">
+    <contactEmail>mobrien@asa.org</contactEmail>
+    <label>ASA_Salesforce_Integration_Files_SSRS</label>
+    <oauthConfig>
+        <callbackUrl>vs://ConnectedService</callbackUrl>
+        <consumerKey>3MVG99OxTyEMCQ3hPoopWX_Z07h0KCvzbyKe09Ri82elukvxAjDvncXI8wJ8wL9t4aE8OBHnla33fcDq7gQaj</consumerKey>
+        <scopes>Basic</scopes>
+        <scopes>Api</scopes>
+        <scopes>RefreshToken</scopes>
+    </oauthConfig>
+</ConnectedApp>

@@ -1,0 +1,8 @@
+<apex:page standardController="Product2" showHeader="true" sidebar="true">
+	
+	<!-- Hidden field so we can get the product name from the standard controller -->
+	<span style="display:none;">{!product2.name}</span>
+
+	<c:ProfitabilityReportingWidget record="{!product2}" filter-fieldname="{!$ObjectType.c2g__codaTransactionLineItem__c.name}.{!$ObjectType.c2g__codaTransactionLineItem__c.fields.c2g__Product__c.name}" />
+
+</apex:page>

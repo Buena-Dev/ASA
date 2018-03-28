@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>false</available>
+    <description>Email to be sent with borrower branding requirements attached</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>SALTClientLetterhead</letterhead>
+    <name>Borrower Branding Cover Email</name>
+    <style>formalLetter</style>
+    <subject>Borrower Branding Requirements</subject>
+    <textOnly>Dear «CONTACT_FIRSTNAME», 
+
+Thank you for your interest in branding ASA Direct for borrowers at «ACCOUNT_NAME».  We only have a few easy steps to complete the branding of ASA Direct with your school’s graphics, colors and text elements:
+ 
+Step 1 is to give ASA permission to use the school’s images.  A Branding Agreement between ASA and the school is attached; please return to me prior to sending any branding images.
+ 
+Step 2 is to send ASA the branding images after the Agreement has been executed.  ASA will then create the school-branded site and provide you with the URL.
+ 
+Step 3 is your feedback after you have reviewed the branded site so that we can make any needed modifications.
+ 
+Step 4, after any modifications have been reviewed by you, is to get the branded URL to borrowers; I will discuss options with you at that time.
+ 
+A document detailing technical specifications for all brandable elements of ASA Direct for Borrowers is attached.  If you have any questions about branding ASA Direct for borrowers at «ACCOUNT_NAME», please contact me or ASA Product Development and Support at brandingsupport@amsa.com .
+ 
+ 
+ 
+«USER_USERNAME»
+«USER_TITLE»
+American Student Assistance
+1-800-999-9080 x6153
+«USER_PHONE»
+«USER_EMAIL» 
+http://www.amsa.com
+The content of the e-mail is confidential and proprietary to American Student Assistance. It is intended only for the above-named individual or entity and for the purpose indicated and may not be reproduced or distributed without permission of the sender. Please notify the sender or ASA if you received this e-mail in error.</textOnly>
+    <type>html</type>
+</EmailTemplate>

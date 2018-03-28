@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>false</available>
+    <description>Breakfast Series Springfield invite 2006</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>EmailLetterhead</letterhead>
+    <name>Breakfast Series Invite - Springfield</name>
+    <style>freeForm</style>
+    <subject>Mark your calendar for a chance to give us your feedback</subject>
+    <textOnly>Dear {!Contact.FirstName},
+ 
+SAVE THE DATE
+October 5, 2006, 12 – 2 p.m.
+Springfield, MA
+
+HAVE LUNCH WITH US!
+
+American Student Assistance® is always looking for ways to incorporate 
+your suggestions into our business.
+
+What are our strengths?  How can we improve?  
+We want to hear from you!
+
+So mark your calendars for an interactive feedback session.  
+More information to come.</textOnly>
+    <type>html</type>
+</EmailTemplate>

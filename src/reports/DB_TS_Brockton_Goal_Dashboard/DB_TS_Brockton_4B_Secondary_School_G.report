@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CAMPAIGN_NAME</field>
+    </columns>
+    <columns>
+        <field>CampaignMember.Grade_Level_at_Start_Non_Adult__c</field>
+    </columns>
+    <columns>
+        <field>CampaignMember.Secondary_School__c</field>
+    </columns>
+    <columns>
+        <field>CampaignMember.Education_Status_at_End_Senior__c</field>
+    </columns>
+    <description>% of seniors served during  the project year will complete a rigorous secondary school program of study (PS 10-1 - Changed Per Rose)</description>
+    <filter>
+        <criteriaItems>
+            <column>Contact.Intake_Location__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>TS Brockton</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Campaign.Service_Year__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>2017-2018</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CampaignMember.Active__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>1</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Campaign.Goal_Secondary_School_Graduation_Rigor__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>CampaignMember.DB_TS_Brockton_4B_Support__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>DB - TS Brockton - 4B Secondary School G</name>
+    <params>
+        <name>scopeid</name>
+        <value></value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CampaignContact</reportType>
+    <scope>orgAll</scope>
+    <showDetails>true</showDetails>
+</Report>

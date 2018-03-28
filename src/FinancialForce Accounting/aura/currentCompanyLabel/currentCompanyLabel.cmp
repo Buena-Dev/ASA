@@ -1,0 +1,19 @@
+<aura:component access="public">
+    
+    <aura:attribute access="public" name="companyLabel" type="String" default=""/>
+    <aura:attribute access="public" name="nothingSelected" type="Boolean" default="true"/>
+    <aura:attribute access="public" name="multipleSelected" type="Boolean" default="false" />
+    
+    <label>
+        <aura:if isTrue="{!and(v.nothingSelected, !v.multipleSelected)}">
+            {!$Label.c2g.codaCurrentCompanyNotSet}
+        </aura:if>
+        <aura:if isTrue="{!and(v.multipleSelected, !v.nothingSelected)}">
+            {!$Label.c2g.codaMultiCompanyMode}
+        </aura:if>
+        <aura:if isTrue="{!and(!v.multipleSelected, !v.nothingSelected)}">
+	        {!v.companyLabel} 
+        </aura:if>
+    </label>
+    
+</aura:component>

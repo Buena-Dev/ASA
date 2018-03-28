@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>false</available>
+    <description>ASA Symposium 2006 lender sponsorship with information</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>EmailLetterhead</letterhead>
+    <name>Symposium Lender Sponsorship</name>
+    <style>freeForm</style>
+    <subject>ASA Symposium 2006 Sponsorship</subject>
+    <textOnly>March 10, 2006
+ 
+Dear {!Contact.FirstName},
+ 
+For over 20 years, American Student Assistance®, the nation’s oldest guarantor, has hosted an annual interactive symposium on student lending.  ASA is now preparing for our 2006 event, Insights: A Conversation on Student Debt, scheduled for June 19th and 20th at the Hyatt Harborside in Boston.  As in past years, we are looking to our lending partners to help support this worthwhile event.
+ 
+The 2005 ASA Symposium was ASA’s most successful event to date.  Hosting over 400 financial aid professionals from across the country, attendees found the symposium to be an important dialogue on the issue of access and student debt.  A significant part of the symposium’s success can be credited to the generous support of our lender partners.
+ 
+The following page outlines the 2006 ASA Symposium sponsorship opportunities.  Similar to last year, there will be a limited number of options to maximize your visibility and contact with attendees. We will also be offering a larger, newly renovated exhibit area which will host all breakfasts and breaks.
+ 
+This year’s options range from platinum to bronze with a total of 15 sponsorships available. All sponsorships will be administered on a first come, first served basis beginning online at www.amsa.com/events on Monday, March 13, 2006. 
+ 
+To arrange sponsorship, please visit the Symposium page at www.amsa.com/events.  For more sponsorship information, please contact ASA’s Events Manager, Nancy Meehan, at (800) 999.9080, extension 4207.
+ 
+The 2006 ASA Symposium is shaping up to be the best ever, so please consider joining us in June.  Please take a moment to review the sponsorship opportunities and remember to check our website on Monday, March 13, 2006, to choose your level.  On behalf of ASA, thank you for your consideration.  
+ 
+Sincerely, 
+ 
+Bill Fortier
+Lender Account Executive
+American Student Assistance
+ 
+
+American Student Assistance® 2006 SYMPOSIUM SPONSORSHIPS
+ 
+Platinum A $10,000 includes:
+
+Sponsor Monday key note speaker - Juan Williams, National Political Correspondent/Author 
+Co-Sponsor of Symposium social event Monday, June 19th: Dinner &amp; DJ at the State Room (formally the Bay Tower Room) Boston.  
+Banner at event with sponsor logo 
+Conference gift: jacket, vest or sweatshirt 
+Full page color ad in conference program 
+Listing in program as platinum sponsor 
+Name on sponsorship banner at conference 
+Listing as platinum sponsor on www.amsa.com with company logo and link 
+Display table at symposium
+ 
+Platinum B $10,000 includes:
+
+Sponsor Tuesday key note speaker - TBD 
+Co-Sponsor of Symposium social event Monday, June 19th: Dinner &amp; DJ at the State Room (formally the Bay Tower Room) Boston.  
+Banner at event with sponsor logo 
+Conference tote or back pack 
+Full page color ad in conference program 
+Listing in program as platinum sponsor 
+Name on sponsorship banner at conference 
+Listing as platinum sponsor on www.amsa.com with company logo and link 
+Display table at symposium
+ 
+Gold A $7,500 includes:
+
+Co-sponsor bus transportation to State Room for dinner &amp; dancing on Monday, June 19th. 
+Conference name badge &amp;  lanyards 
+Full page black &amp; white ad in program 
+Listings in program as gold sponsor 
+Name on sponsorship banner at conference 
+Listing as gold sponsor on www.amsa.com with company logo and link 
+Display table at symposium
+ 
+Gold B $7,500 includes:
+
+Co-sponsor bus transportation to State Room for dinner &amp; dancing on Monday, June 19th. 
+Conference notebook &amp; pen 
+Full page black &amp; white ad in program 
+Listings in program as gold sponsor 
+Name on sponsorship banner at conference 
+Listing as gold sponsor on www.amsa.com with company logo and link 
+Display table at symposium
+ 
+Silver A $5,000 includes:
+
+Sponsorship of Monday Lunch 
+Conference water bottles 
+½ page black &amp; white ad in conference program 
+Listing in conference program as silver sponsor 
+Name on sponsorship banner at conference 
+Listing as silver sponsor on www.amsa.com with company logo and link 
+Display table at symposium
+ 
+Silver B $5,000 includes:
+
+Sponsorship of Tuesday Lunch 
+Conference luggage tag 
+½ page black &amp; white ad in conference program 
+Listing in conference program as silver sponsor 
+Name on sponsorship banner at conference 
+Listing as silver sponsor on www.amsa.com with company logo and link 
+Display table at symposium
+ 
+Bronze $3,000 (nine available) includes:
+
+¼ page black &amp; white ad in program 
+Listing in program as bronze sponsor 
+Name on sponsorship banner at conference 
+Listing as sponsor on www.amsa.com 
+Display table at symposium 
+Choice of one conference sponsorship below
+ 
+Sunday, June 18th         
+Co-Sponsor Welcome Reception
+ 
+Monday, June 19th     
+ Breakfast
+ Morning Break
+ Afternoon Break
+                                       
+Tuesday, June 20th        
+Breakfast
+Morning Break
+Afternoon Break
+ 
+Other                   _____speaker book table</textOnly>
+    <type>html</type>
+</EmailTemplate>

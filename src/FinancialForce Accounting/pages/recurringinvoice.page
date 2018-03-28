@@ -1,0 +1,107 @@
+<apex:page standardController="c2g__codaInvoice__c" extensions="c2g.ffb_RecurringInvoiceController" action="{!validateInvoice}">
+	<script src="{!URLFOR($Resource.c2g__coda2go,'coda2go/web/script/lib.js')}" type="text/javascript"/>
+    <apex:stylesheet value="{!URLFOR($Resource.c2g__coda2go,'coda2go/web/css/style.css')}"/>
+	
+	<apex:sectionHeader title="{!$Label.c2g__recurringinvoices}" subtitle="{!c2g__codaInvoice__c.Name}" />
+	
+	<apex:form >
+		<div id="indicator"><img src="/s.gif" align="absMiddle"/><span id="indicatortext"></span></div>
+		<apex:pageBlock id="pageBlock" title="{!$Label.c2g__recurringinvoice}" mode="edit">
+
+			<apex:pageBlockButtons id="buttons">
+				<apex:outputPanel id="saveButtonsWrapper">
+					<apex:outputPanel rendered="{!NOT(viewstate.haveErrorsInRecurringDefinition)}">
+						<apex:commandButton action="{!Save}" value="{!$Label.c2g__save}"/>
+						<apex:commandButton action="{!SaveAndPost}" value="{!$Label.c2g__saveandpost}" rendered="{!($Permission.c2g__SalesInvoiceSave && $Permission.c2g__SalesInvoicePost) || $Setup.codaAccountingSettings__c.DisableCustomPermissions__c}" />
+					</apex:outputPanel>
+				</apex:outputPanel>
+				<apex:commandButton action="{!cancel}" value="{!$Label.c2g__cancel}" />
+			</apex:pageBlockButtons>
+			
+			<apex:pageMessages id="messagesPanel"/>
+			
+			<apex:pageBlockSection id="criteria" title="{!$Label.c2g__criteria}" columns="2" rendered="{!!viewState.HasError}">
+				<apex:pageBlockSectionItem >
+					<apex:outputLabel for="recurringType" value="{!$Label.c2g__recurringtype}" />
+					<apex:outputPanel layout="block">
+						<apex:selectList id="recurringType" value="{!viewState.recurringType}" multiselect="false" size="1">
+							<apex:selectOptions value="{!viewState.recurringTypes}" />
+						</apex:selectList>
+					</apex:outputPanel>
+				</apex:pageBlockSectionItem>
+				
+				<apex:pageBlockSectionItem >
+					<apex:outputLabel for="startDate" value="{!$Label.c2g__startdate}" />
+					<apex:inputField id="startDate" value="{!viewstate.startDateLookup.c2g__LookupDate__c}"/>
+				</apex:pageBlockSectionItem>
+
+				<apex:pageBlockSectionItem >
+					<apex:outputLabel for="scheduleType" value="{!$Label.c2g__scheduletype}" />
+					<apex:selectList id="scheduleType" value="{!viewstate.scheduleType}" multiselect="false" size="1">
+						<apex:selectOptions value="{!viewstate.scheduleTypes}" />
+					</apex:selectList>
+				</apex:pageBlockSectionItem>
+
+				<apex:pageBlockSectionItem >
+					<apex:outputLabel for="installmentInterval" value="{!$Label.c2g__installmentinterval}" />
+					<apex:selectList id="installmentInterval" value="{!viewstate.installmentInterval}" multiselect="false" size="1">
+						<apex:selectOptions value="{!viewstate.installmentIntervals}" />
+					</apex:selectList>
+				</apex:pageBlockSectionItem>
+
+				<apex:pageBlockSectionItem >
+					<apex:outputLabel for="numberOfInstallments" value="{!$Label.c2g__numberofinstallments}" />
+					<apex:outputText >
+						<div class="ffRequiredInput">
+							<div class="ffRequiredBlock"></div>
+							<apex:inputText id="numberOfInstallments" value="{!viewstate.numberOfInstallments}"/>
+						</div>
+					</apex:outputText>
+				</apex:pageBlockSectionItem>
+
+				<apex:pageBlockSectionItem >
+					<apex:outputText />
+					<apex:commandButton action="{!viewState.calculateRecurringLines}"
+						value="{!$Label.c2g__previewrecurringinvoices}"
+						onclick="CODA.indicatorOn('{!$Label.c2g__processing}');"
+						oncomplete="CODA.indicatorOff();"
+						rerender="pageBlock"/>
+				</apex:pageBlockSectionItem>
+			</apex:pageBlockSection>
+
+			<apex:pageBlockSection id="scheduleArea" title="{!$Label.c2g__schedule}" columns="1" >
+				<apex:variable var="lineNumber" value="{!0}"/>
+				<apex:pageBlockTable value="{!viewState.RecurringLines}" var="line" rendered="{!NOT(viewState.RecurringLines.empty)}">
+
+					<apex:column >
+						<apex:variable var="lineNumber" value="{!lineNumber+1}"/>
+						<apex:outputText value="{0,number,###}">
+							<apex:param value="{!lineNumber}" />
+						</apex:outputText>
+					</apex:column>
+
+					<apex:column headerValue="{!$Label.c2g__invoicedate}">
+						<apex:outputField value="{!line.invoiceDateLookup.c2g__LookupDate__c}"/>
+					</apex:column>
+
+					<apex:column headerValue="{!$Label.c2g__yearperiod}">
+						<apex:outputField value="{!line.periodLookup.c2g__Period__c}"/>
+					</apex:column>
+
+					<apex:column headerValue="{!$Label.c2g__duedate}">
+						<apex:inputField value="{!line.dueDateLookup.c2g__LookupDate__c}"/>
+					</apex:column>
+
+					<apex:column headerValue="{!$Label.c2g__currency}">
+						<apex:outputField value="{!line.currencyLookup.c2g__AccountingCurrency__c}"/>
+					</apex:column>
+
+					<apex:column headerValue="{!$Label.c2g__invoiceamount}">
+						<apex:outputField value="{!line.valueLookup.c2g__LookupNumber__c}"/>
+					</apex:column>
+
+				</apex:pageBlockTable>
+			</apex:pageBlockSection>
+		</apex:pageBlock>
+	</apex:form>
+</apex:page>

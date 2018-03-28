@@ -1,0 +1,694 @@
+<!-- codacreditnoteprint -->
+<apex:page standardController="c2g__codaCreditNote__c" extensions="c2g.CreditNotePrintController" showHeader="false" sidebar="false" standardStylesheets="false" renderas="{!if($CurrentPage.parameters.p == null, null, 'pdf')}" applyBodyTag="false">
+	
+	<head>
+	    <style type="text/css">
+ 			@page {
+	            @bottom-right {content:"{!$Label.PaginationBeforePageText} " counter(page) " {!$Label.PaginationAfterPageText} " counter(pages);
+	                       font-family:Verdana, Arial, Helvetica, Arial Unicode MS, sans-serif;
+	                       font-size:7.5pt;
+	                       font-weight:bold;
+	                       padding-bottom;25px;
+	          	}
+	        }
+       </style>
+    </head>   
+	<apex:stylesheet value="{!URLFOR($Resource.c2g__coda2go,'coda2go/web/css/style.css')}"/>
+	<apex:stylesheet value="{!URLFOR($Resource.c2g__coda2go,'coda2go/web/css/codacreditnoteprint.css')}"/>
+
+	<apex:variable var="watermarkUrl" value="{!if(viewstate.HaveCustomWatermarkUrl,
+	viewstate.CustomWatermarkUrl, URLFOR($Resource.coda2go,'coda2go/web/images/draftwatermark.png'))}" />
+
+	<apex:outputPanel rendered="{!!viewstate.IsComplete}">
+		<img src="{!watermarkUrl}" width="100%" height="100%"
+		class="watermark"/>
+	</apex:outputPanel>
+
+	<table>
+		<tr>
+			<td>
+				<div>
+					<apex:image url="{!viewstate.LogoURL}" rendered="{!viewstate.ExistsLogo}"/>
+				</div>
+			</td>
+			<td class="alignright title">
+				<apex:outputText value="{!$Label.c2g__codapagecreditnoteprintcreditnote}"/>
+			</td>
+		</tr>
+	</table>
+	<table>
+		<tr>
+			<td class="zeropadding">
+				<apex:outputText value="{!viewstate.CompanyAddress}"/>
+			</td>
+		</tr>
+		<tr>
+			<td class="zeropadding">
+				<apex:outputText value="{!$ObjectType.c2g__codaCompany__c.fields.c2g__Phone__c.label}" rendered="{!viewstate.CompanyPhone<>''}"/>
+				<apex:outputText value="{!viewstate.CompanyPhone}" rendered="{!viewstate.CompanyPhone<>''}"/>
+				<apex:outputText value="{!$ObjectType.c2g__codaCompany__c.fields.c2g__Fax__c.label} " rendered="{!viewstate.CompanyFax<>''}"/>
+				<apex:outputText value="{!viewstate.CompanyFax}" rendered="{!viewstate.CompanyFax<>''}"/>
+			</td>
+		</tr>
+		<tr>
+			<td class="zeropadding">
+				<apex:outputPanel layout="block" rendered="{!viewstate.isVAT}">
+					<apex:outputText value="{!$ObjectType.c2g__codaCompany__c.fields.c2g__VATRegistrationNumber__c.label} "/>
+					<apex:outputText value="{!viewstate.company.ECCountryCode}"/>
+					<apex:outputText value="{!viewstate.company.VATRegistrationNumber}"/>
+				</apex:outputPanel>
+			</td>
+		</tr>
+		<tr>
+			<td class="zeropadding">
+				<apex:outputText value="{!viewstate.CompanyWebsite}" rendered="{!viewstate.CompanyWebsite<>''}"/>
+			</td>
+		</tr>
+		<tr>
+			<td class="zeropadding">
+				<apex:outputText value="{!viewstate.CompanyContactEmail}" rendered="{!viewstate.CompanyContactEmail<>''}"/>
+			</td>
+		</tr>
+		<tr>
+			<td class="zeropadding">&nbsp;</td>
+		</tr>
+		<tr>
+			<td class="zeropadding">&nbsp;</td>
+		</tr>
+	</table>
+	<div class="hspacer"></div>
+	<table>
+		<tr>
+			<td class="strong">
+				<apex:outputText value="{!$Label.c2g__codapagecreditnoteprintbillingaddress}"/>
+			</td>
+			<td rowspan="2" class="aligntop" style="padding-right:0;">
+				<apex:outputpanel rendered="{!!viewstate.isVAT}">
+				<table>
+					<tr>
+						<td class="strong alignright bgcolor boxed boxedtop">
+							<nobr>
+								<apex:outputText value="{!$ObjectType.c2g__codaCreditNote__c.fields.name.label}"/>
+							</nobr>
+						</td>
+						<td class="boxed boxedtop">
+							<apex:outputField value="{!viewstate.dto.name}"/>
+						</td>
+					</tr>
+					<tr>
+						<td class="strong alignright bgcolor boxed" height="10">
+							<nobr>
+								<apex:outputText value="{!$ObjectType.c2g__codaCreditNote__c.fields.c2g__CreditNoteDate__c.label}"/>
+							</nobr>
+						</td>
+						<td class="boxed">
+							<apex:outputField value="{!viewstate.dto.c2g__CreditNoteDate__c}"/>
+						</td>
+					</tr>
+				</table>
+				</apex:outputpanel>
+				<apex:outputpanel rendered="{!viewstate.isVAT}">
+				<table>
+					<tr>
+						<td class="strong alignright bgcolor boxed boxedtop">
+							<nobr>
+								<apex:outputText value="{!$ObjectType.c2g__codaCreditNote__c.fields.name.label}"/>
+							</nobr>
+						</td>
+						<td class="boxed boxedtop">
+							<apex:outputField value="{!viewstate.dto.name}"/>
+						</td>
+					</tr>
+					<tr>
+						<td class="strong alignright bgcolor boxed" height="10">
+							<nobr>
+								<apex:outputText value="{!$ObjectType.c2g__codaCreditNote__c.fields.c2g__CreditNoteDate__c.label}"/>
+							</nobr>
+						</td>
+						<td class="boxed">
+							<apex:outputField value="{!viewstate.dto.c2g__CreditNoteDate__c}"/>
+						</td>
+					</tr>
+					<tr>
+						<td class="strong alignright bgcolor boxed" height="10">
+							<nobr>
+								<apex:outputText value="{!$Label.c2g__codacustomervatnumber}"/>
+							</nobr>
+						</td>
+						<td class="boxed">
+							<apex:outputText value="{!viewstate.creditNote.account.ECCountryCode}"/>
+							<apex:outputText value="{!viewstate.creditNote.account.VATRegistrationNumber}"/>
+						</td>
+					</tr>
+				</table>
+				</apex:outputpanel>
+			</td>
+		</tr>
+		<tr>
+			<td class="aligntop">
+				<apex:outputText value="{!viewstate.accountName}"/>
+				<br/>
+				<apex:dataTable value="{!viewstate.billingAddress.streetArray}" var="item" styleClass="nopadding">
+					<apex:column >
+						<apex:outputText value="{!item}"/>
+					</apex:column>
+				</apex:dataTable>
+				<apex:outputText value="{!viewstate.billingAddress.city}"/>
+				<br/>
+				<apex:outputText value="{!viewstate.billingAddress.state}"/>
+				<br/>
+				<apex:outputText value="{!viewstate.billingAddress.postalCode}"/>
+				<br/>
+				<apex:outputText value="{!viewstate.billingAddress.country}"/>
+			</td>
+		</tr>
+	</table>
+	<div class="hspacer"></div>
+	<table class="boxedtable">
+		<thead>
+			<tr>
+				<td class="aligncenter">
+					<apex:outputText value="{!$ObjectType.c2g__codaCreditNote__c.fields.c2g__CustomerReference__c.label}"/>
+				</td>
+				<td class="aligncenter">
+					<apex:outputText value="{!$Label.c2g__codapagecreditnoteprintcurrency}"/>
+				</td>
+				<td class="aligncenter rightline">
+					<apex:outputText value="{!$ObjectType.c2g__codaCreditNote__c.fields.c2g__DueDate__c.label}"/>
+				</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td class="aligncenter bottomline">
+					<apex:outputField value="{!viewstate.dto.c2g__CustomerReference__c}"/>
+				</td>
+				<td class="aligncenter bottomline">
+					<apex:outputText id="currencyvalue" value="{!viewstate.Currency}"/>
+				</td>
+				<td class="aligncenter rightline bottomline">
+					<apex:outputField value="{!viewstate.dto.c2g__DueDate__c}"/>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<div class="hspacer"></div>
+	<apex:repeat value="{!viewstate.preparedQuoteLinesForPrinting}" var="aPageOfQuotes" id="theFirstList" rows="1"> 
+		<apex:dataTable value="{!aPageOfQuotes}" var="lineItemView" styleClass="boxedtable">
+			<apex:column styleClass="aligntop widthsupersmall aligncenter bottomline">
+				<apex:facet name="header">&nbsp;</apex:facet>
+				<apex:outputField value="{!lineItemView.dto.c2g__LineNumber__c}"/>
+			</apex:column>
+			<apex:column styleClass="aligntop bottomline">
+				<apex:facet name="header">
+					<apex:outputPanel layout="block" styleClass="aligncenter headerpadding">{!$ObjectType.c2g__codaCreditNoteLineItem__c.fields.c2g__Product__c.label}</apex:outputPanel>
+				</apex:facet>
+				<apex:outputPanel styleClass="productdescriptionpanel" rendered="{!viewstate.SomeLineHasProductName}">
+					<div class="productdescriptiontext">
+						<apex:outputText value="{!lineItemView.truncatedProductName}"/>
+					</div>
+				</apex:outputPanel>
+				<apex:outputPanel styleClass="description" rendered="{!viewstate.SomeLineHasProductCode}">
+					<div class="productdescriptiontext">
+						<apex:outputText value="{!$ObjectType.product2.fields.productCode.label}"/>:<apex:outputText value="{!lineItemView.truncatedProductCode}"/>
+					</div>
+				</apex:outputPanel>
+				<apex:outputPanel styleClass="productdescriptionpanel" rendered="{!viewstate.SomeLineHasLineDescription}">
+					<div class="productdescriptiontext">
+						<apex:outputText value="{!lineItemView.truncatedLineDescription}"/>
+					</div>
+				</apex:outputPanel>
+				<apex:outputPanel styleClass="description" rendered="{!lineItemView.DynamicFieldsInfoTable.size > 0}">
+					<apex:repeat value="{!lineItemView.DynamicFieldsInfoTable}" var="fieldLI">
+						<apex:outputText value="{!fieldLI.DynamicFieldController.dynamicFieldInfo.label}"/>:
+						<apex:form >
+							<!--
+							The implementation using new feature Dynamic Binding in VF would be much easier, efficient and user friendly. We would not need any custom component
+							<apex:repeat value="{!myFieldList}" var="f">
+								<apex:outputField value="{!account[f]}"/>
+							</apex:repeat>
+							-->
+							<c:CODADynamicField m_fieldinfo="{!fieldLI.DynamicFieldController.DynamicFieldInfo}" m_mode="VIEW" m_objectc="codaCreditNoteLineItem__c"/>
+							</apex:form>
+						<br/>
+					</apex:repeat>
+				</apex:outputPanel>
+			</apex:column>
+			<apex:column styleClass="alignright aligntop widthsmall bottomline">
+				<apex:facet name="header">
+					<apex:outputPanel layout="block" styleClass="aligncenter headerpadding">{!$ObjectType.c2g__codaCreditNoteLineItem__c.fields.c2g__Quantity__c.label}</apex:outputPanel>
+				</apex:facet>
+				<div class="nonproductcolumntext">
+					<apex:outputText value="{!lineItemView.Quantity}"/>
+				</div>
+			</apex:column>
+			<apex:column styleClass="alignright aligntop widthsmall bottomline">
+				<apex:facet name="header">
+					<apex:outputPanel layout="block" styleClass="aligncenter headerpadding">{!$ObjectType.c2g__codaCreditNoteLineItem__c.fields.c2g__UnitPrice__c.label}</apex:outputPanel>
+				</apex:facet>
+				<div class="nonproductcolumntext">
+					<apex:outputText value="{!lineItemView.UnitPriceWithSymbol}"/>
+				</div>
+			</apex:column>
+
+			<!-- Below column rendered depending on Tax Method - Sales and Use Tax ONLY -->
+			<apex:column styleClass="alignright aligntop widthsmall bottomline" rendered="{!viewstate.isSalesAndUse}">
+				<apex:facet name="header">
+					<apex:outputPanel layout="block" styleClass="aligncenter headerpadding">{!$Label.c2g__codapagecreditnoteprinttaxrate}</apex:outputPanel>
+				</apex:facet>
+				<div class="nonproductcolumntext">
+					<apex:outputText value="{!lineItemView.CompositeTaxRate}"/>
+				</div>
+			</apex:column>
+
+			<!-- Below column rendered depending on Tax Method - VAT ONLY -->
+			<apex:column styleClass="aligntop widthsmall bottomline" rendered="{!viewstate.isVat}">
+				<apex:facet name="header">
+					<apex:outputPanel layout="block" styleClass="aligncenter headerpadding">{!$ObjectType.c2g__codaCreditNoteLineItem__c.fields.c2g__TaxCode1__c.label}</apex:outputPanel>
+				</apex:facet>
+				<div class="nonproductcolumntext">
+					<apex:outputText value="{!lineItemView.lineItem.taxCode1.Name}"/>
+				</div>
+			</apex:column>
+
+			<apex:column styleClass="alignright aligntop widthsmall bottomline" rendered="{!viewstate.isVat}">
+				<apex:facet name="header">
+					<apex:outputPanel layout="block" styleClass="aligncenter headerpadding">{!$ObjectType.c2g__codaInvoiceLineItem__c.fields.c2g__TaxValue1__c.label}</apex:outputPanel>
+				</apex:facet>
+				<div class="nonproductcolumntext">
+					<apex:outputText value="{!lineItemView.TaxValue1WithSymbol}"/>
+				</div>
+			</apex:column>
+
+			<apex:column styleClass="alignright aligntop widthsmall bottomline" rendered="{!viewstate.isSalesAndUse}">
+				<apex:facet name="header">
+					<apex:outputPanel layout="block" styleClass="aligncenter headerpadding">{!$ObjectType.c2g__codaCreditNoteLineItem__c.fields.c2g__TaxValue1__c.label}</apex:outputPanel>
+				</apex:facet>
+				<div class="nonproductcolumntext">
+					<apex:outputText value="{!lineItemView.TaxValueTotalWithSymbol}"/>
+				</div>
+			</apex:column>
+			<apex:column styleClass="alignright aligntop widthsmall rightline bottomline">
+				<apex:facet name="header">
+					<apex:outputPanel layout="block" styleClass="aligncenter headerpadding rightline">{!$ObjectType.c2g__codaCreditNoteLineItem__c.fields.c2g__NetValue__c.label}</apex:outputPanel>
+				</apex:facet>
+				<div class="nonproductcolumntext">
+					<apex:outputText value="{!lineItemView.NetValue}"/>
+				</div>
+			</apex:column>
+		</apex:dataTable>
+	</apex:repeat>
+
+	<apex:repeat value="{!viewstate.preparedQuoteLinesForPrinting}" var="aPageOfQuotes" id="theList" first="1">
+		<apex:dataTable value="{!aPageOfQuotes}" var="lineItemView" styleClass="boxedtable" style="page-break-before:always;">
+			<apex:column styleClass="aligntop widthsupersmall aligncenter bottomline">
+				<apex:facet name="header">&nbsp;</apex:facet>
+				<apex:outputField value="{!lineItemView.dto.c2g__LineNumber__c}"/>
+			</apex:column>
+			<apex:column styleClass="aligntop bottomline">
+				<apex:facet name="header">
+					<apex:outputPanel layout="block" styleClass="aligncenter headerpadding">{!$ObjectType.c2g__codaCreditNoteLineItem__c.fields.c2g__Product__c.label}</apex:outputPanel>
+				</apex:facet>
+				<apex:outputPanel styleClass="productdescriptionpanel" rendered="{!viewstate.SomeLineHasProductName}">
+					<div class="productdescriptiontext">
+						<apex:outputText value="{!lineItemView.truncatedProductName}"/>
+					</div>
+				</apex:outputPanel>
+				<apex:outputPanel styleClass="description" rendered="{!viewstate.SomeLineHasProductCode}">
+					<div class="productdescriptiontext">
+						<apex:outputText value="{!$ObjectType.product2.fields.productCode.label}"/>:<apex:outputText value="{!lineItemView.truncatedProductCode}"/>
+					</div>
+				</apex:outputPanel>
+				<apex:outputPanel styleClass="productdescriptionpanel" rendered="{!viewstate.SomeLineHasLineDescription}">
+					<div class="productdescriptiontext">
+						<apex:outputText value="{!lineItemView.truncatedLineDescription}"/>
+					</div>
+				</apex:outputPanel>
+				<apex:outputPanel styleClass="description" rendered="{!lineItemView.DynamicFieldsInfoTable.size > 0}">
+					<apex:repeat value="{!lineItemView.DynamicFieldsInfoTable}" var="fieldLI">
+						<apex:outputText value="{!fieldLI.DynamicFieldController.dynamicFieldInfo.label}"/>:
+						<apex:form >
+							<!--
+							The implementation using new feature Dynamic Binding in VF would be much easier, efficient and user friendly. We would not need any custom component
+							<apex:repeat value="{!myFieldList}" var="f">
+								<apex:outputField value="{!account[f]}"/>
+							</apex:repeat>
+							-->
+							<c:CODADynamicField m_fieldinfo="{!fieldLI.DynamicFieldController.DynamicFieldInfo}" m_mode="VIEW" m_objectc="codaCreditNoteLineItem__c"/>
+							</apex:form>
+						<br/>
+					</apex:repeat>
+				</apex:outputPanel>
+			</apex:column>
+			<apex:column styleClass="alignright aligntop widthsmall bottomline">
+				<apex:facet name="header">
+					<apex:outputPanel layout="block" styleClass="aligncenter headerpadding">{!$ObjectType.c2g__codaCreditNoteLineItem__c.fields.c2g__Quantity__c.label}</apex:outputPanel>
+				</apex:facet>
+				<div class="nonproductcolumntext">
+					<apex:outputText value="{!lineItemView.Quantity}"/>
+				</div>
+			</apex:column>
+			<apex:column styleClass="alignright aligntop widthsmall bottomline">
+				<apex:facet name="header">
+					<apex:outputPanel layout="block" styleClass="aligncenter headerpadding">{!$ObjectType.c2g__codaCreditNoteLineItem__c.fields.c2g__UnitPrice__c.label}</apex:outputPanel>
+				</apex:facet>
+				<div class="nonproductcolumntext">
+					<apex:outputText value="{!lineItemView.UnitPriceWithSymbol}"/>
+				</div>
+			</apex:column>
+
+			<!-- Below column rendered depending on Tax Method - Sales and Use Tax ONLY -->
+			<apex:column styleClass="alignright aligntop widthsmall bottomline" rendered="{!viewstate.isSalesAndUse}">
+				<apex:facet name="header">
+					<apex:outputPanel layout="block" styleClass="aligncenter headerpadding">{!$Label.c2g__codapagecreditnoteprinttaxrate}</apex:outputPanel>
+				</apex:facet>
+				<div class="nonproductcolumntext">
+					<apex:outputText value="{!lineItemView.CompositeTaxRate}"/>
+				</div>
+			</apex:column>
+
+			<!-- Below column rendered depending on Tax Method - VAT ONLY -->
+			<apex:column styleClass="aligntop widthsmall bottomline" rendered="{!viewstate.isVat}">
+				<apex:facet name="header">
+					<apex:outputPanel layout="block" styleClass="aligncenter headerpadding">{!$ObjectType.c2g__codaCreditNoteLineItem__c.fields.c2g__TaxCode1__c.label}</apex:outputPanel>
+				</apex:facet>
+				<div class="nonproductcolumntext">
+					<apex:outputText value="{!lineItemView.lineItem.taxCode1.Name}"/>
+				</div>
+			</apex:column>
+
+			<apex:column styleClass="alignright aligntop widthsmall bottomline" rendered="{!viewstate.isVat}">
+				<apex:facet name="header">
+					<apex:outputPanel layout="block" styleClass="aligncenter headerpadding">{!$ObjectType.c2g__codaInvoiceLineItem__c.fields.c2g__TaxValue1__c.label}</apex:outputPanel>
+				</apex:facet>
+				<div class="nonproductcolumntext">
+					<apex:outputText value="{!lineItemView.TaxValue1WithSymbol}"/>
+				</div>
+			</apex:column>
+
+			<apex:column styleClass="alignright aligntop widthsmall bottomline" rendered="{!viewstate.isSalesAndUse}">
+				<apex:facet name="header">
+					<apex:outputPanel layout="block" styleClass="aligncenter headerpadding">{!$ObjectType.c2g__codaCreditNoteLineItem__c.fields.c2g__TaxValue1__c.label}</apex:outputPanel>
+				</apex:facet>
+				<div class="nonproductcolumntext">
+					<apex:outputText value="{!lineItemView.TaxValueTotalWithSymbol}"/>
+				</div>
+			</apex:column>
+			<apex:column styleClass="alignright aligntop widthsmall rightline bottomline">
+				<apex:facet name="header">
+					<apex:outputPanel layout="block" styleClass="aligncenter headerpadding rightline">{!$ObjectType.c2g__codaCreditNoteLineItem__c.fields.c2g__NetValue__c.label}</apex:outputPanel>
+				</apex:facet>
+				<div class="nonproductcolumntext">
+					<apex:outputText value="{!lineItemView.NetValue}"/>
+				</div>
+			</apex:column>
+		</apex:dataTable>
+	</apex:repeat>
+	<table>
+		<tr>
+			<td class="aligntop generalnopadding">
+				<table>
+					<tr>
+						<td class="strong alignright">
+							<apex:outputText value="{!$ObjectType.c2g__codaCreditNote__c.fields.c2g__NetTotal__c.label}"/>
+						</td>
+						<td class="widthsmall boxed boxedtopnone alignright">
+							<div class="nonproductcolumntext">
+								<apex:outputText value="{!viewstate.NetTotal}"/>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td class="strong alignright">
+							<apex:outputText value="{!$ObjectType.c2g__codaCreditNote__c.fields.c2g__TaxTotal__c.label}"/>
+						</td>
+						<td class="widthsmall boxed alignright">
+							<div class="nonproductcolumntext">
+								<apex:outputText value="{!viewstate.TaxTotal}"/>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td class="strong alignright">
+							<apex:outputText value="{!$ObjectType.c2g__codaCreditNote__c.fields.c2g__CreditNoteTotal__c.label}"/>
+						</td>
+						<td class="widthsmall boxed alignright">
+							<div class="nonproductcolumntext">
+								<apex:outputText value="{!viewstate.CreditNoteTotal}"/>
+							</div>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+	<div style="page-break-inside:avoid;">
+	<table>
+		<tr>
+			<td class="aligntop generalnopadding">
+				<div class="hspacer"></div>
+				<apex:dataTable id="dtTaxSummary" value="{!viewstate.taxSummaryWithoutBlank}" var="taxSummary" styleClass="boxedtable" style="width:403px" rendered="{!!viewstate.taxSummaryEmpty}">
+					<apex:facet name="header"><apex:outputPanel layout="block" styleclass="headerpadding rightline aligncenter">{!$Label.c2g__codapagecreditnoteprinttaxsummary}</apex:outputPanel></apex:facet>
+					<apex:column styleClass="aligntop widthsmall bottomline">
+						<apex:facet name="header">
+							<apex:outputPanel layout="block" styleclass="headerpadding aligncenter">{!viewstate.TaxSummaryTaxCodeHeading}</apex:outputPanel>
+						</apex:facet>
+						<apex:outputText value="{!taxSummary.TaxCodeName}"/>
+					</apex:column>
+
+					<!-- Below column rendered depending on Tax Method - VAT ONLY -->
+					<apex:column styleClass="alignright aligntop widthmedium bottomline" rendered="{!viewstate.isVat}">
+						<apex:facet name="header">
+							<apex:outputPanel layout="block" styleclass="headerpadding aligncenter">{!$ObjectType.c2g__codaCreditNoteLineItem__c.fields.c2g__TaxRate1__c.label}</apex:outputPanel>
+						</apex:facet>
+						<apex:outputText value="{!taxSummary.TaxRate}"/>
+					</apex:column>
+
+					<!-- Below column rendered depending on Tax Method - VAT ONLY -->
+					<apex:column styleClass="alignright aligntop widthmedium bottomline" rendered="{!viewstate.isVat}">
+						<apex:facet name="header">
+							<apex:outputPanel layout="block" styleclass="headerpadding aligncenter">{!$ObjectType.c2g__codaCreditNoteLineItem__c.fields.c2g__NetValue__c.label}</apex:outputPanel>
+						</apex:facet>
+						<apex:outputText value="{!viewstate.currencySymbol}{!taxSummary.NetValue}"/>
+					</apex:column>
+					<apex:column styleClass="alignright aligntop widthmedium rightline bottomline">
+						<apex:facet name="header">
+							<apex:outputPanel layout="block" styleclass="headerpadding aligncenter rightline">{!$ObjectType.c2g__codaCreditNoteLineItem__c.fields.c2g__TaxValue1__c.label}</apex:outputPanel>
+						</apex:facet>
+						<apex:outputText value="{!viewstate.currencySymbol}{!taxSummary.TaxValue}"/>
+					</apex:column>
+				</apex:dataTable>
+			</td>
+		</tr>
+	</table>
+	</div>
+	<div class="hspacer"></div>
+
+	<!-- Credit Terms -->
+	<apex:outputPanel rendered="{!viewState.hasCreditTerms}">
+		<table>
+			<tr>
+				<td width="380px" colspan="2" class="strong aligncenter bottomline bgcolor boxed boxedtop">
+					<apex:outputText value="{!$Label.c2g__codapagecreditnoteprintsettlementdiscounts}"/>
+				</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td width="190px" class="strong aligncenter bottomline bgcolor boxed boxedtop">
+					<apex:outputText value="{!$Label.c2g__codapagecreditnoteprintdate}"/>
+				</td>
+				<td width="190px" class="strong aligncenter bottomline bgcolor boxed boxedtop">
+					<apex:outputText value="{!$Label.c2g__codapagecreditnoteprintvalue}"/>
+				</td>
+				<td></td>
+			</tr>
+				<apex:outputPanel rendered="{!viewState.DiscountDate1<>''}">
+				<tr>
+					<td width="190px" class="aligncenter bottomline boxed boxedtop">
+						<apex:outputText value="{!viewState.DiscountDate1}"/>
+					</td>
+					<td width="190px" class="aligncenter rightline bottomline boxed boxedtop">
+						<apex:outputText value="{!viewState.DiscountValue1}"/>
+					</td>
+					<td></td>
+				</tr>
+			</apex:outputPanel>
+			<apex:outputPanel rendered="{!viewState.DiscountDate2<>''}">
+				<tr>
+					<td width="190px" class="aligncenter bottomline boxed boxedtop">
+						<apex:outputText value="{!viewState.DiscountDate2}"/>
+					</td>
+					<td width="190px" class="aligncenter rightline bottomline boxed boxedtop">
+						<apex:outputText value="{!viewState.DiscountValue2}"/>
+					</td>
+					<td></td>
+				</tr>
+			</apex:outputPanel>
+			<apex:outputPanel rendered="{!viewState.DiscountDate3<>''}">
+				<tr>
+					<td width="190px" class="aligncenter bottomline boxed boxedtop">
+						<apex:outputText value="{!viewState.DiscountDate3}"/>
+					</td>
+					<td width="190px" class="aligncenter rightline bottomline boxed boxedtop">
+						<apex:outputText value="{!viewState.DiscountValue3}"/>
+					</td>
+					<td></td>
+				</tr>
+			</apex:outputPanel>
+			<apex:outputPanel rendered="{!viewState.DiscountDate4<>''}">
+				<tr>
+					<td width="190px" class="aligncenter bottomline boxed boxedtop">
+						<apex:outputText value="{!viewState.DiscountDate4}"/>
+					</td>
+					<td width="190px" class="aligncenter rightline bottomline boxed boxedtop">
+						<apex:outputText value="{!viewState.DiscountValue4}"/>
+					</td>
+					<td></td>
+				</tr>
+			</apex:outputPanel>
+		</table>
+	</apex:outputPanel>
+
+	<!-- Custom Fields -->
+	<div class="hspacer"></div>
+	<apex:outputpanel rendered="{!viewstate.DynamicFieldsInfoTable.size > 0}">
+		<apex:dataTable style="width:405px" value="{!viewstate.DynamicFieldsInfoTable}" var="dynamicField" styleClass="boxedtable">
+			<apex:facet name="header">
+				<apex:outputPanel layout="block" styleclass="headerpadding rightline aligncenter">{!$Label.c2g__codapagecreditnoteprintadditionalinformation}</apex:outputPanel>
+			</apex:facet>
+			<apex:column style="width:190px" styleclass="alignleft bottomline boxed boxedtop">
+				<apex:outputText value="{!dynamicField.DynamicFieldController.DynamicFieldInfo.Label}"/>
+			</apex:column>
+			<apex:column style="width:190px" styleclass="alignleft bottomline boxed boxedtop">
+			<apex:form >
+				<!--
+				The implementation using new feature Dynamic Binding in VF would be much easier, efficient and user friendly. We would not need any custom component
+				<apex:repeat value="{!myFieldList}" var="f">
+					<apex:outputField value="{!account[f]}"/>
+				</apex:repeat>
+				-->
+				<c:CODADynamicField m_fieldinfo="{!dynamicField.DynamicFieldController.DynamicFieldInfo}" m_mode="VIEW" m_objectc="codaCreditNote__c"/>
+				</apex:form>
+			</apex:column>
+		</apex:dataTable>
+	</apex:outputpanel>
+
+	<!-- Credit Note Description -->
+	<div class="hspacer"></div>
+	<apex:outputPanel rendered="{!viewstate.dto.c2g__CreditNoteDescription__c<>''}">
+	<table>
+		<tr><td width="68%"></td><td class="blank"></td></tr>
+			<tr>
+				<td class="strong alignleft bgcolor boxed boxedtop" height="10">
+					<nobr>
+						<apex:outputText value="{!$ObjectType.c2g__codaCreditNote__c.fields.c2g__CreditNoteDescription__c.label}"/>
+					</nobr>
+				</td>
+				<td class="blank"></td>
+			</tr>
+			<tr>
+				<td class="boxed">
+					<apex:outputField value="{!viewstate.dto.c2g__CreditNoteDescription__c}"/><br/>
+				</td>
+				<td class="blank"></td>
+			</tr>
+	</table>
+	</apex:outputPanel>
+
+	<!-- Editing Start -->
+	<div class="hspacer"></div>
+	<table>
+		<tr><td width="68%"></td><td class="blank"></td></tr>
+		<apex:outputPanel rendered="{!viewstate.showPrintedText1Panel}">
+			<tr>
+				<td class="strong alignleft bgcolor boxed boxedtop" height="10">
+					<nobr>
+						<apex:outputText value="{!viewState.dto.c2g__PrintedText1Heading__c}"/>
+					</nobr>
+				</td>
+				<td class="blank"></td>
+			</tr>
+			<tr>
+				<td class="boxed">
+					<apex:repeat value="{!viewstate.textdefvalue1}" var="textdefvalue1">
+						<apex:outputText value="{!textdefvalue1}"/><br/>
+					</apex:repeat>
+				</td>
+				<td class="blank"></td>
+			</tr>
+		</apex:outputPanel>
+		<apex:outputPanel rendered="{!viewstate.showPrintedText2Panel}">
+			<tr>
+				<td class="strong alignleft bgcolor boxed boxedtop" height="10">
+					<nobr>
+						<apex:outputText value="{!viewState.dto.c2g__PrintedText2Heading__c}"/>
+					</nobr>
+				</td>
+				<td class="blank"></td>
+			</tr>
+			<tr>
+				<td class="boxed">
+					<apex:repeat value="{!viewstate.textdefvalue2}" var="textdefvalue2">
+						<apex:outputText value="{!textdefvalue2}"/><br/>
+					</apex:repeat>
+				</td>
+				<td class="blank"></td>
+			</tr>
+		</apex:outputPanel>
+		<apex:outputPanel rendered="{!viewstate.showPrintedText3Panel}">
+			<tr>
+				<td class="strong alignleft bgcolor boxed boxedtop" height="10">
+					<nobr>
+						<apex:outputText value="{!viewState.dto.c2g__PrintedText3Heading__c}"/>
+					</nobr>
+				</td>
+				<td class="blank"></td>
+			</tr>
+			<tr>
+				<td class="boxed">
+					<apex:repeat value="{!viewstate.textdefvalue3}" var="textdefvalue3">
+						<apex:outputText value="{!textdefvalue3}"/><br/>
+					</apex:repeat>
+				</td>
+				<td class="blank"></td>
+			</tr>
+		</apex:outputPanel>
+		<apex:outputPanel rendered="{!viewstate.showPrintedText4Panel}">
+			<tr>
+				<td class="strong alignleft bgcolor boxed boxedtop" height="10">
+					<nobr>
+						<apex:outputText value="{!viewState.dto.c2g__PrintedText4Heading__c}"/>
+					</nobr>
+				</td>
+				<td class="blank"></td>
+			</tr>
+			<tr>
+				<td class="boxed">
+					<apex:repeat value="{!viewstate.textdefvalue4}" var="textdefvalue4">
+						<apex:outputText value="{!textdefvalue4}"/><br/>
+					</apex:repeat>
+				</td>
+				<td class="blank"></td>
+			</tr>
+		</apex:outputPanel>
+		<apex:outputPanel rendered="{!viewstate.showPrintedText5Panel}">
+			<tr>
+				<td class="strong alignleft bgcolor boxed boxedtop" height="10">
+					<nobr>
+						<apex:outputText value="{!viewState.dto.c2g__PrintedText5Heading__c}"/>
+					</nobr>
+				</td>
+				<td class="blank"></td>
+			</tr>
+			<tr>
+				<td class="boxed">
+					<apex:repeat value="{!viewstate.textdefvalue5}" var="textdefvalue5">
+						<apex:outputText value="{!textdefvalue5}"/><br/>
+					</apex:repeat>
+				</td>
+				<td class="blank"></td>
+			</tr>
+	</apex:outputPanel>
+	</table>
+	<!-- Editing End -->
+</apex:page>

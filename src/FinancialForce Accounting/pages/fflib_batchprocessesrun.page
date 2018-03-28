@@ -1,0 +1,17 @@
+<!-- fflib_batchprocessesrun -->
+<apex:page standardController="c2g__fflib_BatchProcess__c" extensions="c2g.fflib_BatchProcessController" recordSetVar="records">
+	<apex:form >
+		<apex:sectionHeader title="{!$Label.c2g__fflib_batchprocessesrunpagetitle}"/>
+		<apex:pageBlock title="{!$Label.c2g__fflib_batchprocessesrunpagesectiontitle}">
+			<apex:pageBlockButtons >
+				<apex:commandButton value="{!$Label.c2g__fflib_batchprocessesrunjobsbutton}" action="{!runJobs}" disabled="{!isEmpty}"/>
+				<apex:commandButton value="{!$Label.c2g__fflib_batchprocessescancelbutton}" action="{!cancel}"/>
+			</apex:pageBlockButtons>
+			
+			<apex:pageMessages />
+			<apex:outputpanel rendered="{!!isEmpty}">
+				<apex:pageMessage summary="{!$Label.c2g__fflib_batchprocessesconfirmationmessage}" severity="info" strength="2" />
+			</apex:outputpanel>
+		</apex:pageBlock>
+	</apex:form>
+</apex:page>

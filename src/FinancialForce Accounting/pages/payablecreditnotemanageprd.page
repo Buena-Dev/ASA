@@ -1,0 +1,28 @@
+<!-- Copyright (c) 2015 FinancialForce.com, inc. All rights reserved. -->
+<apex:page standardController="c2g__codaPurchaseCreditNote__c" extensions="c2g.PayableCreditNoteManagePrdController" sidebar="false" action="{!loadLines}">
+    
+    <!-- Adding JS Libraries -->
+    <script src="{!URLFOR($Resource.coda2go,'coda2go/web/script/lib.js')}" type="text/javascript"></script>
+
+	<!-- Initialize CODA2Go variables-->
+	<script>
+        CODA.documentFunctionTimer("keyup", CODA.executeQueue, 1500);
+        CODA.documentFunctionTimer("click", CODA.executeQueue, 1500);
+        var CODA2GoButtons = new CODA2GoPage();
+        var CODA2GoBtnSaveValue = "{!$Label.codaPaymentProcessing}";
+    </script>
+
+    <apex:form onsubmit="$FFDC('.newlinebutton').attr('disabled','disabled');$FFDC('#uberGridWaiting').show();if(CODA2GoButtons.disableSaveButtons){return CODA2GoButtons.disableSaveButtons();};">
+        <!-- Page Title-->
+        <apex:sectionHeader title="{!$Label.c2g__manageproductlines}" subtitle="{!c2g__codaPurchaseCreditNote__c.Name}"/>
+        <apex:pageBlock title="{!$Label.c2g__payablecreditlines}">
+            <!-- Save and Cancel Buttons Area within Invoice Lines Title-->
+            <apex:pageBlockButtons >
+                <c:ManageLinesButtons buttonRendered="{!pageLoadErrors}" generalController="{!instance}"/>
+            </apex:pageBlockButtons>
+
+            <!-- Manage Lines Component -->
+            <c:ManageLines doc="{!document}" documentLines="{!PayableCreditNoteProductLines}" defaultLineAttr="{!DefaultPayableCreditNoteProductLine}" pageLoadErrors="{!pageLoadErrors}" defautlGlaName=""/>
+        </apex:pageblock>
+    </apex:form>
+</apex:page>

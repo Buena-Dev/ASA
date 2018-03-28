@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>false</available>
+    <description>Follow up e-mail template from the 2010 CCA Conference</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>EmailLetterhead</letterhead>
+    <name>CCA Conference 2010</name>
+    <style>freeForm</style>
+    <subject>Our Conversation at CCA</subject>
+    <textOnly> 
+Dear {!Contact.FirstName}:
+ 
+It was a pleasure speaking with you at the CCA conference. Thank you for taking the time to hear about the products and services American Student Assistance® (ASA) can offer your school and your students.
+ 
+At ASA®, the cornerstone of our success is the proactive borrower counseling we provide throughout the lives of their loans. Our holistic default prevention and financial literacy approach sets borrowers on the path to successful repayment and lifelong financial stability. As a result of working with us, you can decrease your school’s default rates and increase the value of your school’s degrees—all while projecting a positive public brand image. 
+ 
+I would like to continue our conversation and discuss how ASA can contribute to your school’s enrollment and retention efforts. I’ll be in your area on [insert date] and will contact you so we can sit down, assess your current approach, and discuss examples of how ASA’s unique offerings can make a real difference for your school and your students.
+ 
+Sincerely,
+ 
+{!Contact.OwnerFullName}
+{!Contact.OwnerTitle}
+{!Contact.OwnerEmail}
+ 
+ 
+ 
+ </textOnly>
+    <type>html</type>
+</EmailTemplate>

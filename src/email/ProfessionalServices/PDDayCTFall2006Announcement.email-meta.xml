@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>false</available>
+    <description>Annoucement for Fall CT open enrollment</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>EmailLetterhead</letterhead>
+    <name>PD Day - CT - Fall 2006 (Announcement)</name>
+    <style>freeForm</style>
+    <subject>ASA Training Event Announcement</subject>
+    <textOnly>We are pleased to invite you to American Student Assistance’s Fall Training in Connecticut on Thursday October 12, 2006!  Register now to reserve your spot!
+
+ASA will be hosting a full day of financial aid and professional development training for financial aid professionals and other support services staff for colleges and universities in the Hartford area.  Sign up for the full day or either one of the half-day sessions.  The agenda includes a morning and afternoon session.  For those signed up for the full day, breakfast and lunch will be served.  We look forward to serving you.  Please click on the session title to register.  If you wish to attend for the full day, please register for both sessions separately.
+
+Morning Session
+
+High Profile: Increase Financial Aid Office Visibility and Impact on Campus
+
+What is your reputation on campus? Are you interested in making more of an impact on campus and with your students? Hear about strategies to increase the breadth of influence that the Financial Aid Office has on campus. Learn how to better communicate and work more effectively with various departments on your campus and in the community.
+
+Afternoon Session
+
+Top 10 Financial Aid Pitfalls and How to Avoid Them
+Are you aware of the most common pitfalls in the administration of financial aid? Join us in this session to learn about the most common errors that are made in the Financial Aid Office. Notification, funding, verification, regulatory issues hear about the most frequent errors and how to correct them. This course was created in response to client requests to American Student Assistance and feedback from training evaluation surveys. Walk away with a checklist to evaluate your institution and a resource list to guide your next steps.
+ASA will be hosting this training opportunity free of charge to all participants.  Sign up now to ensure a seat.  This event will take place at Rensselaer at Hartford.
+
+275 Windsor Street
+Hartford, CT 06120
+(860) 548-2400 
+ 
+For detailed directions, please click here.
+
+If you have any questions, feel free to contact us at 1-800-999-9080 ext. 3099 or at training@amsa.com.</textOnly>
+    <type>html</type>
+</EmailTemplate>

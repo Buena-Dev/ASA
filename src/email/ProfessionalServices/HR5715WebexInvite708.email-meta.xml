@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>false</available>
+    <description>HR 5715 Webex Invite 7-08</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>EmailLetterhead</letterhead>
+    <name>HR 5715 Webex Invite 7-08</name>
+    <style>freeForm</style>
+    <subject>You are invited to an ASA regulatory training - HR 5715 update</subject>
+    <textOnly>Join ASA! 
+
+HR 5715 Update Webex - What you Need to Know Now!
+
+
+
+National FFELP guarantor American Student Assistance® has designed a HR 5715 update via Webex. Join us for an in-depth discussion on the changes that will result from HR 5715 “Ensuring Continued Access to Student Loans Act of 2008&quot; and information on some items still awaiting further guidance.
+
+Dates and Time:
+ 
+Tuesday 7/15/2008  11:00 a.m. - 12:00 p.m. ET
+Thursday 7/17/2008 1:00 p.m. - 2:00 p.m. ET 
+
+
+Course Description: 
+Our regulatory analysts will focus on loan limits, lender of last resort and PLUS changes. We will touch on the changes to ACG/SMART, but will not go into them in depth.
+ 
+Who Should Attend 
+Any financial aid administrator interested in the most up to date information related to HR 5715 &quot;Ensuring Continued Access to Student Loans Act of 2008&quot;. 
+
+How to register or for additional information.
+
+· Register Online at http://www.amsa.com/fap/training 
+· Email: send your name, phone number and enrollment details to 
+training@amsa.com 
+· Phone: call the Training Department at (800) 999-9080, ext. 3099 
+All of ASA&apos;s training events are offered free of charge.  Training is considered one of the guarantor&apos;s core responsibilities and ASA is dedicated to providing informative and useful training events for our industry colleagues.
+ 
+Questions
+If you have any questions, please contact the Training Department, your client manager, or ASA’s Call Center at (800) 999-9080 and select Option 1.  The Call Center’s normal hours of operation are Monday through Friday from 8:30 a.m. to 9:00 p.m. ET.</textOnly>
+    <type>html</type>
+</EmailTemplate>

@@ -1,0 +1,2709 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Activate</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>ChangeStatus</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Terminate</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>ASA_Review__c</fullName>
+        <description>The date ASA began reviewing school edits</description>
+        <externalId>false</externalId>
+        <label>ASA Review</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>AccountId</fullName>
+        <trackHistory>true</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ActivatedById</fullName>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ActivatedDate</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>Aggregator_Group__c</fullName>
+        <description>If this account is part of an aggregate sale please fill out which group they belong to.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>If this account is part of an aggregate sale please fill out which group they belong to.</inlineHelpText>
+        <label>Aggregator Group</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Aggregator_Name__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <inlineHelpText>The Aggregator Name is carried over from the related Opportunity into this Contract.</inlineHelpText>
+        <label>Aggregator Name</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Contracts</relationshipLabel>
+        <relationshipName>Contracts</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Aggregator_discount__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Aggregator Discount</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Agreement_Types__c</fullName>
+        <externalId>false</externalId>
+        <label>Agreement Types</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Blanket Guarantee</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>CCI</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>E-signature Repurchase</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Full Service</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Guarantee-only</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Holder Agreement</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Auto -Renewal</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Conversion to Monthly/Annual</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Base_Price__c</fullName>
+        <externalId>false</externalId>
+        <label>Base Price</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>10,000</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>15,000</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>25,000</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>30,000</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>BillingAddress</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>Cancellation_Termination_Provision__c</fullName>
+        <description>Is there a cancellation or termination provision in the contract?  If yes please explain in the Provision Detail field</description>
+        <externalId>false</externalId>
+        <label>Cancellation/Termination Provision?</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes (explain below)</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Comments__c</fullName>
+        <externalId>false</externalId>
+        <label>Comments</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>CompanySignedDate</fullName>
+        <trackHistory>true</trackHistory>
+    </fields>
+    <fields>
+        <fullName>CompanySignedId</fullName>
+        <trackHistory>true</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Contact_Email__c</fullName>
+        <externalId>false</externalId>
+        <label>Contact Email</label>
+        <length>40</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Contact_Name__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <description>The contact that the contract should go to.</description>
+        <externalId>false</externalId>
+        <label>Contact Name</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Contracts</relationshipLabel>
+        <relationshipName>Contracts</relationshipName>
+        <required>true</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Contact_Tel__c</fullName>
+        <externalId>false</externalId>
+        <label>Contact Tel</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Phone</type>
+    </fields>
+    <fields>
+        <fullName>ContractTerm</fullName>
+        <trackHistory>true</trackHistory>
+    </fields>
+    <fields>
+        <fullName>Contract_Auto_Renewal__c</fullName>
+        <description>Does this contract renew automatically?</description>
+        <externalId>false</externalId>
+        <label>Contract Auto-Renewal</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Contract_Requests__c</fullName>
+        <description>Please select all that apply</description>
+        <externalId>false</externalId>
+        <label>Contract Requests</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Standard</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Deferred Payment</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Alternative Payment Schedule</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Training included</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>State Contract Required</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Contract_Stat__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(Opportunity__r.Contract_Status__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Contract Status</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Contract_Status_Not_Used__c</fullName>
+        <externalId>false</externalId>
+        <label>Contract Status-Not Used</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Proposal Requested</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Contract Requested</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Contract submitted to school</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>ASA Review school edits</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>School Review ASA edits</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Agreement Executed</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Contract_Years__c</fullName>
+        <externalId>false</externalId>
+        <label>Contract Years</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>.5</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>1</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>2</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>3</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>4</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>5</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>CustomerSignedDate</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>CustomerSignedId</fullName>
+        <trackHistory>true</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>CustomerSignedTitle</fullName>
+        <trackHistory>true</trackHistory>
+    </fields>
+    <fields>
+        <fullName>Description</fullName>
+        <trackHistory>true</trackHistory>
+    </fields>
+    <fields>
+        <fullName>EndDate</fullName>
+        <trackHistory>true</trackHistory>
+    </fields>
+    <fields>
+        <fullName>Invoice_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Invoice Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Invoice_Frequency__c</fullName>
+        <description>Takes the maximum of Invoice Frequency from Contract Lines, required to calculate the Service Period End date on Sales Invoice. - GS Development Team</description>
+        <externalId>false</externalId>
+        <label>Invoice Frequency</label>
+        <summarizedField>Contract_Lines__c.Invoice_Freq__c</summarizedField>
+        <summaryFilterItems>
+            <field>Contract_Lines__c.Unit_Price__c</field>
+            <operation>greaterThan</operation>
+            <value>0</value>
+        </summaryFilterItems>
+        <summaryForeignKey>Contract_Lines__c.Contract__c</summaryForeignKey>
+        <summaryOperation>max</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Invoice_has_been_created__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Automatically turned on when invoice has been generated.  Then automatically turned off awaiting next invoice date.</inlineHelpText>
+        <label>Invoice has been created</label>
+        <trackHistory>true</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Is_Penalty_Charge__c</fullName>
+        <description>Is there a penalty charge for early termination of this contract if so please complete the dollar amount in &quot;Penalty Charge&quot; field (currency)</description>
+        <externalId>false</externalId>
+        <label>Is there a Penalty Charge?</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Key_Date_s__c</fullName>
+        <description>Any  Key Ticker dates for renewal, rollover, or termination, has a work flow attached</description>
+        <externalId>false</externalId>
+        <label>Key Date(s)</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Legal_ASA_Employee_Info__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Legal contract field_ASA_Employee_Info</description>
+        <externalId>false</externalId>
+        <label>ASA Employee Info</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Legal_Contract_Reevaluation__c</fullName>
+        <description>Has the contract been reevaluated, if date box is filled then it has.</description>
+        <externalId>false</externalId>
+        <label>Contract Reevaluation</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Legal_Contract_Restriction__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Are there any special restrictions on this contract if so please list them in the description text box.</description>
+        <externalId>false</externalId>
+        <label>Contract Restrictions</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Legal_Privacy_Review__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>After reveiw of Contract and has been blessed by the Privacy Specilist box should be checked.</description>
+        <externalId>false</externalId>
+        <label>Privacy Review</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Legal_Review_Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Review Status</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <controllingField>NPI_Provided__c</controllingField>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>In Review</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Waiting Further Review</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Completed</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+            <valueSettings>
+                <controllingFieldValue>unchecked</controllingFieldValue>
+                <controllingFieldValue>checked</controllingFieldValue>
+                <valueName>In Review</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>unchecked</controllingFieldValue>
+                <controllingFieldValue>checked</controllingFieldValue>
+                <valueName>Waiting Further Review</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>unchecked</controllingFieldValue>
+                <controllingFieldValue>checked</controllingFieldValue>
+                <valueName>Completed</valueName>
+            </valueSettings>
+        </valueSet>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Legal_Security_Review__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>After contract is blessed by the ISD elcetronic security rep, can be check off.</description>
+        <externalId>false</externalId>
+        <label>Security Review</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Legal_Sensitive_ASA_Information__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Sensitive ASA Info.</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Legal_approved__c</fullName>
+        <externalId>false</externalId>
+        <label>Legal approved</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Main_Contact__c</fullName>
+        <externalId>false</externalId>
+        <label>Main Contact</label>
+        <length>80</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>NPI_Provided__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Will the Vendor have access to non public information YES/NO</description>
+        <externalId>false</externalId>
+        <label>NPI Access</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Name</fullName>
+        <trackHistory>true</trackHistory>
+    </fields>
+    <fields>
+        <fullName>Next_Invoice_Date__c</fullName>
+        <description>Next invoice date on contract header is earliest date on contract line</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Next invoice date on contract header is earliest date on contract line</inlineHelpText>
+        <label>Next Invoice Date</label>
+        <summarizedField>Contract_Lines__c.Next_Invoice_Date__c</summarizedField>
+        <summaryFilterItems>
+            <field>Contract_Lines__c.Remaining_Invoices__c</field>
+            <operation>greaterThan</operation>
+            <value>0</value>
+        </summaryFilterItems>
+        <summaryForeignKey>Contract_Lines__c.Contract__c</summaryForeignKey>
+        <summaryOperation>min</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Opportunity_Link__c</fullName>
+        <description>Shows the link URL to the Opportunity associated to the Contract.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Shows the link URL to the Opportunity associated to the Contract.</inlineHelpText>
+        <label>Opportunity Link</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>Opportunity__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <inlineHelpText>This field is REQUIRED for the School Channel process - if it is left empty the automated Renewal Opportunity porcess will fail to execute.</inlineHelpText>
+        <label>Opportunity</label>
+        <referenceTo>Opportunity</referenceTo>
+        <relationshipLabel>Contracts</relationshipLabel>
+        <relationshipName>Contracts</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Other__c</fullName>
+        <description>Misc agreements</description>
+        <externalId>false</externalId>
+        <label>Other</label>
+        <length>1000</length>
+        <trackHistory>false</trackHistory>
+        <type>LongTextArea</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>OwnerExpirationNotice</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>OwnerId</fullName>
+        <trackHistory>true</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>PO_Number__c</fullName>
+        <externalId>false</externalId>
+        <label>PO Number</label>
+        <length>25</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Penalty_Charge__c</fullName>
+        <description>If there is a penalty charge what is the amount</description>
+        <externalId>false</externalId>
+        <label>Penalty Charge</label>
+        <precision>12</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Periodic_Calc_Descript__c</fullName>
+        <description>Describe the calculations of periodic payments including Fees the freguency and timing of payments</description>
+        <externalId>false</externalId>
+        <label>Periodic Calc Description</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Periodic_Payments__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Does the contract include periodic payments, if so please describe.</description>
+        <externalId>false</externalId>
+        <label>Periodic Payments?</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Price__c</fullName>
+        <externalId>false</externalId>
+        <label>Price</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Provision_Detail__c</fullName>
+        <description>Explain the Cancellation or Termination Provisions in the contract</description>
+        <externalId>false</externalId>
+        <label>Provision Details</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Ready_to_Create_Invoice__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Automatically flagged when a contract line reaches it&apos;s Next Invoice Date</inlineHelpText>
+        <label>Ready to Create Invoice</label>
+        <trackHistory>true</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Remaining_Invoices__c</fullName>
+        <description>Takes the maximum of Remaining Invoices from Contract Lines, required to calculate the Service Period End date on Sales Invoice.  - GS Development Team</description>
+        <externalId>false</externalId>
+        <label>Remaining Invoices</label>
+        <summarizedField>Contract_Lines__c.Remaining_Invoices__c</summarizedField>
+        <summaryFilterItems>
+            <field>Contract_Lines__c.Unit_Price__c</field>
+            <operation>greaterThan</operation>
+            <value>0</value>
+        </summaryFilterItems>
+        <summaryForeignKey>Contract_Lines__c.Contract__c</summaryForeignKey>
+        <summaryOperation>max</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Renewal_Opportunity_Created__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Renewal Opportunity Created</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Renewal_Terms__c</fullName>
+        <description>Are there special renewal terms or options associated with this contract?</description>
+        <externalId>false</externalId>
+        <label>Renewal Terms</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>N/A</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Renewal_activation_discount__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Renewal activation discount</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Sales_Invoice__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <inlineHelpText>Auto-populated, shows the last invoice that was created from this Contract</inlineHelpText>
+        <label>Sales Invoice</label>
+        <referenceTo>c2g__codaInvoice__c</referenceTo>
+        <relationshipLabel>Contracts</relationshipLabel>
+        <relationshipName>Contracts</relationshipName>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>School_Review__c</fullName>
+        <description>The date the school began reviewing ASA edits</description>
+        <externalId>false</externalId>
+        <label>School Review</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>ShippingAddress</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>Signed_By__c</fullName>
+        <description>Sr. Staff that have signing abilities</description>
+        <externalId>false</externalId>
+        <label>Signed By</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Clara Serpa</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Debra Chromy</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Janine Greenwood</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Larry O&apos;Connell</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Lauren Rolfe</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Michael Finn</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Paul Combe</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Rick Rindini</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Stephen Wong</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Sue Nathan</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Signed_Copy_File__c</fullName>
+        <externalId>false</externalId>
+        <label>Signed Copy File</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Yes (Copy)</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Yes (Original)</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>SpecialTerms</fullName>
+        <trackHistory>true</trackHistory>
+    </fields>
+    <fields>
+        <fullName>StartDate</fullName>
+        <trackHistory>true</trackHistory>
+    </fields>
+    <fields>
+        <fullName>Status</fullName>
+        <trackHistory>true</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Submitted_to_School__c</fullName>
+        <description>Date the contract was submitted to the school</description>
+        <externalId>false</externalId>
+        <label>Submitted to School</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Term_of_Contract__c</fullName>
+        <description>What is the term of the contracts renewal policy?</description>
+        <externalId>false</externalId>
+        <label>Term of Contract</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Auto-Renewal (same term)</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Conversion to Monthly</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Conversion to Annual</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Options (explain below)</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Other (explain below)</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Tracking_2__c</fullName>
+        <externalId>false</externalId>
+        <label>Tracking-2</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Email (PDF)</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Over-night Mail</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Standard Mail</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Fax</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Tracking_Number2__c</fullName>
+        <externalId>false</externalId>
+        <label>Tracking#-2</label>
+        <length>70</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Tracking_Number__c</fullName>
+        <externalId>false</externalId>
+        <label>Tracking #</label>
+        <length>70</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Tracking__c</fullName>
+        <externalId>false</externalId>
+        <label>Tracking</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Email (PDF)</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Over-night Mail</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Standard Mail</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Fax</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>CONTRACT.CONTRACT_NUMBER</columns>
+        <columns>SALES.ACCOUNT.NAME</columns>
+        <columns>CONTRACT.START_DATE</columns>
+        <columns>CONTRACT.END_DATE</columns>
+        <columns>CONTRACT.STATUS</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>AllActivatedContracts</fullName>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CONTRACT.STATUS_CODE</field>
+            <operation>equals</operation>
+            <value>A</value>
+        </filters>
+        <label>All Activated Contracts</label>
+    </listViews>
+    <listViews>
+        <fullName>AllDraftContracts</fullName>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CONTRACT.STATUS_CODE</field>
+            <operation>equals</operation>
+            <value>D</value>
+        </filters>
+        <label>All Draft Contracts</label>
+    </listViews>
+    <listViews>
+        <fullName>AllInApprovalContracts</fullName>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CONTRACT.STATUS_CODE</field>
+            <operation>equals</operation>
+            <value>P</value>
+        </filters>
+        <label>All In Approval Contracts</label>
+    </listViews>
+    <listViews>
+        <fullName>Contracts_Ready_to_Invoice</fullName>
+        <columns>CONTRACT.CONTRACT_NUMBER</columns>
+        <columns>SALES.ACCOUNT.NAME</columns>
+        <columns>Next_Invoice_Date__c</columns>
+        <columns>CONTRACT.START_DATE</columns>
+        <columns>CONTRACT.END_DATE</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <columns>Ready_to_Create_Invoice__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Ready_to_Create_Invoice__c</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <label>Ready to Create Invoice</label>
+    </listViews>
+    <listViews>
+        <fullName>Contracts_with_Oppty</fullName>
+        <columns>CONTRACT.CONTRACT_NUMBER</columns>
+        <columns>SALES.ACCOUNT.NAME</columns>
+        <columns>CONTRACT.START_DATE</columns>
+        <columns>CONTRACT.END_DATE</columns>
+        <columns>CONTRACT.STATUS</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <columns>CONTRACT.CREATED_DATE</columns>
+        <columns>CONTRACT.LAST_UPDATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Opportunity__c</field>
+            <operation>notEqual</operation>
+        </filters>
+        <label>Contracts with Oppty</label>
+    </listViews>
+    <listViews>
+        <fullName>LenderSetUpStatus</fullName>
+        <columns>CONTRACT.CONTRACT_NUMBER</columns>
+        <columns>SALES.ACCOUNT.NAME</columns>
+        <columns>CONTRACT.START_DATE</columns>
+        <columns>CONTRACT.END_DATE</columns>
+        <columns>CONTRACT.STATUS</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CONTRACT.STATUS</field>
+            <operation>notEqual</operation>
+            <value>Agreement Execution,Contract Authorized</value>
+        </filters>
+        <label>Lender Set Up Status</label>
+    </listViews>
+    <listViews>
+        <fullName>LendersinPipeline</fullName>
+        <columns>CONTRACT.CONTRACT_NUMBER</columns>
+        <columns>SALES.ACCOUNT.NAME</columns>
+        <columns>CONTRACT.START_DATE</columns>
+        <columns>CONTRACT.END_DATE</columns>
+        <columns>CONTRACT.STATUS</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CONTRACT.STATUS</field>
+            <operation>equals</operation>
+            <value>Lender Opportunity</value>
+        </filters>
+        <label>Lenders in Pipeline</label>
+    </listViews>
+    <listViews>
+        <fullName>MyActivatedContracts</fullName>
+        <filterScope>Mine</filterScope>
+        <filters>
+            <field>CONTRACT.STATUS_CODE</field>
+            <operation>equals</operation>
+            <value>A</value>
+        </filters>
+        <label>My Activated Contracts</label>
+    </listViews>
+    <listViews>
+        <fullName>MyDraftContracts</fullName>
+        <filterScope>Mine</filterScope>
+        <filters>
+            <field>CONTRACT.STATUS_CODE</field>
+            <operation>equals</operation>
+            <value>D</value>
+        </filters>
+        <label>My Draft Contracts</label>
+    </listViews>
+    <listViews>
+        <fullName>MyInApprovalContracts</fullName>
+        <filterScope>Mine</filterScope>
+        <filters>
+            <field>CONTRACT.STATUS_CODE</field>
+            <operation>equals</operation>
+            <value>P</value>
+        </filters>
+        <label>My In Approval Contracts</label>
+    </listViews>
+    <listViews>
+        <fullName>Mycontracts1</fullName>
+        <columns>CONTRACT.STATUS_CODE</columns>
+        <columns>CONTRACT.STATUS</columns>
+        <columns>CONTRACT.RECORDTYPE</columns>
+        <filterScope>Mine</filterScope>
+        <label>My contracts 1</label>
+    </listViews>
+    <listViews>
+        <fullName>Ready_to_create_Invoices</fullName>
+        <columns>SALES.ACCOUNT.NAME</columns>
+        <columns>CONTRACT.CONTRACT_NUMBER</columns>
+        <columns>Ready_to_Create_Invoice__c</columns>
+        <columns>Next_Invoice_Date__c</columns>
+        <columns>CONTRACT.START_DATE</columns>
+        <columns>CONTRACT.END_DATE</columns>
+        <columns>CONTRACT.STATUS</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Ready_to_Create_Invoice__c</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <filters>
+            <field>Next_Invoice_Date__c</field>
+            <operation>equals</operation>
+            <value>TODAY</value>
+        </filters>
+        <label>Ready to create Invoices</label>
+        <sharedTo>
+            <role>TopLevel</role>
+        </sharedTo>
+    </listViews>
+    <recordTypeTrackHistory>true</recordTypeTrackHistory>
+    <recordTypes>
+        <fullName>ContractInternaltoVendor</fullName>
+        <active>true</active>
+        <description>Use this record for ASA Assosiate contracting with an outside vendor</description>
+        <label>Contract - Internal to Vendor</label>
+        <picklistValues>
+            <picklist>Agreement_Types__c</picklist>
+            <values>
+                <fullName>Auto -Renewal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Conversion to Monthly%2FAnnual</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Base_Price__c</picklist>
+            <values>
+                <fullName>10%2C000</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>15%2C000</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>25%2C000</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>30%2C000</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Cancellation_Termination_Provision__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes %28explain below%29</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Contract_Auto_Renewal__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Contract_Requests__c</picklist>
+            <values>
+                <fullName>Alternative Payment Schedule</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deferred Payment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Standard</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>State Contract Required</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Training included</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Contract_Status_Not_Used__c</picklist>
+            <values>
+                <fullName>ASA Review school edits</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Agreement Executed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Contract submitted to school</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>School Review ASA edits</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Contract_Years__c</picklist>
+            <values>
+                <fullName>1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Is_Penalty_Charge__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Legal_Review_Status__c</picklist>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Review</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Waiting Further Review</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Renewal_Terms__c</picklist>
+            <values>
+                <fullName>N%2FA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Signed_By__c</picklist>
+            <values>
+                <fullName>Clara Serpa</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Debra Chromy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Janine Greenwood</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Larry O%27Connell</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lauren Rolfe</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Michael Finn</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Paul Combe</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rick Rindini</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Stephen Wong</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sue Nathan</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Signed_Copy_File__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes %28Copy%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes %28Original%29</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status</picklist>
+            <values>
+                <fullName>Active</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Agreement Executed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Awaiting ASA Action</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Awaiting Original Copies</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Awaiting Vendor Action</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dead Contract</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Approval Process</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Legal Review</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Privacy%2FSecurity Review</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Term_of_Contract__c</picklist>
+            <values>
+                <fullName>Auto-Renewal %28same term%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Conversion to Annual</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Conversion to Monthly</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Options %28explain below%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other %28explain below%29</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Tracking_2__c</picklist>
+            <values>
+                <fullName>Email %28PDF%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fax</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Over-night Mail</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Standard Mail</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Tracking__c</picklist>
+            <values>
+                <fullName>Email %28PDF%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fax</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Over-night Mail</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Standard Mail</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>ContractOneTimeNonRenewable</fullName>
+        <active>true</active>
+        <description>This type for one time contracts i.e. reastaurant, hotel,</description>
+        <label>Contract - One Time - Non-Renewable</label>
+        <picklistValues>
+            <picklist>Agreement_Types__c</picklist>
+            <values>
+                <fullName>Auto -Renewal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CCI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Conversion to Monthly%2FAnnual</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Base_Price__c</picklist>
+            <values>
+                <fullName>10%2C000</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>15%2C000</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>25%2C000</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>30%2C000</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Cancellation_Termination_Provision__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes %28explain below%29</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Contract_Auto_Renewal__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Contract_Requests__c</picklist>
+            <values>
+                <fullName>Alternative Payment Schedule</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deferred Payment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Standard</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>State Contract Required</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Training included</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Contract_Status_Not_Used__c</picklist>
+            <values>
+                <fullName>ASA Review school edits</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Agreement Executed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Contract submitted to school</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>School Review ASA edits</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Contract_Years__c</picklist>
+            <values>
+                <fullName>1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Is_Penalty_Charge__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Legal_Review_Status__c</picklist>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Review</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Waiting Further Review</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Renewal_Terms__c</picklist>
+            <values>
+                <fullName>N%2FA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Signed_By__c</picklist>
+            <values>
+                <fullName>Clara Serpa</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Debra Chromy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Janine Greenwood</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Larry O%27Connell</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lauren Rolfe</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Michael Finn</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Paul Combe</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rick Rindini</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Stephen Wong</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sue Nathan</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Signed_Copy_File__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes %28Copy%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes %28Original%29</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status</picklist>
+            <values>
+                <fullName>Active</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Agreement Executed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Awaiting ASA Action</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Awaiting Original Copies</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Awaiting Vendor Action</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dead Contract</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Approval Process</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Legal Review</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Privacy%2FSecurity Review</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Term_of_Contract__c</picklist>
+            <values>
+                <fullName>Auto-Renewal %28same term%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Conversion to Annual</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Conversion to Monthly</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Options %28explain below%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other %28explain below%29</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Tracking_2__c</picklist>
+            <values>
+                <fullName>Email %28PDF%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fax</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Over-night Mail</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Standard Mail</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Tracking__c</picklist>
+            <values>
+                <fullName>Email %28PDF%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fax</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Over-night Mail</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Standard Mail</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>LenderServicerContract</fullName>
+        <active>false</active>
+        <description>Contacts for Lender(s) and Servicer(s) used by the Lender Account Executive</description>
+        <label>Lender/Servicer Contract</label>
+        <picklistValues>
+            <picklist>Agreement_Types__c</picklist>
+            <values>
+                <fullName>Blanket Guarantee</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>E-signature Repurchase</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Full Service</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Guarantee-only</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Holder Agreement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Base_Price__c</picklist>
+            <values>
+                <fullName>10%2C000</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>15%2C000</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>25%2C000</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>30%2C000</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Cancellation_Termination_Provision__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes %28explain below%29</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Contract_Auto_Renewal__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Contract_Requests__c</picklist>
+            <values>
+                <fullName>Alternative Payment Schedule</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deferred Payment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Standard</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>State Contract Required</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Training included</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Contract_Status_Not_Used__c</picklist>
+            <values>
+                <fullName>ASA Review school edits</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Agreement Executed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Contract submitted to school</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>School Review ASA edits</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Contract_Years__c</picklist>
+            <values>
+                <fullName>1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Is_Penalty_Charge__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Legal_Review_Status__c</picklist>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Review</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Waiting Further Review</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Renewal_Terms__c</picklist>
+            <values>
+                <fullName>N%2FA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Signed_By__c</picklist>
+            <values>
+                <fullName>Clara Serpa</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Debra Chromy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Janine Greenwood</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Larry O%27Connell</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lauren Rolfe</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Michael Finn</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Paul Combe</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rick Rindini</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Stephen Wong</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sue Nathan</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Signed_Copy_File__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes %28Copy%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes %28Original%29</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status</picklist>
+            <values>
+                <fullName>Active</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Agreement Executed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Awaiting ASA Action</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Awaiting Original Copies</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dead Contract</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Approval Process</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Legal Review</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lender Opportunity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Privacy%2FSecurity Review</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Term_of_Contract__c</picklist>
+            <values>
+                <fullName>Auto-Renewal %28same term%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Conversion to Annual</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Conversion to Monthly</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Options %28explain below%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other %28explain below%29</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Tracking_2__c</picklist>
+            <values>
+                <fullName>Email %28PDF%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fax</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Over-night Mail</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Standard Mail</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Tracking__c</picklist>
+            <values>
+                <fullName>Email %28PDF%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fax</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Over-night Mail</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Standard Mail</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>School_Contract</fullName>
+        <active>true</active>
+        <description>SALT Contract</description>
+        <label>School Contract</label>
+        <picklistValues>
+            <picklist>Agreement_Types__c</picklist>
+            <values>
+                <fullName>Auto -Renewal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Blanket Guarantee</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CCI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Conversion to Monthly%2FAnnual</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>E-signature Repurchase</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Full Service</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Guarantee-only</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Holder Agreement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Base_Price__c</picklist>
+            <values>
+                <fullName>10%2C000</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>15%2C000</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>25%2C000</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>30%2C000</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Cancellation_Termination_Provision__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes %28explain below%29</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Contract_Auto_Renewal__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Contract_Requests__c</picklist>
+            <values>
+                <fullName>Alternative Payment Schedule</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deferred Payment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Standard</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>State Contract Required</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Training included</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Contract_Status_Not_Used__c</picklist>
+            <values>
+                <fullName>ASA Review school edits</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Agreement Executed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Contract Requested</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Contract submitted to school</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Proposal Requested</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>School Review ASA edits</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Contract_Years__c</picklist>
+            <values>
+                <fullName>%2E5</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Is_Penalty_Charge__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Legal_Review_Status__c</picklist>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Review</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Waiting Further Review</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Renewal_Terms__c</picklist>
+            <values>
+                <fullName>N%2FA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Signed_By__c</picklist>
+            <values>
+                <fullName>Clara Serpa</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Debra Chromy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Janine Greenwood</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Larry O%27Connell</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lauren Rolfe</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Michael Finn</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Paul Combe</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rick Rindini</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Stephen Wong</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sue Nathan</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Signed_Copy_File__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes %28Copy%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes %28Original%29</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status</picklist>
+            <values>
+                <fullName>Active</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Agreement Executed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Awaiting ASA Action</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Contract Requested</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dead Contract</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Approval Process</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Legal Review</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Privacy%2FSecurity Review</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Term_of_Contract__c</picklist>
+            <values>
+                <fullName>Auto-Renewal %28same term%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Conversion to Annual</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Conversion to Monthly</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Options %28explain below%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other %28explain below%29</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Tracking_2__c</picklist>
+            <values>
+                <fullName>Email %28PDF%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fax</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Over-night Mail</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Standard Mail</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Tracking__c</picklist>
+            <values>
+                <fullName>Email %28PDF%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fax</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Over-night Mail</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Standard Mail</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts>
+        <customTabListAdditionalFields>CONTRACT.CONTRACT_NUMBER</customTabListAdditionalFields>
+        <customTabListAdditionalFields>CONTRACT.NAME</customTabListAdditionalFields>
+        <customTabListAdditionalFields>SALES.ACCOUNT.NAME</customTabListAdditionalFields>
+        <customTabListAdditionalFields>CONTRACT.STATUS</customTabListAdditionalFields>
+        <listViewButtons>Create_Invoices</listViewButtons>
+        <lookupDialogsAdditionalFields>CONTRACT.CONTRACT_NUMBER</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>CONTRACT.NAME</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>CORE.USERS.ALIAS</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>CONTRACT.CONTRACT_NUMBER</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>CONTRACT.NAME</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>CORE.USERS.ALIAS</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Contact_Tel__c</lookupPhoneDialogsAdditionalFields>
+        <searchResultsAdditionalFields>CONTRACT.CONTRACT_NUMBER</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CONTRACT.NAME</searchResultsAdditionalFields>
+        <searchResultsCustomButtons>Create_Invoices</searchResultsCustomButtons>
+    </searchLayouts>
+    <sharingModel>Private</sharingModel>
+    <webLinks>
+        <fullName>Create_Invoice</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Create Invoice</masterLabel>
+        <openType>sidebar</openType>
+        <page>CL_Create_Invoice</page>
+        <protected>false</protected>
+    </webLinks>
+    <webLinks>
+        <fullName>Create_Invoices</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Create Invoices</masterLabel>
+        <openType>sidebar</openType>
+        <page>CL_Create_Invoices</page>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+    </webLinks>
+    <webLinks>
+        <fullName>Loop__LOOP</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <height>800</height>
+        <linkType>url</linkType>
+        <masterLabel>Create PDF</masterLabel>
+        <openType>sidebar</openType>
+        <protected>false</protected>
+        <url>/apex/loop__loop?eid={!Contract.Id}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Loop__LOOP_Merge</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <height>1000</height>
+        <linkType>url</linkType>
+        <masterLabel>Deprecated LM</masterLabel>
+        <openType>sidebar</openType>
+        <protected>false</protected>
+        <url>/apex/loop__loopmerge?eid={!Contract.Id}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Loop__LOOPlus</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <height>1200</height>
+        <linkType>url</linkType>
+        <masterLabel>Generate Documents</masterLabel>
+        <openType>sidebar</openType>
+        <protected>false</protected>
+        <url>/apex/loop__looplus?eid={!Contract.Id}&amp;accountId={!Contract.AccountId}&amp;sessionId={!$Api.Session_ID}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Loop__Mass_LOOP_Merge</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <height>600</height>
+        <linkType>url</linkType>
+        <masterLabel>Deprecated Mass LM</masterLabel>
+        <openType>sidebar</openType>
+        <protected>false</protected>
+        <requireRowSelection>false</requireRowSelection>
+        <url>/apex/loop__loopmerge?eid={!Contract.Id}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Loop__Mass_LOOPlus</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Generate Documents</masterLabel>
+        <openType>sidebar</openType>
+        <page>Loop__massContractDdp</page>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+    </webLinks>
+</CustomObject>

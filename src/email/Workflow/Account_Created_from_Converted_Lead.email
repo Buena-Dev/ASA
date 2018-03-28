@@ -1,0 +1,5 @@
+Hello,
+
+New account {!Account.Name} has been created through lead conversion. Please review the account details for accuracy.
+
+{!Account.Link}

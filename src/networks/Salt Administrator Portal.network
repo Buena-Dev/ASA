@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Network xmlns="http://soap.sforce.com/2006/04/metadata">
+    <allowMembersToFlag>true</allowMembersToFlag>
+    <branding>
+        <loginFooterText>saltmoney.org</loginFooterText>
+        <loginLogo>Communities_Shared_Document_Folder/SALT_Delta_200_png.png</loginLogo>
+        <primaryColor>#1797C0</primaryColor>
+        <primaryComplementColor>#FFFFFF</primaryComplementColor>
+        <quaternaryColor>#B1BAC1</quaternaryColor>
+        <quaternaryComplementColor>#222222</quaternaryComplementColor>
+        <secondaryColor>#51606E</secondaryColor>
+        <tertiaryColor>#DDE4E9</tertiaryColor>
+        <tertiaryComplementColor>#222222</tertiaryComplementColor>
+        <zeronaryColor>#51606E</zeronaryColor>
+        <zeronaryComplementColor>#FFFFFF</zeronaryComplementColor>
+    </branding>
+    <changePasswordTemplate>Employer_Community_Templates/CommunityChangePasswordEmailTemplate</changePasswordTemplate>
+    <emailSenderAddress>amarley@asa.org</emailSenderAddress>
+    <emailSenderName>Salt Reports</emailSenderName>
+    <enableGuestChatter>false</enableGuestChatter>
+    <enableInvitation>false</enableInvitation>
+    <enableKnowledgeable>false</enableKnowledgeable>
+    <enableNicknameDisplay>true</enableNicknameDisplay>
+    <enablePrivateMessages>true</enablePrivateMessages>
+    <enableReputation>false</enableReputation>
+    <enableSiteAsContainer>true</enableSiteAsContainer>
+    <forgotPasswordTemplate>Employer_Community_Templates/CommunityForgotPasswordEmailTemplate</forgotPasswordTemplate>
+    <navigationLinkSet>
+        <navigationMenuItem>
+            <label>Webinars</label>
+            <position>1</position>
+            <publiclyAvailable>false</publiclyAvailable>
+            <target>/webinars</target>
+            <type>InternalLink</type>
+        </navigationMenuItem>
+        <navigationMenuItem>
+            <label>Salt Store</label>
+            <position>2</position>
+            <publiclyAvailable>false</publiclyAvailable>
+            <target>/salt-store</target>
+            <type>InternalLink</type>
+        </navigationMenuItem>
+        <navigationMenuItem>
+            <label>Standard Reports</label>
+            <position>3</position>
+            <publiclyAvailable>false</publiclyAvailable>
+            <target>/standard-reports</target>
+            <type>InternalLink</type>
+        </navigationMenuItem>
+        <navigationMenuItem>
+            <label>Interactive Reports</label>
+            <position>4</position>
+            <publiclyAvailable>false</publiclyAvailable>
+            <target>https://sso.online.tableau.com/public/sp/login?alias=2a64c77a-d7c0-4145-8f8c-6e3df53741d5</target>
+            <type>ExternalLink</type>
+        </navigationMenuItem>
+    </navigationLinkSet>
+    <networkMemberGroups>
+        <permissionSet>Customer_Community_Users</permissionSet>
+        <permissionSet>Customer_Comm_and_Tableau_Users</permissionSet>
+        <profile>admin</profile>
+        <profile>asa - qa uat</profile>
+    </networkMemberGroups>
+    <picassoSite>Salt_Administrator_Portal_C</picassoSite>
+    <selfRegistration>false</selfRegistration>
+    <sendWelcomeEmail>false</sendWelcomeEmail>
+    <site>Salt_Administrator_Portal</site>
+    <status>Live</status>
+    <tabs>
+        <customTab>Salt_Client_Reports__c</customTab>
+        <defaultTab>01r320000001pHn</defaultTab>
+        <standardTab>Chatter</standardTab>
+    </tabs>
+    <urlPathPrefix>customers</urlPathPrefix>
+    <welcomeTemplate>Employer_Community_Templates/CommunityWelcomeEmailTemplate</welcomeTemplate>
+</Network>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>false</available>
+    <description>Thank you letter for registering to attend the OH PDS - Oct 2007</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>SALTClientLetterhead</letterhead>
+    <name>Partnership Dialogue Series - OH - Thank you for Registering - Oct 2007</name>
+    <style>freeForm</style>
+    <subject>Registration Confirmation to attend ASA&apos;s Partnership Dialogue Series!</subject>
+    <textOnly>Dear {!Contact.FirstName},
+  
+Thank you for registering to attend ASA’s Partnership Dialogue Series: 
+A Focus on Communication. 
+  
+Date:  Friday, October 19, 2007 
+Start Time:  8:30 am 
+Location:  Central State University
+Room 126, The Center for Education and Natural Science
+1400 Brush Row Road
+Wilberforce, OH 45384
+http://www.centralstate.edu/services/directions_map/map_csuwest.html#directions 
+ 
+
+Canceling Your Registration
+If you need to cancel or change your registration please email training@amsa.com or 1-800-999-9080, ext. 3099.
+
+We look forward to seeing you!</textOnly>
+    <type>html</type>
+</EmailTemplate>

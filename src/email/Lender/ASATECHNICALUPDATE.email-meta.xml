@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>false</available>
+    <description>External email for Lender Clients explaining new products and sercices being offered.  Is a Free form template</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>SALTClientLetterhead</letterhead>
+    <name>ASA TECHNICAL UPDATE</name>
+    <style>freeForm</style>
+    <subject>LendServ Release Update - [TODAY&apos;S DATE}</subject>
+    <textOnly>Dear {!Contact.FirstName},
+
+TEXT
+
+{!User.Name}
+{!User.Title}
+{!User.CompanyName}
+
+
+The content of this email is confidential and proprietary to American Student Assistance. It is intended only for the above-named individual or entity and for the purpose indicated and may not be reproduced or distributed without permission of the sender. Please notify the sender or ASA if you received this email in error.</textOnly>
+    <type>html</type>
+</EmailTemplate>

@@ -1,0 +1,116 @@
+<!-- Copyright (c) 2015 FinancialForce.com, inc. All rights reserved. -->
+<aura:component access="global" controller="c2g.ProfitabilityLightningController" implements="force:appHostable,flexipage:availableForAllPageTypes">
+
+	<!-- References to c2g__ (including this one) are preprocessed during ant run.preparecode so that c2g__
+		will be changed to the namespace specified by the user in the build.properties file when deploying to a namespaced
+		org or blank otherwise. Do not attempt to send the unpreprocessed file to your org, eg via MavensMate or Developer
+		Console, or you will get compilation errors.
+	-->
+	<ltng:require styles="/resource/c2g__SLDS090/assets/styles/salesforce-lightning-design-system-ltng.css" />
+
+	<!-- Design Configuration (see ProfitabilityReportingWidget.design) -->
+	<aura:attribute access="global" name="headerText" type="String"/>
+	<aura:attribute access="global" name="recordId" type="String"/>
+	<aura:attribute access="global" name="filterApiName" type="String"/>
+	<aura:attribute access="global" name="filterFieldValue" type="String"/>
+
+	<!-- Data -->
+	<aura:attribute access="private" name="data" type="c2g.AuraResponse"/>
+
+	<!-- UI attributes -->
+	<aura:attribute access="private" name="inProgress" type="Boolean"/>
+
+	<!-- Event handlers -->
+	<aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+
+	<!-- Wrapper div necessary for Lightning Design System -->
+	<div class="wrapper slds">
+		<article class="slds-card slds-text-body--regular slds-m-vertical--medium">
+
+			<header class="slds-card__header">
+				<div class="slds-media slds-media--center slds-has-flexi-truncate">
+					<div class="slds-media__figure">
+						<img src="/resource/c2g__FFLogo" alt="FinancialForce.com Logo" class="slds-icon slds-icon--small"/>
+					</div>
+					<div class="slds-media__body">
+						<h3 class="slds-text-heading--small slds-truncate">{!v.headerText}</h3>
+					</div>
+				</div>
+			</header>
+
+			<section class="slds-card__body">
+
+				<c2g:MessageBox messages="{!v.data.messages}" isError="{!not(v.data.success)}" class="slds-m-horizontal--medium"/>
+
+				<!-- Loading Spinner (centered in grid layout) -->
+				<c2g:Loading inProgress="{!v.inProgress}" class="slds-m-horizontal--medium"/>
+
+				<aura:if isTrue="{!and(v.data.success, !v.inProgress)}">
+
+					<!-- Object name/type subheadings -->
+					<aura:if isTrue="{!v.data.payload.context}">
+						<div class="slds-form-element slds-m-bottom--x-small slds-m-left--medium slds-m-right--medium">
+							<span class="slds-form-element__label">{!v.data.payload.context.objectName}</span>
+							<div class="slds-form-element__control">
+								<span class="slds-form-element__static">{!v.data.payload.context.recordName}</span>
+							</div>
+						</div>
+					</aura:if>
+
+					<!-- Scrollable Table -->
+					<div class="slds-scrollable--x">
+						<table class="slds-table slds-table--bordered">
+							<thead>
+								<tr class="slds-text-heading--label">
+									<th class="slds-is-interactive" scope="col">
+										<span class="slds-truncate">{!$Label.c2g.ProfitabilityReportingWidgetGroupingLabel}</span>
+									</th>
+									<aura:iteration items="{!v.data.payload.table.columnHeaders}" var="header">
+										<th class="slds-is-interactive" scope="col">
+											<span class="slds-truncate">{!header}</span>
+										</th>
+									</aura:iteration>
+								</tr>
+							</thead>
+							<tbody>
+								<aura:iteration items="{!v.data.payload.table.rows}" var="row" >
+									<tr class="{!'groupingLevel' + row.GroupingLevel}">
+										<td>
+											<span>{!row.GroupingField}{!(row.GroupingField == null) ? '' : ': '}</span>
+											<aura:if isTrue="{!row.GroupingFieldIsBoolean}">
+												<img src="{!'/resource/c2g__SLDS090/assets/icons/utility/' + (row.GroupingValue == 'true' ? 'success' : 'error') + '.svg'}" class="booleanIcon"/>
+												<aura:set attribute="else">
+													{!row.GroupingValue}
+												</aura:set>
+											</aura:if>
+										</td>
+										<aura:iteration items="{!row.ColumnValues}" var="cell">
+
+											<!-- The neg(neg()) used for type coercion. This block is here to preserve formatting -->
+											<aura:if isTrue="{!equals(cell,neg(neg(cell)))}">
+													<td class="slds-text-align--right">
+														<ui:outputNumber value="{!cell}" format="#,##0.00" class="slds-truncate"/>
+													</td>
+												<aura:set attribute="else">
+													<td class="slds-text-align--left">
+														<ui:outputText value="{!cell}" class="slds-truncate"/>
+													</td>
+												</aura:set>
+											</aura:if>
+
+										</aura:iteration>
+									</tr>
+								</aura:iteration>
+							</tbody>
+						</table>
+					</div>
+				</aura:if>
+			</section>
+
+			<footer class="slds-card__footer">
+				<img src="/resource/c2g__FFMan" alt="FinancialForce.com Logo" style="width: 98px; height: 32px;"/>
+			</footer>
+
+		</article>
+	</div>
+</aura:component>

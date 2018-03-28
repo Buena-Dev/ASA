@@ -1,0 +1,492 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>This is used by business analysis to track file processing.</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ReadWrite</externalSharingModel>
+    <fields>
+        <fullName>Client_Account_del__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Client Account</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>File Processing</relationshipLabel>
+        <relationshipName>File_Processing_del</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Source__c</fullName>
+        <description>This is the source of the file received.</description>
+        <externalId>false</externalId>
+        <label>Source</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>ACS</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>ACS-Perkins</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>AES/PHEAA</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Aspire</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Campus Partners</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Cornerstone (UT)</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>COSTEP</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>DELQ</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Demographic File</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>DER</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>ECSI</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>EdFinancial</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>EDGEucation Loans.</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>EdManage (SC)</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Granite State (NH)</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Great Lakes Higher Education</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>KHESLC (KY)</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>MOHELA (MO)</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Nelnet</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>OSLA (OK)</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Sallie Mae</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>UAS</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>VSAC (VT)</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Status_Date__c</fullName>
+        <description>This is the date the file is in the selected status.</description>
+        <externalId>false</externalId>
+        <label>Status Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Status__c</fullName>
+        <description>This is the status of the file.</description>
+        <externalId>false</externalId>
+        <label>Status</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <controllingField>Source__c</controllingField>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Received</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Reviewed</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>CM Approved</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Processed</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Reconciled</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+            <valueSettings>
+                <controllingFieldValue>EdFinancial</controllingFieldValue>
+                <controllingFieldValue>COSTEP</controllingFieldValue>
+                <controllingFieldValue>EdManage (SC)</controllingFieldValue>
+                <controllingFieldValue>EDGEucation Loans.</controllingFieldValue>
+                <controllingFieldValue>Granite State (NH)</controllingFieldValue>
+                <controllingFieldValue>Great Lakes Higher Education</controllingFieldValue>
+                <controllingFieldValue>KHESLC (KY)</controllingFieldValue>
+                <controllingFieldValue>MOHELA (MO)</controllingFieldValue>
+                <controllingFieldValue>Nelnet</controllingFieldValue>
+                <controllingFieldValue>OSLA (OK)</controllingFieldValue>
+                <controllingFieldValue>Sallie Mae</controllingFieldValue>
+                <controllingFieldValue>ACS</controllingFieldValue>
+                <controllingFieldValue>ACS-Perkins</controllingFieldValue>
+                <controllingFieldValue>AES/PHEAA</controllingFieldValue>
+                <controllingFieldValue>Aspire</controllingFieldValue>
+                <controllingFieldValue>Campus Partners</controllingFieldValue>
+                <controllingFieldValue>Cornerstone (UT)</controllingFieldValue>
+                <controllingFieldValue>DELQ</controllingFieldValue>
+                <controllingFieldValue>Demographic File</controllingFieldValue>
+                <controllingFieldValue>DER</controllingFieldValue>
+                <controllingFieldValue>UAS</controllingFieldValue>
+                <controllingFieldValue>ECSI</controllingFieldValue>
+                <controllingFieldValue>VSAC (VT)</controllingFieldValue>
+                <valueName>Received</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>EdFinancial</controllingFieldValue>
+                <controllingFieldValue>COSTEP</controllingFieldValue>
+                <controllingFieldValue>EdManage (SC)</controllingFieldValue>
+                <controllingFieldValue>EDGEucation Loans.</controllingFieldValue>
+                <controllingFieldValue>Granite State (NH)</controllingFieldValue>
+                <controllingFieldValue>Great Lakes Higher Education</controllingFieldValue>
+                <controllingFieldValue>KHESLC (KY)</controllingFieldValue>
+                <controllingFieldValue>MOHELA (MO)</controllingFieldValue>
+                <controllingFieldValue>Nelnet</controllingFieldValue>
+                <controllingFieldValue>OSLA (OK)</controllingFieldValue>
+                <controllingFieldValue>Sallie Mae</controllingFieldValue>
+                <controllingFieldValue>ACS</controllingFieldValue>
+                <controllingFieldValue>ACS-Perkins</controllingFieldValue>
+                <controllingFieldValue>AES/PHEAA</controllingFieldValue>
+                <controllingFieldValue>Aspire</controllingFieldValue>
+                <controllingFieldValue>Campus Partners</controllingFieldValue>
+                <controllingFieldValue>Cornerstone (UT)</controllingFieldValue>
+                <controllingFieldValue>DELQ</controllingFieldValue>
+                <controllingFieldValue>Demographic File</controllingFieldValue>
+                <controllingFieldValue>DER</controllingFieldValue>
+                <controllingFieldValue>UAS</controllingFieldValue>
+                <controllingFieldValue>ECSI</controllingFieldValue>
+                <controllingFieldValue>VSAC (VT)</controllingFieldValue>
+                <valueName>Reviewed</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>EdFinancial</controllingFieldValue>
+                <controllingFieldValue>COSTEP</controllingFieldValue>
+                <controllingFieldValue>EdManage (SC)</controllingFieldValue>
+                <controllingFieldValue>EDGEucation Loans.</controllingFieldValue>
+                <controllingFieldValue>Granite State (NH)</controllingFieldValue>
+                <controllingFieldValue>Great Lakes Higher Education</controllingFieldValue>
+                <controllingFieldValue>KHESLC (KY)</controllingFieldValue>
+                <controllingFieldValue>MOHELA (MO)</controllingFieldValue>
+                <controllingFieldValue>Nelnet</controllingFieldValue>
+                <controllingFieldValue>OSLA (OK)</controllingFieldValue>
+                <controllingFieldValue>Sallie Mae</controllingFieldValue>
+                <controllingFieldValue>ACS</controllingFieldValue>
+                <controllingFieldValue>ACS-Perkins</controllingFieldValue>
+                <controllingFieldValue>AES/PHEAA</controllingFieldValue>
+                <controllingFieldValue>Aspire</controllingFieldValue>
+                <controllingFieldValue>Campus Partners</controllingFieldValue>
+                <controllingFieldValue>Cornerstone (UT)</controllingFieldValue>
+                <controllingFieldValue>DELQ</controllingFieldValue>
+                <controllingFieldValue>Demographic File</controllingFieldValue>
+                <controllingFieldValue>DER</controllingFieldValue>
+                <controllingFieldValue>UAS</controllingFieldValue>
+                <controllingFieldValue>ECSI</controllingFieldValue>
+                <controllingFieldValue>VSAC (VT)</controllingFieldValue>
+                <valueName>CM Approved</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>EdFinancial</controllingFieldValue>
+                <controllingFieldValue>COSTEP</controllingFieldValue>
+                <controllingFieldValue>EdManage (SC)</controllingFieldValue>
+                <controllingFieldValue>EDGEucation Loans.</controllingFieldValue>
+                <controllingFieldValue>Granite State (NH)</controllingFieldValue>
+                <controllingFieldValue>Great Lakes Higher Education</controllingFieldValue>
+                <controllingFieldValue>KHESLC (KY)</controllingFieldValue>
+                <controllingFieldValue>MOHELA (MO)</controllingFieldValue>
+                <controllingFieldValue>Nelnet</controllingFieldValue>
+                <controllingFieldValue>OSLA (OK)</controllingFieldValue>
+                <controllingFieldValue>Sallie Mae</controllingFieldValue>
+                <controllingFieldValue>ACS</controllingFieldValue>
+                <controllingFieldValue>ACS-Perkins</controllingFieldValue>
+                <controllingFieldValue>AES/PHEAA</controllingFieldValue>
+                <controllingFieldValue>Aspire</controllingFieldValue>
+                <controllingFieldValue>Campus Partners</controllingFieldValue>
+                <controllingFieldValue>Cornerstone (UT)</controllingFieldValue>
+                <controllingFieldValue>DELQ</controllingFieldValue>
+                <controllingFieldValue>Demographic File</controllingFieldValue>
+                <controllingFieldValue>DER</controllingFieldValue>
+                <controllingFieldValue>UAS</controllingFieldValue>
+                <controllingFieldValue>ECSI</controllingFieldValue>
+                <controllingFieldValue>VSAC (VT)</controllingFieldValue>
+                <valueName>Processed</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>EdFinancial</controllingFieldValue>
+                <controllingFieldValue>COSTEP</controllingFieldValue>
+                <controllingFieldValue>EdManage (SC)</controllingFieldValue>
+                <controllingFieldValue>EDGEucation Loans.</controllingFieldValue>
+                <controllingFieldValue>Granite State (NH)</controllingFieldValue>
+                <controllingFieldValue>Great Lakes Higher Education</controllingFieldValue>
+                <controllingFieldValue>KHESLC (KY)</controllingFieldValue>
+                <controllingFieldValue>MOHELA (MO)</controllingFieldValue>
+                <controllingFieldValue>Nelnet</controllingFieldValue>
+                <controllingFieldValue>OSLA (OK)</controllingFieldValue>
+                <controllingFieldValue>Sallie Mae</controllingFieldValue>
+                <controllingFieldValue>ACS</controllingFieldValue>
+                <controllingFieldValue>ACS-Perkins</controllingFieldValue>
+                <controllingFieldValue>AES/PHEAA</controllingFieldValue>
+                <controllingFieldValue>Aspire</controllingFieldValue>
+                <controllingFieldValue>Campus Partners</controllingFieldValue>
+                <controllingFieldValue>Cornerstone (UT)</controllingFieldValue>
+                <controllingFieldValue>DELQ</controllingFieldValue>
+                <controllingFieldValue>Demographic File</controllingFieldValue>
+                <controllingFieldValue>DER</controllingFieldValue>
+                <controllingFieldValue>UAS</controllingFieldValue>
+                <controllingFieldValue>ECSI</controllingFieldValue>
+                <controllingFieldValue>VSAC (VT)</controllingFieldValue>
+                <valueName>Reconciled</valueName>
+            </valueSettings>
+        </valueSet>
+    </fields>
+    <label>File Processing</label>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <label>File Processing Name</label>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>File Processing</pluralLabel>
+    <recordTypeTrackHistory>false</recordTypeTrackHistory>
+    <recordTypes>
+        <fullName>File_Processing</fullName>
+        <active>true</active>
+        <label>File Processing</label>
+        <picklistValues>
+            <picklist>Source__c</picklist>
+            <values>
+                <fullName>ACS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ACS-Perkins</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AES%2FPHEAA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Aspire</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Campus Partners</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cornerstone %28UT%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DELQ</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DER</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Demographic File</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ECSI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>EdFinancial</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>EdManage %28SC%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Granite State %28NH%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Great Lakes Higher Education</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>KHESLC %28KY%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MOHELA %28MO%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Nelnet</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>OSLA %28OK%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sallie Mae</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>UAS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VSAC %28VT%29</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status__c</picklist>
+            <values>
+                <fullName>CM Approved</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Processed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Received</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Reconciled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Reviewed</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts>
+        <lookupDialogsAdditionalFields>Source__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Status__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Status_Date__c</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Source__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Status__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Status_Date__c</lookupPhoneDialogsAdditionalFields>
+        <searchFilterFields>Source__c</searchFilterFields>
+        <searchFilterFields>Status__c</searchFilterFields>
+        <searchFilterFields>Status_Date__c</searchFilterFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+</CustomObject>

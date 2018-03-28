@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>false</available>
+    <description>Partnership Dialogue Series - AZ 2008 Lender Invite</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>EmailLetterhead</letterhead>
+    <name>Partnership Dialogue Series - AZ 2008 Lender Invite</name>
+    <style>freeForm</style>
+    <subject>Save the Date!</subject>
+    <textOnly>ASA’s Partnership Dialogue Series: A Focus on Communication
+ 
+Dear {!Contact.FirstName}, 
+ 
+Please accept this invitation to attend the second installment of our Partnership Dialogue Series.  In this series - A Focus on Communication - we provide attendees the opportunity to discuss, ask questions, and receive feedback on some hot topics affecting lenders and financial aid officers around the country.  As one of our lender partners, we hope you can join us at our event being held in Arizona next month.
+ 
+In this upcoming series, we will explore the challenges schools face of effectively communicating with students and families today. This series will encompass a broad discussion of the communication challenges schools face, the scope and message of their communication mission, what resources they need to succeed in that mission, and which outreach experiments to students and families have yielded the best results. 
+
+Our dialogue will begin at 9:00 a.m., with schools joining us for the morning session and lunch.  After lunch, we look forward to speaking to you about what ASA has to offer, why the guarantor you choose matters, and how ASA and {!Account.Name} we can work together in the marketplace.  
+ 
+Agenda:
+8:30 – 9:00 a.m. Continental Breakfast (schools and lenders)
+9:00 a.m. – 12:00 p.m. Discussion and Exchange of Ideas (schools and lenders)
+12:00 –1:00 p.m.  Lunch (schools and lenders)
+1:00 – 3:00 p.m.  Understanding ASA (lenders only)
+ 
+Tuesday February 26, 2008
+Phoenix, AZ                   
+U. of Phoenix, Hohokam Campus
+Room 101/102
+4635 E. Elwood Street
+Phoenix, AZ 85040
+ 
+Please register through our web site at http://www.amsa.com/lenders/training/courses_registration.cfm?cdid=219&amp;cid=156. 
+ 
+We hope you are able to join us, and look forward to seeing you there.  Also, please also feel free to share this with others at {!Account.Name} who may not have received this e-mail. 
+ 
+Thank you,
+American Student Assistance</textOnly>
+    <type>html</type>
+</EmailTemplate>

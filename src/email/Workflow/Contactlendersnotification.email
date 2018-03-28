@@ -1,0 +1,1 @@
+{!Opportunity.OwnerFullName} has indicated that it is time to contact the Lenders listed for {!Opportunity.Account}.  Please use this link {!Opportunity.Link} to review the details.  If you have questions please contact {!Opportunity.OwnerFirstName} at {!Opportunity.OwnerPhone}.

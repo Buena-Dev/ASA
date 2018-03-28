@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>false</available>
+    <description>Default Prevention Survey to Financial Aid Directors/Assistant Directors</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>EmailLetterhead</letterhead>
+    <name>Default Prevention Survey - 2007</name>
+    <style>freeForm</style>
+    <subject>Here’s your chance to help reduce education loan default</subject>
+    <textOnly>Dear {!Contact.FirstName}:
+ 
+American Student Assistance® (ASA) is a federally-funded, non-profit, student loan guarantor and we are interested in joining with colleges and universities to develop programs that combat education loan default. We are reaching out to financial aid officers like you to collect feedback on this important topic. In the interest of assisting financial aid offices and student loan borrowers, we would like to know about your school’s awareness and activities relating to education loan default prevention. 
+ 
+Your response to the short online survey is greatly appreciated and shouldn’t take more than 10 minutes to complete.  
+ 
+The ONLINE Survey http://www.keysurvey.com/survey/152865/2c68/ will be available through June 15, 2007. Your answers will be reported only in aggregate and the specific information you supply will remain confidential, and will be used exclusively in the development of default prevention programs.  The results will be available this summer on www.amsa.com.  
+This is not a solicitation.  
+ 
+Sincerely,
+American Student Assistance</textOnly>
+    <type>html</type>
+</EmailTemplate>

@@ -1,0 +1,62 @@
+<apex:page controller="c2g.CommunitiesMyAccountSummaryController" tabstyle="CommunitiesMyAccount__tab" sidebar="true">
+	<apex:stylesheet value="{!URLFOR($Resource.c2g__communities, 'communities/communities.css')}"/>
+
+	<apex:outputPanel layout="block">
+		<apex:image url="{!view.LogoURL}" rendered="{!view.ExistsLogo}"/>
+		<h2 class="myAccount-header-title">{!HTMLENCODE($Label.c2g__communitiessummarywelcome)}</h2>
+		<apex:outputPanel layout="block" rendered="{!view.isCommunityUser}">{!HTMLENCODE($Label.c2g__communitiessummarydescription)}</apex:outputPanel>
+		<apex:outputPanel layout="block" rendered="{!!view.isCommunityUser}">{!HTMLENCODE($Label.c2g__communitiesnouserallowed)}</apex:outputPanel>
+	</apex:outputPanel>
+
+	<apex:outputPanel styleClass="myAccount-balancegrid" rendered="{!view.isCommunityUser}">
+		<apex:pageBlock title="{!$Label.c2g__communitiessummaryaccountbalance}">
+			<!-- Balance By Company -->
+			<apex:pageBlockTable value="{!view.BalanceByCompanyList}" var="line" styleClass="myAccount-grid">
+				<apex:column headerValue="{!$Label.c2g__communitiessummarycompany}" value="{!line.ItemName}" headerClass="myAccount-summarygrid-column-company">
+					<apex:facet name="footer">
+						<apex:outputText value="{!$Label.c2g__communitiessummarytotal}"/>
+					</apex:facet>
+				</apex:column>
+				<apex:column headerValue="{!view.accountBalanceColumnTitle}" headerClass="myAccount-grid-column-rightalign" styleClass="myAccount-grid-column-rightalign" footerClass="myAccount-grid-column-rightalign">
+					<apex:outputField value="{!line.Balance.c2g__LookupNumber__c}"/>
+					<apex:facet name="footer">
+						<apex:outputField value="{!view.totalBalanceByCompany.c2g__LookupNumber__c}"/>
+					</apex:facet>
+				</apex:column>
+			</apex:pageBlockTable>
+		</apex:pageBlock>
+	</apex:outputPanel>
+
+	<apex:outputPanel styleClass="myAccount-summarysection" rendered="{!view.isCommunityUser}">
+		<apex:pageBlock title="{!$Label.c2g__communitiessummarytitle}">
+			<!-- Balance By Document Type -->
+			<apex:outputPanel styleClass="myAccount-summarygrid">
+				<apex:pageBlockTable value="{!view.BalanceByDocumentTypeList}" var="line" styleClass="myAccount-grid">
+					<apex:column headerValue="{!$Label.c2g__communitiessummarydocumenttypecolumn}" value="{!line.ItemName}">
+						<apex:facet name="footer">
+							<apex:outputText value="{!$Label.c2g__communitiessummarytotal}"/>
+						</apex:facet>
+					</apex:column>
+					<apex:column headerValue="{!view.accountSummaryColumnTitle}" headerClass="myAccount-grid-column-rightalign" styleClass="myAccount-grid-column-rightalign" footerClass="myAccount-grid-column-rightalign">
+						<apex:outputField value="{!line.Balance.c2g__LookupNumber__c}"/>
+						<apex:facet name="footer">
+							<apex:outputField value="{!view.totalBalanceByDocumentType.c2g__LookupNumber__c}"/>
+						</apex:facet>
+					</apex:column>
+				</apex:pageBlockTable>
+				<apex:outputLink value="{!$Page.c2g__communitiesmyaccountdetails}" styleClass="myAccount-summary-moredetails">{!HTMLENCODE($Label.c2g__communitiessummarymoredetails)}</apex:outputLink>
+			</apex:outputPanel>
+			<!-- Pie Chart -->
+			<apex:outputPanel styleClass="myAccount-summarychart">
+				<apex:outputPanel styleClass="myAccount-summarychart-wrapper">
+					<apex:chart height="150" width="300" data="{!view.PieChartData.Items}">
+						<apex:pieSeries dataField="Balance" labelField="ItemName" tips="false" highlight="false">
+							<apex:chartLabel display="none" />
+						</apex:pieSeries>
+						<apex:legend position="right" padding="10"/>
+					</apex:chart>
+				</apex:outputPanel>	
+			</apex:outputPanel>	
+		</apex:pageBlock>
+	</apex:outputPanel>
+</apex:page>

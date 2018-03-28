@@ -1,0 +1,2388 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <customHelp>PSOfferings_CustomHelp</customHelp>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Individual offerings that will be conducted by the Financial Education Services team.</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ReadWrite</externalSharingModel>
+    <fields>
+        <fullName>Case__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Case</label>
+        <referenceTo>Case</referenceTo>
+        <relationshipName>PS_Offerings</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>College_Access_br_Challenge_Grant__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Check this box if  this Professional Services event is for an organization who has received funds from the College Access Challenge Grant.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Check this box if  this Professional Services event is for an organization who has received funds from the College Access Challenge Grant.</inlineHelpText>
+        <label>College Access &lt;br&gt; Challenge Grant</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>End_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>End Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Expected_Attendees__c</fullName>
+        <externalId>false</externalId>
+        <label>Expected Attendees</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PS_OfferingAccount__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>What account is this event related to?</description>
+        <externalId>false</externalId>
+        <inlineHelpText>If this Offering is related to a specific Account (college, university, lender or association), please use this lookup field to select the appropriate Account.</inlineHelpText>
+        <label>Account</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipName>PS_OfferingAccount</relationshipName>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>PS_OfferingActualAttendees__c</fullName>
+        <description>Number of attendees anticipated for this event</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Please indicate the number of individuals expected to attend this Offering. Once this Offering has been completed, this field will be updated to indicate the actual number of individuals who attended this Offering.</inlineHelpText>
+        <label>Actual Attendees</label>
+        <precision>4</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PS_OfferingAddress1__c</fullName>
+        <description>What is the street address for this event&apos;s location?</description>
+        <externalId>false</externalId>
+        <label>Address (line 1)</label>
+        <length>150</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PS_OfferingAddress2__c</fullName>
+        <description>What is the second line of the street address for this event&apos;s location?</description>
+        <externalId>false</externalId>
+        <label>Address (line 2)</label>
+        <length>150</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PS_OfferingAssignedTo__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Who has been assigned to this event?</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This is the ProServices@ASA team member who has been assigned to conduct this Offering.</inlineHelpText>
+        <label>Assigned To</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>PS_OfferingAssignedTo</relationshipName>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>PS_OfferingCampaign__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>What campaign is this event related to?</description>
+        <externalId>false</externalId>
+        <inlineHelpText>If this Offering is related to a specific Campaign, please use this lookup field to select the appropriate Campaign.</inlineHelpText>
+        <label>Campaign</label>
+        <referenceTo>Campaign</referenceTo>
+        <relationshipName>PS_OfferingCampaign</relationshipName>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>PS_OfferingCity__c</fullName>
+        <description>What is the city where this event will be held?</description>
+        <externalId>false</externalId>
+        <label>City</label>
+        <length>150</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PS_OfferingCompleted__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Indicator as to whether or not a ProServices event has been completed.</description>
+        <externalId>false</externalId>
+        <label>Completed?</label>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>PS_OfferingDeliveryMethod__c</fullName>
+        <description>How will this offering be conducted?</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Please select the desired delivery method for this Offering.</inlineHelpText>
+        <label>Delivery Method</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Webex</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>In Person</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Conference Call</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Email</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Postal Mail</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>PS_OfferingDescriptoin__c</fullName>
+        <description>Please enter any relevant information about the offering.</description>
+        <externalId>false</externalId>
+        <label>Description</label>
+        <length>2500</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>PS_OfferingLocationName__c</fullName>
+        <description>What is the name of the site where the offering will be held?</description>
+        <externalId>false</externalId>
+        <inlineHelpText>What is the name of the site where the offering will be held? (This is used for tracking purposes and to help ensure the ProServices@ASA team member shows up at the correct location.)</inlineHelpText>
+        <label>Location Name</label>
+        <length>150</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PS_OfferingOpportunity__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>What opportunity is this offering related to?</description>
+        <externalId>false</externalId>
+        <inlineHelpText>If this Offering is related to a specific Opportunity, please use this lookup field to select that Opportunity.</inlineHelpText>
+        <label>Opportunity</label>
+        <referenceTo>Opportunity</referenceTo>
+        <relationshipName>PS_OfferingOpportunity</relationshipName>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>PS_OfferingPrimaryContact__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Who is the primary contact for this offering? For conferences this would be the individual in charge of scheduling the session (for moderators, use the secondary contact field). For all other offerings, this would be the contact at the organization where the offering will be held.  This should NOT be an ASA team member.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Who is the primary external contact (non-ASA) for this Offering? If the individual does not have their contact information already in Salesforce, you may need to add them to the appropriate Account.</inlineHelpText>
+        <label>Primary Contact</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipName>PS_OfferingPrimaryContact</relationshipName>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>PS_OfferingRequestedBy__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Please identify the ASA team member who is requesting this event.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Please identify the ASA team member who is requesting this event.</inlineHelpText>
+        <label>Requested By (ASA)</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>PS_OfferingRequestedBy</relationshipName>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>PS_OfferingRequestedPresenter__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>If there is a specific individual that you would like to conduct this offering, please indicate your choice here. Otherwise, leave this blank.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>If there is a specific individual that you would like to conduct this offering, please indicate your choice here. Otherwise, leave this blank.</inlineHelpText>
+        <label>Requested Presenter</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>PS_OfferingRequestedPresenter</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>PS_OfferingState__c</fullName>
+        <description>What is the 2-digit state code for the location where this offering will be held?</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Please enter the 2 character state abbreviation for this Offering. This is primarily used for reporting by the ProServices@ASA team.</inlineHelpText>
+        <label>State</label>
+        <length>2</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PS_OfferingStatus__c</fullName>
+        <description>What is the current status of this offering request?</description>
+        <externalId>false</externalId>
+        <label>Status</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Submitted</fullName>
+                    <default>true</default>
+                </value>
+                <value>
+                    <fullName>Approved</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Denied</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Cancelled</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>PS_OfferingSubStatus__c</fullName>
+        <description>What is the sub-status of this offering?</description>
+        <externalId>false</externalId>
+        <label>Sub-Status</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <controllingField>PS_OfferingStatus__c</controllingField>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Waiting to be Submitted for Approval</fullName>
+                    <default>true</default>
+                </value>
+                <value>
+                    <fullName>Submitted for ProServices Approval</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Additional Information Requested</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>High Priority</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Standard Priority</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Low Priority</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Lack of Resources</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Priority Override</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Lack of Registration</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Event Cancelled</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Changed Topic</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Waiting for ProServices Approval</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Waiting for Strategic Services Approval</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>No Response From Contact</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+            <valueSettings>
+                <controllingFieldValue>Approved</controllingFieldValue>
+                <valueName>High Priority</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Approved</controllingFieldValue>
+                <valueName>Standard Priority</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Approved</controllingFieldValue>
+                <valueName>Low Priority</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Denied</controllingFieldValue>
+                <controllingFieldValue>Cancelled</controllingFieldValue>
+                <valueName>Lack of Resources</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Denied</controllingFieldValue>
+                <controllingFieldValue>Cancelled</controllingFieldValue>
+                <valueName>Priority Override</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Denied</controllingFieldValue>
+                <controllingFieldValue>Cancelled</controllingFieldValue>
+                <valueName>No Response From Contact</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Cancelled</controllingFieldValue>
+                <valueName>Lack of Registration</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Cancelled</controllingFieldValue>
+                <valueName>Event Cancelled</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Cancelled</controllingFieldValue>
+                <valueName>Changed Topic</valueName>
+            </valueSettings>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>PS_OfferingTargetDate__c</fullName>
+        <description>What is the target date for this offering?</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This field contains the date requested for this Offering. This date may change depending on intervening factors and the availability of resources to accommodate your request.</inlineHelpText>
+        <label>Target Date</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>PS_OfferingTopic__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>What is the topic of this offering?</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Each offering must be related to a specific Topic offered by the ProServices@ASA team. If an existing Topic does not meet your needs, you may select New Topic Request to request that the ProServices@ASA team create a new Topic for you.</inlineHelpText>
+        <label>Pro Services Topic</label>
+        <referenceTo>Pro_Services_Topic__c</referenceTo>
+        <relationshipLabel>Pro Services Offerings</relationshipLabel>
+        <relationshipName>PS_OfferingTopic</relationshipName>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Price__c</fullName>
+        <externalId>false</externalId>
+        <label>Price</label>
+        <precision>10</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Proposal_Submission_Details__c</fullName>
+        <externalId>false</externalId>
+        <label>Proposal Submission Details</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Proposed_Co_Presenter__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Proposed Co-Presenter</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Pro Services Offerings (Proposed Co-Presenter)</relationshipLabel>
+        <relationshipName>Pro_Services_Offerings1</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Proposed_Presenter__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Proposed Presenter</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Pro Services Offerings (Proposed Presenter)</relationshipLabel>
+        <relationshipName>Pro_Services_Offerings</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Spanish__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>When PS offerings are delivered in Spanish</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Is the session being delivered in Spanish? If yes check box</inlineHelpText>
+        <label>Spanish</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Start_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Start Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Submission_Deadline__c</fullName>
+        <externalId>false</externalId>
+        <label>Submission Deadline</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Suggested_Topic__c</fullName>
+        <externalId>false</externalId>
+        <label>Suggested Topic</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <label>Pro Services Offering</label>
+    <listViews>
+        <fullName>AllOfferingsnotcompleted</fullName>
+        <columns>NAME</columns>
+        <columns>PS_OfferingTargetDate__c</columns>
+        <columns>PS_OfferingStatus__c</columns>
+        <columns>PS_OfferingRequestedPresenter__c</columns>
+        <columns>PS_OfferingAssignedTo__c</columns>
+        <columns>PS_OfferingState__c</columns>
+        <columns>PS_OfferingCompleted__c</columns>
+        <columns>RECORDTYPE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>PS_OfferingCompleted__c</field>
+            <operation>notEqual</operation>
+            <value>1</value>
+        </filters>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>notEqual</operation>
+            <value>Pro_Services_Offering__c.Article</value>
+        </filters>
+        <filters>
+            <field>PS_OfferingStatus__c</field>
+            <operation>notEqual</operation>
+            <value>Denied,Cancelled</value>
+        </filters>
+        <label>All Offerings (not completed)</label>
+    </listViews>
+    <listViews>
+        <fullName>AllOfferingsupcomingonly</fullName>
+        <columns>NAME</columns>
+        <columns>PS_OfferingTopic__c</columns>
+        <columns>PS_OfferingTargetDate__c</columns>
+        <columns>PS_OfferingAssignedTo__c</columns>
+        <columns>PS_OfferingStatus__c</columns>
+        <columns>PS_OfferingState__c</columns>
+        <columns>CREATEDBY_USER</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>PS_OfferingStatus__c</field>
+            <operation>notEqual</operation>
+            <value>Denied,Cancelled</value>
+        </filters>
+        <filters>
+            <field>PS_OfferingTargetDate__c</field>
+            <operation>greaterOrEqual</operation>
+            <value>TODAY</value>
+        </filters>
+        <label>All Offerings (upcoming only)</label>
+    </listViews>
+    <listViews>
+        <fullName>College_Access_Challenge_Grant</fullName>
+        <columns>NAME</columns>
+        <columns>College_Access_br_Challenge_Grant__c</columns>
+        <columns>PS_OfferingAccount__c</columns>
+        <columns>PS_OfferingStatus__c</columns>
+        <columns>OWNER.FIRST_NAME</columns>
+        <columns>OWNER.LAST_NAME</columns>
+        <columns>PS_OfferingDeliveryMethod__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>College_Access_br_Challenge_Grant__c</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <label>College Access Challenge Grant</label>
+    </listViews>
+    <listViews>
+        <fullName>Lorri_s_Offerings</fullName>
+        <columns>NAME</columns>
+        <columns>PS_OfferingAccount__c</columns>
+        <columns>PS_OfferingDescriptoin__c</columns>
+        <columns>PS_OfferingRequestedBy__c</columns>
+        <columns>CREATEDBY_USER</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>PS_OfferingAssignedTo__c</field>
+            <operation>equals</operation>
+            <value>Connor</value>
+        </filters>
+        <label>Lorri&apos;s Offerings</label>
+    </listViews>
+    <listViews>
+        <fullName>OfferingsArticlesOnly</fullName>
+        <columns>NAME</columns>
+        <columns>PS_OfferingTargetDate__c</columns>
+        <columns>PS_OfferingStatus__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>Pro_Services_Offering__c.Article</value>
+        </filters>
+        <label>Offerings (Articles Only)</label>
+    </listViews>
+    <listViews>
+        <fullName>OfferingsByStatusDeniedCancelled</fullName>
+        <columns>NAME</columns>
+        <columns>PS_OfferingTopic__c</columns>
+        <columns>PS_OfferingTargetDate__c</columns>
+        <columns>PS_OfferingRequestedBy__c</columns>
+        <columns>PS_OfferingState__c</columns>
+        <columns>PS_OfferingSubStatus__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>PS_OfferingStatus__c</field>
+            <operation>equals</operation>
+            <value>Denied,Cancelled</value>
+        </filters>
+        <label>Offerings By Status (Denied/Cancelled)</label>
+    </listViews>
+    <listViews>
+        <fullName>Offeringsnotapproved</fullName>
+        <columns>NAME</columns>
+        <columns>PS_OfferingTopic__c</columns>
+        <columns>PS_OfferingTargetDate__c</columns>
+        <columns>PS_OfferingRequestedBy__c</columns>
+        <columns>PS_OfferingState__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>PS_OfferingStatus__c</field>
+            <operation>equals</operation>
+            <value>Pending Approval</value>
+        </filters>
+        <filters>
+            <field>PS_OfferingTargetDate__c</field>
+            <operation>greaterThan</operation>
+            <value>1/1/2012</value>
+        </filters>
+        <label>Offerings not yet approved</label>
+    </listViews>
+    <listViews>
+        <fullName>PSOfferingsArticleApprovalQueue</fullName>
+        <filterScope>Queue</filterScope>
+        <label>PS Offerings - Article Approval Queue</label>
+        <queue>PSOfferingsArticleApprovalQueue</queue>
+    </listViews>
+    <listViews>
+        <fullName>UnassignedOfferings</fullName>
+        <columns>NAME</columns>
+        <columns>PS_OfferingTopic__c</columns>
+        <columns>PS_OfferingTargetDate__c</columns>
+        <columns>CREATEDBY_USER.ALIAS</columns>
+        <columns>PS_OfferingRequestedBy__c</columns>
+        <columns>PS_OfferingRequestedPresenter__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>PS_OfferingAssignedTo__c</field>
+            <operation>equals</operation>
+        </filters>
+        <filters>
+            <field>PS_OfferingTargetDate__c</field>
+            <operation>greaterThan</operation>
+            <value>1/1/2012</value>
+        </filters>
+        <label>Unassigned Offerings</label>
+        <sharedTo>
+            <group>ASAProfessionalServices</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>UnsubmittedOfferings</fullName>
+        <columns>PS_OfferingRequestedBy__c</columns>
+        <columns>NAME</columns>
+        <columns>PS_OfferingTopic__c</columns>
+        <columns>PS_OfferingTargetDate__c</columns>
+        <columns>PS_OfferingState__c</columns>
+        <columns>CREATEDBY_USER</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>PS_OfferingStatus__c</field>
+            <operation>notEqual</operation>
+            <value>Pending Approval,Approved,Denied,Cancelled</value>
+        </filters>
+        <label>Unsubmitted Offerings</label>
+    </listViews>
+    <listViews>
+        <fullName>UpcomingEventswNewTopicRequests</fullName>
+        <columns>NAME</columns>
+        <columns>PS_OfferingRequestedBy__c</columns>
+        <columns>PS_OfferingTargetDate__c</columns>
+        <columns>PS_OfferingAssignedTo__c</columns>
+        <columns>PS_OfferingState__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>PS_OfferingTopic__c</field>
+            <operation>equals</operation>
+            <value>New Topic Request</value>
+        </filters>
+        <filters>
+            <field>PS_OfferingCompleted__c</field>
+            <operation>equals</operation>
+            <value>0</value>
+        </filters>
+        <label>Upcoming Events w/New Topic Requests</label>
+        <sharedTo>
+            <group>ASAProfessionalServices</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>UpcomingOfferingsByStatusApproved</fullName>
+        <columns>NAME</columns>
+        <columns>PS_OfferingTopic__c</columns>
+        <columns>PS_OfferingTargetDate__c</columns>
+        <columns>PS_OfferingCompleted__c</columns>
+        <columns>PS_OfferingRequestedBy__c</columns>
+        <columns>PS_OfferingState__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>PS_OfferingStatus__c</field>
+            <operation>equals</operation>
+            <value>Approved</value>
+        </filters>
+        <filters>
+            <field>PS_OfferingCompleted__c</field>
+            <operation>equals</operation>
+            <value>0</value>
+        </filters>
+        <filters>
+            <field>PS_OfferingTargetDate__c</field>
+            <operation>greaterThan</operation>
+            <value>1/1/2012</value>
+        </filters>
+        <label>Upcoming Offerings By Status (Approved)</label>
+    </listViews>
+    <listViews>
+        <fullName>Webex_Offering_2012_2013</fullName>
+        <columns>NAME</columns>
+        <columns>PS_OfferingAssignedTo__c</columns>
+        <columns>PS_OfferingCampaign__c</columns>
+        <columns>PS_OfferingCompleted__c</columns>
+        <columns>PS_OfferingDeliveryMethod__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>PS_OfferingTargetDate__c</field>
+            <operation>greaterThan</operation>
+            <value>7/1/2012</value>
+        </filters>
+        <filters>
+            <field>PS_OfferingDeliveryMethod__c</field>
+            <operation>equals</operation>
+            <value>Webex</value>
+        </filters>
+        <label>Webex Offering 2012-2013</label>
+    </listViews>
+    <nameField>
+        <label>Title</label>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Pro Services Offerings</pluralLabel>
+    <recordTypeTrackHistory>false</recordTypeTrackHistory>
+    <recordTypes>
+        <fullName>Advisory_Board</fullName>
+        <active>true</active>
+        <description>ASA Advisory Board</description>
+        <label>Advisory Board</label>
+        <picklistValues>
+            <picklist>PS_OfferingDeliveryMethod__c</picklist>
+            <values>
+                <fullName>Conference Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Person</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Postal Mail</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Webex</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>PS_OfferingStatus__c</picklist>
+            <values>
+                <fullName>Approved</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cancelled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Denied</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Submitted</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>PS_OfferingSubStatus__c</picklist>
+            <values>
+                <fullName>Additional Information Requested</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Changed Topic</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Event Cancelled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>High Priority</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lack of Registration</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lack of Resources</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Low Priority</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Response From Contact</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Priority Override</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Standard Priority</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Submitted for ProServices Approval</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Waiting for ProServices Approval</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Waiting for Strategic Services Approval</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Waiting to be Submitted for Approval</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Article</fullName>
+        <active>false</active>
+        <description>Newsletter article submissions</description>
+        <label>Article</label>
+        <picklistValues>
+            <picklist>PS_OfferingDeliveryMethod__c</picklist>
+            <values>
+                <fullName>Email</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Postal Mail</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>PS_OfferingStatus__c</picklist>
+            <values>
+                <fullName>Approved</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cancelled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Denied</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Submitted</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>PS_OfferingSubStatus__c</picklist>
+            <values>
+                <fullName>Additional Information Requested</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Changed Topic</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Event Cancelled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>High Priority</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lack of Registration</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lack of Resources</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Low Priority</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Response From Contact</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Priority Override</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Standard Priority</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Submitted for ProServices Approval</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Waiting for ProServices Approval</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Waiting for Strategic Services Approval</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Waiting to be Submitted for Approval</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Campus_Engagement</fullName>
+        <active>true</active>
+        <description>Any of the offerings related to the campus engagement process; the consultation call, stakeholder meeting, post-launch call, quarterly check-in call, campus event, faculty/staff training, SALT ambassador program, or faculty/staff/student SALT training</description>
+        <label>Campus Engagement</label>
+        <picklistValues>
+            <picklist>PS_OfferingDeliveryMethod__c</picklist>
+            <values>
+                <fullName>Conference Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Person</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Postal Mail</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Webex</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>PS_OfferingStatus__c</picklist>
+            <values>
+                <fullName>Approved</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cancelled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Denied</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Submitted</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>PS_OfferingSubStatus__c</picklist>
+            <values>
+                <fullName>Additional Information Requested</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Changed Topic</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Event Cancelled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>High Priority</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lack of Registration</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lack of Resources</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Low Priority</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Response From Contact</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Priority Override</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Standard Priority</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Submitted for ProServices Approval</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Waiting for ProServices Approval</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Waiting for Strategic Services Approval</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Waiting to be Submitted for Approval</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Client_Events</fullName>
+        <active>true</active>
+        <description>Any open enrollment training opportunities for SALT Partner Clients.</description>
+        <label>Client Events</label>
+        <picklistValues>
+            <picklist>PS_OfferingDeliveryMethod__c</picklist>
+            <values>
+                <fullName>Conference Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Person</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Postal Mail</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Webex</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>PS_OfferingStatus__c</picklist>
+            <values>
+                <fullName>Approved</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cancelled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Denied</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Submitted</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>PS_OfferingSubStatus__c</picklist>
+            <values>
+                <fullName>Additional Information Requested</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Changed Topic</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Event Cancelled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>High Priority</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lack of Registration</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lack of Resources</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Low Priority</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Response From Contact</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Priority Override</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Standard Priority</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Submitted for ProServices Approval</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Waiting for ProServices Approval</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Waiting for Strategic Services Approval</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Waiting to be Submitted for Approval</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Community_Outreach</fullName>
+        <active>true</active>
+        <description>Any of the training sessions offered as part of the College Access Challenge Grant program, NT4CM, or ASA internal training events as well as the media support we provide to Alle from time to time</description>
+        <label>Community Outreach</label>
+        <picklistValues>
+            <picklist>PS_OfferingDeliveryMethod__c</picklist>
+            <values>
+                <fullName>Conference Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Person</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Webex</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>PS_OfferingStatus__c</picklist>
+            <values>
+                <fullName>Approved</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cancelled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Denied</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Submitted</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>PS_OfferingSubStatus__c</picklist>
+            <values>
+                <fullName>Additional Information Requested</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Changed Topic</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Event Cancelled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>High Priority</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lack of Registration</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lack of Resources</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Low Priority</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Response From Contact</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Priority Override</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Standard Priority</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Submitted for ProServices Approval</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Waiting to be Submitted for Approval</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>ConferencePresentation</fullName>
+        <active>true</active>
+        <description>Any presentation being made at a state, regional, or national conference event.</description>
+        <label>Conference Presentation</label>
+        <picklistValues>
+            <picklist>PS_OfferingDeliveryMethod__c</picklist>
+            <values>
+                <fullName>Conference Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Person</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Webex</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>PS_OfferingStatus__c</picklist>
+            <values>
+                <fullName>Approved</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cancelled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Denied</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Submitted</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>PS_OfferingSubStatus__c</picklist>
+            <values>
+                <fullName>Additional Information Requested</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Changed Topic</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Event Cancelled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>High Priority</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lack of Registration</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lack of Resources</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Low Priority</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Response From Contact</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Priority Override</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Standard Priority</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Submitted for ProServices Approval</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Waiting to be Submitted for Approval</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Consultation</fullName>
+        <active>false</active>
+        <description>Consultation Event Request</description>
+        <label>Consultation</label>
+        <picklistValues>
+            <picklist>PS_OfferingDeliveryMethod__c</picklist>
+            <values>
+                <fullName>Conference Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Person</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Webex</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>PS_OfferingStatus__c</picklist>
+            <values>
+                <fullName>Approved</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cancelled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Denied</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>PS_OfferingSubStatus__c</picklist>
+            <values>
+                <fullName>Additional Information Requested</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Changed Topic</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Event Cancelled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>High Priority</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lack of Registration</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lack of Resources</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Low Priority</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Response From Contact</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Priority Override</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Standard Priority</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Submitted for ProServices Approval</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Waiting to be Submitted for Approval</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Financial_Education_Messaging</fullName>
+        <active>false</active>
+        <label>Financial Education Messaging</label>
+        <picklistValues>
+            <picklist>PS_OfferingDeliveryMethod__c</picklist>
+            <values>
+                <fullName>Conference Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Person</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Webex</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>PS_OfferingStatus__c</picklist>
+            <values>
+                <fullName>Approved</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cancelled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Denied</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>PS_OfferingSubStatus__c</picklist>
+            <values>
+                <fullName>Additional Information Requested</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Changed Topic</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Event Cancelled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>High Priority</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lack of Registration</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lack of Resources</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Low Priority</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Response From Contact</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Priority Override</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Standard Priority</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Submitted for ProServices Approval</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Waiting to be Submitted for Approval</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>My_Money_101</fullName>
+        <active>false</active>
+        <label>My Money 101</label>
+        <picklistValues>
+            <picklist>PS_OfferingDeliveryMethod__c</picklist>
+            <values>
+                <fullName>Conference Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Person</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Webex</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>PS_OfferingStatus__c</picklist>
+            <values>
+                <fullName>Approved</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cancelled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Denied</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>PS_OfferingSubStatus__c</picklist>
+            <values>
+                <fullName>Additional Information Requested</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Changed Topic</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Event Cancelled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>High Priority</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lack of Registration</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lack of Resources</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Low Priority</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Response From Contact</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Priority Override</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Standard Priority</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Submitted for ProServices Approval</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Waiting to be Submitted for Approval</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Other</fullName>
+        <active>false</active>
+        <description>Some other strange and unusual type of event. Use this only as a last resort!</description>
+        <label>Other</label>
+        <picklistValues>
+            <picklist>PS_OfferingDeliveryMethod__c</picklist>
+            <values>
+                <fullName>Conference Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Person</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Webex</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>PS_OfferingStatus__c</picklist>
+            <values>
+                <fullName>Approved</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cancelled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Denied</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>PS_OfferingSubStatus__c</picklist>
+            <values>
+                <fullName>Additional Information Requested</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Changed Topic</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Event Cancelled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>High Priority</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lack of Registration</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lack of Resources</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Low Priority</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Response From Contact</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Priority Override</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Standard Priority</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Submitted for ProServices Approval</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Waiting to be Submitted for Approval</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Partner_Engagement</fullName>
+        <active>true</active>
+        <description>Partner Engagement Record Type added 8/24/2015</description>
+        <label>Partner Engagement</label>
+        <picklistValues>
+            <picklist>PS_OfferingDeliveryMethod__c</picklist>
+            <values>
+                <fullName>Conference Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Person</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Postal Mail</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Webex</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>PS_OfferingStatus__c</picklist>
+            <values>
+                <fullName>Approved</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cancelled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Denied</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Submitted</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>PS_OfferingSubStatus__c</picklist>
+            <values>
+                <fullName>Additional Information Requested</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Changed Topic</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Event Cancelled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>High Priority</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lack of Registration</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lack of Resources</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Low Priority</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Response From Contact</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Priority Override</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Standard Priority</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Submitted for ProServices Approval</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Waiting for ProServices Approval</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Waiting for Strategic Services Approval</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Waiting to be Submitted for Approval</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Pre_Sales_Support</fullName>
+        <active>true</active>
+        <description>Any SALT/MM101 pre-sales support</description>
+        <label>Pre-Sales Support</label>
+        <picklistValues>
+            <picklist>PS_OfferingDeliveryMethod__c</picklist>
+            <values>
+                <fullName>Conference Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Person</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Webex</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>PS_OfferingStatus__c</picklist>
+            <values>
+                <fullName>Approved</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cancelled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Denied</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Submitted</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>PS_OfferingSubStatus__c</picklist>
+            <values>
+                <fullName>Additional Information Requested</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Changed Topic</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Event Cancelled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>High Priority</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lack of Registration</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lack of Resources</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Low Priority</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Response From Contact</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Priority Override</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Standard Priority</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Submitted for ProServices Approval</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Waiting to be Submitted for Approval</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Training</fullName>
+        <active>true</active>
+        <description>Any training event being presented to a SALT school client who has officially received training as part of their SOW (excludes any SALT-specific training that would be submitted under campus engagement)</description>
+        <label>Training</label>
+        <picklistValues>
+            <picklist>PS_OfferingDeliveryMethod__c</picklist>
+            <values>
+                <fullName>Conference Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Person</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Webex</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>PS_OfferingStatus__c</picklist>
+            <values>
+                <fullName>Approved</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cancelled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Denied</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Submitted</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>PS_OfferingSubStatus__c</picklist>
+            <values>
+                <fullName>Additional Information Requested</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Changed Topic</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Event Cancelled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>High Priority</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lack of Registration</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lack of Resources</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Low Priority</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Response From Contact</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Priority Override</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Standard Priority</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Submitted for ProServices Approval</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Waiting to be Submitted for Approval</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>WebEx</fullName>
+        <active>true</active>
+        <description>Student and staff webinars associated with our monthly webinar series</description>
+        <label>WebEx</label>
+        <picklistValues>
+            <picklist>PS_OfferingDeliveryMethod__c</picklist>
+            <values>
+                <fullName>Conference Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Person</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Webex</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>PS_OfferingStatus__c</picklist>
+            <values>
+                <fullName>Approved</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cancelled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Denied</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Submitted</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>PS_OfferingSubStatus__c</picklist>
+            <values>
+                <fullName>Additional Information Requested</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Changed Topic</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Event Cancelled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>High Priority</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lack of Registration</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lack of Resources</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Low Priority</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Response From Contact</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Priority Override</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Standard Priority</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Submitted for ProServices Approval</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Waiting to be Submitted for Approval</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Workshop</fullName>
+        <active>false</active>
+        <description>A day-long workshop on a single topic. (Full-day sessions with mulitple topics should be entered as individual Offerings for each Topic.)</description>
+        <label>Workshop</label>
+        <picklistValues>
+            <picklist>PS_OfferingDeliveryMethod__c</picklist>
+            <values>
+                <fullName>Conference Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Person</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Webex</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>PS_OfferingStatus__c</picklist>
+            <values>
+                <fullName>Approved</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cancelled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Denied</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>PS_OfferingSubStatus__c</picklist>
+            <values>
+                <fullName>Additional Information Requested</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Changed Topic</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Event Cancelled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>High Priority</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lack of Registration</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lack of Resources</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Low Priority</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Response From Contact</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Priority Override</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Standard Priority</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Submitted for ProServices Approval</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Waiting to be Submitted for Approval</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts>
+        <customTabListAdditionalFields>PS_OfferingTargetDate__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>PS_OfferingAssignedTo__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>PS_OfferingStatus__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>PS_OfferingAccount__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>PS_OfferingCampaign__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>PS_OfferingOpportunity__c</customTabListAdditionalFields>
+        <excludedStandardButtons>Accept</excludedStandardButtons>
+        <lookupDialogsAdditionalFields>PS_OfferingTargetDate__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>PS_OfferingStatus__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>PS_OfferingAccount__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>PS_OfferingCampaign__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>PS_OfferingOpportunity__c</lookupDialogsAdditionalFields>
+        <searchFilterFields>NAME</searchFilterFields>
+        <searchFilterFields>PS_OfferingTargetDate__c</searchFilterFields>
+        <searchFilterFields>PS_OfferingAssignedTo__c</searchFilterFields>
+        <searchFilterFields>PS_OfferingAccount__c</searchFilterFields>
+        <searchFilterFields>PS_OfferingOpportunity__c</searchFilterFields>
+        <searchFilterFields>PS_OfferingCampaign__c</searchFilterFields>
+        <searchResultsAdditionalFields>PS_OfferingTargetDate__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>PS_OfferingAssignedTo__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>PS_OfferingStatus__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>PS_OfferingAccount__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>PS_OfferingCampaign__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>PS_OfferingOpportunity__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>AccountOpportunityorCampaignRequired</fullName>
+        <active>false</active>
+        <description>This validation rule is designed to ensure that each Offering created is linked to an Account, Opportunity or Campaign (at least one).</description>
+        <errorConditionFormula>IF(AND(ISNULL( PS_OfferingCampaign__c)=TRUE,ISNULL( PS_OfferingOpportunity__c)=TRUE,ISNULL( PS_OfferingAccount__c)=TRUE),TRUE,FALSE)</errorConditionFormula>
+        <errorMessage>An Offering MUST be tied to either an Account, an Opportunity or a Campaign. Please use one of these fields to link to this Offering.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>PS_Topic_NOT_Archived_or_Removed</fullName>
+        <active>true</active>
+        <description>Ensure that the selected ProServices Topic parent record does not have Status of Archived or Removed</description>
+        <errorConditionFormula>( ISNEW()
+|| ISCHANGED( PS_OfferingTopic__c )
+)
+&amp;&amp;
+( ISPICKVAL( PS_OfferingTopic__r.Status__c, &quot;Archived&quot; ) 
+|| ISPICKVAL( PS_OfferingTopic__r.Status__c, &quot;Removed&quot; )
+)</errorConditionFormula>
+        <errorDisplayField>PS_OfferingTopic__c</errorDisplayField>
+        <errorMessage>Please select a ProServices Topic that does not have Status of Archived or Removed</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Target_date_validation_rule</fullName>
+        <active>false</active>
+        <errorConditionFormula>RecordType.Name  != &apos;Conference Presentation&apos; &amp;&amp;  ISBLANK(PS_OfferingTargetDate__c)</errorConditionFormula>
+        <errorDisplayField>PS_OfferingTargetDate__c</errorDisplayField>
+        <errorMessage>Target Date is a required field</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Title_Naming_Convention</fullName>
+        <active>false</active>
+        <description>This title must contain a date (2014 - 2020) and should be in the format:  &lt;Org Name&gt; - &lt;Topic&gt; - &lt;Date&gt;  
+For example, MASFAA (MS) - Newsletter Article - Fall 2016 would be correct.</description>
+        <errorConditionFormula>( RecordType.Name  != &apos;Conference Presentation&apos;  ) &amp;&amp; NOT( 
+OR( 
+CONTAINS(Name, &quot;2014&quot;),
+CONTAINS(Name, &quot;2015&quot;),
+CONTAINS(Name, &quot;2016&quot;),
+CONTAINS(Name, &quot;2017&quot;),
+CONTAINS(Name, &quot;2018&quot;),
+CONTAINS(Name, &quot;2019&quot;),
+CONTAINS(Name, &quot;2020&quot;)
+) 
+)</errorConditionFormula>
+        <errorDisplayField>Name</errorDisplayField>
+        <errorMessage>This title must contain a date (2014 - 2020) and should be in the format:  &lt;Org Name&gt; - &lt;Topic&gt; - &lt;Date&gt;  
+For example, MASFAA (MS) - Newsletter Article - Fall 2016 would be correct.</errorMessage>
+    </validationRules>
+</CustomObject>

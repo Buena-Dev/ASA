@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Notice issues to Process FLow Manger when a MPN Serialization is required at the Case level</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>MPN Serialization Notice</name>
+    <style>none</style>
+    <subject>NOTIFICATION: MPN Serlialization required for {!Case.Account}</subject>
+    <type>text</type>
+</EmailTemplate>

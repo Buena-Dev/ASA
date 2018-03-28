@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Employer Market Case submission Auto Response email</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Employer Community Auto-Response</name>
+    <style>none</style>
+    <subject>Thanks for Contacting American Student Assistance!</subject>
+    <textOnly>Thank you for contacting American Student Assistance®.  We&apos;ll respond to your email within 1 business day.</textOnly>
+    <type>custom</type>
+</EmailTemplate>

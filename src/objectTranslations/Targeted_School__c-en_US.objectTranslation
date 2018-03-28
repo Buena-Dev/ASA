@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Targeted School</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Targeted Schools</value>
+    </caseValues>
+    <fields>
+        <label><!-- City --></label>
+        <name>City__c</name>
+    </fields>
+    <fields>
+        <label><!-- Is Active --></label>
+        <name>Is_Active__c</name>
+    </fields>
+    <fields>
+        <label><!-- Is Target School for Program(s) --></label>
+        <name>Is_Target_School_for_Program_s__c</name>
+        <picklistValues>
+            <masterLabel>EOC Boston</masterLabel>
+            <translation><!-- EOC Boston --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EOC Brockton</masterLabel>
+            <translation><!-- EOC Brockton --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TS Boston</masterLabel>
+            <translation><!-- TS Boston --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TS Brockton</masterLabel>
+            <translation><!-- TS Brockton --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UB Brockton</masterLabel>
+            <translation><!-- UB Brockton --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Legacy ID --></label>
+        <name>Legacy_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- NCES School ID # --></label>
+        <name>NCES_School_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Report Support 1 --></label>
+        <name>Report_Support_1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Report Support 2 --></label>
+        <name>Report_Support_2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Report Support 3 --></label>
+        <name>Report_Support_3__c</name>
+    </fields>
+    <fields>
+        <label><!-- Report Support 4 --></label>
+        <name>Report_Support_4__c</name>
+    </fields>
+    <fields>
+        <label><!-- Secondary School Name --></label>
+        <name>Secondary_School_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Secondary School --></label>
+        <name>Secondary_School__c</name>
+        <relationshipLabel><!-- Targeted Schools --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Service Year --></label>
+        <name>Service_Year__c</name>
+        <picklistValues>
+            <masterLabel>2017-2018</masterLabel>
+            <translation><!-- 2017-2018 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2018-2019</masterLabel>
+            <translation><!-- 2018-2019 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2019-2020</masterLabel>
+            <translation><!-- 2019-2020 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- State --></label>
+        <name>State__c</name>
+    </fields>
+    <fields>
+        <label><!-- Supports Dual Enrollment --></label>
+        <name>Supports_Dual_Enrollment__c</name>
+    </fields>
+    <fields>
+        <label><!-- Unique Targeted School Name --></label>
+        <name>Unique_Targeted_School_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Zip --></label>
+        <name>Zip__c</name>
+    </fields>
+    <layouts>
+        <layout>Targeted School Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- There is already an existing Target School for the same Secondary School and Service Year. --></errorMessage>
+        <name>Targeted_School_Name_Must_Be_Unique</name>
+    </validationRules>
+</CustomObjectTranslation>

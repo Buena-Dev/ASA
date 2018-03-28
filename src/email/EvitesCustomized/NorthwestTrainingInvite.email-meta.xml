@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>false</available>
+    <description>Northwest Invite electronic</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>BlankLetterhead</letterhead>
+    <name>Northwest Training Invite</name>
+    <style>freeForm</style>
+    <subject>ASA Training Event</subject>
+    <textOnly>Northwest Training Event!
+
+National FFELP guarantor American Student Assistance has designed an all-day training event to discuss some of the hottest topics affecting financial aid offices!
+
+Sessions Include:
+* The Basics of FERPA and GLB Featuring Internet Security
+* Top 10 Financial Aid Pitfalls and How to Avoid Them
+* What&apos;s My Communication Style?
+
+To reserve your seat or for more information, please visit www.amsa.com/events or contact ASA&apos;s Northwest account executive, Kelley Bauman, at 800-999-9080 ext. 6248 or kbauman@amsa.com.</textOnly>
+    <type>html</type>
+</EmailTemplate>

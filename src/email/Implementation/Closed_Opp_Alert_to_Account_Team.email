@@ -1,0 +1,15 @@
+Hello,
+ 
+The agreement with {!Account.Name} has been executed and a copy saved to the opportunity: {!Opportunity.Link}.  
+
+The account team includes:
+ 
+RAE: {!Account.Regional_Account_Executive__c}                           
+
+Client Manager: {!Account.OwnerFullName}  
+       
+ 
+Congratulations!
+ 
+Jill
+x.6261

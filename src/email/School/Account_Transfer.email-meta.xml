@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>false</available>
+    <description>This email is used to send to schools announcing that the account owner has changed.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>SALTClientLetterhead</letterhead>
+    <name>Account Transfer</name>
+    <style>freeForm</style>
+    <subject>Gina&apos;s Account Transfer eMail</subject>
+    <textOnly>Dear Colleague,
+ 
+American Student Assistance (ASA) has restructured our organization and curtailed ancillary expenses in order to meet changing business and industry needs.  As part of our restructure, we have reduced our workforce and are focusing our resources to meet the heightened demand for education debt management services.   For your institution, this will mean a change to your ASA support team.  Effective immediately,  your new client manager will be (name).  (Name) will be reaching out to you within the next couple of days and will ensure that you continue to receive the level of support and service that you have come to expect from us.
+ 
+We want to assure our customers that ASA is financially sound, stable and secure.  We pledge that our borrower and school customers will see no disruption in service as a result of our workforce reduction.  
+ 
+We want to thank you in advance for your understanding during this time and for the opportunity to continue our esteemed partnership.  Please feel free to share this message with your staff.
+ 
+Sincerely,
+
+Gina Lucente-Cole
+Manager of School Services</textOnly>
+    <type>html</type>
+</EmailTemplate>

@@ -1,0 +1,4 @@
+An article has been requested by {!Pro_Services_Offering__c.PS_OfferingRequestedBy__c}. As the recipient of this email, you should now view the request and approve or reject the request.
+
+Requested Topic: {!Pro_Services_Offering__c.PS_OfferingTopic__c}
+{!Pro_Services_Offering__c.Link}

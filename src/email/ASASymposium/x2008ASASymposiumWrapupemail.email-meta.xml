@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>false</available>
+    <description>Wrapup email sent to all registered guests of the 2008 ASA Symposium</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>EmailLetterhead</letterhead>
+    <name>2008 ASA Symposium - Wrapup email</name>
+    <style>freeForm</style>
+    <subject>Highlights of the 2008 American Student Assistance Symposium</subject>
+    <textOnly>Dear Colleague,
+ 
+As promised, select presentation files and audio recordings from the 2008 American Student Assistance® (ASA) Symposium are now available online at http://www.amsa.com/symposium/2008/index.cfm.  The dynamic speakers featured on this webpage addressed several timely issues, including access to college, student retention, the importance of mentoring young people, and positive leadership.
+ 
+Overall, the 2008 ASA Symposium was a huge success. Every year we endeavor to create an interactive and evocative Symposium that attracts a variety of higher education decision makers from around the globe. In order to deliver such an event this year, we assembled an outstanding group of speakers to discuss topics related to our theme of Building Futures—Measuring Success. We are proud to be able to feature content from a number of them online.
+ 
+The 2009 Symposium will take place during the week of June 15, and planning will begin soon. We will inform you of all details as they become available. If you have any questions about the Symposium, please contact Nancy Meehan at 800.999.9080, ext. 4207 or nmeehan@amsa.com.
+ 
+Sincerely,
+Susan Nathan
+Vice President of Lender and School Services</textOnly>
+    <type>html</type>
+</EmailTemplate>

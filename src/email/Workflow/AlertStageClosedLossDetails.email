@@ -1,0 +1,13 @@
+The following Opportunity has been lost.  Please see the analysis below.  The Loss detail is below for you review. 
+
+Primary Loss Reason: {!Opportunity.Primary_Loss_Reason__c} 
+Winning Competitor: {!Opportunity.Winning_Competitor__c}
+Loss Analysis:  {!Opportunity.Win_Loss_Analysis__c}
+
+For more detailed information click the link below:
+{!Opportunity.Link}
+
+Sincerely,
+
+{!Opportunity.OwnerFullName}
+via Salesforce

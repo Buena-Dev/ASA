@@ -1,0 +1,528 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:m="http://schemas.microsoft.com/office/2004/12/omml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<title>Salesforce&nbsp; ProServices Applicat</title>
+<style type="text/css">
+p
+	{
+	font-size: medium;
+	font-family: Arial, Helvetica, sans-serif;
+}
+ul
+	{margin-bottom:0in;}
+ol
+	{margin-bottom:0in;}
+.style1 {
+	text-align: left;
+}
+.style2 {
+	font-size: large;
+}
+.style3 {
+	text-align: center;
+	background-color: #C0C0C0;
+}
+.style4 {
+	font-family: Arial, Helvetica, sans-serif;
+}
+</style>
+</head>
+
+<body>
+
+<p class="style1"><strong>Salesforce <br />
+<span class="style2">ProServices Application Help</span></strong></p>
+<table style="width: 95%" cellspacing="0" cellpadding="5" align="center">
+<tr>
+<td colspan="2" class="style3"><p><strong>Contents</strong></p></td>
+</tr>
+<tr>
+<td colspan="2"><p><a href="#viewing">Viewing ProServices Offerings</a></p></td>
+</tr>
+<tr>
+<td style="width: 5%" class="style4">&nbsp;</td>
+<td style="width: 95%" class="style4">&nbsp;</td>
+</tr>
+<tr>
+<td colspan="2"><p><a href="#requesting">Requesting A ProServices Offering</a></p></td>
+</tr>
+<tr>
+<td style="width: 5%" class="style4">&nbsp;</td>
+<td style="width: 95%" class="style4">&nbsp;</td>
+</tr>
+</table>
+<p class="style1"><strong><a name="viewing">Viewing ProServices Offerings</a></strong></p>
+<p>OK everyone, grab onto the handrails and hold on ~ we're finally getting to 
+the good stuff. We've reached the point where you'll be entering actual, 
+honest-to-goodness training requests! People, places, times -aren't you 
+excited?!Well... once you see how easy it is, hopefully you'll be as excited 
+about it as we all are!<o:p></o:p></p>
+<p>The ProServices Offerings tab is the tab that is really the core of the 
+ProServices application on Salesforce. Initially we were going to call it 
+ProServices Events (b/c that is what they are), but we decided to make the 
+change to &quot;Offerings&quot; to try to make the distinction between regular Salesforce 
+Events and Professional Services Events. I hope this will keep things 
+clear. <o:p></o:p></p>
+<p>The ProServices Offerings tab will provide the means for Business Development 
+and Client Management to request and track presentations, trainings, 
+consultations, articles and anything that Professional Services can do for you. <o:p></o:p>
+</p>
+<p>When you first click on the ProServicesOfferings tab, you're first page will 
+look something like this:<br />
+<!--[if gte vml 1]><v:shapetype id="_x0000_t75" coordsize="21600,21600" o:spt="75"
+ o:preferrelative="t" path="m@4@5l@4@11@9@11@9@5xe" filled="f" stroked="f">
+<v:stroke joinstyle="miter"/>
+<v:formulas>
+<v:f eqn="if lineDrawn pixelLineWidth 0"/>
+<v:f eqn="sum @0 1 0"/>
+<v:f eqn="sum 0 0 @1"/>
+<v:f eqn="prod @2 1 2"/>
+<v:f eqn="prod @3 21600 pixelWidth"/>
+<v:f eqn="prod @3 21600 pixelHeight"/>
+<v:f eqn="sum @0 0 1"/>
+<v:f eqn="prod @6 1 2"/>
+<v:f eqn="prod @7 21600 pixelWidth"/>
+<v:f eqn="sum @8 21600 0"/>
+<v:f eqn="prod @7 21600 pixelHeight"/>
+<v:f eqn="sum @10 21600 0"/>
+</v:formulas>
+<v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+</v:shapetype><v:shape id="_x0000_i1025" type="#_x0000_t75" alt="PS Offerings list"
+ style='width:531pt;height:341.25pt'>
+<v:imagedata src="file:///C:\DOCUME~1\SMONK~1.MON\LOCALS~1\Temp\msohtmlclip1\01\clip_image001.jpg"
+  o:href="http://moodle.asa-ps.org/file.php/11/PS_Offerings_list.JPG"/>
+</v:shape><![endif]--><![if !vml]>
+<img width="708" height="455" src="http://www.monkshack.com/asa/salesforce/images/clip_image002.jpg" alt="PS Offerings list" v:shapes="_x0000_i1025" /><![endif]><o:p></o:p></p>
+<p>Again, if you don't see any Offerings listed on your first visit to this 
+page, don't get your worry. Remember, all you're going to need to do is 
+change your View before you'll be able to see all of the Offerings contained in 
+this tab.<o:p></o:p></p>
+<p>To change your view, simply locate the drop-down menu next to View and select 
+the option &quot;All Events&quot; and then click the &quot;Go!&quot; button (if necessary).<br />
+<!--[if gte vml 1]><v:shape id="_x0000_i1026" type="#_x0000_t75" alt="Offerings view all events"
+ style='width:408pt;height:90pt'>
+<v:imagedata src="images/clip_image003.jpg"
+  o:href="http://moodle.asa-ps.org/file.php/10/Offerings_view_All_events.JPG"/>
+</v:shape><![endif]--><![if !vml]>
+<img width="544" height="120" src="http://www.monkshack.com/asa/salesforce/images/clip_image003.jpg" alt="Offerings view all events" v:shapes="_x0000_i1026" /><![endif]><o:p></o:p></p>
+<p><o:p></o:p></p>
+<p>Once the page loads, it should resemble something like this:<br />
+<!--[if gte vml 1]><v:shape id="_x0000_i1027" type="#_x0000_t75" alt="PS Offerings list all"
+ style='width:534pt;height:393.75pt'>
+<v:imagedata src="file:///C:\DOCUME~1\SMONK~1.MON\LOCALS~1\Temp\msohtmlclip1\01\clip_image004.jpg"
+  o:href="http://moodle.asa-ps.org/file.php/11/PS_Offerings_list_all.JPG"/>
+</v:shape><![endif]--><![if !vml]>
+<img width="712" height="525" src="http://www.monkshack.com/asa/salesforce/images/clip_image005.jpg" alt="PS Offerings list all" v:shapes="_x0000_i1027" /><![endif]><o:p></o:p></p>
+<p>This view provides you with the ability to view all of the offerings, their 
+target date, status, who that offering has been assigned to, the Account, 
+Campaign, and <st1:place
+w:st="on">Opportunity</st1:place>(if applicable) to which the offering 
+is connected.<o:p></o:p></p>
+<p>Of course, if you click on the title of the Offering, you'll be able to view 
+all of the details for that Offering. We're not going to do that right now 
+though. What we're going to do is move on to the next section ~Requesting 
+a new Offering ~ because as we do that, you'll become familiar with all of the 
+fields within PS Offerings.<o:p></o:p></p>
+<p class="style1"><strong><a name="requesting">Requesting a ProServices Offering</a></strong><o:p></o:p></p>
+<p>The process for adding new Offerings is probably the most cumbersome process, 
+or at least the process that requires the most information. This is due 
+primarily to the fact that the Offering is the core of the ProServices 
+application in Salesforce. As a result, almost all of the crucial 
+information and relationships come together in this record.<o:p></o:p></p>
+<p>To begin, click on the ProServices Offerings tab. This should take you 
+to a page that you've seen before, at least if you've been following this course 
+in sequence. To create a new Offering, click on the New button that is 
+displayed on this page.<br />
+<!--[if gte vml 1]><v:shape id="_x0000_i1028" type="#_x0000_t75" alt="offering home"
+ style='width:366.75pt;height:96.75pt'>
+<v:imagedata src="images/clip_image006.jpg"
+  o:href="http://moodle.asa-ps.org/file.php/10/Offerings_home.JPG"/>
+</v:shape><![endif]--><![if !vml]>
+<img width="489" height="129" src="http://www.monkshack.com/asa/salesforce/images/clip_image006.jpg" alt="offering home" v:shapes="_x0000_i1028" /><![endif]><o:p></o:p></p>
+<p>The next step in creating a new offering is to select the Record Type. 
+This corresponds to the type of Offering you are creating. The options are 
+listed in a drop-down box and are described toward the bottom of the page. <o:p></o:p>
+</p>
+<p><!--[if gte vml 1]><v:shape
+ id="_x0000_i1029" type="#_x0000_t75" alt="offering record type" style='width:534pt;
+ height:289.5pt'>
+<v:imagedata src="file:///C:\DOCUME~1\SMONK~1.MON\LOCALS~1\Temp\msohtmlclip1\01\clip_image007.jpg"
+  o:href="http://moodle.asa-ps.org/file.php/10/offering_record_type.JPG"/>
+</v:shape><![endif]--><![if !vml]>
+<img width="712" height="386" src="http://www.monkshack.com/asa/salesforce/images/clip_image008.jpg" alt="offering record type" v:shapes="_x0000_i1029" /><![endif]><o:p></o:p></p>
+<p>Select the type of Offering you wish to create (anything other than an 
+article will work fine for now), then click on the Continue button to begin 
+entering the details of the offering. The next page will look like this:<br />
+<!--[if gte vml 1]><v:shape id="_x0000_i1030" type="#_x0000_t75" alt="offering new edit"
+ style='width:535.5pt;height:494.25pt'>
+<v:imagedata src="file:///C:\DOCUME~1\SMONK~1.MON\LOCALS~1\Temp\msohtmlclip1\01\clip_image009.jpg"
+  o:href="http://moodle.asa-ps.org/file.php/10/offering_new_edit.JPG"/>
+</v:shape><![endif]--><![if !vml]>
+<img width="714" height="659" src="http://www.monkshack.com/asa/salesforce/images/clip_image010.jpg" alt="offering new edit" v:shapes="_x0000_i1030" /><![endif]><o:p></o:p></p>
+<p>Don't panic if you don't see every single field on this page - some of them 
+will only be shown to Salesforce administrators and the Manager of Professional 
+Services. In addition, the fields displayed may vary somewhat depending on 
+what type of Offering you are creating. For instance, if you were entering 
+an article publication, location information wouldn't really be necessary or 
+even helpful, so those fields aren't displayed. To give you an idea of the 
+difference, here's the same version of this page but the one that was created 
+for entering new information about an article publication:<br />
+<!--[if gte vml 1]><v:shape id="_x0000_i1031" type="#_x0000_t75" alt="offering new article edit"
+ style='width:534.75pt;height:328.5pt'>
+<v:imagedata src="file:///C:\DOCUME~1\SMONK~1.MON\LOCALS~1\Temp\msohtmlclip1\01\clip_image011.jpg"
+  o:href="http://moodle.asa-ps.org/file.php/10/offering_new_article_edit.JPG"/>
+</v:shape><![endif]--><![if !vml]>
+<img width="713" height="438" src="http://www.monkshack.com/asa/salesforce/images/clip_image012.jpg" alt="offering new article edit" v:shapes="_x0000_i1031" /><![endif]><o:p></o:p></p>
+<p>It should be easy to see the differences between the pages in the two images 
+above. The most important thing to note is that regardless of what type of 
+Offering record you are creating, you should enter <strong>as much information 
+as possible</strong> to ensure that nothing is omitted. Every attempt has 
+been made to minimize the number of fields that are absolutely required, but you 
+should consider every relevant field to be necessary when you are entering new 
+Offerings, just to be on the safe side.<o:p></o:p></p>
+<p>Now let's go back to our new training offering and explore the available 
+fields in each sub-section of the page. This will enable us to look at the 
+requirements and options for each field in the context of this new Offering.<o:p></o:p></p>
+<p><strong>Information</strong><br />
+<!--[if gte vml 1]><v:shape id="_x0000_i1032" type="#_x0000_t75" alt="offering new edit info"
+ style='width:537pt;height:141.75pt'>
+<v:imagedata src="file:///C:\DOCUME~1\SMONK~1.MON\LOCALS~1\Temp\msohtmlclip1\01\clip_image013.jpg"
+  o:href="http://moodle.asa-ps.org/file.php/10/offering_new_edit_info.JPG"/>
+</v:shape><![endif]--><![if !vml]>
+<img width="716" height="189" src="http://www.monkshack.com/asa/salesforce/images/clip_image014.jpg" alt="offering new edit info" v:shapes="_x0000_i1032" /><![endif]><o:p></o:p></p>
+<p>The information sub-section is the starting point for entering detailed 
+information about this new Offering. In order for thisoffering to be 
+linked to and displayed on the Account, Campaign and/or Opportunity pages, that 
+relationship must be created here first. You'll notice that none of these 
+fields are required, but I cannot think of a singleoffering that would not or 
+should not be tied to at least one of these records.<o:p></o:p></p>
+<ul type="disc">
+<li><span class="style4">Account<br />
+If this offering is related to a specific account (i.e. a school, a lender 
+partner, or a state or regional association), please use the lookup button (</span><!--[if gte vml 1]><v:shape id="_x0000_i1033" type="#_x0000_t75"
+      alt="Salesforce Lookup" style='width:13.5pt;height:12pt'>
+<v:imagedata src="images/clip_image015.gif"
+       o:href="http://moodle.asa-ps.org/file.php/9/ProServices/salesforce_lookup.png"/>
+</v:shape><![endif]--><span class="style4"><![if !vml]>
+<img width="18" height="16" src="http://www.monkshack.com/asa/salesforce/images/clip_image015.gif" alt="Salesforce Lookup" v:shapes="_x0000_i1033" /><![endif]>) 
+to select that account. If this is for a prospective client and an account 
+record does not yet exist for them, you will have to create that account 
+first (probably in another instance of Salesforce) before you will be able 
+to link to that account using this lookup. </span> <o:p></o:p></li>
+<li><span class="style4">Campaign<br />
+If this account is linked to a specific Campaign that marketing has created, 
+you can identify that relationship here by using the lookup button next to 
+the field. Remember, Campaigns are not automatically linked to accounts, so 
+for state and regional associations, this relationship will be the only 
+point those two records are linked. That means that if you're presenting at 
+a state or regional conference for which there is both a campaign and an 
+account, you should include both relationships when you're creating this 
+Offering. </span> <o:p></o:p></li>
+<li><span class="style4"><st1:place w:st="on">Opportunity</st1:place><br />
+If the Offering is specific to an opportunity, you can include that 
+relationship using this lookup field. </span> <o:p></o:p></li>
+<li><span class="style4">Requested By<br />
+This field is specifically used for identifying the ASA employee that is 
+requesting this Offering. This person will be the primary contact and 
+advocate for this offering within ASA. If you are entering a new Offering 
+for a request that came directly to you, you can select yourself as the ASA 
+employee requesting that offering. This field is mandatory because it will 
+be used to provide data on who is requesting the services of the 
+Professional Services @ ASA team for reporting purposes. A school or 
+organization contact should NEVER be the individual listed here. A school 
+or organization individual who is requesting the Offering will be included 
+as the Primary or Secondary Contact under the details sub-section of this 
+page. </span> <o:p></o:p></li>
+<li><span class="style4">Record Type<br />
+The Record Type is set by the type of Offering you selected in the previous 
+step. If this is incorrect, you simply have to go back to the previous page 
+and select the correct type of Offering record you wish to create.</span><o:p></o:p></li>
+</ul>
+<p><strong>Status</strong><br />
+<!--[if gte vml 1]><v:shape id="_x0000_i1034" type="#_x0000_t75" alt="offering new edit status"
+ style='width:532.5pt;height:81.75pt'>
+<v:imagedata src="file:///C:\DOCUME~1\SMONK~1.MON\LOCALS~1\Temp\msohtmlclip1\01\clip_image016.jpg"
+  o:href="http://moodle.asa-ps.org/file.php/10/offering_new_edit_status.JPG"/>
+</v:shape><![endif]--><![if !vml]>
+<img width="710" height="109" src="http://www.monkshack.com/asa/salesforce/images/clip_image017.jpg" alt="offering new edit status" v:shapes="_x0000_i1034" /><![endif]><o:p></o:p></p>
+<p>The status sub-section includes all of the information related to the 
+ownership of this record and what the status of this Offering request within 
+ASA's internal processes. <o:p></o:p></p>
+<ul type="disc">
+<li><span class="style4">Target Date<br />
+The target date is the anticipated date of the Offering. This field is used 
+to set the tasks for the Manager of Professional Services when the offering 
+is approved or denied. This date is also used to generate the reports that 
+feed the Professional Services Dashboard 1 that can be displayed on your 
+Salesforce home page (we'll cover the dashboard in the final section). If 
+you do not know the exact date, enter a date in the general timeframe and 
+then in the 'Description' section, make a note that the date hasn't been set 
+and give the general timeframe so that Gina has enough info for planning 
+purposes. </span> <o:p></o:p></li>
+<li><span class="style4">Anticipated Attendees<br />
+This is a place to record the expected number of individuals who will be 
+participating in the Offering. This field will provide the individual 
+Assigned To this offering with an idea as to how may handouts will be needed 
+for this specific Offering. </span> <o:p></o:p></li>
+<li><span class="style4">Assigned To<br />
+This field is only open to Salesforce Administrators and the Manager of 
+Professional Services. If you are not in one of those groups you will not 
+have the option of entering this information. The idea is that Manager of 
+Professional Services will review the Offering request, then once 
+an Offering has been approved, a member of Professional Services @ ASA team 
+will be assigned to the Offering by the Manager of Professional Services.
+</span> <o:p></o:p>
+</li>
+<li><span class="style4">Status<br />
+The status field will only be displayed to Salesforce Administrators and the 
+Manager of Professional Services. Users entering new Offerings will not be 
+able to set the Status, that will happen automatically when the Offering is 
+submitted for approval.<br />
+<br />
+But, as an FYI ~ if you are referring back to the Offering, these are the 
+possible Statuses and Sub-Statuses:</span><o:p></o:p></li>
+</ul>
+<ol start="1" type="1">
+<ol start="1" type="1">
+<li><span class="style4">New<br />
+The offering has been created, but has not yet been submitted for 
+approval. This should be the default option and should be used for all 
+new offerings. </span> <o:p></o:p></li>
+<li><span class="style4">Pending Approval<br />
+The Offering has been submitted, but has not yet been approved or 
+denied. This option is set automatically when the Offering is submitted 
+for approval. </span> <o:p></o:p></li>
+<li><span class="style4">Approved<br />
+The Offering has been approved by the Manager of Professional Services.
+</span> <o:p></o:p>
+</li>
+<li><span class="style4">Denied<br />
+The Offering has been denied by the Manger of Professional 
+Services. Offerings that are denied may be resubmitted to the approval 
+process with additional/new information. </span> <o:p></o:p></li>
+<li><span class="style4">Cancelled<br />
+Offerings that are cancelled due to external factors (weather, 
+cancellation of events, etc.) should be marked as cancelled, not 
+denied. This will allow us to track Offerings that were approved and 
+scheduled to occur, but, due to unforeseen factors, were not actually 
+conducted.</span><o:p></o:p></li>
+</ol>
+</ol>
+<ul type="disc">
+<li><span class="style4">Sub-Status<br />
+The options for the Sub-Status field depend on whatever options exist for 
+the Status field. The Status fields and their corresponding Sub-Status 
+options are listed below: </span> <o:p></o:p>
+<ul type="circle">
+<li class="style4">New<o:p></o:p></li>
+</ul>
+</li>
+</ul>
+<ol start="1" type="1">
+<ol start="1" type="1">
+<ol start="1" type="1">
+<li><span class="style4">Waiting to be Submitted for Approval<br />
+This is the only option available to offerings with a Status of 
+New. This should be the default status for all new Offerings.</span><o:p></o:p></li>
+</ol>
+</ol>
+</ol>
+<ul type="disc">
+<ul type="circle">
+<li class="style4">Pending Approval<o:p></o:p></li>
+</ul>
+</ul>
+<ol start="1" type="1">
+<ol start="1" type="1">
+<ol start="1" type="1">
+<li><span class="style4">Submitted for ProServices Approval<br />
+This Sub-Status is automatically set when the Offering is submitted 
+for Approval. An Offering should have this Sub-Status value until 
+it has either been approved or denied by the Manager of Professional 
+Services or the Manager of Professional Services has requested that 
+the individual requesting the Offering provide additional 
+information. </span> <o:p></o:p></li>
+<li><span class="style4">Additional Information Requested<br />
+If the Manager of Professional Services has determined that there is 
+insufficient information in the request for a new Offering and has 
+requested more information from the individual who is requesting the 
+offering, this option should be selected. </span> <o:p></o:p></li>
+</ol>
+</ol>
+</ol>
+<ul type="disc">
+<ul type="circle">
+<li><span class="style4">Approved<br />
+Once an Offering is approved, the Manager of Professional Services will 
+receive a task in Salesforce to assign a priority level (using the 
+Sub-Status field)to the Offering. This field is only for internal use 
+and simply to provide some indication as to the value of this 
+particular Offering as it relates to the mission of ASA and the 
+Professional Services @ ASA team.</span><o:p></o:p></li>
+</ul>
+</ul>
+<ol start="1" type="1">
+<ol start="1" type="1">
+<ol start="1" type="1">
+<li class="style4">High Priority <o:p></o:p></li>
+<li class="style4">Standard Priority <o:p></o:p></li>
+<li class="style4">Low Priority<o:p></o:p></li>
+</ol>
+</ol>
+</ol>
+<ul type="disc">
+<ul type="circle">
+<li><span class="style4">Denied<br />
+Should an Offering be denied, the Manager of Professional Services will 
+be assigned a Task to update the Sub-Status field with a corresponding 
+reason for the denial. <br />
+<br />
+The available Sub-Status options for a denied Offering include:</span><o:p></o:p></li>
+</ul>
+</ul>
+<ol start="1" type="1">
+<ol start="1" type="1">
+<ol start="1" type="1">
+<li class="style4">Lack of Resources <o:p></o:p></li>
+<li class="style4">Priority Override <o:p></o:p></li>
+<li class="style4">Not My Job, Mon<o:p></o:p></li>
+</ol>
+</ol>
+</ol>
+<ul type="disc">
+<ul type="circle">
+<li><span class="style4">Cancelled<br />
+The Status of cancelled is only applied to Offerings that were at one 
+time approved but were later cancelled due to an intervening factor. In 
+this case, the Sub-Status field will allow us to track those situations 
+for later evaluation.<br />
+<br />
+The available Sub-Status field options for a cancelled Offering are:</span><o:p></o:p></li>
+</ul>
+</ul>
+<ol start="1" type="1">
+<ol start="1" type="1">
+<ol start="1" type="1">
+<li class="style4">Lack of Resources <o:p></o:p></li>
+<li class="style4">Priority Override <o:p></o:p></li>
+<li class="style4">Lack of Registration <o:p></o:p></li>
+<li class="style4">Event Cancelled<o:p></o:p></li>
+</ol>
+</ol>
+</ol>
+<p><strong>Details</strong><br />
+<!--[if gte vml 1]><v:shape id="_x0000_i1035" type="#_x0000_t75" alt="offering new edit details"
+ style='width:522.75pt;height:186pt'>
+<v:imagedata src="images/clip_image018.jpg"
+  o:href="http://moodle.asa-ps.org/file.php/10/offering_new_edit_details.JPG"/>
+</v:shape><![endif]--><![if !vml]>
+<img width="697" height="248" src="http://www.monkshack.com/asa/salesforce/images/clip_image018.jpg" alt="offering new edit details" v:shapes="_x0000_i1035" /><![endif]><o:p></o:p></p>
+<p>The details sub-section is the guts of the Offering record. The fields 
+included are:<o:p></o:p></p>
+<ul type="disc">
+<li><span class="style4">Title<br />
+Quite obviously the Title field is the title of the Offering. To ensure 
+that each offering is easily identifiable, a standard naming scheme for 
+Offerings should be followed.
+This naming convention will help to ensure that Offerings can be searched 
+and found by everyone using the ProServices application in Salesforce. <o:p></o:p>
+<br />
+<br />
+<em>&lt;organization&gt; - &lt;subject&gt; - &lt;date&gt; (if you aren't sure of the exact 
+date, 'month and year' will be fine</em><i><br />
+<em>i.e. - &quot;NCASFAA - FERPA &amp; GLB Act - May 2007&quot; or &quot;Saint 
+Francis Univ - Customer Service - June 2008&quot;<br />
+<br />
+</em>
+</i>You may have noticed that abbreviations were used in both of the 
+examples above. Keep in mind that when you're using an abbreviation, someone 
+searching for an Offering using the full spelling will not be able to find 
+it. As such, abbreviations should be used very sparingly.&nbsp; If you have 
+to use an abbreviation, please try to abbreviate the least significant words 
+first - i.e. University can be shortened to Univ, College can be shortened 
+to Coll and the state/regional associations can be referred to by their 
+corresponding abbreviated name. <i><br />
+</i></span>
+</li>
+<li><span class="style4">ProServices Topic<br />
+The ProServices Topic is a lookup field for identifying the topic that 
+this Offering is related to. Every Offering should have a corresponding 
+Topic for reporting and organization purposes. These are the 'Topics' that 
+are stored in the PS Topics tab. <em>Note:</em> If you are requesting a 
+training for which the Topic doesn't already exist, there is a Topic called 
+&quot;New Topic Request&quot;. Select that topic and then give Gina details in the 
+'Description' field. </span> <o:p></o:p></li>
+<li><span class="style4">Description<br />
+An open-text field that allows you to enter any specific information about 
+this Offering that may not have been asked for anywhere else on this page. 
+As mentioned above, notes re: dates or other details that are still 'up in 
+the air' should be added here. </span> <o:p></o:p></li>
+<li><span class="style4">Delivery Method<br />
+The Delivery Method is the means of providing the training, consultation or 
+presentation to the participants. This will allow us to track not only what 
+Topics were delivered to which clients, but which means we used to provide 
+the information to them. </span> <o:p></o:p></li>
+<li><span class="style4">Requested Presenter<br />
+This is an optional field that allows the creator of the Offering to 
+identify if a specific Professional Services @ ASA team member has been 
+requested for this Offering. The Manager of Professional Services may take 
+this request into account when assigning someone to the Offering. </span>
+<o:p></o:p></li>
+<li><span class="style4">Primary Contact<br />
+This is where you can identify the primary contact at the school (or lender 
+or association). </span> <o:p></o:p></li>
+<li><span class="style4">Secondary Contact<br />
+This is where you can identify the secondary contact at the school (or 
+lender or association).</span><o:p></o:p></li>
+</ul>
+<p><strong>Location</strong><br />
+<!--[if gte vml 1]><v:shape id="_x0000_i1036" type="#_x0000_t75" alt="offering new edit location"
+ style='width:519.75pt;height:128.25pt'>
+<v:imagedata src="images/clip_image019.jpg"
+  o:href="http://moodle.asa-ps.org/file.php/10/offering_new_edit_location.JPG"/>
+</v:shape><![endif]--><![if !vml]>
+<img width="693" height="171" src="http://www.monkshack.com/asa/salesforce/images/clip_image019.jpg" alt="offering new edit location" v:shapes="_x0000_i1036" /><![endif]><o:p></o:p></p>
+<p>The location sub-section should include all of the relevant information 
+about where the offering is to be held.<o:p></o:p></p>
+<ul type="disc">
+<li><span class="style4">Location Name <br />
+The Location Name is the name of the site that will be hosting the Offering, 
+i.e. the hotel name for conferences, the college or university name 
+for Offerings held on campus, the bar name for offerings held at a local 
+pub...you get the idea. You're probably asking yourself, why is this field 
+required? Well, Shawn plans to integrate this with Google maps to provide a 
+map of the location, so in order to find the location, he's going to need 
+the Location Name to conduct the search. </span> <o:p></o:p></li>
+<li><span class="style4">Address lines <br />
+The actual street address of the Offering site. These are currently 
+optional, but they may be required at a later date. </span> <o:p></o:p></li>
+<li><span class="style4">City <br />
+The City where the Offering will be held. This is a required field for two 
+primary reasons: </span>
+<ol>
+<li class="style4">It will allow to track offerings by city, </li>
+<li><span class="style4">It will be 
+necessary for the integration with Google maps. </span>
+<o:p></o:p>
+</li>
+</ol>
+</li>
+<li><span class="style4">State<br />
+The two-digit code for the State where the offering will be held. It is a 
+required field for the same reasons as the City field.</span><o:p></o:p></li>
+</ul>
+<p>Wow....you did it!! I hope it didn't take you nearly as long to read this as 
+it did to create it! Hopefully it is comprehensive and provides you with 
+all necessary documentation in order for you to successfully navigate through 
+the ProServices Application on Salesforce. <o:p></o:p></p>
+<p>One final important reminder... If a training is requested through any other 
+means (i.e. phone call, e-mail, mental telepathy), it will not be honored. 
+You will be instructed to enter your request via this process. If you have 
+ANY questions, please don't hesitate to contact Gretchen or Shawn.<o:p></o:p></p>
+<p><o:p></o:p></p>
+
+</body>
+
+</html>

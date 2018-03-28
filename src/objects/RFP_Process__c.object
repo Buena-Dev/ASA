@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>This object is used to track the RFP Process for SALT opportunities.</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ControlledByParent</externalSharingModel>
+    <fields>
+        <fullName>RAE_for_Account__c</fullName>
+        <externalId>false</externalId>
+        <formula>(RFP_Account__r.Regional_Account_Executive__r.FirstName)+ &quot; &quot; + (RFP_Account__r.Regional_Account_Executive__r.LastName)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>RAE for Account</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RFP_2nd_Round__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>This box becomes ticked once a Request for Proposal has entered the second round.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This box becomes ticked once a Request for Proposal has entered the second round.</inlineHelpText>
+        <label>RFP 2nd Round</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>RFP_Account__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>This is the Account for which the RFP is being processed.</inlineHelpText>
+        <label>RFP Account</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>RFP Processes</relationshipLabel>
+        <relationshipName>RFP_Processes</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>RFP_Due_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>RFP Due Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>RFP_Lead__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>RFP Lead</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>RFP_Processes</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>RFP_Loss_Reason_s__c</fullName>
+        <externalId>false</externalId>
+        <label>RFP Loss Reason(s)</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Competitor</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Price</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Legal Issues</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>RFP_Received_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>RFP Received Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>RFP_Source__c</fullName>
+        <externalId>false</externalId>
+        <label>RFP Source</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Sales Representative</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>RFP.com</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Client Generated</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>RFP_Status__c</fullName>
+        <externalId>false</externalId>
+        <label>RFP Status</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Receipt of the Request for RFP</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Approval to Respond to RFP</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>In Process</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Response to RFP Sent</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Invited to Participate in 2nd Round</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Lost</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Won</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>RFP_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>RFP Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Reactive</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Proactive</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>RFP_Value__c</fullName>
+        <description>Estimated value of proposal.</description>
+        <externalId>false</externalId>
+        <label>RFP Value</label>
+        <precision>18</precision>
+        <required>true</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>RFP_Win_Reason_s__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>This field indicates the reason(s) by which the RFP was won.</inlineHelpText>
+        <label>RFP Win Reason(s)</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Price</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Functionality</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>RAE Relationship</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>RFP_Winner__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Provide the name of the institution that won the RFP.</inlineHelpText>
+        <label>RFP Winner</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <label>RFP Process</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>RFP_Type__c</columns>
+        <columns>RAE_for_Account__c</columns>
+        <columns>NAME</columns>
+        <columns>RFP_Lead__c</columns>
+        <columns>RFP_Status__c</columns>
+        <columns>RFP_Received_Date__c</columns>
+        <columns>RFP_Due_Date__c</columns>
+        <columns>LAST_UPDATE</columns>
+        <columns>RFP_Value__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <label>RFP Process Name</label>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>RFP Processes</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+</CustomObject>

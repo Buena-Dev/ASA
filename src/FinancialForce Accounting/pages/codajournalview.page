@@ -1,0 +1,1039 @@
+<!-- codajournalview -->
+<apex:page standardController="c2g__codaJournal__c" extensions="c2g.CODAHelpLoaderController,c2g.CODAJournalController">
+
+	<script src="{!URLFOR($Resource.coda2go,'coda2go/web/script/lib.js')}" type="text/javascript"></script>
+	<script type="text/javascript" src="{!URLFOR($Resource.front_journal,'front_journal/base/frameworks/jquery-1.5.min.js')}"></script>
+	<apex:stylesheet value="{!URLFOR($Resource.c2g__front_journal,'front_journal/base/frameworks/jquery-ui.css')}" />
+	<script type="text/javascript" src="{!URLFOR($Resource.front_journal,'front_journal/base/frameworks/jquery-ui.min.js')}"></script>
+	<script type="text/javascript">
+		var $FFDC = jQuery.noConflict(),
+			CODA2GoButtons = new CODA2GoPage(),
+			CODA2GoBtnSaveValue = "{!$Label.codaPageJournalViewProcessing}",
+			nohighlight = true,
+			isCancelling = {!viewstate.IsCancelling};
+
+		$FFDC(document).ready( function() {
+			CODAJournals = {},//Namespace for new journals JS functions
+			$FFDC.extend(CODAJournals, new Journal.OverrideCurrency_View(isCancelling));
+			$FFDC.extend(CODAJournals, new Journal.DestinationLinePopup(isCancelling));
+			$FFDC.extend(CODAJournals, new Journal.Detail_View());
+
+			CODAJournals.checkAvailabilityOfCurrencyValuesAll();
+			CODAJournals.setExpanderPosition($FFDC('.taxTotalsLink'));
+		});
+
+	</script>
+	
+	<script type="text/javascript" src="{!URLFOR($Resource.front_journal,'front_journal/components/journal.js')}"></script>
+	<apex:stylesheet value="{!URLFOR($Resource.c2g__front_journal,'front_journal/components/UberPopup/custompopup.css')}" />
+	<apex:stylesheet value="{!URLFOR($Resource.c2g__front_journal,'front_journal/components/UberPopup/custompopupanalysis.css')}" />
+	<script type="text/javascript" src="{!URLFOR($Resource.front_journal,'front_journal/components/UberPopup/custompopup.js')}"></script>
+	<script type="text/javascript" src="{!URLFOR($Resource.front_journal,'front_journal/components/UberPopup/customheaderpopup.js')}"></script>
+	<script type="text/javascript" src="{!URLFOR($Resource.front_journal,'front_journal/components/UberPopup/custompopupanalysis.js')}"></script>
+	<apex:stylesheet value="{!URLFOR($Resource.c2g__front_journal,'front_journal/components/UberPopup/custompopupdestinationline.css')}" />
+	<script type="text/javascript" src="{!URLFOR($Resource.front_journal,'front_journal/components/UberPopup/custompopupdestinationline.js')}"></script>
+
+	<apex:stylesheet value="{!URLFOR($Resource.c2g__coda2go,'coda2go/web/css/style.css')}"/>
+	<style>
+	.inline_block
+	{
+		display: inline-block;
+	}
+	.relative
+	{
+		position: relative;
+	}
+	.taxTotalsLink
+	{
+		margin-left: 5%;
+	}
+	.bPageBlock .detailList .labelCol
+	{
+		width: 10%;
+	}
+	.bPageBlock .detailList .dataCol
+	{
+		width: 21%;
+	}
+	.widthTotals
+	{
+		width: 75px;
+	}
+	.lineIcon{
+		width: 22px;
+	}
+	</style>
+
+	<apex:form onsubmit="if(CODA2GoButtons.disableSaveButtons){ return CODA2GoButtons.disableSaveButtons(); }">
+			<!-- Header -->
+			<apex:sectionHeader title="{!$Label.c2g__codapagejournalviewjournaldetail}" subtitle="{!viewstate.journal.dto.Name}" help="{!redirectForHelp1034}"/>
+			<!-- Back to Journals -->
+			<div class="goBreadcrumb">
+			&nbsp;&#171;<a href="{!URLFOR($Action.codaJournal__c.Tab,$ObjectType.codaJournal__c)}">{!$Label.codaPageJournalViewBackToListJournals}</a>
+			</div>
+			<!-- Journal Detail -->
+			<apex:pageBlock title="{!$Label.c2g__codapagejournalviewjournaldetail2}">
+					<!-- Buttons -->
+					<apex:pageBlockButtons >
+							<!--  Hidden Buttons -->
+							<apex:commandButton value="{!$Label.c2g__codapagejournalviewamend}" id="amend_h" action="{!gotoAmendDocument}" rendered="{!viewstate.journal.canAmendDocument}" styleclass="hiddensubmit"/>
+							<apex:commandButton id="edit_h" value="{!$Label.c2g__codapagejournalviewedit}" action="{!edit}" rendered="{!viewstate.journal.canEdit}"  styleclass="hiddensubmit"/>
+							<apex:commandButton id="discard_h" value="{!$Label.c2g__codapagejournalviewdiscard}" action="{!gotoDiscard}"  rendered="{!viewstate.journal.canDiscard}"  styleclass="hiddensubmit"/>
+							<apex:commandButton id="post_h" value="{!$Label.c2g__codapagejournalviewpost}" action="{!post}"  rendered="{!viewstate.journal.canPost}"  styleclass="hiddensubmit"/>
+							<apex:commandButton id="postVal_h" value="{!$Label.c2g__codapagejournalviewpost}" action="{!postVal}"  rendered="{!viewstate.journal.canPostVal}"  styleclass="hiddensubmit"/>
+							<apex:commandButton id="cancel_h" value="{!$Label.c2g__codacanceljournalbutton}" action="{!cancelJournal}" rendered="{!viewstate.journal.canCancel}" styleclass="hiddensubmit"/>
+							<apex:commandButton id="recurring_h" value="{!$Label.c2g__recurringjournalsrecurring}" action="{!gotoRecurrDocument}" rendered="{!viewstate.journal.canRecurrDocument}" styleclass="hiddensubmit"/>
+							<!-- End of Hidden Buttons -->
+							<apex:commandButton value="{!$Label.c2g__codapagejournalviewamend}" id="amend" rendered="{!viewstate.journal.canAmendDocument && ($Permission.c2g__JournalAmend || $Setup.codaAccountingSettings__c.DisableCustomPermissions__c)}" onclick="document.getElementById('{!$Component.amend_h}').click();return false;" rerender=""/>
+							<apex:commandButton id="edit" value="{!$Label.c2g__codapagejournalviewedit2}" onclick="document.getElementById('{!$Component.edit_h}').click();return false;" rendered="{!viewstate.journal.canEdit  && ($Permission.c2g__JournalEdit || $Setup.codaAccountingSettings__c.DisableCustomPermissions__c)}" rerender=""/>
+							<apex:commandButton id="discard" value="{!$Label.c2g__codapagejournalviewdiscard2}" onclick="document.getElementById('{!$Component.discard_h}').click();return false;" rendered="{!viewstate.journal.canDiscard && ($Permission.c2g__JournalDiscard || $Setup.codaAccountingSettings__c.DisableCustomPermissions__c)}" rerender=""/>
+							<apex:commandButton id="post" value="{!$Label.c2g__codapagejournalviewpost2}" onclick="document.getElementById('{!$Component.post_h}').click();return false;" rendered="{!viewstate.journal.canPost && ($Permission.c2g__JournalPost || $Setup.codaAccountingSettings__c.DisableCustomPermissions__c)}" rerender="post, postVal"/>
+							<apex:commandButton id="postVal" value="{!$Label.c2g__codapagejournalviewpost2}" onclick="document.getElementById('{!$Component.postVal_h}').click();return false;" rendered="{!viewstate.journal.canPostVal && ($Permission.c2g__JournalPost || $Setup.codaAccountingSettings__c.DisableCustomPermissions__c)}" rerender="post, postVal, messagePanel"/>
+							<apex:commandButton id="cancel" value="{!$Label.c2g__codacanceljournalbutton}" onclick="document.getElementById('{!$Component.cancel_h}').click();return false;" rendered="{!viewstate.journal.canCancel && ($Permission.c2g__JournalCancelJournal || $Setup.codaAccountingSettings__c.DisableCustomPermissions__c)}" rerender=""/>
+							<apex:commandButton id="recurring" value="{!$Label.c2g__recurringjournalsrecurring}" rendered="{!viewstate.journal.canRecurrDocument && ($Permission.c2g__JournalRecurring || $Setup.codaAccountingSettings__c.DisableCustomPermissions__c)}" onclick="document.getElementById('{!$Component.recurring_h}').click();return false;" rerender=""/>
+							<script>
+								var CODA2GoButtonArray = "";
+								if(document.getElementById("{!$Component.amend}"))
+								{
+									var amend = document.getElementById("{!$Component.amend}");
+									CODA2GoButtonArray = CODA2GoButtonArray + ',' +amend.id;
+								}
+
+								if(document.getElementById("{!$Component.edit}"))
+								{
+									var edit = document.getElementById("{!$Component.edit}");
+									CODA2GoButtonArray = CODA2GoButtonArray + ',' +edit.id;
+								}
+
+								if(document.getElementById("{!$Component.discard}"))
+								{
+									var discard = document.getElementById("{!$Component.discard}");
+									CODA2GoButtonArray = CODA2GoButtonArray + ',' + discard.id;
+								}
+
+								if(document.getElementById("{!$Component.post}"))
+								{
+									var post = document.getElementById("{!$Component.post}");
+									CODA2GoButtonArray = CODA2GoButtonArray + ',' + post.id;
+								}
+
+								if(document.getElementById("{!$Component.postVal}"))
+								{
+									var postVal = document.getElementById("{!$Component.postVal}");
+									CODA2GoButtonArray = CODA2GoButtonArray + ',' + postVal.id;
+								}
+
+								if(document.getElementById("{!$Component.cancel}"))
+								{
+									var cancel = document.getElementById("{!$Component.cancel}");
+									CODA2GoButtonArray = CODA2GoButtonArray + ',' + cancel.id;
+								}
+
+								if(document.getElementById("{!$Component.recurring}"))
+								{
+									var recurring = document.getElementById("{!$Component.recurring}");
+									CODA2GoButtonArray = CODA2GoButtonArray + ',' + recurring.id;
+								}
+								var myCODA2GoButtonArray = CODA2GoButtonArray.substr(1).split(",");
+								CODA2GoButtons.initButtons(myCODA2GoButtonArray);
+							</script>
+					</apex:pageBlockButtons>
+					<apex:pageMessage title="{!$Label.c2g__documentreadytopostwarning}" severity="warning" strength="2" rendered="{!viewstate.IsReadyPost}"/>
+					<!-- Messages -->
+					<apex:include pageName="c2g__codamulticompanymodewarning"  rendered="{!viewstate.isMultiCompanyMode}"/>
+					<apex:include pageName="c2g__codacompanymismatchwarning"  rendered="{!viewstate.ownerCmpErr}"/>
+					<apex:pageMessages id="messagePanel"/>
+
+					<!-- Journal Detail -->
+					<apex:pageBlockSection title="{!$Label.c2g__codapagejournalviewjournaldetail3}" columns="3">
+							<!-- Journal Header Info -->
+							<apex:outputField id="type" value="{!viewstate.journal.dto.c2g__Type__c}" />
+							<apex:outputField id="journalNo" value="{!viewstate.journal.dto.Name}" />
+							<apex:outputText value=" "/>
+							<apex:outputField id="date" value="{!viewstate.journal.dto.c2g__JournalDate__c}" />
+							<apex:outputField value="{!viewstate.journal.dto.c2g__Period__c}" id="period"/>
+							<apex:outputText value=" "/>
+							<apex:outputField id="currency" value="{!viewstate.journal.dto.c2g__JournalCurrency__c}"/>
+							<apex:outputField id="externalCounterparty" value="{!viewstate.journal.dto.c2g__ExternalCounterparty__c}">
+								<apex:outputPanel id="analysislink" title="{!$Label.c2g__externalcounterpartyfieldinfo}" style="cursor:pointer">
+									<apex:image id="infoIcon" styleClass="lineIcon" value="{!URLFOR($Resource.c2g__coda2go, 'coda2go/web/images/tax_off.png')}"/>
+								</apex:outputPanel>
+							</apex:outputField>
+							<apex:outputText value=" "/>
+							<!-- Journal Reference, Debits and Analysis Header -->
+							<apex:pageBlockSectionItem >
+								<apex:outputLabel value="{!$ObjectType.c2g__codaJournal__c.fields.c2g__Reference__c.label}"/>
+								<apex:outputPanel >
+									<apex:outputField id="reference" value="{!viewstate.journal.dto.c2g__Reference__c}" />&nbsp;
+								</apex:outputPanel>
+							</apex:pageBlockSectionItem>
+							<apex:pageBlockSectionItem >
+								<apex:outputLabel value="{!$ObjectType.c2g__codaJournal__c.fields.c2g__Debits__c.label}"/>
+								<apex:outputText id="debits" styleClass="alignright widthstandard goblock" value="{!viewstate.journal.Debits}" />
+							</apex:pageBlockSectionItem>
+							<apex:pageBlockSectionItem >
+								<apex:outputLabel value="{!$Label.c2g__journalanalysisdetailspopuptaxanalysissection}:"/>
+								<apex:outputText value=" "/>
+							</apex:pageBlockSectionItem>
+							<!-- Journal Description, Credits and Tax Totals Detail -->
+							<apex:pageBlockSectionItem >
+								<apex:outputPanel >
+									<apex:outputLabel value="{!$ObjectType.c2g__codaJournal__c.fields.c2g__JournalDescription__c.label}"/>
+									<apex:commandLink id="headerAnalysisLink" onclick="showHeaderAnalysisPopUp();" oncomplete="return;" style="margin-right:10px;" rendered="{!viewstate.showHeaderCustomAnalysisFields}">
+										<apex:image style="margin-top:-4px;position:absolute;" id="headeranalysislinkimage" value="{!URLFOR($Resource.c2g__coda2go, 'coda2go/web/images/tax_off.png')}" title="{!$Label.c2g__journalanalysisdetailspopuptitle}"/>
+									</apex:commandLink>
+									<apex:outputPanel id="headerAnalysisDetailsPage" layout="block" style="display:none" styleClass="customPopupAnalysis headerAnalysisPopUp">
+										<div class="top">
+											<div class="topLeft">
+												<h2>{!$Label.c2g__journalanalysisdetailspopuptitle}</h2>
+												<a style="display:none" class="closeAnalysis" href="javascript:void(0)" onclick="closeHeaderAnalysisPopUpOnComplete();"></a>
+											</div>
+										</div>
+										<div class="middle" style="min-height:120px">
+											<div class="popupcontentanalysis">
+												<apex:pageBlock >
+													<div class="row subtitle">
+														<span class="column span4">
+															<apex:outputText value="{!$Label.c2g__codapagejournalcustomanalysisfields}" styleClass="fieldLabel" style="display:block;margin-top:10px;"/>
+														</span>
+													</div>
+													<apex:repeat value="{!headerAnalysisFields}" var="f">
+														<div class="row">
+															<span class="column fieldlabel">
+																<apex:outputText value="{!$ObjectType.c2g__codaJournal__c.fields[f].label}"/>
+															</span>
+															<span class="column fieldcontent">
+																<apex:outputField value="{!viewstate.journal.dto[f]}" />
+															</span>
+														</div>
+													</apex:repeat>
+												</apex:pageBlock>
+											</div>
+										</div>
+									</apex:outputPanel>
+		                    	</apex:outputPanel>
+								<apex:outputPanel >
+									<apex:outputField id="description" value="{!viewstate.journal.dto.c2g__JournalDescription__c}" />&nbsp;
+								</apex:outputPanel>
+							</apex:pageBlockSectionItem>
+							<apex:pageBlockSectionItem >
+								<apex:outputLabel value="{!$ObjectType.c2g__codaJournal__c.fields.c2g__Credits__c.label}"/>
+								<apex:outputText id="credits" styleClass="alignright widthstandard goblock" value="{!viewstate.journal.Credits}" />
+							</apex:pageBlockSectionItem>
+							<apex:pageBlockSectionItem >
+								<apex:outputLabel value="{!$ObjectType.c2g__codaJournal__c.fields.c2g__TaxTotal__c.label}"/>
+
+								<apex:pageBlockSectionItem >
+									<apex:OutputField id="taxTotal" styleClass="alignright widthTotals inline_block" value="{!viewstate.journal.dto.c2g__TaxTotal__c}"/>
+									<apex:outputPanel styleClass="holder" rendered="{!!viewstate.journal.IsVATOrGST}">
+										<c:AnalysisPopup >
+											<apex:pageBlockSection title="{!$Label.c2g__codapagejournaltaxtotalsdetail}" collapsible="false" columns="2">
+												<apex:outputLabel value="{!$ObjectType.c2g__codaJournal__c.fields.c2g__Tax1Total__c.label}"/>
+												<apex:outputPanel styleClass="popupDataFieldOutput">
+													<apex:outputText value="{!viewstate.journal.Tax1Total}" styleClass="alignright"/>
+												</apex:outputPanel>
+												<apex:outputLabel value="{!$ObjectType.c2g__codaJournal__c.fields.c2g__Tax2Total__c.label}"/>
+												<apex:outputPanel styleClass="popupDataFieldOutput">
+													<apex:outputText value="{!viewstate.journal.Tax2Total}" styleClass="alignright"/>
+												</apex:outputPanel>
+												<apex:outputLabel value="{!$ObjectType.c2g__codaJournal__c.fields.c2g__Tax3Total__c.label}"/>
+												<apex:outputPanel styleClass="popupDataFieldOutput">
+													<apex:outputText value="{!viewstate.journal.Tax3Total}" styleClass="alignright"/>
+												</apex:outputPanel>
+											</apex:pageBlockSection>
+										</c:AnalysisPopup>
+									</apex:outputPanel>
+								</apex:pageBlockSectionItem>
+							</apex:pageBlockSectionItem>
+							<!-- Journal Transaction, Total and Taxable Value Total -->
+							<apex:outputField id="transactionNo" value="{!viewstate.journal.dto.c2g__Transaction__c}"/>
+							<apex:pageBlockSectionItem >
+								<apex:outputLabel value="{!$ObjectType.c2g__codaJournal__c.fields.c2g__Total__c.label}"/>
+								<apex:outputText id="total" styleClass="alignright widthstandard goblock" value="{!viewstate.journal.Total}" />
+							</apex:pageBlockSectionItem>
+							<apex:pageBlockSectionItem rendered="{!viewstate.journal.IsVATOrGST}">
+								<apex:outputLabel value="{!$ObjectType.c2g__codaJournal__c.fields.c2g__TaxableValueTotal__c.label}"/>
+								<apex:outputField id="taxableValueTotal" styleClass="alignright widthTotals goblock" value="{!viewstate.journal.dto.c2g__TaxableValueTotal__c}"/>
+							</apex:pageBlockSectionItem>
+							<!-- Journal Cancel, Reversing, Income info -->
+							<apex:pageBlockSectionItem rendered="{!viewstate.journal.TypeCancel || viewstate.journal.showSourceJournal}">
+								<apex:outputPanel >
+									<apex:outputLabel value="{!$Label.c2g__codaoriginaljournalnumber}" rendered="{!viewstate.journal.TypeCancel}"/>
+									<apex:outputLabel value="{!$Label.c2g__codasourcejournalnumber}" rendered="{!viewstate.journal.showSourceJournal}"/>
+								</apex:outputPanel>
+								<apex:outputPanel >
+									<apex:outputField id="sourceJournalNumber" value="{!viewstate.journal.dto.c2g__SourceJournal__c}" rendered="{!viewstate.journal.showSourceJournal}"/>
+									<apex:outputField id="original_journal_number" value="{!viewstate.journal.dto.c2g__OriginalJournal__c}" rendered="{!viewstate.journal.TypeCancel}"/>
+								</apex:outputPanel>
+							</apex:pageBlockSectionItem>
+							<apex:pageBlockSectionItem rendered="{!viewstate.journal.WasCancel}">
+								<apex:outputLabel value="{!$Label.c2g__codacancellingjournalnumber}" rendered="{!viewstate.journal.WasCancel}"/>
+								<apex:outputField id="cancelling_journal_number" value="{!viewstate.cancellingJournalLookup.dto.c2g__Journal__c}" rendered="{!viewstate.journal.WasCancel}"/>
+							</apex:pageBlockSectionItem>
+							<apex:pageBlockSectionItem rendered="{!viewstate.journal.showReversingJournal}">
+								<apex:outputLabel value="{!$Label.c2g__codareversingjournalnumber}" rendered="{!viewstate.journal.showReversingJournal}"/>
+								<apex:outputField id="reversingJournalNumber" value="{!viewstate.reversingJournalLookup.dto.c2g__Journal__c}" rendered="{!viewstate.journal.showReversingJournal}"/>
+							</apex:pageBlockSectionItem>
+							<apex:pageBlockSectionItem rendered="{!viewstate.journal.haveIncome}">
+								<apex:outputLabel value="{!$ObjectType.c2g__codaJournal__c.fields.c2g__IncomeScheduleGroup__c.label}" rendered="{!viewstate.journal.haveIncome}"/>
+								<apex:outputField id="incScheduleGroup" value="{!viewstate.journal.dto.c2g__IncomeScheduleGroup__c}" rendered="{!viewstate.journal.haveIncome}" />
+							</apex:pageBlockSectionItem>
+					</apex:pageBlockSection>
+
+					<!-- OVERRIDE CURRENCY VALUES HEADER POPUP -->
+					<apex:outputPanel id="currencyvaluesheaderpage" layout="block" style="display:none">
+						<apex:variable var="popupView" value="{!viewState.journal.popupView}" />
+						<apex:outputPanel styleClass="customPopup" layout="block">
+							<div class="top"><div class="topLeft"><h2>{!$Label.c2g__codaoverridecurrencyvalues}</h2><span style="text-align:left;margin-left:5px;margin-top:9px;position:absolute;"><a href="javascript:openPopupFocus('{!redirectForHelp1088}', 'Help', 700, 600, 'width=700,height=600,resizable=yes,toolbar=yes,status=no,scrollbars=yes,menubar=yes,directories=no,location=no,dependant=no', false, false);" title="" class="helpIcon_custom"></a></span><a style="display:none" class="close" href="javascript:void(0)" onclick="closeHeaderPopUp(false, true);"></a></div></div>
+							<div class="middle">
+								<div class="loadingIconWrapper" style="display:none"><span class="loadingIcon"></span></div>
+								<div class="popupcontent" style="display:none">
+									<apex:pageBlock rendered="{!IF(viewstate.journal.NoHeaderOverrideData, true, false) }">
+									{!$Label.c2g__codaocnoheaderoverridevalues}
+									</apex:pageBlock>
+									<apex:pageBlock rendered="{!IF(NOT(viewstate.journal.NoHeaderOverrideData) && popupView.showHeaderTabBlock, true, false) }">
+										<apex:outputPanel id="headerTabValues" rendered="{!popupView.tabPage == 'values'}">
+											<apex:pageBlockSection id="homeDualValueBlock" collapsible="false" columns="2">
+												<apex:pageBlockSectionItem rendered="{!popupView.showHomeCurrency}">
+													<apex:outputLabel value="{!$Label.c2g__homecurrencylabel}" for="homeCurrency"/>
+													<apex:outputText value="{!popupView.homeCurrency}" id="homeCurrency"/>
+												</apex:pageBlockSectionItem>
+												<apex:pageBlockSectionItem rendered="{!popupView.showHomeCurrency}">
+													<apex:outputLabel value="{!$Label.c2g__homevalue}" for="homeValue"/>
+													<apex:outputField value="{!popupView.homeValue.c2g__LookupNumber__c}" id="homeValue" style="text-align:right"/>
+												</apex:pageBlockSectionItem>
+												<apex:pageBlockSectionItem rendered="{!popupView.showDualCurrency}">
+													<apex:outputLabel value="{!$Label.c2g__dualcurrencylabel}" for="dualCurrency"/>
+													<apex:outputText value="{!popupView.dualCurrency}" id="dualCurrency"/>
+												</apex:pageBlockSectionItem>
+												<apex:pageBlockSectionItem rendered="{!popupView.showDualCurrency}">
+													<apex:outputLabel value="{!$Label.c2g__dualvalue}" for="dualValue"/>
+													<apex:outputField value="{!popupView.dualValue.c2g__LookupNumber__c}" id="dualValue" style="text-align:right"/>
+												</apex:pageBlockSectionItem>
+											</apex:pageBlockSection>
+										</apex:outputPanel>
+										<apex:outputPanel id="headerTabRates" rendered="{!popupView.tabPage == 'rates'}">
+											<apex:variable var="rateData" value="{!popupView.exchangeRateData}" />
+											<apex:pageBlockSection id="exchangeRateBlock" collapsible="false" columns="2">
+												<apex:pageBlockSectionItem rendered="{!rateData.showDocRate}">
+													<apex:outputLabel value="{!rateData.documentRateLabel}" for="documentRate"/>
+													<apex:outputText value="{!rateData.documentRate}" id="documentRate" style="text-align:right"/>
+												</apex:pageBlockSectionItem>
+												<apex:pageBlockSectionItem rendered="{!rateData.showDocRate}">
+													<apex:outputLabel value="{!$Label.c2g__codacurrentdocumentexchangeratelabel}" for="documentMemoRate" style="white-space: nowrap"/>
+													<apex:outputText value="{!rateData.documentMemoRate}" id="documentMemoRate"/>
+												</apex:pageBlockSectionItem>
+												<apex:pageBlockSectionItem rendered="{!rateData.showDualRate}">
+													<apex:outputLabel value="{!$Label.c2g__codadualexchangeratelabel}" for="dualRate"/>
+													<apex:outputText value="{!rateData.dualRate}" id="dualRate" style="text-align:right"/>
+												</apex:pageBlockSectionItem>
+												<apex:pageBlockSectionItem rendered="{!rateData.showDualRate}">
+													<apex:outputLabel value="{!$Label.c2g__codacurrentdualexchangeratelabel}" for="dualMemoRate" style="white-space: nowrap"/>
+													<apex:outputText value="{!rateData.dualMemoRate}" id="dualMemoRate"/>
+												</apex:pageBlockSectionItem>
+											</apex:pageBlockSection>
+										</apex:outputPanel>
+									</apex:pageBlock>
+									<apex:pageBlock rendered="{!IF(NOT(viewstate.journal.NoHeaderOverrideData) && popupView.showHeaderCurrencyBlock, true, false) }">
+										<apex:pageBlockSection columns="3">									
+											<apex:pageBlockSectionItem dataStyle="width:100px">
+												<apex:outputText styleClass="fieldLabel" value="{!$Label.c2g__codaoccurrencytitle}" />
+											</apex:pageBlockSectionItem>
+											<apex:pageBlockSectionItem dataStyle="text-align:right">
+											<apex:outputPanel >
+												<apex:outputText styleClass="fieldLabel" value="{!$Label.c2g__codaocoverridevaluetitle}" />
+											</apex:outputPanel>
+											</apex:pageBlockSectionItem>
+											<apex:pageBlockSectionItem dataStyle="width:85px">
+												<apex:outputText style="" value="" />
+											</apex:pageBlockSectionItem>
+										</apex:pageBlockSection>
+										<apex:pageBlockSection columns="3" id="overrideHeaderCurrValues1">
+											<apex:pageBlockSectionItem dataStyle="width:100px;">
+												<apex:outputPanel >
+													<apex:outputLabel value="" for="overrideCurrencyHeader1" />
+													<apex:outputField style="text-align:left" id="overrideCurrencyHeader1" value="{!popupView.OverrideCurrency1.c2g__AccountingCurrency__c}" />
+												</apex:outputPanel>
+											</apex:pageBlockSectionItem>
+											<apex:pageBlockSectionItem dataStyle="text-align:right">
+												<apex:outputPanel >
+													<apex:outputLabel value="" for="overrideCurrencyValue1" />
+													<apex:outputField style="text-align:right" id="overrideCurrencyValue1" value="{!popupView.OverrideDebitValue1.c2g__LookupNumber__c}" />
+												</apex:outputPanel>
+											</apex:pageBlockSectionItem>
+											<apex:pageBlockSectionItem dataStyle="width:85px">
+												<apex:outputText style="" value="" />
+											</apex:pageBlockSectionItem>
+										</apex:pageBlockSection>
+										<apex:pageBlockSection columns="3" id="overrideHeaderCurrValues2">
+											<apex:pageBlockSectionItem dataStyle="width:100px;">
+												<apex:outputPanel >
+													<apex:outputLabel value="" for="overrideCurrencyHeader2" />
+													<apex:outputField style="text-align:left" id="overrideCurrencyHeader2" value="{!popupView.OverrideCurrency2.c2g__AccountingCurrency__c}" />
+												</apex:outputPanel>
+											</apex:pageBlockSectionItem>
+											<apex:pageBlockSectionItem dataStyle="text-align:right">
+												<apex:outputPanel >
+													<apex:outputLabel value="" for="overrideCurrencyValue2" />
+													<apex:outputField style="text-align:right" id="overrideCurrencyValue2" value="{!popupView.OverrideDebitValue2.c2g__LookupNumber__c}" />
+												</apex:outputPanel>
+											</apex:pageBlockSectionItem>
+											<apex:pageBlockSectionItem dataStyle="width:85px">
+												<apex:outputText style="" value="" />
+											</apex:pageBlockSectionItem>
+										</apex:pageBlockSection>
+										<apex:pageBlockSection columns="3" id="overrideHeaderCurrValues3">
+											<apex:pageBlockSectionItem dataStyle="width:100px;">
+												<apex:outputPanel >
+													<apex:outputLabel value="" for="overrideCurrencyHeader3" />
+													<apex:outputField style="text-align:left" id="overrideCurrencyHeader3" value="{!popupView.OverrideCurrency3.c2g__AccountingCurrency__c}" />
+												</apex:outputPanel>
+											</apex:pageBlockSectionItem>
+											<apex:pageBlockSectionItem dataStyle="text-align:right">
+												<apex:outputPanel >
+													<apex:outputLabel value="" for="overrideCurrencyValue3" />
+													<apex:outputField style="text-align:right" id="overrideCurrencyValue3" value="{!popupView.OverrideDebitValue3.c2g__LookupNumber__c}" />
+												</apex:outputPanel>
+											</apex:pageBlockSectionItem>
+											<apex:pageBlockSectionItem dataStyle="width:85px">
+												<apex:outputText style="" value="" />
+											</apex:pageBlockSectionItem>
+										</apex:pageBlockSection>
+									</apex:pageBlock>
+								</div>
+							</div>
+							<div class="bottom">
+								<div class="bottomLeft"></div>
+							</div>
+						</apex:outputPanel>
+					</apex:outputPanel>
+
+					<!-- Journal Line Items -->
+					<apex:pageBlockSection title="{!$Label.c2g__codapagejournalviewjournallineitems}" columns="1">
+							<apex:pageBlockTable id="dtLineItems" value="{!viewstate.journal.lineItems}" var="lineItem" styleClass="noHover">
+									<apex:column styleClass="widthlinenumbers">
+											<apex:facet name="header">&nbsp;</apex:facet>
+											<apex:outputPanel styleClass="holder">
+												<apex:outputField value="{!lineItem.dto.c2g__LineNumber__c}"/>
+											</apex:outputPanel>
+									</apex:column>
+									<apex:column >
+										<apex:facet name="header">{!$ObjectType.c2g__codaJournalLineItem__c.fields.c2g__LineType__c.label}</apex:facet>
+										<apex:outputPanel id="linetypeDiv" layout="block">
+											<apex:outputField id="linetype_cancel" value="{!lineItem.dto.c2g__LineType__c}" />
+										</apex:outputPanel>
+									</apex:column>
+
+									<apex:column >
+										<apex:facet name="header">{!$Label.c2g__codalineitem}</apex:facet>
+										<apex:outputPanel id="accountPanel" layout="block" rendered="{!lineItem.isAccountLine}">
+											<apex:outputField id="account_cancel" value="{!lineItem.dto.c2g__Account__c}"/>
+										</apex:outputPanel>
+										<apex:outputPanel id="bankPanel" layout="block" rendered="{!lineItem.isBankAccountLine}">
+											<apex:outputField id="bank_cancel" value="{!lineItem.dto.c2g__BankAccount__c}"/>
+										</apex:outputPanel>
+										<apex:outputPanel id="productPanel" layout="block" rendered="{!lineItem.isProductLine}">
+											<apex:outputField id="product_cancel" value="{!lineItem.dto.c2g__Product__c}"/>
+										</apex:outputPanel>
+										<apex:outputPanel id="taxcodePanel" layout="block" rendered="{!lineItem.isTaxcodeLine}">
+											<apex:outputField id="taxcode_cancel" value="{!lineItem.dto.c2g__TaxCode__c}"/>
+										</apex:outputPanel>
+										<apex:outputPanel id="destcompanyPanel" layout="block" rendered="{!lineItem.IsIntercompanyLine}">
+											<apex:outputField id="destcompany" value="{!lineItem.dto.c2g__DestinationCompany__c}"/>
+										</apex:outputPanel>
+									</apex:column>
+
+									<apex:column rendered="{!!viewstate.showLocalGLA}">
+										<apex:facet name="header">{!$ObjectType.c2g__codaJournalLineItem__c.fields.c2g__GeneralLedgerAccount__c.label}</apex:facet>
+										<apex:outputField id="gla" value="{!lineItem.dto.c2g__GeneralLedgerAccount__c}"/>
+									</apex:column>
+									
+									<apex:column rendered="{!viewstate.showLocalGLA}">
+										<apex:facet name="header">{!$ObjectType.c2g__codaJournalLineItem__c.fields.c2g__LocalGLA__c.label}</apex:facet>
+										<apex:outputField id="localGla" value="{!lineItem.dto.c2g__LocalGLA__c}"/>
+									</apex:column>
+
+									<apex:column rendered="{!viewstate.IsDebitCreditIndicatorOn}">
+										<apex:facet name="header">{!$ObjectType.c2g__codaJournalLineItem__c.fields.c2g__DebitCredit__c.label}</apex:facet>
+										<apex:outputField id="lineDebitCredit_cancel" value="{!lineItem.dto.c2g__DebitCredit__c}"/>
+									</apex:column>
+
+									<!-- Amount -->
+									<apex:column styleClass="alignright">
+										<apex:facet name="header">
+											<apex:outputPanel layout="block">{!$Label.c2g__codapagejournalnewamount}
+												<!-- Override currency values header popup icon -->
+												<apex:outputPanel styleClass="posIconHeader" />
+												<apex:outputPanel rendered="{!viewstate.journal.ShowHeaderPopUpButton}">
+													<span style="margin-left:5px;">
+														<a href="javascript:void(0);" onclick="if ($FFDC('[id$=currencyvaluesheaderlinkimage]').attr('src').indexOf('disabled') == -1){CODA2GoButtons.disableSaveButtons();clickHref('posIconHeader');createHeaderPopUp(true);finishHeaderPopUp();CODA2GoButtons.enableSaveButtons();}">
+															<apex:image style="vertical-align:middle" id="currencyvaluesheaderlinkimage" value="{!URLFOR($Resource.c2g__coda2go, 'coda2go/web/images/editcurrency' + IF(AND(viewstate.journal.IsComplete, viewstate.journal.NoHeaderOverrideData),'disabled','') + viewstate.journal.HeaderCurrencyIconStyle + '.png')}" title="{!$Label.c2g__codaoverridecurrencyvalues}"/>
+														</a>
+													</span>
+												</apex:outputPanel>
+											</apex:outputPanel>
+										</apex:facet>
+										<apex:outputText id="value" value="{!lineItem.Value} " styleClass="alignright" />
+										<apex:outputText style="display:none" id="iconstyle" value="{!lineItem.LineCurrencyIconStyle}" />
+										<apex:outputText style="display:none" id="analysisiconstyle" value="{!lineItem.JournalLineAnalysisView.imageState}" />
+									</apex:column>
+
+									<apex:column styleClass="widthlinenumbers" style="white-space: nowrap" headerClass="pageBlockTableNoLabelHeader">
+										<!--  Override currency values lineitem popup icon -->
+										<apex:outputPanel styleClass="posIcon{!lineItem.LineNumber}"/>
+										<apex:commandLink rendered="{!viewstate.journal.ShowLinePopUpButton}" id="currencyvalueslink" action="{!lineItem.createJournalCurrenciesView}" rerender="currencyvaluespage" onclick="if (CODAJournals.checkAvailabilityOfCurrencyValues('{!lineItem.LineNumber}','{!lineItem.dto.c2g__LineType__c}')) {CODA2GoButtons.disableSaveButtons();clickHref('posIcon{!lineItem.LineNumber}','view');createPopUp('{!lineItem.LineNumber}','{!lineItem.dto.c2g__LineType__c}');} else return false;" oncomplete="if (CODAJournals.checkAvailabilityOfCurrencyValues(linenumber,linetype)) { finishPopUp(linenumber);CODA2GoButtons.enableSaveButtons(); } else { CODA2GoButtons.enableSaveButtons();return false; }CODAJournals.checkCurrencyReadonly();">
+												<apex:image id="currencyvalueslinkimage" styleClass="lineIcon" value="{!URLFOR($Resource.c2g__coda2go, 'coda2go/web/images/editcurrency' + lineItem.LineCurrencyIconStyle + '.png')}" title="{!$Label.c2g__codaoverridecurrencyvalues}"/>
+										</apex:commandLink>
+
+
+										<!--  Analysis details popup icon -->
+										<apex:facet name="header">&nbsp;</apex:facet>
+										<apex:outputPanel styleClass="posIcon{!lineItem.LineNumber}"/>
+										<apex:outputPanel >
+											<apex:commandLink id="analysislink" onclick="showAnalysisPopUp('{!lineItem.LineNumber}','{!lineItem.dto.c2g__LineType__c}');" oncomplete="return;">
+												<apex:image id="analysislinkimage" styleClass="lineIcon" value="{!URLFOR($Resource.c2g__coda2go, 'coda2go/web/images/tax_' + lineItem.JournalLineAnalysisView.imageState + '.png')}" title="{!$Label.c2g__journalanalysisdetailspopuptitle}"/>
+											</apex:commandLink>
+										</apex:outputPanel>
+
+										<!-- Destination Line popup icon -->
+										<apex:commandLink id="destinationlinelink" onclick="CODAJournals.openDestinationLinePopUp({!lineItem.LineNumber}, this, true);" oncomplete="return;" rendered="{!lineItem.showIconIntercompany}">
+											<apex:image id="destinationlineimage" styleClass="lineIcon js-destinationLink" value="{!URLFOR($Resource.c2g__coda2go, 'coda2go/web/images/bridge_' + lineItem.JournalDestinationLineView.imageState + '.png')}" title="{!$Label.c2g__journallinedestinationdetailspopuptitle}"/>
+										</apex:commandLink>
+									</apex:column>
+
+									<apex:column >
+										<apex:facet name="header">{!$ObjectType.c2g__codaJournalLineItem__c.fields.c2g__LineDescription__c.label}</apex:facet>
+										<apex:outputPanel id="LineDescriptionDiv" layout="block">
+											<apex:outputField id="lineDescription_cancel" style="width:200px"  value="{!lineItem.dto.c2g__LineDescription__c}"/>
+										</apex:outputPanel>
+									</apex:column>
+
+									<apex:column >
+										<apex:facet name="header">{!$ObjectType.c2g__codaJournalLineItem__c.fields.c2g__Dimension1__c.label}</apex:facet>
+										<apex:outputPanel id="Dim1Div" layout="block">
+											<apex:outputField id="lineDim1_cancel" value="{!lineItem.dto.c2g__Dimension1__c}"/>
+										</apex:outputPanel>
+									</apex:column>
+
+									<apex:column >
+										<apex:facet name="header">{!$ObjectType.c2g__codaJournalLineItem__c.fields.c2g__Dimension2__c.label}</apex:facet>
+										<apex:outputPanel id="Dim2Div" layout="block">
+											<apex:outputField id="lineDim2_cancel" value="{!lineItem.dto.c2g__Dimension2__c}"/>
+										</apex:outputPanel>
+									</apex:column>
+
+									<apex:column >
+										<apex:facet name="header">{!$ObjectType.c2g__codaJournalLineItem__c.fields.c2g__Dimension3__c.label}</apex:facet>
+										<apex:outputPanel id="Dim3Div" layout="block">
+											<apex:outputField id="lineDim3_cancel" value="{!lineItem.dto.c2g__Dimension3__c}"/>
+										</apex:outputPanel>
+									</apex:column>
+
+									<apex:column >
+										<apex:facet name="header">{!$ObjectType.c2g__codaJournalLineItem__c.fields.c2g__Dimension4__c.label}</apex:facet>
+										<apex:outputPanel id="Dim4Div" layout="block">
+											<apex:outputField id="lineDim4_cancel" value="{!lineItem.dto.c2g__Dimension4__c}"/>
+										</apex:outputPanel>
+									</apex:column>
+
+									<!-- OVERRIDE CURRENCY VALUES LINEITEM POPUP -->
+									<apex:column headerClass="pageBlockTableNoLabelHeader" onmouseover="nohighlight = true;" onmouseout="nohighlight = false;">
+										<apex:outputPanel id="currencyvaluespage" layout="block" style="display:none">
+											<apex:outputPanel styleClass="customPopup" layout="block">
+												<div class="top"><div class="topLeft"><h2>{!$Label.c2g__codaoverridecurrencyvalues}</h2><span style="text-align:left;margin-left:5px;margin-top:9px;position:absolute;"><a href="javascript:openPopupFocus('{!redirectForHelp1088}', 'Help', 700, 600, 'width=700,height=600,resizable=yes,toolbar=yes,status=no,scrollbars=yes,menubar=yes,directories=no,location=no,dependant=no', false, false);" title="" class="helpIcon_custom"></a></span><a style="display:none" class="close" href="javascript:void(0)" onclick="closePopUp(linenumber,linetype,false,false);"></a></div></div>
+												<div class="middle">
+													<div class="loadingIconWrapper" style="display:none"><span class="loadingIcon"></span></div>
+													<div class="popupcontent" style="display:none">
+														<apex:pageBlock rendered="{!lineItem.JournalLinesCurrencyValuesView.showLineTabBlock}">
+															<apex:outputPanel id="lineTabValues" rendered="{!lineItem.JournalLinesCurrencyValuesView.tabPage == 'values'}">
+																<apex:pageBlockSection columns="3" id="homeAmountSection" rendered="{!lineItem.JournalLinesCurrencyValuesView.showHome}">
+																	<apex:outputText id="homeAmountLabel">
+																		<apex:outputText value="{!$Label.c2g__codacurrencyvalueshome}: {!lineItem.JournalLinesCurrencyValuesView.homeAmountLabel}"/>
+																	</apex:outputText>
+																	<apex:pageBlockSectionItem dataStyle="text-align:right;width:33%">
+																		<apex:outputPanel >
+																			<apex:outputLabel value="" for="currValuesHome" />
+																			<apex:outputText style="text-align:right" id="currValuesHome" value="{!lineItem.JournalLinesCurrencyValuesView.LookupHomeAsString}" >
+																				<apex:message />
+																			</apex:outputText>
+																		</apex:outputPanel>
+																	</apex:pageBlockSectionItem>
+																	<apex:pageBlockSectionItem dataStyle="text-align:right" rendered="{! IF(viewstate.journal.dto.JournalStatus__c !='Complete',true,false) }">
+																		<apex:outputText id="homeAmountExpectedValue">
+																			<apex:outputText value="{!lineItem.JournalLinesCurrencyValuesView.homeAmountExpectedValue}"/>
+																		</apex:outputText>
+																	</apex:pageBlockSectionItem>
+																</apex:pageBlockSection>
+																<apex:pageBlockSection columns="3" id="dualAmountSection" rendered="{!lineItem.JournalLinesCurrencyValuesView.showDual}">
+																	<apex:outputText id="dualAmountLabel">
+																		<apex:outputText value="{!$Label.c2g__codacurrencyvaluesdual}: {!lineItem.JournalLinesCurrencyValuesView.dualAmountLabel}"/>
+																	</apex:outputText>
+																	<apex:pageBlockSectionItem dataStyle="text-align:right;width:33%">
+																		<apex:outputPanel >
+																			<apex:outputLabel value="" for="currValuesDual" />
+																			<apex:outputText style="text-align:right" id="currValuesDual" value="{!lineItem.JournalLinesCurrencyValuesView.LookupDualAsString}" >
+																				<apex:message />
+																			</apex:outputText>
+																		</apex:outputPanel>
+																	</apex:pageBlockSectionItem>
+																	<apex:pageBlockSectionItem dataStyle="text-align:right" rendered="{! IF(viewstate.journal.dto.JournalStatus__c !='Complete',true,false) }">
+																		<apex:outputText id="dualAmountExpectedValue">
+																			<apex:outputText value="{!lineItem.JournalLinesCurrencyValuesView.dualAmountExpectedValue}"/>
+																		</apex:outputText>
+																	</apex:pageBlockSectionItem>
+																</apex:pageBlockSection>
+															</apex:outputPanel>
+															<apex:outputPanel id="lineTabRates" rendered="{!lineItem.JournalLinesCurrencyValuesView.tabPage == 'rates'}">
+																<apex:pageBlockSection id="exchangeRateBlock" collapsible="false" columns="2">
+																	<apex:pageBlockSectionItem rendered="{!lineItem.JournalLinesCurrencyValuesView.exchangeRateData.showDocRate}">
+																		<apex:outputLabel value="{!lineItem.JournalLinesCurrencyValuesView.exchangeRateData.documentRateLabel}" for="lineDocumentRate"/>
+																		<apex:outputText value="{!lineItem.JournalLinesCurrencyValuesView.exchangeRateData.documentRate}" id="lineDocumentRate" style="text-align:right"/>
+																	</apex:pageBlockSectionItem>
+																	<apex:pageBlockSectionItem rendered="{!lineItem.JournalLinesCurrencyValuesView.exchangeRateData.showDocRate}">
+																		<apex:outputLabel value="{!$Label.c2g__codacurrentdocumentexchangeratelabel}" for="lineDocumentMemoRate" style="white-space: nowrap"/>
+																		<apex:outputText value="{!lineItem.JournalLinesCurrencyValuesView.exchangeRateData.documentMemoRate}" id="lineDocumentMemoRate"/>
+																	</apex:pageBlockSectionItem>
+																	<apex:pageBlockSectionItem rendered="{!lineItem.JournalLinesCurrencyValuesView.exchangeRateData.showDualRate}">
+																		<apex:outputLabel value="{!$Label.c2g__codadualexchangeratelabel}" for="lineDualRate"/>
+																		<apex:outputText value="{!lineItem.JournalLinesCurrencyValuesView.exchangeRateData.dualRate}" id="lineDualRate" style="text-align:right"/>
+																	</apex:pageBlockSectionItem>
+																	<apex:pageBlockSectionItem rendered="{!lineItem.JournalLinesCurrencyValuesView.exchangeRateData.showDualRate}">
+																		<apex:outputLabel value="{!$Label.c2g__codacurrentdualexchangeratelabel}" for="lineDualMemoRate" style="white-space: nowrap"/>
+																		<apex:outputText value="{!lineItem.JournalLinesCurrencyValuesView.exchangeRateData.dualMemoRate}" id="lineDualMemoRate"/>
+																	</apex:pageBlockSectionItem>
+																</apex:pageBlockSection>
+															</apex:outputPanel>
+														</apex:pageBlock>
+														<apex:pageBlock rendered="{!lineItem.JournalLinesCurrencyValuesView.ShowLineCurrencyBlock}">
+															<apex:pageBlockSection columns="3">
+																<apex:outputText value="" />
+																<apex:pageBlockSectionItem dataStyle="text-align:right">
+																<apex:outputText styleClass="fieldLabel" value="{!$Label.c2g__codaoverridecurrencyvaluestitle}" />
+																</apex:pageBlockSectionItem>
+																<apex:pageBlockSectionItem dataStyle="text-align:right" rendered="{! IF(viewstate.journal.dto.JournalStatus__c !='Complete',true,false) }">
+																<apex:outputText styleClass="fieldLabel" value="{!$Label.c2g__codaoverridecurrencydefaulttitle}" />
+																</apex:pageBlockSectionItem>
+															</apex:pageBlockSection>
+															 <apex:pageBlockSection columns="3" id="accountSection" rendered="{!lineItem.JournalLinesCurrencyValuesView.showAcc}">
+																<apex:outputText id="accountValueLabel">
+																	<apex:outputText value="{!$Label.c2g__codacurrencyvaluesaccount}: {!lineItem.JournalLinesCurrencyValuesView.accountValueLabel}"/>
+																</apex:outputText>
+																<apex:pageBlockSectionItem dataStyle="text-align:right;width:33%">
+																<apex:outputPanel >
+																	<apex:outputLabel value="" for="currValuesAccount" />
+																	<apex:outputText style="text-align:right" id="currValuesAccount" value="{!lineItem.JournalLinesCurrencyValuesView.LookupAccAsString}" >
+																		<apex:message />
+																	</apex:outputText>
+																</apex:outputPanel>
+																</apex:pageBlockSectionItem>
+																<apex:pageBlockSectionItem dataStyle="text-align:right" rendered="{! IF(viewstate.journal.dto.JournalStatus__c !='Complete',true,false) }">
+																<apex:outputText id="accountValueExpectedValue">
+																	<apex:outputText value="{!lineItem.JournalLinesCurrencyValuesView.accountValueExpectedValue}"/>
+																</apex:outputText>
+																</apex:pageBlockSectionItem>
+															</apex:pageBlockSection>
+															<apex:pageBlockSection columns="3" id="bankAccountSection" rendered="{!lineItem.JournalLinesCurrencyValuesView.showBAcc}">
+																<apex:outputText id="bankAccountValueLabel">
+																	<apex:outputText value="{!$Label.c2g__codacurrencyvaluesbankaccount}: {!lineItem.JournalLinesCurrencyValuesView.bankAccountValueLabel}"/>
+																</apex:outputText>
+																<apex:pageBlockSectionItem dataStyle="text-align:right;width:33%">
+																<apex:outputPanel >
+																	<apex:outputLabel value="" for="currValuesBankAcc" />
+																	<apex:outputText style="text-align:right" id="currValuesBankAcc" value="{!lineItem.JournalLinesCurrencyValuesView.LookupBankAccAsString}" >
+																		<apex:message />
+																	</apex:outputText>
+																</apex:outputPanel>
+																</apex:pageBlockSectionItem>
+																<apex:pageBlockSectionItem dataStyle="text-align:right" rendered="{! IF(viewstate.journal.dto.JournalStatus__c !='Complete',true,false) }">
+																<apex:outputText id="bankAccountValueExpectedValue">
+																	<apex:outputText value="{!lineItem.JournalLinesCurrencyValuesView.bankAccountValueExpectedValue}"/>
+																</apex:outputText>
+																</apex:pageBlockSectionItem>
+															</apex:pageBlockSection>
+															<apex:pageBlockSection columns="3" id="generalLedgerAccountSection" rendered="{!lineItem.JournalLinesCurrencyValuesView.showGLA && !viewstate.showLocalGLA}">
+																<apex:outputText id="generalLedgerAccountValueLabel">
+																	<apex:outputText value="{!$Label.c2g__codageneralledgeraccount}: {!lineItem.JournalLinesCurrencyValuesView.generalLedgerAccountValueLabel}"/>
+																</apex:outputText>
+																<apex:pageBlockSectionItem dataStyle="text-align:right;width:33%">
+																<apex:outputPanel >
+																	<apex:outputLabel value="" for="currValuesGLA" />
+																	<apex:outputText style="text-align:right" id="currValuesGLA" value="{!lineItem.JournalLinesCurrencyValuesView.LookupGLAAsString}" >
+																		<apex:message />
+																	</apex:outputText>
+																</apex:outputPanel>
+																</apex:pageBlockSectionItem>
+																<apex:pageBlockSectionItem dataStyle="text-align:right" rendered="{! IF(viewstate.journal.dto.JournalStatus__c !='Complete',true,false) }">
+																<apex:outputText id="generalLedgerAccountValueExpectedValue">
+																	<apex:outputText value="{!lineItem.JournalLinesCurrencyValuesView.generalLedgerAccountValueExpectedValue}"/>
+																</apex:outputText>
+																</apex:pageBlockSectionItem>
+															</apex:pageBlockSection>
+															<apex:pageBlockSection columns="3" id="localGLASection" rendered="{!lineItem.JournalLinesCurrencyValuesView.showLocalGLA && viewstate.showLocalGLA}">
+																<apex:outputText id="localGLAValueLabel">
+																	<apex:outputText value="{!$Label.c2g__localgla}: {!lineItem.JournalLinesCurrencyValuesView.localGLAValueLabel}"/>
+																</apex:outputText>
+																<apex:pageBlockSectionItem dataStyle="text-align:right;width:33%">
+																<apex:outputPanel >
+																	<apex:outputLabel value="" for="currValuesLocalGLA" />
+																	<apex:outputText style="text-align:right" id="currValuesLocalGLA" value="{!lineItem.JournalLinesCurrencyValuesView.LookupLocalGLAAsString}" >
+																		<apex:message />
+																	</apex:outputText>
+																</apex:outputPanel>
+																</apex:pageBlockSectionItem>
+																<apex:pageBlockSectionItem dataStyle="text-align:right" rendered="{! IF(viewstate.journal.dto.JournalStatus__c !='Complete',true,false) }">
+																<apex:outputText id="localGLAValueExpectedValue">
+																	<apex:outputText value="{!lineItem.JournalLinesCurrencyValuesView.localGLAValueExpectedValue}"/>
+																</apex:outputText>
+																</apex:pageBlockSectionItem>
+															</apex:pageBlockSection>
+															<apex:pageBlockSection columns="3" id="dimension1Section" rendered="{!lineItem.JournalLinesCurrencyValuesView.showDIM1}">
+																<apex:outputText id="dimension1ValueLabel">
+																	<apex:outputText value="{!$Label.c2g__codadimension1}: {!lineItem.JournalLinesCurrencyValuesView.dimension1ValueLabel}"/>
+																</apex:outputText>
+																<apex:pageBlockSectionItem dataStyle="text-align:right;width:33%">
+																<apex:outputPanel >
+																	<apex:outputLabel value="" for="currValuesDim1" />
+																	<apex:outputText style="text-align:right" id="currValuesDim1" value="{!lineItem.JournalLinesCurrencyValuesView.LookupDim1AsString}" >
+																		<apex:message />
+																	</apex:outputText>
+																</apex:outputPanel>
+																</apex:pageBlockSectionItem>
+																<apex:pageBlockSectionItem dataStyle="text-align:right" rendered="{! IF(viewstate.journal.dto.JournalStatus__c !='Complete',true,false) }">
+																<apex:outputText id="dimension1ValueExpectedValue">
+																	<apex:outputText value="{!lineItem.JournalLinesCurrencyValuesView.dimension1ValueExpectedValue}"/>
+																</apex:outputText>
+																</apex:pageBlockSectionItem>
+															</apex:pageBlockSection>
+															<apex:pageBlockSection columns="3" id="dimension2Section" rendered="{!lineItem.JournalLinesCurrencyValuesView.showDIM2}">
+																<apex:outputText id="dimension2ValueLabel">
+																	<apex:outputText value="{!$Label.c2g__codadimension2}: {!lineItem.JournalLinesCurrencyValuesView.dimension2ValueLabel}"/>
+																</apex:outputText>
+																<apex:pageBlockSectionItem dataStyle="text-align:right;width:33%">
+																<apex:outputPanel >
+																	<apex:outputLabel value="" for="currValuesDim2" />
+																	<apex:outputText style="text-align:right" id="currValuesDim2" value="{!lineItem.JournalLinesCurrencyValuesView.LookupDim2AsString}" >
+																		<apex:message />
+																	</apex:outputText>
+																</apex:outputPanel>
+																</apex:pageBlockSectionItem>
+																<apex:pageBlockSectionItem dataStyle="text-align:right" rendered="{! IF(viewstate.journal.dto.JournalStatus__c !='Complete',true,false) }">
+																<apex:outputText id="dimension2ValueExpectedValue">
+																	<apex:outputText value="{!lineItem.JournalLinesCurrencyValuesView.dimension2ValueExpectedValue}"/>
+																</apex:outputText>
+																</apex:pageBlockSectionItem>
+															</apex:pageBlockSection>
+															<apex:pageBlockSection columns="3" id="dimension3Section" rendered="{!lineItem.JournalLinesCurrencyValuesView.showDIM3}">
+																<apex:outputText id="dimension3ValueLabel">
+																	<apex:outputText value="{!$Label.c2g__codadimension3}: {!lineItem.JournalLinesCurrencyValuesView.dimension3ValueLabel}"/>
+																</apex:outputText>
+																<apex:pageBlockSectionItem dataStyle="text-align:right;width:33%">
+																<apex:outputPanel >
+																	<apex:outputLabel value="" for="currValuesDim3" />
+																	<apex:outputText style="text-align:right" id="currValuesDim3" value="{!lineItem.JournalLinesCurrencyValuesView.LookupDim3AsString}" >
+																		<apex:message />
+																	</apex:outputText>
+																</apex:outputPanel>
+																</apex:pageBlockSectionItem>
+																<apex:pageBlockSectionItem dataStyle="text-align:right" rendered="{! IF(viewstate.journal.dto.JournalStatus__c !='Complete',true,false) }">
+																<apex:outputText id="dimension3ValueExpectedValue">
+																	<apex:outputText value="{!lineItem.JournalLinesCurrencyValuesView.dimension3ValueExpectedValue}"/>
+																</apex:outputText>
+																</apex:pageBlockSectionItem>
+															</apex:pageBlockSection>
+															<apex:pageBlockSection columns="3" id="dimension4Section" rendered="{!lineItem.JournalLinesCurrencyValuesView.showDIM4}">
+																<apex:outputText id="dimension4ValueLabel">
+																	<apex:outputText value="{!$Label.c2g__codadimension4}: {!lineItem.JournalLinesCurrencyValuesView.dimension4ValueLabel}"/>
+																</apex:outputText>
+																<apex:pageBlockSectionItem dataStyle="text-align:right;width:33%">
+																<apex:outputPanel >
+																	<apex:outputLabel value="" for="currValuesDim4" />
+																	<apex:outputText style="text-align:right" id="currValuesDim4" value="{!lineItem.JournalLinesCurrencyValuesView.LookupDim4AsString}" >
+																		<apex:message />
+																	</apex:outputText>
+																</apex:outputPanel>
+																</apex:pageBlockSectionItem>
+																<apex:pageBlockSectionItem dataStyle="text-align:right" rendered="{! IF(viewstate.journal.dto.JournalStatus__c !='Complete',true,false) }">
+																<apex:outputText id="dimension4ValueExpectedValue">
+																	<apex:outputText value="{!lineItem.JournalLinesCurrencyValuesView.dimension4ValueExpectedValue}"/>
+																</apex:outputText>
+																</apex:pageBlockSectionItem>
+															</apex:pageBlockSection>
+														</apex:pageBlock>
+													</div>
+												</div>
+												<div class="bottom"><div class="bottomLeft"></div>
+												</div>
+											</apex:outputPanel>
+										</apex:outputPanel>
+									</apex:column>
+
+									<!-- ANALYSIS DETAILS LINEITEM POPUP -->
+									<apex:column headerClass="pageBlockTableNoLabelHeader" onmouseover="nohighlight = true;" onmouseout="nohighlight = false;">
+										<apex:outputPanel id="analysisdetailspage" layout="block" style="display:none">
+											<apex:outputPanel styleClass="customPopupAnalysis" layout="block">
+												<div class="top">
+													<div class="topLeft">
+														<h2>{!$Label.c2g__journalanalysisdetailspopuptitle}</h2>
+														<span style="text-align:left;margin-left:5px;margin-top:9px;position:absolute;">
+															<a href="javascript:openPopupFocus('{!redirectForHelp1332}', 'Help', 700, 600, 'width=700,height=600,resizable=yes,toolbar=yes,status=no,scrollbars=yes,menubar=yes,directories=no,location=no,dependant=no', false, false);" title="" class="helpIcon_custom">
+															</a>
+														</span>
+														<a style="display:none" class="closeAnalysis" href="javascript:void(0)" onclick="closeAnalysisPopUpOnComplete(linenumber, false, arguments); CODAJournals.setExpanderPosition($FFDC('.taxTotalsLink'));"></a>
+													</div>
+												</div>
+
+												<div class="middle" style="min-height:120px">
+													<div class="loadingIconWrapperAnalysis" style="display:none;margin-top:55px"><span class="loadingIcon"></span></div>
+													<div class="popupcontentanalysis">
+														<apex:pageBlock >
+															<apex:variable rendered="{!lineItem.JournalLineAnalysisView.ShowTaxAnalysisTitle}" var="" value="">
+																<div class="row subtitle">
+																	<!-- TAX ANALYSIS -->
+																	<span class="column span4">
+																		<apex:outputText id="taxAnalysisLabel">
+																			<apex:outputText value="{!$Label.c2g__journalanalysisdetailspopuptaxanalysissection}" styleClass="fieldLabel"/>
+																		</apex:outputText>
+																	</span>
+																</div>
+															</apex:variable>
+															<apex:variable var="" value="" rendered="{!lineItem.JournalLineAnalysisView.ShowTaxValue1 || lineItem.JournalLineAnalysisView.ShowTaxAnalysis1}">
+																<div class="row">
+																	<span class="column fieldlabel">
+																		<!-- Tax Value 1 -->
+																		<apex:outputText id="taxValue1Label" rendered="{!lineItem.JournalLineAnalysisView.ShowTaxValue1}">
+																			<apex:outputText value="{!$Label.c2g__journalanalysisdetailspopupfieldtaxvalue1}"/>
+																		</apex:outputText>
+																	</span>
+																	<span class="column fieldcontent">
+																		<apex:outputField id="taxValue1" rendered="{!lineItem.JournalLineAnalysisView.ShowTaxValue1}" value="{!lineItem.dto.c2g__TaxValue1__c}"/>
+																	</span>
+																	<span class="column fieldlabel">
+																		<!-- Tax Analysis 1 -->
+																		<apex:outputText id="taxAnalysis1Label" rendered="{!lineItem.JournalLineAnalysisView.ShowTaxAnalysis1}">
+																			<apex:outputText value="{!$Label.c2g__journalanalysisdetailspopupfieldtaxanalysis1}"/>
+																		</apex:outputText>
+																	</span>
+																	<span class="column fieldcontent">
+																		<apex:outputLink rendered="{!lineItem.JournalLineAnalysisView.ShowTaxAnalysis1}" value="/{!lineItem.dto.TaxAnalysis1__r.Id}">
+																			{!lineItem.dto.TaxAnalysis1__r.Name}
+																		</apex:outputLink>
+																	</span>
+																</div>
+															</apex:variable>
+															<apex:variable var="" value="" rendered="{!lineItem.JournalLineAnalysisView.ShowTaxValue2 || lineItem.JournalLineAnalysisView.ShowTaxAnalysis2}">
+																<div class="row">
+																	<span class="column fieldlabel">
+																		<!-- Tax Value 2 -->
+																		<apex:outputText id="taxValue2Label" rendered="{!lineItem.JournalLineAnalysisView.ShowTaxValue2}">
+																			<apex:outputText value="{!$Label.c2g__journalanalysisdetailspopupfieldtaxvalue2}"/>
+																		</apex:outputText>
+																	</span>
+																	<span class="column fieldcontent">
+																		<apex:outputField id="taxValue2" rendered="{!lineItem.JournalLineAnalysisView.ShowTaxValue2}" value="{!lineItem.dto.c2g__TaxValue2__c}"/>
+																	</span>
+																	<span class="column fieldlabel">
+																		<!-- Tax Analysis 2 -->
+																		<apex:outputText id="taxAnalysis2Label" rendered="{!lineItem.JournalLineAnalysisView.ShowTaxAnalysis2}">
+																			<apex:outputText value="{!$Label.c2g__journalanalysisdetailspopupfieldtaxanalysis2}"/>
+																		</apex:outputText>
+																	</span>
+																	<span class="column fieldcontent">
+																		<apex:outputLink rendered="{!lineItem.JournalLineAnalysisView.ShowTaxAnalysis2}" value="/{!lineItem.dto.TaxAnalysis2__r.Id}">
+																			{!lineItem.dto.TaxAnalysis2__r.Name}
+																		</apex:outputLink>
+																	</span>
+																</div>
+															</apex:variable>
+															<apex:variable var="" value="" rendered="{!lineItem.JournalLineAnalysisView.ShowTaxValue3 || lineItem.JournalLineAnalysisView.ShowTaxAnalysis3}">
+																<div class="row">
+																	<span class="column fieldlabel">
+																		<!-- Tax Value 3 -->
+																		<apex:outputText id="taxValue3Label" rendered="{!lineItem.JournalLineAnalysisView.ShowTaxValue3}">
+																			<apex:outputText value="{!$Label.c2g__journalanalysisdetailspopupfieldtaxvalue3}"/>
+																		</apex:outputText>
+																	</span>
+																	<span class="column fieldcontent">
+																		<apex:outputField id="taxValue3" rendered="{!lineItem.JournalLineAnalysisView.ShowTaxValue3}" value="{!lineItem.dto.c2g__TaxValue3__c}"/>
+																	</span>
+																	<span class="column fieldlabel">
+																		<!-- Tax Analysis 3 -->
+																		<apex:outputText id="taxAnalysis3Label" rendered="{!lineItem.JournalLineAnalysisView.ShowTaxAnalysis3}">
+																			<apex:outputText value="{!$Label.c2g__journalanalysisdetailspopupfieldtaxanalysis3}"/>
+																		</apex:outputText>
+																	</span>
+																	<span class="column fieldcontent">
+																		<apex:outputLink rendered="{!lineItem.JournalLineAnalysisView.ShowTaxAnalysis3}" value="/{!lineItem.dto.TaxAnalysis3__r.Id}">
+																			{!lineItem.dto.TaxAnalysis3__r.Name}
+																		</apex:outputLink>
+																	</span>
+																</div>
+															</apex:variable>
+															<apex:variable var="" value="" rendered="{!lineItem.JournalLineAnalysisView.ShowTaxableValue}">
+																<div class="row half">
+																	<span class="column fieldlabel">
+																	<!-- Taxable Value -->
+																		<apex:outputText id="taxableValueLabel">
+																			<apex:outputText value="{!$Label.c2g__journalanalysisdetailspopupfieldtaxablevalue}"/>
+																		</apex:outputText>
+																	</span>
+																	<span class="column fieldcontent">
+																		<apex:outputField id="taxableValue" value="{!lineItem.dto.c2g__TaxableValue__c}"/>
+																	</span>
+																</div>
+															</apex:variable>
+															<apex:variable rendered="{!lineItem.JournalLineAnalysisView.ShowFurtherAnalysisTitle}" var="" value="">
+																<div class="row subtitle">
+																	<!-- FURTHER ANALYSIS -->
+																	<span class="column span4">
+																		<apex:outputText id="furtherAnalysisLabel">
+																			<apex:outputText value="{!$Label.c2g__journalanalysisdetailspopupfurtheranalysissection}" styleClass="fieldLabel" 
+																			style="display:block;margin-top:10px;"/>
+																		</apex:outputText>
+																	</span>
+																</div>
+															</apex:variable>
+															<apex:variable var="" value="" rendered="{!lineItem.JournalLineAnalysisView.ShowAccountAnalysis}">
+																<div class="row half">
+																	<span class="column fieldlabel">
+																		<!-- Account Analysis -->
+																		<apex:outputText id="accountAnalysisLabel">
+																			<apex:outputText value="{!$Label.c2g__journalanalysisdetailspopupfieldaccountanalysis}"/>
+																		</apex:outputText>
+																	</span>
+																	<span class="column fieldcontent">
+																		<apex:outputLink value="/{!lineItem.dto.AccountAnalysis__r.Id}">
+																			{!lineItem.dto.AccountAnalysis__r.Name}
+																		</apex:outputLink>
+																	</span>
+																</div>
+															</apex:variable>
+															<apex:variable var="" value="" rendered="{!lineItem.JournalLineAnalysisView.ShowProductAnalysis}">
+																<div class="row half">
+																	<span class="column fieldlabel">
+																		<!-- Product Analysis -->
+																		<apex:outputText id="productAnalysisLabel">
+																			<apex:outputText value="{!$Label.c2g__journalanalysisdetailspopupfieldproductanalysis}"/>
+																		</apex:outputText>
+																	</span>
+																	<span class="column fieldcontent">
+																		<apex:outputLink value="/{!lineItem.dto.ProductAnalysis__r.Id}">
+																			{!lineItem.dto.ProductAnalysis__r.Name}
+																		</apex:outputLink>
+																	</span>
+																</div>
+															</apex:variable>
+															<apex:variable var="" value="" rendered="{!viewstate.allowLocalGLA && !viewstate.showLocalGLA}">
+																<div class="row half">
+																	<span class="column fieldlabel">
+																		<!-- Local GLA -->
+																		<apex:outputText id="LocalGLALabel">
+																			<apex:outputText value="{!$ObjectType.c2g__codaJournalLineItem__c.fields.c2g__LocalGLA__c.label}"/>
+																		</apex:outputText>
+																	</span>
+																	<span class="column fieldcontent">
+																		<apex:outputField id="gla" value="{!lineItem.dto.c2g__LocalGLA__c}"/>
+																	</span>
+																</div>
+															</apex:variable>
+															<apex:variable var="" value="" rendered="{!viewstate.allowLocalGLA && viewstate.showLocalGLA}">
+																<div class="row half">
+																	<span class="column fieldlabel">
+																		<!-- GLA -->
+																		<apex:outputText id="GLALabel">
+																			<apex:outputText value="{!$ObjectType.c2g__codaJournalLineItem__c.fields.c2g__GeneralLedgerAccount__c.label}"/>
+																		</apex:outputText>
+																	</span>
+																	<span class="column fieldcontent">
+																		<apex:outputField id="gla" value="{!lineItem.dto.c2g__GeneralLedgerAccount__c}"/>
+																	</span>
+																</div>
+															</apex:variable>
+															<!--Custom Field Analysis-->
+															<apex:variable var="" value="" rendered="{!viewstate.showLineCustomAnalysisFields}">
+																<div class="row subtitle">
+																	<span class="column span4">
+																		<apex:outputText value="{!$Label.c2g__codapagejournalcustomanalysisfields}" styleClass="fieldLabel" style="display:block;margin-top:10px;"/>
+																	</span>
+																</div>
+																<apex:repeat value="{!lineAnalysisFields}" var="f">
+																	<div class="row">
+																		<span class="column fieldlabel">
+																			<apex:outputText value="{!$ObjectType.c2g__codaJournalLineItem__c.fields[f].label}"/>
+																		</span>
+																		<span class="column fieldcontent">
+																			<apex:outputField value="{!lineItem.dto[f]}"/>
+																		</span>
+																	</div>
+																</apex:repeat>
+															</apex:variable>
+														</apex:pageBlock>
+													</div>
+												</div>
+												<div class="bottom"><div class="bottomLeft"></div></div>
+											</apex:outputPanel>
+										</apex:outputPanel>
+									</apex:column>
+
+									<!-- DESTINATION LINEITEM POPUP -->
+									<apex:column headerClass="pageBlockTableNoLabelHeader" onmouseover="nohighlight = true;" onmouseout="nohighlight = false;">
+										<apex:outputPanel id="destinationlinespage" layout="block" style="display:none">
+											<apex:outputPanel styleClass="customPopupDestinationLine popupRoundBorders" layout="block">
+												<div class="top">
+													<div class="topLeft">
+														<h2>{!$Label.c2g__journallinedestinationdetailspopuptitle}</h2>
+														<span style="text-align:left;margin-left:5px;margin-top:9px;position:absolute;">
+															<a href="javascript:openPopupFocus('{!redirectForHelp1087}', 'Help', 700, 600, 'width=700,height=600,resizable=yes,toolbar=yes,status=no,scrollbars=yes,menubar=yes,directories=no,location=no,dependant=no', false, false);" title="" class="helpIcon_custom">
+															</a>
+														</span>
+														<a style="display:none" class="closeDestinationLine" href="javascript:void(0)" onclick="CODAJournals.closeDestinationLinePopUpOnComplete();"></a>
+													</div>
+												</div>
+												<div class="middle" style="min-height:120px">
+													<div class="loadingIconWrapperDestinationLine" style="display:none;margin-top:55px"><span class="loadingIcon"></span></div>
+													<div class="popUpContentDestinationLine">
+														<apex:pageBlock >
+															<apex:outputPanel >
+																<div class="row half">
+																	<span class="column fieldlabel">
+																		<!-- Destination Line Type -->
+																		<apex:outputText id="destinationLineTypeLabel" value="{!$ObjectType.c2g__codaJournalLineItem__c.fields.c2g__DestinationLineType__c.label}"/>
+																	</span>
+																	<span class="column fieldcontent">
+																		<apex:outputText id="newline_type" value="{!lineItem.dto.c2g__DestinationLineType__c}"/>
+																	</span>
+																</div>
+															</apex:outputPanel>
+															<apex:outputPanel >
+																<div class="row half">
+																	<apex:variable var="destinationItem" value="{!lineItem.JournalDestinationLineView.DestinationPopupViewItem}" />
+																	<span class="column fieldlabel">
+																		<!-- Destination Item -->
+																		<apex:outputText id="outputDestinationLabel" value="{!destinationItem.ItemLabel}"/>
+																	</span>
+																	<span class="column fieldcontent">
+																		<apex:outputLink id="outputDestinationItem" value="/{!URLENCODE(destinationItem.itemId)}">
+																			{!destinationItem.itemName}
+																		</apex:outputLink>
+																	</span>
+																</div>
+															</apex:outputPanel>
+														</apex:pageBlock>
+													</div>
+												</div>
+												<div class="bottom"><div class="bottomLeft"></div></div>
+											</apex:outputPanel>
+										</apex:outputPanel>
+									</apex:column>
+						</apex:pageBlockTable>
+					</apex:pageBlockSection>
+					<!-- Journal Status -->
+					<apex:pageBlockSection title="{!$Label.c2g__codapagejournalviewjournalstatus}">
+							<apex:outputField value="{!viewstate.journal.dto.c2g__JournalStatus__c}"/>
+							<apex:outputField value="{!viewstate.journal.dto.c2g__DiscardReason__c}"/>
+					</apex:pageBlockSection>
+			</apex:pageBlock>
+	</apex:form>
+
+	<!-- Notes and Attachments -->
+	<apex:relatedList list="CombinedAttachments"/>
+</apex:page>

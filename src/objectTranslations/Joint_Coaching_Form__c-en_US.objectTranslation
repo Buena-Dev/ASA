@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Joint Coaching Form</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Joint Coaching Form</value>
+    </caseValues>
+    <fields>
+        <label><!-- Call Report Quality (from Salesforce) --></label>
+        <name>Call_Report_Quality_from_Salesforce__c</name>
+    </fields>
+    <fields>
+        <label><!-- Client Name/Senior School Official --></label>
+        <name>Client_Name_Senior_School_Official__c</name>
+        <relationshipLabel><!-- Joint Coaching Form --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Date --></label>
+        <name>Date__c</name>
+    </fields>
+    <fields>
+        <help><!-- Did the RAE know other campus administrators outside of the financial aid office? --></help>
+        <label><!-- Did RAE know others outside FA office? --></label>
+        <name>Did_RAE_know_others_outside_FA_office__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- District Manager --></label>
+        <name>District_Manager__c</name>
+        <relationshipLabel><!-- Joint Coaching Form (District Manager) --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Was the meeting appropriately documented in Salesforce? --></help>
+        <label><!-- Documented in Salesforce --></label>
+        <name>Documented_in_Salesforce__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Follow-Up and Next Steps --></label>
+        <name>Follow_Up_and_Next_Steps__c</name>
+    </fields>
+    <fields>
+        <help><!-- Was the appropriate follow-up documentation sent to the school? --></help>
+        <label><!-- Follow-up documentation sent to school? --></label>
+        <name>Follow_up_documentation_sent_to_school__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- At the end of the meeting, did the RAE get customer  &quot;go-forward&quot; committments? --></help>
+        <label><!-- Go-Forward Committments? --></label>
+        <name>Go_Forward_Committments__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Have clear objective for the meeting? --></label>
+        <name>Have_clear_objective_for_the_meeting__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Identify the competitive environement? --></label>
+        <name>Identify_the_competitive_environement__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- If other, please specify --></label>
+        <name>If_other_please_specify__c</name>
+    </fields>
+    <fields>
+        <label><!-- If yes, Next Steps: --></label>
+        <name>If_yes_Next_Steps__c</name>
+        <picklistValues>
+            <masterLabel>Contract</masterLabel>
+            <translation><!-- Contract --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Full Presentation</masterLabel>
+            <translation><!-- Full Presentation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Proposal Request</masterLabel>
+            <translation><!-- Proposal Request --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Did the RAE &quot;learn first&quot; and then &quot;Pitch later&quot;? --></help>
+        <label><!-- Learn first - Pitch later --></label>
+        <name>Learn_first_Pitch_later__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- This will auto-calculate from the other scores. --></help>
+        <label><!-- Overall Score --></label>
+        <name>Overall_Score__c</name>
+    </fields>
+    <fields>
+        <help><!-- pre-callm, visit and post visit --></help>
+        <label><!-- Performance results follow-up --></label>
+        <name>Performance_results_follow_up__c</name>
+    </fields>
+    <fields>
+        <help><!-- Please enter a number from 1-5 --></help>
+        <label><!-- Post-Visit Follow-Up Overall Score --></label>
+        <name>Post_Visit_Follow_Up_Overall_Score__c</name>
+    </fields>
+    <fields>
+        <help><!-- Please enter a number from 1-5 --></help>
+        <label><!-- Pre-Call Planning Overall Score --></label>
+        <name>Pre_Call_Planning_Overall_Score__c</name>
+    </fields>
+    <fields>
+        <help><!-- Did the RAE send a pre-meeting agenda to the client and enter it into Salesforce? --></help>
+        <label><!-- Pre-Meeting Agenda Sent - Entered in SF --></label>
+        <name>Pre_Meeting_Agenda_Sent_and_entered_SF__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Regional Account Executive --></label>
+        <name>Regional_Account_Executive__c</name>
+        <relationshipLabel><!-- Joint Coaching Form (Regional Account Executive) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Sales Development Areas --></label>
+        <name>Sales_Development_Areas__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sales Strengths --></label>
+        <name>Sales_Strengths__c</name>
+    </fields>
+    <fields>
+        <help><!-- Please enter a number from 1-5 --></help>
+        <label><!-- School Call Management Overall Score --></label>
+        <name>School_Call_Management_Overall_Score__c</name>
+    </fields>
+    <fields>
+        <label><!-- School Name --></label>
+        <name>School_Name__c</name>
+        <relationshipLabel><!-- Joint Coaching Form --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Title --></label>
+        <name>Title__c</name>
+    </fields>
+    <fields>
+        <label><!-- Was the RAE able to control the call? --></label>
+        <name>Was_the_RAE_able_to_control_the_call__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <layouts>
+        <layout>Joint Coaching Form Layout</layout>
+        <sections>
+            <label><!-- Coaching and Development - Post Call Discussion and Debrief --></label>
+            <section>Coaching and Development - Post Call Discussion and Debrief</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- District Manager Review Summary --></label>
+            <section>District Manager Review Summary</section>
+        </sections>
+        <sections>
+            <label><!-- Post-Visit Follow-Up - Overall Score (Please enter a score of 1-5 below) --></label>
+            <section>Post-Visit Follow-Up - Overall Score (Please enter a score of 1-5 below)</section>
+        </sections>
+        <sections>
+            <label><!-- Pre-Call Planning - Overall Score (Please Enter a Score of 1-5 below) --></label>
+            <section>Pre-Call Planning - Overall Score (Please Enter a Score of 1-5 below)</section>
+        </sections>
+        <sections>
+            <label><!-- School Call Management - Overall Score (Please enter a score of 1-5 below) --></label>
+            <section>School Call Management - Overall Score (Please enter a score of 1-5 below)</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

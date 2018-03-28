@@ -1,0 +1,13 @@
+<apex:page controller="c2g.BalanceConfigurationController" extensions="c2g.CODAHelpLoaderController">
+	<apex:stylesheet value="{!URLFOR($Resource.c2g__coda2go,'coda2go/web/css/style.css')}"/>
+	<apex:stylesheet value="{!URLFOR($Resource.c2g__front,'front/pages/balanceconfiguration/balanceconfiguration.css')}"/>
+	<apex:form >
+		<apex:sectionHeader title="{!$Label.c2g__balanceupdatebalanceconfigurationtitle}" help="{!redirectForHelp1350}"/>
+		<apex:pageMessages />
+		<apex:pageBlock >
+			<apex:pageBlockButtons location="top">
+				<apex:commandButton action="{!goBack}" value="{!$Label.c2g__balanceupdatebalanceconfigurationresultback}"/>
+			</apex:pageBlockButtons>
+		</apex:pageBlock>
+	</apex:form>
+</apex:page>

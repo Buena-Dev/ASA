@@ -1,0 +1,9 @@
+Hello {!Lead.OwnerFirstName}, 
+
+The Lead with {!Lead.Company} has not had an activity for 10 days: {!Lead.Link}. 
+
+The last activity happened {!Lead.Days_Stalled__c} days ago.
+
+
+
+Powered by Salesforce.com

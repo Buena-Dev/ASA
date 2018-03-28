@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>USERS.NAME</field>
+    </columns>
+    <columns>
+        <field>ACCOUNT.NAME</field>
+    </columns>
+    <columns>
+        <field>TYPE</field>
+    </columns>
+    <columns>
+        <field>RATING</field>
+    </columns>
+    <columns>
+        <field>DUE_DATE</field>
+    </columns>
+    <columns>
+        <field>LAST_UPDATE</field>
+    </columns>
+    <columns>
+        <field>ADDRESS1_STATE</field>
+    </columns>
+    <description>TX Community Colleges</description>
+    <filter>
+        <criteriaItems>
+            <column>ADDRESS1_STATE</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>contains</operator>
+            <value>TX</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>TYPE</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>contains</operator>
+            <value>2 yr pub</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>TX Community Colleges</name>
+    <params>
+        <name>co</name>
+        <value>0</value>
+    </params>
+    <reportType>AccountList</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATE</dateColumn>
+        <endDate>2012-08-07</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2002-07-31</startDate>
+    </timeFrameFilter>
+</Report>

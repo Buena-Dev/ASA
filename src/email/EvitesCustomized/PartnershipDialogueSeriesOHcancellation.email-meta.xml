@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>false</available>
+    <description>Notice of cancellation for those who have registered to attend the session</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>BlankLetterhead</letterhead>
+    <name>Partnership Dialogue Series - OH cancellation</name>
+    <style>freeForm</style>
+    <subject>ASA’s Partnership Dialogue Series, scheduled for Wednesday, February 7, 2007 has been CANCELLED!</subject>
+    <textOnly>Dear {!Contact.FirstName},
+ 
+
+Due to the inclement weather, American Student Assistance unfortunately has had to cancel our Partnership Dialogue Series scheduled to take place on February 7, 2007 in Dublin, OH.
+ 
+We would like to first thank you for registering to attend this event and apologize for any inconvenience this cancellation may have caused.  We hope to reschedule at later date. 
+ 
+Thanks again for your willingness to take time out of your busy schedule to join us; we look forward to seeing you at future events.
+ 
+Sincerely,
+{!Contact.OwnerFullName}
+{!Contact.OwnerEmail}</textOnly>
+    <type>html</type>
+</EmailTemplate>

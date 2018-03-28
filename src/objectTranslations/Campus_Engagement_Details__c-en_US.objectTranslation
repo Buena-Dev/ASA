@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Campus Engagement Details</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Campus Engagement Details</value>
+    </caseValues>
+    <fields>
+        <label><!-- Account --></label>
+        <name>Account__c</name>
+        <relationshipLabel><!-- Campus Engagement Details --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Campus Stakeholder Meeting --></label>
+        <name>Campus_Stakeholder_Meeting__c</name>
+    </fields>
+    <fields>
+        <label><!-- Engagement Score --></label>
+        <name>Engagement_Score__c</name>
+        <picklistValues>
+            <masterLabel>1</masterLabel>
+            <translation><!-- 1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2</masterLabel>
+            <translation><!-- 2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3</masterLabel>
+            <translation><!-- 3 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4</masterLabel>
+            <translation><!-- 4 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5</masterLabel>
+            <translation><!-- 5 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Intro Email --></label>
+        <name>Intro_Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- Multiple Campuses --></label>
+        <name>Multiple_Campuses__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- SALT Courses Requirement --></label>
+        <name>My_Money_101_Requirement__c</name>
+    </fields>
+    <fields>
+        <label><!-- Residential Campus --></label>
+        <name>Residential_Campus__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- SALT Ambassador Program --></label>
+        <name>SALT_Ambassador_Program__c</name>
+    </fields>
+    <fields>
+        <label><!-- SALT Communication Kit --></label>
+        <name>SALT_Communication_Kit__c</name>
+    </fields>
+    <fields>
+        <label><!-- SALT Faculty/Staff Training --></label>
+        <name>SALT_Faculty_Staff_Training__c</name>
+    </fields>
+    <fields>
+        <label><!-- SALT Requirement --></label>
+        <name>SALT_Requirement__c</name>
+    </fields>
+    <layouts>
+        <layout>Campus Engagement Details Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

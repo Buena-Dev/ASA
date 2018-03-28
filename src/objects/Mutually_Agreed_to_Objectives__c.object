@@ -1,0 +1,510 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>M20</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ReadWrite</externalSharingModel>
+    <fields>
+        <fullName>Actual_Substantive_Visits_for_Month__c</fullName>
+        <externalId>false</externalId>
+        <label>Actual Substantive Visits for Month</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Actual_Visits_with_Current_Clients__c</fullName>
+        <externalId>false</externalId>
+        <label>Actual # Visits with Current Clients</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Annual_Sales_Plan__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Annual Sales Plan</label>
+        <referenceTo>Annual_Sales_Plan__c</referenceTo>
+        <relationshipLabel>Mutually Agreed to Objectives</relationshipLabel>
+        <relationshipName>Mutually_Agreed_to_Objectives</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Comments__c</fullName>
+        <externalId>false</externalId>
+        <label>RAE Comments</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Expected_Contract_1_Recv_d_Closed__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Expected Contract 1 Recv&apos;d/Closed?</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Expected_Contract_1__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Expected Contract 1</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Mutually Agreed to Objectives (Expected Contract 1)</relationshipLabel>
+        <relationshipName>Mutually_Agreed_to_Objectives3</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Expected_Contract_2_Recv_d_Closed__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Expected Contract 2 Recv&apos;d/Closed?</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Expected_Contract_2__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Expected Contract 2</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Mutually Agreed to Objectives (Expected Contract 2)</relationshipLabel>
+        <relationshipName>Mutually_Agreed_to_Objectives5</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Expected_Contract_3_Recv_d_Closed__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Expected Contract 3 Recv&apos;d/Closed?</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Expected_Contract_3__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Expected Contract 3</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Mutually Agreed to Objectives (Expected Contract 3)</relationshipLabel>
+        <relationshipName>Mutually_Agreed_to_Objectives4</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Is_Current_Running_User__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(Regional_Manager__c = $User.Id , 1 , 0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Is Current Running User</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Month_End_Comments__c</fullName>
+        <externalId>false</externalId>
+        <label>Manager&apos;s Month End Comments</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Number_of_Contracts_Received__c</fullName>
+        <externalId>false</externalId>
+        <label>Number of Contracts Received</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Number_of_Expected_Contracts__c</fullName>
+        <externalId>false</externalId>
+        <label>Number of Expected Contracts</label>
+        <precision>18</precision>
+        <required>true</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Number_of_visits_with_current_clients__c</fullName>
+        <externalId>false</externalId>
+        <label>Expected # Visits with Current Clients</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Regional_Account_Executive__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>RAE Name</description>
+        <externalId>false</externalId>
+        <label>Regional Account Executive</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Mutually_Agreed_to_Objectives</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Regional_Manager__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Regional Manager</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Mutually_Agreed_to_Objectives1</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Secondary_Visits_Score__c</fullName>
+        <externalId>false</externalId>
+        <label>Substantive Call/Booth Meeting</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Substantive_Visits_Score__c</fullName>
+        <externalId>false</externalId>
+        <label>On-Campus/Online Meeting Score</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Targeted_Substantive_Visits_for_Month__c</fullName>
+        <description>Please put in the target number of substantive visits</description>
+        <externalId>false</externalId>
+        <label>Targeted Substantive Visits for Month</label>
+        <precision>18</precision>
+        <required>true</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Top_Targeted_School_Count__c</fullName>
+        <externalId>false</externalId>
+        <label>Top Targeted School Count</label>
+        <summaryForeignKey>Top_Targeted_School__c.Mutually_Agreed_to_Objectives__c</summaryForeignKey>
+        <summaryOperation>count</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Total_Visits_Score__c</fullName>
+        <externalId>false</externalId>
+        <formula>Substantive_Visits_Score__c  +  Secondary_Visits_Score__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Total Visits Score</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Visits_Remaining__c</fullName>
+        <description># of visits remaining against target</description>
+        <externalId>false</externalId>
+        <formula>if((Targeted_Substantive_Visits_for_Month__c - Actual_Substantive_Visits_for_Month__c) &lt;= 0, 0, (Targeted_Substantive_Visits_for_Month__c -  Actual_Substantive_Visits_for_Month__c))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText># of visits remaining against target</inlineHelpText>
+        <label>Visits Remaining</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>objective_plan_date__c</fullName>
+        <description>Please put in the Date of mutually agreed to objective plan</description>
+        <externalId>false</externalId>
+        <label>Objective Plan Date</label>
+        <required>true</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <label>Mutually Agreed to Objectives</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Regional_Account_Executive__c</columns>
+        <columns>Regional_Manager__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>NAME</field>
+            <operation>contains</operation>
+            <value>2014</value>
+        </filters>
+        <label>All - 2014</label>
+    </listViews>
+    <listViews>
+        <fullName>Julie_s_View_Prior_to_FY_16</fullName>
+        <booleanFilter>(1 OR 2) AND 3</booleanFilter>
+        <columns>NAME</columns>
+        <columns>Regional_Manager__c</columns>
+        <columns>Regional_Account_Executive__c</columns>
+        <columns>objective_plan_date__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Regional_Manager__c</field>
+            <operation>equals</operation>
+            <value>Julie Esau</value>
+        </filters>
+        <filters>
+            <field>Regional_Account_Executive__c</field>
+            <operation>contains</operation>
+            <value>darcy esau</value>
+        </filters>
+        <filters>
+            <field>CREATED_DATE</field>
+            <operation>lessThan</operation>
+            <value>7/1/2015 12:00 AM</value>
+        </filters>
+        <label>Julie&apos;s View - Prior to FY &apos;16</label>
+    </listViews>
+    <listViews>
+        <fullName>Main_View</fullName>
+        <booleanFilter>(1 OR 2) AND 3</booleanFilter>
+        <columns>NAME</columns>
+        <columns>Annual_Sales_Plan__c</columns>
+        <columns>Regional_Manager__c</columns>
+        <columns>Regional_Account_Executive__c</columns>
+        <columns>objective_plan_date__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Regional_Manager__c</field>
+            <operation>equals</operation>
+            <value>Julie Esau</value>
+        </filters>
+        <filters>
+            <field>Regional_Account_Executive__c</field>
+            <operation>contains</operation>
+            <value>darcy esau</value>
+        </filters>
+        <filters>
+            <field>CREATED_DATE</field>
+            <operation>greaterOrEqual</operation>
+            <value>7/1/2016 12:00 AM</value>
+        </filters>
+        <label>Julie&apos;s View</label>
+    </listViews>
+    <listViews>
+        <fullName>Mike_s_View</fullName>
+        <columns>NAME</columns>
+        <columns>Annual_Sales_Plan__c</columns>
+        <columns>Regional_Manager__c</columns>
+        <columns>Regional_Account_Executive__c</columns>
+        <columns>objective_plan_date__c</columns>
+        <columns>CREATED_DATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Regional_Manager__c</field>
+            <operation>contains</operation>
+            <value>Michael Friedman</value>
+        </filters>
+        <filters>
+            <field>CREATED_DATE</field>
+            <operation>greaterOrEqual</operation>
+            <value>7/1/2016 12:00 AM</value>
+        </filters>
+        <label>Mike&apos;s View</label>
+        <sharedTo>
+            <group>BD_East</group>
+            <group>BD_West</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Mike_s_View_Prior_to_FY_16</fullName>
+        <columns>NAME</columns>
+        <columns>Regional_Manager__c</columns>
+        <columns>Regional_Account_Executive__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>objective_plan_date__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Regional_Manager__c</field>
+            <operation>contains</operation>
+            <value>Michael Friedman</value>
+        </filters>
+        <filters>
+            <field>CREATED_DATE</field>
+            <operation>lessThan</operation>
+            <value>7/1/2015 12:00 AM</value>
+        </filters>
+        <label>Mike&apos;s View - Prior to FY &apos;16</label>
+        <sharedTo>
+            <group>BD_East</group>
+            <group>BD_West</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>My_Mutually_Agreed_Objectives</fullName>
+        <columns>Annual_Sales_Plan__c</columns>
+        <columns>NAME</columns>
+        <columns>objective_plan_date__c</columns>
+        <columns>Targeted_Substantive_Visits_for_Month__c</columns>
+        <columns>Actual_Substantive_Visits_for_Month__c</columns>
+        <columns>Number_of_Expected_Contracts__c</columns>
+        <columns>Number_of_Contracts_Received__c</columns>
+        <filterScope>Mine</filterScope>
+        <filters>
+            <field>objective_plan_date__c</field>
+            <operation>equals</operation>
+            <value>THIS_FISCAL_YEAR</value>
+        </filters>
+        <label>My Mutually Agreed Objectives</label>
+    </listViews>
+    <listViews>
+        <fullName>National_M20_View</fullName>
+        <columns>NAME</columns>
+        <columns>Annual_Sales_Plan__c</columns>
+        <columns>Regional_Account_Executive__c</columns>
+        <columns>Regional_Manager__c</columns>
+        <columns>objective_plan_date__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CREATED_DATE</field>
+            <operation>greaterOrEqual</operation>
+            <value>THIS_FISCAL_YEAR</value>
+        </filters>
+        <label>National M20 View</label>
+    </listViews>
+    <nameField>
+        <label>Mutually Agreed to Objectives Name</label>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Mutually Agreed to Objectives</pluralLabel>
+    <recordTypeTrackHistory>false</recordTypeTrackHistory>
+    <recordTypes>
+        <fullName>M2O</fullName>
+        <active>true</active>
+        <description>Mutually Agreed to Objectives</description>
+        <label>M2O</label>
+    </recordTypes>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>Lock_No_of_Contracts_Rcvd</fullName>
+        <active>true</active>
+        <description>Lock No of Contracts Rcvd except for BD Managers &amp; Admins if rep closes more than 3 contracts in any given month</description>
+        <errorConditionFormula>ISCHANGED(Number_of_Contracts_Received__c) &amp;&amp; $Profile.Name != &quot;System Administrator&quot; &amp;&amp; $UserRole.Name != &quot;BD Senior Management&quot; &amp;&amp; NOT((ISCHANGED(Expected_Contract_1_Recv_d_Closed__c)) || (ISCHANGED(Expected_Contract_2_Recv_d_Closed__c)) || (ISCHANGED(Expected_Contract_3_Recv_d_Closed__c)))</errorConditionFormula>
+        <errorDisplayField>Number_of_Contracts_Received__c</errorDisplayField>
+        <errorMessage>You are not allowed to change the value of &quot;Number of Contracts Received&quot;.</errorMessage>
+    </validationRules>
+</CustomObject>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>false</available>
+    <description>Symposium evaluation sent to all attendees.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>EmailLetterhead</letterhead>
+    <name>ASA Symposium Evaluation 2006</name>
+    <style>freeForm</style>
+    <subject>ASA Symposium 2006 Evaluation</subject>
+    <textOnly>Dear Colleague:
+
+We have extended the deadline for the Symposium Evaluation to August 15, 2006.
+
+Thank you for attending the 2006 American Student Assistance® Symposium:  Insights – A Conversation on Student Debt. The speakers, the attendees’ enthusiasm and active participation, and the location all combined to make this Symposium a memorable learning experience.  
+
+Now that the 2006 Symposium is history, it’s time for us to start thinking about next year’s event – and how we can make it even better.  We want to hear from you!  Please take a minute to tell us what you thought about this year’s Symposium.  Your feedback is valuable to us and will help us to shape the 22nd  Annual Symposium.  The ONLINE EVAL http://www.keysurvey.com/survey/116074/7c39/ will be available through August 15, 2006.  You can also always forward any comments and suggestions to your ASA representative.
+
+Also, please check www.amsa.com in the coming days for our Symposium Wrap-Up.  We will be posting session handouts, as well as audio recordings of several sessions.  
+
+Want to keep up with ASA news and events all year long?  Sign up for “myASA” to receive email alerts and RSS feeds.
+
+Again, thank you for joining us this year and we look forward to seeing you next year.
+
+Sincerely,
+
+American Student Assistance</textOnly>
+    <type>html</type>
+</EmailTemplate>

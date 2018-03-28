@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>false</available>
+    <description>Announcement for Southwest PD day</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>EmailLetterhead</letterhead>
+    <name>PD Day - Southwest - Fall 2006</name>
+    <style>freeForm</style>
+    <subject>Join American Student Assistance for a training event</subject>
+    <textOnly>Join ASA this Fall!  We are returning to Arizona and Nevada with our popular professional development workshop.  
+ 
+Southwest Professional Development Days
+  
+National FFELP guarantor American Student Assistance® has designed another all-day training event for the Southwest.   Now is the time to improve your skills at our professional development seminars.  Join us to enhance core skills and stay ahead of evolving trends.
+ 
+We are offering a full day of professional development classes designed for all college administrators who are looking to improve their performance at work and add skills to their personal “tool box.”
+ 
+9/26/2006      Phoenix - Grand Canyon University 
+9/27/2006      Las Vegas - Touro University Henderson
+9/28/2006      Tucson - Pima Community College Community Campus
+ 
+Agenda
+8:30am           Continental Breakfast
+9:00am           To Know Me is to Love Me: How Your Personality Impacts Your Team
+12:00pm         Lunch
+1:00pm           Problem Solved!
+4:00pm           Adjourn
+ 
+  
+Topic Descriptions
+ 
+To Know Me is to Love Me: How Your Personality Impacts Your Team
+ 
+Participants will learn about a tool that can be easily used within their office to create exceptionally performing teams.
+The differences between each of us sometimes cause frustration, poor communication, and difficulty coming to agreement.  In this highly interactive session we will explore some of the key factors that cause these differences and the experience of appreciating and capitalizing on them in the workplace.  You will leave this session with tools to identify the differences in those you work with, create processes that utilize the differences and that result in more effective operational methods.  NOTE: this session involves a behavior typing tool, the Keirsey Temperament Sorter.
+ 
+Problem Solved!
+
+This session will help you to identify the problem-solving behaviors you need to solve everyday problems quickly and efficiently.  You will learn which behaviors you need to strengthen and which you need to moderate.
+ 
+This problem solving training introduces a step-by-step and effective approach to problem solving and decision making that has proven to be successful in producing improvements in efficiency, performance, and productivity.
+ 
+ 
+How to register or for additional information, including driving directions
+–        Register Online at http://www.amsa.com/fap/training/events.cfm
+–        Email: send your name, phone number and enrollment details to training@amsa.com 
+–        Phone: call the Training Department at (800) 999-9080, ext. 3099
+ 
+All American Student Assistance training events are offered free of charge.</textOnly>
+    <type>html</type>
+</EmailTemplate>

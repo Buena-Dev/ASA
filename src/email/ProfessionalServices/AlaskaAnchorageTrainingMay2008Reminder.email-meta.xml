@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Alaska-Anchorage May 2008 &quot;Reminder&quot;</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>EmailLetterhead</letterhead>
+    <name>Alaska-Anchorage Training May 2008 (Reminder)</name>
+    <style>promotionRight</style>
+    <subject>Save the Date!  ASA Training Event</subject>
+    <textOnly>Save the date for a training that helps refine your skills and keeps you informed.  
+
+Keep up with some of the latest happenings in the financial aid industry. 
+National FFELP guarantor American Student Assistance® has designed training event to discuss some of the hottest topics affecting financial aid offices! 
+  
+Lender/Guarantor/Service Who Does What and When?
+ 
+Description: 
+Financial Aid Administrators are aware that lenders, guarantors and servicers have a role with their student loans, but what are those roles? Who does what? And when and why do they do it? This session will help to clarify the roles of the lender, servicer and guarantor from certification through repayment. 
+ 
+Session Goal(s): 
+Attendees will leave with a better understanding of the loan process and which entity is responsible for which activities. This information will enable attendees to better counsel their students on student loan related issues.  
+
+ 
+For more information please contact 
+Kelley Bauman
+Regional Account Executive 
+American Student Assistance 
+800-999-9080 Ext. 6248
+kbauman@amsa.com
+www.amsa.com
+ 
+ 
+
+Date: May 12, 2008
+   
+Time: 11:00am  - 2:00pm 
+ 
+Location: 
+University of Alaska-Anchorage
+ 
+
+Address:
+University of Alaska Anchorage
+3211 Providence Drive
+Anchorage, Alaska 99508
+Campus Map
+
+http://www.uaa.alaska.edu
+ 
+ 
+How to register or for additional information, including driving directions
+ 
+Register Online at:
+http://www.amsa.com/fap/training</textOnly>
+    <type>html</type>
+</EmailTemplate>

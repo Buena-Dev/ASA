@@ -1,0 +1,13 @@
+NOTIFICATION:
+
+New implementation has begun for {!Case.Account}.  Please review case via link below and report the progress of testing as well as issues through Case Management.
+
+Case Details: {!Case.Link}
+
+Opportunity Link: {!Case.Opportunity_Link__c}
+ 
+
+Thank you,
+ASA
+
+Powered by Salesforce.com

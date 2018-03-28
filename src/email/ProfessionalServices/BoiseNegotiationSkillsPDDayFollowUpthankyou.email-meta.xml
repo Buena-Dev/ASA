@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>PD Day Follow Up/thankyou Email Template</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>EmailLetterhead</letterhead>
+    <name>Boise, Negotiation Skills PD Day (Follow-Up/thank you)</name>
+    <style>freeForm</style>
+    <subject>Thank you for attending! 10/31/08</subject>
+    <textOnly>Thank you for attending American Student Assistance&apos;s Professional Development Day Negotiation Skills Workshop at Boise State University on October 31,2008
+ 
+  
+ 
+It was a pleasure to see so many friendly faces.
+ 
+ 
+Please contact us at training@amsa.com or 1-800-999-9080, ext. 3099 with any questions 
+ 
+ 
+Check our website for future training oppurtunities. 
+http://www.amsa.com/fap/training/index.cfm 
+ 
+We look forward to seeing you at future ASA events.</textOnly>
+    <type>html</type>
+</EmailTemplate>

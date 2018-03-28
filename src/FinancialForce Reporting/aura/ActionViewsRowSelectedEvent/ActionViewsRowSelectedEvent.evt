@@ -1,0 +1,4 @@
+<!-- Copyright (c) 2015 FinancialForce.com, inc. All rights reserved. -->
+<aura:event type="COMPONENT" description="Called when a template data row is selected.">
+	<aura:attribute name="template" type="ffr.AVControllerTemplate"/>
+</aura:event>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>FIRST_NAME</field>
+    </columns>
+    <columns>
+        <field>LAST_NAME</field>
+    </columns>
+    <columns>
+        <field>TITLE</field>
+    </columns>
+    <columns>
+        <field>ADDRESS2_CITY</field>
+    </columns>
+    <columns>
+        <field>ADDRESS2_STATE</field>
+    </columns>
+    <columns>
+        <field>EMAIL</field>
+    </columns>
+    <columns>
+        <field>OWNER_FULL_NAME</field>
+    </columns>
+    <columns>
+        <field>ACCOUNT.NAME</field>
+    </columns>
+    <description>Mailing list for communication about St. Louis Fed event.</description>
+    <filter>
+        <criteriaItems>
+            <column>ADDRESS2_STATE</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>MO</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Contact.No_Longer_Here__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>notEqual</operator>
+            <value>1</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>TYPE</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>School,School - 2 Year Private,School - 2 Year Public,School - 3 Year School,School - 4 Year Private,School - 4 Year Public,School - Grad/Profession,School - Liberal Arts,School  - Proprietary,School - Voc or Tech</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>St. Louis Area Contacts</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>ContactList</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

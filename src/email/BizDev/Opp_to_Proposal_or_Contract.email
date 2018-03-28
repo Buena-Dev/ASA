@@ -1,0 +1,5 @@
+As the owner of the {!Account.Name} Opportunity, this email alert is sent to you to indicate that a task has been sent to begin either the Proposal process or the Contract process based on the Stage of the Opportunity which was just updated.
+
+This email is an FYI...there is no action for you to take.
+
+Opportunity Link: {!Opportunity.Link}

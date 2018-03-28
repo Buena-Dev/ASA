@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Account Planning</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Account Planning</value>
+    </caseValues>
+    <fields>
+        <help><!-- This field shows when this customer began doing business with ASA. --></help>
+        <label><!-- ASA Customer Since --></label>
+        <name>ASA_Customer_Since__c</name>
+    </fields>
+    <fields>
+        <help><!-- This field contains the person responsible for leading the Account Plan. --></help>
+        <label><!-- Account Lead --></label>
+        <name>Account_Lead_del__c</name>
+        <relationshipLabel><!-- Account Planning (Account Lead) --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- This field displays the current account for which the plan is being reported. --></help>
+        <label><!-- Account Name --></label>
+        <name>Account_Name_2__c</name>
+        <relationshipLabel><!-- Account Planning (Account Name) --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- This field contains the name of the School Client Manager for this account. --></help>
+        <label><!-- Account Owner/Client Manager --></label>
+        <name>Account_Owner_Client_Manager__c</name>
+        <relationshipLabel><!-- Account Planning (Account Owner/Client Manager) --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- This field contains the tactic to support the strategy for the goal being reported. --></help>
+        <label><!-- 1st Tactic --></label>
+        <name>CM_G1_Tactic_1__c</name>
+    </fields>
+    <fields>
+        <help><!-- This field contains an additional tactic for the strategy of the goal being reported. --></help>
+        <label><!-- 2nd Tactic --></label>
+        <name>CM_G1_Tactic_2nd__c</name>
+    </fields>
+    <fields>
+        <help><!-- This field contains an additional tactic for the strategy of the goal being reported. --></help>
+        <label><!-- 3rd Tactic --></label>
+        <name>CM_G1_Tactic_3__c</name>
+    </fields>
+    <fields>
+        <help><!-- This field contains the tactic to support the strategy for the goal being reported. --></help>
+        <label><!-- 1st Tactic --></label>
+        <name>CM_G2_1st_Tactic__c</name>
+    </fields>
+    <fields>
+        <help><!-- This field contains an additional tactic to support the strategy for the goal being reported. --></help>
+        <label><!-- 2nd Tactic --></label>
+        <name>CM_G2_2nd_Tactic__c</name>
+    </fields>
+    <fields>
+        <help><!-- This field contains an additional tactic to support the strategy for the goal being reported. --></help>
+        <label><!-- 3rd Tactic --></label>
+        <name>CM_G2_3rd_Tactic__c</name>
+    </fields>
+    <fields>
+        <help><!-- This field contains either the name or the extension of the Client Services Associate who supports this account. --></help>
+        <label><!-- CSA Rep --></label>
+        <name>CSA_Rep__c</name>
+    </fields>
+    <fields>
+        <label><!-- Campus Consultant --></label>
+        <name>Campus_Consultant__c</name>
+        <relationshipLabel><!-- Account Planning (Campus Consultant) --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- This field contains the tactic to support the strategy for the goal being reported. --></help>
+        <label><!-- 1st Tactic --></label>
+        <name>Comm_Internal_1st_Tactic__c</name>
+    </fields>
+    <fields>
+        <help><!-- This field contains the strategy used to integrate a communication plan that works for all parties.
+
+Calls, face to face visits, email ASA communications, etc. --></help>
+        <label><!-- Customer Comms - External Strategy --></label>
+        <name>Comms_External_Strategy_2__c</name>
+    </fields>
+    <fields>
+        <help><!-- This field contains the strategy used to integrate a communication plan that works for all parties. --></help>
+        <label><!-- Comms External --></label>
+        <name>Comms_External__c</name>
+    </fields>
+    <fields>
+        <help><!-- This field contains the tactic to support the strategy for the goal being reported. --></help>
+        <label><!-- 2nd tactic --></label>
+        <name>Comms_Internal_2nd_tactic__c</name>
+    </fields>
+    <fields>
+        <help><!-- This field contains the tactic to support the strategy for the goal being reported. --></help>
+        <label><!-- 3rd Tactic --></label>
+        <name>Comms_Internal_3rd_Tactic__c</name>
+    </fields>
+    <fields>
+        <help><!-- This field will contain the goal which is specific to the Communications plan for Internal parties.
+
+What is important that we share? To whom?, How often?, What mode? --></help>
+        <label><!-- Communications Internal --></label>
+        <name>Comms_Internal__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contract Start Date --></label>
+        <name>Contract_Start_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Goal 1 --></label>
+        <name>Goal_1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Goal 2 --></label>
+        <name>Goal_2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Goal 3 --></label>
+        <name>Goal_3__c</name>
+    </fields>
+    <fields>
+        <help><!-- This field contains all of the key information for this account. --></help>
+        <label><!-- Key Information --></label>
+        <name>Key_Information__c</name>
+    </fields>
+    <fields>
+        <help><!-- This field contains the OE Code of the Account for which this plan is being reported. --></help>
+        <label><!-- OE Code --></label>
+        <name>OE_Code__c</name>
+    </fields>
+    <fields>
+        <help><!-- This field will contain the goal which is specific to the Client Manager and is optional.
+What is important that we share? To whom?, How often?, What mode? --></help>
+        <label><!-- Optional Goal --></label>
+        <name>Optional_Goal__c</name>
+    </fields>
+    <fields>
+        <help><!-- This field contains the summary information of the plan for this account.  
+
+REMINDER: Please complete this section last. --></help>
+        <label><!-- Plan Summary --></label>
+        <name>Plan_Summary__c</name>
+    </fields>
+    <fields>
+        <help><!-- This field contains the strategy for the goal: Process Opportunity --></help>
+        <label><!-- Process Opportunity Strategy --></label>
+        <name>Process_Opp_Strategy__c</name>
+    </fields>
+    <fields>
+        <help><!-- This field contains the strategy used to determine what Products &amp; Services an account is interested in using. --></help>
+        <label><!-- Prods Services --></label>
+        <name>Prods_Services_del__c</name>
+    </fields>
+    <fields>
+        <help><!-- This field contains the strategy used to determine what Products &amp; Services an account is interested in using. --></help>
+        <label><!-- Products and Services Strategy --></label>
+        <name>Prods_Svcs_Strategy__c</name>
+    </fields>
+    <fields>
+        <label><!-- SALT Contract Executed --></label>
+        <name>SALT_Contract_Executed__c</name>
+        <relationshipLabel><!-- Account Planning (SALT_Contract_Executed__c) --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- This field contains the strategy for goal: Strategic Lender Services --></help>
+        <label><!-- SLP Strategy --></label>
+        <name>SLP_Strategy__c</name>
+    </fields>
+    <fields>
+        <help><!-- This field contains the strategy for goal: Strategic Lender Services --></help>
+        <label><!-- SLS Strategy --></label>
+        <name>SLS_Internal_Strategy__c</name>
+    </fields>
+    <fields>
+        <help><!-- This field contains all of the information for:
+Strengths, Weaknesses, Opportunities, Threats and Trends --></help>
+        <label><!-- S.W.O.T.T. --></label>
+        <name>S_W_O_T_T__c</name>
+    </fields>
+    <fields>
+        <label><!-- Vol Strategy --></label>
+        <name>Vol_Strategy__c</name>
+    </fields>
+    <fields>
+        <help><!-- This field contains the strategy used to determine if the account will result in an opportunity for New/Additional or retention of volume. --></help>
+        <label><!-- Volume Strategy --></label>
+        <name>Volume_Strategy__c</name>
+    </fields>
+    <fields>
+        <help><!-- This field contains text which describes why this school/lender initially chose to work with ASA. --></help>
+        <label><!-- Why client initially chose SALT --></label>
+        <name>Why_client_initially_chose_SALT__c</name>
+    </fields>
+    <fields>
+        <label><!-- 1st Quarter Check-in --></label>
+        <name>X1st_Quarter_Check_in__c</name>
+    </fields>
+    <fields>
+        <help><!-- This field contains the tactic to support the strategy for the goal being reported. --></help>
+        <label><!-- 1st Tactic --></label>
+        <name>X1st_Tactic_BD_3_1__c</name>
+    </fields>
+    <fields>
+        <help><!-- This field contains the tactic to support the strategy for the goal being reported. --></help>
+        <label><!-- 1st Tactic --></label>
+        <name>X1st_Tactic_BD_4_1__c</name>
+    </fields>
+    <fields>
+        <help><!-- This field contains the tactic to support the strategy for the goal being reported. --></help>
+        <label><!-- 1st Tactic --></label>
+        <name>X1st_Tactic_BD_5_1__c</name>
+    </fields>
+    <fields>
+        <label><!-- 2nd Quarter Check-in --></label>
+        <name>X2nd_Quarter_Check_in__c</name>
+    </fields>
+    <fields>
+        <help><!-- This field contains the tactic to support the strategy for the goal being reported. --></help>
+        <label><!-- 2nd Tactic --></label>
+        <name>X2nd_Tactic_BD_3_2__c</name>
+    </fields>
+    <fields>
+        <help><!-- This field contains the tactic to support the strategy for the goal being reported. --></help>
+        <label><!-- 2nd Tactic --></label>
+        <name>X2nd_Tactic_BD_4_2__c</name>
+    </fields>
+    <fields>
+        <help><!-- This field contains the tactic to support the strategy for the goal being reported. --></help>
+        <label><!-- 2nd Tactic --></label>
+        <name>X2nd_Tactic_BD_5_2__c</name>
+    </fields>
+    <fields>
+        <label><!-- 3rd Quarter Check-in --></label>
+        <name>X3rd_Quarter_Check_in__c</name>
+    </fields>
+    <fields>
+        <help><!-- This field contains the tactic to support the strategy for the goal being reported. --></help>
+        <label><!-- 3rd Tactic --></label>
+        <name>X3rd_Tactic_BD_3_3__c</name>
+    </fields>
+    <fields>
+        <help><!-- This field contains the tactic to support the strategy for the goal being reported. --></help>
+        <label><!-- 3rd Tactic --></label>
+        <name>X3rd_Tactic_BD_4_3__c</name>
+    </fields>
+    <fields>
+        <help><!-- This field contains the tactic to support the strategy for the goal being reported. --></help>
+        <label><!-- 3rd Tactic --></label>
+        <name>X3rd_Tactic_BD_5_3__c</name>
+    </fields>
+    <fields>
+        <label><!-- Year End Review --></label>
+        <name>Year_End_Review__c</name>
+    </fields>
+    <fields>
+        <help><!-- This field contains the Regional Account Executive responsible for this account. --></help>
+        <label><!-- Regional Account Executive --></label>
+        <name>regional_account_executive__c</name>
+        <relationshipLabel><!-- Account Planning (Regional Account Executive) --></relationshipLabel>
+    </fields>
+    <layouts>
+        <layout>Account Plan FY 09</layout>
+        <sections>
+            <label><!-- Account Ownership --></label>
+            <section>Account Ownership</section>
+        </sections>
+        <sections>
+            <label><!-- Account Plan Details --></label>
+            <section>Account Plan Details</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Customer Communication Strategy --></label>
+            <section>Customer Communication Strategy</section>
+        </sections>
+        <sections>
+            <label><!-- Goals --></label>
+            <section>Goals</section>
+        </sections>
+        <sections>
+            <label><!-- Internal Communication Strategy --></label>
+            <section>Internal Communication Strategy</section>
+        </sections>
+        <sections>
+            <label><!-- Quarterly Check -in Timeline --></label>
+            <section>Quarterly Check -in Timeline</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Account Planning Layout</layout>
+        <sections>
+            <label><!-- Account Ownership --></label>
+            <section>Account Ownership</section>
+        </sections>
+        <sections>
+            <label><!-- Account Plan Details --></label>
+            <section>Account Plan Details</section>
+        </sections>
+        <sections>
+            <label><!-- Final area for Optional goals --></label>
+            <section>Final area for Optional goals</section>
+        </sections>
+        <sections>
+            <label><!-- Goal: Increase Volume --></label>
+            <section>Goal: Increase Volume</section>
+        </sections>
+        <sections>
+            <label><!-- Goal: Process Opportunity --></label>
+            <section>Goal: Process Opportunity</section>
+        </sections>
+        <sections>
+            <label><!-- Goal: Retain Volume --></label>
+            <section>Goal: Retain Volume</section>
+        </sections>
+        <sections>
+            <label><!-- Goal: Strategic Lender Partnership --></label>
+            <section>Goal: Strategic Lender Partnership</section>
+        </sections>
+        <sections>
+            <label><!-- Optional Goal --></label>
+            <section>Optional Goal</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- Account Plan FY 09 --></label>
+        <name>AccountPlanFY09</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- The name of the Account Plan must contain the current or upcoming year. --></errorMessage>
+        <name>Account_Plan_Name</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- NewAccountPlan --></label>
+        <name>NewAccountPlan</name>
+    </webLinks>
+</CustomObjectTranslation>

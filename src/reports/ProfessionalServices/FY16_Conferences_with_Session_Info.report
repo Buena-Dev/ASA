@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CAMPAIGN_NAME</field>
+    </columns>
+    <columns>
+        <field>START_DATE</field>
+    </columns>
+    <columns>
+        <field>END_DATE</field>
+    </columns>
+    <columns>
+        <field>Campaign.Location__c</field>
+    </columns>
+    <columns>
+        <field>Campaign.BDAttending__c</field>
+    </columns>
+    <columns>
+        <field>Campaign.Primary_BD__c</field>
+    </columns>
+    <columns>
+        <field>Campaign.Presenting__c</field>
+    </columns>
+    <columns>
+        <field>Campaign.Session_s_Presented__c</field>
+    </columns>
+    <description>FY16 Conference Campaigns with Session Info</description>
+    <filter>
+        <criteriaItems>
+            <column>RECORDTYPE</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Campaign.Conference</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>START_DATE</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>greaterOrEqual</operator>
+            <value>7/1/2015</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CAMPAIGN_STATUS</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Completed,In Progress</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>FY16 Conferences with Session Info</name>
+    <params>
+        <name>scopeid</name>
+        <value></value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CampaignList</reportType>
+    <scope>orgAll</scope>
+    <showDetails>true</showDetails>
+    <sortColumn>START_DATE</sortColumn>
+    <sortOrder>Asc</sortOrder>
+</Report>

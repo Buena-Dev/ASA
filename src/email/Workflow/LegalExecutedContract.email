@@ -1,0 +1,1 @@
+NOTIFICATION: {!Contract.Account} has been signed and returned and has start date as of {!Contract.StartDate}.

@@ -1,0 +1,5 @@
+A request for a new ProServices Event has been submitted via Salesforce to the Manager of Professional Services for review.  This email is sent only to notify the members of the Account Team for the {!Pro_Services_Offering__c.PS_OfferingAccount__c} Account that an event has been requested. No action is currently required by you at this time.
+
+This event will be reviewed by the Manger of Professional Services to determine if the Event can be accomodated by the Professional Services @ ASA team. If the Event Request can be accomodated, a member of the Professional Services @ ASA team will be assigned.  
+
+For more information on this event request, please visit {!Pro_Services_Offering__c.Link}.

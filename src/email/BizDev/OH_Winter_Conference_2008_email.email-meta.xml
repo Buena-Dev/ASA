@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>false</available>
+    <description>OH Winter Conference 2008 - mass email</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>EmailLetterhead</letterhead>
+    <name>OH Winter Conference 2008 - mass email</name>
+    <style>freeForm</style>
+    <subject>ASA Is Proud to Be a Part of OASFAA</subject>
+    <textOnly>Dear {!Contact.FirstName},
+ 
+American Student Assistance® (ASA) is excited to attend OASFAA and to discuss with you the value our products and services provide your students and your school. 
+ 
+At ASA, we prevent delinquency and default by giving students the right information at that right time. We offer borrowers in-person training during college and proactively contact them throughout repayment to ensure a successful student loan experience. While the national cohort default rate rose from 4.6 percent to 5.2 percent this past year, ASA&apos;s rate dropped to 1.4 percent—remaining the lowest among all national guarantors. 
+ 
+Additionally, ASA supports you with customized training sessions and updates on the latest industry and regulatory changes. This level of customer service, along with our loan processing experts’ ability to streamline your processes, allows you to spend your time on what matters most—your students and their families. 
+ 
+Please remember to stop by ASA’s booth at OASFAA to talk with our representatives about how our dedication and experience can help you succeed.
+
+ 
+ 
+Sincerely, 
+Matthew Nettleton
+ 
+Regional Account Executive
+American Student Assistance
+mnettleton@amsa.com
+(260) 982-6157
+ 
+
+
+  
+The content of this email is confidential and proprietary to American Student Assistance. It is intended only for the above-named individual or entity and for the purpose indicated and may not be reproduced or distributed without permission of the sender. Please notify the sender or ASA if you received this email in error.</textOnly>
+    <type>html</type>
+</EmailTemplate>

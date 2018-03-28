@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>false</available>
+    <description>Thank you letter for registering to attend the IN PDS - Oct 2007</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>SALTClientLetterhead</letterhead>
+    <name>Partnership Dialogue Series - IN - Thank you for Registering - Oct 2007</name>
+    <style>freeForm</style>
+    <subject>Registration Confirmation to attend ASA&apos;s Partnership Dialogue Series!</subject>
+    <textOnly>Dear {!Contact.FirstName},
+  
+Thank you for registering to attend ASA’s Partnership Dialogue Series: 
+A Focus on Communication. 
+  
+Date:  Thursday, October 18, 2007 
+Start Time:  8:30 am 
+Location:  Manchester College
+Laham Room, Union Building
+604 East College Ave
+North Manchester, IN 46962
+http://www.manchester.edu/Common/VisitingManchester/directions.htm
+ 
+
+Canceling Your Registration
+If you need to cancel or change your registration please email training@amsa.com or 1-800-999-9080, ext. 3099.
+
+We look forward to seeing you!</textOnly>
+    <type>html</type>
+</EmailTemplate>

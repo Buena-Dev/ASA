@@ -1,0 +1,52 @@
+<aura:component controller="c2g.CurrentCompanyLightningController" access="global" implements="force:appHostable,flexipage:availableForAllPageTypes">
+    
+    <!-- private attributes -->
+    <aura:attribute access="private" name="value" type="List"/>
+    <aura:attribute access="private" name="busy" type="Boolean"/>
+
+    <!-- event handlers -->
+    <aura:handler name="change" value="{!v.value}" action="{!c.onValueChange}"/>
+    <aura:handler name="init" value="{!this}" action="{!c.initComponent}" />
+
+    <lightning:card class="current-company-card">
+        <aura:set attribute="title">
+            <lightning:layout verticalAlign="center">
+                <lightning:layoutItem >
+                    <img src="{!$Resource.c2g__FFLogo}" alt="FinancialForce.com Logo" class="slds-icon slds-icon--small"/>
+                </lightning:layoutItem>
+                <lightning:layoutItem padding="horizontal-small">
+                    {!$Label.c2g.codaCurrentCompanyLightningComponentLabel}
+                </lightning:layoutItem>
+            </lightning:layout>
+        </aura:set>
+        <aura:set attribute="actions">
+            <lightning:buttonMenu alternativeText="More options" menuAlignment="right" onselect="{!c.onSelectButton}">
+                <lightning:menuItem label="Select All" value="selectAll"/>
+                <lightning:menuItem label="Deselect All" value="deselectAll"/>
+            </lightning:buttonMenu>
+        </aura:set>
+        <aura:set attribute="footer">
+            <c2g:currentCompanyLabel aura:id="companyLabel"/>
+        </aura:set>
+        <lightning:spinner variant="brand" class="{!if(v.busy, '', 'slds-hide')}"/>
+        <div class="slds-m-horizontal--medium">
+            <ul class="slds-has-dividers--bottom-space">
+                <aura:iteration items="{!v.value}" var="item" indexVar="idx">
+                    <li class="slds-item">
+                        <div class="slds-tiles">
+                            <div class="slds-form-element">
+                                <div class="slds-form-element__control">
+                                    <label class="slds-checkbox">
+                                        <input type="checkbox" name="companies" value="{!item.companyId}" checked="{!item.current}" class="companiesSelectionCheckbox" onchange="{!c.onCheckboxChange}"/>
+                                        <span class="slds-checkbox--faux"></span>
+                                        <span class="slds-form-element__label">{!item.companyName}</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </aura:iteration>
+            </ul>
+        </div>
+    </lightning:card>
+</aura:component>

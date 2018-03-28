@@ -1,0 +1,7 @@
+The following account has requested a contract with the following training service(s):
+
+{!Opportunity.Products_Services__c}: 
+
+Account:  {!Opportunity.Account}  {!Account.Link} 
+
+Opportunity: {!Opportunity.Link}

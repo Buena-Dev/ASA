@@ -1,0 +1,7 @@
+<!-- Copyright (c) 2015 FinancialForce.com, inc. All rights reserved. -->
+<design:component label="Profitability Reporting">
+    <design:attribute name="headerText" label="Header Text" description="Text that will appear in the header when the component is displayed" default="Profitability Report"/>
+	<design:attribute name="filterApiName" label="Filter API Name"  description="The API name of the field you want to filter on"/>
+	<design:attribute name="filterFieldValue" label="Filter Field Value"  description="The value you want to filter on"/>
+    <design:attribute name="recordId" label="Record ID"  description="The Salesforce ID of the record"/>
+</design:component>

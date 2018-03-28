@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>PD Day Denver/Oct 2008 *Reminder*</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>EmailLetterhead</letterhead>
+    <name>Colorado Professional Development Day - Oct. 2008</name>
+    <style>promotionRight</style>
+    <subject>Financial Aid Training Event - American Student Assistance</subject>
+    <textOnly>This is a friendly reminder of your registration for an American Student Assistance workshop that helps refine your skills and keeps you informed.  
+ 
+Keep up with some of the latest happenings in the financial aid industry. 
+National FFELP guarantor American Student Assistance® has designed a training event to discuss some of the hottest topics affecting financial aid offices! 
+ 
+Agenda:
+
+9:00 - 9:30      Breakfast/Registration 
+9:30 - 11:00 Financial Literacy: Getting Your Students to  Pay Attention 
+11:00 - 11:15   Break 
+11:15 - 12:30   High Profile: Increase Financial Aid Office Visibility and Impact on Campus 
+12:30 -1:30      Lunch 
+1:30 - 2:30pm  Go with the Flows: Optimizing Your Loan Processing
+Financial Literacy: Getting Your Students to Pay Attention 
+You’ve tried to provide information to your students on debt management, budgeting, or just general money management, but you don’t feel like they are getting it. Is there something you can be doing differently? Will they ever pay attention? Come to this session to learn strategies for targeting your information in ways that will get your students’ attention!
+ 
+High Profile: Increase Financial Aid Office Visibility and Impact on Campus
+What is your reputation on campus? Are you interested in making more of an impact on campus and with your students? Hear about strategies to increase the breadth of influence that the Financial Aid Office has on campus. Learn how to better communicate and work more effectively with various departments on your campus and in the community
+ 
+Go with the Flows: Optimizing Your Loan Processing
+Do you ever wonder why you send some certifications go to the lender, some to the guarantor, and some to the servicer? Why do you receive funds from many different institutions while another school receives all of their funds from just one place? What exactly does a guarantor do? What does a lender do? What does a servicer do? This session will bring to light the major FFELP players, as well as the available loan processing flows, including the vocabulary used by everyone involved with those flows. You will also gain a deeper understanding of your current loan processes and new tools to assist you in controlling and streamlining your processing.
+   
+
+
+Denver - Wednesday, October 15, 2008 
+
+
+University Center at Chaparral
+Room 103
+15653 Brookstone Drive
+Parker, CO  80134
+Parking is free
+http://www.the-university-center.org/map.html
+ 
+ 
+All of ASA&apos;s training events are offered free of charge.  Training is considered one of the guarantor&apos;s core responsibilities and ASA is dedicated to providing informative and useful training events for our industry colleagues.
+ 
+For more information please contact: 
+
+Sunsara &quot;Sunny&quot; Staninger
+Regional Account Executive
+American Student Assistance (ASA)
+Office: (800)999-9080 x 2106
+sstaninger@amsa.com
+www.amsa.com
+ 
+ 
+
+ 
+ 
+ 
+We are offering three topics in our workshop. 
+Please join us!
+ 
+Wednesday, Oct 15, 2008
+9:00am - 2:30pm
+ 
+Continental breakfast and lunch will be provided
+ 
+Register Online at 
+http://www.amsa.com/fap/training</textOnly>
+    <type>html</type>
+</EmailTemplate>

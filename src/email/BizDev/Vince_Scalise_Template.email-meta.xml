@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Salt_School_Channel</letterhead>
+    <name>Vince Scalise Template</name>
+    <style>freeForm</style>
+    <subject>Vince Scalise Email Template</subject>
+    <textOnly>Vince Scalise | Manager, Higher Education Partnerships
+
+Salt | American Student Assistance
+
+P: 315.749.3566 | 800.999.9080, ext. 2199 | E: vscalise@asa.org
+100 Cambridge Street, Suite 1600 | Boston, MA 02114</textOnly>
+    <type>html</type>
+</EmailTemplate>

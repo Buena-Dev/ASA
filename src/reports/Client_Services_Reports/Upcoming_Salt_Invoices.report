@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>ACCOUNT_NAME</field>
+    </columns>
+    <columns>
+        <field>FK_$c2g__codaInvoice__c.c2g__InvoiceTotal__c</field>
+    </columns>
+    <columns>
+        <field>FK_$c2g__codaInvoice__c.c2g__InvoiceDate__c</field>
+    </columns>
+    <columns>
+        <field>Contract.Invoice_Frequency__c</field>
+    </columns>
+    <columns>
+        <field>Contract.Remaining_Invoices__c</field>
+    </columns>
+    <columns>
+        <field>START_DATE</field>
+    </columns>
+    <columns>
+        <field>END_DATE</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>TYPE</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>School,School - 2 Year Private,School - 2 Year Public,School - 3 Year School,School - 4 Year Private,School - 4 Year Public,School - Grad/Profession,School - Liberal Arts,School  - Proprietary,School - Voc or Tech</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>END_DATE</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>greaterThan</operator>
+            <value>TODAY</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Upcoming Salt Invoices</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>ContractList@Contract.Sales_Invoice__c</reportType>
+    <showDetails>true</showDetails>
+    <sortColumn>FK_$c2g__codaInvoice__c.c2g__InvoiceDate__c</sortColumn>
+    <sortOrder>Desc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

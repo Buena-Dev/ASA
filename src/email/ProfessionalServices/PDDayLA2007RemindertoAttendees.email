@@ -1,0 +1,24 @@
+<table cellpadding="5" width="550" height="400" cellspacing="5" border="0" >
+<tr height="400" valign="top" >
+<td locked="0" style=" font-family:arial; bLabel:main; color:#000000; font-size:12pt; bEditID:r3st1; background-color:#FFFFFF;" aEditID="c1r1" tEditID="c1r1" >
+<![CDATA[<P><FONT color=#000000>This is a friendly reminder of your registration for an American Student Assistance training event</FONT><BR>
+<P>&nbsp;</P>
+<P>You've been registered for the <STRONG>Louisiana</STRONG> <STRONG>Professional Development Day.<BR></STRONG>&nbsp;<BR>Date:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; September 14, 2007</P>
+<P>Time:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8:30am - 3:00pm</P>
+<P>Location:&nbsp;&nbsp;&nbsp;&nbsp; Xavier University of Louisiana</P>
+<P>Directions:&nbsp; <A href="http://www.xula.edu/VisitorXU.html">http://www.xula.edu/VisitorXU.html</A> 
+<SCRIPT type=text/javascript>
+function init() {
+ var eteu = new EmailTemplateEditorUi('blank - ignore',false, 'editPage');
+eteu.init();
+}</SCRIPT>
+</P>
+<P>&nbsp;</P>
+<P><EM>Continental breakfast and lunch will be served.</EM></P>
+<P><BR><STRONG>Canceling Your Registration</STRONG><BR>If you need to cancel or change your training registration please email <A title=mailto:training@amsa.com href="mailto:training@amsa.com">training@amsa.com</A> or 1-800-999-9080, ext. 3099.</P>
+<P><BR><STRONG>Other Information</STRONG><BR>All of ASA's training programs are offered free of charge.&nbsp; Please contact us at <A title=mailto:training@amsa.com href="mailto:training@amsa.com">training@amsa.com</A> or 1-800-999-9080, ext. 3099 with any questions about our training program.</P>
+<P>&nbsp;</P>
+<P class=section1 style="MARGIN: 0in 0in 0pt"><FONT face=Arial><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: Arial"><FONT size=3>In case of inclement weather, please call the number above to check for a delayed start or class cancellation.&nbsp; Updates will be done by 6:15am on the day of training.<?xml:namespace prefix = o ns = "urn:schemas-microsoft-com:office:office" /><o:p></o:p></FONT></SPAN></FONT></P>
+<P><BR>We look forward to seeing you! <BR></P>]]></td>
+</tr>
+</table>

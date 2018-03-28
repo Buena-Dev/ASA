@@ -1,0 +1,66 @@
+<!-- CODAMassEmail -->
+<apex:page Controller="c2g.CODAMassEmailController" extensions="c2g.CODAHelpLoaderController">
+    <script src="{!URLFOR($Resource.coda2go,'coda2go/web/script/lib.js')}" type="text/javascript"></script>
+    <script>
+        CODA.documentFunctionTimer("keyup", CODA.executeQueue, 1500);
+        CODA.documentFunctionTimer("click", CODA.executeQueue, 1500);
+        var CODA2GoButtons = new CODA2GoPage();
+        var CODA2GoBtnSaveValue = "{!$Label.codaPageMassEmailProcessing}";        
+    </script>
+    <apex:stylesheet value="{!URLFOR($Resource.c2g__coda2go,'coda2go/web/css/style.css')}"/>
+    
+    <apex:form onsubmit="if(CODA2GoButtons.disableSaveButtons){ return CODA2GoButtons.disableSaveButtons(); }">
+
+        <!-- Header -->
+        <apex:sectionHeader title="{!$Label.c2g__codapagemassemailtitle}" subtitle="{!$Label.c2g__codapagemassemailsend}" help="{!redirectForHelp1062}"/>
+
+        <!-- Bulk eMail Details -->
+        <apex:pageBlock title="{!$Label.c2g__codapagemassemailsectiondetails}"  id="MassEmailBlock" mode="edit">
+
+            <!-- Buttons -->
+            <apex:pageBlockButtons >  
+                <!-- Hidden Buttons -->
+                <apex:commandButton value="{!$Label.c2g__codapagemassemailsend}" action="{!send}" id="send_h" styleclass="hiddensubmit" />
+
+                <!-- Buttons -->
+                <apex:commandButton value="{!$Label.c2g__codapagemassemailsend}" id="send" rerender="" onclick="if(!CODA.queing()){document.getElementById('{!$Component.send_h}').click()};return false;" />
+
+                <script>
+                    CODA2GoButtons.initButtons(["{!$Component.send}"]);
+                </script>
+            </apex:pageBlockButtons>
+
+            <!-- Messages -->
+			<apex:pageMessages />
+
+            <!-- Page Detail -->
+            <apex:pageBlockSection id="massEmailDetail" title="{!$Label.c2g__codapagemassemailtitle}" columns="2" collapsible="false">
+
+				<apex:pageBlockSectionItem >
+					<apex:outputLabel for="selectionField" value="{!$Label.c2g__codapagemassemailselectionfield}"/>
+					<apex:outputPanel >
+						<apex:inputField id="selectionField" value="{!viewstate.SelectionLookup.dto.c2g__Selection__c}"/>
+					</apex:outputPanel>
+				</apex:pageBlockSectionItem>
+
+				<apex:pageBlockSectionItem >
+					<apex:outputLabel for="emailTemplateDetailField" value="{!$Label.c2g__codapagemassemailtemplatefield}"/>
+					<apex:outputPanel >
+						<apex:selectList id="emailTemplateDetailField" value="{!viewstate.emailTemplates}" multiselect="false" size="1">
+							<apex:selectOptions value="{!viewstate.fillEmailTemplates}"/>
+						</apex:selectList>
+					</apex:outputPanel>
+				</apex:pageBlockSectionItem> 
+				
+				<apex:pageBlockSectionItem >
+				    <apex:outputLabel for="GroupByAccount" value="{!$Label.c2g__codamassemailpagegroupbyaccount}"/>
+				    <apex:inputCheckbox id="GroupByAccount" value="{!viewstate.GroupByAccount}" disabled="false" />
+            	</apex:pageBlockSectionItem> 		 
+			
+           </apex:pageBlockSection>
+
+        </apex:pageBlock>
+    
+    </apex:form>
+    
+</apex:page>

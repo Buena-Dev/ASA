@@ -1,0 +1,15 @@
+<!-- Copyright (c) 2015 FinancialForce.com, inc. All rights reserved. -->
+<aura:component >
+	<aura:attribute name="isError" type="Boolean"/>
+	<aura:attribute name="messages" type="String[]"/>
+	<aura:attribute name="class" type="String"/>
+
+	<aura:renderIf isTrue="{!v.messages.length > 0}">
+		<div class="{!'slds-box slds-notify slds-notify--alert slds-theme--alert-texture ' + (v.isError ? ' slds-theme--error ': '') + v.class}" role="alert">
+			<aura:iteration var="message" items="{!v.messages}">
+				<h2>{!message}</h2>
+			</aura:iteration>
+		</div>
+	</aura:renderIf>
+
+</aura:component>

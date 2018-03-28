@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>false</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ReadWrite</externalSharingModel>
+    <fields>
+        <fullName>City__c</fullName>
+        <externalId>false</externalId>
+        <formula>Secondary_School__r.City__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>City</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Is_Active__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Is Active</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Is_Target_School_for_Program_s__c</fullName>
+        <externalId>false</externalId>
+        <label>Is Target School for Program(s)</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>EOC Brockton</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>EOC Boston</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>TS Brockton</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>TS Boston</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>UB Brockton</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Legacy_ID__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <externalId>true</externalId>
+        <label>Legacy ID</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>NCES_School_ID__c</fullName>
+        <externalId>false</externalId>
+        <formula>Secondary_School__r.NCES_School_ID__c</formula>
+        <label>NCES School ID #</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Report_Support_1__c</fullName>
+        <externalId>false</externalId>
+        <label>Report Support 1</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Report_Support_2__c</fullName>
+        <externalId>false</externalId>
+        <label>Report Support 2</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Report_Support_3__c</fullName>
+        <externalId>false</externalId>
+        <label>Report Support 3</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Report_Support_4__c</fullName>
+        <externalId>false</externalId>
+        <label>Report Support 4</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Secondary_School_Name__c</fullName>
+        <externalId>false</externalId>
+        <formula>Secondary_School__r.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Secondary School Name</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Secondary_School__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <description>Is Target School</description>
+        <externalId>false</externalId>
+        <label>Secondary School</label>
+        <referenceTo>Secondary_School__c</referenceTo>
+        <relationshipLabel>Targeted Schools</relationshipLabel>
+        <relationshipName>Targeted_Schools</relationshipName>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Service_Year__c</fullName>
+        <externalId>false</externalId>
+        <label>Service Year</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>2017-2018</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>2018-2019</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>2019-2020</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>State__c</fullName>
+        <externalId>false</externalId>
+        <formula>Secondary_School__r.State__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>State</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Supports_Dual_Enrollment__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Supports Dual Enrollment</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Unique_Targeted_School_Name__c</fullName>
+        <externalId>false</externalId>
+        <formula>Secondary_School__r.Name +&apos;(&apos;+TEXT( Service_Year__c )+&apos;)&apos;</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Unique Targeted School Name</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Zip__c</fullName>
+        <externalId>false</externalId>
+        <formula>Secondary_School__r.Zip__c</formula>
+        <label>Zip</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Targeted School</label>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>TS_Boston_Active_Target_Schools</fullName>
+        <columns>NAME</columns>
+        <columns>Is_Target_School_for_Program_s__c</columns>
+        <columns>NCES_School_ID__c</columns>
+        <columns>Secondary_School_Name__c</columns>
+        <columns>City__c</columns>
+        <columns>State__c</columns>
+        <columns>Zip__c</columns>
+        <columns>Supports_Dual_Enrollment__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Is_Target_School_for_Program_s__c</field>
+            <operation>includes</operation>
+            <value>TS Boston</value>
+        </filters>
+        <filters>
+            <field>Is_Active__c</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <label>TS Boston Active Target Schools</label>
+    </listViews>
+    <listViews>
+        <fullName>TS_Brockon_Active_Target_Schools</fullName>
+        <columns>NAME</columns>
+        <columns>Is_Target_School_for_Program_s__c</columns>
+        <columns>NCES_School_ID__c</columns>
+        <columns>Secondary_School_Name__c</columns>
+        <columns>City__c</columns>
+        <columns>State__c</columns>
+        <columns>Zip__c</columns>
+        <columns>Supports_Dual_Enrollment__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Is_Target_School_for_Program_s__c</field>
+            <operation>includes</operation>
+            <value>TS Brockton</value>
+        </filters>
+        <filters>
+            <field>Is_Active__c</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <label>TS Brockton Active Target Schools</label>
+    </listViews>
+    <listViews>
+        <fullName>Target_School_Info</fullName>
+        <columns>NAME</columns>
+        <columns>City__c</columns>
+        <columns>Is_Active__c</columns>
+        <columns>Is_Target_School_for_Program_s__c</columns>
+        <columns>NCES_School_ID__c</columns>
+        <columns>Secondary_School__c</columns>
+        <columns>Secondary_School_Name__c</columns>
+        <columns>Service_Year__c</columns>
+        <columns>State__c</columns>
+        <columns>Supports_Dual_Enrollment__c</columns>
+        <columns>Zip__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>Target School Info</label>
+    </listViews>
+    <nameField>
+        <label>Targeted School Name</label>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Targeted Schools</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>Targeted_School_Name_Must_Be_Unique</fullName>
+        <active>true</active>
+        <errorConditionFormula>and(
+    Unique_Targeted_School_Name__c = VLOOKUP
+       ($ObjectType.Targeted_School__c.Fields.Name , $ObjectType.Targeted_School__c.Fields.Name, Unique_Targeted_School_Name__c ),
+
+    not(
+     Id=VLOOKUP
+         ($ObjectType.Targeted_School__c.Fields.Id , $ObjectType.Targeted_School__c.Fields.Name, Unique_Targeted_School_Name__c )))</errorConditionFormula>
+        <errorMessage>There is already an existing Target School for the same Secondary School and Service Year.</errorMessage>
+    </validationRules>
+</CustomObject>

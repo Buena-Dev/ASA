@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>BPM_ASA_Letterhead</letterhead>
+    <name>ASA Info Requested</name>
+    <style>formalLetter</style>
+    <subject>Information requested from ASA</subject>
+    <textOnly>Dear {!Contact.FirstName},
+
+Thank you for contacting American Student Assistance® (ASA). Here is some additional information that you may find useful.
+
+{!Case.Solution_Description} 
+
+If you have any other questions or concerns, please email us at AskASA@asa.org.
+
+Thank you,
+
+American Student Assistance
+
+{!Case.Solution_Attachments}
+
+{!Case.Articles_as_PDFs}
+
+Call Center Hours: Monday – Thursday: 8:00 a.m. – 8:00 p.m. ET; Friday: 8:00 a.m. – 5:00 p.m. ET
+
+You are receiving this message because of your relationship with American Student Assistance® (ASA). It is confidential and proprietary to ASA® and intended as a private communication. Do not reproduce or distribute it without permission from ASA. If you are not the intended recipient, please notify ASA immediately by replying to this message, then destroy all copies of it without reading or disclosing its contents.
+
+American Student Assistance, ASA, Salt, &quot;Education Unlocked. Dreams Unlimited.&quot;, Delta-A, and corresponding logos are registered trademarks of American Student Assistance. Other marks are the property of their respective owners.
+
+American Student Assistance, 100 Cambridge Street, Suite 1600, Boston, MA 02114, USA 
+©2017 American Student Assistance. All rights reserved.
+Privacy Policy</textOnly>
+    <type>html</type>
+</EmailTemplate>

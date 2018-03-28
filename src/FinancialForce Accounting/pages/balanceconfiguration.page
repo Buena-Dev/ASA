@@ -1,0 +1,40 @@
+<apex:page controller="c2g.BalanceConfigurationController" extensions="c2g.CODAHelpLoaderController">
+	<apex:stylesheet value="{!URLFOR($Resource.c2g__coda2go,'coda2go/web/css/style.css')}"/>
+	<apex:stylesheet value="{!URLFOR($Resource.c2g__front,'front/pages/balanceconfiguration/balanceconfiguration.css')}"/>
+	<apex:form >
+		<apex:sectionHeader title="{!$Label.c2g__balanceupdatebalanceconfigurationtitle}" help="{!redirectForHelp1350}"/>
+		<apex:pageMessages id="errorMessages"/>
+		<apex:pageBlock >
+			<!-- Top button -->
+			<apex:pageBlockButtons location="top">
+				<apex:commandButton value="switchMode" action="{!switchMode}" styleclass="hiddensubmit switchMode_h"/>
+				<apex:commandButton value="showAlreadyInCurrentErrorMessage" action="{!showAlreadyInCurrentErrorMessage}" styleclass="hiddensubmit showError_h" rerender="errorMessages"/>
+				<apex:commandButton value="{!$Label.c2g__balanceupdatecontinue}" onclick="return $FFDC.checkCurrentModeAndShowPopup('{!CurrentMode}');" styleClass="btn switchMode"/>
+				<apex:commandButton value="resetPageMessages" action="{!resetPageMessages}" styleclass="hiddensubmit resetPageMessages_h" rerender="errorMessages"/>
+			</apex:pageBlockButtons>
+
+			<p class="balance-configuration-header">
+				<apex:outputText value="{!$Label.c2g__balanceupdatebalanceconfigurationheader}"/>
+			</p>
+			<p class="balance-configuration-header">
+				<apex:outputText value="{!$Label.c2g__balanceupdatebalanceconfigurationheader2}"/>
+                <c:Tooltip content="{!$Label.c2g__balanceupdatebalanceconfigurationtooltip}" href="{!redirectForHelp1362URL}"/>
+			</p>
+
+			<!-- Radio inputs -->
+			<apex:selectRadio value="{!SelectedMode}" layout="pageDirection" styleClass="switchModeRadio">
+				<apex:selectOption itemLabel="{!$Label.c2g__balanceupdatebalanceconfigurationmode1}" itemValue="{!UpdateBudgetsAndBalancesFromTransactions}"/>
+				<apex:selectOption itemLabel="{!$Label.c2g__balanceupdatebalanceconfigurationmode2}" itemValue="{!UpdateReportingBalancesFromTransactions}"/>
+			</apex:selectRadio>
+
+			<!-- Bottom button -->
+			<apex:pageBlockButtons location="bottom">
+				<apex:commandButton value="{!$Label.c2g__balanceupdatecontinue}" onclick="return $FFDC.checkCurrentModeAndShowPopup('{!CurrentMode}');" styleClass="btn switchMode"/>
+			</apex:pageBlockButtons>
+
+			<!-- Pop-up -->
+			<c:ModalPopup popup="{!Popup}"/>
+		</apex:pageBlock>
+	</apex:form>
+	<apex:includeScript value="{!URLFOR($Resource.c2g__front,'front/pages/balanceconfiguration/balanceconfiguration.js')}"/>
+</apex:page>

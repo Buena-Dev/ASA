@@ -1,0 +1,38 @@
+<apex:page controller="c2g.GroupStructureController" sidebar="false" showHeader="true" standardStylesheets="false" docType="html-5.0">
+
+    <!-- User Locale -->
+    <c:fflib_bridgeUserInfo />
+
+    <!-- ExtJS Application -->
+    <c:fflib_extBootstrap applicationName="GroupStructure" staticResource="{!$Resource.c2g__GroupStructure}" developmentPrefix="{!$Setup.ClientDeveloperSettings__c.ResourcePrefix__c}">
+    	<c:TranslationHelper />
+    	<script>
+			window.$RemoteAction = window.$RemoteAction || {};
+			window.$Params = window.$Params || {};
+			window.$Label = window.$Label || {};
+
+			/** Remote Actions **/
+			$RemoteAction.GroupStructureController = $RemoteAction.GroupStructureController || {};
+			$RemoteAction.GroupStructureController.getGroupStructure = '{!$RemoteAction.GroupStructureController.getGroupStructure}';
+			$RemoteAction.GroupStructureController.getRelatedCompanies = '{!$RemoteAction.GroupStructureController.getRelatedCompanies}';
+
+			/** Labels **/
+			$Label.GroupStructureAppHeaderTitle = '{!JSENCODE($Label.GroupStructureAppTitle)}';
+			$Label.GroupStructureUngroupedCompanies = '{!JSENCODE($Label.GroupStructureUngroupedCompanies)}';
+			$Label.GroupStructureNotFound = '{!JSENCODE($Label.GroupStructureNotFound)}';
+			$Label.GroupStructureCompanyMenuOptionDetails = '{!JSENCODE($Label.GroupStructureCompanyMenuOptionDetails)}';
+			$Label.GroupStructureCompanyMenuOptionOwners = '{!JSENCODE($Label.GroupStructureCompanyMenuOptionOwners)}';
+			$Label.GroupStructureCompanyMenuOptionSubsidiaries = '{!JSENCODE($Label.GroupStructureCompanyMenuOptionSubsidiaries)}';
+			$Label.GroupStructureCompanyPopupSubsidiariesTitle = '{!JSENCODE($Label.GroupStructureCompanyPopupSubsidiariesTitle)}';
+			$Label.GroupStructureCompanyPopupOwnersTitle = '{!JSENCODE($Label.GroupStructureCompanyPopupOwnersTitle)}';
+			$Label.GroupStructureCompanyPopupCompanyColumnTitle = '{!JSENCODE($Label.GroupStructureCompanyPopupCompanyColumnTitle)}';
+			$Label.GroupStructureCompanyPopupOwnershipColumnTitle = '{!JSENCODE($Label.GroupStructureCompanyPopupOwnershipColumnTitle)}';
+			$Label.GroupStructureCompanyPopupClose = '{!JSENCODE($Label.GroupStructureCompanyPopupClose)}';
+
+			/** Params **/
+			$Params.NODE_MENU_COMPANY_SUBSIDIARIES = '{!JSENCODE(NODE_MENU_COMPANY_SUBSIDIARIES)}';
+			$Params.NODE_MENU_COMPANY_OWNERS = '{!JSENCODE(NODE_MENU_COMPANY_OWNERS)}';
+		</script>
+	</c:fflib_extBootstrap>
+
+</apex:page>

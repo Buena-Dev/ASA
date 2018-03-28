@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>false</available>
+    <description>2nd Symposium registration email</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>EmailLetterhead</letterhead>
+    <name>Symposium Invite to Register 2</name>
+    <style>freeForm</style>
+    <subject>Still time to register for the ASA Symposium</subject>
+    <textOnly>It’s not too late to register for American Student Assistance’s annual symposium, Insights: A Conversation on Student Debt!  Join your colleagues from around the country in a thoughtful discussion on the short- and long-term impact of debt on students.  Does the possibility of excessive debt play a role in students’ college and career decisions?  Let’s talk about what we as an industry can do to lessen the impact of debt—so that students make the life choices they want rather than those they must for financial reasons.
+ 
+We have some exciting speakers and sessions scheduled, including:
+
+National political correspondent and author Juan Williams 
+Economist, author, activist and CEO Julianne Malveaux 
+“The Student Debt Dilemma” with Robert Shireman of TICAS 
+Roundtable on  “Counseling Graduate Students and Families on Debt” 
+“How Much Debt Is Too Much?” with Sandy Baum 
+Authors Tamara Draut, Strapped: Why America&apos;s 20- and 30-Somethings Can’t Get Ahead, and Anya Kamenetz, Generation Debt: Why Now Is a Terrible Time to Be Young
+ 
+This year we’ll also be honoring some of the industry’s brightest contributors and pioneers, as well as celebrating ASA’s 50th anniversary.  The symposium will take place at the conveniently located Hyatt Harborside Hotel at Boston’s Logan International Airport—minutes away from downtown Boston, Faneuil Hall Marketplace, and more.  For reservations, call 617-568-1234 by May 25 to get a special low rate of $189.  
+
+More details and online registration are now available.  If you have any questions or need additional information, please contact your ASA client manager or regional representative.  See you in June!</textOnly>
+    <type>html</type>
+</EmailTemplate>

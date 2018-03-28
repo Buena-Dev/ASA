@@ -1,0 +1,11 @@
+Greetings, 
+
+{!Account.Name}, OE Code: {!Account.OE_Code__c} has reached their goal to have their MPNs completed.  This means that the school will recieve all of their disbursements as requested.
+
+Great job by the Account Team!
+
+Congratulations!
+
+
+
+Sent via Salesforce.com

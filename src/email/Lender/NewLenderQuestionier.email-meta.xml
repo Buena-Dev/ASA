@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>false</available>
+    <description>Cover email for New Lender Questionier sent out from Process flow manager</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>SALTClientLetterhead</letterhead>
+    <name>New Lender Questionier</name>
+    <style>formalLetter</style>
+    <subject>Information needed {!Account.Name}  {!Account.OE_Code__c}</subject>
+    <textOnly>Dear {!Contact.FirstName} 
+ Bill Fortier has forwarded me copies of the signed guarantee and full service agreements for the above LID.  In order to set this lender code up as accurately as possible, I am forwarding you our Profile Information Form.  I would appreciate it if you would complete it and forward it back to me via e-mail.  I will be happy to answer any questions you may have about this form or assist you in any way possible.  My phone and e-mail information is given below.
+
+Sincerely,
+{!User.Username}
+{!User.Title}
+{!User.Phone}
+{!User.Email}</textOnly>
+    <type>html</type>
+</EmailTemplate>

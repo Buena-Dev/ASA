@@ -1,0 +1,65 @@
+<table width="550" cellpadding="5" height="400" border="0" cellspacing="5" >
+<tr height="400" valign="top" >
+<td locked="0" style=" font-family:arial; bLabel:main; color:#000000; font-size:12pt; bEditID:r3st1; background-color:#FFFFFF;" aEditID="c1r1" tEditID="c1r1" >
+<![CDATA[<TABLE height=400 cellSpacing=5 cellPadding=5 width=600 border=0>
+<TBODY>
+<TR vAlign=top height=50>
+<TD style="FONT-SIZE: 12pt; COLOR: #000000; FONT-FAMILY: arial; BACKGROUND-COLOR: #ffffff; bLabel: main; bEditID: r3st1" tEditID="c1r1" aEditID="c1r1" locked="1"><FONT face=Geneva,Arial,Sans-Serif size=5></FONT></TD></TR>
+<TR vAlign=top height=300>
+<TD style="FONT-SIZE: 12pt; COLOR: #000000; FONT-FAMILY: arial; BACKGROUND-COLOR: #ffffff; bLabel: main; bEditID: r3st1" tEditID="c1r2" aEditID="c1r2" locked="0">
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT face=Geneva,Arial,Sans-Serif>Dear {!Contact.FirstName}, </FONT></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT face=Geneva,Arial,Sans-Serif>&nbsp;</FONT></P>
+<H4 style="MARGIN: 0in 0in 0pt"><SPAN style="FONT-WEIGHT: normal; COLOR: black; FONT-FAMILY: Arial; mso-bidi-font-weight: bold">
+<H4 style="MARGIN: 0in 0in 0pt"><SPAN style="FONT-WEIGHT: normal; COLOR: black; FONT-FAMILY: Arial; mso-bidi-font-weight: bold">American Student Assistance® (ASA) is pleased to announce that we have achieved the lowest cohort default rate of all FFELP guarantors in the nation, demonstrating once again that Wellness works!<?xml:namespace prefix = o ns = "urn:schemas-microsoft-com:office:office" /><o:p></o:p></SPAN></H4>
+<H4 style="BACKGROUND: white; MARGIN: 0in 0in 0pt"><SPAN style="FONT-WEIGHT: normal; COLOR: black; FONT-FAMILY: Arial; mso-bidi-font-weight: bold"><o:p>&nbsp;</o:p></SPAN></H4>
+<H4 style="BACKGROUND: white; MARGIN: 0in 0in 0pt"><SPAN style="FONT-WEIGHT: normal; COLOR: black; FONT-FAMILY: Arial; mso-bidi-font-weight: bold">ASA's 2005 cohort default rate of 1.5 percent is the lowest among the nation's 35 guarantors. This marks the seventh year in a row that ASA has achieved the lowest cohort rate among the nation’s 10 largest guarantors. <o:p></o:p></SPAN></H4>
+<H4 style="BACKGROUND: white; MARGIN: 0in 0in 0pt"><SPAN style="FONT-WEIGHT: normal; COLOR: black; FONT-FAMILY: Arial; mso-bidi-font-weight: bold"><o:p>&nbsp;</o:p></SPAN></H4><SPAN style="FONT-SIZE: 12pt; COLOR: black; FONT-FAMILY: Arial; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">When we adopted our Voluntary Flexible Agreement (VFA) with the U.S. Department of Education in 2001, our innovative financing structure was developed so that we are paid for keeping borrowers healthy, instead of the traditional model where guarantors benefit from borrower defaults. We then began creating our Wellness suite of products and services for borrowers. One example is&nbsp;<SPAN style="FONT-WEIGHT: normal; COLOR: black; FONT-FAMILY: Arial; mso-bidi-font-weight: bold"><A href="http://www.journeysonline.org/home/"><FONT color=#3333ff><EM>Journeys</EM></FONT></A>,</SPAN> our interactive, electronic magazine sent to all borrowers with an ASA guarantee. Borrowers begin receiving&nbsp;Journeys</SPAN></SPAN><SPAN style="FONT-WEIGHT: normal; COLOR: black; FONT-FAMILY: Arial; mso-bidi-font-weight: bold"><FONT color=#000000>&nbsp;</FONT><FONT color=#3333ff><SPAN style="FONT-SIZE: 12pt; COLOR: black; FONT-FAMILY: Arial; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">during their grace periods, and they continue receiving it throughout the critical first 18 months of repayment.</SPAN></FONT></SPAN></H4>
+<H4 style="BACKGROUND: white; MARGIN: 0in 0in 0pt"><SPAN style="FONT-WEIGHT: normal; COLOR: black; FONT-FAMILY: Arial; mso-bidi-font-weight: bold"><o:p>&nbsp;</o:p></SPAN></H4>
+<H4 style="BACKGROUND: white; MARGIN: 0in 0in 0pt"><SPAN style="FONT-WEIGHT: normal; COLOR: black; FONT-FAMILY: Arial; mso-bidi-font-weight: bold">We credit much of our cohort default rate success to our relationships with our school and lender partners who embrace our Wellness philosophy and services.&nbsp; If you have any questions or would like more information about Wellness, please contact me at {!Contact.OwnerPhone}&nbsp;or {!Contact.OwnerEmail}<BR></SPAN></H4>
+<H4 style="MARGIN: 0in 0in 0pt"><SPAN style="FONT-WEIGHT: normal; COLOR: black; FONT-FAMILY: Arial; mso-bidi-font-weight: bold"><FONT face=Geneva,Arial,Sans-Serif>&nbsp;</FONT></SPAN></H4>
+<P style="MARGIN: 0in 0in 0pt; LINE-HEIGHT: normal">
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt">
+<P></P>
+<P></P>
+<P></P>
+<P><FONT face=Geneva,Arial,Sans-Serif></FONT>
+<P><FONT face=Geneva,Arial,Sans-Serif></FONT>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT face=Geneva,Arial,Sans-Serif></FONT>
+<P><FONT face=Geneva,Arial,Sans-Serif></FONT></P>
+<P><FONT face=Geneva,Arial,Sans-Serif></FONT></P>
+<P><FONT face=Geneva,Arial,Sans-Serif></FONT></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT face=Geneva,Arial,Sans-Serif></FONT>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT face=Geneva,Arial,Sans-Serif></FONT>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt"><SPAN style="COLOR: black; FONT-FAMILY: Geneva; mso-bidi-font-family: Arial"><o:p><SPAN style="FONT-FAMILY: Arial"><o:p><SPAN style="FONT-FAMILY: 'Palatino Linotype'"><SPAN style="FONT-FAMILY: 'Palatino Linotype'"><SPAN style="FONT-FAMILY: Arial"><o:p><SPAN style="FONT-FAMILY: Arial"><SPAN style="FONT-FAMILY: 'Palatino Linotype'; mso-bidi-font-family: Arial"><SPAN style="FONT-FAMILY: 'Palatino Linotype'; mso-bidi-font-family: Arial"><o:p><FONT face=Geneva,Arial,Sans-Serif><SPAN style="FONT-FAMILY: Arial">Sincerely,<o:p></o:p></SPAN> </FONT></P>
+<P><FONT face=Geneva,Arial,Sans-Serif></FONT></P>
+<P><FONT face=Geneva,Arial,Sans-Serif></FONT></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt"><SPAN style="FONT-FAMILY: Arial"><o:p><FONT face=Geneva,Arial,Sans-Serif>&nbsp;</FONT></o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt"><SPAN style="FONT-FAMILY: Arial"><o:p><FONT face=Geneva,Arial,Sans-Serif></FONT></o:p></SPAN></o:p></P>
+<P><FONT face=Geneva,Arial,Sans-Serif></FONT></P>
+<P><FONT face=Geneva,Arial,Sans-Serif></FONT></P>
+<P><FONT face=Geneva,Arial,Sans-Serif></FONT></P>
+<P><FONT face=Geneva,Arial,Sans-Serif></FONT></P>
+<P><FONT face=Geneva,Arial,Sans-Serif></FONT></P>
+<P><FONT face=Geneva,Arial,Sans-Serif></FONT></P>
+<P><FONT face=Geneva,Arial,Sans-Serif></FONT></P>
+<P><FONT face=Geneva,Arial,Sans-Serif></FONT></P>
+<P><FONT face=Geneva,Arial,Sans-Serif></FONT></P>
+<P><FONT face=Geneva,Arial,Sans-Serif></FONT></P>
+<P><FONT face=Geneva,Arial,Sans-Serif></FONT></P>
+<P></P>
+<P></P>
+<P></P>
+<P></P></SPAN></SPAN></SPAN></o:p></SPAN></SPAN></SPAN></o:p></SPAN></o:p></SPAN>
+<P><FONT face=Geneva,Arial,Sans-Serif></FONT></P>
+<P><FONT face=Geneva,Arial,Sans-Serif></FONT></P>
+<P><FONT face=Geneva,Arial,Sans-Serif></FONT></P>
+<P><FONT face=Geneva,Arial,Sans-Serif></FONT></P>
+<DIV class=MsoNormal style="MARGIN: 0in 0in 0pt; mso-list: l0 level1 lfo1; tab-stops: list .5in"><FONT face=Geneva,Arial,Sans-Serif>{!Contact.OwnerFullName}</FONT></DIV>
+<DIV class=MsoNormal style="MARGIN: 0in 0in 0pt; mso-list: l0 level1 lfo1; tab-stops: list .5in"><FONT face=Geneva,Arial,Sans-Serif>{!Contact.OwnerTitle}</FONT></DIV>
+<DIV class=MsoNormal style="MARGIN: 0in 0in 0pt; mso-list: l0 level1 lfo1; tab-stops: list .5in"><FONT face=Geneva,Arial,Sans-Serif>American Student Assistance</FONT></DIV>
+<DIV class=MsoNormal style="MARGIN: 0in 0in 0pt; mso-list: l0 level1 lfo1; tab-stops: list .5in"><FONT face=Geneva,Arial,Sans-Serif><FONT face=Geneva,Arial,Sans-Serif><BR></FONT><BR></FONT><FONT face=Geneva,Arial,Sans-Serif size=1>The content of this email is confidential and proprietary to American Student Assistance. It is intended only for the above-named individual or entity and for the purpose indicated and may not be reproduced or distributed without permission of the sender. Please notify the sender or ASA if you received this email in error.</FONT></DIV></TD></TR>
+<TR vAlign=top height=50>
+<TD style="FONT-SIZE: 12pt; COLOR: #000000; FONT-FAMILY: arial; BACKGROUND-COLOR: #ffffff; bLabel: main; bEditID: r3st1" tEditID="c1r3" aEditID="c1r3" locked="1">
+<P><FONT face=Geneva,Arial,Sans-Serif size=1></FONT>&nbsp;</P></TD></TR></TBODY></TABLE>]]></td>
+</tr>
+</table>

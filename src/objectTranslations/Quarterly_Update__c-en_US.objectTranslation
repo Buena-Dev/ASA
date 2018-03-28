@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Quarterly Update</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Quarterly Updates</value>
+    </caseValues>
+    <fields>
+        <label><!-- Account Name --></label>
+        <name>Account_Name__c</name>
+        <relationshipLabel><!-- Quarterly Updates --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- This field will capture the key discussion points/suggestions for the call - from both CM and CC --></help>
+        <label><!-- Call Discussion Points --></label>
+        <name>Call_Discussion_Points__c</name>
+    </fields>
+    <fields>
+        <help><!-- This field captures the action items/follow up tasks that resulted from the call. --></help>
+        <label><!-- Call Follow Up --></label>
+        <name>Call_Follow_Up__c</name>
+    </fields>
+    <fields>
+        <label><!-- Campus Events Integration --></label>
+        <name>Campus_events_integration__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contact --></label>
+        <name>Contact__c</name>
+        <relationshipLabel><!-- Quarterly Updates --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Core Promotional Initiatives --></label>
+        <name>Core_promotional_initiatives__c</name>
+    </fields>
+    <fields>
+        <label><!-- Integration into the Curriculum --></label>
+        <name>Integration_into_the_curriculum__c</name>
+    </fields>
+    <fields>
+        <help><!-- This field is used to capture important information from the call that has potential impact on the relationship. --></help>
+        <label><!-- Key Information --></label>
+        <name>Key_Information__c</name>
+    </fields>
+    <fields>
+        <label><!-- SALT Courses Requirement/Recommendation --></label>
+        <name>MM101_requirement_recommendation__c</name>
+    </fields>
+    <fields>
+        <label><!-- Ongoing Communication Plan --></label>
+        <name>Ongoing_communication_plan__c</name>
+    </fields>
+    <fields>
+        <label><!-- Other --></label>
+        <name>Other__c</name>
+    </fields>
+    <fields>
+        <label><!-- Quarterly Check-in Date --></label>
+        <name>Quarterly_Check_in_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- SALT Program Management --></label>
+        <name>SALT_Program_Management__c</name>
+    </fields>
+    <fields>
+        <label><!-- SALT Ambassador Program --></label>
+        <name>SALT_ambassador_program__c</name>
+    </fields>
+    <fields>
+        <label><!-- SALT Incentive Programming --></label>
+        <name>SALT_incentive_programming__c</name>
+    </fields>
+    <fields>
+        <label><!-- SALT Registration Req/Recommendation --></label>
+        <name>SALT_registration_req_recommendation__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>Status__c</name>
+        <picklistValues>
+            <masterLabel>Completed</masterLabel>
+            <translation><!-- Completed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Deferred</masterLabel>
+            <translation><!-- Deferred --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Scheduled</masterLabel>
+            <translation><!-- Scheduled --></translation>
+        </picklistValues>
+    </fields>
+    <layouts>
+        <layout>Quarterly Update Layout</layout>
+        <sections>
+            <label><!-- Call Details --></label>
+            <section>Call Details</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

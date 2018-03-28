@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>c2g__codaTransaction__c.c2g__TransactionDate__c</field>
+    </columns>
+    <columns>
+        <field>c2g__codaTransactionLineItem__c.c2g__Account__c</field>
+    </columns>
+    <columns>
+        <field>c2g__codaTransactionLineItem__c.Exported_to_Lawson__c</field>
+    </columns>
+    <columns>
+        <field>c2g__codaTransaction__c.c2g__DocumentNumber__c</field>
+    </columns>
+    <columns>
+        <field>c2g__codaTransaction__c.c2g__DocumentReference__c</field>
+    </columns>
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>c2g__codaTransactionLineItem__c.c2g__Product__c</field>
+    </columns>
+    <columns>
+        <field>c2g__codaTransaction__c.c2g__Period__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>c2g__codaTransactionLineItem__c.c2g__HomeValue__c</field>
+    </columns>
+    <filter>
+        <booleanFilter>1 AND (2 OR 3)</booleanFilter>
+        <criteriaItems>
+            <column>FK_NAME</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>contains</operator>
+            <value>635150</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>c2g__codaTransactionLineItem__c.c2g__Product__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>SALT Services SP</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>c2g__codaTransactionLineItem__c.c2g__Product__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>CPS Services SP</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>FK_NAME</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>c2g__codaTransaction__c.c2g__Account__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Trans Exp Date by SP Revenue</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntityCustomEntity$c2g__codaTransaction__c$c2g__codaTransactionLineItem__c@c2g__codaTransactionLineItem__c.c2g__GeneralLedgerAccount__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <sortColumn>CUST_NAME</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>c2g__codaTransactionLineItem__c.Exported_to_Lawson_Date__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

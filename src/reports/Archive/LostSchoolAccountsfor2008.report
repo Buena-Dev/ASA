@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Account$Name</field>
+    </columns>
+    <columns>
+        <field>Account$OE_Code__c</field>
+    </columns>
+    <columns>
+        <field>Account$Owner</field>
+    </columns>
+    <columns>
+        <field>Account$Why_at_Risk__c</field>
+    </columns>
+    <columns>
+        <field>Account.Opportunities$Primary_Loss_Reason__c</field>
+    </columns>
+    <description>This report shows school accounts which were lost since 10/8/2007</description>
+    <filter>
+        <criteriaItems>
+            <column>Account$RecordType</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Account.School</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account$Why_at_Risk__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>notEqual</operator>
+            <value></value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Opportunities$Name</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>contains</operator>
+            <value>2008</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Account$BillingState</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Lost School Accounts for 2008</name>
+    <params>
+        <name>co</name>
+        <value>0</value>
+    </params>
+    <reportType>Accounts_and_Opps__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Account$Contract_End__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

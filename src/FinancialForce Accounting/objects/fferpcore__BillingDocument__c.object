@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>MatchType__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Match Type of the FinancialForce Accounting transaction to which this billing document relates.</description>
+        <externalId>false</externalId>
+        <formula>TEXT(Transaction__r.MatchType__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Match Type of the FinancialForce Accounting transaction to which this billing document relates.</inlineHelpText>
+        <label>Match Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>OutstandingValue__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Outstanding Value of the FinancialForce Accounting transaction to which this billing document relates.</description>
+        <externalId>false</externalId>
+        <formula>Transaction__r.DocumentOutstandingTotal__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Outstanding Value of the FinancialForce Accounting transaction to which this billing document relates.</inlineHelpText>
+        <label>Outstanding Value</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PaymentStatus__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Transaction Payment Status of the FinancialForce Accounting transaction to which this billing document relates.</description>
+        <externalId>false</externalId>
+        <formula>if(OR(NOT(ISPICKVAL(fferpcore__DocumentStatus__c, &apos;Complete&apos;)),
+      NOT(ISPICKVAL(PostingStatus__c, &apos;Posted&apos;))),
+&apos;Not Applicable&apos;,
+
+if(Transaction__r.DocumentOutstandingTotal__c == 0, &apos;Paid&apos;,
+
+if(Transaction__r.DocumentTotal__c == Transaction__r.DocumentOutstandingTotal__c, &apos;Unpaid&apos;,
+
+&apos;Part Paid&apos;)))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Transaction Payment Status of the FinancialForce Accounting transaction to which this billing document relates.</inlineHelpText>
+        <label>Payment Status</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PostingError__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Error that occurred while posting this billing document.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Error that occurred while posting this billing document.</inlineHelpText>
+        <label>Posting Error</label>
+        <length>131072</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>PostingStatus__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Posting status for this billing document.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Posting status for this billing document.</inlineHelpText>
+        <label>Posting Status</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Posting</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Posted</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Error</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Transaction__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Lookup to the FinancialForce Accounting transaction to which this billing document relates.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Lookup to the FinancialForce Accounting transaction to which this billing document relates.</inlineHelpText>
+        <label>Accounting Transaction</label>
+        <referenceTo>codaTransaction__c</referenceTo>
+        <relationshipLabel>Billing Document</relationshipLabel>
+        <relationshipName>BillingDocument</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Year__c</fullName>
+        <deprecated>false</deprecated>
+        <description>FinancialForce Accounting year to which this billing document relates.</description>
+        <externalId>false</externalId>
+        <formula>Transaction__r.Period__r.YearName__r.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>FinancialForce Accounting year to which this billing document relates.</inlineHelpText>
+        <label>Year</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <webLinks>
+        <fullName>ListRetryPost</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Retry Post</masterLabel>
+        <openType>sidebar</openType>
+        <page>billingdocumentlistpost</page>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+    </webLinks>
+    <webLinks>
+        <fullName>RetryPost</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Retry Post</masterLabel>
+        <openType>noSidebar</openType>
+        <page>billingdocumentpost</page>
+        <protected>false</protected>
+    </webLinks>
+</CustomObject>

@@ -1,0 +1,54 @@
+Good day,
+
+
+{!Account.Name} {!Account.OE_Code__c} contract is expired/terminated – we can off board. Your help is greatly appreciated!  
+
+We are requesting your help with the items assigned to you below if applicable.  Please inform me when your task has been completed. Thank you.
+
+{!Account.OwnerFirstName}: 
+•	Ask the school to have ASA removed from access to NSLDS.
+
+Ryan:
+•	Change the brand name to ‘nologo’ in BPMS. 
+•	Update the school’s profile in BPMS. Under Customer’s Profile. Is Salt Customer, update to NO. 
+•	Make the RAE the owner of the account in Salesforce.
+•	Update Salesforce the Account Planning-Risk Management section: “Lost as of”  MM/DD/CCYY.
+•	Update the Schools’ Contacts in Salesforce to stop Communications. (Salt newsletter).
+•	The “Is Ready To Send” email check boxes for student and alumni are unchecked in Salt Shaker.
+•	In Salt Shaker uncheck “Dashboard and Onboarding, Browse and Search”.
+•	Remove access to the Salt Store.
+•	Remove school administrators' access to School Portal.
+•	Shut off Salt Vanity URL-  Submit ASA Service Desk Ticket to Product Support.
+•	Remove the school from all sections of http://www.asa.org/for-partners/schools/clients-testimonials/ - Submit ASA Service Desk Ticket to Marketing.
+•	Data Depersonalization including CDR database - Confirm with CM that the school is not going to be re-signing.  Create a CSA request and make the due date 75 days from the actual “lost date” in Salesforce.  Enter a Jira ticket.
+•	Check the Salt Ambassador & Member section of the Account and remove the email address of any students, and place a checkmark in the No Longer Here field.
+•	Provide the school’s termination letter.
+
+Legal:
+•	Review the contract terms and inform the CM of any nonstandard terms regarding data deletion.
+
+Finance: 
+•	Confirm that the school is removed from the billing profile and will not receive further invoices.  
+
+Liz Kleinmann:
+•	Inform all servicers associated with the school to remove ASA’s access and to stop sending school data.
+•	Confirm that servicer access is removed, and update to servicer access spreadsheet.
+
+Business Analysis:
+•	Confirm the NSLDS access is terminated- within 14 days after the contract end date.
+
+
+Please let us know if you have any questions,
+
+Thank you,
+Ryan
+
+………………………………………………………………………………………………………………………
+
+Ryan Pugliares | Sales Operations & Administrative Support Specialist
+
+Salt | American Student Assistance
+
+P: 617.535.2044 | 978.618.6571 ext. 2044 | E: rpugliares@asa.org
+
+100 Cambridge Street, Suite 1600 | Boston, MA 02114

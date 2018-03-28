@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>false</available>
+    <description>Thank you for registering to attend the PDS in Sturbridge, MA</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>BlankLetterhead</letterhead>
+    <name>Partnership Dialogue Series - Sturbridge, Thank you for registering</name>
+    <style>freeForm</style>
+    <subject>Registration Confirmation to attend ASA&apos;s Partnership Dialogue Series!</subject>
+    <textOnly>Dear {!Contact.FirstName},
+  
+Thank you for registering to attend ASA’s Partnership Dialogue Series: 
+A Focus on Consolidation. 
+  
+Date:  Monday, February 26, 2007
+Start Time:  8:30 am 
+Location:    
+Sturbridge Host Hotel and Conference Center Massachusetts
+366 Main Street
+Sturbridge, MA 01566
+   
+Canceling Your Registration
+If you need to cancel or change your registration please email Nancy Meehan at nmeehan@amsa.com or call 1-800-999-9080, ext. 4207.
+ 
+In Case of Bad Weather
+In case of delay or cancellation due to inclement weather, an update will be sent out on the day of the session.
+
+We look forward to seeing you!</textOnly>
+    <type>html</type>
+</EmailTemplate>

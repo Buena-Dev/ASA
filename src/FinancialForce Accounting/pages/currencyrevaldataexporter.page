@@ -1,0 +1,7 @@
+<apex:page standardController="c2g__codaCurrencyRevaluation__c" extensions="c2g.CODACurrencyRevalController" showHeader="false" renderAs="{!reporter.renderAs}" contentType="{!reporter.contentType}">
+	<apex:outputPanel rendered="{!reporter.reportType == 'pdf' || reporter.reportType == 'xls'}">
+    	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    	<c:reportgenerator records="{!reporter.transactionDetails}" fields="{!reporter.reportingFields}" reportType="{!reporter.reportType}" filters="{!reporter.filters}"/>
+    </apex:outputPanel>
+    <c:reportgenerator records="{!reporter.transactionDetails}" fields="{!reporter.reportingFields}" reportType="{!reporter.reportType}" filters="{!reporter.filters}" rendered="{!reporter.reportType == 'csv'}"/>
+</apex:page>

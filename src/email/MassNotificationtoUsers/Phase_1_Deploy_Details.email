@@ -1,0 +1,53 @@
+<table height="400" width="600" cellpadding="5" border="0" cellspacing="5" >
+<tr height="50" valign="top" >
+<td style=" color:#000000; font-size:12pt; background-color:#FFFFFF; font-family:arial; bLabel:main; bEditID:r3st1;" tEditID="c1r1" locked="0" aEditID="c1r1" >
+<![CDATA[Salesforce Revamp - Phase 1 Deployment is Complete!]]></td>
+</tr>
+<tr height="300" valign="top" >
+<td style=" color:#000000; font-size:12pt; background-color:#FFFFFF; font-family:arial; bLabel:main; bEditID:r3st1;" tEditID="c1r2" locked="0" aEditID="c1r2" >
+<![CDATA[<P>Dear {!Receiving_User.FirstName},</P>
+<P>&nbsp;</P>
+<P>It gives me great pleasure to announce the successful deployment of Phase 1 of the Salesforce Revamp Project.&nbsp; Since we started the development work on this project&nbsp;in October, we completed three sprint cycles consisting of over 60 unique requests for enhancement...all on time and on budget!</P>
+<P>&nbsp;</P>
+<P>There are several categories addressed in this phase of the project, including;</P>
+<UL>
+<LI>Removal of our former business model - FFELP data 
+<LI>Tools and analytics for Senior and Business Development Management to measure sales performance, trending and client implementation 
+<LI>Pipeline Reports and Dashboards&nbsp;for Sales and Implementations 
+<LI>Automated Renewal Opportunity creation based on Contract End Dates 
+<LI>Automated Lead generation processing through Pardot 
+<LI>Standard Proposal creation</LI></UL>
+<P>We now have more robust tools to allow BD Management to assist their individual Regional Account Executives (RAE) with sales strategies and trending analytics.&nbsp; Each RAE&nbsp;has a dashboard providing them with a comprehensive view of their own world, and they all roll up to their respective BD Manager which creates a national view.&nbsp; Everything within the national view feeds into the new Pipeline Reports and Dashboards, as well as a new Senior Staff dashboard.</P>
+<P>&nbsp;</P>
+<P>Leads coming in through the use of our Pardot system are automatically assigned to the respective RAE based on the geography of the prospect demonstrating interest in our product offering and white papers.&nbsp; </P>
+<P>&nbsp;</P>
+<P>RAEs also have the ability to generate their own standard proposals for SALT by using a template that automatically merges a contact's information directly within Salesforce.</P>
+<P>&nbsp;</P>
+<P>Client&nbsp;Services and Administration has a new, more efficient implementation process - as well as a host of automated alerts, triggers and tasks to manage retention and contract renewal of existing clients.&nbsp; Client Managers have a new item which logs quarterly check-in calls and allows for the notes from those calls to be emailed directly to the client and stored within Salesforce, as well.</P>
+<P>&nbsp;</P>
+<P>The success of the&nbsp;deployment would not have been possible without the dedicated efforts of those involved&nbsp;with writing the requirements and the testing of each and every&nbsp;item.&nbsp; My sincere appreciation goes out to the following core team at ASA: <STRONG>Mike&nbsp;Friedman, Julie Esau, Vince Scalise, Bob Cole, Bill Fortier, Jill Marr, John Kelly, Jen Schott, Farida Bahadoor, Patti L'Heureux</STRONG> and <STRONG>Clay Colarusso</STRONG>,&nbsp;and also the support of senior management; <STRONG>Sue Nathan,</STRONG> <STRONG>David Snow</STRONG> and <STRONG>Tony Siler</STRONG>.</P>
+<P>&nbsp;</P>
+<P>Lastly, I'd also like to recognize the outstanding work of our consultants from GilbuenaSaxena; Mathew Gilbuena, Rajat Saxena and Chi Ho.</P>
+<P>&nbsp;</P>
+<P>As always, if you have any questions about any of the content in this email or would like to know more specifics about the deployment, please feel free to contact me directly.</P>
+<P>&nbsp;</P>
+<P>Best regards,</P>
+<P>Andrew</P>
+<P>&nbsp;</P>
+<P>&nbsp;</P>
+<P style="LINE-HEIGHT: 120%; MARGIN: 0in 0in 0pt; TEXT-AUTOSPACE: " class=MsoNormal>
+<P style="LINE-HEIGHT: 120%; MARGIN: 0in 0in 0pt; TEXT-AUTOSPACE: " class=MsoNormal><SPAN style="mso-bookmark: _MailAutoSig"><B><SPAN style="LINE-HEIGHT: 120%; TEXT-TRANSFORM: uppercase; FONT-FAMILY: 'Arial','sans-serif'; COLOR: black; FONT-SIZE: 11pt; mso-fareast-font-family: 'Times New Roman'; mso-fareast-theme-font: minor-fareast; mso-no-proof: yes"><?xml:namespace prefix = o ns = "urn:schemas-microsoft-com:office:office" /><o:p></o:p></SPAN></B></SPAN></P>&nbsp; 
+<P></P>]]></td>
+</tr>
+<tr height="50" valign="top" >
+<td style=" color:#000000; font-size:12pt; background-color:#FFFFFF; font-family:arial; bLabel:main; bEditID:r3st1;" tEditID="c1r3" locked="0" aEditID="c1r3" >
+<![CDATA[<P style="LINE-HEIGHT: 120%; MARGIN: 0in 0in 0pt; TEXT-AUTOSPACE: " class=MsoNormal><A name=_MailAutoSig><B><SPAN style="LINE-HEIGHT: 120%; TEXT-TRANSFORM: uppercase; FONT-FAMILY: 'Arial','sans-serif'; COLOR: black; FONT-SIZE: 11pt; mso-fareast-font-family: 'Times New Roman'; mso-fareast-theme-font: minor-fareast; mso-no-proof: yes">______________________________________________<?xml:namespace prefix = o ns = "urn:schemas-microsoft-com:office:office" /><o:p></o:p></SPAN></B></A></P>
+<P style="LINE-HEIGHT: 120%; MARGIN: 0in 0in 0pt; TEXT-AUTOSPACE: " class=MsoNormal><SPAN style="mso-bookmark: _MailAutoSig"><B><SPAN style="LINE-HEIGHT: 120%; TEXT-TRANSFORM: uppercase; FONT-FAMILY: 'Arial','sans-serif'; COLOR: black; FONT-SIZE: 11pt; mso-fareast-font-family: 'Times New Roman'; mso-fareast-theme-font: minor-fareast; mso-no-proof: yes">Andrew F Marley <o:p></o:p></SPAN></B></SPAN></P>
+<P style="LINE-HEIGHT: 120%; MARGIN: 0in 0in 0pt; TEXT-AUTOSPACE: " class=MsoNormal><SPAN style="mso-bookmark: _MailAutoSig"><SPAN style="LINE-HEIGHT: 120%; TEXT-TRANSFORM: uppercase; FONT-FAMILY: 'Arial','sans-serif'; COLOR: #7f7f7f; FONT-SIZE: 11pt; mso-fareast-font-family: 'Times New Roman'; mso-fareast-theme-font: minor-fareast; mso-no-proof: yes">SALESFORCE SYSTEM ADMINISTRATOR</SPAN></SPAN></P>
+<P style="LINE-HEIGHT: 120%; MARGIN: 0in 0in 0pt; TEXT-AUTOSPACE: " class=MsoNormal><SPAN style="mso-bookmark: _MailAutoSig"><SPAN style="LINE-HEIGHT: 120%; LETTER-SPACING: 0.15pt; FONT-FAMILY: 'Arial','sans-serif'; COLOR: #7f7f7f; FONT-SIZE: 8.5pt; mso-fareast-font-family: 'Times New Roman'; mso-fareast-theme-font: minor-fareast; mso-no-proof: yes">100 Cambridge Street, Suite 1600&nbsp;Boston, MA 02114<o:p></o:p></SPAN></SPAN></P>
+<P style="LINE-HEIGHT: 120%; MARGIN: 0in 0in 0pt; TEXT-AUTOSPACE: " class=MsoNormal><SPAN style="mso-bookmark: _MailAutoSig"><SPAN style="LINE-HEIGHT: 120%; LETTER-SPACING: 0.2pt; FONT-FAMILY: 'Arial Black','sans-serif'; COLOR: #7f7f7f; FONT-SIZE: 9pt; mso-fareast-font-family: 'Times New Roman'; mso-fareast-theme-font: minor-fareast; mso-no-proof: yes; mso-bidi-font-family: 'Times New Roman'; mso-bidi-theme-font: minor-bidi">P</SPAN></SPAN><SPAN style="mso-bookmark: _MailAutoSig"><SPAN style="LINE-HEIGHT: 120%; LETTER-SPACING: 0.2pt; FONT-FAMILY: 'Arial Narrow','sans-serif'; COLOR: #7f7f7f; FONT-SIZE: 9pt; mso-fareast-font-family: 'Times New Roman'; mso-fareast-theme-font: minor-fareast; mso-no-proof: yes; mso-bidi-font-family: 'Times New Roman'; mso-bidi-theme-font: minor-bidi"> </SPAN></SPAN><SPAN style="mso-bookmark: _MailAutoSig"><SPAN style="LINE-HEIGHT: 120%; LETTER-SPACING: 0.2pt; FONT-FAMILY: 'Arial','sans-serif'; COLOR: #7f7f7f; FONT-SIZE: 9pt; mso-fareast-font-family: 'Times New Roman'; mso-fareast-theme-font: minor-fareast; mso-no-proof: yes">617-728-4274&nbsp; </SPAN></SPAN><SPAN style="mso-bookmark: _MailAutoSig"><SPAN style="LINE-HEIGHT: 120%; FONT-FAMILY: 'Arial','sans-serif'; COLOR: #7f7f7f; FONT-SIZE: 9pt; mso-fareast-font-family: 'Times New Roman'; mso-fareast-theme-font: minor-fareast; mso-no-proof: yes"><o:p></o:p></SPAN></SPAN></P>
+<P style="LINE-HEIGHT: 120%; MARGIN: 0in 0in 0pt; TEXT-AUTOSPACE: " class=MsoNormal><SPAN style="mso-bookmark: _MailAutoSig"><SPAN style="LINE-HEIGHT: 120%; LETTER-SPACING: 0.2pt; FONT-FAMILY: 'Arial Black','sans-serif'; COLOR: #7f7f7f; FONT-SIZE: 9pt; mso-fareast-font-family: 'Times New Roman'; mso-fareast-theme-font: minor-fareast; mso-no-proof: yes; mso-bidi-font-family: 'Times New Roman'; mso-bidi-theme-font: minor-bidi">F</SPAN></SPAN><SPAN style="mso-bookmark: _MailAutoSig"><SPAN style="LINE-HEIGHT: 120%; LETTER-SPACING: 0.2pt; FONT-FAMILY: 'Arial Narrow','sans-serif'; COLOR: #7f7f7f; FONT-SIZE: 9pt; mso-fareast-font-family: 'Times New Roman'; mso-fareast-theme-font: minor-fareast; mso-no-proof: yes; mso-bidi-font-family: 'Times New Roman'; mso-bidi-theme-font: minor-bidi"> </SPAN></SPAN><SPAN style="mso-bookmark: _MailAutoSig"><SPAN style="LINE-HEIGHT: 120%; LETTER-SPACING: 0.2pt; FONT-FAMILY: 'Arial','sans-serif'; COLOR: #7f7f7f; FONT-SIZE: 9pt; mso-fareast-font-family: 'Times New Roman'; mso-fareast-theme-font: minor-fareast; mso-no-proof: yes">617-535-2621</SPAN></SPAN><SPAN style="mso-bookmark: _MailAutoSig"><SPAN style="LINE-HEIGHT: 120%; LETTER-SPACING: 0.2pt; FONT-FAMILY: 'Arial Narrow','sans-serif'; COLOR: #7f7f7f; FONT-SIZE: 9pt; mso-fareast-font-family: 'Times New Roman'; mso-fareast-theme-font: minor-fareast; mso-no-proof: yes; mso-bidi-font-family: 'Times New Roman'; mso-bidi-theme-font: minor-bidi">&nbsp;</SPAN></SPAN></P>
+<P style="LINE-HEIGHT: 120%; MARGIN: 0in 0in 0pt; TEXT-AUTOSPACE: " class=MsoNormal><SPAN style="mso-bookmark: _MailAutoSig"><B><SPAN style="LINE-HEIGHT: 120%; TEXT-TRANSFORM: uppercase; FONT-FAMILY: 'Arial','sans-serif'; COLOR: black; FONT-SIZE: 11pt; mso-fareast-font-family: 'Times New Roman'; mso-fareast-theme-font: minor-fareast; mso-no-proof: yes">______________________________________________<o:p></o:p></SPAN></B></SPAN></P>
+<P style="LINE-HEIGHT: 120%; MARGIN: 0in 0in 0pt; TEXT-AUTOSPACE: " class=MsoNormal>&nbsp;</P>]]></td>
+</tr>
+</table>

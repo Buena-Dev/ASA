@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>false</available>
+    <description>Announces all of the categories/details of Phase 1 deployment</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>SALTClientLetterhead</letterhead>
+    <name>Phase 1 Deploy Details</name>
+    <style>formalLetter</style>
+    <subject>Salesforce Revamp - Phase 1 Deployment is Complete!</subject>
+    <textOnly>Salesforce Revamp - Phase 1 Deployment is Complete!
+
+Dear {!Receiving_User.FirstName},
+
+
+It gives me great pleasure to announce the successful deployment of Phase 1 of the Salesforce Revamp Project.  Since we started the development work on this project in October, we completed three sprint cycles consisting of over 60 unique requests for enhancement...all on time and on budget!
+
+
+There are several categories addressed in this phase of the project, including;
+
+Removal of our former business model - FFELP data
+Tools and analytics for Senior and Business Development Management to measure sales performance, trending and client implementation
+Pipeline Reports and Dashboards for Sales and Implementations
+Automated Renewal Opportunity creation based on Contract End Dates
+Automated Lead generation processing through Pardot
+Standard Proposal creation
+
+We now have more robust tools to allow BD Management to assist their individual Regional Account Executives (RAE) with sales strategies and trending analytics.  Each RAE has a dashboard providing them with a comprehensive view of their own world, and they all roll up to their respective BD Manager which creates a national view.  Everything within the national view feeds into the new Pipeline Reports and Dashboards, as well as a new Senior Staff dashboard.
+
+
+Leads coming in through the use of our Pardot system are automatically assigned to the respective RAE based on the geography of the prospect demonstrating interest in our product offering and white papers.
+
+
+RAEs also have the ability to generate their own standard proposals for SALT by using a template that automatically merges a contact&apos;s information directly within Salesforce.
+
+
+Client Services and Administration has a new, more efficient implementation process - as well as a host of automated alerts, triggers and tasks to manage retention and contract renewal of existing clients.  Client Managers have a new item which logs quarterly check-in calls and allows for the notes from those calls to be emailed directly to the client and stored within Salesforce, as well.
+
+
+The success of the deployment would not have been possible without the dedicated efforts of those involved with writing the requirements and the testing of each and every item.  My sincere appreciation goes out to the following core team at ASA: Mike Friedman, Julie Esau, Vince Scalise, Bob Cole, Bill Fortier, Jill Marr, John Kelly, Jen Schott, Farida Bahadoor, Patti L&apos;Heureux and Clay Colarusso, and also the support of senior management; Sue Nathan, David Snow and Tony Siler.
+
+
+Lastly, I&apos;d also like to recognize the outstanding work of our consultants from GilbuenaSaxena; Mathew Gilbuena, Rajat Saxena and Chi Ho.
+
+
+As always, if you have any questions about any of the content in this email or would like to know more specifics about the deployment, please feel free to contact me directly.
+
+
+Best regards,
+
+Andrew
+
+
+______________________________________________
+
+Andrew F Marley
+
+SALESFORCE SYSTEM ADMINISTRATOR
+
+100 Cambridge Street, Suite 1600 Boston, MA 02114
+
+P 617-728-4274
+
+F 617-535-2621
+
+______________________________________________</textOnly>
+    <type>html</type>
+</EmailTemplate>

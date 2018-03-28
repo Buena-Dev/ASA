@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Targeted_School__c.Campaign_Members__r$Campaign</field>
+    </columns>
+    <columns>
+        <field>Targeted_School__c.Campaign_Members__r$Contact</field>
+    </columns>
+    <columns>
+        <field>Targeted_School__c.Campaign_Members__r$CreatedBy</field>
+    </columns>
+    <columns>
+        <field>Targeted_School__c.Campaign_Members__r$CreatedDate</field>
+    </columns>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Targeted_School__c$Name</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Target Schools with Campaign Members</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Target_Schools_with_Campaign_Members__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <sortColumn>Targeted_School__c.Campaign_Members__r$Contact</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>Targeted_School__c$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

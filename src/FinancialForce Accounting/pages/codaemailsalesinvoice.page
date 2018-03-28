@@ -1,0 +1,17 @@
+<apex:page standardController="c2g__codaInvoice__c" extensions="c2g.CODASalesInvoicePrintController" action="{!emailInvoice}" >
+	<apex:sectionHeader title="{!$Label.c2g__codaebvprintpagessinvtitle} {!c2g__codaInvoice__c.Name}" subtitle="{!$Label.c2g__codaebvprintpagesemailsinv}" />
+	<apex:form >
+		<apex:pageBlock >
+			<apex:pageBlockSection columns="1">
+				<apex:pageBlockSectionItem >
+					<apex:pageMessages />
+				</apex:pageBlockSectionItem>
+			</apex:pageBlockSection>
+			<apex:pageBlockSection columns="1">
+				<apex:pageBlockSectionItem >
+                	<apex:commandButton value="{!$Label.c2g__codaebvprintpagesbackbutton}" action="{!cancel}"/>
+				</apex:pageBlockSectionItem>
+			</apex:pageBlockSection>
+		</apex:pageBlock>
+	</apex:form>
+</apex:page>

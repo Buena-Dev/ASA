@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Webex Invite for MASFAA&apos;s GPCC 2-2008</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>EmailLetterhead</letterhead>
+    <name>Webex Invite for MASFAA&apos;s GPCC 2-2008</name>
+    <style>freeForm</style>
+    <subject>You are invited to an GPCC &amp; ASA Webex!</subject>
+    <textOnly>Join GPCC &amp; ASA! 
+
+Counseling the Exiting Student Webex
+
+The Graduate and Professional Concerns Committee of MASFAA and National FFELP guarantor American Student Assistance® has partnered to offer a webex on Counseling the Exiting Student. 
+
+Date and Time:
+ 
+Tuesday February, 26, 2008 12:30 p.m. to 2:00 p.m.  EST
+
+Course Description: 
+
+
+Please join us to discuss important issues surrounding the exit interview process.  Discussion points will include:
+ 
+
+An overview of federal FFELP and Direct Loan exit counseling requirements 
+Should students consolidate?   If yes, why? 
+What’s the difference between ICR and IBR repayment options? 
+How to effectively explain the Loan Forgiveness Program and Teach Grant programs to your students 
+A question and answer period will follow.    
+
+ 
+Who Should Attend 
+
+
+
+Any financial aid administrator interested in discussing the topic of Counseling the Exiting Student. 
+ 
+How to attend the webex on February 26, 2008
+ 
+For the computer portion of the webex  go to the below website:
+https://amsa.webex.com/amsa/onstage/g.php?d=484653467&amp;t=a
+ 
+Follow instructions to make sure your computer has the appropriate platers to view UCF rich media files.
+ 
+Login using your first name, last name &amp; email address
+Password is GPCC123 
+ 
+For the Audio Portion of the webex call:
+1-866-279-4742
+Access Code: 7284655
+
+· All American Student Assistance training events are offered free of charge.</textOnly>
+    <type>html</type>
+</EmailTemplate>

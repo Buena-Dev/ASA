@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>false</available>
+    <description>Partnership Dialogue Series Follow Up Email San Francisco</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>EmailLetterhead</letterhead>
+    <name>Partnership Dialogue Serie Follow Up Email San Francisco</name>
+    <style>freeForm</style>
+    <subject>Thank you for attending!</subject>
+    <textOnly>Thank you for attending American Student Assistance&apos;s San Francisco Partnership Dialog Series on  February 21, 2008. 
+ 
+It was a pleasure to see so many friendly faces.
+ 
+ 
+Please contact us at training@amsa.com or 1-800-999-9080, ext. 3099 with any questions 
+ 
+ 
+Check our website for future events. 
+http://www.amsa.com/fap/training/index.cfm 
+ 
+We look forward to seeing you again!</textOnly>
+    <type>html</type>
+</EmailTemplate>

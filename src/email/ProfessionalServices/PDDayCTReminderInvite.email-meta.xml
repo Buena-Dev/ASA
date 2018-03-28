@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>false</available>
+    <description>PD Day Reminder Invite CT</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>EmailLetterhead</letterhead>
+    <name>PD Day - CT - Reminder Invite</name>
+    <style>freeForm</style>
+    <subject>ASA Professional Development Day - it&apos;s not too late to register!</subject>
+    <textOnly>Professional Development Day: Implementing a Financial Literacy Program on your Campus 
+ 
+Dear {!Contact.FirstName},
+ 
+It&apos;s not too late for you to RSVP to participate in ASA&apos;s Professional Development Day.
+ 
+National FFELP guarantor American Student Assistance® has designed an all-day training event for Connecticut.  Now is the time to improve your skills at our professional development seminars.  Join us to enhance core skills and stay ahead of evolving trends.
+We are offering a full day of professional development classes designed for all college administrators who are looking to improve their performance at work and add skills to their personal “tool box.”
+ 
+Date:              10/03/2007      
+Location:       Rennsalaer at Hartford
+ 
+ Agenda 
+
+8:30 – 9:00            Introductions and breakfast 
+
+9:00 – 10:00         Financial Literacy and Financial Aid – A discussion of the
+                               role of the financial aid office in providing for and supporting the
+                               dissemination of financial literacy informtation on college campuses. 
+
+10:00 – 11:00       Getting other offices on your campus involved 
+
+11:00 – 12:00       Provide the right information to your students at the right time - What’s the
+                                right information and when is the right time? 
+
+12:00 – 1:00         Lunch / Fun Activity 
+
+1:00 – 2:00            Presentation Skills 
+
+2:00 – 4:00            Group Activity – Bring it all together 
+
+4:00                        Adjourn
+ 
+ 
+
+For registration and additional information, including driving directions, please visit www.amsa.com/fap/training, e-mail your name, phone number and enrollment details to training@amsa.com, or call the Training Department at 800.999.9080, ext. 3099.  I hope you can join us, and look forward to seeing you there.
+ 
+Thank you,
+{!Contact.OwnerFullName}
+{!Contact.OwnerEmail}</textOnly>
+    <type>html</type>
+</EmailTemplate>

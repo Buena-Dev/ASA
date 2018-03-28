@@ -1,0 +1,9 @@
+<p>The following Offering has been approved, however a member of ProServices team has not yet been assigned to fulfill the request. Please assign an individual immediately.</p>
+<p>{!Pro_Services_Offering__c.Name}<br>
+{!Pro_Services_Offering__c.PS_OfferingTopic__c}<br>
+Target Date: {!Pro_Services_Offering__c.PS_OfferingTargetDate__c}<br>
+Requested Presenter: {!Pro_Services_Offering__c.PS_OfferingRequestedPresenter__c}<br>
+Available Presenters:<br>
+{!Pro_Services_Topic__c.PS_TopicAvailablePresenters__c}<br></p>
+<p>Use this link to go directly to the request:<br>
+<a href="{!Pro_Services_Offering__c.Link}">{!Pro_Services_Offering__c.Link}</a></p>

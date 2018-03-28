@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>false</available>
+    <description>Thank you for registering letter from Alle to TRIO associates</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>EmailLetterhead</letterhead>
+    <name>TRIO_Symp_Reg_Email</name>
+    <style>freeForm</style>
+    <subject>“Thank you for registering for the ASA Symposium”</subject>
+    <textOnly>Dear TRIO Professional:
+ 
+Thank you for registering for American Student Assistance’s annual symposium, Insights: A Conversation on Student Debt.  This year we have some spectacular speakers and events lined up, including:
+
+National political correspondent and author Juan Williams 
+Economist, author, activist and CEO Julianne Malveaux 
+Authors Tamara Draut, Strapped: Why America&apos;s 20- and 30-Somethings Can’t Get Ahead, and Anya Kamenetz, Generation Debt: Why Now Is a Terrible Time to Be Young 
+** AND A SPECIAL WORKSHOP JUST FOR NONPROFITS:  “HOW TO GET BIG PUBLIC RELATIONS RESULTS ON SMALL BUDGETS**
+ 
+This year we’ll also be honoring some of education finance’s biggest pioneers, along with some other special events to celebrate ASA’s 50th anniversary!  More details are available online, or call Allesandra Lanza at 800 999 9080, ext. 4631.  Again, thank you for registering and we look forward to seeing you in June!</textOnly>
+    <type>html</type>
+</EmailTemplate>

@@ -1,0 +1,14 @@
+Hi All,
+<br/><br/>
+The following conference session was recently accepted.
+<br/><br/>
+<B>Account </B>: {!Pro_Services_Offering__c.PS_OfferingAccount__c}<br/>
+<B>Campaign</B> : {!Pro_Services_Offering__c.PS_OfferingCampaign__c}<br/>
+<B>Target Date</B> : {!Pro_Services_Offering__c.PS_OfferingTargetDate__c}<br/>
+<B>Assigned To</B> : {!Pro_Services_Offering__c.PS_OfferingAssignedTo__c}<br/>
+<B>Title</B> : {!Pro_Services_Offering__c.Name}<br/>
+<B>Pro Services Topic</B> : {!Pro_Services_Offering__c.PS_OfferingTopic__c}<br/>
+<B>Description</B> : {!Pro_Services_Offering__c.PS_OfferingDescriptoin__c}
+<br/><br/>
+
+Thanks

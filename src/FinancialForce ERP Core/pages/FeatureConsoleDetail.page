@@ -1,0 +1,337 @@
+<apex:page standardController="fferpcore__FeatureConsoleFeature__mdt" extensions="fferpcore.FeatureConsoleDetailController" action="{!redirectIfInvalidId}" tabStyle="FeatureConsole__tab">
+    <apex:stylesheet value="{!URLFOR($Resource.fferpcore__FeatureConsole,'stylesheets/featureconsoledetail.css')}"/>
+	<apex:sectionHeader subtitle="{!Feature.Record.MasterLabel}" title="{!$Label.fferpcore__featureconsole}" help="{!HelpUrl}"/>
+
+	<!-- SCRIPTS -->
+	<script>
+        (function (win) {
+            var REFRESH_WAIT = 1000, // millis
+                ASYNC_REFRESH_WAIT = 60 * 1000, // millis
+                pendingIds = [],
+                expandedDescIds = [],
+                timer;
+
+            win.FC = {
+                perform: function (isEnable, targetId, fromUser) {
+                    if (startPerform(targetId, fromUser)) {
+                        Visualforce.remoting.Manager.invokeAction(
+                            '{!$RemoteAction.FeatureConsoleDetailController.perform}',
+                            isEnable, targetId,
+                            getCallback(function() { FC.perform(isEnable, targetId, false); })
+                        );
+                    }
+
+                    return false;
+                },
+
+                skip: function (targetId, fromUser) {
+                    if (startPerform(targetId, fromUser)) {
+                        Visualforce.remoting.Manager.invokeAction(
+                            '{!$RemoteAction.FeatureConsoleDetailController.skip}',
+                            targetId,
+                            getCallback(function() { FC.skip(targetId, false); })
+                        );
+                    }
+
+                    return false;
+                },
+
+                removeCompletedPending: function () {
+                    var els = document.getElementsByClassName('ffdc-fcd-perform-button'),
+                        pisLen = pendingIds.length,
+                        elsLen, btn, pendingId, keepPolling;
+
+                    while (pisLen--) {
+                        pendingId = pendingIds[pisLen];
+                        elsLen = els.length;
+                        while (elsLen--) {
+                            btn = els[elsLen];
+                            if (btn.getAttribute('ffdc-target-id') === pendingId) {
+                                if (btn.getAttribute('ffdc-in-progress') == "false") {
+                                    pendingIds.splice(pisLen, 1);
+                                } else {
+                                    keepPolling = true;
+                                }
+                            }
+                        }
+                    }
+                    if (keepPolling) {
+                        startTimer(ASYNC_REFRESH_WAIT);
+                    }
+                },
+
+                markPending: function () {
+                    var els = document.getElementsByClassName('ffdc-fcd-perform-button'),
+                        elsLen = els.length,
+                        pisLen,
+                        btn;
+
+                    while (elsLen--) {
+                        btn = els[elsLen];
+                        pisLen = pendingIds.length;
+                        while (pisLen--) {
+                            if (btn.getAttribute('ffdc-target-id') === pendingIds[pisLen]) {
+                                btn.classList.add('ffdc-fcd-in-progress');
+                            }
+                        }
+                    }
+                },
+
+                hideRevertDesc: function (targetId) {
+                    var len = expandedDescIds.length;
+
+                    while (len--) {
+                        if (expandedDescIds[len] === targetId) {
+                            expandedDescIds.splice(len, 1);
+                        }
+                    }
+                    FC.markExpanded();
+                },
+
+                showRevertDesc: function (targetId) {
+                    expandedDescIds.push(targetId);
+                    FC.markExpanded();
+                },
+
+                isExpanded: function (targetId) {
+                    var eisLen = expandedDescIds.length;
+
+                    while (eisLen--) {
+                        if (expandedDescIds[eisLen] === targetId) {
+                            return true;
+                        }
+                    }
+                    return false;
+                },
+
+                markExpanded: function () {
+                    var els = document.getElementsByClassName('ffdc-fcd-desc'),
+                        elsLen = els.length,
+                        eisLen;
+
+                    while (elsLen--) {
+                        el = els[elsLen];
+                        eisLen = expandedDescIds.length;
+                        if (FC.isExpanded(el.getAttribute('ffdc-target-id'))) {
+                            el.classList.remove('ffdc-fcd-revert-hidden');
+                            el.classList.add('ffdc-fcd-revert-shown');
+                        } else {
+                            el.classList.add('ffdc-fcd-revert-hidden');
+                            el.classList.remove('ffdc-fcd-revert-shown');
+                        }
+                    }
+                },
+
+                onRefreshed: function() {
+                    FC.removeCompletedPending();
+                    FC.markPending();
+                    FC.markExpanded();
+                }
+            }
+
+            function getCallback (f) {
+                return function(result, event){
+                    if (result) {
+                        if (result.Success || result.Messages) {
+                            startTimer(REFRESH_WAIT);
+                        } else {
+                            f();
+                        }
+                    }
+                };
+            }
+
+            function clearTimer () {
+                if (timer) {
+                    clearTimeout(timer);
+                }
+            }
+
+            function startTimer (millis) {
+                clearTimer();
+                timer = setTimeout(function () {
+                    refreshFeature();
+                }, millis);
+            }
+
+            function startPerform(targetId, fromUser) {
+                clearTimer();
+                if (fromUser) {
+                    if (hasPendingId(targetId)) {
+                        return false;
+                    } else {
+                        pendingIds.push(targetId);
+                    }
+                    
+                    FC.markPending();
+                }
+
+                return true;
+            }
+
+            function removePendingId (targetId) {
+                var len = pendingIds.length;
+                while (len--) {
+                    if (pendingIds[len] === targetId) {
+                        pendingIds.splice(len, 1);
+                        return;
+                    }
+                }
+            }
+
+            function hasPendingId (targetId) {
+                var len = pendingIds.length;
+                while (len--) {
+                    if (pendingIds[len] === targetId) {
+                        return true;
+                    }
+                }
+            }
+
+            win.addEventListener('beforeunload', function (e) {
+                var msg = pendingIds.length ? '{!$Label.FeatureConsoleThereArePendingFeatures}' : null;
+                if (msg) {
+                    e.returnValue = msg;
+                    return msg;
+                }
+            });
+        })(this);
+	</script>
+
+	<apex:form >
+		<apex:actionFunction name="refreshFeature"
+            action="{!refreshFeature}"
+            oncomplete="FC.onRefreshed()"
+            rerender="featureBlock"
+        />
+        
+		<apex:pageBlock id="featureBlock">
+
+			<!-- MESSAGES -->
+            <apex:pageMessages escape="false"/>
+        
+			<!-- BUTTONS -->
+		    <apex:pageBlockButtons location="top">
+	            <apex:commandButton value="{!$Label.fferpcore__featureconsoleback}" action="{!goToFeatureConsole}"/>
+	        </apex:pageBlockButtons>
+
+	        <!-- FEATURE DETAILS -->
+	        <apex:pageBlockSection title="{!$ObjectType.fferpcore__FeatureConsoleFeature__mdt.Label}" columns="1">
+		        <apex:outputPanel styleClass="ffdc-fcd-feature-status">
+			        <apex:outputLabel value="{!$Label.fferpcore__featureconsoleenablementstatus}"/>
+			        <apex:outputPanel styleClass="ffdc-fcd-perform-button" html-ffdc-target-id="{!feature.Record.Id}" html-ffdc-in-progress="{!feature.IsInProgress}">
+			        	<c:fflib_ToggleSwitch isOn="{!Feature.IsActive}"
+		                    onClickFn="return FC.perform(!{!feature.IsActive}, '{!feature.Record.Id}', true);"
+		                    isToggleable="{!feature.CanToggle}"
+		                />
+		            </apex:outputPanel>
+	            </apex:outputPanel>
+                <apex:outputLabel value="{!feature.Description}"/>
+	        </apex:pageBlockSection>
+
+	        <!-- STEPS -->
+	        <apex:pageBlockSection title="{!$ObjectType.fferpcore__FeatureConsoleFeatureStep__mdt.LabelPlural}" columns="1">
+			    <apex:variable var="steps" value="{!FeatureSteps}"/>
+		        <apex:outputLabel rendered="{!steps == null}" value="{!$Label.fferpcore__featureconsolenosteps}" styleClass="ffdc-fcd-ghost-text"/>
+		        <apex:pageBlockTable styleClass="ffdc-fcd-steps" value="{!steps}" var="step" rendered="{!steps != null}">
+		            <apex:column headerValue="{!$ObjectType.fferpcore__FeatureConsoleFeatureStep__mdt.fields.fferpcore__StepNumber__c.Label}"
+                        styleClass="ffdc-fcd-step-number{!IF(step.IsRequired, ' ffdc-fcd-required-step', '')}"
+                        width="5%"
+                    />
+                    <apex:column headerValue="{!$ObjectType.fferpcore__FeatureConsoleFeatureStep__mdt.fields.fferpcore__StepDescription__c.Label}" width="60%" styleClass="ffdc-fcd-desc ffdc-fcd-revert-hidden" html-ffdc-target-id="{!step.Record.Id}">
+                        <apex:outputPanel layout="none" rendered="{!LEN(step.Description.Title) > 0}">
+                            <p>
+                                <apex:outputText value="{!step.Description.Title}"/>
+                            </p>
+                        </apex:outputPanel>
+                        <apex:outputPanel layout="none" rendered="{!LEN(step.Description.Subtitle) > 0}">
+                            <p>
+                                <apex:outputText value="{!step.Description.Subtitle}"/>
+                            </p>
+                            <apex:outputPanel layout="none" rendered="{!step.Description.HasPerformActions}">
+                                <ul>
+                                    <apex:repeat value="{!step.Description.PerformActions}" var="action">
+                                        <li>
+                                            <apex:outputText value="{!action.Title}"/>
+                                            <apex:outputPanel layout="none" rendered="{!action.HasSubActions}">
+                                                <ul>
+                                                    <apex:repeat value="{!action.Subactions}" var="subAction">
+                                                        <li>
+                                                            <apex:outputText value="{!subAction}"/>
+                                                        </li>
+                                                    </apex:repeat>
+                                                </ul>
+                                            </apex:outputPanel>
+                                        </li>
+                                    </apex:repeat>
+                                </ul>
+                            </apex:outputPanel>
+                            <apex:outputPanel layout="none" rendered="{!step.Description.HasRevertActions}">
+                                <apex:commandLink rerender="."
+                                    onclick="FC.showRevertDesc('{!step.Record.Id}')"
+                                    value="{!$Label.fferpcore__featureconsolerevertdescshow}"
+                                    styleClass="ffdc-fcd-show-revert-link"
+                                />
+                                <apex:commandLink rerender="."
+                                    onclick="FC.hideRevertDesc('{!step.Record.Id}')"
+                                    value="{!$Label.fferpcore__featureconsolerevertdeschide}"
+                                    styleClass="ffdc-fcd-revert-desc"
+                                />
+                                <ul class="ffdc-fcd-revert-desc">
+                                    <apex:repeat value="{!step.Description.RevertActions}" var="action">
+                                        <li>
+                                            <apex:outputText value="{!action.Title}"/>
+                                            <apex:outputPanel layout="none" rendered="{!action.HasSubActions}">
+                                                <ul>
+                                                    <apex:repeat value="{!action.Subactions}" var="subAction">
+                                                        <li>
+                                                            <apex:outputText value="{!subAction}"/>
+                                                        </li>
+                                                    </apex:repeat>
+                                                </ul>
+                                            </apex:outputPanel>
+                                        </li>
+                                    </apex:repeat>
+                                </ul>
+                            </apex:outputPanel>
+                        </apex:outputPanel>
+                    </apex:column>
+		            <apex:column headerValue="{!$Label.fferpcore__featureconsoleaction}" width="15%">
+		            	<apex:outputPanel styleClass="ffdc-fcd-perform-button ffdc-fcd-perform-step-button" html-ffdc-target-id="{!step.Record.Id}" html-ffdc-in-progress="{!step.IsStatusInProgress}">
+                            <apex:commandLink immediate="true"
+                                value="{!$Label.fferpcore__featureconsolesteprevert}"
+                                rendered="{!step.CanRevert}"
+                                onClick="return FC.perform(false, '{!step.Record.Id}', true);"
+                            />
+                            <apex:commandLink immediate="true"
+                                value="{!$Label.fferpcore__featureconsolestepmarkasdone}"
+                                rendered="{!step.CanMarkAsDone}"
+                                onClick="return FC.perform(true, '{!step.Record.Id}', true);"
+                            />
+                            <apex:commandLink immediate="true"
+                                value="{!$Label.fferpcore__featureconsolestepperform}"
+                                rendered="{!step.CanPerform}"
+                                onClick="return FC.perform(true, '{!step.Record.Id}', true);"
+                            />
+                            <apex:commandLink immediate="true"
+                                value="{!$Label.fferpcore__featureconsolestepskip}"
+                                rendered="{!step.CanSkip}"
+                                onClick="return FC.skip('{!step.Record.Id}', true);"
+                            />
+			            </apex:outputPanel>
+		            </apex:column>
+                    <apex:column headerValue="{!$Label.fferpcore__featureconsoleenablementstatus}"
+                        styleClass="ffdc-fcd-step-status"
+                        width="20%"
+                    >
+                        <apex:outputLabel value="{!$Label.fferpcore__featureconsolestepstatusnotdone}" styleClass="ffdc-fcd-step-status-not-done" rendered="{!step.IsStatusNotDone}"/>
+                        <apex:outputLabel value="{!$Label.fferpcore__featureconsolestepstatusinprogress}" styleClass="ffdc-fcd-step-status-in-progress" rendered="{!step.IsStatusInProgress}"/>
+                        <apex:outputLabel value="{!$Label.fferpcore__featureconsolestepstatusdone}" styleClass="ffdc-fcd-step-status-done" rendered="{!step.IsStatusDone}"/>
+                        <apex:outputLabel value="{!$Label.fferpcore__featureconsolestepstatusskipped}" styleClass="ffdc-fcd-step-status-skipped" rendered="{!step.IsStatusSkipped}"/>
+                    </apex:column>
+		        </apex:pageBlockTable>
+	        </apex:pageBlockSection>
+	    </apex:pageBlock>
+
+	</apex:form>
+</apex:page>

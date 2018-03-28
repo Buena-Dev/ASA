@@ -1,0 +1,5 @@
+Your Salesforce Support Request Case has been completed
+
+{!Case.Description}
+
+{!Case.Link}

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>PD Days in Denver and Pueblo</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>EmailLetterhead</letterhead>
+    <name>Colorado Professional Development Days - July 2008</name>
+    <style>promotionRight</style>
+    <subject>Financial Aid Training Event - American Student Assistance</subject>
+    <textOnly>Save the date for a workshop that helps refine your skills and keeps you informed.  
+
+ 
+Keep up with some of the latest happenings in the financial aid industry. 
+National FFELP guarantor American Student Assistance® has designed a full day training event to discuss some of the hottest topics affecting financial aid offices! 
+ 
+Agenda 
+ 
+8:30 - 9:00am  Breakfast 
+9:00 - 10:00am  Go with the Flows
+10:00 - 10:15am  Break
+10:15 - 11:15am  Lower Your CDR
+11:15am - 12:15 pm  High Profile
+12:15 - 12:30pm  Wrap Up and Evaluation
+12:30pm  Adjourn
+
+ 
+Go with the Flows: Optimizing Your Loan Processing
+Do you ever wonder why you send some certifications go to the lender, some to the guarantor, and some to the servicer? Why do you receive funds from many different institutions while another school receives all of their funds from just one place? What exactly does a guarantor do? What does a lender do? What does a servicer do? This session will bring to light the major FFELP players, as well as the available loan processing flows, including the vocabulary used by everyone involved with those flows. You will also gain a deeper understanding of your current loan processes and new tools to assist you in controlling and streamlining your processing.
+ 
+Lower Your CDR: Cohort Default Management Best Practices
+Every year your school receives its Cohort Default Rate from the Department of Education. Some years it goes up, others it goes down. Are there things that you can do that will have a direct impact on that number? Walk away from this session with strategies that you can implement quickly to manage all of your student loan program default rates - and keep them down.
+ 
+High Profile: Increase Financial Aid Office Visibility and Impact on Campus
+What is your reputation on campus? Are you interested in making more of an impact on campus and with your students? Hear about strategies to increase the breadth of influence that the Financial Aid Office has on campus. Learn how to better communicate and work more effectively with various departments on your campus and in the community.
+ 
+Denver - Wednesday, July 23, 2008 
+University Center at Chaparral
+Room 104
+15653 Brookstone Drive
+Parker, CO  80134
+Parking is free
+http://www.the-university-center.org/map.html
+ 
+ 
+Pueblo - Thursday, July 24, 2008
+Pueblo Community College
+College Center, Barb Fortino Room
+900 W. Orman Avenue
+Pueblo, CO  81004
+Parking if free and directly east of the College Center
+http://www.pueblocc.edu/cmsinternet/xml/Web_Map/WebMap3_Dropdown.html 
+ 
+All of ASA&apos;s training events are offered free of charge.  Training is considered one of the guarantor&apos;s core responsibilities and ASA is dedicated to providing informative and useful training events for our industry colleagues.
+ 
+For more information please contact: 
+
+Sunsara &quot;Sunny&quot; Staninger
+Regional Account Executive
+American Student Assistance (ASA)
+Office: (800)999-9080 x 2106
+sstaninger@amsa.com
+www.amsa.com
+  
+We are offering three topics in our workshop. Please join us!
+ 
+Choose the date and location that is best for you, Denver or Pueblo.
+ 
+8:30am  - 12:30pm
+Continental breakfast will be provided
+ 
+Register Online at 
+http://www.amsa.com/fap/training</textOnly>
+    <type>html</type>
+</EmailTemplate>

@@ -1,0 +1,55 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<HTML>
+<HEAD>
+<TITLE>Instructions</TITLE>
+</HEAD>
+<BODY bgcolor="#F3F3EC">
+<SCRIPT type="text/javascript">
+<!--
+  document.write("<p><font face='Arial,Tahoma' size='2'>{!User.FirstName},<br>")
+  
+  if ("{!Pro_Services_Offering__c.PS_OfferingStatus__c}"=="New")  {
+    document.write("<font size='4'><b>You have not yet submitted this ProServices Event Request.</b></font></p> ")
+    document.write("<p>Before this event can be scheduled it must be reviewed by the Professional Serivces ")
+    document.write("team to ensure we are able to accomodate your request.  To submit this event for ")
+    document.write("review, please click on the <b>Submit for Approval</b> button at the bottom of the ")
+    document.write("page. Once you submit the event for review, you will not be able to edit any of the  ")
+    document.write("fields in this event, so please be sure that you have provided as much information ")
+    document.write("as is humanly possible (or humanely possible, if you prefer).</p>")
+  }
+
+  //else {
+  //  document.write("<p>This event has either been submitted for review or has been reviewed the ")
+  //  document.write("Professional Services team.</p>")
+  //}
+
+  if ("{!Pro_Services_Offering__c.PS_OfferingStatus__c}"=="Pending Approval") {
+    document.write("<p>This Offering request has been submitted for approval. It is currently being ")
+    document.write("reviewed by a member of the Professional Services team. We will review ")
+    document.write("your request and do our best to accomodate it.</p>")
+  }
+
+  if ("{!Pro_Services_Offering__c.PS_OfferingStatus__c}"=="Approved") {
+    document.write("<p>This Offering has been approved and will occur. Should you wish to make any ")
+    document.write("changes to this request, please contact ")
+    document.write("{!Pro_Services_Offering__c.PS_OfferingAssignedTo__c} with your request.</p>")
+  }
+
+  if ("{!Pro_Services_Offering__c.PS_OfferingStatus__c}"=="Denied") {
+    document.write("<p>Professional Services was not able to accomodate this Offering request as it was ")
+    document.write("submitted.  Please check the sub-status field for more ")
+    document.write("information. If you have questions or concerns, please contact Gina Lucente-Cole ")
+    document.write("at <a href='mailto:gcole@amsa.com'>gcole@amsa.com</a>.</p>")
+  }
+
+  if ("{!Pro_Services_Offering__c.PS_OfferingStatus__c}"=="Cancelled") {
+    document.write("<p>Due to an intervening factor, this Offering has been cancelled. ")
+    document.write("Please check the sub-status field for more ")
+    document.write("information. If you have questions or concerns, please contact Gina Lucente-Cole ")
+    document.write("at <a href='mailto:gcole@amsa.com'>gcole@amsa.com</a>.</p>")
+  }
+  document.write("</font>")
+-->
+</SCRIPT>
+</BODY>
+</HTML>

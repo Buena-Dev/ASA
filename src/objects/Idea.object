@@ -1,0 +1,714 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>Business_Context__c</fullName>
+        <externalId>false</externalId>
+        <label>Business Context</label>
+        <length>32768</length>
+        <type>LongTextArea</type>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Categories</fullName>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Idea_Stakeholder__c</fullName>
+        <externalId>false</externalId>
+        <label>Idea Stakeholder</label>
+        <length>100</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Opportunity_Idea__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Opportunity</label>
+        <referenceTo>Opportunity</referenceTo>
+        <relationshipLabel>Ideas</relationshipLabel>
+        <relationshipName>Ideas</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Status</fullName>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Status_Modified_Date__c</fullName>
+        <description>Date the status was modified</description>
+        <externalId>false</externalId>
+        <label>Status Modified Date</label>
+        <required>false</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Strategic_Product_Imperatives__c</fullName>
+        <externalId>false</externalId>
+        <label>Strategic Product Imperatives</label>
+        <required>false</required>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Content Competency</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Educational Outcomes Measurement</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Community Discussion</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Database and User Segmentation</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Multi-Channel Service</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>X2nd_Opportunity__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>2nd Opportunity</label>
+        <referenceTo>Opportunity</referenceTo>
+        <relationshipLabel>Ideas - 2nd Related Opportunity</relationshipLabel>
+        <relationshipName>Ideas1</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>X3rd_Opportunity__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>3rd Opportunity</label>
+        <referenceTo>Opportunity</referenceTo>
+        <relationshipLabel>Ideas - 3rd Related Opportunity</relationshipLabel>
+        <relationshipName>Ideas2</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <listViews>
+        <fullName>Ideas_Last_7_Days</fullName>
+        <columns>IDEA.CREATED_DATE</columns>
+        <columns>IDEA.TITLE</columns>
+        <columns>IDEA.CREATED_BY_NICKNAME</columns>
+        <columns>IDEA.NUM_COMMENTS</columns>
+        <columns>IDEA.STATUS</columns>
+        <columns>IDEA.CATEGORIES</columns>
+        <columns>COMMUNITY.NAME</columns>
+        <filterScope>Everything</filterScope>
+        <label>All Ideas</label>
+    </listViews>
+    <listViews>
+        <fullName>Last_7_Days</fullName>
+        <columns>IDEA.CREATED_DATE</columns>
+        <columns>IDEA.TITLE</columns>
+        <columns>IDEA.CREATED_BY_NICKNAME</columns>
+        <columns>VOTE_STATS.WEIGHTED_SUM</columns>
+        <columns>IDEA.NUM_COMMENTS</columns>
+        <columns>IDEA.STATUS</columns>
+        <columns>IDEA.CATEGORIES</columns>
+        <columns>COMMUNITY.NAME</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>IDEA.CREATED_DATE</field>
+            <operation>equals</operation>
+            <value>LAST_N_DAYS:7</value>
+        </filters>
+        <label>Last 7 Days</label>
+    </listViews>
+    <recordTypes>
+        <fullName>InternalIdeasIdeaRecordType</fullName>
+        <active>true</active>
+        <description>Record Type used to associate ideas with a specific community</description>
+        <label>*School Channel: Idea Record Type</label>
+        <picklistValues>
+            <picklist>Categories</picklist>
+            <values>
+                <fullName>EDMS General</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fin Ed General</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Marketing %2F Collateral</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Member Support</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Product General</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Reporting Content</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sponsorship</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>User Experience</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Web %2F Prototype</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status</picklist>
+            <values>
+                <fullName>Add%27l Information Needed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Closed - Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Closed - Duplicate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Declined</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deferred</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Development</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Included in Next Release</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New Product Dev Review</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Priority Assessment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Product Scorecard Sent</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Submitted for Review</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Under Consideration</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Strategic_Product_Imperatives__c</picklist>
+            <values>
+                <fullName>Community Discussion</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Content Competency</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Database and User Segmentation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Educational Outcomes Measurement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Multi-Channel Service</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Record_type_for_community_09a60000000CjQTAA0_entity_Idea</fullName>
+        <active>true</active>
+        <description>Record type used to associate Idea with a specific community</description>
+        <label>Financial Education: Idea Record Type</label>
+        <picklistValues>
+            <picklist>Categories</picklist>
+            <values>
+                <fullName>EDMS General</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Reporting Content</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status</picklist>
+            <values>
+                <fullName>Add%27l Information Needed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Closed - Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Closed - Duplicate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Declined</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deferred</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Development</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Included in Next Release</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New Product Dev Review</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Priority Assessment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Product Scorecard Sent</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Submitted for Review</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Under Consideration</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Strategic_Product_Imperatives__c</picklist>
+            <values>
+                <fullName>Community Discussion</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Content Competency</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Database and User Segmentation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Educational Outcomes Measurement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Multi-Channel Service</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Record_type_for_community_09a60000000CjR2AAK_entity_Idea</fullName>
+        <active>true</active>
+        <description>Record type used to associate Idea with a specific community</description>
+        <label>Education Debt Management Services: Idea Record Type</label>
+        <picklistValues>
+            <picklist>Categories</picklist>
+            <values>
+                <fullName>EDMS General</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Reporting Content</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status</picklist>
+            <values>
+                <fullName>Add%27l Information Needed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Closed - Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Closed - Duplicate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Declined</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deferred</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Development</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Included in Next Release</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New Product Dev Review</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Priority Assessment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Product Scorecard Sent</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Submitted for Review</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Under Consideration</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Strategic_Product_Imperatives__c</picklist>
+            <values>
+                <fullName>Community Discussion</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Content Competency</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Database and User Segmentation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Educational Outcomes Measurement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Multi-Channel Service</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Record_type_for_community_09a60000000CjR7AAK_entity_Idea</fullName>
+        <active>true</active>
+        <description>Record type used to associate Idea with a specific community</description>
+        <label>Competitor Intel: Idea Record Type</label>
+        <picklistValues>
+            <picklist>Categories</picklist>
+            <values>
+                <fullName>EDMS General</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fin Ed General</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Marketing %2F Collateral</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Member Support</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Price</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Product General</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Region</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Reporting Content</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sponsorship</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>User Experience</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Web %2F Prototype</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status</picklist>
+            <values>
+                <fullName>Add%27l Information Needed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Declined</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deferred</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Development</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New Product Dev Review</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Priority Assessment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Product Scorecard Sent</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Strategic_Product_Imperatives__c</picklist>
+            <values>
+                <fullName>Community Discussion</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Content Competency</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Database and User Segmentation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Educational Outcomes Measurement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Multi-Channel Service</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Record_type_for_community_09a60000000CjRCAA0_entity_Idea</fullName>
+        <active>true</active>
+        <description>Record type used to associate Idea with a specific community</description>
+        <label>Campus Activation: Idea Record Type</label>
+        <picklistValues>
+            <picklist>Categories</picklist>
+            <values>
+                <fullName>EDMS General</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fin Ed General</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Marketing %2F Collateral</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Member Support</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Product General</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Region</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Reporting Content</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sponsorship</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>User Experience</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Web %2F Prototype</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status</picklist>
+            <values>
+                <fullName>Add%27l Information Needed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Closed - Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Closed - Duplicate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Declined</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deferred</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Development</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Included in Next Release</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New Product Dev Review</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Priority Assessment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Product Scorecard Sent</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Submitted for Review</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Under Consideration</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Strategic_Product_Imperatives__c</picklist>
+            <values>
+                <fullName>Community Discussion</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Content Competency</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Database and User Segmentation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Educational Outcomes Measurement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Multi-Channel Service</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts>
+        <customTabListAdditionalFields>IDEA.TITLE</customTabListAdditionalFields>
+        <customTabListAdditionalFields>IDEA.BODY</customTabListAdditionalFields>
+        <customTabListAdditionalFields>COMMUNITY.NAME</customTabListAdditionalFields>
+        <customTabListAdditionalFields>IDEA.CREATED_DATE</customTabListAdditionalFields>
+        <customTabListAdditionalFields>IDEA.CREATED_BY_NICKNAME</customTabListAdditionalFields>
+        <customTabListAdditionalFields>IDEA.NUM_COMMENTS</customTabListAdditionalFields>
+        <customTabListAdditionalFields>VOTE.HAS_VOTED</customTabListAdditionalFields>
+        <customTabListAdditionalFields>IDEA.CATEGORIES</customTabListAdditionalFields>
+        <customTabListAdditionalFields>IDEA.STATUS</customTabListAdditionalFields>
+        <customTabListAdditionalFields>IDEA.LAST_COMMENT_DATE</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>IDEA.TITLE</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>COMMUNITY.NAME</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>IDEA.TITLE</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>COMMUNITY.NAME</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>IDEA.CREATED_BY_NICKNAME</lookupPhoneDialogsAdditionalFields>
+        <searchResultsAdditionalFields>IDEA.TITLE</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>IDEA.BODY</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>COMMUNITY.NAME</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>IDEA.NUM_COMMENTS</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>IDEA.CREATED_BY_NICKNAME</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>IDEA.CATEGORIES</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>IDEA.STATUS</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>IDEA.CREATED_DATE</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>Categories_Is_Required_Field</fullName>
+        <active>true</active>
+        <description>Categories is a Required Field</description>
+        <errorConditionFormula>ISNULL (Categories)</errorConditionFormula>
+        <errorMessage>Please select a category.</errorMessage>
+    </validationRules>
+</CustomObject>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Account$Name</field>
+    </columns>
+    <columns>
+        <field>Account$Contract_Start__c</field>
+    </columns>
+    <columns>
+        <field>Account.Opportunities$Total_in_Enrollment__c</field>
+    </columns>
+    <description>Update FY in Opp Name and contract start date range to change FY.</description>
+    <filter>
+        <criteriaItems>
+            <column>Account$RecordType</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Account.School</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Opportunities$Name</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>contains</operator>
+            <value>2015</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account$Name</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>notContain</operator>
+            <value>ASA University,Test</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account$Contract_Start__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>greaterOrEqual</operator>
+            <value>7/1/2014</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account$Contract_Start__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>lessOrEqual</operator>
+            <value>6/30/2015</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Opportunities$Renewal_Opp__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>0</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>FY Wins with Enrollment</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Accounts_and_Opps__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Account$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

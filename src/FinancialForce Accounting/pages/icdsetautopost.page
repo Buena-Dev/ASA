@@ -1,0 +1,30 @@
+<!-- icdsetautopost page for list view-->
+<apex:page standardController="c2g__codaIntercompanyDefinition__c" extensions="c2g.IcdSetAutoPostController" recordSetVar="IntercompanyDefinition" >
+    <script src="{!URLFOR($Resource.coda2go,'coda2go/web/script/lib.js')}" type="text/javascript"></script>
+	<apex:stylesheet value="{!URLFOR($Resource.c2g__coda2go,'coda2go/web/css/style.css')}"/>
+	<script>
+		var CODA2GoButtons = new CODA2GoPage();
+		var CODA2GoBtnSaveValue = "{!$Label.codaProcessing}";
+	</script>
+    <apex:form onsubmit="if(CODA2GoButtons.disableSaveButtons){ return CODA2GoButtons.disableSaveButtons(); }">
+        <apex:sectionHeader title="{!$Label.c2g__intercompanydefinitionautoposttitle}"/>
+        <apex:pageBlock >
+            <apex:pageMessages />
+            <apex:outputPanel rendered="{!ShowSaveButton}">
+	            <apex:inputCheckbox value="{!AutoPost}"/>
+	            <apex:outputLabel value="{!$Label.c2g__intercompanydefinitionautopostcheckbox}" />
+            </apex:outputPanel>
+            <apex:pageBlockButtons location="bottom">
+                <!-- Hidden Buttons -->
+				<apex:commandButton value="{!$Label.c2g__save}" action="{!save}" id="save_h" styleclass="hiddensubmit"/>
+				<apex:commandButton value="{!$Label.c2g__cancelandgoback}" action="{!cancel}" id="cancel_h" styleclass="hiddensubmit" immediate="true" reRender=""/>
+				<!-- End of Hidden Buttons -->
+				<apex:commandButton value="{!$Label.c2g__save}" id="save" rendered="{!ShowSaveButton}" onclick="document.getElementById('{!$Component.save_h}').click();return false;"  />
+				<apex:commandButton value="{!$Label.c2g__cancelandgoback}" id="cancel" rerender="" onclick="if(!CODA.queing()){document.getElementById('{!$Component.cancel_h}').click()};return false;"/>
+				<script>
+					CODA2GoButtons.initButtons(["{!$Component.save}","{!$Component.cancel}"]);
+				</script>
+            </apex:pageBlockButtons>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

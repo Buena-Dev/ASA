@@ -1,0 +1,110 @@
+<apex:page id="page" Controller="c2g.CODABackgroundMatchingController" action="{!checkBatchAlreadyRunning}" extensions="c2g.CODAHelpLoaderController">
+	<script src="{!URLFOR($Resource.coda2go,'coda2go/web/script/lib.js')}" type="text/javascript"></script>
+    <apex:stylesheet value="{!URLFOR($Resource.c2g__coda2go,'coda2go/web/css/style.css')}"/>
+    <apex:form id="form">
+        <!-- Header Section -->
+        <apex:sectionHeader title="{!$Label.c2g__codabackgroundcashmatchingsection}" help="{!redirectForHelp1063}"/>
+
+        <apex:pageBlock mode="edit">
+            <apex:pageMessages id="Messages" />
+            <apex:pageBlockSection title="{!$Label.c2g__backgroundmatchingaccountsectionheader}" columns="6" id="firstBlock">
+                <apex:pageBlockSectionItem labelStyle="width:10%; text-align:left;padding-top:20px;" dataStyle="padding-top:20px;padding-left:20px;">
+                    <apex:outputLabel value="{!$Label.c2g__backgroundmatchingaccountfilter}" />
+                    <apex:inputField id="account" value="{!LookupData.c2g__Account__c}" />
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <apex:pageMessage summary="{!$Label.c2g__backgroundmatchingaccountinfo}" severity="info" strength="3" />
+                </apex:pageBlockSectionItem>
+            </apex:pageBlockSection>
+            <apex:pageBlockSection title="{!$Label.c2g__backgroundmatchingfiltersectionheader}" columns="1" id="backgroundMatchingFilterSection">
+                <apex:pageBlockSectionItem labelStyle="width:10%; text-align:left;">
+                    <apex:outputLabel value="{!$Label.c2g__backgroundmatchingmatchallupto}" />
+                    <apex:outputPanel id="matchUpTo">
+                        <apex:selectList size="1" onchange="changeMatchAllUpToOption()" value="{!matchUpToType}" id="selectMatchUpToType">
+                            <apex:selectOption itemValue="Date" itemLabel="{!$Label.c2g__backgroundmatchingdatematchallupto}" />
+                            <apex:selectOption itemValue="Period" itemLabel="{!$Label.c2g__backgroundmatchingperiodmatchallupto}" />
+                        </apex:selectList>
+                        <apex:outputPanel id="matchDateOption" style="margin-left:10px;">
+                            <apex:inputField value="{!LookupData.c2g__LookupDate__c}" id="matchDateUpTo" />
+                        </apex:outputPanel>
+                        <apex:outputPanel id="matchPeriodOption" style="display:none;">
+                            <apex:inputField id="periodValue" value="{!LookupData.c2g__Period__c}" />
+                        </apex:outputPanel>
+                        <script>
+                        window['$Label'] = window['$Label'] || {};
+                        $Label.BackgroundMatchingDateMatchAllUpTo = '{!JSENCODE($Label.BackgroundMatchingDateMatchAllUpTo)}';
+                        CODA.addLoadEvent(changeMatchAllUpToOption);
+
+                        function changeMatchAllUpToOption() {
+                        	var selectField = document.getElementById("{!$Component.selectMatchUpToType}");
+                       		var selectedLabel = selectField.options[selectField.selectedIndex].text;
+                            if (selectedLabel == $Label.BackgroundMatchingDateMatchAllUpTo) {
+                            	document.getElementById("{!$Component.matchPeriodOption}").style.display = "none";
+                                document.getElementById("{!$Component.matchDateOption}").style.display = "inline";
+                            } else {
+                                document.getElementById("{!$Component.matchDateOption}").style.display = "none";
+                                document.getElementById("{!$Component.matchPeriodOption}").style.display = "inline";
+                            }
+                        }
+                        </script>
+                    </apex:outputPanel>
+                </apex:pageBlockSectionItem>
+                <!-- TODO: 18366 BM - Allow matching by Account or Document Currency -->
+                <apex:pageBlockSectionItem dataStyle="width:10px" labelStyle="width:10%; text-align:left;" >
+                        <apex:outputLabel value="{!$Label.c2g__codapagecashmatchingcurrencymode}"/>
+                        <apex:outputpanel >
+                            <apex:selectList size="1" value="{!currencyMode}">
+                                <apex:selectOption itemValue="Document" itemLabel="{!$Label.c2g__cashmatchingpagedocument}"/>
+                                <apex:selectOption itemValue="Account" itemLabel="{!$Label.c2g__cashmatchingpageaccount}"/>
+                            </apex:selectList>
+                            <apex:outputLabel value="{!$Label.c2g__codapagecashmatchingmatchcurrency}" style="margin-left:10px;margin-right:10px;"/>
+                            <apex:selectList size="1" value="{!matchedCurrency}">
+                                <apex:selectOptions value="{!subscribedCurrencies}"/>
+                            </apex:selectList>
+                        </apex:outputpanel>
+                </apex:pageBlockSectionItem>
+                <hr/>
+                <apex:pageBlockSectionItem labelStyle="width:10%; text-align:left;">
+                    <apex:outputLabel value="{!$Label.c2g__backgroundmatchingfirstmatchby}" />
+                    <apex:selectList size="1" value="{!matchMode}">
+                        <apex:selectOption id="modeReference" itemValue="modeReference" itemLabel="{!$Label.c2g__backgroundmatchingmatchbyreference}" />
+                        <apex:selectOption id="modeDocumentNumber" itemValue="modeDocumentNumber" itemLabel="{!$Label.c2g__backgroundmatchingmatchbydocnumber}" />
+                    </apex:selectList>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem labelStyle="width:10%; text-align:left;" rendered="{!hasMatchingCondition == false}">
+                    <apex:outputLabel rendered="{!hasMatchingCondition == false}" />
+                    <apex:commandButton value="{!$Label.c2g__backgroundmatchingpageaddmatchcondition}" action="{!AddMatchCondition}" rerender="backgroundMatchingFilterSection" />
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem labelStyle="width:10%; text-align:left;" rendered="{!hasMatchingCondition}">
+                    <apex:outputLabel value="{!$Label.c2g__backgroundmatchingthenmatchby}" />
+                    <apex:outputpanel >
+                        <apex:selectList size="1" value="{!matchingCondition}">
+                            <apex:selectOption itemValue="{!$Label.c2g__backgroundmatchinghighestvaluefirst}" itemLabel="{!$Label.c2g__backgroundmatchinghighestvaluefirst}" />
+                            <apex:selectOption itemValue="{!$Label.c2g__backgroundmatchinglowestvaluefirst}" itemLabel="{!$Label.c2g__backgroundmatchinglowestvaluefirst}" />
+                            <apex:selectOption itemValue="{!$Label.c2g__backgroundmatchingoldestdatefirst}" itemLabel="{!$Label.c2g__backgroundmatchingoldestdatefirst}" />
+                            <apex:selectOption itemValue="{!$Label.c2g__backgroundmatchingnewestdatefirst}" itemLabel="{!$Label.c2g__backgroundmatchingnewestdatefirst}" />
+                            <apex:selectOption itemValue="{!$Label.c2g__backgroundmatchingdocnumoldestfirst}" itemLabel="{!$Label.c2g__backgroundmatchingdocnumoldestfirst}" />
+                            <apex:selectOption itemValue="{!$Label.c2g__backgroundmatchingdocnumnewestfirst}" itemLabel="{!$Label.c2g__backgroundmatchingdocnumnewestfirst}" />
+                        </apex:selectList>
+                        <apex:commandButton value="{!$Label.c2g__backgroundmatchingpageremovematchcondition}" action="{!RemoveMatchCondition}" rerender="backgroundMatchingFilterSection" />
+                    </apex:outputPanel>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem labelStyle="width:10%;text-align:left;">
+                    <apex:outputLabel />
+                    <apex:outputPanel >
+                        <apex:inputCheckbox value="{!allowPartialPayment}" />
+                        <apex:outputLabel value="{!$Label.c2g__backgroundmatchingpartialpaymentcheckbox}" />
+                    </apex:outputPanel>
+                </apex:pageBlockSectionItem>
+                <hr/>
+                <apex:pageBlockSectionItem labelStyle="width:10%; text-align:left;">
+                    <apex:outputLabel value="{!$Label.c2g__backgroundmatchingsummarymatchingdate}" />
+                    <apex:inputField value="{!matchingDateLookup.c2g__LookupDate__c}" />
+                </apex:pageBlockSectionItem>
+            </apex:pageBlockSection>
+            <apex:pageBlockButtons location="bottom">
+                <apex:commandButton value="{!$Label.c2g__backgroundmatchingpagenext}" action="{!goBackgroundMatchingNext}" />
+            </apex:pageBlockButtons>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

@@ -1,0 +1,975 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Client Services Administrations Page</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ReadWrite</externalSharingModel>
+    <fields>
+        <fullName>Account__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Account task is associated with.</description>
+        <externalId>false</externalId>
+        <label>Account</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipName>SPA</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Assigned_to__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Assigned to</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>SPA</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Attachment__c</fullName>
+        <externalId>false</externalId>
+        <label>Attachment</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>CSA_Request__c</fullName>
+        <description>List of the possible requests that could be made of CSA</description>
+        <externalId>false</externalId>
+        <label>Request Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Add/Edit Salesforce contacts</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Advisory Board Support</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Ambassador Program Request</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Business Cards</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Campaign Assistance</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Campus Activation Event</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Check Request</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Client Forum Support</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Collateral or Presentations</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Conference</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Conference Presentation Assistance</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Conference Presentation Proposal</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Conference Registration</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Create Brand Name</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Data Depersonalization Request</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Miscellaneous Marketing Request</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Miscellaneous Research</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>New/Renew Association Membership</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>New Collateral</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Off-board Client</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Pre-Conference Email</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Pre-Sales Meeting / In-Person Support</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Presentation Content Assistance</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>President Pre-Renewal Letter</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Print/Copy Materials</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Purchasing Assistance</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Reports</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Return School Copy of Contract</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Salesforce Admininstrator Request</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>SALT Courses Data Request</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Salt Demo / Webinar</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Salt Store New Contact</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>School Profile Creation</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Shipping Assistance</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Special invoicing request</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Stakeholder meeting packets</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Tabulate survey results</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Training meeting packets</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Campaign__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Campiagn that the task is associated with.</description>
+        <externalId>false</externalId>
+        <label>Campaign</label>
+        <referenceTo>Campaign</referenceTo>
+        <relationshipName>SPA</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Case__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Case that the request is associated with.</description>
+        <externalId>false</externalId>
+        <label>Case</label>
+        <referenceTo>Case</referenceTo>
+        <relationshipName>SPA</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>City__c</fullName>
+        <externalId>false</externalId>
+        <label>City</label>
+        <length>150</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Completed_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Completed Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Conference_End_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Conference End Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Conference_Start_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Conference Start Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Details__c</fullName>
+        <description>Please put in the details here</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Please put in the details here</inlineHelpText>
+        <label>Details</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Due_Date__c</fullName>
+        <description>The date the task needs to be completed</description>
+        <externalId>false</externalId>
+        <label>Due/Proposal Deadline</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>End_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>End Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Engagement_Partner_Request__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Select this checkbox if the request being submitted is specifically for ENGAGEMENT PARTNERS only - not for the SCHOOL CHANNEL.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Select this checkbox if the request being submitted is specifically for ENGAGEMENT PARTNERS only - otherwise, leave this field blank.</inlineHelpText>
+        <label>Engagement Partner Request</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Expected_Attendees__c</fullName>
+        <externalId>false</externalId>
+        <label>Expected Attendees</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Link_to_Proposal_Site__c</fullName>
+        <externalId>false</externalId>
+        <label>Link to Proposal Site</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>Meeting_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Meeting Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Opportunity__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Opportunity that the request is associated with.</description>
+        <externalId>false</externalId>
+        <label>Opportunity</label>
+        <referenceTo>Opportunity</referenceTo>
+        <relationshipName>SPA</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Proposed_Presenter__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Proposed Presenter</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>CSA Requests</relationshipLabel>
+        <relationshipName>CSA_Requests</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Start_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Start Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>State__c</fullName>
+        <externalId>false</externalId>
+        <label>State</label>
+        <length>2</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Status__c</fullName>
+        <description>Status of SPA request</description>
+        <externalId>false</externalId>
+        <label>Status</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Opened</fullName>
+                    <default>true</default>
+                </value>
+                <value>
+                    <fullName>In Progress</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Completed</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Cancelled</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Suggested_Topic__c</fullName>
+        <externalId>false</externalId>
+        <label>Suggested Topic</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <label>CSA Requests</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>RECORDTYPE</columns>
+        <columns>NAME</columns>
+        <columns>Account__c</columns>
+        <columns>Assigned_to__c</columns>
+        <columns>CREATEDBY_USER.ALIAS</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>CREATEDBY_USER</columns>
+        <columns>Due_Date__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>Caroline_s_Requests</fullName>
+        <columns>Assigned_to__c</columns>
+        <columns>NAME</columns>
+        <columns>Account__c</columns>
+        <columns>CSA_Request__c</columns>
+        <columns>Status__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>Due_Date__c</columns>
+        <columns>Completed_Date__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Assigned_to__c</field>
+            <operation>equals</operation>
+            <value>Caroline Barry</value>
+        </filters>
+        <label>Caroline&apos;s Requests</label>
+    </listViews>
+    <listViews>
+        <fullName>Chris_James_Requests</fullName>
+        <columns>NAME</columns>
+        <columns>Assigned_to__c</columns>
+        <columns>Status__c</columns>
+        <columns>Due_Date__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CREATEDBY_USER</field>
+            <operation>contains</operation>
+            <value>James</value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operation>notEqual</operation>
+            <value>Completed,Cancelled</value>
+        </filters>
+        <label>Chris James Requests</label>
+    </listViews>
+    <listViews>
+        <fullName>Conference_Presentation_CSAs</fullName>
+        <columns>NAME</columns>
+        <columns>Account__c</columns>
+        <columns>Assigned_to__c</columns>
+        <columns>Due_Date__c</columns>
+        <columns>Start_Date__c</columns>
+        <columns>OWNER.ALIAS</columns>
+        <columns>CREATED_DATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>CSARequests__c.Pro_Services_Request</value>
+        </filters>
+        <label>Conference Presentation CSAs</label>
+    </listViews>
+    <listViews>
+        <fullName>David_s_Completed_Requests</fullName>
+        <columns>CSA_Request__c</columns>
+        <columns>NAME</columns>
+        <columns>Completed_Date__c</columns>
+        <columns>CREATEDBY_USER</columns>
+        <columns>Details__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Assigned_to__c</field>
+            <operation>contains</operation>
+            <value>Aron</value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Completed</value>
+        </filters>
+        <label>David&apos;s Completed Requests</label>
+    </listViews>
+    <listViews>
+        <fullName>David_s_Open_Requests</fullName>
+        <columns>CSA_Request__c</columns>
+        <columns>NAME</columns>
+        <columns>Due_Date__c</columns>
+        <columns>CREATEDBY_USER</columns>
+        <columns>Details__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Assigned_to__c</field>
+            <operation>contains</operation>
+            <value>Aron</value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operation>notEqual</operation>
+            <value>Completed,Cancelled</value>
+        </filters>
+        <label>David&apos;s Open Requests</label>
+    </listViews>
+    <listViews>
+        <fullName>Della_s_Requests</fullName>
+        <columns>NAME</columns>
+        <columns>Assigned_to__c</columns>
+        <columns>CSA_Request__c</columns>
+        <columns>Status__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>Due_Date__c</columns>
+        <columns>OWNER.ALIAS</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Assigned_to__c</field>
+            <operation>contains</operation>
+            <value>Della</value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operation>notEqual</operation>
+            <value>Completed,Cancelled</value>
+        </filters>
+        <label>Della&apos;s Requests</label>
+    </listViews>
+    <listViews>
+        <fullName>Jill_s_Requests</fullName>
+        <columns>NAME</columns>
+        <columns>Assigned_to__c</columns>
+        <columns>Account__c</columns>
+        <columns>Details__c</columns>
+        <columns>Status__c</columns>
+        <columns>CREATEDBY_USER</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>Due_Date__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Assigned_to__c</field>
+            <operation>contains</operation>
+            <value>Jill</value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operation>notEqual</operation>
+            <value>Completed,Cancelled</value>
+        </filters>
+        <label>Jill&apos;s Requests</label>
+    </listViews>
+    <listViews>
+        <fullName>Kate_s_Completed_Requests</fullName>
+        <columns>NAME</columns>
+        <columns>CSA_Request__c</columns>
+        <columns>Completed_Date__c</columns>
+        <columns>OWNER.ALIAS</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Assigned_to__c</field>
+            <operation>contains</operation>
+            <value>Muir</value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Completed</value>
+        </filters>
+        <label>Kate&apos;s Completed Requests</label>
+    </listViews>
+    <listViews>
+        <fullName>Kate_s_Open_Requests</fullName>
+        <columns>NAME</columns>
+        <columns>CSA_Request__c</columns>
+        <columns>Details__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>Due_Date__c</columns>
+        <columns>Status__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Assigned_to__c</field>
+            <operation>contains</operation>
+            <value>Muir</value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operation>notEqual</operation>
+            <value>Completed,Cancelled</value>
+        </filters>
+        <label>Kate&apos;s Open Requests</label>
+    </listViews>
+    <listViews>
+        <fullName>New_This_Week</fullName>
+        <columns>NAME</columns>
+        <columns>Assigned_to__c</columns>
+        <columns>Account__c</columns>
+        <columns>Due_Date__c</columns>
+        <columns>Completed_Date__c</columns>
+        <columns>Status__c</columns>
+        <columns>OWNER.LAST_NAME</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CREATED_DATE</field>
+            <operation>equals</operation>
+            <value>THIS_WEEK</value>
+        </filters>
+        <label>New This Week</label>
+        <sharedTo>
+            <role>TopLevel</role>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Pro_Services_Requests</fullName>
+        <columns>NAME</columns>
+        <columns>Account__c</columns>
+        <columns>Assigned_to__c</columns>
+        <columns>Status__c</columns>
+        <columns>CSA_Request__c</columns>
+        <columns>RECORDTYPE</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>LAST_UPDATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>CSARequests__c.Pro_Services_Request</value>
+        </filters>
+        <label>Pro Services Requests</label>
+        <sharedTo>
+            <group>ASAProfessionalServices</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Ryan_s_Completed_Weekly_Tasks</fullName>
+        <columns>Assigned_to__c</columns>
+        <columns>NAME</columns>
+        <columns>CSA_Request__c</columns>
+        <columns>Completed_Date__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Assigned_to__c</field>
+            <operation>contains</operation>
+            <value>Ryan</value>
+        </filters>
+        <filters>
+            <field>Completed_Date__c</field>
+            <operation>lessOrEqual</operation>
+            <value>TODAY</value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Completed</value>
+        </filters>
+        <label>Ryan&apos;s Completed Weekly Tasks</label>
+    </listViews>
+    <listViews>
+        <fullName>Ryan_s_Requests</fullName>
+        <columns>CSA_Request__c</columns>
+        <columns>NAME</columns>
+        <columns>Details__c</columns>
+        <columns>Assigned_to__c</columns>
+        <columns>OWNER.ALIAS</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>Due_Date__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Assigned_to__c</field>
+            <operation>contains</operation>
+            <value>Ryan</value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operation>notEqual</operation>
+            <value>Completed,Cancelled</value>
+        </filters>
+        <label>Ryan&apos;s Requests</label>
+    </listViews>
+    <listViews>
+        <fullName>Salesforce_Admininstrator_Requests</fullName>
+        <columns>NAME</columns>
+        <columns>Status__c</columns>
+        <columns>Due_Date__c</columns>
+        <columns>Completed_Date__c</columns>
+        <columns>CREATEDBY_USER</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>RECORDTYPE</columns>
+        <columns>Assigned_to__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Assigned_to__c</field>
+            <operation>contains</operation>
+            <value>Andrew,Jane</value>
+        </filters>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>CSARequests__c.CSA_Request</value>
+        </filters>
+        <filters>
+            <field>CSA_Request__c</field>
+            <operation>equals</operation>
+            <value>Salesforce Admininstrator Request</value>
+        </filters>
+        <label>Salesforce Admininstrator Requests</label>
+    </listViews>
+    <nameField>
+        <label>Task Name</label>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>CSA Requests</pluralLabel>
+    <recordTypeTrackHistory>false</recordTypeTrackHistory>
+    <recordTypes>
+        <fullName>CSA_Request</fullName>
+        <active>true</active>
+        <description>Use this record type for any request other than Conference Presentation Assistance</description>
+        <label>CSA Request</label>
+        <picklistValues>
+            <picklist>CSA_Request__c</picklist>
+            <values>
+                <fullName>Add%2FEdit Salesforce contacts</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Advisory Board Support</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ambassador Program Request</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Campus Activation Event</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Client Forum Support</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Collateral or Presentations</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Conference</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Create Brand Name</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Data Depersonalization Request</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Miscellaneous Research</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New%2FRenew Association Membership</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Off-board Client</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pre-Conference Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Print%2FCopy Materials</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Reports</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Return School Copy of Contract</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Salesforce Admininstrator Request</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Salt Store New Contact</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>School Profile Creation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Stakeholder meeting packets</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status__c</picklist>
+            <values>
+                <fullName>Cancelled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Progress</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Opened</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Pro_Services_Request</fullName>
+        <active>true</active>
+        <description>Use this record type ONLY for Conference Presentation Assistance</description>
+        <label>Pro Services Request</label>
+        <picklistValues>
+            <picklist>CSA_Request__c</picklist>
+            <values>
+                <fullName>Conference Presentation Proposal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pre-Sales Meeting %2F In-Person Support</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Presentation Content Assistance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Salt Demo %2F Webinar</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status__c</picklist>
+            <values>
+                <fullName>Cancelled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Progress</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Opened</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>Conf_Presentation_Prop_Required_Fields</fullName>
+        <active>true</active>
+        <errorConditionFormula>RecordType.DeveloperName = &apos;Pro_Services_Request&apos; &amp;&amp; ISPICKVAL(CSA_Request__c,&apos;Conference Presentation Proposal&apos;) &amp;&amp; (ISNULL(Due_Date__c)|| ISNULL(Conference_End_Date__c)||ISNULL(Conference_Start_Date__c)|| ISNULL(Expected_Attendees__c))</errorConditionFormula>
+        <errorMessage>Due/Proposal Deadline,Start Date,EndDate,Expected Attendees are required fields for this Request Type .</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Pre_Sales_Meeting_Required_Fields</fullName>
+        <active>true</active>
+        <errorConditionFormula>RecordType.DeveloperName = &apos;Pro_Services_Request&apos; &amp;&amp;  (ISPICKVAL(CSA_Request__c,&apos;Pre-Sales Meeting / In-Person Support&apos;) || ISPICKVAL(CSA_Request__c,&apos;Salt Demo / Webinar&apos;)) &amp;&amp; (ISBLANK(Details__c)|| ISNULL(Meeting_Date__c))</errorConditionFormula>
+        <errorMessage>Details and Meeting Date are required fields for this Request Type.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Presentation_Content_Required_Fields</fullName>
+        <active>true</active>
+        <errorConditionFormula>RecordType.DeveloperName = &apos;Pro_Services_Request&apos; &amp;&amp;  ISPICKVAL(CSA_Request__c,&apos;Presentation Content Assistance&apos;) &amp;&amp; (ISNULL(Due_Date__c) || ISBLANK(Details__c))</errorConditionFormula>
+        <errorMessage>Due/Proposal Deadline and Details are required fields for this Request Type .</errorMessage>
+    </validationRules>
+</CustomObject>

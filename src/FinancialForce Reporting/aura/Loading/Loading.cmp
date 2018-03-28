@@ -1,0 +1,13 @@
+<!-- Copyright (c) 2015 FinancialForce.com, inc. All rights reserved. -->
+<aura:component >
+	<aura:attribute name="inProgress" type="Boolean" default="false"/>
+	<aura:attribute name="class" type="String"/>
+
+	<aura:renderIf isTrue="{!v.inProgress}">
+		<div class="{!'slds-box slds-theme--shade slds-theme--alert-texture slds-text-align--center ' + v.class}">
+			<div class="slds-spinner--small slds-show--inline-block">
+				<img src="/resource/ffr__SLDS090/assets/images/spinners/slds_spinner_brand.gif" alt="Loading..." />
+			</div>
+		</div>
+   </aura:renderIf>
+</aura:component>

@@ -1,0 +1,26 @@
+<apex:page standardController="c2g__codaJournal__c" extensions="c2g.CODAHelpLoaderController,c2g.CODABackgroundPostConfirmController" recordSetVar="journals" >
+    <script src="{!URLFOR($Resource.coda2go,'coda2go/web/script/lib.js')}" type="text/javascript"></script>
+    <apex:stylesheet value="{!URLFOR($Resource.c2g__coda2go,'coda2go/web/css/style.css')}"/>
+    <script>
+		var CODA2GoButtons = new CODA2GoPage();
+		var CODA2GoBtnSaveValue = "{!$Label.codaProcessing}";
+	</script>
+    <apex:form id="form" onsubmit="if(CODA2GoButtons.disableSaveButtons){ return CODA2GoButtons.disableSaveButtons(); }">
+        <apex:sectionHeader title="{!$Label.c2g__backgroundpostingscheduler}"  help="{!redirectForHelp1321}"/>
+        <apex:pageBlock >
+            <apex:pagemessages />
+            <apex:pageBlockButtons location="bottom">
+                <apex:commandButton value="{!$Label.c2g__yes}" action="{!runNow}" id="Yes_h" styleclass="hiddensubmit"/>
+                <apex:commandButton value="{!$Label.c2g__no}" action="{!cancel}" id="cancel_h" styleclass="hiddensubmit" immediate="true" reRender=""/>
+                <apex:commandButton value="{!$Label.c2g__nativeuibuttongoback}" action="{!cancel}" id="goBack_h" styleclass="hiddensubmit" immediate="true" reRender=""/>
+                <!-- End of Hidden Buttons -->
+                <apex:commandButton value="{!$Label.c2g__yes}" id="Yes" onclick="document.getElementById('{!$Component.Yes_h}').click();return false;" rendered="{!CanShowButton}" reRender="form"/>         
+                <apex:commandButton value="{!$Label.c2g__no}" id="cancel" onclick="if(!CODA.queing()){document.getElementById('{!$Component.cancel_h}').click()};return false;" rendered="{!CanShowButton}"/>
+                <apex:commandButton value="{!$Label.c2g__nativeuibuttongoback}" id="goBack" onclick="if(!CODA.queing()){document.getElementById('{!$Component.goBack_h}').click()};return false;" rendered="{!(!CanShowButton)}"/>
+                <script>
+                    CODA2GoButtons.initButtons(["{!$Component.Yes}","{!$Component.cancel}"]);
+                </script>
+            </apex:pageBlockButtons>
+        </apex:pageBlock>   
+    </apex:form>
+</apex:page>

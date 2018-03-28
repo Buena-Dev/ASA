@@ -1,0 +1,34 @@
+<!-- codacurrentcompanydisplay -->
+<apex:page controller="c2g.CODACurrentCompanyDisplayController" showHeader="false" sidebar="false" readonly="true">
+	<apex:stylesheet value="{!URLFOR($Resource.c2g__coda2go,'coda2go/web/css/style.css')}"/>
+	<script type="text/javascript">
+		var tn, newlink, wrapper;
+
+		document.body.setAttribute('class', 'homeScreenBody');
+		wrapper = document.createElement('div');
+		wrapper.setAttribute('class', 'homeScreenWidget');
+		document.body.appendChild(wrapper);
+
+		Visualforce.remoting.Manager.invokeAction(
+			'{!$RemoteAction.CODACurrentCompanyDisplayController.getCompanyName}',
+			function(result, event)
+		{
+			if (event.status)  
+			{
+				tn = document.createTextNode(result.CompanyName);
+				newlink = document.createElement('a');
+				newlink.setAttribute('title', result.CompanyName);
+				newlink.setAttribute('target', '_parent');
+				newlink.setAttribute('href', result.CompanyUrl);
+				newlink.appendChild(tn);
+				wrapper.appendChild(newlink);
+			}
+			else
+			{
+				tn = document.createTextNode(event.message);
+				document.body.appendChild(tn);
+			}
+		},
+		{escape: false});
+	</script>
+</apex:page>

@@ -1,0 +1,143 @@
+<apex:page controller="c2g.BackgroundPostingSchedulerController" extensions="c2g.CODAHelpLoaderController">
+<script src="{!URLFOR($Resource.coda2go,'coda2go/web/script/lib.js')}" type="text/javascript"></script>
+
+	<apex:form >
+		<apex:inputHidden value="{!selectedFrequencyType}" id="selectedFrequency"/>
+		<apex:inputHidden value="{!selectedMonthItem}" id="selectedMonthItem"/>
+
+		<apex:sectionHeader title="{!$Label.c2g__backgroundpostingscheduler}" help="{!redirectForHelp1321}"/>
+
+		<apex:pageBlock mode="edit" title="{!if(isSysAdmin,$Label.c2g__scheduleedit, '')}" >
+			<apex:pageBlockButtons location="{!if(isSysAdmin,'both','bottom')}">
+				<apex:commandButton action="{!scheduleJob}" value="{!$Label.c2g__schedulejob}" rendered="{!isSysAdmin}"/>
+				<apex:commandButton action="{!runNow}" value="{!$Label.c2g__runnow}"/>
+			</apex:pageBlockButtons>
+			<apex:pageMessages />
+
+			<table cellspacing="0" cellpadding="4" width="100%">
+				<tr>
+					<td width="150px" align="right">
+					<span>{!$Label.Frequency}</span>
+					</td>
+					<td>
+						<apex:tabPanel switchType="client" value="{!selectedFrequencyType}" tabClass="activeTab" inactiveTabClass="inactiveTab">
+					        <apex:tab label="{!$Label.c2g__hourly}" name="Hourly" ontabenter="javascript:togglePanel('Hourly')">
+					        	<table width="100%" cellspacing="0" cellpadding="8">
+									<tr>
+										<td><apex:outputLabel value="{!$Label.c2g__repeatinterval}" for="repeatInterval"/></td>
+										<td style="width:100%">
+											<apex:selectList id="repeatInterval" value="{!selectedInterval}" multiselect="false" size="1" required="true">
+												<apex:selectOptions value="{!intervalList}" />
+											</apex:selectList>
+										</td>
+									</tr>
+									<tr>
+										<td><apex:outputLabel value="{!$Label.c2g__preferredstartoffset}" for="startOffset"/></td>
+										<td>
+											<apex:selectList id="startOffset" value="{!selectedOffset}" multiselect="false" size="1" required="true">
+												<apex:selectOptions value="{!offsetList}" />
+											</apex:selectList>
+										</td>
+									</tr>
+								</table>
+					        </apex:tab>
+					        <apex:tab label="{!$Label.c2g__codadaily}" name="Daily" ontabenter="javascript:togglePanel('Daily')">
+					        	<table width="100%" cellspacing="0" cellpadding="8">
+									<tr><td><span class="recurs">{!$Label.Recurseveryday}</span></td></tr>
+								</table>
+					        </apex:tab>
+					        <apex:tab label="{!$Label.c2g__codaweekly}" name="Weekly" ontabenter="javascript:togglePanel('Weekly')">
+					        	<table width="100%" cellspacing="0" cellpadding="8">
+									<tr><td><span class="recurs">{!$Label.Recurseveryweekon}</span></td></tr>
+									<tr>
+										<td>
+											<apex:selectCheckboxes value="{!selectedWeekDays}">
+												<apex:selectOptions value="{!weekDayList}"/>
+											</apex:selectCheckboxes>
+										</td>
+									</tr>
+								</table>
+					        </apex:tab>
+					        <apex:tab label="{!$Label.c2g__codamonthly}" name="Monthly" ontabenter="javascript:togglePanel('Monthly')">
+					        	<table width="100%" cellspacing="0" cellpadding="8">
+									<tr>
+										<td>
+											<input id="radioDayNo" type="radio" name="monthPanel" value="1" onclick="javascript:toggleMonthItems('1')"> {!$Label.OnDay}</input> 
+											&nbsp;
+											<apex:selectList id="lstMonthDay" value="{!selectedMonthDay}" multiselect="false" size="1">
+												<apex:selectOptions value="{!monthDayList}" />
+											</apex:selectList> {!$Label.ofeverymonth}
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<input id="radioDayOccurance" type="radio" name="monthPanel" value="1" onclick="javascript:toggleMonthItems('2')">{!$Label.On}</input>
+											&nbsp;
+											<apex:selectList id="lstDayOccurance" value="{!selectedDayOccurance}" multiselect="false" size="1">
+												<apex:selectOptions value="{!dayOccuranceList}" />
+											</apex:selectList>
+											<apex:selectList id="lstWeekDay" value="{!selectedWeekDay}" multiselect="false" size="1">
+												<apex:selectOptions value="{!weekDayList}" />
+											</apex:selectList> {!$Label.ofeverymonth}
+										</td>
+									</tr>
+								</table>
+					        </apex:tab>
+					    </apex:tabPanel>
+					</td>
+				</tr>
+				<tr id="startTimeRow">
+					<td align="right"><apex:outputLabel value="{!$Label.c2g__preferredstarttime}" for="startTime"/></td>
+					<td style="height:40px;">
+						<apex:selectList id="startTime" value="{!selectedTime}" multiselect="false" size="1" required="true">
+							<apex:selectOptions value="{!timeList}" />
+						</apex:selectList>
+					</td>
+				</tr>
+			</table>
+
+			<script type="text/javascript">
+				function togglePanel(panelType)
+				{
+					if(panelType == 'Monthly')
+					{
+						document.getElementById('radioDayNo').checked = true;
+						toggleMonthItems(1);
+					}
+					document.getElementById("{!$Component.selectedFrequency}").value = panelType;
+					document.getElementById('startTimeRow').style.visibility = (panelType == 'Hourly') ? 'hidden' : 'visible';
+				}
+
+				function toggleMonthItems(itemType)
+				{
+					if(itemType == 1)
+					{
+						document.getElementById("{!$Component.lstMonthDay}").disabled = false;
+						document.getElementById("{!$Component.lstDayOccurance}").disabled= true;
+						document.getElementById("{!$Component.lstWeekDay}").disabled= true;
+					}
+					else if(itemType == 2)
+					{
+						document.getElementById("{!$Component.lstMonthDay}").disabled= true;
+						document.getElementById("{!$Component.lstDayOccurance}").disabled= false;
+						document.getElementById("{!$Component.lstWeekDay}").disabled= false;
+					}
+					document.getElementById("{!$Component.selectedMonthItem}").value = itemType;
+				}
+
+				function GetValue()
+				{
+					getExpression(document.getElementById("{!$Component.resultExp}").value);
+				}
+
+				//SETUP
+				if(document.getElementById('{!$Component.selectedFrequency}').value===''){
+					document.getElementById("{!$Component.selectedFrequency}").value = 'Hourly';
+				}
+				togglePanel(document.getElementById("{!$Component.selectedFrequency}").value);
+			</script>
+				
+		</apex:pageBlock>
+
+	</apex:form>
+</apex:page>

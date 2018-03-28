@@ -1,0 +1,13 @@
+Hello {!Receiving_User.FirstName},
+
+{!SALT_Servicers__c.Account__c} has Servicer Access which has expired.
+
+The Servicer is: {!SALT_Servicers__c.Servicer__c} and the expiration date was: {!SALT_Servicers__c.Expiration_Date__c}.
+
+Please ensure the school authorizes a new form so that there is no further interruption in service.
+
+Follow this link to the account: {!SALT_Servicers__c.Link}
+
+
+
+Powered by Salesforce.com

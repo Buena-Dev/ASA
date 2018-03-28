@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>false</available>
+    <description>School_ASA Direct User ID Template (Internal) to be sent for creation or reset of password</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>ASA Direct User Creation/Updater</name>
+    <style>none</style>
+    <subject>{!Account.Name} ASA Direct User IDSet Up</subject>
+    <type>text</type>
+</EmailTemplate>

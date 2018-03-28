@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Request to Approve an Article</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>PS Offering - Article Approval Request</name>
+    <style>none</style>
+    <subject>Article Requested by {!Pro_Services_Offering__c.PS_OfferingRequestedBy__c}, Target Date: {!Pro_Services_Offering__c.PS_OfferingTargetDate__c}</subject>
+    <type>text</type>
+</EmailTemplate>

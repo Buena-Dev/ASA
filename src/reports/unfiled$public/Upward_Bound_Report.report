@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>FK_NAME</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>c2g__codaInvoice__c.c2g__InvoiceTotal__c</field>
+    </columns>
+    <description>For Alby Ramirez</description>
+    <filter>
+        <criteriaItems>
+            <column>FK_NAME</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>G5 - Upward Bound</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>FiscalYear</dateGranularity>
+        <field>c2g__codaInvoice__c.c2g__DueDate__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Upward Bound Report</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$c2g__codaInvoice__c@c2g__codaInvoice__c.c2g__Account__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>c2g__codaInvoice__c.c2g__InvoiceDate__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

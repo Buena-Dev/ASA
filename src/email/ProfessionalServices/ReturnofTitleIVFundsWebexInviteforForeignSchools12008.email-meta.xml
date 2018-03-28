@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>false</available>
+    <description>Return of Title IV Funds Webex Invite for foreign schools 1-2008</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>EmailLetterhead</letterhead>
+    <name>Return of Title IV Funds Webex Invite for Foreign Schools 1-2008</name>
+    <style>freeForm</style>
+    <subject>You are invited to an ASA &amp; IEFC Return of Title IV funds via webex!</subject>
+    <textOnly>Join ASA &amp; IEFC! 
+
+Return of Title IV Funds for Foreign Schools Webex
+
+National FFELP guarantor American Student Assistance® (ASA) and The International Education Finance Corporation (IEFC) have designed an on-line training series to discuss some of the most pressing topics affecting U.S. financial aid at international universities. These events are designed specifically for international institutions.
+
+Date and Time:
+ 
+Wednesday 1/23/08 from 15:00  - 16:00  GMT 
+
+Course Description: Known officially as the Return of Title IV Funds (or R2T4 for short) this session will take you through the actually calculation it self, how to do it, and what you need to know.  We will review the entire Refunds process and provide examples and sample calculations.  
+ 
+Who Should Attend 
+
+Any financial aid administrator interested in the most up to date information related to Return of Title IV funds.
+
+How You Will Benefit 
+Participants will gain a clear understanding of the regulatory requirements regarding Return of Title IV funds.
+ 
+How to register or for additional information.
+
+· Register Online at http://www.amsa.com/fap/training 
+· Email: send your name, phone number and enrollment details to 
+training@amsa.com 
+· Phone: call the Training Department at (800) 999-9080, ext. 3099 (1-617-728-4200)
+
+All American Student Assistance training events are offered free of charge, however the dial in conference call will be at international rates for a call to the U.S</textOnly>
+    <type>html</type>
+</EmailTemplate>

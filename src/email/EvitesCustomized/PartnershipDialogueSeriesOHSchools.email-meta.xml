@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>false</available>
+    <description>OH School invite for the Partnership Dialogue Series</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>BlankLetterhead</letterhead>
+    <name>Partnership Dialogue Series - OH Schools</name>
+    <style>freeForm</style>
+    <subject>Save the Date: Wednesday, February 7, 2007!</subject>
+    <textOnly>ASA’s Partnership Dialogue Series: A Focus on Consolidation
+ 
+Dear {!Contact.FirstName},
+ 
+We know you’re busy.  We know your inbox and voicemail boxes are full.
+ 
+That’s why we’ve designed efficient, half-day forums that ensure you won’t waste valuable time out of the office.
+ 
+As part of our Partnership Dialogue Series, we’re proud to host an exchange among our colleagues in Dublin, OH on February 7, 2007. This series will afford you the opportunity to join in an interactive presentation on consolidation loans followed by small round table discussions.  Be educated, ask questions, and receive feedback from colleagues, lenders and American Student Assistance on one of the hottest topics affecting financial aid offices across the country.
+ 
+Agenda:
+ 
+Wednesday, February 7, 2007
+ 
+08:30 – 09:00    Continental Breakfast
+ 
+09:00 – 12:00    Discussion and Exchange of Ideas
+ 
+12:00 – 01:00    Lunch 
+ 
+Crowne Plaza Hotel
+600 Metro Place North
+Dublin, OH 43017
+ 
+Please RSVP to Nancy Meehan by January 26, 2007 at nmeehan@amsa.com or call 617-728-4207.  I hope you are able to join us, and look forward to seeing you there.
+ 
+Thank you,
+{!Contact.OwnerFullName}
+{!Contact.OwnerEmail}</textOnly>
+    <type>html</type>
+</EmailTemplate>

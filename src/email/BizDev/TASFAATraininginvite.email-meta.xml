@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>false</available>
+    <description>TASFAA Training invite to schools and lenders in TN</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>BlankLetterhead</letterhead>
+    <name>TASFAA Training invite</name>
+    <style>freeForm</style>
+    <subject>TASFAA District III Event</subject>
+    <textOnly>Join us for a TASFAA District III Event
+ 
+TASFAA and national FFELP guarantor American Student Assistance® are offering a training event to help increase your skills and knowledge.
+ 
+ 
+Agenda
+ 
+March 9, 2006
+9:00am – 12:30 pm 
+Morning Sessions – Offered to help you become a more effective and efficient professional by utilizing proven techniques for dealing with people and processes.
+Audience – TASFAA members from all schools and lenders
+ 
+Emotional Intelligence
+This workshop takes Emotional Intelligence into the workplace.  
+Business leaders and outstanding performers are not defined by their IQs or even their job skills, but by their &quot;emotional intelligence,” a set of competencies that distinguishes how people manage feelings, interact, and communicate. Analyses done by dozens of experts in 500 corporations, government agencies, and nonprofit organizations worldwide conclude that emotional intelligence is the barometer of excellence on virtually any job. We’ll explain what emotional intelligence is and review its competencies and skills, including control of one&apos;s impulses, self-motivation, empathy and social competence in interpersonal relationships.  Unlike IQ, emotional intelligence can keep growing--it continues to develop with life experiences. Understanding and raising your emotional intelligence is essential to your success and leadership potential. 
+ 
+Go with the Flows
+Do you ever wonder why you send some forms to the lender, some to the guarantor, and some to the servicer?  Why you receive funds from many different institutions while another school receives all of their funds from just one place?  What exactly does a guarantor do?  What does a lender do?  What does a servicer do?  This session will bring to light the major FFELP players, as well as the available loan processing flows, including the vocabulary used by everyone involved with those flows.  You will also gain a different type of understanding of your current loan processes and new tools to assist you in controlling and streamlining your processing.
+ 
+ 
+12:30pm – 1:15pm Lunch, sponsored by Edamerica and ASA, everyone welcome
+ 
+1:15pm – 3:15pm
+Afternoon Session – Lender Workshop 
+Audience – All lender professionals
+ 
+This workshop is intended to help introduce ASA to the Tennessee lender community.  We’ll show you how we partner with our lenders to support our clients.  You’ll learn about what we offer our clients in terms of customer service, training, regulatory support, and technology.  Hear about our newest initiatives and the benefits you get when working with ASA.  
+ 
+ 
+Location and Link to Directions
+Tennessee Technology Center at Nashville
+http://www.nashville.tec.tn.us/driving_directions.htm
+ 
+Refreshments
+Continental breakfast and lunch will be provided.
+ 
+Registration
+Please email Melanie Webb at mwebb@columbiastate.edu</textOnly>
+    <type>html</type>
+</EmailTemplate>

@@ -1,0 +1,3 @@
+Alert:  {!Opportunity.Account} has requested a Sales Sheet.
+
+This Opportunity is owned by: {!Opportunity.OwnerFullName}

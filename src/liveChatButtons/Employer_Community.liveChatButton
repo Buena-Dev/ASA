@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LiveChatButton xmlns="http://soap.sforce.com/2006/04/metadata">
+    <autoGreeting>Hello, I&apos;m a Salt Counselor here to help! 
+What can I assist you with?</autoGreeting>
+    <customAgentName>Salt Counselor</customAgentName>
+    <deployments/>
+    <enableQueue>false</enableQueue>
+    <isActive>true</isActive>
+    <label>Employer Community</label>
+    <optionsCustomRoutingIsEnabled>false</optionsCustomRoutingIsEnabled>
+    <optionsHasChasitorIdleTimeout>false</optionsHasChasitorIdleTimeout>
+    <optionsHasInviteAfterAccept>false</optionsHasInviteAfterAccept>
+    <optionsHasInviteAfterReject>false</optionsHasInviteAfterReject>
+    <optionsHasRerouteDeclinedRequest>false</optionsHasRerouteDeclinedRequest>
+    <optionsIsAutoAccept>false</optionsIsAutoAccept>
+    <optionsIsInviteAutoRemove>false</optionsIsInviteAutoRemove>
+    <routingType>Choice</routingType>
+    <skills>
+        <skill>Employer_Community</skill>
+    </skills>
+    <type>Standard</type>
+    <windowLanguage>en_US</windowLanguage>
+</LiveChatButton>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>false</available>
+    <description>FAD Follow Up letter from Paul addressing recent industry changes and states ASA’s commitment to clients and Wellness</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>SALTClientLetterhead</letterhead>
+    <name>Part I Director Follow Up Letter from Paul</name>
+    <style>freeForm</style>
+    <subject>Student Loan Reform Update from ASA President Paul Combe</subject>
+    <textOnly>July 7, 2009
+ 
+ 
+
+Hello {!Contact.FirstName},
+ 
+
+Legislative decisions about the federal student loan program are drawing near, and a meaningful step toward reform has occurred since I last contacted you in March.
+ 
+At American Student Assistance® (ASA), we have a longstanding partnership with the National Association of Student Loan Administrators (NASLA).  Together with NASLA, we have drafted legislation: www.amsa.com/reform/evolving-the-student-loan-guarantor.cfm that, if passed, will evolve the guarantor&apos;s role and make student support services an entitlement for student loan borrowers.
+ 
+NASLA, an alliance of four guarantors (EdFund, Great Lakes Higher Education Guaranty Corporation, Texas Guaranteed Student Loan Corporation and ASA), ensures consistent, reliable delivery of student loan services to the nation&apos;s students, parents, and post secondary institutions.  You can read our proposed legislation: www.amsa.com/reform/evolving-the-student-loan-guarantor.cfm and endorse:
+www.amsa.com/reform/endorse-now.cfm making education debt management an entitlement for all borrowers.  
+ 
+Congress is scheduled for recess during the month of August, which leaves us with only a small window to get this critical proposal adopted.  To ensure that your voice is heard, I urge you to please submit your endorsement: www.amsa.com/reform/endorse-now.cfm before July 17. 
+ 
+I am looking forwarded to seeing you at NASFAA if you are planning to attend.  It will be an excellent opportunity for us to discuss the borrower benefits of an evolved guarantor role and the future of our industry as a whole.
+ 
+ 
+Sincerely,
+ 
+Paul C. Combe
+President and CEO
+ 
+ 
+PS - Be a part of the student aid reform that truly aids students.  Endorse: www.amsa.com/reform/endorse-now.cfm NASLA&apos;s proposal today.
+ 
+ </textOnly>
+    <type>html</type>
+</EmailTemplate>

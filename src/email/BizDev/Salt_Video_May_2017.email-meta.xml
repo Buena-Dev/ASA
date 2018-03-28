@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Used by Sales Reps to send out customized email for Salt Overview Video on Wistia</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Salt_School_Channel</letterhead>
+    <name>Salt Video May 2017</name>
+    <style>freeForm</style>
+    <subject>Salt Overview Video</subject>
+    <textOnly>Dear {!Contact.FirstName}:
+
+
+Watch the Salt Overview video (https://asa-salt.wistia.com/medias/vvw57mzg2t) for a brief demonstration on how your students and alumni can benefit from Salt&apos;s personal finance and debt management tools.
+
+
+Best Regards,
+{!User.Name}
+{!User.Title}
+{!User.Email}
+{!User.Phone}</textOnly>
+    <type>html</type>
+</EmailTemplate>

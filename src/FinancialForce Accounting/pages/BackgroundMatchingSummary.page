@@ -1,0 +1,134 @@
+<apex:page controller="c2g.CODABackgroundMatchingController" action="{!checkNoPendingBatch}" extensions="c2g.CODAHelpLoaderController">
+    <apex:stylesheet value="{!URLFOR($Resource.c2g__coda2go,'coda2go/web/css/style.css')}"/>
+    <apex:form id="form">
+        <!-- Header Section -->
+        <apex:sectionHeader title="{!$Label.c2g__codabackgroundcashmatchingsection}" help="{!redirectForHelp1063}"/>
+
+        <apex:pageBlock mode="edit" rendered="{!noDocumentForMatch}">
+            <apex:pageblockSection title="{!$Label.c2g__backgroundmatchingsummaryheader}" columns="1">
+                <apex:pageMessage summary="{!$Label.c2g__nodocumentformatch}" severity="error" strength="3" />
+            </apex:pageblockSection>
+            <apex:pageBlockButtons location="bottom">
+                <apex:commandButton value="{!$Label.c2g__backgroundmatchingsummarypageback}" action="{!goBack}" />
+            </apex:pageBlockButtons>
+        </apex:pageBlock>
+        <apex:pageBlock mode="edit" rendered="{!noDocumentForMatch == false}">
+            <apex:pageblockSection title="" rendered="{!isBatchInProgress}" columns="1">
+                <apex:pageMessage summary="{!$Label.c2g__backgroundmatchingalreadyinprogress}" severity="warning" strength="3" />
+            </apex:pageblockSection>
+            <apex:pageblockSection title="{!$Label.c2g__backgroundmatchingsummaryheader}" columns="2" rendered="{!isBatchInProgress == false}">
+                <apex:pageBlockSectionItem dataStyle="width:70%">
+                    <apex:pageBlockSection columns="2">
+                        <apex:pageBlockSectionItem >
+                            <apex:outputLabel value="{!$Label.c2g__backgroundmatchingsummaryaccount}" />
+                            <apex:outputLabel value="{!IF((accountNames!= null && accountNames.size>0),accountNames[0], $Label.c2g__backgroundmatchingallaccounts)}" />
+                        </apex:pageBlockSectionItem>
+                        <apex:pageBlockSectionItem >
+                            <apex:outputLabel value="{!$Label.c2g__backgroundmatchingsummarymatchedupto}" />
+                            <apex:outputLabel value="{!IF(matchUpToType =='Date', matchUpToDate , period)}" />
+                        </apex:pageBlockSectionItem>
+                        <apex:pageBlockSectionItem >
+                            <apex:outputLabel value="{!$Label.c2g__backgroundmatchingfirstmatchby}" />
+                            <apex:outputLabel value="{!IF(matchMode == 'modeReference', $Label.c2g__backgroundmatchingmatchbyreference, $Label.c2g__backgroundmatchingmatchbydocnumber)}" />
+                        </apex:pageBlockSectionItem>
+                        <!-- TODO: 18366 BM - Allow matching by Account or Document Currency -->
+                       	<apex:pageBlockSectionItem >
+                    		<apex:outputLabel value="{!$Label.c2g__backgroundmatchingsummarywhere}"/>
+                    		<apex:outputLabel value="{!matchedCurrencyLabel}" />
+                		</apex:pageBlockSectionItem>
+                        <apex:pageBlockSectionItem >
+                            <apex:outputLabel value="{!$Label.c2g__backgroundmatchingthenmatchby}" />
+                            <apex:outputLabel value="{!matchingCondition}" />
+                        </apex:pageBlockSectionItem>
+                        <apex:pageBlockSectionItem >
+                            <apex:outputLabel value="{!$Label.c2g__backgroundmatchingsummarymatchingdate}" />
+                            <apex:outputField value="{!matchingDateLookup.c2g__LookupDate__c}" />
+                        </apex:pageBlockSectionItem>
+                        <apex:pageBlockSectionItem >
+                            <apex:outputLabel value="{!$Label.c2g__backgroundmatchingsummarypartialpayment}" />
+                            <apex:outputLabel value="{!IF(allowPartialPayment, $Label.c2g__backgroundmatchingpartialpaymentenabled , $Label.c2g__backgroundmatchingpartialpaymentdisabled)}" />
+                        </apex:pageBlockSectionItem>
+                    </apex:pageBlockSection>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem rendered="{!isBatchInProgress == false}" labelStyle="padding-top:20%;" dataStyle="width:30%">
+                    <apex:pageMessage summary="{!$Label.c2g__backgroundmatchingsummarywarning}" severity="warning" strength="3" escape="false" />
+                </apex:pageBlockSectionItem>
+            </apex:pageblockSection>
+            <hr style="display:{!IF((isBatchInProgress == false), 'block', 'none')}" />
+            <apex:pageblockSection columns="2" rendered="{!isBatchInProgress == false}">
+                <apex:pageBlockSectionItem dataStyle="text-align:center;">
+                    <apex:outputLabel />
+                    <apex:outputpanel >
+                        <apex:commandButton value="{!$Label.c2g__backgroundmatchingsummarypageback}" action="{!goBack}" />&nbsp;
+                        <apex:commandButton value="{!$Label.c2g__backgroundmatchingsummarypagestartmatching}" action="{!runProcess}" rendered="{!renderJobStatus == false}" />
+                    </apex:outputpanel>
+                </apex:pageBlockSectionItem>
+            </apex:pageblockSection>
+            <hr style="display:{!IF((renderJobStatus && isBatchInProgress == false), 'block','none')}" />
+            <apex:outputpanel id="jobStatusPanel" rendered="{!renderJobStatus}">
+                <apex:pageblockSection columns="2" title="{!$Label.c2g__backgroundmatchingjobstatussection}" id="jobStatusSection">
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel value="{!$Label.c2g__backgroundmatchingprogressinfo}" />
+                        <c:fflib_batchInfo id="jobStatus" batchControlRecordId="{!Worker.Id}" batchJobClass="BackgroundMatchingBatch" />
+                    </apex:pageBlockSectionItem>
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel value="{!$ObjectType.c2g__Worker__c.Fields.c2g__BatchProcess__c.Label}" />
+                        <apex:outputLink id="batchProcessLink" value="/{!Worker.c2g__BatchProcess__c}">{!Worker.BatchProcess__r.Name}</apex:outputLink>
+                    </apex:pageBlockSectionItem>
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel value="{!$ObjectType.c2g__Worker__c.Fields.c2g__ApexJobId__c.Label}" />
+                        <apex:outputLabel value="{!Worker.c2g__ApexJobId__c}" />
+                    </apex:pageBlockSectionItem>
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel value="{!$ObjectType.c2g__Worker__c.Fields.c2g__Status__c.Label}" />
+                        <apex:outputLabel value="{!jobStatusValueToLabel[Worker.c2g__Status__c]}" />
+                    </apex:pageBlockSectionItem>
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel value="{!$Label.c2g__backgroundmatchingcreatedby}" />
+                        <apex:outputPanel >
+                            <apex:outputLabel value="{!worker.CreatedBy.Name}" />,
+                            <apex:outputField value="{!Worker.CreatedDate}" />
+                        </apex:outputPanel>
+                    </apex:pageBlockSectionItem>
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel value="{!$Label.c2g__backgroundmatchingmodifyby}" />
+                        <apex:outputPanel >
+                            <apex:outputLabel value="{!worker.LastModifiedBy.Name}" />,
+                            <apex:outputField value="{!Worker.LastModifiedDate}" />
+                        </apex:outputPanel>
+                    </apex:pageBlockSectionItem>
+                    <apex:pageblockSectionItem >
+                        <apex:outputpanel id="successMsgPanel" style="display:none;">
+                            <apex:pagemessage summary="{!$Label.c2g__backgroundmatchingsuccessinfo}" severity="info" strength="3"></apex:pagemessage>
+                            <script>
+                            document.addEventListener('DOMContentLoaded', function() {
+                                var progress = document.querySelector('.ffdc-apexlib-progress-message'),
+                                    config = {
+                                        childList: true
+                                    },
+                                    observer;
+
+                                /*
+                                 * Event handler for Job Status update
+                                 */
+                                observer = new MutationObserver(function(mutations){
+                                    var msg = (progress.innerText || ''),
+                                        messagePanel;
+
+                                    if (msg == '{!$Label.c2g__fflib_progressbarstatuscompleted}') {
+                                        messagePanel = document.getElementById('{!$Component.successMsgPanel}');
+                                        messagePanel.style.display = 'block';
+                                        observer.disconnect();
+                                    }
+                                });
+                                observer.observe(progress, config);
+                            });
+                            </script>
+                        </apex:outputpanel>
+                    </apex:pageblockSectionItem>
+                    <br/>
+                </apex:pageblockSection>
+            </apex:outputpanel>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

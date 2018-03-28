@@ -1,0 +1,18 @@
+<apex:page controller="c2g.ChartOfAccountsMappingController" readOnly="true" showHeader="false" renderAs="{!reporter.renderAs}" contentType="{!reporter.contentType}">
+    <apex:outputPanel rendered="{!reporter.reportType == 'pdf' || reporter.reportType == 'xls'}">
+    	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+        <apex:outputText ><center><b>{!$Label.c2g__chartofaccountsmappingspagetitle}</b></center><br/></apex:outputText>    
+        <apex:repeat value="{!reporter.mappingDetailsWithGrouping}" var="mappinglist"> 
+            <br/>
+            <apex:outputText ><b>{!$ObjectType.c2g__codaGeneralLedgerAccount__c.fields.c2g__ChartOfAccountsStructure__c.label}: {!mappinglist.mappingDetails[0].ChartOfAccountsStructure}</b></apex:outputText>   
+            <br/> 
+            <c:reportgenerator records="{!mappinglist.mappingDetails}" fields="{!reporter.reportingFields}" reportType="{!reporter.reportType}"/>
+        </apex:repeat>
+        <br/>
+        <apex:outputText rendered="{!reporter.unMappedGlasFound}"><b>{!$Label.c2g__chartofaccountsmappingsnotmappedglatitle}</b></apex:outputText>   
+        <br/> 
+        <c:reportgenerator records="{!reporter.glaDetails}" fields="{!reporter.reportingFieldsForUnMappedGlas}" reportType="{!reporter.reportType}" rendered="{!reporter.unMappedGlasFound}"/>
+    </apex:outputPanel>
+    
+    <c:reportgenerator records="{!reporter.mappingDetails}" fields="{!reporter.reportingFields}" reportType="{!reporter.reportType}" rendered="{!reporter.reportType == 'csv'}"/>
+</apex:page>

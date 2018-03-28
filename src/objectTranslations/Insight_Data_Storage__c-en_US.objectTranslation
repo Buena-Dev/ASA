@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Insight Data Storage</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Insight Data Storage</value>
+    </caseValues>
+    <fields>
+        <label><!-- Avg Course Grade --></label>
+        <name>Avg_Course_Grade__c</name>
+    </fields>
+    <fields>
+        <label><!-- Avg Duration (Minutes) --></label>
+        <name>Avg_Duration_Minutes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Avg Page Views --></label>
+        <name>Avg_Page_Views__c</name>
+    </fields>
+    <fields>
+        <label><!-- Customer Code --></label>
+        <name>Customer_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Failed --></label>
+        <name>Failed__c</name>
+    </fields>
+    <fields>
+        <label><!-- Members Activated --></label>
+        <name>Members_Activated__c</name>
+    </fields>
+    <fields>
+        <label><!-- Members Deactivated --></label>
+        <name>Members_Deactivated__c</name>
+    </fields>
+    <fields>
+        <label><!-- Members Invited --></label>
+        <name>Members_Invited__c</name>
+    </fields>
+    <fields>
+        <label><!-- Month End --></label>
+        <name>Month_End__c</name>
+    </fields>
+    <fields>
+        <label><!-- Number Courses --></label>
+        <name>Number_Courses__c</name>
+    </fields>
+    <fields>
+        <label><!-- OE Code --></label>
+        <name>OE_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Page Views --></label>
+        <name>Total_Page_Views__c</name>
+    </fields>
+    <layouts>
+        <layout>Insight Data Storage Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

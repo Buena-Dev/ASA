@@ -1,0 +1,5 @@
+{!Account.Name} has requested that we provide additional services for which a contract addendum is necessary.  Please create the addendum and forward it to me at your earliest convenience.  Please see Case {!Case.Link} for more information. 
+
+Thank you,
+
+{!Case.OwnerFullName}

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Activation Reward Discount</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Activation Reward Discount</value>
+    </caseValues>
+    <fields>
+        <label><!-- Discount --></label>
+        <name>Discount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Upper Value --></label>
+        <name>Upper_Value__c</name>
+    </fields>
+    <fields>
+        <label><!-- lower Value --></label>
+        <name>lower_Value__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

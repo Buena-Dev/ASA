@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>Accept_Terms_And_Conditions</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Accept_Terms_And_Conditions</shortDescription>
+        <value>Please accept Terms and Conditions.</value>
+    </labels>
+    <labels>
+        <fullName>Invalid_Company_Id_Self_Registration</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Invalid_Company_Id_Self_Registration</shortDescription>
+        <value>The Company ID you entered is invalid.</value>
+    </labels>
+    <labels>
+        <fullName>Required_Company_Name_Self_Reg</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Required_Company_Name_Self_Reg</shortDescription>
+        <value>Company Name is required.</value>
+    </labels>
+    <labels>
+        <fullName>Required_Customer_Code_Self_Reg</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Required_Customer_Code_Self_Reg</shortDescription>
+        <value>Company ID is required.</value>
+    </labels>
+    <labels>
+        <fullName>Required_First_Name_Self_Reg</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Required_First_Name_Self_Reg</shortDescription>
+        <value>First Name is Required.</value>
+    </labels>
+    <labels>
+        <fullName>Required_Phone_Number_Self_Reg</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Required_Phone_Number_Self_Reg</shortDescription>
+        <value>Phone number is required.</value>
+    </labels>
+</CustomLabels>

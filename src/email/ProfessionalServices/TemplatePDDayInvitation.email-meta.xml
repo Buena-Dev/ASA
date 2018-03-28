@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>PD Day Invitation Template</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>EmailLetterhead</letterhead>
+    <name>Template - PD Day (Invitation)</name>
+    <style>freeForm</style>
+    <subject>You are invited - ASA Training Event</subject>
+    <textOnly>Join ASA next month! We are coming to _______ with our popular professional development workshop. 
+
+________ Training Event
+
+National FFELP guarantor American Student Assistance® has designed an all-day training event for _________. Now is the time to improve your skills at our professional development seminars. Join us to enhance core skills and stay ahead of evolving trends. 
+We are offering a full day of professional development classes designed for all college administrators who are looking to improve their performance at work and add skills to their personal “tool box.” 
+
+Date, Location - Venue 
+
+Sessions:  
+ 
+Agenda 
+
+8:30am Continental Breakfast 
+9:00am 
+12:00pm Lunch 
+1:00pm 
+4:00pm Adjourn
+ 
+Course Descriptions: 
+
+ 
+
+ Who Should Attend 
+
+
+
+How You Will Benefit 
+ 
+All ASA Training Events are Complimentary and Registration is Easy:  
+·        Online! Find the course date and location at http://www.amsa.com/training that best suits you and then click Register!
+·         Email!  Send your name, phone number, and enrollment details to training@amsa.com.
+·         Call!  Contact the Training Department at (800) 999-9080, Ext. 3099.
+ 
+Customized Training
+If you have another course in mind for your staff, we can customize any of our available courses and bring our trainers right to your office.  For a full listing of available courses, please visit our website.  We are eager to help assess your needs – just call or send an email.
+ 
+
+
+
+
+
+
+
+function init() {
+ var eteu = new EmailTemplateEditorUi(&apos;blank - ignore&apos;,false, &apos;editPage&apos;);
+eteu.init();
+}</textOnly>
+    <type>html</type>
+</EmailTemplate>

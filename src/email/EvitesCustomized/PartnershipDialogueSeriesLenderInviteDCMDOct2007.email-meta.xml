@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>false</available>
+    <description>Partnership Dialogue Series Lender Invite DC/MA Oct 2007</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>EmailLetterhead</letterhead>
+    <name>Partnership Dialogue Series - Lender Invite - DC/MD - Oct 2007</name>
+    <style>freeForm</style>
+    <subject>You are Invited!</subject>
+    <textOnly>Dear {!Contact.FirstName}, 
+
+Please accept this invitation to attend the second installment of our Partnership Dialogue Series. These half-day series afford schools the opportunity to discuss, ask questions, and receive feedback on some hot topics affecting lenders and financial aid officers around the country. As one of our lender partners, we hope you can join us in College Park, MD on October 11, 2007. 
+ 
+In this upcoming series, we will explore the challenges schools face of effectively communicating with students and families today. With the overwhelming array of media available, ranging from podcasts to phone calls and text messages, which methods do schools feel comfortable using? And which methods are the most effective for their Millennial students and Baby Boomer parents? This series will encompass a broad discussion of the communication challenges schools face, the scope and message of their communication mission, what resources they need to succeed in that mission, and which outreach experiments to students and families have yielded the best results. 
+
+Our dialogue will begin at 9:00 a.m., with schools joining us for the morning session and lunch. After lunch, we look forward to speaking to you about what ASA has to offer, why the guarantor you choose matters, and how ASA and {!Account.Name} we can work together in the marketplace. 
+
+Proposed Agenda: 
+8:30 – 9:00 a.m. Continental Breakfast (schools and lenders) 
+9:00 a.m. – 12:00 p.m. Discussion and Exchange of Ideas (schools and lenders) 
+12:00 –1:00 p.m. Lunch (schools and lenders) 
+1:00 – 3:00 p.m. Understanding ASA (lenders only) 
+
+
+ 
+Loation: University of Maryland, College Park 
+Crist Room, Samuel Riggs IV Alumni Center Building
+College Park, MD 20742
+http://www.umd.edu/visitors/#directions
+ 
+ 
+Please RSVP to Nancy Jordan by replying to njordan@amsa.com or by calling 617.728.4677  . We hope you are able to join us, and look forward to seeing you there. Please also feel free to share this with others at {!Account.Name} who may not have received this e-mail. 
+
+Thank you.</textOnly>
+    <type>html</type>
+</EmailTemplate>

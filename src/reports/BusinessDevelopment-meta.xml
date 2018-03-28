@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ReportFolder xmlns="http://soap.sforce.com/2006/04/metadata">
+    <accessType>Shared</accessType>
+    <name>Business Development</name>
+    <publicFolderAccess>ReadWrite</publicFolderAccess>
+    <sharedTo>
+        <group>BD_East</group>
+        <group>BD_West</group>
+        <group>BusinessDevelopmentAEs</group>
+        <role>SchoolManagement</role>
+    </sharedTo>
+</ReportFolder>

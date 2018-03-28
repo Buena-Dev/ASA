@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Invoice Contact NLH</name>
+    <style>none</style>
+    <subject>The SALT Invoice Contact at {!Account.Name} is listed as &apos;No Longer Here&apos;</subject>
+    <type>text</type>
+</EmailTemplate>

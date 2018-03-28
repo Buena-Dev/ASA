@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>OK PD Day 2008 Invitation</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>EmailLetterhead</letterhead>
+    <name>PD Day - OK - 2008 (Invitation)</name>
+    <style>freeForm</style>
+    <subject>Save the date - American Student Assistance Training Event</subject>
+    <textOnly>Join ASA next month! We are coming to Oklahoma with our popular professional development workshop. 
+
+Oklahoma Training Event
+
+National FFELP guarantor American Student Assistance® has designed an all-day training event for Oklahoma. Now is the time to improve your skills at our professional development seminars. Join us to enhance core skills and stay ahead of evolving trends. 
+We are offering a full day of professional development classes designed for all college administrators who are looking to improve their performance at work and add skills to their personal “tool box.” 
+
+5/13/200 Oklahoma City, OK  – University of Oklahoma Health Sciences Center
+
+Agenda 
+
+8:30am Continental Breakfast 9:00am Understanding the Millennial Generation and their Impact on Campus
+ 
+12:00pm Lunch 
+1:00pm Where is it Written?
+3:30pm Adjourn
+ 
+Course Descriptions: 
+ 
+Understanding the Millennial Generation and their Impact on Campus
+Throughout the course of this workshop, we will provide you with the necessary tools for bridging the communication gap between your office and the high population of millennial students in academia today. We will also discuss specific tools to assist you in dealing with “helicopter parents” who are often intimately involved in the financial aid decision-making process with these students. In addition, we will explore the new expectations your students have when communicating with your office by mail, telephone, or e-mail.
+ 
+Where is it Written?
+Update your Title IV regulation and process research skills; learn to navigate the Internet effectively for the most up-to-date FFELP information and resources, such as the Common Manual, Federal Registers, and useful websites; increase your problem solving skills; and discover useful industry tools for administering Title IV. You&apos;ll also find out how a proposed regulation becomes law.
+ 
+Who Should Attend 
+
+Any financial aid administrator that is interested in understanding the millennial student  and how to access financial aid resources.
+
+
+How to register or for additional information, including driving directions 
+
+· Register Online at http://www.amsa.com/fap/training 
+· Email: send your name, phone number and enrollment details to 
+training@amsa.com 
+· Phone: call the Training Department at (800) 999-9080, ext. 3099 
+
+All American Student Assistance training events are offered free of charge.</textOnly>
+    <type>html</type>
+</EmailTemplate>

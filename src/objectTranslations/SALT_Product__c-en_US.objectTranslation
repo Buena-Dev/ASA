@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>SALT Product</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>SALT Products</value>
+    </caseValues>
+    <fields>
+        <label><!-- Active --></label>
+        <name>Active__c</name>
+    </fields>
+    <fields>
+        <label><!-- Cost --></label>
+        <name>Cost__c</name>
+    </fields>
+    <fields>
+        <label><!-- Product Description --></label>
+        <name>Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Product Family --></label>
+        <name>Family__c</name>
+        <picklistValues>
+            <masterLabel>Premiums</masterLabel>
+            <translation><!-- Premiums --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Printed Materials</masterLabel>
+            <translation><!-- Printed Materials --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Product Short Description --></label>
+        <name>ShortDescription__c</name>
+    </fields>
+    <layouts>
+        <layout>SALT Product Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

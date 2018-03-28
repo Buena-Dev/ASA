@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>Campus_Engagement_Tactic__c.Account__c</field>
+    </columns>
+    <columns>
+        <field>Campus_Engagement_Tactic__c.Time_Frame__c</field>
+    </columns>
+    <columns>
+        <field>Campus_Engagement_Tactic__c.Description__c</field>
+    </columns>
+    <format>Tabular</format>
+    <name>Engagement Tactics Time Frame Report</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$Campus_Engagement_Tactic__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Campus_Engagement_Tactic__c.Campus_Event_Date__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>false</available>
+    <description>Partnership Dialogue Series School Registration Reminder Santa Ana 2008</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>EmailLetterhead</letterhead>
+    <name>Partnership Dialogue Series School Registration Reminder Santa Ana,CA - Feb 2008</name>
+    <style>freeForm</style>
+    <subject>Courtesy Reminder - American Student Assistance Event</subject>
+    <textOnly>This is a friendly reminder of your registration for an American Student Assistance event
+
+ 
+You&apos;ve been registered for the Santa Ana Partnership Dialogue Series.
+ 
+Date:              February 22, 2008
+Time:              8:30 a.m. - 1:00 p.m.
+Location:       Embassy Suites, near John Wayne Airport
+Directions:   http://www.amsa.com/fap/training/locations_western.cfm#10
+ 
+Continental breakfast and lunch will be served.
+
+Canceling Your Registration
+If you need to cancel or change your training registration please email training@amsa.com or 1-800-999-9080, ext. 3099.
+
+Other Information
+All of ASA&apos;s training programs are offered free of charge.  Please contact us at training@amsa.com or 1-800-999-9080, ext. 3099 with any questions about our training program.
+ 
+In case of inclement weather, please call the number above to check for a delayed start or class cancellation.  Updates will be done by 6:15am on the day of training.</textOnly>
+    <type>html</type>
+</EmailTemplate>

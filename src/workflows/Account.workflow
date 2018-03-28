@@ -1,0 +1,1623 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Account_Created_from_Converted_Lead</fullName>
+        <description>Account Created from Converted Lead</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>jdamico@asa.org</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Workflow/Account_Created_from_Converted_Lead</template>
+    </alerts>
+    <alerts>
+        <fullName>AlerttonotifythataLenderhasbeenimplemented</fullName>
+        <ccEmails>LenderRelations@amsa.com</ccEmails>
+        <description>Alert to notify that a Lender has been implemented</description>
+        <protected>false</protected>
+        <senderType>CurrentUser</senderType>
+        <template>Workflow/ALERTNEWLENDERIMPLEMENTED</template>
+    </alerts>
+    <alerts>
+        <fullName>Data_Authorized_for_CDR_Trending_Report_Package</fullName>
+        <ccEmails>businessanalysis@amsa.com</ccEmails>
+        <description>Data Authorized for CDR Trending Report Package</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>etroup@asa.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>jdamico@asa.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>kelly@asa.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>mmarin@asa.org</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Workflow/Contract_Addendum_Has_Been_Executed</template>
+    </alerts>
+    <alerts>
+        <fullName>Expired_Contract</fullName>
+        <description>Expired Contract</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>jdamico@asa.org</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Workflow/Contract_Has_Expired</template>
+    </alerts>
+    <alerts>
+        <fullName>Expired_or_Terminated_Contract</fullName>
+        <description>Expired or Terminated Contract</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>jdamico@asa.org</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Workflow/Contract_Has_Expired</template>
+    </alerts>
+    <alerts>
+        <fullName>FYQ1RatingChange</fullName>
+        <description>FY Q1 Rating Change</description>
+        <protected>false</protected>
+        <recipients>
+            <type>accountOwner</type>
+        </recipients>
+        <recipients>
+            <recipient>Client Service Associate</recipient>
+            <type>accountTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>Lender Client Manager</recipient>
+            <type>accountTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>School Client Manager</recipient>
+            <type>accountTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>amarley@asa.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>cgafur@amsa.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>gcole@asa.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>gross@asa.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>jdamico@asa.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>jfong@asa.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>jschott@asa.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>jslattery@amsa.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>njordan@asa.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <field>Regional_Account_Executive__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Workflow/FYQ1RatingChange</template>
+    </alerts>
+    <alerts>
+        <fullName>FYQ2RatingChange</fullName>
+        <description>FY Q2 Rating Change</description>
+        <protected>false</protected>
+        <recipients>
+            <type>accountOwner</type>
+        </recipients>
+        <recipients>
+            <recipient>Client Service Associate</recipient>
+            <type>accountTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>Lender Client Manager</recipient>
+            <type>accountTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>School Client Manager</recipient>
+            <type>accountTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>amarley@asa.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>cgafur@amsa.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>gcole@asa.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>gross@asa.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>jdamico@asa.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>jfong@asa.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>jschott@asa.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>jslattery@amsa.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>njordan@asa.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <field>Regional_Account_Executive__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Workflow/FYQ2RatingChange</template>
+    </alerts>
+    <alerts>
+        <fullName>FYQ3RatingChange</fullName>
+        <description>FY Q3 Rating Change</description>
+        <protected>false</protected>
+        <recipients>
+            <type>accountOwner</type>
+        </recipients>
+        <recipients>
+            <recipient>Client Service Associate</recipient>
+            <type>accountTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>Lender Client Manager</recipient>
+            <type>accountTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>School Client Manager</recipient>
+            <type>accountTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>amarley@asa.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>cgafur@amsa.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>gcole@asa.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>gross@asa.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>jdamico@asa.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>jfong@asa.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>jschott@asa.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>jslattery@amsa.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>njordan@asa.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <field>Regional_Account_Executive__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Workflow/FYQ3RatingChange</template>
+    </alerts>
+    <alerts>
+        <fullName>FYQ4RatingChange</fullName>
+        <description>FY Q4 Rating Change</description>
+        <protected>false</protected>
+        <recipients>
+            <type>accountOwner</type>
+        </recipients>
+        <recipients>
+            <recipient>Client Service Associate</recipient>
+            <type>accountTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>Lender Client Manager</recipient>
+            <type>accountTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>School Client Manager</recipient>
+            <type>accountTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>amarley@asa.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>cgafur@amsa.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>gcole@asa.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>gross@asa.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>jdamico@asa.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>jfong@asa.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>jschott@asa.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>jslattery@amsa.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>njordan@asa.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <field>Regional_Account_Executive__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Workflow/FYQ4RatingChange</template>
+    </alerts>
+    <alerts>
+        <fullName>LenderAccountisLostbasedonQuarterlyRating</fullName>
+        <description>Lender Account is Lost based on Quarterly Rating</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <recipients>
+            <recipient>amarley@asa.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>cgafur@amsa.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>eknowlton@asa.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>gross@asa.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>jdamico@asa.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>jfong@asa.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>jschott@asa.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>kelly@asa.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>nathan@asa.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>njordan@asa.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>pottenger@asa.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>rcole@asa.org</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Workflow/FYQRatingChangetoLOST</template>
+    </alerts>
+    <alerts>
+        <fullName>MPNGoalReached</fullName>
+        <description>MPN Goal Reached</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>Business Development AE</recipient>
+            <type>accountTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>Campus Consultant</recipient>
+            <type>accountTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>Client Service Associate</recipient>
+            <type>accountTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>Inside Sales Associate</recipient>
+            <type>accountTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>School Client Manager</recipient>
+            <type>accountTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>amarley@asa.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>gross@asa.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>javalos@asa.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>nathan@asa.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>pottenger@asa.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>shennessy@asa.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <field>User__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Workflow/MPNCompleteGoalReached</template>
+    </alerts>
+    <alerts>
+        <fullName>Notify_of_SALT_Courses_Requested</fullName>
+        <description>Notify of SALT Courses Requested</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>dgibbons@asa.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>jdamico@asa.org</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Workflow/SALT_Courses_Setup_Requested</template>
+    </alerts>
+    <alerts>
+        <fullName>Off_board_Client</fullName>
+        <ccEmails>BUSINESSANALYSIS@amsa.com</ccEmails>
+        <ccEmails>accountsreceivable@asa.org</ccEmails>
+        <description>Off board Client</description>
+        <protected>false</protected>
+        <recipients>
+            <type>accountOwner</type>
+        </recipients>
+        <recipients>
+            <recipient>School Client Manager</recipient>
+            <type>accountTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>amarley@asa.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>etroup@asa.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>gpakhladzhyan@asa.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>jsloboda@asa.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>rpugliares@asa.org</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Workflow/Off_Board_Client</template>
+    </alerts>
+    <alerts>
+        <fullName>RatingChangetoHighRisk</fullName>
+        <description>Rating Change to High Risk</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>Business Development AE</recipient>
+            <type>accountTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>amarley@asa.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>asiler@asa.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>jdamico@asa.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>jdashiell@asa.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>jesau@asa.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>jschott@asa.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>kelly@asa.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>mfriedman@asa.org</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>School/RatingChange</template>
+    </alerts>
+    <alerts>
+        <fullName>RatingChangetoLowRisk</fullName>
+        <description>Rating Change to Low Risk</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>Business Development AE</recipient>
+            <type>accountTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>Client Service Associate</recipient>
+            <type>accountTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>Lender Client Manager</recipient>
+            <type>accountTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>School Client Manager</recipient>
+            <type>accountTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>cgafur@amsa.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>jdamico@asa.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>jfong@asa.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>jschott@asa.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>jslattery@amsa.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>njordan@asa.org</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>School/RatingChange</template>
+    </alerts>
+    <alerts>
+        <fullName>RatingChangetoMediumRisk</fullName>
+        <description>Rating Change to Medium Risk</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>Business Development AE</recipient>
+            <type>accountTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>amarley@asa.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>asiler@asa.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>jdamico@asa.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>jdashiell@asa.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>jesau@asa.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>jschott@asa.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>kelly@asa.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>mfriedman@asa.org</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>School/RatingChange</template>
+    </alerts>
+    <alerts>
+        <fullName>RatingChangetoNoLongerinFFELP</fullName>
+        <description>Rating Change to No Longer in FFELP</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>Business Development AE</recipient>
+            <type>accountTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>Client Service Associate</recipient>
+            <type>accountTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>Lender Client Manager</recipient>
+            <type>accountTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>School Client Manager</recipient>
+            <type>accountTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>cgafur@amsa.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>jdamico@asa.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>jfong@asa.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>jschott@asa.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>jslattery@amsa.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>School/RatingChange</template>
+    </alerts>
+    <alerts>
+        <fullName>RatingChangetoNotProcessing</fullName>
+        <description>Rating Change to Not Processing</description>
+        <protected>false</protected>
+        <recipients>
+            <type>accountOwner</type>
+        </recipients>
+        <recipients>
+            <recipient>Business Development AE</recipient>
+            <type>accountTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>Client Service Associate</recipient>
+            <type>accountTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>Lender Client Manager</recipient>
+            <type>accountTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>School Client Manager</recipient>
+            <type>accountTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>cgafur@amsa.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>gcole@asa.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>gross@asa.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>jdamico@asa.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>jfong@asa.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>jschott@asa.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>kelly@asa.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>nathan@asa.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>njordan@asa.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>pottenger@asa.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>rcole@asa.org</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Workflow/FYQRatingChangetoNoLongerInFFELPNotProcessing</template>
+    </alerts>
+    <alerts>
+        <fullName>RatingChangetoStable</fullName>
+        <description>Rating Change to Stable</description>
+        <protected>false</protected>
+        <recipients>
+            <type>accountOwner</type>
+        </recipients>
+        <recipients>
+            <recipient>Business Development AE</recipient>
+            <type>accountTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>Client Service Associate</recipient>
+            <type>accountTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>Lender Client Manager</recipient>
+            <type>accountTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>School Client Manager</recipient>
+            <type>accountTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>amarley@asa.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>cgafur@amsa.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>jdamico@asa.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>jfong@asa.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>jschott@asa.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>jslattery@amsa.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>njordan@asa.org</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>School/RatingChange</template>
+    </alerts>
+    <alerts>
+        <fullName>RatingchangetoHigh</fullName>
+        <description>Rating change to High</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>amarley@asa.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>asiler@asa.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>jdamico@asa.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>jdashiell@asa.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>jschott@asa.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>kelly@asa.org</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>School/RatingChange</template>
+    </alerts>
+    <alerts>
+        <fullName>SchoolAccountisLostbasedonQuarterlyRating</fullName>
+        <description>School Account is Lost based on Quarterly Rating</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>amarley@asa.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>pdirksen@amsa.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Workflow/FYQRatingChangetoLOST</template>
+    </alerts>
+    <alerts>
+        <fullName>Sponsorship_Opportunity</fullName>
+        <description>Sponsorship Opportunity</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>amarley@asa.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>amyles@asa.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>asiler@asa.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>cmenendez@asa.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>dchromy@asa.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>dsnow@asa.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>tbida@asa.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <field>User__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Workflow/Sponsorship_Opp</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>ByPassAggFilterFieldUpdte</fullName>
+        <field>ByPassAggregatorFilter__c</field>
+        <literalValue>1</literalValue>
+        <name>ByPassAggFilterFieldUpdte</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>RAE_Phone_Update</fullName>
+        <field>RAE_Phone__c</field>
+        <formula>$User.Phone</formula>
+        <name>RAE Phone Update</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Currency</fullName>
+        <field>c2g__CODAAccountTradingCurrency__c</field>
+        <formula>&quot;USD&quot;</formula>
+        <name>Set Currency</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Account_Record_Type</fullName>
+        <description>Updated Account record type to Strategic Partner if Lead was a Strategic Partnership record type.</description>
+        <field>RecordTypeId</field>
+        <lookupValue>Strategic_Partner</lookupValue>
+        <lookupValueType>RecordType</lookupValueType>
+        <name>Update Account Record Type</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Finance2_Contact_Email</fullName>
+        <field>Invoice_Email_2__c</field>
+        <formula>Finance_Contact_2__r.Email</formula>
+        <name>Update Finance2 Contact Email</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Finance3_Contact_Email</fullName>
+        <field>Invoice_Email_3__c</field>
+        <formula>Finance_Contact_3__r.Email</formula>
+        <name>Update Finance3 Contact Email</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Finance_Contact_Email</fullName>
+        <field>c2g__CODAInvoiceEmail__c</field>
+        <formula>c2g__CODAFinanceContact__r.Email</formula>
+        <name>Update Finance Contact Email</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_the_Contract_Status_Date</fullName>
+        <field>Current_Contract_Status_Date__c</field>
+        <formula>TODAY()</formula>
+        <name>Update the Contract Status Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>%22Type%22 %3D %28anything starting with%29 Lender - ASA</fullName>
+        <actions>
+            <name>AlerttonotifythataLenderhasbeenimplemented</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Account.Type</field>
+            <operation>equals</operation>
+            <value>Lender - ASA - Commercial Bank,Lender - ASA - Secondary Market,Lender - ASA - Credit Union,Lender - ASA - School Specific Benefit,Lender,Lender - ASA - Cooperative Bank,Lender - ASA - Mutual Savings,Lender - ASA - Other</value>
+        </criteriaItems>
+        <description>Trigger used to notify that a Lender has been implemented</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>91 Day Depersonalization Notice</fullName>
+        <active>false</active>
+        <criteriaItems>
+            <field>Account.Lost_as_of__c</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <description>S-42-15 - Depersonalization to terminated clients</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>Reminder_for_Depersonalization</name>
+                <type>Task</type>
+            </actions>
+            <offsetFromField>Account.Lost_as_of__c</offsetFromField>
+            <timeLength>91</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>ByPassAggFilterWFRule</fullName>
+        <actions>
+            <name>ByPassAggFilterFieldUpdte</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>ISPICKVAL(PRIORVALUE(Approved__c), &quot;Yes&quot;) &amp;&amp; ISPICKVAL((Approved__c), &quot;No&quot;)</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>CDR Report Data Authorized</fullName>
+        <actions>
+            <name>Data_Authorized_for_CDR_Trending_Report_Package</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Account.CDR_Trending_Report_Package__c</field>
+            <operation>equals</operation>
+            <value>Data Authorized</value>
+        </criteriaItems>
+        <description>Trigger an email to Business Analysis to inform when a school has authorized access to additional NSLDS data to be able to receive CDR Trending report.</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>CSA notification of new account</fullName>
+        <actions>
+            <name>Account_Created_from_Converted_Lead</name>
+            <type>Alert</type>
+        </actions>
+        <actions>
+            <name>Account_Created_from_Converted_Lead</name>
+            <type>Task</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Account.Was_Lead__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <description>Notifies CSA of new account creation through lead conversion.</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Contract Has Expired</fullName>
+        <actions>
+            <name>Expired_Contract</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Account.Contract_End__c</field>
+            <operation>greaterThan</operation>
+            <value>TODAY</value>
+        </criteriaItems>
+        <description>Triggers email when contract end date has passed</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Contract Status Date Update</fullName>
+        <actions>
+            <name>Update_the_Contract_Status_Date</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Account.Current_Contract_Year_Rating__c</field>
+            <operation>equals</operation>
+            <value>Stable,Low,Medium,High,Lost</value>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Data for CDR Reports Authorized</fullName>
+        <actions>
+            <name>Data_Authorized_for_CDR_Trending_Report_Package</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Account.CDR_Trending_Report_Package__c</field>
+            <operation>equals</operation>
+            <value>Data Authorized</value>
+        </criteriaItems>
+        <description>Send email to Business Analysis and others when a school partner has contractually authorized access to additional data needed for CDR Trending Report package.</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>FY Q1 has changed</fullName>
+        <actions>
+            <name>FYQ1RatingChange</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <formula>AND(ISCHANGED(Current_Contract_Year_Rating__c), 
+NOT(ISPICKVAL(Current_Contract_Year_Rating__c,&quot;&quot;)))</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>FY Q2 has changed</fullName>
+        <actions>
+            <name>FYQ2RatingChange</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <formula>AND(ISCHANGED(Current_Contract_Year_Q2_Rating__c), 
+NOT(ISPICKVAL(Current_Contract_Year_Q2_Rating__c,&quot;&quot;)))</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>FY Q3 has changed</fullName>
+        <actions>
+            <name>FYQ3RatingChange</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <formula>AND(ISCHANGED(Current_contract_Year_Q3_Rating__c), 
+NOT(ISPICKVAL(Current_contract_Year_Q3_Rating__c,&quot;&quot;)))</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>FY Q4 has changed</fullName>
+        <actions>
+            <name>FYQ4RatingChange</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <formula>AND(ISCHANGED(Current_Contract_Year_Q4_Rating__c), 
+NOT(ISPICKVAL(Current_Contract_Year_Q4_Rating__c,&quot;&quot;)))</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Lender Rating Change to Lost</fullName>
+        <actions>
+            <name>LenderAccountisLostbasedonQuarterlyRating</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Account.Rating</field>
+            <operation>equals</operation>
+            <value>No Longer in FFELP,Lost,Not Processing</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Lender</value>
+        </criteriaItems>
+        <description>This rule is triggered whenever the Lender&apos;s Rating field is set to LOST.</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>MM101 Trigger</fullName>
+        <actions>
+            <name>Setup_MM101</name>
+            <type>Task</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Account.MM101_Version__c</field>
+            <operation>equals</operation>
+            <value>Version 2</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Off-Board Client</fullName>
+        <active>true</active>
+        <criteriaItems>
+            <field>Account.Lost_as_of__c</field>
+            <operation>equals</operation>
+            <value>TODAY</value>
+        </criteriaItems>
+        <description>This rule will execute the day of &apos;Lost As Of&apos; date to the appropriate teams to off board the client.  The Lost As Of date must be TODAY&apos;s date in order to fire.</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>Off_board_Client</name>
+                <type>Alert</type>
+            </actions>
+            <timeLength>1</timeLength>
+            <workflowTimeTriggerUnit>Hours</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>RAE Phone</fullName>
+        <actions>
+            <name>RAE_Phone_Update</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <formula>NOT
+
+ISNULL ( $User.Phone )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Rating Change High Risk</fullName>
+        <actions>
+            <name>RatingChangetoHighRisk</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <booleanFilter>1 AND 2</booleanFilter>
+        <criteriaItems>
+            <field>Account.Current_Contract_Year_Rating__c</field>
+            <operation>equals</operation>
+            <value>High</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>School</value>
+        </criteriaItems>
+        <description>This rule is used to trigger an email whenever an Account has a Rating change to High Risk.</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Rating Change Low Risk</fullName>
+        <actions>
+            <name>RatingChangetoLowRisk</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <booleanFilter>(1 OR 2 OR 3 OR 4) AND 5</booleanFilter>
+        <criteriaItems>
+            <field>Account.Current_Contract_Year_Rating__c</field>
+            <operation>equals</operation>
+            <value>Low</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.Current_Contract_Year_Q2_Rating__c</field>
+            <operation>equals</operation>
+            <value>Low</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.Current_contract_Year_Q3_Rating__c</field>
+            <operation>equals</operation>
+            <value>Low</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.Current_Contract_Year_Q4_Rating__c</field>
+            <operation>equals</operation>
+            <value>Low</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>School,Lender</value>
+        </criteriaItems>
+        <description>This rule is used to trigger an email whenever an Account has a Rating change to Low Risk.</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Rating Change Medium Risk</fullName>
+        <actions>
+            <name>RatingChangetoMediumRisk</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <booleanFilter>1 AND 2</booleanFilter>
+        <criteriaItems>
+            <field>Account.Current_Contract_Year_Rating__c</field>
+            <operation>equals</operation>
+            <value>Medium</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>School</value>
+        </criteriaItems>
+        <description>This rule is used to trigger an email whenever an Account has a Rating change to Medium Risk.</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Rating Change Not Processing</fullName>
+        <actions>
+            <name>RatingChangetoNotProcessing</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <booleanFilter>(1 AND 2) OR (2 AND (3 OR 4 OR 5 OR 6) )</booleanFilter>
+        <criteriaItems>
+            <field>Account.Rating</field>
+            <operation>equals</operation>
+            <value>Not Processing,No Longer in FFELP</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>School</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.Current_Contract_Year_Q4_Rating__c</field>
+            <operation>equals</operation>
+            <value>Not Processing,No Longer In FFELP</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.Current_Contract_Year_Rating__c</field>
+            <operation>equals</operation>
+            <value>Not Processing,No Longer in FFELP</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.Current_Contract_Year_Q2_Rating__c</field>
+            <operation>equals</operation>
+            <value>Not Processing,No Longer in FFELP</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.Current_contract_Year_Q3_Rating__c</field>
+            <operation>equals</operation>
+            <value>Not Processing,No Longer In FFELP</value>
+        </criteriaItems>
+        <description>This rule is used to trigger an email whenever an Account has a Rating change to Not Processing.</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Rating Change Stable</fullName>
+        <actions>
+            <name>RatingChangetoStable</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <booleanFilter>(1 OR 2 OR 3 OR 4) AND 5</booleanFilter>
+        <criteriaItems>
+            <field>Account.Current_Contract_Year_Rating__c</field>
+            <operation>equals</operation>
+            <value>Stable</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.Current_Contract_Year_Q2_Rating__c</field>
+            <operation>equals</operation>
+            <value>Stable</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.Current_contract_Year_Q3_Rating__c</field>
+            <operation>equals</operation>
+            <value>Stable</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.Current_Contract_Year_Q4_Rating__c</field>
+            <operation>equals</operation>
+            <value>Stable</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Lender,School</value>
+        </criteriaItems>
+        <description>This rule is used to trigger an email whenever an Account has a Rating change to Stable.</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Rating Change to High</fullName>
+        <actions>
+            <name>RatingchangetoHigh</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <booleanFilter>1 OR 2 OR 3 OR 4</booleanFilter>
+        <criteriaItems>
+            <field>Account.Current_Contract_Year_Rating__c</field>
+            <operation>equals</operation>
+            <value>High</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.Current_Contract_Year_Q2_Rating__c</field>
+            <operation>equals</operation>
+            <value>High</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.Current_contract_Year_Q3_Rating__c</field>
+            <operation>equals</operation>
+            <value>High</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.Current_Contract_Year_Q4_Rating__c</field>
+            <operation>equals</operation>
+            <value>High</value>
+        </criteriaItems>
+        <description>This rule is triggered whenever one of the four quarterly Rating fields is set to HIGH.</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Rating Change to No Longer In FFELP</fullName>
+        <actions>
+            <name>RatingChangetoNoLongerinFFELP</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <booleanFilter>(1 Or 2 or 3 or 4) AND 5</booleanFilter>
+        <criteriaItems>
+            <field>Account.Current_Contract_Year_Rating__c</field>
+            <operation>equals</operation>
+            <value>No Longer in FFELP</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.Current_Contract_Year_Q2_Rating__c</field>
+            <operation>equals</operation>
+            <value>No Longer in FFELP</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.Current_contract_Year_Q3_Rating__c</field>
+            <operation>equals</operation>
+            <value>No Longer In FFELP</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.Current_Contract_Year_Q4_Rating__c</field>
+            <operation>equals</operation>
+            <value>No Longer In FFELP</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>School</value>
+        </criteriaItems>
+        <description>This rule is used to trigger an email whenever an Account has a Rating change to No Longer In FFELP.</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Record type to Engagement Partnership</fullName>
+        <actions>
+            <name>Update_Account_Record_Type</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Account.Lead_Record_Type_ID__c</field>
+            <operation>equals</operation>
+            <value>012110000000X3y</value>
+        </criteriaItems>
+        <description>Make Account record type = Strategic Partner upon lead conversion if Lead record type was Strategic Partnership</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>SALT Courses Trigger</fullName>
+        <actions>
+            <name>Notify_of_SALT_Courses_Requested</name>
+            <type>Alert</type>
+        </actions>
+        <actions>
+            <name>Setup_SALT_Courses</name>
+            <type>Task</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Account.MM101_Version__c</field>
+            <operation>equals</operation>
+            <value>Version 2</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>School Rating Change to Lost</fullName>
+        <actions>
+            <name>SchoolAccountisLostbasedonQuarterlyRating</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <booleanFilter>1 AND (2 OR 3 OR 4 OR 5)</booleanFilter>
+        <criteriaItems>
+            <field>Account.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>School</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.Current_Contract_Year_Rating__c</field>
+            <operation>equals</operation>
+            <value>Lost</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.Current_Contract_Year_Q2_Rating__c</field>
+            <operation>equals</operation>
+            <value>Lost</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.Current_contract_Year_Q3_Rating__c</field>
+            <operation>equals</operation>
+            <value>Lost</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.Current_Contract_Year_Q4_Rating__c</field>
+            <operation>equals</operation>
+            <value>Lost</value>
+        </criteriaItems>
+        <description>This rule is triggered whenever one of the four quarterly Rating fields is set to LOST.</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Set Currency</fullName>
+        <actions>
+            <name>Set_Currency</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Account.c2g__CODAAccountTradingCurrency__c</field>
+            <operation>equals</operation>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Sponsorship Opp</fullName>
+        <actions>
+            <name>Sponsorship_Opportunity</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Account.Sponsorship_Opportunity__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Time Based Workflow</fullName>
+        <active>false</active>
+        <criteriaItems>
+            <field>Account.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>School</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>X30_Day_Workflow</name>
+                <type>Task</type>
+            </actions>
+            <offsetFromField>Account.Time_Based_Workflow__c</offsetFromField>
+            <timeLength>-30</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>Update Finance Contact Email</fullName>
+        <actions>
+            <name>Update_Finance_Contact_Email</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <formula>ISCHANGED(c2g__CODAFinanceContact__c)</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Update Finance2 Contact Email</fullName>
+        <actions>
+            <name>Update_Finance2_Contact_Email</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>ISCHANGED(Finance_Contact_2__c)</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Update Finance3 Contact Email</fullName>
+        <actions>
+            <name>Update_Finance3_Contact_Email</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>ISCHANGED(Finance_Contact_3__c)</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <tasks>
+        <fullName>Account_Created_from_Converted_Lead</fullName>
+        <assignedTo>jdamico@asa.org</assignedTo>
+        <assignedToType>user</assignedToType>
+        <description>A new account has been created from a converted lead. Please review the account for accuracy.</description>
+        <dueDateOffset>5</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Not Started</status>
+        <subject>Account Created from Converted Lead</subject>
+    </tasks>
+    <tasks>
+        <fullName>Reminder_for_Depersonalization</fullName>
+        <assignedTo>rpugliares@asa.org</assignedTo>
+        <assignedToType>user</assignedToType>
+        <description>This is your reminder to begin the depersonalization for this account.</description>
+        <dueDateOffset>75</dueDateOffset>
+        <notifyAssignee>true</notifyAssignee>
+        <offsetFromField>Account.Lost_as_of__c</offsetFromField>
+        <priority>High</priority>
+        <protected>false</protected>
+        <status>Not Started</status>
+        <subject>Reminder for Depersonalization</subject>
+    </tasks>
+    <tasks>
+        <fullName>Setup_MM101</fullName>
+        <assignedTo>jdashiell@asa.org</assignedTo>
+        <assignedToType>user</assignedToType>
+        <dueDateOffset>2</dueDateOffset>
+        <notifyAssignee>true</notifyAssignee>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>In Progress</status>
+        <subject>Setup MM101</subject>
+    </tasks>
+    <tasks>
+        <fullName>Setup_SALT_Courses</fullName>
+        <assignedTo>jdashiell@asa.org</assignedTo>
+        <assignedToType>user</assignedToType>
+        <dueDateOffset>2</dueDateOffset>
+        <notifyAssignee>true</notifyAssignee>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>In Progress</status>
+        <subject>Setup SALT Courses</subject>
+    </tasks>
+    <tasks>
+        <fullName>Test</fullName>
+        <assignedTo>InsideSalesSupportSpecialist</assignedTo>
+        <assignedToType>role</assignedToType>
+        <dueDateOffset>0</dueDateOffset>
+        <notifyAssignee>true</notifyAssignee>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Completed</status>
+        <subject>Test</subject>
+    </tasks>
+    <tasks>
+        <fullName>X30_Day_Workflow</fullName>
+        <assignedToType>owner</assignedToType>
+        <description>It&apos;s time to renew the contract.</description>
+        <dueDateOffset>-30</dueDateOffset>
+        <notifyAssignee>true</notifyAssignee>
+        <offsetFromField>Account.Time_Based_Workflow__c</offsetFromField>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>In Progress</status>
+        <subject>30-Day Workflow</subject>
+    </tasks>
+    <tasks>
+        <fullName>testQ1</fullName>
+        <assignedTo>amarley@asa.org</assignedTo>
+        <assignedToType>user</assignedToType>
+        <description>Q1 has changed</description>
+        <dueDateOffset>1</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>In Progress</status>
+        <subject>test-Q1</subject>
+    </tasks>
+</Workflow>

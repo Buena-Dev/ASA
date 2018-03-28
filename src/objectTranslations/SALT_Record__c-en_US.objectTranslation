@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>SALT Purchases</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>SALT Purchases</value>
+    </caseValues>
+    <fields>
+        <label><!-- Account --></label>
+        <name>Account__c</name>
+        <relationshipLabel><!-- SALT Purchases --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Cost --></label>
+        <name>Cost__c</name>
+    </fields>
+    <fields>
+        <label><!-- Item Code --></label>
+        <name>ItemCode__c</name>
+    </fields>
+    <fields>
+        <label><!-- Item Description --></label>
+        <name>ItemDescription__c</name>
+    </fields>
+    <fields>
+        <label><!-- ListPrice --></label>
+        <name>ListPrice__c</name>
+    </fields>
+    <fields>
+        <label><!-- OE Code --></label>
+        <name>OE_Code__c</name>
+    </fields>
+    <fields>
+        <help><!-- Field  refers specifically to what you sell --></help>
+        <label><!-- Product Line --></label>
+        <name>ProductLine__c</name>
+        <picklistValues>
+            <masterLabel>Premiums</masterLabel>
+            <translation><!-- Premiums --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Printed Materials</masterLabel>
+            <translation><!-- Printed Materials --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Quantity --></label>
+        <name>Quantity__c</name>
+    </fields>
+    <fields>
+        <label><!-- SALT Product --></label>
+        <name>SALT_Product__c</name>
+        <relationshipLabel><!-- SALT Purchases --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Ship Date --></label>
+        <name>ShipDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Shipping Charge --></label>
+        <name>Shipping_Charge__c</name>
+    </fields>
+    <fields>
+        <label><!-- Short Description --></label>
+        <name>ShortDescription__c</name>
+    </fields>
+    <layouts>
+        <layout>Salt Record Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

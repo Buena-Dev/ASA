@@ -1,0 +1,4 @@
+<!-- Copyright (c) 2015 FinancialForce.com, inc. All rights reserved. -->
+<aura:event type="APPLICATION" description="Called to refresh the data for the selected action view template.">
+	<aura:attribute name="template" type="ffr.AVControllerTemplate"/>
+</aura:event>

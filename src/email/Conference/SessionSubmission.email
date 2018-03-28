@@ -1,0 +1,15 @@
+<table width="600" cellpadding="5" height="400" border="0" cellspacing="5" >
+<tr height="50" valign="top" >
+<td locked="0" style=" font-family:arial; bLabel:main; color:#000000; font-size:12pt; bEditID:r3st1; background-color:#FFFFFF;" aEditID="c1r1" tEditID="c1r1" >
+<![CDATA[Dear {!Contact.FirstName},]]></td>
+</tr>
+<tr height="300" valign="top" >
+<td locked="0" style=" font-family:arial; bLabel:main; color:#000000; font-size:12pt; bEditID:r3st1; background-color:#FFFFFF;" aEditID="c1r2" tEditID="c1r2" >
+<![CDATA[I hope this email finds you well.&nbsp; I am sending a list of all the current Trainings and Presentations ASA is currently offering this year.&nbsp; When reviewing our offerings please keep in mind that all of them can be customized to fit a State or Regional need.&nbsp; As a national guarantor we understand that not all areas of the country have the same training needs.&nbsp; Our team is always open to suggested topics and can prepare something special for the conference if there seems to be a void in submitted content.&nbsp;&nbsp; Please contact me with any quesitons you&nbsp; may have.<BR>
+<P>Sincerely,<BR>{!User.Name}<BR>{!User.Title}<BR>{!User.Phone}<BR>{!User.Email}</P>]]></td>
+</tr>
+<tr height="50" valign="top" >
+<td locked="1" style=" font-family:arial; bLabel:main; color:#000000; font-size:12pt; bEditID:r3st1; background-color:#FFFFFF;" aEditID="c1r3" tEditID="c1r3" >
+<![CDATA[<FONT face=Geneva,Arial,Sans-Serif size=1>The content of this e-mail is confidential and proprietary to American Student Assistance.&nbsp; It is intended only for the above-named individual or entity and for the purpose indicated and may not be reproduced or distributed without permission of the sender.&nbsp; Please notify the sender or ASA if you recieved this e-mail in error.</FONT>]]></td>
+</tr>
+</table>

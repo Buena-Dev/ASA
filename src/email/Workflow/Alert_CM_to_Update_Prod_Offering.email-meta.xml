@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Alert CM to Update Prod Offering fields when In Prod</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Alert CM to Update Prod Offering</name>
+    <style>none</style>
+    <subject>{!Account.Name} School has successfully implemented SALT</subject>
+    <type>text</type>
+</EmailTemplate>

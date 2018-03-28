@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Survey for 2016 Client Forum locations and agenda</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>SALT_Partner_Letterhead</letterhead>
+    <name>Client Forum 2016 pre-survey</name>
+    <style>formalLetter</style>
+    <subject>2016 SALT Client Forums - Tell Us What You Want to Talk About</subject>
+    <textOnly>Dear {!Contact.FirstName}:
+
+We are planning the 2016 SALT Client Forums, and since you joined us last year we’d like your thoughts on the agenda and your preferred location in a quick 3-minute survey http://bit.ly/SALTClientForumSurvey. 
+
+Thank you for your time, and we&apos;ll follow-up soon with details about this year&apos;s Client Forums.
+
+Kind regards,
+Gina
+
+Gina Lucente-Cole, AFC® /  Financial Education Consultant
+800.999.9080, ext. 4655 
+American Student Assistance
+100 Cambridge Street Suite 1600 Boston, MA 02114</textOnly>
+    <type>html</type>
+</EmailTemplate>

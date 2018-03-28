@@ -1,0 +1,8 @@
+Hello, 
+
+New lead had been assigned to you. Please take appropriate actions on this lead.
+
+Lead name: {!Lead.FirstName} {!Lead.LastName}
+Company: {!Lead.Company}
+
+Lead link: {!Lead.Link}

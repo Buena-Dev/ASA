@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>false</available>
+    <description>Sent to all contacts registered for the ASA Symp. 2006</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>EmailLetterhead</letterhead>
+    <name>ASA Symp. Thank you for registering</name>
+    <style>freeForm</style>
+    <subject>Thank You for Registering for the ASA Symposium</subject>
+    <textOnly>Thank you for registering to attend American Student Assistance’s annual symposium, Insights: A Conversation on Student Debt.  Plans are underway to make this the best symposium ever and we wanted to take this opportunity to tell you about some of the exciting speakers and sessions already confirmed, including:
+
+National political correspondent and author Juan Williams
+Economist, author, activist and CEO Julianne Malveaux
+“The Student Debt Dilemma” with Robert Shireman of TICAS
+Roundtable on  “Counseling Graduate Students and Families on Debt”
+“How Much Debt Is Too Much?” with Sandy Baum
+Authors Tamara Draut, Strapped: Why America&apos;s 20- and 30-Somethings Can’t Get Ahead, and Anya Kamenetz, Generation Debt: Why Now Is a Terrible Time to Be Young.
+
+This year we’ll also be honoring some of the industry’s brightest contributors and pioneers, as well as celebrating ASA’s 50th anniversary.  The symposium will take place at the conveniently located Hyatt Harborside Hotel at Boston’s Logan International Airport—minutes away from downtown Boston, Faneuil Hall Marketplace, and more.  For reservations, call 617-568-1234 by May 25 to get a special low rate of $189.  Remember that June is a busy time in Boston, so make your reservations soon!  
+
+More symposium details are now available online.  If you have any questions or need additional information, please contact your ASA client manager or regional representative.  Again, thank you for registering and we look forward to seeing you in June.</textOnly>
+    <type>html</type>
+</EmailTemplate>

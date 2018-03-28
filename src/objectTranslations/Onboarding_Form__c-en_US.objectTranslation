@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Onboarding Form</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Onboarding Forms</value>
+    </caseValues>
+    <fields>
+        <label><!-- Address Line 2 --></label>
+        <name>Address_Line_2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Address Line 1 --></label>
+        <name>Address_Line__c</name>
+    </fields>
+    <fields>
+        <label><!-- Alias --></label>
+        <name>Alias__c</name>
+    </fields>
+    <fields>
+        <label><!-- All --></label>
+        <name>All__c</name>
+    </fields>
+    <fields>
+        <label><!-- Case Info --></label>
+        <name>Case_Info__c</name>
+        <relationshipLabel><!-- Onboarding Forms --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Charter Fee: --></label>
+        <name>Charter_Fee__c</name>
+    </fields>
+    <fields>
+        <label><!-- City --></label>
+        <name>City__c</name>
+    </fields>
+    <fields>
+        <label><!-- College Cost Planner --></label>
+        <name>College_Cost_Planner__c</name>
+    </fields>
+    <fields>
+        <label><!-- Consolidation --></label>
+        <name>Consolidation__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contact Email: --></label>
+        <name>Contact_Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contract End Date --></label>
+        <name>Contract_End_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contract Start Date --></label>
+        <name>Contract_Start_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Customer ID --></label>
+        <name>Customer_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- DL Consolidation --></label>
+        <name>DL_Consolidation__c</name>
+    </fields>
+    <fields>
+        <label><!-- DL Grad PLUS --></label>
+        <name>DL_Grad_PLUS__c</name>
+    </fields>
+    <fields>
+        <label><!-- DL Parent PLUS --></label>
+        <name>DL_Parent_PLUS__c</name>
+    </fields>
+    <fields>
+        <label><!-- DL Subsidized Stafford --></label>
+        <name>DL_Subsidized_Stafford__c</name>
+    </fields>
+    <fields>
+        <label><!-- DL Unsubsidized Stafford --></label>
+        <name>DL_Unsubsidized_Stafford__c</name>
+    </fields>
+    <fields>
+        <label><!-- Dashboard --></label>
+        <name>Dashboard__c</name>
+    </fields>
+    <fields>
+        <label><!-- Department --></label>
+        <name>Department__c</name>
+    </fields>
+    <fields>
+        <label><!-- ED School Program Length --></label>
+        <name>ED_School_Program_Length__c</name>
+        <picklistValues>
+            <masterLabel>Associate&apos;s Degree</masterLabel>
+            <translation><!-- Associate&apos;s Degree --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bachelor&apos;s Degree</masterLabel>
+            <translation><!-- Bachelor&apos;s Degree --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Graduate/Professional</masterLabel>
+            <translation><!-- Graduate/Professional --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Master&apos;s or Doctor&apos;s Degree</masterLabel>
+            <translation><!-- Master&apos;s or Doctor&apos;s Degree --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- ED School Type --></label>
+        <name>ED_School_Type__c</name>
+        <picklistValues>
+            <masterLabel>Private</masterLabel>
+            <translation><!-- Private --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Proprietary</masterLabel>
+            <translation><!-- Proprietary --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Public</masterLabel>
+            <translation><!-- Public --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- FY 2010 --></label>
+        <name>FY_2010__c</name>
+    </fields>
+    <fields>
+        <label><!-- FY 2011 --></label>
+        <name>FY_2011__c</name>
+    </fields>
+    <fields>
+        <label><!-- FY 2012 --></label>
+        <name>FY_2012__c</name>
+    </fields>
+    <fields>
+        <label><!-- FY 2013 --></label>
+        <name>FY_2013__c</name>
+    </fields>
+    <fields>
+        <label><!-- FY 2014 --></label>
+        <name>FY_2014__c</name>
+    </fields>
+    <fields>
+        <label><!-- FY 2015 --></label>
+        <name>FY_2015__c</name>
+    </fields>
+    <fields>
+        <label><!-- FY 2016 --></label>
+        <name>FY_2016__c</name>
+    </fields>
+    <fields>
+        <label><!-- Grad PLUS --></label>
+        <name>Grad_PLUS__c</name>
+    </fields>
+    <fields>
+        <label><!-- HEAL --></label>
+        <name>HEAL__c</name>
+    </fields>
+    <fields>
+        <label><!-- Institution --></label>
+        <name>Institution__c</name>
+    </fields>
+    <fields>
+        <label><!-- Job Search --></label>
+        <name>Job_Search__c</name>
+    </fields>
+    <fields>
+        <label><!-- Mailing State --></label>
+        <name>Mailing_State__c</name>
+    </fields>
+    <fields>
+        <label><!-- SALT Courses --></label>
+        <name>My_Money_101__c</name>
+    </fields>
+    <fields>
+        <label><!-- OE Code --></label>
+        <name>OE_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Onboarding --></label>
+        <name>Onboarding__c</name>
+    </fields>
+    <fields>
+        <label><!-- PLUS --></label>
+        <name>PLUS__c</name>
+    </fields>
+    <fields>
+        <label><!-- Perkins --></label>
+        <name>Perkins__c</name>
+    </fields>
+    <fields>
+        <label><!-- Phonetic Name --></label>
+        <name>Phonetic_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Primary Contact: --></label>
+        <name>Primary_Contact__c</name>
+        <relationshipLabel><!-- Onboarding Forms --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Print Name (BPMS) --></label>
+        <name>Print_Name_BPMS__c</name>
+    </fields>
+    <fields>
+        <label><!-- Private Consolidation --></label>
+        <name>Private_Consolidation__c</name>
+    </fields>
+    <fields>
+        <label><!-- Private --></label>
+        <name>Private__c</name>
+    </fields>
+    <fields>
+        <label><!-- Reporting ID --></label>
+        <name>Reporting_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- SLS --></label>
+        <name>SLS__c</name>
+    </fields>
+    <fields>
+        <label><!-- Scholarship Search --></label>
+        <name>Scholarship_Search__c</name>
+    </fields>
+    <fields>
+        <label><!-- Organization Name --></label>
+        <name>School_Name__c</name>
+        <relationshipLabel><!-- Onboarding Forms --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- School Website --></label>
+        <name>School_Website__c</name>
+    </fields>
+    <fields>
+        <label><!-- Short Name --></label>
+        <name>Short_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Stafford Subsidized --></label>
+        <name>Stafford_Subsidized__c</name>
+    </fields>
+    <fields>
+        <label><!-- Stafford Unsubsidized --></label>
+        <name>Stafford_Unsubsidized__c</name>
+    </fields>
+    <fields>
+        <label><!-- Stafford --></label>
+        <name>Stafford__c</name>
+    </fields>
+    <fields>
+        <label><!-- State --></label>
+        <name>State__c</name>
+    </fields>
+    <fields>
+        <label><!-- Telephone --></label>
+        <name>Telephone__c</name>
+    </fields>
+    <fields>
+        <label><!-- Today&apos;s Date: --></label>
+        <name>Today_s_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Type --></label>
+        <name>Type__c</name>
+        <picklistValues>
+            <masterLabel>School - 2 Year Private</masterLabel>
+            <translation><!-- School - 2 Year Private --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>School - 2 Year Public</masterLabel>
+            <translation><!-- School - 2 Year Public --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>School - 3 Year School</masterLabel>
+            <translation><!-- School - 3 Year School --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>School - 4 Year Private</masterLabel>
+            <translation><!-- School - 4 Year Private --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>School - 4 Year Public</masterLabel>
+            <translation><!-- School - 4 Year Public --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>School - Foreign School</masterLabel>
+            <translation><!-- School - Foreign School --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>School - Grad/Profession</masterLabel>
+            <translation><!-- School - Grad/Profession --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>School - Liberal Arts</masterLabel>
+            <translation><!-- School - Liberal Arts --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>School - Proprietary</masterLabel>
+            <translation><!-- School - Proprietary --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>School - Voc or Tech</masterLabel>
+            <translation><!-- School - Voc or Tech --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Eligible years for Proactive EDMS --></help>
+        <label><!-- Years in Repayment --></label>
+        <name>Years_in_Repayment__c</name>
+        <picklistValues>
+            <masterLabel>1</masterLabel>
+            <translation><!-- 1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2</masterLabel>
+            <translation><!-- 2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3</masterLabel>
+            <translation><!-- 3 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4</masterLabel>
+            <translation><!-- 4 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5</masterLabel>
+            <translation><!-- 5 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>6</masterLabel>
+            <translation><!-- 6 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7</masterLabel>
+            <translation><!-- 7 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Zip Code --></label>
+        <name>Zip_Code__c</name>
+    </fields>
+    <layouts>
+        <layout>Onboarding Form Layout</layout>
+        <sections>
+            <label><!-- Contract Information --></label>
+            <section>Contract Information</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Loan Types to Add --></label>
+            <section>Loan Types to Add</section>
+        </sections>
+        <sections>
+            <label><!-- Primary Contact Information --></label>
+            <section>Primary Contact Information</section>
+        </sections>
+        <sections>
+            <label><!-- SALT Product Offerings --></label>
+            <section>SALT Product Offerings</section>
+        </sections>
+        <sections>
+            <label><!-- School Information --></label>
+            <section>School Information</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

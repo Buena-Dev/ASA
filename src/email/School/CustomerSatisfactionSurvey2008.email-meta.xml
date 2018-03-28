@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>false</available>
+    <description>Schools, Lenders, Servicers</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>EmailLetterhead</letterhead>
+    <name>Customer Satisfaction Survey 2009</name>
+    <style>freeForm</style>
+    <subject>ASA&apos;s Customer Satisfaction Survey Launches October 5!</subject>
+    <textOnly>Dear {!Contact.FirstName},
+ 
+At American Student Assistance® (ASA), we take pride in providing our clients with outstanding customer service.  Each fall we ask you to evaluate the customer service you receive in order to help us make improvements to our service.  Your feedback is extremely valuable to us and has assisted us in enhancing our service delivery and recognizing successes.
+ 
+The survey will be e-mailed to you on Monday, October 5, 2009. You will have the opportunity to evaluate not only client managers and client service associates but regional account executives you have working relationships with as well.  
+ 
+Thank you in advance for participating in this survey as we understand that there are many conflicting demands on your time. Please feel free to contact me personally if you have questions or feedback regarding this process.
+ 
+Sincerely,
+ 
+Susan Nathan
+Vice President of Lender and School Services
+American Student Assistance 
+100 Cambridge Street, Suite 1600
+Boston, MA 02114
+nathan@amsa.com
+800.999.9080, Ext. 4535
+
+ 
+The content of this email is confidential and proprietary to American Student Assistance. It is intended only for the above-named individual or entity and for the purpose indicated and may not be reproduced or distributed without permission of the sender. Please notify the sender or ASA if you received this email in error.
+ 
+ 
+ 
+ 
+ 
+ 
+ </textOnly>
+    <type>html</type>
+</EmailTemplate>

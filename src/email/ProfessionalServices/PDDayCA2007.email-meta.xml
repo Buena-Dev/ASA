@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>false</available>
+    <description>Invitation to attend the PDD in Buena Park, CA</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>EmailLetterhead</letterhead>
+    <name>PD Day - CA - 2007</name>
+    <style>freeForm</style>
+    <subject>Save the date - American Student Assistance Training Event</subject>
+    <textOnly>Join ASA this month!  We are coming to California with our popular professional development workshop.  
+ 
+California Professional Development Day
+ 
+National FFELP guarantor American Student Assistance® has designed an all-day training event for California.  Now is the time to improve your skills at our professional development seminars.  Join us to enhance core skills and stay ahead of evolving trends.
+We are offering a full day of professional development classes designed for all college administrators who are looking to improve their performance at work and add skills to their personal “tool box.”
+ 
+4/25/2007      Buena Park, CA – Holiday Inn - Buena Park 
+ 
+ 
+Professional Development Day: Implementing a Financial Literacy Program on your Campus 
+ 
+Agenda 
+
+8:30 – 9:00            Introductions and breakfast 
+
+9:00 – 10:00         Financial Literacy and Financial Aid – A discussion of
+                                the role of the financial aid office in providing for and
+                                supporting the dissemination of financial literacy
+                                information on college campuses. 
+
+10:00 – 11:00       Getting other offices on your campus involved 
+
+11:00 – 12:00       Provide the right information to your students at
+                                the right time - What’s the right information and when
+                                is the right time? 
+
+12:00 – 1:00         Lunch / Fun Activity 
+
+1:00 – 2:00            Presentation Skills 
+
+2:00 – 4:00            Group Activity – Bring it all together 
+
+4:00                        Adjourn
+ 
+Course Description
+ 
+Does your campus provide any means for your students to gain valuable knowledge in the world of personal money management? Does your office have a responsibility to provide the right information at the right time for your students? In this session, we will discuss the role of the financial aid office in providing financial literacy education for students and how to best implement and market such a program. Walk away with a firm grasp on what it will take to launch such a program on your campus.
+ 
+Who Should Attend
+ 
+Any financial aid administrator that is interested in professional development and implementing a program of financial literacy on your campus.
+ 
+How You Will Benefit
+ 
+Gain valuable insight and information needed to successfully implement and manage a program of financial literacy on your campus.
+ 
+How to register or for additional information, including driving directions
+ 
+·          Register Online at http://www.amsa.com/fap/training
+·          Email: send your name, phone number and enrollment details to
+           training@amsa.com 
+·          Phone: call the Training Department at (800) 999-9080, ext. 3099
+ 
+All American Student Assistance training events are offered free of charge.</textOnly>
+    <type>html</type>
+</EmailTemplate>

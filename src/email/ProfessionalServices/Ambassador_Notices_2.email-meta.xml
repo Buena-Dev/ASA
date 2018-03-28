@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Ambassador Notice_second_ask_Squad</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>SALTClientLetterhead</letterhead>
+    <name>Ambassador Notices</name>
+    <style>freeForm</style>
+    <subject>Reminder: Want Exclusive SALT Swag?</subject>
+    <textOnly>Dear {!Contact.FirstName}:
+
+Join the #SALTsquad to help spread information about SALT’s resources on social media and earn some exclusive SALT swag! All you need to do is post about SALT four times a month, and we&apos;ll send you new swag each month.
+
+The first item up for grabs is a SALT hoodie. Post about SALT on social media four times, and it’s yours!
+
+We’ll send you sample social media language you can use, or feel free to create your own. Email ambassador@asa.org to by Friday, 2/26 to get started.</textOnly>
+    <type>html</type>
+</EmailTemplate>

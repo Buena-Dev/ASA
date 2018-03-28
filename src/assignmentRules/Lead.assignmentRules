@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AssignmentRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <assignmentRule>
+        <fullName>CPS Lead Assignment</fullName>
+        <active>true</active>
+        <ruleEntry>
+            <assignedTo>EOC_Boston</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Lead.Intake_Location__c</field>
+                <operation>equals</operation>
+                <value>EOC Boston</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>CPS - EOC</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>EOC_Brockton</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Lead.Intake_Location__c</field>
+                <operation>equals</operation>
+                <value>EOC Brockton</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>CPS - EOC</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>TS_Boston</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Lead.Intake_Location__c</field>
+                <operation>equals</operation>
+                <value>TS Boston</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>CPS - TS</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>TS_Brockton</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Lead.Intake_Location__c</field>
+                <operation>equals</operation>
+                <value>TS Brockton</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>CPS - TS</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>UB_Brockton</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Lead.Intake_Location__c</field>
+                <operation>equals</operation>
+                <value>UB Brockton</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>CPS - UB</value>
+            </criteriaItems>
+        </ruleEntry>
+    </assignmentRule>
+    <assignmentRule>
+        <fullName>Strategic %26 Biz Dev assignment rule</fullName>
+        <active>false</active>
+        <ruleEntry>
+            <assignedTo>Mktg_Queue</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>1 OR 2</booleanFilter>
+            <criteriaItems>
+                <field>Lead.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Strategic Partnership</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.Channel__c</field>
+                <operation>equals</operation>
+                <value>CU</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Strategic_Sales</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Lead.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Business Development</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.Email</field>
+                <operation>notContain</operation>
+                <value>.edu</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.Status</field>
+                <operation>equals</operation>
+                <value>Open</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.LeadSource</field>
+                <operation>equals</operation>
+                <value>MQL</value>
+            </criteriaItems>
+            <template>Workflow/New_Lead_Notification</template>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Mktg_Queue</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Lead.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Business Development</value>
+            </criteriaItems>
+            <template>Workflow/New_Lead_Notification</template>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Shared_State_Queue</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <template>Workflow/New_Lead_Notification</template>
+        </ruleEntry>
+    </assignmentRule>
+</AssignmentRules>

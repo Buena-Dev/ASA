@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<HomePageComponent xmlns="http://soap.sforce.com/2006/04/metadata">
+    <body>&lt;DIV align=center&gt;
+&lt;MARQUEE style=&quot;WIDTH: 101.42%; HEIGHT: 200px&quot; scrollAmount=3 direction=up loop=true width=&quot;101.42%&quot; bgColor=#000080&gt;
+&lt;DIV align=center&gt;&lt;FONT color=#ffffff size=4&gt;&lt;STRONG&gt;&lt;FONT size=6&gt;&lt;FONT color=#ff9900&gt;&lt;/FONT&gt;&lt;/FONT&gt;&lt;/STRONG&gt;&lt;/FONT&gt;&amp;nbsp;&lt;/DIV&gt;
+&lt;DIV align=center&gt;&lt;STRONG&gt;&lt;FONT color=#ff9900 size=6&gt;&lt;/FONT&gt;&lt;/STRONG&gt;&amp;nbsp;&lt;/DIV&gt;
+&lt;DIV align=center&gt;&lt;FONT color=#ffffff size=4&gt;&lt;STRONG&gt;&lt;FONT size=6&gt;&lt;FONT color=#ff9900&gt;American Student Assistance&lt;/FONT&gt; &lt;/FONT&gt;&lt;/STRONG&gt;&lt;/FONT&gt;&lt;/DIV&gt;
+&lt;DIV align=center&gt;&lt;STRONG&gt;&lt;FONT color=#ffffff size=6&gt;&lt;/FONT&gt;&lt;/STRONG&gt;&amp;nbsp;&lt;/DIV&gt;
+&lt;DIV align=center&gt;&lt;FONT color=#ffffff size=4&gt;&lt;STRONG&gt;&lt;FONT color=#ff6600&gt;&lt;FONT size=6&gt;Loan Volume&amp;nbsp;FY &apos;10 Totals To-Date&lt;/FONT&gt;&lt;/FONT&gt;&lt;/STRONG&gt;&lt;/FONT&gt;&lt;/DIV&gt;
+&lt;DIV align=center&gt;&lt;STRONG&gt;&lt;FONT color=#ff6600 size=6&gt;&lt;/FONT&gt;&lt;/STRONG&gt;&amp;nbsp;&lt;/DIV&gt;
+&lt;DIV align=center&gt;&lt;FONT color=#ffffff size=4&gt;&lt;STRONG&gt;&lt;FONT color=#ff6600&gt;&lt;FONT color=#ff0000 size=6&gt;THE VERY LAST FFELP VOLUME TOTALS FOR ALL TIME&lt;/FONT&gt;&lt;BR&gt;&lt;/FONT&gt;&lt;BR&gt;&lt;U style=&quot;COLOR: rgb(0,153,0); TEXT-DECORATION: underline&quot;&gt;&lt;FONT size=5&gt;Top Ten Accounts&amp;nbsp;&lt;/FONT&gt;&lt;/U&gt;&lt;/STRONG&gt;&lt;/FONT&gt;&lt;FONT style=&quot;COLOR: rgb(0,153,0); TEXT-DECORATION: underline&quot; color=#33cc00 size=5&gt;&lt;STRONG&gt;as of&amp;nbsp;June 30, 2010&lt;/STRONG&gt;&lt;/FONT&gt;&lt;/DIV&gt;&lt;FONT style=&quot;COLOR: rgb(0,153,0)&quot; color=#ffffff&gt;&lt;STRONG&gt;&lt;U&gt;&lt;/U&gt;&lt;/STRONG&gt;&lt;/FONT&gt;
+&lt;DIV align=center&gt;&lt;FONT color=#ffffff&gt;&lt;STRONG&gt;&lt;BR&gt;&lt;FONT size=4&gt;1) Devry University - Chicago $91.7M&lt;/FONT&gt;&lt;/STRONG&gt;&lt;/FONT&gt;&lt;/DIV&gt;
+&lt;DIV align=center&gt;&lt;FONT color=#ffffff&gt;&lt;STRONG&gt;&lt;FONT size=4&gt;&lt;/FONT&gt;&amp;nbsp;&lt;/STRONG&gt;&lt;/FONT&gt;&lt;/DIV&gt;
+&lt;DIV align=center&gt;&lt;FONT color=#ffffff&gt;&lt;STRONG&gt;&lt;FONT size=4&gt;2) Boston College $91.5M&lt;/FONT&gt;&lt;/STRONG&gt;&lt;/FONT&gt;&lt;/DIV&gt;
+&lt;DIV align=center&gt;&lt;FONT color=#ffffff&gt;&lt;STRONG&gt;&lt;FONT size=4&gt;&lt;/FONT&gt;&amp;nbsp;&lt;/STRONG&gt;&lt;/FONT&gt;&lt;/DIV&gt;
+&lt;DIV align=center&gt;&lt;FONT color=#ffffff&gt;&lt;STRONG&gt;&lt;FONT size=4&gt;3) University of Maryland at College Park $61.4M&lt;/FONT&gt;&lt;/STRONG&gt;&lt;/FONT&gt;&lt;/DIV&gt;
+&lt;DIV align=center&gt;&lt;FONT color=#ffffff&gt;&lt;STRONG&gt;&lt;FONT size=4&gt;&lt;/FONT&gt;&amp;nbsp;&lt;/STRONG&gt;&lt;/FONT&gt;&lt;/DIV&gt;
+&lt;DIV align=center&gt;&lt;FONT color=#ffffff&gt;&lt;STRONG&gt;&lt;FONT size=4&gt;4)&amp;nbsp;Cambridge College $46.3M &lt;/FONT&gt;&lt;/STRONG&gt;&lt;/FONT&gt;&lt;/DIV&gt;
+&lt;DIV align=center&gt;&lt;FONT color=#ffffff&gt;&lt;STRONG&gt;&lt;FONT size=4&gt;&lt;/FONT&gt;&amp;nbsp;&lt;/STRONG&gt;&lt;/FONT&gt;&lt;/DIV&gt;
+&lt;DIV align=center&gt;&lt;FONT color=#ffffff&gt;&lt;STRONG&gt;&lt;FONT size=4&gt;5)&amp;nbsp;&lt;/FONT&gt;&lt;/STRONG&gt;&lt;/FONT&gt;&lt;FONT color=#ffffff&gt;&lt;STRONG&gt;&lt;FONT size=4&gt;Hampton University &lt;FONT color=#ffffff&gt;&lt;STRONG&gt;&lt;FONT size=4&gt;$45.7&lt;FONT size=4&gt;M&lt;/FONT&gt;&lt;/FONT&gt;&lt;/STRONG&gt;&lt;/FONT&gt;&lt;/FONT&gt;&lt;/STRONG&gt;&lt;/FONT&gt;&lt;FONT color=#ffffff&gt;&lt;STRONG&gt;&lt;/STRONG&gt;&lt;/FONT&gt;&lt;FONT color=#ffffff&gt;&lt;STRONG&gt;&lt;FONT size=4&gt;&lt;FONT size=4&gt;&lt;/FONT&gt;&lt;/FONT&gt;&lt;/STRONG&gt;&lt;/FONT&gt;&lt;/DIV&gt;
+&lt;DIV align=center&gt;&lt;FONT color=#ffffff&gt;&lt;STRONG&gt;&amp;nbsp;&lt;/STRONG&gt;&lt;/FONT&gt;&lt;/DIV&gt;
+&lt;DIV align=center&gt;&lt;FONT color=#ffffff&gt;&lt;STRONG&gt;&lt;FONT size=4&gt;6)&amp;nbsp;University of Hartford&amp;nbsp; &lt;/FONT&gt;&lt;/STRONG&gt;&lt;/FONT&gt;&lt;FONT color=#ffffff&gt;&lt;STRONG&gt;&lt;FONT size=4&gt;$41.6M &lt;/FONT&gt;&lt;/STRONG&gt;&lt;/FONT&gt;&lt;/DIV&gt;
+&lt;DIV align=center&gt;&lt;STRONG&gt;&lt;FONT color=#ffffff size=4&gt;&lt;/FONT&gt;&lt;/STRONG&gt;&amp;nbsp;&lt;/DIV&gt;
+&lt;DIV align=center&gt;&lt;FONT color=#ffffff&gt;&lt;STRONG&gt;&lt;FONT size=4&gt;7) Grand Canyon University $39.8M&lt;/FONT&gt;&lt;/STRONG&gt;&lt;/FONT&gt;&lt;/DIV&gt;
+&lt;DIV align=center&gt;&lt;STRONG&gt;&lt;FONT color=#ffffff size=4&gt;&lt;/FONT&gt;&lt;/STRONG&gt;&amp;nbsp;&lt;/DIV&gt;
+&lt;DIV align=center&gt;&lt;FONT color=#ffffff&gt;&lt;STRONG&gt;&lt;FONT size=4&gt;8)&amp;nbsp;SUNY College at Cortland&lt;FONT color=#ffffff&gt;&lt;STRONG&gt; $38.8M&lt;/STRONG&gt;&lt;/FONT&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;/FONT&gt;&lt;/STRONG&gt;&lt;/FONT&gt;&lt;FONT color=#ffffff&gt;&lt;STRONG&gt;&lt;FONT size=4&gt;&lt;BR&gt;&lt;/FONT&gt;&lt;/STRONG&gt;&lt;/FONT&gt;&lt;/DIV&gt;
+&lt;DIV align=center&gt;&lt;FONT color=#ffffff&gt;&lt;STRONG&gt;&lt;FONT size=4&gt;&amp;nbsp;&lt;/FONT&gt;&lt;/STRONG&gt;&lt;/FONT&gt;&lt;/DIV&gt;
+&lt;DIV align=center&gt;&lt;FONT color=#ffffff&gt;&lt;STRONG&gt;&lt;FONT size=4&gt;9)&amp;nbsp;Springfield College $38.6M&amp;nbsp;&lt;/FONT&gt;&lt;/STRONG&gt;&lt;/FONT&gt;&lt;/DIV&gt;
+&lt;DIV align=center&gt;&lt;FONT color=#ffffff&gt;&lt;STRONG&gt;&amp;nbsp;&lt;/STRONG&gt;&lt;/FONT&gt;&lt;/DIV&gt;
+&lt;DIV align=center&gt;&lt;FONT color=#ffffff&gt;&lt;STRONG&gt;&lt;FONT size=4&gt;10)&amp;nbsp;&lt;/FONT&gt;&lt;/STRONG&gt;&lt;/FONT&gt;&lt;FONT color=#ffffff&gt;&lt;STRONG&gt;&lt;FONT size=4&gt;Salem State College&amp;nbsp;$35.3M&lt;/FONT&gt;&lt;/STRONG&gt;&lt;/FONT&gt;&lt;/DIV&gt;
+&lt;DIV align=center&gt;&lt;FONT color=#ffffff&gt;&lt;STRONG&gt;&lt;FONT size=4&gt;&lt;/FONT&gt;&lt;/STRONG&gt;&lt;/FONT&gt;&amp;nbsp;&lt;/DIV&gt;&lt;/MARQUEE&gt;&lt;/DIV&gt;</body>
+    <pageComponentType>htmlArea</pageComponentType>
+    <width>wide</width>
+</HomePageComponent>

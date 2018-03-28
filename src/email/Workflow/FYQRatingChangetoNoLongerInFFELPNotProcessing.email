@@ -1,0 +1,5 @@
+Hello {!Receiving_User.FirstName},
+
+{!Account.Name}, OE Code: {!Account.OE_Code__c} has had a rating change.  The account is now No Longer in FFELP or Not Processing .
+
+http://na4.salesforce.com/{!Account.Id}

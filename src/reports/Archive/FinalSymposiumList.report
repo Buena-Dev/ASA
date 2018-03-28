@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>COMPANY</field>
+    </columns>
+    <columns>
+        <field>FIRST_NAME</field>
+    </columns>
+    <columns>
+        <field>LAST_NAME</field>
+    </columns>
+    <columns>
+        <field>TITLE</field>
+    </columns>
+    <columns>
+        <field>MEMBER_TYPE</field>
+    </columns>
+    <columns>
+        <field>OWNER</field>
+    </columns>
+    <description>Final  2006 symposium registration list by Member Status</description>
+    <filter>
+        <criteriaItems>
+            <column>MEMBER_STATUS</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>ASA Employee,BD Sponsored,CM Sponsored,Will Attend - No Email,Will Attend - Registered</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>MEMBER_STATUS</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Final Symposium List</name>
+    <params>
+        <name>scopeid</name>
+        <value>7013000000035Ux</value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CampaignCalldown</reportType>
+    <showDetails>false</showDetails>
+</Report>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>When the BD reps changes the Contact Lender field from no to YES the Process Flow Manager is assinged the task</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Contact lenders notification</name>
+    <style>none</style>
+    <subject>Indication YES to Contact Lenders</subject>
+    <type>text</type>
+</EmailTemplate>

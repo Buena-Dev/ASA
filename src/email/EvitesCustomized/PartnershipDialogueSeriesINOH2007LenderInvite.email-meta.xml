@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>false</available>
+    <description>Partnership Dialogue Series - IN &amp; OH 2007 Lender Invite</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>EmailLetterhead</letterhead>
+    <name>Partnership Dialogue Series - IN &amp; OH 2007 Lender Invite</name>
+    <style>freeForm</style>
+    <subject>Save the Date!</subject>
+    <textOnly>ASA’s Partnership Dialogue Series: A Focus on Communication
+
+Dear {!Contact.FirstName}, 
+
+Please accept this invitation to attend the second installment of our Partnership Dialogue Series.  In this series - A Focus on Communication - we provide attendees the opportunity to discuss, ask questions, and receive feedback on some hot topics affecting lenders and financial aid officers around the country.  As one of our lender partners, we hope you can join us at one of our two events being held in the Midwest next month.
+
+In this upcoming series, we will explore the challenges of effectively communicating with students and families today. With the overwhelming array of media available, ranging from podcasts to phone calls and text messages, which methods do schools feel comfortable using? And which methods are the most effective for their millennial students and Baby Boomer parents? This series will encompass a broad discussion of the communication challenges schools face, the scope and message of their communication mission, what resources they need to succeed in that mission, and which outreach experiments to students and families have yielded the best results. 
+
+Our dialogue will begin at 9:00 a.m., with schools joining us for the morning session and lunch.  After lunch, we look forward to speaking to you about what ASA has to offer, why the guarantor you choose matters, and how ASA and {!Account.Name} we can work together in the marketplace.  
+
+Agenda:
+8:30 – 9:00 a.m. Continental Breakfast (schools and lenders)
+9:00 a.m. – 12:00 p.m. Discussion and Exchange of Ideas (schools and lenders)
+12:00 –1:00 p.m.  Lunch (schools and lenders)
+1:00 – 3:00 p.m.  Understanding ASA (lenders only)
+
+Choose the Location that Works Best for You:
+
+Indiana - Thursday, October 18, 2007
+Manchester College
+604 East College Ave
+North Manchester, IN 46962
+http://www.manchester.edu/Common/VisitingManchester/directions.htm
+
+Ohio - Friday, October 19, 2007
+Central State University
+1400 Brush Row Road
+Wilberforce, OH 45384
+http://www.centralstate.edu/services/directions_map/map_csuwest.html#directions 
+
+Please RSVP to me by replying to this email.  I hope you are able to join us, and look forward to seeing you there.  Also, please also feel free to share this with others at {!Account.Name} who may not have received this e-mail.  
+
+Thank you.
+
+Nancy M. Jordan
+Manager of Strategic Lender Partnerships
+American Student Assistance
+800.999.9080 x.4677
+617.728.4677 direct
+617.645.2225 cell
+njordan@amsa.com
+www.amsa.com
+
+
+www.amsa.com</textOnly>
+    <type>html</type>
+</EmailTemplate>

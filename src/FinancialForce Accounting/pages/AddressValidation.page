@@ -1,0 +1,28 @@
+<apex:page controller="c2g.AddressValidationController" action="{!validateAddress}" extensions="c2g.CODAHelpLoaderController">
+	<apex:form >
+		<apex:pageMessages />
+		<apex:sectionHeader title="{!$Label.c2g__salestaxaddressvalidation}" help="{!redirectForHelp1255}"/>
+		<apex:pageBlock mode="edit">
+			<apex:pageBlockButtons >
+				<apex:commandButton action="{!accept}" value="{!$Label.c2g__salestaxacceptaddress}"/>
+				<apex:commandButton action="{!validateAddress}" value="{!$Label.c2g__salestaxrevalidateaddress}"/>
+				<apex:commandButton action="{!reject}" value="{!CancelText}"/>				
+			</apex:pageBlockButtons>
+			
+			<!-- put the titles in their own page block as other wise we lose
+				the nice alignment between the 2 addresses, and we seem to get some
+				wrapping of labels that we don't really want for some unkown reason -->
+			<apex:pageBlockSection columns="2">
+				<apex:pageBlockSection collapsible="false"  title="{!$Label.c2g__salestaxoriginaladdress}"/>
+				<apex:pageBlockSection collapsible="false"  title="{!$Label.c2g__salestaxproposedaddress}"/>	
+			</apex:pageBlockSection>
+			<apex:pageBlockSection columns="2">			
+				<apex:repeat value="{!fields}" var="field">
+					<apex:outputField value="{!oldRecord[field]}"/>
+					<apex:inputField value="{!record[field]}"/>
+				</apex:repeat>  
+			</apex:pageBlockSection>  
+		</apex:pageBlock>
+		
+	</apex:form>
+</apex:page>

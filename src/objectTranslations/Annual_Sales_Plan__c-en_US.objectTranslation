@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Annual Sales Plan</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Annual Sales Plans</value>
+    </caseValues>
+    <fields>
+        <label><!-- End Date --></label>
+        <name>End_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- End Of Year --></label>
+        <name>End_Of_Year__c</name>
+    </fields>
+    <fields>
+        <label><!-- Enrollment Actual --></label>
+        <name>Enrollment_Actual__c</name>
+    </fields>
+    <fields>
+        <label><!-- Enrollment Target --></label>
+        <name>Enrollment_Target__c</name>
+    </fields>
+    <fields>
+        <label><!-- In-Person Meetings --></label>
+        <name>In_Person_Meetings__c</name>
+    </fields>
+    <fields>
+        <label><!-- Initial Plan Summary --></label>
+        <name>Initial_Plan_Summary__c</name>
+    </fields>
+    <fields>
+        <label><!-- Key Factors Contributing to Success --></label>
+        <name>Key_Factors_Contributing_to_Success__c</name>
+    </fields>
+    <fields>
+        <label><!-- Mid Year --></label>
+        <name>Mid_Year__c</name>
+    </fields>
+    <fields>
+        <label><!-- Narrative: --></label>
+        <name>Narrative__c</name>
+    </fields>
+    <fields>
+        <label><!-- Obstacles and Quarterly Summaries --></label>
+        <name>Obstacles_and_Quarterly_Summaries__c</name>
+    </fields>
+    <fields>
+        <label><!-- Q1 Summary --></label>
+        <name>Q1_Summary_Obstacles__c</name>
+    </fields>
+    <fields>
+        <label><!-- Q1 Summary --></label>
+        <name>Q1_Summary__c</name>
+    </fields>
+    <fields>
+        <label><!-- Q2 Summary --></label>
+        <name>Q2_Summary_Obstacles__c</name>
+    </fields>
+    <fields>
+        <label><!-- Q2 Summary Update --></label>
+        <name>Q2_Summary_Update__c</name>
+    </fields>
+    <fields>
+        <label><!-- Q2 Summary --></label>
+        <name>Q2_Summary__c</name>
+    </fields>
+    <fields>
+        <label><!-- Q3 Summary --></label>
+        <name>Q3_Summary_Obstacles__c</name>
+    </fields>
+    <fields>
+        <label><!-- Q3 Summary Update --></label>
+        <name>Q3_Summary_Update__c</name>
+    </fields>
+    <fields>
+        <label><!-- Q3 Summary --></label>
+        <name>Q3_Summary__c</name>
+    </fields>
+    <fields>
+        <label><!-- Q4 Summary --></label>
+        <name>Q4_Summary_Obstacles__c</name>
+    </fields>
+    <fields>
+        <label><!-- Q4 Summary Update --></label>
+        <name>Q4_Summary_Update__c</name>
+    </fields>
+    <fields>
+        <label><!-- Q4 Summary --></label>
+        <name>Q4_Summary__c</name>
+    </fields>
+    <fields>
+        <label><!-- Regional Manager --></label>
+        <name>Regional_Manager__c</name>
+        <relationshipLabel><!-- Annual Sales Plans --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Start Date --></label>
+        <name>Start_Date__c</name>
+    </fields>
+    <layouts>
+        <layout>Annual Sales Plan Layout</layout>
+        <sections>
+            <label><!-- Competitive Landscape --></label>
+            <section>Competitive Landscape</section>
+        </sections>
+        <sections>
+            <label><!-- Current Aggregators and Associations in Territory --></label>
+            <section>Current Aggregators and Associations in Territory</section>
+        </sections>
+        <sections>
+            <label><!-- Current Wins --></label>
+            <section>Current Wins</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Key Factors Contributing to Success --></label>
+            <section>Key Factors Contributing to Success</section>
+        </sections>
+        <sections>
+            <label><!-- Obstacles --></label>
+            <section>Obstacles</section>
+        </sections>
+        <sections>
+            <label><!-- Opportunities/Membership Objectives and Goals --></label>
+            <section>Opportunities/Membership Objectives and Goals</section>
+        </sections>
+        <sections>
+            <label><!-- Proposed Conference Attendance --></label>
+            <section>Proposed Conference Attendance</section>
+        </sections>
+        <sections>
+            <label><!-- Quarterly Reports --></label>
+            <section>Quarterly Reports</section>
+        </sections>
+        <sections>
+            <label><!-- RFPs/RFIs Expected --></label>
+            <section>RFPs/RFIs Expected</section>
+        </sections>
+        <sections>
+            <label><!-- Summary --></label>
+            <section>Summary</section>
+        </sections>
+        <sections>
+            <label><!-- Target Aggregators and Associations in Territory --></label>
+            <section>Target Aggregators and Associations in Territory</section>
+        </sections>
+        <sections>
+            <label><!-- Top Target ESSS --></label>
+            <section>Top Target ESSS</section>
+        </sections>
+        <sections>
+            <label><!-- Top Target Standard --></label>
+            <section>Top Target Standard</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+    <webLinks>
+        <label><!-- Generate_PDF --></label>
+        <name>Generate_PDF</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- RAE_Target_List_by_Tier --></label>
+        <name>RAE_Target_List_by_Tier</name>
+    </webLinks>
+</CustomObjectTranslation>

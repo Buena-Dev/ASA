@@ -1,0 +1,6 @@
+I am very happy to report that {!Case.Account} has completed their implementation and is ready to begin processing. For those of you with Salesforce you can access the details at the following link:
+
+{!Case.Link}
+ 
+Best regards,
+{!Case.OwnerFullName}

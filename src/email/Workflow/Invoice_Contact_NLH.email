@@ -1,0 +1,5 @@
+The SALT Invoice contact at {!Account.Name}: {!Contact.FirstName} {!Contact.LastName}, {!Contact.Email} has been designated as "No Longer Here".
+
+Please contact Jill Marr (jdamico@asa.org) with the new contact to receive the SALT Invoice.
+
+Thank you.

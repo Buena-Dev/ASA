@@ -1,0 +1,18 @@
+<apex:page standardController="c2g__codaBankReconciliation__c" extensions="c2g.CODAHelpLoaderController,c2g.BankReconciliationConfimationController"> 
+	<apex:stylesheet value="{!URLFOR($Resource.c2g__coda2go,'coda2go/web/css/style.css')}"/>
+	<apex:form >
+		<apex:sectionHeader title="{!$Label.c2g__bankrecconfirmreopentitle}" subtitle="{!c2g__codaBankReconciliation__c.Name}" help="{!redirectForHelp1130}"/>
+		<apex:pageBlock >
+	
+			<apex:pageMessages showDetail="true"/>
+			<apex:pagemessage title="{!$Label.c2g__allocationschedulewarninglabel}" detail="{!ReopenConfirmMessage}" severity="warning" strength="2"/>		
+			
+			<apex:pageBlockButtons location="bottom">
+				<apex:commandButton action="{!doReopen}" value="{!$Label.c2g__bankrecconfirmreopenokbtn}"/>
+				<apex:commandButton action="{!cancel}" value="{!$Label.c2g__bankrecconfirmreopengobackbtn}"/>		
+			</apex:pageBlockButtons>
+            
+        	</apex:pageBlock>
+	</apex:form>
+	
+</apex:page>

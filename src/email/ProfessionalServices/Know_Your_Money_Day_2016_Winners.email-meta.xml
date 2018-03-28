@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Know Your Money Day 2016 Winner Announcement Email</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Salt_School_Channel</letterhead>
+    <name>Know Your Money Day 2016 Winners</name>
+    <style>freeForm</style>
+    <subject>Salt: Know Your Money Day Winners!</subject>
+    <textOnly>Dear {!Contact.FirstName}:
+
+Thank you for your participation in Know Your Money Day powered by Salt. The response from our clients was simply amazing. We had 66 schools participate and their programming efforts generated a total of 1,236 activations and 20,148 page views on saltmoney.org!
+We are happy to announce the following winners for the four categories below:
+Salt Registrations (based on % increase by school size):
+Garden City Community College (KS)
+Clarkson University (NY)
+Fort Hays State University (KS)
+
+Honorable Mention: Mount Wachusett Community College (MA)
+
+Salt Site Activity (based on page views by school size):
+Husson University (ME)
+Center for Employment Training (CA)
+Stark State University (OH)
+
+Honorable Mention: Milwaukee Area Technical College (WI)
+
+Most Creative Event:
+Big Bend Community College (WA)
+Columbia College Chicago (IL)
+Kansas State University (KS)
+
+
+Participation Drawing: University of West Florida (FL)
+
+Thank you again for participating in Know Your Money Day and providing your students and alumni with information on the important topic of credit!  We hope you join us next year.
+Sincerely,
+The Professional Services Team
+engagement@asa.org</textOnly>
+    <type>html</type>
+</EmailTemplate>

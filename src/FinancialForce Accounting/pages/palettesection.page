@@ -1,0 +1,2 @@
+<apex:page controller="c2g.PaletteSectionController" tabstyle="c2g__RelatedContentPane__c">
+</apex:page>

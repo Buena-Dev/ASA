@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>false</available>
+    <description>Partnership Dialogue Registration Reminder Long Island 2008</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>EmailLetterhead</letterhead>
+    <name>Partnership Dialogue Series Registration Reminder Long Island 2008</name>
+    <style>freeForm</style>
+    <subject>Courtesy Reminder - ASA Event</subject>
+    <textOnly>This is a friendly reminder of your registration for an American Student Assistance event
+
+ 
+You&apos;ve been registered for the Long Island, NY Partnership Dialogue Series: A Focus on Communication 
+ 
+Date: April 16,2008
+Time: 8:00am-1:00pm
+Location: Long Island Marriott Hotel &amp; Conference Center
+Directions: http://www.marriott.com/hotels/travel/nycli-long-island-marriott-hotel-and-conference-center/  
+ 
+Continental breakfast and lunch will be served.
+
+Canceling Your Registration
+If you need to cancel or change your training registration please email training@amsa.com or 1-800-999-9080, ext. 3099.
+
+Other Information
+All of ASA&apos;s training programs are offered free of charge.  Please contact us at training@amsa.com or 1-800-999-9080, ext. 3099 with any questions about our training program.
+ 
+In case of inclement weather, please call the number above to check for a delayed start or class cancellation.  Updates will be done by 6:15am on the day of training.
+
+We look forward to seeing you!</textOnly>
+    <type>html</type>
+</EmailTemplate>

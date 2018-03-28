@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Friendly Reminder of registration sent to all attendees</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>EmailLetterhead</letterhead>
+    <name>Negotiation Skills,College of Southern Idaho PD Day (Reminder to Attendees)</name>
+    <style>freeForm</style>
+    <subject>Courtesy Reminder Oct 30, 2008</subject>
+    <textOnly>This is a friendly reminder of your registration for an American Student Assistance training event
+
+ 
+You&apos;ve been registered for the Professional Development Day Negotiation Skills Workshop at College of Southern Idaho.
+ 
+Date: Oct. 30, 2008
+Time: 8:30am to 4:00pm
+Location: Student Desert Room 113
+Directions: http://www.csi.edu 
+ 
+Continental breakfast and lunch will be served.
+
+Canceling Your Registration
+If you need to cancel or change your training registration please email training@amsa.com or 1-800-999-9080, ext. 3099.
+
+Other Information
+All of ASA&apos;s training programs are offered free of charge.  Please contact us at training@amsa.com or 1-800-999-9080, ext. 3099 with any questions about our training program.
+ 
+In case of inclement weather, please call the number above to check for a delayed start or class cancellation.  Updates will be done by 6:15am on the day of training.
+
+We look forward to seeing you!</textOnly>
+    <type>html</type>
+</EmailTemplate>

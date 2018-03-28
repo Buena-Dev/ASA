@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Salt Ambassador &amp; Advisor Program Bulletin March 2017</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Salt_School_Channel</letterhead>
+    <name>Salt AmbAdv Prog Bulletin- March 2017</name>
+    <style>freeForm</style>
+    <subject>Salt Ambassador Program Bulletin - March</subject>
+    <textOnly>Salt Ambassador Program Bulletin
+
+Greetings to our Salt® Ambassadors and Advisors!
+
+Welcome to the March 2017 Salt Ambassador Program Bulletin, the vehicle that provides you with money tips to share and tools to increase awareness about Salt. Here are things you can do this month to help promote money management and spread the word about Salt.
+
+Plan a Salt Event: April is Financial Literacy Month - Listed below are three financial activities, designed to provide meaningful financial knowledge for students.  Implement one, two or all three during the month of April.
+1.       My Two Cents: Sound Financial Advice
+2.       What’s in Your Report
+3.       My Financial Plan
+For detailed information about these events, ask your advisor to login to the Salt Store and download “Salt Activities – April Financial Literacy Month” file listed under Communication Resource.
+
+General Updates
+
+New “My Salt” Experience - “My Salt®” is a new group of features that personalizes saltmoney.org to better meet Salt users’ goals and expectations. Users rank their overall financial goals, answer follow-up questions, and then receive relevant Salt content recommendations based on their responses. Other features within this experience help Salt users track and monitor their progress.  View the PDF highlighting &quot;My Salt&quot;.
+
+Salt Community - Check out and share these useful posts. 2017 Scholarship Challenge #2: Transform Your Weaknesses Into Strengths, What To Do When Your Friend Always &apos;Forgets Their Wallet&apos;, and How I Deal With Performance Review At Work.
+
+Do you have questions or have a tip you think should be in the Salt Ambassador Bulletin?  We’d love to hear from you at engagement@asa.org.  This is the last Salt Ambassador Bulletin for this school year.  We will start sending the bulletin again in the fall.  Have a wonderful semester and summer!</textOnly>
+    <type>html</type>
+</EmailTemplate>

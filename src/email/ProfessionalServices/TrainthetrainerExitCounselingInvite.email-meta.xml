@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Train the trainer exit counseling webex April 2008 - INvite</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>EmailLetterhead</letterhead>
+    <name>Train the trainer - Exit Counseling Invite</name>
+    <style>freeForm</style>
+    <subject>You are invited to an ASA Exit Counseling Train the trainer via webex!</subject>
+    <textOnly>Join ASA Online! 
+
+Exit Counseling Train the Trainer Webex 
+ 
+Are you confused about the new exit counseling requirements?  Are you unsure what your loan counseling session should include?  American Student Assistance® (ASA) can help.  We would like to invite you to an Exit Counseling Train the Trainer WebEx.  Find out about the new requirements and find effective ways of the delivering the information to your borrowers and never leave your office!
+
+Dates and Times:
+ 
+Tuesday April 8, 2008 11:00 a.m. - 1:00 p.m. ET
+Tuesday April 8, 2008 2:00 p.m. - 4:00 p.m. ET
+Thursday April 10, 2008 9:00 a.m. - 11:00 a.m. ET
+ 
+How to register or for additional information.
+
+· Register Online at http://www.amsa.com/fap/training 
+· Email: send your name, phone number and enrollment details to 
+training@amsa.com 
+· Phone: call the Training Department at (800) 999-9080, ext. 3099 
+
+
+All of ASA&apos;s training events are offered free of charge.  Training is considered one of the guarantor&apos;s core responsibilities and ASA is dedicated to providing informative and useful training events for our industry colleagues.
+ 
+Questions
+If you have any questions, please contact the Training Department, your client manager, or ASA’s Call Center at (800) 999-9080 and select Option 1.  The Call Center’s normal hours of operation are Monday through Friday from 8:30 a.m. to 9:00 p.m. ET.</textOnly>
+    <type>html</type>
+</EmailTemplate>

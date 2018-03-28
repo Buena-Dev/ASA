@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CAMPAIGN_NAME</field>
+    </columns>
+    <columns>
+        <field>CAMPAIGN_STATUS</field>
+    </columns>
+    <columns>
+        <field>Campaign.Primary_BD__c</field>
+    </columns>
+    <columns>
+        <field>Campaign.BDAttending__c</field>
+    </columns>
+    <columns>
+        <field>LAST_UPDATE</field>
+    </columns>
+    <crossFilters>
+        <operation>without</operation>
+        <primaryTableColumn>CAMPAIGN_ID</primaryTableColumn>
+        <relatedTable>Campaign_ASA_Attendees__c</relatedTable>
+        <relatedTableJoinColumn>Campaign__c</relatedTableJoinColumn>
+    </crossFilters>
+    <description>Shows all Conference campaign types which do not have any Attendee Feedback items created; but have attending/primary</description>
+    <filter>
+        <criteriaItems>
+            <column>START_DATE</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>greaterThan</operator>
+            <value>TODAY</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Conf Campaigns w/o Attendee Feedback</name>
+    <params>
+        <name>scopeid</name>
+        <value></value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CampaignList</reportType>
+    <scope>org</scope>
+    <showDetails>true</showDetails>
+</Report>

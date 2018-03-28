@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>false</available>
+    <description>Initial Save the date email - 2008 ASA Symposium</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>EmailLetterhead</letterhead>
+    <name>2008 ASA Symposium - Save the date email</name>
+    <style>freeForm</style>
+    <subject>Save the date - 2008 American Student Assistance Symposium</subject>
+    <textOnly>Greetings {!Contact.FirstName}!
+ 
+American Student Assistance® (ASA) invites you to join us at our 23rd Annual Symposium June 16-17 at the Boston Convention &amp; Exhibition Center and The Westin Boston Waterfront Hotel in Boston, Massachusetts. 
+ 
+The ASA Symposium attracts national and international higher education decision makers and provides opportunities for you to exchange ideas with colleagues, network with experts in various fields, and catch up on the latest industry buzz. The theme of this year&apos;s 2-day event is Building Futures—Measuring Success.
+ 
+Each year we strive to stage an event that is lively and informative, with stimulating Keynote Speakers, interactive Breakout and Concurrent Sessions on timely topics, relevant Roundtable Discussions, and the ever-popular Student Panel information session. 
+ 
+Our roster of speakers for the 2008 Annual Symposium is exceptional:
+ 
+– Zenobia L. Hikes, Vice President for Student Affairs at Virginia Tech, whose composure and eloquence helped soothe a campus overwhelmed by grief in the wake of the senseless act of violence that occurred there on April 17, 2007, will address the topic of “Leadership for the Hip-Hop Generation.” 
+– Geoffrey Canada, acclaimed author of Reaching Up for Manhood: Transforming the Lives of Boys in America, is also President/CEO of the Harlem Children’s Zone, a pioneering, non-profit, community-based organization that works to enhance the quality of life for children and families in New York City’s most devastated neighborhoods. 
+– Gary Heil, author, educator, lawyer, consultant, coach, lecturer, and co-founder of The Center for Innovative Leadership (CFIL), whose mission is to help leaders rethink the human side of their organizations. CFIL helps build environments where everyone feels accountable for building a better future. 
+– John Wood, author of Leaving Microsoft to Change the World and founder of Room to Read, a non-profit organization that has sponsored the opening of more than 280 schools and 3,600 multilingual libraries around the world. Since its inception in 2000, Room to Read has distributed over 2.8 million children’s books in its ambitious quest to advance literacy worldwide. His experience in both corporate and non-profit professional spheres makes him the ideal speaker to tackle the topic “Business, Education, and Success: It All Works Together.” 
+– Pensal McCray, founder of the Ethnic College Counseling Center, is a Denver grandmother, former teacher, and mother of 5, who has made the dream of a college education a reality by helping more than 1,800 minority students find scholarships to schools ranging from Morehouse College to Yale University. 
+– Eric Liu, author of the best-selling book Guiding Lights: The People Who Lead Us Toward Our Purpose in Life, will share his experiences and ideas about “The Art of Leadership and Mentoring.” 
+ For more information about this year&apos;s complimentary Symposium or to register, visit:  www.amsa.com/symposium</textOnly>
+    <type>html</type>
+</EmailTemplate>

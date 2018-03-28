@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Salt Ambassador &amp; Advisor Program Bulletin Jan</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Salt_School_Channel</letterhead>
+    <name>Salt AmbAdv Prog Bulletin- Jan 2017</name>
+    <style>freeForm</style>
+    <subject>Salt Ambassador Program Bulletin - Community Contest January 2017</subject>
+    <textOnly>Salt Ambassador Program Bulletin
+
+Greetings to our Salt® Ambassadors and Advisors!
+
+Welcome to the January 2017 Salt Ambassador Program Bulletin, the vehicle that provides you with money tips to share and tools to increase awareness about Salt. Here are things you can do this month to help promote money management and spread the word about Salt.  Share the suggestions below through your school and personal social media channels.
+
+Share the Design Your Way Out of Debt Contest (Salt Community):
+
+From January 17th through February 7th, we’re giving students and alumni an opportunity to win $500 to help pay off their debt through the Design Your Way Out of Debt Contest. Download the toolkit from the Salt Store today to get sample email and social media copy to spread the word and give your students a chance to win! https://community.saltmoney.org/community/contests
+
+Promote Salt article - How International Students Can Pay For School
+
+If you&apos;re from abroad and want to study in the United States, you may be able to offset your education costs with scholarships, non-federal aid, or an on-campus job.
+
+Check out the most popular content on Saltmoney.org last month:
+
+How You Can Fix Your Budget Painlessly by using this calculator to find out how you could give your savings a major boost by cutting back on minor things like coffee, takeout, and gas.
+
+
+General Updates
+
+The Ambassador Experience – for Salt Clients (online seminar) January 25th at 1:00 pm Eastern
+
+If you are interested in sharing your experience (success stories) as a Salt Ambassador please contact Lorinda Diehl at ldiehl@asa.org and register for the training here.
+
+Salt Community has a fresh look, improved features, and a new experience
+
+Check out it out and read these useful posts.
+
+Loan Forgiveness Won’t Always Makes Sense For You, How My Nephew Saved $20,000 To Buy His First Home, and Upcoming College Scholarship Deadlines: February 2017
+
+Do you have questions or have a tip you think should be in the February Salt Ambassador Bulletin?  We’d love to hear from you at engagement@asa.org.</textOnly>
+    <type>html</type>
+</EmailTemplate>

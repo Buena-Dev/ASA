@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>false</available>
+    <description>From the Desk of...Bill Fortier</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>EmailLetterhead</letterhead>
+    <name>Lender From the Desk of - Partnership Exchange</name>
+    <style>freeForm</style>
+    <subject>News from ASA...</subject>
+    <textOnly>News from ASA
+From the Desk of Bill Fortier
+
+
+Dear {!Contact.FirstName}, 
+
+
+
+
+
+
+
+
+
+  
+
+The winter 2009 edition of The Partnership Exchange, a quarterly newsletter for the lender partners of American Student Assistance® (ASA), is available and can be accessed online at http://amsa.com/lenders/partnershipexchange/index.cfm. This issue features articles on ASA&apos;s vision for a unified federal student loan program, the Federal Student Aid conference, and how we can assist you with RFIs. Past issues of the newsletter can also be viewed through ASA’s lender website at http://amsa.com/lenders. 
+ 
+Accompanying this quarter’s newsletter is a customized year-end analysis of {!Account.Name}’s performance with ASA in 2008. In this analysis we have captured key statistics and information relevant to your portfolio and included information about ASA’s unique Wellness initiatives and programs. 
+ 
+I hope you are able to benefit from some of the information included in either the newsletter or the year-end analysis, and I welcome any feedback, questions, or comments you have.  
+ 
+Sincerely, 
+ 
+ 
+Bill Fortier
+ 
+ASA, Lender Relationship Manager
+100 Cambridge Street, Suite 1600
+Boston, MA  02114
+Phone: 617-728-4692
+Fax: 617-521-6154
+E-mail: wfortier@amsa.com
+
+
+
+The content of this email is confidential and proprietary to American Student Assistance. It is intended only for the above-named individual or entity and for the purpose indicated and may not be reproduced or distributed without permission of the sender. Please notify the sender or ASA if you received this email in error.</textOnly>
+    <type>html</type>
+</EmailTemplate>

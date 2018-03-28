@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Email update for changes in the approval status</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>PS Offering - Approval Email Notification</name>
+    <style>none</style>
+    <subject>APPROVED: {!Pro_Services_Offering__c.Name}</subject>
+    <type>text</type>
+</EmailTemplate>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>false</available>
+    <description>Deficit Reduction Act of 2005 Online Training Events</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>BlankLetterhead</letterhead>
+    <name>Deficit Reduction Evite Act of 2005 Online Training</name>
+    <style>freeForm</style>
+    <subject>Deficit Reduction Act of 2005 Online Training Events</subject>
+    <textOnly>Deficit Reduction Act of 2005 Online Training Events
+
+Course Description
+Join us for an in-depth discussion on the Deficit Reduction Act of 2005 and its implications in the financial aid community. Our regulatory advisors will focus on any changes that may impact the administration of Title IV.  In addition, we will highlight any regulatory updates or guidance that  affects your students, past, present, and future.
+
+Who Should Attend
+Any financial aid administrator interested in the most up to date information related to the Deficit Reduction Act of 2005.
+
+How You Will Benefit
+Know what changes to anticipate as a result of the Deficit Reduction Act of 2005. Learn what aspects of the act could affect the way you administer Title IV funds.
+
+Save the date for these online training events.
+
+Lender Topics - April 3, 2006 
+(2:00pm - 3:30pm EST) online, WebEx Register 
+
+Borrower Topics - April 4, 2006  
+2:00pm - 3:30pm EST) online, WebEx Register 
+
+Education Institution - April 6, 2006   
+(2:00pm - 3:30pm EST)  online, WebEx Register
+
+Reflecting the groupings in the recent Dear Colleague Letters, our online events are tailored into three categories:
+
+Lender Topics:
+
+•           Special Allowance Payments
+
+•           Excess Interest
+
+•           Claim Reinsurance
+
+Borrower Topics:
+
+•           PLUS Loans for graduate or professional students
+
+•           Interest Rates
+
+•           Fees
+
+Education Institution:
+
+•           Needs Analysis
+
+•           New Grant Program
+
+•           Refunds</textOnly>
+    <type>html</type>
+</EmailTemplate>

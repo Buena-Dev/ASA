@@ -1,0 +1,30 @@
+<table width="600" cellpadding="5" height="400" border="0" cellspacing="5" >
+<tr height="50" valign="top" >
+<td locked="0" style=" font-family:arial; bLabel:main; color:#000000; font-size:12pt; bEditID:r3st1; background-color:#FFFFFF;" aEditID="c1r1" tEditID="c1r1" >
+<![CDATA[]]></td>
+</tr>
+<tr height="300" valign="top" >
+<td locked="0" style=" font-family:arial; bLabel:main; color:#000000; font-size:12pt; bEditID:r3st1; background-color:#FFFFFF;" aEditID="c1r2" tEditID="c1r2" >
+<![CDATA[<P>&nbsp;</P>
+<P>&nbsp;</P>
+<P><SPAN style="FONT-SIZE: 10pt; COLOR: black">Dear {!Contact.FirstName},<?xml:namespace prefix = o ns = "urn:schemas-microsoft-com:office:office" /><o:p></o:p></SPAN></P>
+<P>&nbsp;</P>
+<P>&nbsp;</P>
+<P class=MsoNormal style="mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><FONT face=Arial color=black size=2><SPAN style="FONT-SIZE: 10pt; COLOR: black; FONT-FAMILY: Arial">Due to </SPAN></FONT><FONT face=Arial color=navy size=2><SPAN style="FONT-SIZE: 10pt; COLOR: navy; FONT-FAMILY: Arial">a </SPAN></FONT><FONT face=Arial color=black size=2><SPAN style="FONT-SIZE: 10pt; COLOR: black; FONT-FAMILY: Arial">scheduling issue, American Student Assistance unfortunately&nbsp;has cancelled the&nbsp;March 13, 2008 <?xml:namespace prefix = st1 ns = "urn:schemas-microsoft-com:office:smarttags" /><st1:place w:st="on"><st1:City w:st="on">Nashville</st1:City>, <st1:State w:st="on">Tennessee</st1:State></st1:place> <EM><I><FONT face=Arial><SPAN style="FONT-FAMILY: Arial">Partnership Dialogue Series.</SPAN></FONT></I></EM></SPAN></FONT></P>
+<P class=MsoNormal style="mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><FONT face=Arial color=black size=2><SPAN style="FONT-SIZE: 10pt; COLOR: black; FONT-FAMILY: Arial"><EM><I><FONT face=Arial><SPAN style="FONT-FAMILY: Arial"></SPAN></FONT></I></EM></SPAN></FONT><FONT color=black><SPAN style="COLOR: black"><o:p></o:p></SPAN></FONT>&nbsp;</P>
+<P class=MsoNormal style="mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><FONT face=Arial color=black size=2><SPAN style="FONT-SIZE: 10pt; COLOR: black; FONT-FAMILY: Arial">We would like to&nbsp;thank you for your interest in attending this event and apologize&nbsp;for any inconvenience this cancellation may have caused.&nbsp; We hope to reschedule at later date.&nbsp;</SPAN></FONT></P>
+<P class=MsoNormal style="mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><FONT face=Arial color=black size=2><SPAN style="FONT-SIZE: 10pt; COLOR: black; FONT-FAMILY: Arial"></SPAN></FONT><FONT color=black><SPAN style="COLOR: black"><o:p></o:p></SPAN></FONT>&nbsp;</P>
+<P class=MsoNormal style="mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><FONT face=Arial color=black size=2><SPAN style="FONT-SIZE: 10pt; COLOR: black; FONT-FAMILY: Arial">Thanks again for your willingness to take time out of your busy schedule&nbsp;to join us;&nbsp;we look forward to seeing you at future events.&nbsp; If you have any questions, please let me know.</SPAN></FONT></P>
+<P class=MsoNormal style="mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><FONT face=Arial color=black size=2><SPAN style="FONT-SIZE: 10pt; COLOR: black; FONT-FAMILY: Arial"></SPAN></FONT>&nbsp;</P>
+<P class=MsoNormal style="mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><FONT face=Arial color=black size=2><SPAN style="FONT-SIZE: 10pt; COLOR: black; FONT-FAMILY: Arial"></SPAN></FONT>&nbsp;</P>
+<P class=MsoNormal style="mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><FONT face=Arial color=black size=2><SPAN style="FONT-SIZE: 10pt; COLOR: black; FONT-FAMILY: Arial"></SPAN></FONT>&nbsp;</P>
+<P class=MsoNormal style="mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><FONT face=Arial color=black size=2><SPAN style="FONT-SIZE: 10pt; COLOR: black; FONT-FAMILY: Arial"></SPAN></FONT>&nbsp;</P><FONT face=Arial color=black size=2><SPAN style="FONT-SIZE: 10pt; COLOR: black; FONT-FAMILY: Arial">
+<P class=MsoNormal><FONT face=Arial color=black size=2><SPAN style="FONT-SIZE: 10pt; COLOR: black">Sincerely,</SPAN></FONT><FONT color=black><SPAN style="COLOR: black"><o:p></o:p></SPAN></FONT></P>
+<P class=MsoNormal><FONT face=Arial color=black size=2><SPAN style="FONT-SIZE: 10pt; COLOR: black">{!Contact.OwnerFullName}</SPAN></FONT><FONT color=black><SPAN style="COLOR: black"><o:p></o:p></SPAN></FONT></P>
+<P class=MsoNormal><FONT face=Arial color=black size=2><SPAN style="FONT-SIZE: 10pt; COLOR: black">{!Contact.OwnerEmail}<o:p></o:p></SPAN></FONT></P><o:p></o:p></SPAN></FONT>]]></td>
+</tr>
+<tr height="50" valign="top" >
+<td locked="0" style=" font-family:arial; bLabel:main; color:#000000; font-size:12pt; bEditID:r3st1; background-color:#FFFFFF;" aEditID="c1r3" tEditID="c1r3" >
+<![CDATA[]]></td>
+</tr>
+</table>

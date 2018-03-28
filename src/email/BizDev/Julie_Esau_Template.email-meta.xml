@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Salt_School_Channel</letterhead>
+    <name>Julie Esau Template</name>
+    <style>freeForm</style>
+    <subject>Julie Esau Email Template</subject>
+    <textOnly>Julie Esau | Sr. Manager, Strategic Alliances
+
+Salt | American Student Assistance
+
+P: 785.226.0303 | 800.999.9080 ext. 2274 | E: jesau@asa.org
+540 Manchester Lane | Austin, TX78737</textOnly>
+    <type>html</type>
+</EmailTemplate>

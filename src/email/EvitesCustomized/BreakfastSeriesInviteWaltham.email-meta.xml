@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>false</available>
+    <description>Breakfast Series Waltham invite 2006</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>EmailLetterhead</letterhead>
+    <name>Breakfast Series Invite - Waltham</name>
+    <style>freeForm</style>
+    <subject>Give American Student Assistance your feedback at Waltham breakfast</subject>
+    <textOnly>Dear {!Contact.FirstName},
+ 
+HAVE BREAKFAST WITH US!
+American Student Assistance® is always looking for ways to incorporate your suggestions into our business.
+ 
+What are our strengths?  How can we improve?
+We want to hear from you!
+ 
+Please join us for an interactive feedback session:
+September 25, 9 – 11 a.m.
+Doubletree Guest Suites (Hasting II)
+550 Winter Street, Waltham, MA
+(Breakfast will be provided.)
+ 
+RSVP by September 18 to Sherryann Lordes at slordes@amsa.com.
+We look forward to seeing you!
+ 
+We look forward to seeing you!
+Paul C. Combe
+President &amp; CEO
+American Student Assistance</textOnly>
+    <type>html</type>
+</EmailTemplate>

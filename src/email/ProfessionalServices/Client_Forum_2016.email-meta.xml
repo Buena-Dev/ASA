@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Client Forum 2016</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>SALT_Client_Forum_2016</letterhead>
+    <name>Client Forum 2016</name>
+    <style>freeForm</style>
+    <subject>SALT Client Forum 2016 - join us again this year!</subject>
+    <textOnly>Dear {!Contact.FirstName}:
+
+We are excited to announce the 2016 SALT Client Forums!
+
+This year&apos;s agenda offers sessions on topics you told us are most important, with ample time to connect with colleagues, share ideas and learn from one another.
+
+The Client Forum is the place to fine tune your engagement efforts and help shape your plan for the upcoming year, and I hope you can join us.  Registration is free. Check out the agenda and all of the locations at http://bit.ly/2016ClientForum.
+
+
+Sincerely,
+
+
+Gina Lucente-Cole
+Client Forum Event Manager
+
+P.S. Feel free to forward this invitation to others on your campus.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+American Student Assistance, ASA, SALT, Money knowledge for college – and beyond, and corresponding logos are trademarks or registered trademarks of American Student Assistance.
+
+©2016 American Student Assistance. All rights reserved.</textOnly>
+    <type>html</type>
+</EmailTemplate>

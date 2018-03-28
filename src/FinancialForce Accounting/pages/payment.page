@@ -1,0 +1,177 @@
+<apex:page controller="c2g.PayController" showHeader="true" sidebar="true" standardStylesheets="false" docType="html-5.0">
+
+	<c:CompaniesSession />
+
+    <!-- User Locale -->
+    <c:fflib_bridgeUserInfo />
+
+    <!-- ExtJS Application -->
+	<c:fflib_extBootstrap applicationName="Payment" staticResource="{!$Resource.c2g__Payment}" developmentPrefix="{!$Setup.ClientDeveloperSettings__c.ResourcePrefix__c}">
+		<c:TranslationHelper />
+		<script>
+			var $RemoteAction = $RemoteAction || {},
+			$Params = $Params || {},
+			$Label = $Label || {};
+
+			$RemoteAction.PayController = {
+				getPayableControlGLAValues: "{!$RemoteAction.PayController.getPayableControlGLAValues}",
+				getVendorNameValues: "{!$RemoteAction.PayController.getVendorNameValues}",
+				getBankAccountCurrencies: "{!$RemoteAction.PayController.getCurrencyValueByBankAccountId}",
+				getFieldValues: "{!$RemoteAction.PayController.getFieldValues}",
+				getPaymentMethodFieldValues: "{!$RemoteAction.PayController.getPaymentMethodFieldValues}",
+				getPaymentMediaFieldValues: "{!$RemoteAction.PayController.getPaymentMediaFieldValues}",
+				getTLIsByFilters: "{!$RemoteAction.PayController.getTLIsByFilters}"
+			};
+
+			$Params.isMultiCurrency = {!ISMULTICURRENCY};
+			$Params.detailSObjects = {
+				bankAccount: '{!OBJ_BANK_ACCOUNT}',
+				paymentCurrency: '{!OBJ_ACCOUNTING_CURRENCY}',
+				settlementDiscount: '{!OBJ_GENERAL_LEDGER_ACCOUNT}',
+				currencyWriteOff: '{!OBJ_GENERAL_LEDGER_ACCOUNT}',
+				settlementDiscountDim1: '{!OBJ_DIMENSION1}',
+				settlementDiscountDim2: '{!OBJ_DIMENSION2}',
+				settlementDiscountDim3: '{!OBJ_DIMENSION3}',
+				settlementDiscountDim4: '{!OBJ_DIMENSION4}',
+				currencyWriteOffDim1: '{!OBJ_DIMENSION1}',
+				currencyWriteOffDim2: '{!OBJ_DIMENSION2}',
+				currencyWriteOffDim3: '{!OBJ_DIMENSION3}',
+				currencyWriteOffDim4: '{!OBJ_DIMENSION4}'
+			};
+			$Params.transSelectionSObjects = {
+				payableInvoiceNumber: '{!OBJ_PAYABLE_INVOICE_NUMBER}'
+			};
+			$Params.objPayment = '{!OBJ_PAYMENT}';
+			$Params.isLEX = {!isLEX};
+			$Params.listViewURL = "{!URLFOR($Action.codaPayment__c.List,$ObjectType.codaPayment__c)}";
+			$Params.isEncriptionOn = {!ISENCRYPTIONON};
+
+			/** Select Transactions Filter Fields Key Values **/
+			$Params.selectTransactionsFieldKeys = {
+				dueDate: '{!FILTERFIELDKEY_DUEDATE}',
+				paymentMethod: '{!FILTERFIELDKEY_PAYMENTMETHOD}',
+				accountPayableControlGLA: '{!FILTERFIELDKEY_ACCOUNTPAYABLECONTROLGLA}',
+				vendorName: '{!FILTERFIELDKEY_VENDORNAME}',
+				payableInvoiceNumber: '{!FILTERFIELDKEY_PAYABLEINVOICENUMBER}',
+				vendorInvoiceNumber: '{!FILTERFIELDKEY_VENDORINVOICENUMBER}',
+				documentCurrency: '{!FILTERFIELDKEY_DOCUMENTCURRENCY}'
+			};
+
+			$Params.selectTransactionsFieldCriterion = {
+				equals: '{!FILTER_CRITERIA_EQUALS}',
+				multiSelect: '{!FILTER_CRITERIA_MULTISELECT}',
+				contains: '{!FILTER_CRITERIA_CONTAINS}',
+				to: '{!FILTER_CRITERIA_TO}',
+				fromTo: '{!FILTER_CRITERIA_FROMTO}'
+			};
+			$Params.selectTransactionsFieldCriterionLabels = {
+				'{!FILTER_CRITERIA_EQUALS}': '{!JSINHTMLENCODE($Label.PayStepsSelDocsMultiSelectEqualOption)}',
+				'{!FILTER_CRITERIA_MULTISELECT}': '{!JSINHTMLENCODE($Label.PayStepsSelDocsMultiSelectField)}',
+				'{!FILTER_CRITERIA_CONTAINS}': '{!JSINHTMLENCODE($Label.PayStepsSelDocsMultiSelectContainsOption)}',
+				'{!FILTER_CRITERIA_TO}': '{!JSINHTMLENCODE($Label.PayStepsSelDocsDueToField)}',
+				'{!FILTER_CRITERIA_FROMTO}': '{!JSINHTMLENCODE($Label.PayStepsSelDocsMultiSelectFromToOption)}'
+			};
+
+			$Params.selectTransactionsFieldType = {
+				date: '{!FILTER_TYPE_DATE}',
+				text: '{!FILTER_TYPE_TEXT}',
+				list: '{!FILTER_TYPE_LOOKUP}'
+			};
+
+			/** Labels **/
+
+			/** General Labels **/
+			$Label.PayTitle = '{!JSINHTMLENCODE($Label.PayTitle)}';
+			$Label.PayAddPaymentDetails = '{!JSINHTMLENCODE($Label.PayAddPaymentDetails)}';
+			$Label.PayPaymentDetailsDescription = '{!JSINHTMLENCODE($Label.PayPaymentDetailsDescription)}';
+			$Label.PayPaymentDiscountsAndWriteOffDescription = '{!JSINHTMLENCODE($Label.PayPaymentDiscountsAndWriteOffDescription)}';
+
+			/** Payment Steps Labels **/
+			$Label.PayStepsPaymentDetails = '{!JSINHTMLENCODE($Label.PayStepsPaymentDetails)}';
+			$Label.PayStepsPrintChecks = '{!JSINHTMLENCODE($Label.PayStepsPrintChecks)}';
+			$Label.PayStepsReviewProposal = '{!JSINHTMLENCODE($Label.PayStepsReviewProposal)}';
+			$Label.PayStepsSelectDocuments = '{!JSINHTMLENCODE($Label.PayStepsSelectDocuments)}';
+
+			/** Buttons and Links Labels **/
+			$Label.PayCancelButton = '{!JSINHTMLENCODE($Label.PayCancelButton)}';
+			$Label.PayDetailsHideDimensions = '{!JSINHTMLENCODE($Label.PayDetailsHideDimensions)}';
+			$Label.PayDetailsShowDimensions = '{!JSINHTMLENCODE($Label.PayDetailsShowDimensions)}';
+			$Label.Back = '{!JSINHTMLENCODE($Label.Back)}';
+			$Label.Next = '{!JSINHTMLENCODE($Label.Next)}';
+
+			/** Payment Details Labels **/
+			$Label.PayDetailsBankAccountField = '{!JSINHTMLENCODE($Label.PayDetailsBankAccountField)}';
+			$Label.PayDetailsCurrencyWriteOffField = '{!JSINHTMLENCODE($Label.PayDetailsCurrencyWriteOffField)}';
+			$Label.PayDetailsDimension1Field = '{!JSINHTMLENCODE($Label.PayDetailsDimension1Field)}';
+			$Label.PayDetailsDimension2Field = '{!JSINHTMLENCODE($Label.PayDetailsDimension2Field)}';
+			$Label.PayDetailsDimension3Field = '{!JSINHTMLENCODE($Label.PayDetailsDimension3Field)}';
+			$Label.PayDetailsDimension4Field = '{!JSINHTMLENCODE($Label.PayDetailsDimension4Field)}';
+			$Label.PayDetailsPaymentCurrencyField = '{!JSINHTMLENCODE($Label.PayDetailsPaymentCurrencyField)}';
+			$Label.PayDetailsPaymentDateField = '{!JSINHTMLENCODE($Label.PayDetailsPaymentDateField)}';
+			$Label.PayDetailsPaymentMediaField = '{!JSINHTMLENCODE($Label.PayDetailsPaymentMediaField)}';
+			$Label.PayDetailsSettlementDiscountField = '{!JSINHTMLENCODE($Label.PayDetailsSettlementDiscountField)}';
+
+			/** Payment Details Help Labels **/
+			$Label.PayDetailsCurrencyWriteOffHelp = '{!JSINHTMLENCODE($Label.PayDetailsCurrencyWriteOffHelp)}';
+			$Label.PayDetailsDiscountsHelp = '{!JSINHTMLENCODE($Label.PayDetailsDiscountsHelp)}';
+			$Label.PayDetailsPaymentDateHelp = '{!JSINHTMLENCODE($Label.PayDetailsPaymentDateHelp)}';
+			$Label.PayDetailsPaymentMediaHelp = '{!JSINHTMLENCODE($Label.PayDetailsPaymentMediaHelp)}';
+
+			/** Payment Proposal Labels **/
+			$Label.PayPaymentProposal = '{!JSINHTMLENCODE($Label.PayPaymentProposal)}';
+			$Label.PayProposalBankAccount = '{!JSINHTMLENCODE($Label.PayProposalBankAccount)}';
+			$Label.PayProposalCurrencyWriteOff = '{!JSINHTMLENCODE($Label.PayProposalCurrencyWriteOff)}';
+			$Label.PayProposalDocumentsProposed = '{!JSINHTMLENCODE($Label.PayProposalDocumentsProposed)}';
+			$Label.PayProposalPaymentCurrency = '{!JSINHTMLENCODE($Label.PayProposalPaymentCurrency)}';
+			$Label.PayProposalPaymentDate = '{!JSINHTMLENCODE($Label.PayProposalPaymentDate)}';
+			$Label.PayProposalPaymentMethod = '{!JSINHTMLENCODE($Label.PayProposalPaymentMethod)}';
+			$Label.PayProposalPaymentTotal = '{!JSINHTMLENCODE($Label.PayProposalPaymentTotal)}';
+			$Label.PayProposalSettlementDiscount = '{!JSINHTMLENCODE($Label.PayProposalSettlementDiscount)}';
+			$Label.PayProposalStatus = '{!JSINHTMLENCODE($Label.PayProposalStatus)}';
+			$Label.PayProposalVendorsProposed = '{!JSINHTMLENCODE($Label.PayProposalVendorsProposed)}';
+			$Label.PayStatusNew = '{!JSINHTMLENCODE($Label.PayStatusNew)}';
+
+			/** Select Documents **/
+			$Label.PaySelDocsAccPayCntrlGLAField = '{!JSINHTMLENCODE($Label.PayStepsSelDocsAccPayCntrlGLAField)}';
+			$Label.PaySelDocsAccPayCntrlGLAHelp = '{!JSINHTMLENCODE($Label.PayStepsSelDocsAccPayCntrlGLAHelp)}';
+			$Label.PaySelDocsDocCurrencyField = '{!JSINHTMLENCODE($Label.PayStepsSelDocsDocCurrencyField)}';
+			$Label.PaySelDocsDocCurrencyHelp = '{!JSINHTMLENCODE($Label.PayStepsSelDocsDocCurrencyHelp)}';
+			$Label.PaySelDocsDueDateField = '{!JSINHTMLENCODE($Label.PayStepsSelDocsDueDateField)}';
+			$Label.PaySelDocsDueDateHelp = "{!JSINHTMLENCODE($Label.PayStepsSelDocsDueDateHelp)}";
+			$Label.PaySelDocsDueFromField = '{!JSINHTMLENCODE($Label.PayStepsSelDocsDueFromField)}';
+			$Label.PaySelDocsDueToField = '{!JSINHTMLENCODE($Label.PayStepsSelDocsDueToField)}';
+			$Label.PaySelDocsFiltersApplied = '{!JSINHTMLENCODE($Label.PayStepsSelDocsFiltersApplied)}';
+			$Label.PaySelDocsNoFiltersApplied = '{!JSINHTMLENCODE($Label.PayStepsSelDocsNoFiltersApplied)}';
+			$Label.PaySelDocsMultiSelectContainsOption = '{!JSINHTMLENCODE($Label.PayStepsSelDocsMultiSelectContainsOption)}';
+			$Label.PaySelDocsMultiSelectEqualOption = '{!JSINHTMLENCODE($Label.PayStepsSelDocsMultiSelectEqualOption)}';
+			$Label.PaySelDocsMultiSelectField = '{!JSINHTMLENCODE($Label.PayStepsSelDocsMultiSelectField)}';
+			$Label.PaySelDocsMultiSelectFromToOption = '{!JSINHTMLENCODE($Label.PayStepsSelDocsMultiSelectFromToOption)}';
+			$Label.PaySelDocsOptionalFilterHelp = '{!JSINHTMLENCODE($Label.PayStepsSelDocsOptionalFilterHelp)}';
+			$Label.PaySelDocsPayableInvNumbField = '{!JSINHTMLENCODE($Label.PayStepsSelDocsPayableInvNumbField)}';
+			$Label.PaySelDocsPayMethodField = '{!JSINHTMLENCODE($Label.PayStepsSelDocsPayMethodField)}';
+			$Label.PaySelDocsPayMethodHelp = '{!JSINHTMLENCODE($Label.PayStepsSelDocsPayMethodHelp)}';
+			$Label.PaySelDocsRetrieveTransButton = '{!JSINHTMLENCODE($Label.PayStepsRetrieveTransButton)}';
+			$Label.PaySelDocsVendorField = '{!JSINHTMLENCODE($Label.PayStepsSelDocsVendorField)}';
+			$Label.PaySelDocsVendorHelp = '{!JSINHTMLENCODE($Label.PayStepsSelDocsVendorHelp)}';
+			$Label.PaySelDocsVendorInvNumbField = '{!JSINHTMLENCODE($Label.PayStepsSelDocsVendorInvNumbField)}';
+
+			/** Select Transactions **/
+			$Label.PaySelectTransGridAccountName = '{!JSINHTMLENCODE($Label.PaySelectTransGridAccountName)}';
+			$Label.PaySelectTransClearAllFiltersButton = '{!JSINHTMLENCODE($Label.PaySelectTransClearAllFiltersButton)}';
+			$Label.PaySelectTransGridDiscount = '{!JSINHTMLENCODE($Label.PaySelectTransGridDiscount)}';
+			$Label.PaySelectTransGridDocumentNumber = '{!JSINHTMLENCODE($Label.PaySelectTransGridDocumentNumber)}';
+			$Label.PaySelectTransGridDueDate = '{!JSINHTMLENCODE($Label.PaySelectTransGridDueDate)}';
+			$Label.PaySelectTransHideFiltersButton = '{!JSINHTMLENCODE($Label.PaySelectTransHideFiltersButton)}';
+			$Label.PaySelectTransGridOutstandingTotal = '{!JSINHTMLENCODE($Label.PaySelectTransGridOutstandingTotal)}';
+			$Label.PaySelectTransGridOutstandingValue = '{!JSINHTMLENCODE($Label.PaySelectTransGridOutstandingValue)}';
+			$Label.PaySelectTransGridPaymentValue = '{!JSINHTMLENCODE($Label.PaySelectTransGridPaymentValue)}';
+			$Label.PaySelectTransGridShowFilters = '{!JSINHTMLENCODE($Label.PaySelectTransGridShowFilters)}';
+			$Label.PaySelectTransGridTotalSelected = '{!JSINHTMLENCODE($Label.PaySelectTransGridTotalSelected)}';
+			$Label.PaySelectTransGridTransactionNumber = '{!JSINHTMLENCODE($Label.PaySelectTransGridTransactionNumber)}';
+			$Label.PaySelectTransGridTransactionsSelected = '{!JSINHTMLENCODE($Label.PaySelectTransGridTransactionsSelected)}';
+			$Label.PaySelectTransGridVendorDocumentNumber = '{!JSINHTMLENCODE($Label.PaySelectTransGridVendorDocumentNumber)}';
+			$Label.PaySelectTransGridNoResultsFound = '{!JSINHTMLENCODE($Label.PaySelectTransGridNoResultsFound)}';
+			
+		</script>
+	</c:fflib_extBootstrap>
+</apex:page>

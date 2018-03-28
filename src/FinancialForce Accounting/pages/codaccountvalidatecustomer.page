@@ -1,0 +1,14 @@
+<!-- codaaccountvalidatecustomer -->
+<apex:page standardController="Account" extensions="c2g.CODAHelpLoaderController,c2g.CODAAccountController" action="{!validateCustomer}">
+	<apex:sectionHeader title=" {!$Label.c2g__codaaccountvalidatecustomertitle}" subtitle="{!$Label.c2g__codaaccountvalidatecustomersubtitle}"  help="{!redirectForHelp1101}"/>
+	<apex:form >
+		<apex:pageBlock >
+			<apex:pageMessages />
+			<apex:pageBlockButtons >
+                <apex:outputpanel id="buttonPanel">
+                    <apex:commandButton value="{!$Label.c2g__codaaccountcustomerbacktoaccount}" action="{!cancel}"/>
+                </apex:outputpanel>
+            </apex:pageBlockButtons>
+		</apex:pageBlock>
+	</apex:form>
+</apex:page>

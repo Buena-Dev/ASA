@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>false</available>
+    <description>ASA NEW SCHOOL READY FOR PRODUCTION EMAIL</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>READY FOR PRODUCTION</name>
+    <style>none</style>
+    <subject>Ready for Productin</subject>
+    <type>text</type>
+</EmailTemplate>

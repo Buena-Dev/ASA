@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Ambassador Notice_first_ask_SALTSquad</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>SALTClientLetterhead</letterhead>
+    <name>Ambassador Notices</name>
+    <style>freeForm</style>
+    <subject>Join the #SALTsquad! Get cool swag!</subject>
+    <textOnly>Dear {!Contact.FirstName}:
+
+As a SALT Ambassador at your school, you already know the importance of gaining financial skills and spreading that information to your peers. Now, we’re hoping that you will join us as we form our #SALTsquad. This is our latest initiative to spread our message even further and have as many college students and alumni join SALT, and become money-confident.
+
+We are creating a social media movement with the goal of helping as many people as possible, and we want you to be a part of it! Join us in posting information about SALT on your personal social media pages with the hashtag #SALTsquad. Post four times a month, and we will send you some SALT swag each month.
+
+What does joining the #SALTsquad entail?
+
+-By joining the #SALTsquad, you can re-post SALT’s social media posts on your own personal account with the hashtag #SALTsquad. You’ll be helping your friends and family learn about resources to help them with budgeting, student loans, and tons of other financial topics.
+-Every other week, we will send you sample social media language that you can use on your own channels. You’ll be the first one to know about our new articles, infographics, and tools, and we will look to you to help spread information about these resources to your peers.
+-Post four times per month with this hashtag, and we’ll mail you some exclusive SALT swag each month! These will be new, exclusive items reserved only for #SALTsquad members.
+
+
+How can I start?
+
+-If you’re not already, follow SALT on Facebook and Twitter.
+-Reply to this email letting us know you’re interested in participating.
+-Please include your social media handles so we can follow you back!
+-We will email you sample social media language you can easily use, but also feel free to create your own posts by sharing articles or tools on saltmoney.org that you think will interest your friends the most
+
+Interested in joining, or have additional questions? Email us at ambassador@asa.org.</textOnly>
+    <type>html</type>
+</EmailTemplate>

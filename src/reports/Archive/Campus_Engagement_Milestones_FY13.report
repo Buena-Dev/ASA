@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Pro_Services_Offering__c.PS_OfferingAssignedTo__c</field>
+    </columns>
+    <columns>
+        <field>FK_NAME</field>
+    </columns>
+    <columns>
+        <field>Pro_Services_Offering__c.PS_OfferingTopic__c</field>
+    </columns>
+    <columns>
+        <field>Pro_Services_Offering__c.PS_OfferingTargetDate__c</field>
+    </columns>
+    <columns>
+        <field>Pro_Services_Offering__c.PS_OfferingActualAttendees__c</field>
+    </columns>
+    <description>A list of all campus engagement activities in FY13</description>
+    <filter>
+        <criteriaItems>
+            <column>CUST_RECORDTYPE</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Pro_Services_Offering__c.Campus_Engagement</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Pro_Services_Offering__c.PS_OfferingCompleted__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>1</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Campus Engagement Milestones FY13</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$Pro_Services_Offering__c@Pro_Services_Offering__c.PS_OfferingAccount__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Pro_Services_Offering__c.PS_OfferingTargetDate__c</dateColumn>
+        <endDate>2013-06-30</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2012-07-01</startDate>
+    </timeFrameFilter>
+</Report>

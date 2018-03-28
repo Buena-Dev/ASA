@@ -1,0 +1,209 @@
+<!-- allocations -->
+<apex:page controller="c2g.AllocationsController" sidebar="false" showHeader="true" standardStylesheets="false" docType="html-5.0">
+
+	<c:fflib_analytics startEndLabels="{
+	            'start_timeOnFilterSelection':'end_timeOnFilterSelection',
+	            'start_timeOnAllocationTable':'end_timeOnAllocationTable',
+	            'start_timeOnApplication':'end_timeOnApplication'
+	            }" 
+            onReadyCallback="$Setup.metricsCallback"/>
+
+    <!-- User Locale -->
+    <c:fflib_bridgeUserInfo />
+
+    <!-- ExtJS Application -->
+	<c:fflib_extBootstrap applicationName="Allocation" staticResource="{!$Resource.c2g__Allocation}" developmentPrefix="{!$Setup.ClientDeveloperSettings__c.ResourcePrefix__c}">
+	<c:TranslationHelper />
+		<script>
+			window.$RemoteAction = window.$RemoteAction || {};
+			window.$Params = window.$Params || {};
+			window.$Label = window.$Label || {};
+			window.$Setup = window.$Setup || {};
+
+			//This function will be executed twice (on metrics ready & on app ready)
+			$Setup.metricsCallback = function(){
+				if($Params.metricsReady){
+					Allocation.app.onMetricsReady();
+				}
+				$Params.metricsReady = true;
+			};
+
+			/** Remote Actions **/
+			$RemoteAction.AllocationsController = $RemoteAction.AllocationsController || {};
+			$RemoteAction.AllocationsController.getFilterStructure = '{!$RemoteAction.AllocationsController.getFilterStructure}';
+			$RemoteAction.AllocationsController.getFiltersValues = '{!$RemoteAction.AllocationsController.getFilterValues}';
+			$RemoteAction.AllocationsController.getPeriodsForFiltering = '{!$RemoteAction.AllocationsController.getPeriodsForFiltering}';
+			$RemoteAction.AllocationsController.getPeriodsForCreating = '{!$RemoteAction.AllocationsController.getPeriodsForCreating}';
+			$RemoteAction.AllocationsController.retrieveSummaryTransactions = '{!$RemoteAction.AllocationsController.retrieve}';
+			$RemoteAction.AllocationsController.retrieveDetailTransactions = '{!$RemoteAction.AllocationsController.retrieveTransactionLineItems}';
+			$RemoteAction.AllocationsController.getCompaniesForCreating = '{!$RemoteAction.AllocationsController.getCompaniesForCreating}';
+			$RemoteAction.AllocationsController.saveAllocationTemplate = '{!$RemoteAction.AllocationsController.saveTemplate}';
+			$RemoteAction.AllocationsController.loadTemplate = '{!$RemoteAction.AllocationsController.loadTemplate}';
+			$RemoteAction.AllocationsController.createAllocations = '{!$RemoteAction.AllocationsController.createAllocations}';
+			$RemoteAction.AllocationsController.validateSaveTemplateName = '{!$RemoteAction.AllocationsController.validateSaveTemplateName}';
+
+			/** Params **/
+			$Params.FilterCriteriaMultiselect = '{!JSINHTMLENCODE(FILTER_CRITERIA_MULTISELECT)}';
+			$Params.FilterCriteriaFrom = '{!JSINHTMLENCODE(FILTER_CRITERIA_FROM)}';
+			$Params.FilterCriteriaTo = '{!JSINHTMLENCODE(FILTER_CRITERIA_TO)}';
+			$Params.MaxFilterSet = {!MAX_FILTER_SET};
+			$Params.MaxTransactionRetrieved = {!MAX_LIMIT_TRANSACTIONS_RETRIEVED};
+			$Params.MaxNumberOfRecords = {!MAX_NUMBER_FILTERS_RECORDS_AND_TEMPLATES};
+			$Params.MaxFilterContent = {!MAX_FILTER_CONTENT};
+			$Params.dateFormat = '{!JSINHTMLENCODE(SenchaDateLocaleFormat)}';
+			$Params.GeneralLedgerAccount = '{!JSINHTMLENCODE(OBJ_GENERALLEDGERACCOUNT)}';
+			$Params.Dimension1 = '{!JSINHTMLENCODE(OBJ_DIMENSION1)}';
+			$Params.Dimension2 = '{!JSINHTMLENCODE(OBJ_DIMENSION2)}';
+			$Params.Dimension3 = '{!JSINHTMLENCODE(OBJ_DIMENSION3)}';
+			$Params.Dimension4 = '{!JSINHTMLENCODE(OBJ_DIMENSION4)}';
+			$Params.AllocationTemplateName = '{!JSINHTMLENCODE(OBJ_ALLOCATIONTEMPLATE)}';
+			$Params.AllocationPeriod = '{!JSINHTMLENCODE(OBJ_PERIOD)}';
+			$Params.AllocationCompany = '{!JSINHTMLENCODE(OBJ_COMPANY)}';
+			$Params.limitLines = {!ALLOCATION_LINES_LIMIT};
+			$Params.limitLinesBatch = {!ALLOCATION_BATCH_LINES_LIMIT};
+			$Params.Period100 = '{!JSINHTMLENCODE(PERIOD_100)}';
+			$Params.AllocationDateRange = '{!JSINHTMLENCODE(DATE_RANGE_TYPE_DATE_RANGE)}';
+			$Params.AllocationPeriodRange ='{!JSINHTMLENCODE(DATE_RANGE_TYPE_PERIOD_RANGE)}';
+			$Params.CompanySelected ='{!JSINHTMLENCODE(COMPANY)}';
+			$Params.NumberOfCompanies = {!NUMBER_OF_COMPANIES};
+			$Params.isMulticompany = {!NUMBER_OF_COMPANIES} > 1;
+			$Params.MaxWarningMessageItems = {!MAX_WARNING_MESSAGE_ITEMS};
+			$Params.AlternateAccountFeatureActiveStatus = Boolean ({!alternateAccountFeatureActiveStatus});
+
+			$Params.HiddenFields = {
+				'{!JSINHTMLENCODE(OBJ_DIMENSION1)}': {!HIDE_DIMENSION_1},
+				'{!JSINHTMLENCODE(OBJ_DIMENSION2)}': {!HIDE_DIMENSION_2},
+				'{!JSINHTMLENCODE(OBJ_DIMENSION3)}': {!HIDE_DIMENSION_3},
+				'{!JSINHTMLENCODE(OBJ_DIMENSION4)}': {!HIDE_DIMENSION_4}
+			};
+
+			/** Labels **/
+
+			/** General Labels **/
+			$Label.AllocationsAllocationsTitle = '{!JSINHTMLENCODE($Label.AllocationsAllocationsTitle)}';
+			$Label.FiltersFilterSetTitle = '{!JSINHTMLENCODE($Label.FiltersFilterSetTitle)}';
+			$Label.FiltersNoFiltersTitle = '{!JSINHTMLENCODE($Label.FiltersNoFiltersTitle)}';
+			$Label.FiltersFiltersSelectedTitle = '{!JSINHTMLENCODE($Label.FiltersFiltersSelectedTitle)}';
+			$Label.AllocationsFilterSummaryTitle = '{!JSINHTMLENCODE($Label.AllocationsFilterSummaryTitle)}';
+			$Label.AllocationsTypeToSearch = '{!JSINHTMLENCODE($Label.PaymentSelectionTypeToSearch)}';
+			$Label.FiltersFilterCriteria = '{!JSINHTMLENCODE($Label.PaymentSelectionFilterCriteria)}';
+			$Label.AllocationsLoading = '{!JSINHTMLENCODE($Label.AllocationsLoading)}';
+			$Label.AllocationsSaving = '{!JSINHTMLENCODE($Label.AllocationsSaving)}';
+			$Label.AllocationsShowingResultsFromToMessage = '{!JSINHTMLENCODE($Label.AllocationsShowingResultsFromToMessage)}';
+			$Label.AllocationsGLAsRetrieved = '{!JSINHTMLENCODE($Label.AllocationsGLAsRetrieved)}';
+			$Label.AllocationsTotal = '{!JSINHTMLENCODE($Label.AllocationsTotal)}';
+			$Label.AllocationsDistributed = '{!JSINHTMLENCODE($Label.AllocationsDistributed)}';
+			$Label.AllocationsNotDistributed = '{!JSINHTMLENCODE($Label.AllocationsNotDistributed)}';
+			$Label.AllocationTransactionsSummarizedGla = '{!JSINHTMLENCODE(AllocationTransactionsSummarizedGlaLabel)}';
+			$Label.AllocationFooterSplitTable = '{!JSINHTMLENCODE($Label.AllocationFooterSplitTable)}';
+			$Label.AllocationPercentage = '{!JSINHTMLENCODE($Label.AllocationPercentage)}';
+			$Label.AllocationRemoveLine = '{!JSINHTMLENCODE($Label.AllocationRemoveLine)}';
+			$Label.AllocationsNoTemplatesFound = '{!JSINHTMLENCODE($Label.AllocationsNoTemplatesFound)}';
+			$Label.AllocationsTemplatesNRecordsOfX = '{!JSINHTMLENCODE($Label.AllocationsTemplatesNRecordsOfX)}';
+			$Label.AllocationsSelectTemplate = '{!JSINHTMLENCODE($Label.AllocationsSelectTemplate)}';
+			$Label.AllocationsMoreThanMaxRecords = '{!JSINHTMLENCODE($Label.AllocationsMoreThanMaxRecords)}';
+			$Label.AllocationDateSelectionWarning = '{!JSINHTMLENCODE($Label.AllocationDateSelectionWarning)}';
+			$Label.AllocationFilterNoDimensionValue = '{!JSINHTMLENCODE($Label.AllocationFilterNoDimensionValue)}';
+			$Label.AllocationCompany = '{!JSINHTMLENCODE($Label.AllocationCompany)}';
+			$Label.TransactionSelection = '{!JSINHTMLENCODE($Label.AllocationsFilterNameAllocationDate)}'
+			$Label.FilterCriteriaFrom = '{!JSINHTMLENCODE($Label.PaymentSelectionFilterCriteriaFrom)}';
+			$Label.FilterCriteriaTo = '{!JSINHTMLENCODE($Label.PaymentSelectionFilterCriteriaTo)}';
+			$Label.AllocationsOnlyICTTransHeading = '{!JSINHTMLENCODE($Label.AllocationsRetrieveICTTransactionsOnlyHeadingText)}';
+			$Label.AllocationsOnlyICTTrans = '{!JSINHTMLENCODE($Label.AllocationsRetrieveICTTransactionsOnly)}';
+
+			/** Buttons Labels **/
+			$Label.AllocationsFiltersButton = '{!JSINHTMLENCODE($Label.AllocationsFiltersButton)}';
+			$Label.AllocationsAddFilterSetButton = '{!JSINHTMLENCODE($Label.AllocationsAddFilterSetButton)}';
+			$Label.AllocationsRetrieveDataButton = '{!JSINHTMLENCODE($Label.AllocationsRetrieveDataButton)}';
+			$Label.AllocationsCreateAllocationButton = '{!JSINHTMLENCODE($Label.AllocationsCreateAllocationButton)}';
+			$Label.AllocationsAddSubfilterButton = '{!JSINHTMLENCODE($Label.AllocationsAddSubfilterButton)}';
+
+			/** Error Labels **/
+			$Label.AllocationsDontMatchEntriesFoundMessage = '{!JSINHTMLENCODE($Label.AllocationsDontMatchEntriesFoundMessage)}';
+			$Label.AllocationsMustEnterValueMessage = '{!JSINHTMLENCODE($Label.codaMessageMandatoryField)}';
+			$Label.AllocationsInvalidDateFormatMessage = '{!JSINHTMLENCODE($Label.AllocationsInvalidDateFormatMessage)}';
+			$Label.AllocationsFieldRequiredMessage = '{!JSINHTMLENCODE($Label.AllocationsFieldRequiredMessage)}';
+			$Label.FiltersToFieldMustAfterThanFromMessage = '{!JSINHTMLENCODE($Label.FiltersToFieldMustAfterThanFromMessage)}';
+			$Label.FiltersFromFieldMustBeforeThanToMessage = '{!JSINHTMLENCODE($Label.FiltersFromFieldMustBeforeThanToMessage)}';
+			$Label.AllocationsLimitOfFiltersMessage = '{!JSINHTMLENCODE($Label.AllocationsLimitOfFiltersMessage)}';
+			$Label.AllocationsLoadTemplateNoFilterStructureWithFilter = '{!JSINHTMLENCODE($Label.AllocationsLoadTemplateNoFilterStructureWithFilter)}';
+			$Label.AllocationsOverDistributed = '{!JSINHTMLENCODE($Label.AllocationsOverDistributed)}';
+			$Label.AllocationsUnderDistributed = '{!JSINHTMLENCODE($Label.AllocationsUnderDistributed)}';
+			$Label.AllocationsLimitOfLinesExceeded = '{!JSINHTMLENCODE($Label.AllocationsLimitOfLinesExceeded)}';
+			$Label.AllocationGLAMandatory = '{!JSINHTMLENCODE(AllocationsGLAMandatory)}';
+			$Label.AllocationsNonZero = '{!JSINHTMLENCODE($Label.AllocationsNonZero)}';
+			$Label.AllocationsAdjustAndTry = '{!JSINHTMLENCODE($Label.AllocationsAdjustAndTry)}';
+			$Label.AllocationsMaxValueMsg = '{!JSINHTMLENCODE($Label.AllocationsMaxValueMsg)}';
+			$Label.AllocationsMinValueMsg = '{!JSINHTMLENCODE($Label.AllocationsMinValueMsg)}';
+			$Label.AllocationsErrors = '{!JSINHTMLENCODE($Label.AllocationsErrors)}';
+			$Label.AllocationFillMultiCompanyFilterFields = '{!JSINHTMLENCODE($Label.AllocationFillMultiCompanyFilterFields)}';
+			$Label.AllocationFillSingleCompanyFilterFields = '{!JSINHTMLENCODE(AllocationFillSingleCompanyFilterFields)}';
+
+			/** GLAs Modal Table Labels **/
+			$Label.AllocationGla = '{!JSINHTMLENCODE(AllocationGlaLabel)}';
+			$Label.AllocationDimension1 = '{!JSINHTMLENCODE($ObjectType.codaTransactionLineItem__c.fields.Dimension1__c.label)}';
+			$Label.AllocationDimension2 = '{!JSINHTMLENCODE($ObjectType.codaTransactionLineItem__c.fields.Dimension2__c.label)}';
+			$Label.AllocationDimension3 = '{!JSINHTMLENCODE($ObjectType.codaTransactionLineItem__c.fields.Dimension3__c.label)}';
+			$Label.AllocationDimension4 = '{!JSINHTMLENCODE($ObjectType.codaTransactionLineItem__c.fields.Dimension4__c.label)}';
+			$Label.AllocationGeneralLedgerAccountsRetrieved = '{!JSINHTMLENCODE(AllocationRetrievedLabel)}';
+			$Label.AllocationAmount = '{!JSINHTMLENCODE($Label.AllocationAmount)}';
+			$Label.AllocationTLIName = '{!JSINHTMLENCODE($ObjectType.codaTransactionLineItem__c.label)}';
+			$Label.AllocationTransactionName = '{!JSINHTMLENCODE($ObjectType.codaTransactionLineItem__c.fields.Transaction__c.label)}';
+			$Label.AllocationDocumentRef = '{!JSINHTMLENCODE($ObjectType.codaTransaction__c.fields.DocumentNumber__c.label)}';
+			$Label.AllocationDocumentCurrency = '{!JSINHTMLENCODE($ObjectType.codaTransactionLineItem__c.fields.DocumentCurrency__c.label)}';
+			$Label.AllocationDocumentValue = '{!JSINHTMLENCODE($ObjectType.codaTransactionLineItem__c.fields.DocumentValue__c.label)}';
+			$Label.AllocationHomeCurrency = '{!JSINHTMLENCODE($ObjectType.codaTransactionLineItem__c.fields.HomeCurrency__c.label)}';
+			$Label.AllocationHomeValue = '{!JSINHTMLENCODE($ObjectType.codaTransactionLineItem__c.fields.HomeValue__c.label)}';
+			$Label.AllocationDualCurrency = '{!JSINHTMLENCODE($ObjectType.codaTransactionLineItem__c.fields.DualCurrency__c.label)}';
+			$Label.AllocationDualValue = '{!JSINHTMLENCODE($ObjectType.codaTransactionLineItem__c.fields.DualValue__c.label)}';
+			$Label.AllocationNoResultsFound = '{!JSINHTMLENCODE($Label.AllocationNoResultsFound)}';
+			$Label.AllocationSearchGlas = '{!JSINHTMLENCODE($Label.AllocationSearchGlas)}';
+			$Label.AllocationFindPreviousRow = '{!JSINHTMLENCODE($Label.AllocationFindPreviousRow)}';
+			$Label.AllocationFindNextRow = '{!JSINHTMLENCODE($Label.AllocationFindNextRow)}';
+			$Label.AllocationResultsFound = '{!JSINHTMLENCODE($Label.AllocationResultsFound)}';
+			$Label.AllocationPaginationAfterPageText = '{!JSINHTMLENCODE($Label.AllocationPaginationAfterPageText)}';
+			$Label.AllocationPaginationBeforePageText = '{!JSINHTMLENCODE($Label.AllocationPaginationBeforePageText)}';
+			$Label.AllocationPaginationDisplayMsg = '{!JSINHTMLENCODE($Label.AllocationPaginationDisplayMsg)}';
+			$Label.AllocationTransactionDetails = '{!JSINHTMLENCODE($Label.AllocationTransactionDetails)}';
+			$Label.AllocationTransactionSummary = '{!JSINHTMLENCODE($Label.AllocationTransactionSummary)}';
+
+
+			/** Save Template Labels **/
+			$Label.AllocationSaveButtonHeader = '{!JSINHTMLENCODE($Label.AllocationSaveButtonHeader)}';
+			$Label.AllocationSaveTemplate = '{!JSINHTMLENCODE($Label.AllocationSaveTemplate)}';
+			$Label.AllocationEnterTempalteName = '{!JSINHTMLENCODE($Label.AllocationEnterTempalteName)}';
+			$Label.AllocationEnterTempalteDescription = '{!JSINHTMLENCODE($Label.AllocationEnterTempalteDescription)}';
+			$Label.AllocationOverWriteName = '{!JSINHTMLENCODE($Label.AllocationOverWriteName)}';
+			$Label.AllocationSaveTemplateSuccess = '{!JSINHTMLENCODE($Label.AllocationSaveTemplateSuccess)}';
+			$Label.AllocationSaveButton = '{!JSINHTMLENCODE($Label.AllocationSaveButton)}';
+			$Label.AllocationCancelButton = '{!JSINHTMLENCODE($Label.AllocationCancelButton)}';
+
+			/** Load Template Labels **/
+			$Label.AllocationLoadButtonHeader = '{!JSINHTMLENCODE($Label.AllocationLoadButtonHeader)}';
+
+			//Create Allocation Labels
+			$Label.AllocationCreateAllocationTitle = '{!JSINHTMLENCODE($Label.AllocationCreateAllocationTitle)}';
+			$Label.AllocationTransactionDescription = '{!JSINHTMLENCODE($Label.AllocationTransactionDescription)}';
+			$Label.AllocationInsertTextHere = '{!JSINHTMLENCODE($Label.AllocationInsertTextHere)}';
+			$Label.AllocationCreateDate = '{!JSINHTMLENCODE($Label.AllocationCreateDate)}';
+			$Label.AllocationTransactionPeriod = '{!JSINHTMLENCODE($Label.AllocationTransactionPeriod)}';
+			$Label.AllocationCreateAllocationButton = '{!JSINHTMLENCODE($Label.AllocationCreateAllocationButton)}';
+			$Label.AllocationCancelCreateAllocationButton = '{!JSINHTMLENCODE($Label.AllocationCancelCreateAllocationButton)}';
+			$Label.AllocationCreateSuccessfulMsg = '{!JSINHTMLENCODE($Label.AllocationCreateSuccessfulMsg)}';
+			$Label.AllocationViewTransaction = '{!JSINHTMLENCODE($Label.AllocationViewTransaction)}';
+			$Label.AllocationViewJournal = '{!JSINHTMLENCODE($Label.AllocationViewJournal)}';
+			$Label.AllocationNewAllocation = '{!JSINHTMLENCODE($Label.AllocationNewAllocation)}';
+			$Label.AllocationForbiddenPeriod = '{!JSINHTMLENCODE($Label.AllocationForbiddenPeriod)}';
+			$Label.AllocationWarningPeriod = '{!JSINHTMLENCODE($Label.AllocationWarningPeriod)}';
+			$Label.AllocationDate = '{!JSINHTMLENCODE($Label.AllocationDate)}';
+			$Label.AllocationTemplateConfirmSave = '{!JSINHTMLENCODE($Label.AllocationTemplateConfirmSave)}';
+			$Label.AllocationCreateDestination = '{!JSINHTMLENCODE($Label.AllocationCreateDestination)}';
+			$Label.AllocationTransactionType = '{!JSINHTMLENCODE($Label.AllocationCreateTransactionType)}';
+			$Label.AllocationJournalType = '{!JSINHTMLENCODE($Label.AllocationCreateJournalType)}';
+			$Label.AllocationPreviewCredit = '{!JSINHTMLENCODE($Label.AllocationPreviewCredit)}';
+			$Label.AllocationPreviewDebit = '{!JSINHTMLENCODE($Label.AllocationPreviewDebit)}';
+			$Label.AllocationLimitJNLExceeded = '{!JSINHTMLENCODE($Label.AllocationsLimitOfLinesForJNLExceeded)}';
+			$Label.AllocationRunOnBatchMessage = '{!JSINHTMLENCODE($Label.AllocationRunOnBatchMessage)}';
+		</script>
+	</c:fflib_extBootstrap>
+</apex:page>

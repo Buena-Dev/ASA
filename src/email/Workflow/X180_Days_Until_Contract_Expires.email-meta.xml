@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>{!Account.Name}&apos;s Contract expires in six months, start renewal discussion with SALT Team</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>180 Days Until Contract Expires</name>
+    <style>none</style>
+    <subject>{!Account.Name}&apos;s Contract expires in six months, start renewal discussion with SALT Team</subject>
+    <type>text</type>
+</EmailTemplate>

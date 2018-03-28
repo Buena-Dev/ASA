@@ -1,0 +1,4 @@
+Please create a profile for {!Opportunity.Account}.  If you have any questions please let me know.
+Sincerely,
+{!User.Username}
+{!User.Phone}

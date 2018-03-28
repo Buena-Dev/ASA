@@ -1,0 +1,11 @@
+School OE Code:  {!Account.OE_Code__c}
+User Name: 		
+User ID:		<Text Box>
+Reset User ID?	<Y,N>
+Access levels:
+	AddLoan		Full R/W Access, Read Only Access, No Access
+	Addr Update		Full R/W Access, Read Only Access, No Access
+	Monetary Adj		Full R/W Access, Read Only Access, No Access
+	Reports		Full R/W Access, Read Only Access, No Access
+	Mult Updates		Full R/W Access, Read Only Access, No Access
+	Cred Check		Full R/W Access, No Access

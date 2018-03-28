@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Email issued to FAMS Specialist to get testing started</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>FAMS Testing Required</name>
+    <style>none</style>
+    <subject>NOTIFICATION: Testing Required for {!Opportunity.Account}</subject>
+    <type>text</type>
+</EmailTemplate>

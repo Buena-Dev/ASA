@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>ACCOUNT.NAME</field>
+    </columns>
+    <columns>
+        <field>Account.Lender_StrategicLendPartner__c</field>
+    </columns>
+    <columns>
+        <field>P_ROLE</field>
+    </columns>
+    <columns>
+        <field>P_ACCOUNT.NAME</field>
+    </columns>
+    <columns>
+        <field>Account.OE_Code__c</field>
+    </columns>
+    <description>This report lists all Full Service Lenders and shows the Servicer for the lender</description>
+    <filter>
+        <criteriaItems>
+            <column>P_ROLE</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Servicer</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>P_ACCOUNT.NAME</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>notContain</operator>
+            <value>College,University</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Total Lender Chioce Report</name>
+    <params>
+        <name>co</name>
+        <value>0</value>
+    </params>
+    <reportType>AccountPartner</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <sortColumn>ACCOUNT.NAME</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>DUE_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

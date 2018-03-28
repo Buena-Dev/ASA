@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ReportFolder xmlns="http://soap.sforce.com/2006/04/metadata">
+    <accessType>Shared</accessType>
+    <name>DB - Upward Bound Goal Dashboard</name>
+    <publicFolderAccess>ReadOnly</publicFolderAccess>
+    <sharedTo>
+        <group>Upward_Bound</group>
+        <role>CPS_Manager</role>
+        <role>CPS_UB_Brockton_Manager</role>
+        <role>CPS_UB_Brockton_User</role>
+    </sharedTo>
+</ReportFolder>

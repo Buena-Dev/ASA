@@ -1,0 +1,4 @@
+<!-- codacashmatchingsuccess --> 
+<!-- This page is deprecated as it was only used by the deprecated CashMatchingController-->
+<apex:page controller="c2g.CODACashMatchingController">
+</apex:page>

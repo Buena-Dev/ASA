@@ -1,0 +1,11 @@
+Pro Service Offering's Status for {!Pro_Services_Offering__c.PS_OfferingAccount__c} has been changed  to {!Pro_Services_Offering__c.PS_OfferingStatus__c}.  
+<br/><br/>
+Pro Services Topic: {!Pro_Services_Offering__c.PS_OfferingTopic__c}
+<br/><br/>
+Target Date: {!Pro_Services_Offering__c.PS_OfferingTargetDate__c}
+<br/><br/>
+Description: {!Pro_Services_Offering__c.PS_OfferingDescriptoin__c}
+<br/><br/>
+Please click on below link for other Details : 
+<br/><br/>
+Link: {!Pro_Services_Offering__c.Link}

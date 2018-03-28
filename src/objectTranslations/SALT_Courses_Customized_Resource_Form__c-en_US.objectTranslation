@@ -1,0 +1,708 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>SALT Courses Customized Resource Form</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>SALT Courses Customized Resources Forms</value>
+    </caseValues>
+    <fields>
+        <label><!-- Course --></label>
+        <name>Course10__c</name>
+        <picklistValues>
+            <masterLabel>Budgeting</masterLabel>
+            <translation><!-- Budgeting --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Credit and Debt Management</masterLabel>
+            <translation><!-- Credit and Debt Management --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Educational Planning</masterLabel>
+            <translation><!-- Educational Planning --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Employment</masterLabel>
+            <translation><!-- Employment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fundamentals</masterLabel>
+            <translation><!-- Fundamentals --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Insurance and Risk Management</masterLabel>
+            <translation><!-- Insurance and Risk Management --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Internships, Income, and Careers</masterLabel>
+            <translation><!-- Internships, Income, and Careers --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Money Management</masterLabel>
+            <translation><!-- Money Management --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Saving and Investing</masterLabel>
+            <translation><!-- Saving and Investing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Student Loan Repayment</masterLabel>
+            <translation><!-- Student Loan Repayment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Student Loans</masterLabel>
+            <translation><!-- Student Loans --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Taxes</masterLabel>
+            <translation><!-- Taxes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Course --></label>
+        <name>Course11__c</name>
+        <picklistValues>
+            <masterLabel>Budgeting</masterLabel>
+            <translation><!-- Budgeting --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Credit and Debt Management</masterLabel>
+            <translation><!-- Credit and Debt Management --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Educational Planning</masterLabel>
+            <translation><!-- Educational Planning --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Employment</masterLabel>
+            <translation><!-- Employment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fundamentals</masterLabel>
+            <translation><!-- Fundamentals --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Insurance and Risk Management</masterLabel>
+            <translation><!-- Insurance and Risk Management --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Internships, Income, and Careers</masterLabel>
+            <translation><!-- Internships, Income, and Careers --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Money Management</masterLabel>
+            <translation><!-- Money Management --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Saving and Investing</masterLabel>
+            <translation><!-- Saving and Investing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Student Loan Repayment</masterLabel>
+            <translation><!-- Student Loan Repayment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Student Loans</masterLabel>
+            <translation><!-- Student Loans --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Taxes</masterLabel>
+            <translation><!-- Taxes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Course --></label>
+        <name>Course12__c</name>
+        <picklistValues>
+            <masterLabel>Budgeting</masterLabel>
+            <translation><!-- Budgeting --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Credit and Debt Management</masterLabel>
+            <translation><!-- Credit and Debt Management --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Educational Planning</masterLabel>
+            <translation><!-- Educational Planning --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Employment</masterLabel>
+            <translation><!-- Employment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fundamentals</masterLabel>
+            <translation><!-- Fundamentals --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Insurance and Risk Management</masterLabel>
+            <translation><!-- Insurance and Risk Management --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Internships, Income, and Careers</masterLabel>
+            <translation><!-- Internships, Income, and Careers --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Money Management</masterLabel>
+            <translation><!-- Money Management --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Saving and Investing</masterLabel>
+            <translation><!-- Saving and Investing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Student Loan Repayment</masterLabel>
+            <translation><!-- Student Loan Repayment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Student Loans</masterLabel>
+            <translation><!-- Student Loans --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Taxes</masterLabel>
+            <translation><!-- Taxes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Course --></label>
+        <name>Course1__c</name>
+        <picklistValues>
+            <masterLabel>Budgeting</masterLabel>
+            <translation><!-- Budgeting --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Credit and Debt Management</masterLabel>
+            <translation><!-- Credit and Debt Management --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Educational Planning</masterLabel>
+            <translation><!-- Educational Planning --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Employment</masterLabel>
+            <translation><!-- Employment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fundamentals</masterLabel>
+            <translation><!-- Fundamentals --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Insurance and Risk Management</masterLabel>
+            <translation><!-- Insurance and Risk Management --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Internships, Income, and Careers</masterLabel>
+            <translation><!-- Internships, Income, and Careers --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Money Management</masterLabel>
+            <translation><!-- Money Management --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Saving and Investing</masterLabel>
+            <translation><!-- Saving and Investing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Student Loan Repayment</masterLabel>
+            <translation><!-- Student Loan Repayment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Student Loans</masterLabel>
+            <translation><!-- Student Loans --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Taxes</masterLabel>
+            <translation><!-- Taxes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Course --></label>
+        <name>Course2__c</name>
+        <picklistValues>
+            <masterLabel>Budgeting</masterLabel>
+            <translation><!-- Budgeting --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Credit and Debt Management</masterLabel>
+            <translation><!-- Credit and Debt Management --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Educational Planning</masterLabel>
+            <translation><!-- Educational Planning --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Employment</masterLabel>
+            <translation><!-- Employment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fundamentals</masterLabel>
+            <translation><!-- Fundamentals --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Insurance and Risk Management</masterLabel>
+            <translation><!-- Insurance and Risk Management --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Internships, Income, and Careers</masterLabel>
+            <translation><!-- Internships, Income, and Careers --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Money Management</masterLabel>
+            <translation><!-- Money Management --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Saving and Investing</masterLabel>
+            <translation><!-- Saving and Investing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Student Loan Repayment</masterLabel>
+            <translation><!-- Student Loan Repayment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Student Loans</masterLabel>
+            <translation><!-- Student Loans --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Taxes</masterLabel>
+            <translation><!-- Taxes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Course --></label>
+        <name>Course3__c</name>
+        <picklistValues>
+            <masterLabel>Budgeting</masterLabel>
+            <translation><!-- Budgeting --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Credit and Debt Management</masterLabel>
+            <translation><!-- Credit and Debt Management --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Educational Planning</masterLabel>
+            <translation><!-- Educational Planning --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Employment</masterLabel>
+            <translation><!-- Employment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fundamentals</masterLabel>
+            <translation><!-- Fundamentals --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Insurance and Risk Management</masterLabel>
+            <translation><!-- Insurance and Risk Management --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Internships, Income, and Careers</masterLabel>
+            <translation><!-- Internships, Income, and Careers --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Money Management</masterLabel>
+            <translation><!-- Money Management --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Saving and Investing</masterLabel>
+            <translation><!-- Saving and Investing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Student Loan Repayment</masterLabel>
+            <translation><!-- Student Loan Repayment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Student Loans</masterLabel>
+            <translation><!-- Student Loans --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Taxes</masterLabel>
+            <translation><!-- Taxes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Course --></label>
+        <name>Course4__c</name>
+        <picklistValues>
+            <masterLabel>Budgeting</masterLabel>
+            <translation><!-- Budgeting --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Credit and Debt Management</masterLabel>
+            <translation><!-- Credit and Debt Management --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Educational Planning</masterLabel>
+            <translation><!-- Educational Planning --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Employment</masterLabel>
+            <translation><!-- Employment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fundamentals</masterLabel>
+            <translation><!-- Fundamentals --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Insurance and Risk Management</masterLabel>
+            <translation><!-- Insurance and Risk Management --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Internships, Income, and Careers</masterLabel>
+            <translation><!-- Internships, Income, and Careers --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Money Management</masterLabel>
+            <translation><!-- Money Management --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Saving and Investing</masterLabel>
+            <translation><!-- Saving and Investing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Student Loan Repayment</masterLabel>
+            <translation><!-- Student Loan Repayment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Student Loans</masterLabel>
+            <translation><!-- Student Loans --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Taxes</masterLabel>
+            <translation><!-- Taxes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Course --></label>
+        <name>Course6__c</name>
+        <picklistValues>
+            <masterLabel>Budgeting</masterLabel>
+            <translation><!-- Budgeting --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Credit and Debt Management</masterLabel>
+            <translation><!-- Credit and Debt Management --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Educational Planning</masterLabel>
+            <translation><!-- Educational Planning --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Employment</masterLabel>
+            <translation><!-- Employment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fundamentals</masterLabel>
+            <translation><!-- Fundamentals --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Insurance and Risk Management</masterLabel>
+            <translation><!-- Insurance and Risk Management --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Internships, Income, and Careers</masterLabel>
+            <translation><!-- Internships, Income, and Careers --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Money Management</masterLabel>
+            <translation><!-- Money Management --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Saving and Investing</masterLabel>
+            <translation><!-- Saving and Investing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Student Loan Repayment</masterLabel>
+            <translation><!-- Student Loan Repayment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Student Loans</masterLabel>
+            <translation><!-- Student Loans --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Taxes</masterLabel>
+            <translation><!-- Taxes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Course --></label>
+        <name>Course7__c</name>
+        <picklistValues>
+            <masterLabel>Budgeting</masterLabel>
+            <translation><!-- Budgeting --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Credit and Debt Management</masterLabel>
+            <translation><!-- Credit and Debt Management --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Educational Planning</masterLabel>
+            <translation><!-- Educational Planning --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Employment</masterLabel>
+            <translation><!-- Employment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fundamentals</masterLabel>
+            <translation><!-- Fundamentals --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Insurance and Risk Management</masterLabel>
+            <translation><!-- Insurance and Risk Management --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Internships, Income, and Careers</masterLabel>
+            <translation><!-- Internships, Income, and Careers --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Money Management</masterLabel>
+            <translation><!-- Money Management --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Saving and Investing</masterLabel>
+            <translation><!-- Saving and Investing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Student Loan Repayment</masterLabel>
+            <translation><!-- Student Loan Repayment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Student Loans</masterLabel>
+            <translation><!-- Student Loans --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Taxes</masterLabel>
+            <translation><!-- Taxes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Course --></label>
+        <name>Course8__c</name>
+        <picklistValues>
+            <masterLabel>Budgeting</masterLabel>
+            <translation><!-- Budgeting --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Credit and Debt Management</masterLabel>
+            <translation><!-- Credit and Debt Management --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Educational Planning</masterLabel>
+            <translation><!-- Educational Planning --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Employment</masterLabel>
+            <translation><!-- Employment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fundamentals</masterLabel>
+            <translation><!-- Fundamentals --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Insurance and Risk Management</masterLabel>
+            <translation><!-- Insurance and Risk Management --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Internships, Income, and Careers</masterLabel>
+            <translation><!-- Internships, Income, and Careers --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Money Management</masterLabel>
+            <translation><!-- Money Management --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Saving and Investing</masterLabel>
+            <translation><!-- Saving and Investing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Student Loan Repayment</masterLabel>
+            <translation><!-- Student Loan Repayment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Student Loans</masterLabel>
+            <translation><!-- Student Loans --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Taxes</masterLabel>
+            <translation><!-- Taxes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Course --></label>
+        <name>Course9__c</name>
+        <picklistValues>
+            <masterLabel>Budgeting</masterLabel>
+            <translation><!-- Budgeting --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Credit and Debt Management</masterLabel>
+            <translation><!-- Credit and Debt Management --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Educational Planning</masterLabel>
+            <translation><!-- Educational Planning --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Employment</masterLabel>
+            <translation><!-- Employment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fundamentals</masterLabel>
+            <translation><!-- Fundamentals --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Insurance and Risk Management</masterLabel>
+            <translation><!-- Insurance and Risk Management --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Internships, Income, and Careers</masterLabel>
+            <translation><!-- Internships, Income, and Careers --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Money Management</masterLabel>
+            <translation><!-- Money Management --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Saving and Investing</masterLabel>
+            <translation><!-- Saving and Investing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Student Loan Repayment</masterLabel>
+            <translation><!-- Student Loan Repayment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Student Loans</masterLabel>
+            <translation><!-- Student Loans --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Taxes</masterLabel>
+            <translation><!-- Taxes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Course --></label>
+        <name>Couse5__c</name>
+        <picklistValues>
+            <masterLabel>Budgeting</masterLabel>
+            <translation><!-- Budgeting --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Credit and Debt Management</masterLabel>
+            <translation><!-- Credit and Debt Management --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Educational Planning</masterLabel>
+            <translation><!-- Educational Planning --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Employment</masterLabel>
+            <translation><!-- Employment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fundamentals</masterLabel>
+            <translation><!-- Fundamentals --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Insurance and Risk Management</masterLabel>
+            <translation><!-- Insurance and Risk Management --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Internships, Income, and Careers</masterLabel>
+            <translation><!-- Internships, Income, and Careers --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Money Management</masterLabel>
+            <translation><!-- Money Management --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Saving and Investing</masterLabel>
+            <translation><!-- Saving and Investing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Student Loan Repayment</masterLabel>
+            <translation><!-- Student Loan Repayment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Student Loans</masterLabel>
+            <translation><!-- Student Loans --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Taxes</masterLabel>
+            <translation><!-- Taxes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Please put in text and resource link school requested. --></help>
+        <label><!-- ResourceLink --></label>
+        <name>ResourceLink10__c</name>
+    </fields>
+    <fields>
+        <help><!-- Please put in text and resource link school requested. --></help>
+        <label><!-- ResourceLink --></label>
+        <name>ResourceLink11__c</name>
+    </fields>
+    <fields>
+        <help><!-- Please put in text and resource link school requested. --></help>
+        <label><!-- ResourceLink --></label>
+        <name>ResourceLink12__c</name>
+    </fields>
+    <fields>
+        <help><!-- Please put in text and resource link school requested. --></help>
+        <label><!-- ResourceLink --></label>
+        <name>ResourceLink2__c</name>
+    </fields>
+    <fields>
+        <help><!-- Please put in text and resource link school requested. --></help>
+        <label><!-- ResourceLink --></label>
+        <name>ResourceLink3__c</name>
+    </fields>
+    <fields>
+        <help><!-- Please put in text and resource link school requested. --></help>
+        <label><!-- ResourceLink --></label>
+        <name>ResourceLink4__c</name>
+    </fields>
+    <fields>
+        <help><!-- Please put in text and resource link school requested. --></help>
+        <label><!-- ResourceLink --></label>
+        <name>ResourceLink5__c</name>
+    </fields>
+    <fields>
+        <help><!-- Please put in text and resource link school requested. --></help>
+        <label><!-- ResourceLink --></label>
+        <name>ResourceLink6__c</name>
+    </fields>
+    <fields>
+        <help><!-- Please put in text and resource link school requested. --></help>
+        <label><!-- ResourceLink --></label>
+        <name>ResourceLink7__c</name>
+    </fields>
+    <fields>
+        <help><!-- Please put in text and resource link school requested. --></help>
+        <label><!-- ResourceLink --></label>
+        <name>ResourceLink8__c</name>
+    </fields>
+    <fields>
+        <help><!-- Please put in text and resource link school requested. --></help>
+        <label><!-- ResourceLink --></label>
+        <name>ResourceLink9__c</name>
+    </fields>
+    <fields>
+        <help><!-- Please put in text and resource link school requested. --></help>
+        <label><!-- Resource Link --></label>
+        <name>Resource_Link1__c</name>
+    </fields>
+    <fields>
+        <label><!-- School Name --></label>
+        <name>School_Name__c</name>
+        <relationshipLabel><!-- SALT Courses Customized Resources Forms --></relationshipLabel>
+    </fields>
+    <layouts>
+        <layout>SALT Courses Customized Resource Form Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

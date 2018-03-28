@@ -1,0 +1,164 @@
+<!-- Copyright (c) 2015 FinancialForce.com, inc. All rights reserved. -->
+<aura:component access="global" implements="force:appHostable,flexipage:availableForAllPageTypes" controller="c2g.AVControllerAura">
+	<!-- References to c2g__ (including this one) are preprocessed during ant run.preparecode so that the
+		result is c2g__ in a namespaced org or blank otherwise. Do not attempt to send the unpreprocessed file to
+		your org, eg via MavensMate or Developer Console, or you will get compilation errors.
+	-->
+
+	<ltng:require styles="/resource/c2g__SLDS090/assets/styles/salesforce-lightning-design-system-scoped.css" />
+
+	<aura:registerEvent name="refreshEvent" type="c2g:ActionViewsRefreshEvent"/>
+
+	<!-- Attributes set on Design Page -->
+	<aura:attribute access="global" name="headerText" type="String" />
+	<aura:attribute access="global" name="defaultInquiryTemplate" type="String" />
+
+	<!-- List of Inquiry Templates -->
+	<aura:attribute access="private" name="metadata" type="Object[]"/>
+	<aura:attribute access="private" name="templates" type="c2g.AuraResponse"/>
+	<aura:attribute access="private" name="tablerows" type="Object[]"/>
+
+	<!-- In progress attributes -->
+	<aura:attribute access="private" name="inProgress" type="Boolean"/>
+	<aura:attribute access="private" name="inProgressTable" type="Boolean"/>
+
+	<!-- Messages attributes -->
+	<aura:attribute access="private" name="messages" type="String[]"/>
+	<aura:attribute access="private" name="isError" type="Boolean"/>
+
+	<!-- Event handlers -->
+	<aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+	<aura:handler event="c2g:ActionViewsRefreshEvent" action="{!c.getTemplateData}"/>
+
+	<div class="wrapper slds">
+		<article class="slds-card slds-text-body--regular slds-m-vertical--medium">
+
+			<!-- The header panel, comprising FF logo, user-defineable title (defaults to "Action Views") and loading indicator. -->
+			<header class="slds-card__header slds-grid">
+				<div class="slds-media slds-media--center slds-has-flexi-truncate">
+					<div class="slds-media__figure">
+						<img src="/resource/c2g__FFLogo" alt="FinancialForce.com Logo" class="slds-icon slds-icon--small"/>
+					</div>
+					<div class="slds-media__body">
+						<h3 class="slds-text-heading--small slds-truncate">{!v.headerText}</h3>
+					</div>
+				</div>
+			</header>
+
+			<!-- The sections containing data. There is an error message panel that renders only when there is something to display.
+				In that case, the message is displayed instead of anything else and the user needs to quit or refresh (after fixing
+				the problem). A picklist contains the available Inquiry Templates. One of these will be chosen as a default, either
+				by the user (in the Default Inquiry Template field) or, if not set, by the software (defaulting to the first entry).
+				Whichever template is selected (or defaulted) will have its data loaded in a grid panel beneath.
+			-->
+			<section class="slds-card__body">
+				<c2g:Loading inProgress="{!v.inProgress}" class="slds-m-horizontal--medium"/>
+
+				<c2g:MessageBox messages="{!v.messages}" isError="{!v.isError}" class="slds-m-horizontal--medium"/>
+				<aura:renderIf isTrue="{!and(v.messages.length == 0, !v.inProgress)}">
+
+					<!-- TEMPLATE SELECTOR -->
+					<div class="slds-form-element slds-m-bottom--medium slds-m-left--medium slds-m-right--medium">
+						<label class="slds-form-element__label" for="templateSelector">Inquiry Template</label>
+						<div class="slds-form-element__control">
+							<select id="templateSelector" class="slds-select" onchange="{!c.templateChange}">
+								<aura:iteration items="{!v.templates}" var="t">
+									<option selected="{!t.selected}">{!t.value}</option>
+								</aura:iteration>
+							</select>
+						</div>
+					</div>
+
+					<!-- ACTION VIEW TABLE -->
+					<aura:renderIf isTrue="{!!v.inProgressTable}">
+
+						<style>
+							<!-- These styles are inserted here rather than in a separate CSS file because the styling requirements
+								are user-defined, based on the value of the individual data elements. There might be a better way
+								of doing this but at present this is an unknown and we need to get thus released.
+							-->
+							<aura:iteration items="{!v.metadata}" var="md" indexVar="mdIndex">
+								<!-- Right-justify numbers, left-justify other values -->
+								{!'td.ffa-avc-column-' + mdIndex} {
+									{!'text-align:' + (equals(md.ValueType,'Number') ? 'right' : 'left') + ';'}
+								}
+
+								<!-- Get negative number formatting from metadata -->
+								<aura:renderIf isTrue="{!not(empty(md.PositiveTextColor + md.PositiveFillColor))}">
+									{!'td.ffa-avc-column-' + mdIndex + '.ffa-avc-positive'} {
+										{!(empty(md.PositiveTextColor) ? '' : ('color:#' + md.PositiveTextColor) + '!important;')}
+										{!(empty(md.PositiveFillColor) ? '' : ('background-color:#' + md.PositiveFillColor) + '!important;')}
+									}
+								</aura:renderIf>
+								<aura:renderIf isTrue="{!not(empty(md.NegativeTextColor + md.NegativeFillColor))}">
+									{!'td.ffa-avc-column-' + mdIndex + '.ffa-avc-negative'} {
+										{!(empty(md.NegativeTextColor) ? '' : ('color:#' + md.NegativeTextColor) + '!important;')}
+										{!(empty(md.NegativeFillColor) ? '' : ('background-color:#' + md.NegativeFillColor) + '!important;')}
+									}
+								</aura:renderIf>
+								<!-- TODO: Conditional formatting is not yet supported 
+								<aura:renderIf isTrue="{!not(empty(md.ConditionTrueTextColor + md.ConditionTrueFillColor))}">
+									{!'td.ffa-avc-column-' + mdIndex + '.ffa-avc-true'} {
+										{!(empty(md.ConditionTrueTextColor) ? '' : ('color:#' + md.ConditionTrueTextColor) + '!important;')}
+										{!(empty(md.ConditionTrueFillColor) ? '' : ('background-color:#' + md.ConditionTrueFillColor) + '!important;')}
+									}
+								</aura:renderIf>
+								<aura:renderIf isTrue="{!not(empty(md.ConditionFalseTextColor + md.ConditionFalseFillColor))}">
+									{!'td.ffa-avc-column-' + mdIndex + '.ffa-avc-false'} {
+										{!(empty(md.ConditionFalseTextColor) ? '' : ('color:#' + md.ConditionFalseTextColor) + '!important;')}
+										{!(empty(md.ConditionFalseFillColor) ? '' : ('background-color:#' + md.ConditionFalseFillColor) + '!important;')}
+									}
+								</aura:renderIf>
+								-->
+							</aura:iteration>
+						</style>
+
+						<div class="slds-scrollable--x">
+							<table class="slds-table slds-table--bordered">
+								<thead>
+									<tr class="slds-text-heading--label">
+										<aura:iteration items="{!v.metadata}" var="md">
+											<th class="slds-is-interactive" scope="col">
+												<span class="slds-truncate">{!md.Name}</span>
+											</th>
+										</aura:iteration>
+									</tr>
+								</thead>
+								<tbody>
+									<!-- Apply formatting rules -->
+									<aura:iteration items="{!v.tablerows}" var="rows" >
+										<tr onclick="{!c.rowClick}">
+											<aura:iteration items="{!rows.Values}" var="cell" indexVar="columnIndex">
+												<aura:renderIf isTrue="{!columnIndex lt v.metadata.length}">
+													<aura:if isTrue="{!equals(cell,neg(neg(cell)))}">
+														<td class="{!'ffa-avc-column-' + columnIndex + (lessthan(cell,0) ? ' ffa-avc-negative' : ' ffa-avc-positive')}">
+															<ui:outputNumber value="{!cell}" format="#,##0.00" class="slds-truncate"/>
+														</td>
+														<aura:set attribute="else">
+															<td class="{!'ffa-avc-column-' + columnIndex + ' ffa-avc-true'}">
+																<ui:outputText value="{!cell}" class="slds-truncate"/>
+															</td>
+														</aura:set>
+													</aura:if>
+												</aura:renderIf>
+											</aura:iteration>
+										</tr>
+									</aura:iteration>
+								</tbody>
+							</table>
+						</div>
+					</aura:renderIf>
+
+					<c2g:Loading inProgress="{!v.inProgressTable}" class="slds-m-horizontal--medium"/>
+
+				</aura:renderIf>
+
+			</section>
+
+			<footer class="slds-card__footer">
+				<img src="/resource/c2g__FFMan" alt="FinancialForce.com Logo" style="width: 98px; height: 32px;" />
+			</footer>
+
+		</article>
+	</div>
+</aura:component>

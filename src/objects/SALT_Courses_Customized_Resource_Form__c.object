@@ -1,0 +1,954 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>If a school wants customized resources within their instance of SALT Courses check the box on the acocunt page called SALT Courses Customized Resources and then fill out the SALT Courses Customized Resources Form</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ControlledByParent</externalSharingModel>
+    <fields>
+        <fullName>Course10__c</fullName>
+        <externalId>false</externalId>
+        <label>Course</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Budgeting</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Credit and Debt Management</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Educational Planning</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Employment</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Fundamentals</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Insurance and Risk Management</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Internships, Income, and Careers</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Money Management</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Saving and Investing</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Student Loan Repayment</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Student Loans</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Taxes</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Course11__c</fullName>
+        <externalId>false</externalId>
+        <label>Course</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Budgeting</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Credit and Debt Management</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Educational Planning</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Employment</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Fundamentals</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Insurance and Risk Management</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Internships, Income, and Careers</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Money Management</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Saving and Investing</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Student Loan Repayment</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Student Loans</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Taxes</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Course12__c</fullName>
+        <externalId>false</externalId>
+        <label>Course</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Budgeting</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Credit and Debt Management</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Educational Planning</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Employment</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Fundamentals</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Insurance and Risk Management</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Internships, Income, and Careers</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Money Management</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Saving and Investing</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Student Loan Repayment</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Student Loans</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Taxes</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Course1__c</fullName>
+        <externalId>false</externalId>
+        <label>Course</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Budgeting</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Credit and Debt Management</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Educational Planning</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Employment</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Fundamentals</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Insurance and Risk Management</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Internships, Income, and Careers</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Money Management</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Saving and Investing</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Student Loan Repayment</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Student Loans</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Taxes</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Course2__c</fullName>
+        <externalId>false</externalId>
+        <label>Course</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Budgeting</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Credit and Debt Management</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Educational Planning</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Employment</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Fundamentals</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Insurance and Risk Management</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Internships, Income, and Careers</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Money Management</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Saving and Investing</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Student Loan Repayment</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Student Loans</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Taxes</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Course3__c</fullName>
+        <externalId>false</externalId>
+        <label>Course</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Budgeting</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Credit and Debt Management</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Educational Planning</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Employment</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Fundamentals</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Insurance and Risk Management</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Internships, Income, and Careers</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Money Management</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Saving and Investing</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Student Loan Repayment</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Student Loans</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Taxes</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Course4__c</fullName>
+        <externalId>false</externalId>
+        <label>Course</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Budgeting</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Credit and Debt Management</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Educational Planning</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Employment</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Fundamentals</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Insurance and Risk Management</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Internships, Income, and Careers</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Money Management</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Saving and Investing</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Student Loan Repayment</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Student Loans</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Taxes</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Course6__c</fullName>
+        <externalId>false</externalId>
+        <label>Course</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Budgeting</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Credit and Debt Management</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Educational Planning</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Employment</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Fundamentals</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Insurance and Risk Management</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Internships, Income, and Careers</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Money Management</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Saving and Investing</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Student Loan Repayment</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Student Loans</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Taxes</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Course7__c</fullName>
+        <externalId>false</externalId>
+        <label>Course</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Budgeting</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Credit and Debt Management</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Educational Planning</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Employment</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Fundamentals</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Insurance and Risk Management</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Internships, Income, and Careers</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Money Management</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Saving and Investing</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Student Loan Repayment</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Student Loans</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Taxes</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Course8__c</fullName>
+        <externalId>false</externalId>
+        <label>Course</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Budgeting</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Credit and Debt Management</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Educational Planning</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Employment</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Fundamentals</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Insurance and Risk Management</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Internships, Income, and Careers</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Money Management</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Saving and Investing</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Student Loan Repayment</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Student Loans</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Taxes</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Course9__c</fullName>
+        <externalId>false</externalId>
+        <label>Course</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Budgeting</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Credit and Debt Management</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Educational Planning</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Employment</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Fundamentals</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Insurance and Risk Management</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Internships, Income, and Careers</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Money Management</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Saving and Investing</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Student Loan Repayment</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Student Loans</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Taxes</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Couse5__c</fullName>
+        <externalId>false</externalId>
+        <label>Course</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Budgeting</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Credit and Debt Management</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Educational Planning</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Employment</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Fundamentals</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Insurance and Risk Management</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Internships, Income, and Careers</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Money Management</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Saving and Investing</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Student Loan Repayment</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Student Loans</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Taxes</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>ResourceLink10__c</fullName>
+        <description>Please put in text and resource link school requested.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Please put in text and resource link school requested.</inlineHelpText>
+        <label>ResourceLink</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>ResourceLink11__c</fullName>
+        <description>Please put in text and resource link school requested.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Please put in text and resource link school requested.</inlineHelpText>
+        <label>ResourceLink</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>ResourceLink12__c</fullName>
+        <description>Please put in text and resource link school requested.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Please put in text and resource link school requested.</inlineHelpText>
+        <label>ResourceLink</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>ResourceLink2__c</fullName>
+        <description>Please put in text and resource link school requested.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Please put in text and resource link school requested.</inlineHelpText>
+        <label>ResourceLink</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>ResourceLink3__c</fullName>
+        <description>Please put in text and resource link school requested.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Please put in text and resource link school requested.</inlineHelpText>
+        <label>ResourceLink</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>ResourceLink4__c</fullName>
+        <description>Please put in text and resource link school requested.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Please put in text and resource link school requested.</inlineHelpText>
+        <label>ResourceLink</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>ResourceLink5__c</fullName>
+        <description>Please put in text and resource link school requested.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Please put in text and resource link school requested.</inlineHelpText>
+        <label>ResourceLink</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>ResourceLink6__c</fullName>
+        <description>Please put in text and resource link school requested.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Please put in text and resource link school requested.</inlineHelpText>
+        <label>ResourceLink</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>ResourceLink7__c</fullName>
+        <description>Please put in text and resource link school requested.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Please put in text and resource link school requested.</inlineHelpText>
+        <label>ResourceLink</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>ResourceLink8__c</fullName>
+        <description>Please put in text and resource link school requested.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Please put in text and resource link school requested.</inlineHelpText>
+        <label>ResourceLink</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>ResourceLink9__c</fullName>
+        <description>Please put in text and resource link school requested.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Please put in text and resource link school requested.</inlineHelpText>
+        <label>ResourceLink</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Resource_Link1__c</fullName>
+        <description>Please put in text and resource link school requested.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Please put in text and resource link school requested.</inlineHelpText>
+        <label>Resource Link</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>School_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>School Name</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipName>MM101_Customized_Resources_Forms</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <label>SALT Courses Customized Resource Form</label>
+    <nameField>
+        <label>SALT Courses Customized Resource Form Name</label>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>SALT Courses Customized Resources Forms</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+</CustomObject>

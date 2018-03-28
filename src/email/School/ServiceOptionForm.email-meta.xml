@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>false</available>
+    <description>Sercvice Option Form 2006</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>EmailLetterhead</letterhead>
+    <name>Service Option Form</name>
+    <style>freeForm</style>
+    <subject>Your ASA Loan Processing Profile</subject>
+    <textOnly>Dear {!Contact.FirstName},
+ 
+As the loan processing season approaches, we want to confirm your school&apos;s loan processing profile at American Student Assistance (ASA).  By contacting you now, your profile will be set up well in advance and will relieve you of worry once the busy summer months are upon us.  
+ 
+ASA understands that each school has unique processing needs which we strive to accommodate.  We offer a variety of products that simplify loan processing including ASA Direct®, Borrower Initiated Stafford and PLUS Loans, PLUS on the Web, PLUS by Phone, and Stafford and PLUS E-signature.  ASA Direct®, our user-friendly, online loan processing tool, has numerous features to process loans efficiently such as multiple hold and release, templates for various populations, and real-time custom reports.
+ 
+If you are satisfied with your current process and do not wish to change anything, we hope you enjoy the spring months and that you will contact us if you need any assistance.
+ 
+If you would like to discuss your specific profile and the options or products that may enhance your process, please contact the Call Center at (800) 999-9080 and select Option 1.  The Call Center’s normal hours of operation are Monday through Friday from 8:30 a.m. to 9:00 p.m. ET.
+ 
+Sincerely,
+ 
+Customer Service Department
+American Student Assistance</textOnly>
+    <type>html</type>
+</EmailTemplate>

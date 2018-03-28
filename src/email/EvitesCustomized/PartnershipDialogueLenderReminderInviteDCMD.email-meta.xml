@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>false</available>
+    <description>Partnership Dialogue Reminder Invite Lender DC/MD</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>EmailLetterhead</letterhead>
+    <name>Partnership Dialogue Lender Reminder Invite DC/MD</name>
+    <style>freeForm</style>
+    <subject>ASA Partnership Dialogue Series - it&apos;s not too late to register!</subject>
+    <textOnly>ASA’s Partnership Dialogue Series: A Focus on Communication
+ 
+Dear {!Contact.FirstName},
+ 
+It&apos;s not too late for you to RSVP to participate in ASA&apos;s Partnership Dialogue Series: A Focus on Communication.
+ 
+In this upcoming series, on October 11, 2007 in College Park, MD, we will explore the challenges schools face in order to effectively communicate with students and families today. With the overwhelming array of media available, ranging from podcasts to phone calls and text messages, which methods do schools feel comfortable using? And which methods are the most effective for their millennial students and Baby Boomer parents? This series will encompass a broad discussion of the communication challenges schools face, the scope and message of their communication mission, what resources they need to succeed in that mission, and which outreach for experiments to students and families have yielded the best results. 
+
+Our dialogue will begin at 9:00 a.m., with schools joining us for the morning session and lunch. After lunch, we look forward to speaking to you about what ASA has to offer, why the guarantor you choose matters, and how ASA and {!Account.Name} can work together in the marketplace. 
+
+Proposed Agenda: 
+8:30 – 9:00 a.m. Continental Breakfast (schools and lenders) 
+9:00 a.m. – 12:00 p.m. Discussion and Exchange of Ideas (schools and lenders) 
+12:00 –1:00 p.m. Lunch (schools and lenders) 
+1:00 – 3:00 p.m. Understanding ASA (lenders only) 
+
+ 
+Date: October 11, 2007
+ 
+Location: University of Maryland, College Park 
+Crist Room, Samuel Riggs IV Alumni Center Building
+College Park, MD 20742
+http://www.umd.edu/visitors/#directions
+ 
+For registration and additional information, including driving directions, please visit www.amsa.com/fap/training, e-mail your name, phone number and enrollment details to training@amsa.com, or call the Training Department at 800.999.9080, ext. 3099.  I hope you can join us, and look forward to seeing you there.
+ 
+Thank you,
+{!Contact.OwnerFullName}
+{!Contact.OwnerEmail}</textOnly>
+    <type>html</type>
+</EmailTemplate>

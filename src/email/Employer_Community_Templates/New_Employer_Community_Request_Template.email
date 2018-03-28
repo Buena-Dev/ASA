@@ -1,0 +1,12 @@
+<body>
+A New Employer Community Request has been created! 
+<br/>
+<br/>
+<b>Details</b>: <br/>
+Contact Name : {!Case.Contact} <br/>
+Case Subject : {!Case.Subject} <br/>
+Case Reason : {!Case.Reason} <br/>
+Case Description : {!Case.Description} <br/>
+<br/>
+Case Link : <a href="https://asa--appiriodev.cs26.my.salesforce.com/{!Case.Id}"> <U>View Case</U> </a> <br/>
+</body>

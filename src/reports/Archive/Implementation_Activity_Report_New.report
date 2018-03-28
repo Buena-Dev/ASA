@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Account$Name</field>
+    </columns>
+    <columns>
+        <field>Account.Cases$RecordType</field>
+    </columns>
+    <columns>
+        <field>Account$LastActivityDate</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>Account$RecordType</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Account.School</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account$Name</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>notContain</operator>
+            <value>ASA</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Cases$RecordType</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Case.Implementation_Consumer_Services</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Cases$Status</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>WIP,Implemented - Partial Launch</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Cases$RecordType</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>notEqual</operator>
+            <value></value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Implementation Activity Report - New</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Accounts_and_Cases__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Account$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

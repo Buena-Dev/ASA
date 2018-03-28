@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Pro Services Topic</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Pro Services Topics</value>
+    </caseValues>
+    <fields>
+        <label><!-- Brand? --></label>
+        <name>Brand_del__c</name>
+        <picklistValues>
+            <masterLabel>ASA</masterLabel>
+            <translation><!-- ASA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Both</masterLabel>
+            <translation><!-- Both --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SALT</masterLabel>
+            <translation><!-- SALT --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- If this box is checked, this Topic is considered part of the standard conference offerings for all state, regional and national _ASFAA conferences. --></help>
+        <label><!-- Conference Offering --></label>
+        <name>PS_ConferenceOffering__c</name>
+    </fields>
+    <fields>
+        <help><!-- This field indicates the methods that may be used to deliver this content. Other options may be available, but may require additional development time. --></help>
+        <label><!-- Available Delivery Formats --></label>
+        <name>PS_TopicAvailableDeliveryFormat__c</name>
+        <picklistValues>
+            <masterLabel>Article</masterLabel>
+            <translation><!-- Article --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Presentation (in person)</masterLabel>
+            <translation><!-- Presentation (in person) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Presentation (web-based)</masterLabel>
+            <translation><!-- Presentation (web-based) --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- This field indicates the ProServices @ ASA team members who may be able to presnt on this topic. --></help>
+        <label><!-- Available Presenters --></label>
+        <name>PS_TopicAvailablePresenters__c</name>
+        <picklistValues>
+            <masterLabel>Daryl Conte</masterLabel>
+            <translation><!-- Daryl Conte --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fidel Calero</masterLabel>
+            <translation><!-- Fidel Calero --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Gina Lucente-Cole</masterLabel>
+            <translation><!-- Gina Lucente-Cole --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Jacquie Carroll</masterLabel>
+            <translation><!-- Jacquie Carroll --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Jen Schott</masterLabel>
+            <translation><!-- Jen Schott --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Joanne Dashiell</masterLabel>
+            <translation><!-- Joanne Dashiell --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lorinda Diehl</masterLabel>
+            <translation><!-- Lorinda Diehl --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lyssa Thaden</masterLabel>
+            <translation><!-- Lyssa Thaden --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Non-PS ASA Staff</masterLabel>
+            <translation><!-- Non-PS ASA Staff --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sabrina Mainini</masterLabel>
+            <translation><!-- Sabrina Mainini --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- The Category is the general group or thematic area that this Topic falls under. --></help>
+        <label><!-- Category --></label>
+        <name>PS_TopicCategory__c</name>
+        <picklistValues>
+            <masterLabel>ASA Products &amp; Services</masterLabel>
+            <translation><!-- ASA Products &amp; Services --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Campus Leadership</masterLabel>
+            <translation><!-- Campus Leadership --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Default Prevention and Management</masterLabel>
+            <translation><!-- Default Prevention and Management --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Financial Literacy for Campus Staff</masterLabel>
+            <translation><!-- Financial Literacy for Campus Staff --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Financial Literacy for Students</masterLabel>
+            <translation><!-- Financial Literacy for Students --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Regulations &amp; Compliance</masterLabel>
+            <translation><!-- Regulations &amp; Compliance --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SALT Specific</masterLabel>
+            <translation><!-- SALT Specific --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Description --></label>
+        <name>PS_TopicDescription__c</name>
+    </fields>
+    <fields>
+        <label><!-- How Will You Benefit --></label>
+        <name>PS_TopicHowWillYouBenefit__c</name>
+    </fields>
+    <fields>
+        <label><!-- Level --></label>
+        <name>PS_TopicLevel__c</name>
+        <picklistValues>
+            <masterLabel>Advanced</masterLabel>
+            <translation><!-- Advanced --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Beginner</masterLabel>
+            <translation><!-- Beginner --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Intermediate</masterLabel>
+            <translation><!-- Intermediate --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Student</masterLabel>
+            <translation><!-- Student --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Sub-Title --></label>
+        <name>PS_TopicSubTitle__c</name>
+    </fields>
+    <fields>
+        <label><!-- Synopsis --></label>
+        <name>PS_TopicSynopsis_del__c</name>
+    </fields>
+    <fields>
+        <label><!-- Typical Length --></label>
+        <name>PS_TopicTypicalLength__c</name>
+        <picklistValues>
+            <masterLabel>1/2 day</masterLabel>
+            <translation><!-- 1/2 day --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2 hours</masterLabel>
+            <translation><!-- 2 hours --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>30 minutes</masterLabel>
+            <translation><!-- 30 minutes --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>60 minutes</masterLabel>
+            <translation><!-- 60 minutes --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>90 minutes</masterLabel>
+            <translation><!-- 90 minutes --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Full day</masterLabel>
+            <translation><!-- Full day --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Varies</masterLabel>
+            <translation><!-- Varies --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Who Should Attend --></label>
+        <name>PS_TopicWhoShouldAttend__c</name>
+    </fields>
+    <fields>
+        <help><!-- This field indicates the current status of this Topic. In development = Future offering but not yet developed; Active = Available Topic; Archived = Available only upon request (may be outdated or no longer relevant); Removed = Not available. --></help>
+        <label><!-- Status --></label>
+        <name>Status__c</name>
+        <picklistValues>
+            <masterLabel>Active</masterLabel>
+            <translation><!-- Active --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Archived</masterLabel>
+            <translation><!-- Archived --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In Development</masterLabel>
+            <translation><!-- In Development --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Removed</masterLabel>
+            <translation><!-- Removed --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- The Sub-Status is dependent upon the value of the Status field and provides more information about the current status of this Topic. --></help>
+        <label><!-- Sub-Status --></label>
+        <name>Sub_Status_del__c</name>
+        <picklistValues>
+            <masterLabel>Create On Request</masterLabel>
+            <translation><!-- Create On Request --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Few Requests</masterLabel>
+            <translation><!-- Few Requests --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>High Priority</masterLabel>
+            <translation><!-- High Priority --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Initial Version</masterLabel>
+            <translation><!-- Initial Version --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Limited Interest</masterLabel>
+            <translation><!-- Limited Interest --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Low Priority</masterLabel>
+            <translation><!-- Low Priority --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Outdated</masterLabel>
+            <translation><!-- Outdated --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Replaced</masterLabel>
+            <translation><!-- Replaced --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Revised/Updated</masterLabel>
+            <translation><!-- Revised/Updated --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Standard Priority</masterLabel>
+            <translation><!-- Standard Priority --></translation>
+        </picklistValues>
+    </fields>
+    <layouts>
+        <layout>PS - Topic - Admin User Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Details --></label>
+            <section>Details</section>
+        </sections>
+        <sections>
+            <label><!-- Fields --></label>
+            <section>Fields</section>
+        </sections>
+        <sections>
+            <label><!-- Status --></label>
+            <section>Status</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>PS - Topic - Creator/Editor  Layout</layout>
+        <sections>
+            <label><!-- Basic Information --></label>
+            <section>Basic Information</section>
+        </sections>
+        <sections>
+            <label><!-- Details --></label>
+            <section>Details</section>
+        </sections>
+        <sections>
+            <label><!-- Status --></label>
+            <section>Status</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>PS - Topic - View Only Layout</layout>
+        <sections>
+            <label><!-- Basic Information --></label>
+            <section>Basic Information</section>
+        </sections>
+        <sections>
+            <label><!-- Details --></label>
+            <section>Details</section>
+        </sections>
+        <sections>
+            <label><!-- Status --></label>
+            <section>Status</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

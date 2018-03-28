@@ -1,0 +1,17 @@
+<table cellpadding="5" width="550" height="400" cellspacing="5" border="0" >
+<tr height="400" valign="top" >
+<td locked="0" style=" font-family:arial; bLabel:main; color:#000000; font-size:12pt; bEditID:r3st1; background-color:#FFFFFF;" aEditID="c1r1" tEditID="c1r1" >
+<![CDATA[<P class=MsoNormal style="MARGIN: 0in 0in 0pt; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><SPAN style="FONT-SIZE: 10pt; COLOR: black; FONT-FAMILY: Arial">Dear {!Contact.FirstName},<?xml:namespace prefix = o ns = "urn:schemas-microsoft-com:office:office" /><o:p></o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><SPAN style="FONT-SIZE: 10pt; COLOR: black; FONT-FAMILY: Arial"></SPAN>&nbsp;</P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><SPAN style="FONT-SIZE: 10pt; COLOR: black; FONT-FAMILY: Arial"></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><SPAN style="FONT-SIZE: 10pt; COLOR: black; FONT-FAMILY: Arial">Due to the&nbsp;inclement weather, American Student Assistance unfortunately&nbsp;has had to cancel our <EM>Partnership Dialogue Series</EM> scheduled to take place&nbsp;on February 7, 2007 in Dublin, OH.</SPAN></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><SPAN style="FONT-SIZE: 10pt; COLOR: black; FONT-FAMILY: Arial"></SPAN>&nbsp;</P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><SPAN style="FONT-SIZE: 10pt; COLOR: black; FONT-FAMILY: Arial">We would like to first&nbsp;thank you for registering to attend this event and apologize&nbsp;for any inconvenience this cancellation may have caused.&nbsp; We hope to reschedule at later date.&nbsp;</SPAN></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><SPAN style="FONT-SIZE: 10pt; COLOR: black; FONT-FAMILY: Arial"></SPAN>&nbsp;</P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><SPAN style="FONT-SIZE: 10pt; COLOR: black; FONT-FAMILY: Arial">Thanks again for your willingness to take time out of your busy schedule&nbsp;to join us;&nbsp;we look forward to seeing you at future events.<o:p></o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt"><SPAN style="FONT-SIZE: 10pt; COLOR: black; FONT-FAMILY: Arial"></SPAN>&nbsp;</P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt"><SPAN style="FONT-SIZE: 10pt; COLOR: black; FONT-FAMILY: Arial">Sincerely,</SPAN></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt"><SPAN style="FONT-SIZE: 10pt; COLOR: black; FONT-FAMILY: Arial">{!Contact.OwnerFullName}</SPAN></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt"><SPAN style="FONT-SIZE: 10pt; COLOR: black; FONT-FAMILY: Arial">{!Contact.OwnerEmail}<o:p></o:p></SPAN></P>]]></td>
+</tr>
+</table>

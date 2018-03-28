@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Account$Name</field>
+    </columns>
+    <columns>
+        <field>Account$Number_of_Enrolled_Students__c</field>
+    </columns>
+    <columns>
+        <field>Account.Opportunities$Name</field>
+    </columns>
+    <columns>
+        <field>Account.Opportunities$Total_in_Enrollment__c</field>
+    </columns>
+    <description>Compares the enrollment total provided in the Opportunity with that entered on the account page.</description>
+    <filter>
+        <criteriaItems>
+            <column>Account$RecordType</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Account.School</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account$Name</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>notContain</operator>
+            <value>ASA,Test</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Opportunities$Name</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>contains</operator>
+            <value>2015</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Compare Enrollment Figures</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Accounts_and_Opps__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Account$Contract_End__c</dateColumn>
+        <interval>INTERVAL_CURNEXT1</interval>
+    </timeFrameFilter>
+</Report>

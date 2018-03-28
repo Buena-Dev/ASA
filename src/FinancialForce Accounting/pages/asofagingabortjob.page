@@ -1,0 +1,16 @@
+<apex:page standardController="c2g__AsOfAging__c" extensions="c2g.AsOfAgingAbortJobController">
+    <apex:sectionHeader title="{!$Label.c2g__asofaging}" subtitle="{!c2g__AsOfAging__c.Name}"/>
+    <apex:form >
+        <apex:pagemessages />
+        <apex:commandButton value="{!$Label.c2g__backpage}" action="{!cancel}" rendered="{!ShowPageMessages}"/>
+        <apex:pageBlock rendered="{!(!ShowPageMessages)}">
+            <apex:pageBlockButtons location="bottom"> 
+                <apex:commandButton value="{!$Label.c2g__codacontinue}" action="{!abortJob}"/>
+                <apex:commandButton value="{!$Label.c2g__cancel}" action="{!cancel}"/>
+            </apex:pageBlockButtons>
+            <apex:outputText >
+                {!$Label.c2g__confirmabort}
+            </apex:outputText>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

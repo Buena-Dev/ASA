@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>false</available>
+    <description>Regulatory Update Foreign Schools - Webex 2008 Invite</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>EmailLetterhead</letterhead>
+    <name>Regulatory Update Fall - Foreign School Webex Invite</name>
+    <style>promotionRight</style>
+    <subject>Save the Date!  ASA Invites you to a Regulatory Update</subject>
+    <textOnly>Are you struggling to manage your day-to-day responsibilities and stay on top of all of the imminent regulatory changes?
+ 
+American Student Assistance (ASA) can help.  We would like to invite you to an informal, 2 hour regulatory update.    
+ 
+Dates, Times, and Locations:
+ 
+
+Friday, October 10, 2008
+8:30 am – 11:30 pm (Continental breakfast will be provided.)
+College of the Holy Cross, Worcester
+ 
+Friday, October 10, 2008
+1:00 pm – 4:00 pm (Lunch will be provided.)
+Mount Holyoke College, South Hadley 
+ 
+Tuesday, October 14, 2008
+8:30 am – 11:30 pm (Continental breakfast will be provided.)
+American Student Assistance, Boston
+ 
+Who Should Attend
+School financial aid administrators interested in the most up-to-date information.
+ 
+How You Will Benefit
+A quick first glimpse of some of the changes drafted into the Higher Education Act Reauthorization Bill. We will review Higher Education Opportunity Act of 2008 (HR 4137) as passed into law on August 14, 2008. While it&apos;s early in the game to discuss details and implementation, this session can give you a head start on knowing what to expect. You will also have the opportunity to have your questions answered.
+ 
+How to Register 
+-          Online at http://www.amsa.com/fap/training
+-          Email your name, institution, and phone number to training@amsa.com
+-          Call ASA&apos;s Training Department at (800) 999-9080 ext. 3099
+ 
+All of ASA&apos;s training events are offered free of charge.  Training is considered one of the guarantor&apos;s core responsibilities and ASA is dedicated to providing informative and useful training events for our industry colleagues.
+ 
+ 
+ 
+ 
+ 
+ 
+
+Dates:
+Friday, 10/10/08 
+Tuesday, 10/14/08
+ 
+Locations: 
+College of the Holy Cross, Worcester
+ 
+Mount Holyoke College, Souh Hadley 
+ 
+American Student Assistance, Boston
+ 
+
+
+
+
+ 
+ 
+How to register or for additional information, including driving directions
+ 
+Register Online at:
+http://www.amsa.com/fap/training</textOnly>
+    <type>html</type>
+</EmailTemplate>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>false</available>
+    <description>Email to be sent with branding requirements (PDF) file attatched</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>SALTClientLetterhead</letterhead>
+    <name>Branding Requirement Cover Email</name>
+    <style>formalLetter</style>
+    <subject>ASA School Branding Requirements</subject>
+    <textOnly>Dear {!Contact.FirstName}, thank you for your interest in branding ASA Direct for {!Account.Name}.  We only have a few easy steps to complete the branding of ASA Direct with your school’s graphics, colors and text elements:
+Step 1 is to give ASA permission to use the school’s images.  A Branding Agreement between ASA and the school is attached, please return to me prior to sending any branding images.
+Step 2 is to send ASA the branding images after the Agreement has been executed.  ASA will then create the school-branded site and provide you with the URL.
+Step 3 is your feedback after you have reviewed the branded site so that we can make any needed modifications. 
+Step 4, after any modifications have been reviewed by you, is to get the branded URL to school users; I will discuss options with you at that time.
+ A document detailing technical specifications for all brandable elements of ASA Direct for Schools is located at http://www.amsa.com/content/ASA_Direct_Branding.pdf .  If you have any questions about branding ASA Direct for , please contact me or ASA Product Development and Support at brandingsupport@amsa.com .
+ Sincerely,</textOnly>
+    <type>html</type>
+</EmailTemplate>

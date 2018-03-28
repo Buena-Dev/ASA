@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>false</available>
+    <description>Partnership Dialogue Reminder Invite AK</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>EmailLetterhead</letterhead>
+    <name>Partnership Dialogue Series School Reminder Invite AK</name>
+    <style>freeForm</style>
+    <subject>ASA Partnership Dialogue Series - it&apos;s not too late to register!</subject>
+    <textOnly>ASA’s Partnership Dialogue Series: A Focus on Communication
+ 
+Dear {!Contact.FirstName},
+ 
+It&apos;s not too late for you to RSVP to participate in ASA&apos;s Partnership Dialogue Series: A Focus on Communication.
+ 
+As part of our Partnership Dialogue Series, we’re proud to host an exchange among our colleagues in Anchorage, AK on September 26, 2007. In this upcoming series, we will explore the challenges of effectively communicating with students and families today. With the overwhelming array of media available, ranging from podcasts to phone calls and text messages, which methods do you feel comfortable using? And which methods are the most effective for your millennial students and Baby Boomer parents? 
+Be educated, ask questions, and receive feedback from colleagues, lenders and American Student Assistance on one of the hottest topics affecting financial aid offices across the country.
+ 
+ 
+Date: Wednesday, September 26, 2007
+8:30 – 9:00 a.m. Continental Breakfast
+9:00 a.m. –12:00 p.m. Discussion and Exchange of Ideas
+12:00 – 1:00 p.m. Lunch
+ 
+Location:  University Center
+University of Alaska, Anchorage
+3901 Old Seward Highway
+Anchorage, Alaska 99503
+http://www.uaa.alaska.edu/map/
+
+For registration and additional information, including driving directions, please visit www.amsa.com/fap/training, e-mail your name, phone number and enrollment details to training@amsa.com, or call the Training Department at 800.999.9080, ext. 3099.  I hope you can join us, and look forward to seeing you there.
+ 
+Thank you,
+{!Contact.OwnerFullName}
+{!Contact.OwnerEmail}</textOnly>
+    <type>html</type>
+</EmailTemplate>

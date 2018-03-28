@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Story S-16-15 - Must modify BatchSendInvoiceRemider30 Class for edits</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>SALTClientLetterhead</letterhead>
+    <name>30 day overdue reminder</name>
+    <style>freeForm</style>
+    <subject>{!c2g__codaInvoice__c.c2g__Account__c}: Invoice Reminder from American Student Assistance</subject>
+    <textOnly>Dear {!Account.c2g__CODAFinanceContact__c},
+
+This is a friendly reminder to let you know that Invoice # {!c2g__codaInvoice__c.Name} for  ${!c2g__codaInvoice__c.Invoice_Total__c}0 for {!c2g__codaInvoice__c.c2g__Account__c} was due on {!c2g__codaInvoice__c.c2g__DueDate__c}.
+
+Please remit payment as soon as possible. If you have already sent the payment, please disregard this message. If not, we would appreciate your prompt attention to this matter.
+
+If you have any remittance questions or need another copy of the invoice, please feel free to contact Finance A/R at accountsreceivable@asa.org.
+
+Your business is very important to us!
+
+Sincerely,
+
+American Student Assistance
+Finance Accounts Receivable Team
+accountsreceivable@asa.org</textOnly>
+    <type>html</type>
+</EmailTemplate>

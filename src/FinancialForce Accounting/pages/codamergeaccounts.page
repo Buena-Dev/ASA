@@ -1,0 +1,63 @@
+<!-- CODAMergeAccounts -->
+<apex:page Controller="c2g.CODAMergeAccountsController" extensions="c2g.CODAHelpLoaderController">
+    <script src="{!URLFOR($Resource.coda2go,'coda2go/web/script/lib.js')}" type="text/javascript"></script>
+    <script>
+        CODA.documentFunctionTimer("keyup", CODA.executeQueue, 1500);
+        CODA.documentFunctionTimer("click", CODA.executeQueue, 1500);
+    </script>
+    <apex:stylesheet value="{!URLFOR($Resource.c2g__coda2go,'coda2go/web/css/style.css')}"/>
+    <script>
+    	var CODA2GoButtons = new CODA2GoPage();
+        var CODA2GoBtnSaveValue = "{!$Label.codaProcessing}";
+    </script>
+    <apex:form onsubmit="if(CODA2GoButtons.disableSaveButtons){ return CODA2GoButtons.disableSaveButtons(); }">
+
+        <!-- Header -->
+        <apex:sectionHeader title="{!$Label.c2g__codamergeaccpagetitle}" help="{!redirectForHelp1083}"/>
+
+        <!-- Merge Accounts Details -->
+        <apex:pageBlock id="backgroundCashMatchingBlock" mode="edit">
+        
+            <!-- Buttons -->
+            <apex:pageBlockButtons id="mergeAccButton">  
+                <!-- Hidden Buttons -->
+                <apex:commandButton value="{!$Label.c2g__codamergeaccpagerunbutton}" id="run_h" action="{!run}" styleclass="hiddensubmit"/>
+                <apex:commandButton value="{!$Label.c2g__codamergeaccpageconfirmbutton}" id="confirm_h" action="{!confirm}" styleclass="hiddensubmit"/>
+                <apex:commandButton value="{!$Label.c2g__codamergeaccpagecancelbutton}" id="cancel_h" action="{!cancel}" styleclass="hiddensubmit"/>
+                <apex:commandButton value="{!$Label.c2g__codamergeaccpagebackbutton}" id="back_h" action="{!cancel}" styleclass="hiddensubmit"/>
+                <!--  End of Hidden Buttons-->
+                <apex:commandButton value="{!$Label.c2g__codamergeaccpagerunbutton}" id="run" onclick="if(!CODA.queing()){document.getElementById('{!$Component.run_h}').click()};return false;" rendered="{!viewstate.isError}"/>
+                <apex:commandButton value="{!$Label.c2g__codamergeaccpageconfirmbutton}" id="confirm" onclick="if(!CODA.queing()){document.getElementById('{!$Component.confirm_h}').click()};return false;" rendered="{!viewstate.isInfo}"/>
+                <apex:commandButton value="{!$Label.c2g__codamergeaccpagecancelbutton}" id="cancel" onclick="if(!CODA.queing()){document.getElementById('{!$Component.cancel_h}').click()};return false;" rendered="{!viewstate.isInfo}"/>
+                <apex:commandButton value="{!$Label.c2g__codamergeaccpagebackbutton}" id="back" onclick="if(!CODA.queing()){document.getElementById('{!$Component.back_h}').click()};return false;" rendered="{!viewstate.isComplete}"/>
+                <script>                	
+                    CODA2GoButtons.initButtons(["{!$Component.run}", "{!$Component.confirm}", "{!$Component.cancel}"]);
+                </script>
+            </apex:pageBlockButtons>
+
+            <apex:pageMessages />
+
+            <!-- Object Detail -->
+            <apex:pageBlockSection id="objects" title="{!$Label.c2g__codamergeaccpageselection}" columns="2">
+            
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="{!$Label.c2g__codamergeaccpagemasterfield}"/>
+                    <apex:inputField id="masterField" required="true" value="{!viewstate.MasterAccLookup.dto.c2g__Account__c}"/>
+                </apex:pageBlockSectionItem>
+                
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="{!$Label.c2g__codamergeaccpagemerge1field}"/>
+                    <apex:inputField id="merge1Field" required="true" value="{!viewstate.AccToMerge1Lookup.dto.c2g__Account__c}"/>
+                </apex:pageBlockSectionItem>
+                
+                <apex:pageBlockSectionItem />
+                
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="{!$Label.c2g__codamergeaccpagemerge2field}"/>
+                    <apex:inputField id="merge2Field" value="{!viewstate.AccToMerge2Lookup.dto.c2g__Account__c}"/>
+                </apex:pageBlockSectionItem>
+            
+            </apex:pageBlockSection>        
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

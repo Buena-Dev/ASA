@@ -1,0 +1,28 @@
+<table width="600" cellpadding="5" height="400" border="0" cellspacing="5" >
+<tr height="50" valign="top" >
+<td locked="0" style=" font-family:arial; bLabel:main; color:#000000; font-size:12pt; bEditID:r3st1; background-color:#FFFFFF;" aEditID="c1r1" tEditID="c1r1" >
+<![CDATA[]]></td>
+</tr>
+<tr height="300" valign="top" >
+<td locked="0" style=" font-family:arial; bLabel:main; color:#000000; font-size:12pt; bEditID:r3st1; background-color:#FFFFFF;" aEditID="c1r2" tEditID="c1r2" >
+<![CDATA[<P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT size=2><FONT face="Times New Roman">{!Contact.Name}<BR></FONT><FONT face="Times New Roman">{!Contact.Title}</FONT></FONT></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT size=2><FONT face="Times New Roman">{!Contact.MailingAddress}<BR></FONT>&nbsp;</FONT></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT face="Times New Roman" size=2>Dear {!Contact.FirstName},<BR></FONT></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT face="Times New Roman"><FONT size=2>I would like to first thank you for choosing ASA as your guarantor of choice.<SPAN style="mso-spacerun: yes">&nbsp; </SPAN>ASA understands that many choices exist in this industry and we are flattered to be chosen as a preferred partner.<SPAN style="mso-spacerun: yes">&nbsp; </SPAN></FONT></FONT></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt"><?xml:namespace prefix = o ns = "urn:schemas-microsoft-com:office:office" /><o:p><FONT face="Times New Roman" size=2>&nbsp;</FONT></o:p></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT face="Times New Roman" size=2>Attached is a copy of the executive summary defining the discussed process flow.<SPAN style="mso-spacerun: yes">&nbsp; </SPAN>This summary provides you an opportunity to examine how {!Account.Name}will interact with ASA to receive guarantees for your students and parents.<SPAN style="mso-spacerun: yes">&nbsp; </SPAN>This summary is also ASA’s commitment to exceptional customer service for {!Account.Name}.</FONT></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt"><o:p><FONT face="Times New Roman" size=2>&nbsp;</FONT></o:p></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT face="Times New Roman" size=2>Please take a few moments to review this document and determine if {!Account.Name}s needs are met.<SPAN style="mso-spacerun: yes">&nbsp; </SPAN>Also, please do not hesitate to call me if you have questions regarding the executive summary or want clarification on the established process.</FONT></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt"><o:p><FONT face="Times New Roman" size=2>&nbsp;</FONT></o:p></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT face="Times New Roman" size=2>Once again, we thank you for the opportunity to partner with {!Account.Name} and the ASA team looks forward to working closely with you and your staff for many years. </FONT></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt"><o:p><FONT face="Times New Roman" size=2>&nbsp;</FONT></o:p></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT face="Times New Roman" size=2>Sincerely,</FONT></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt"><o:p><FONT face="Times New Roman" size=2>&nbsp;</FONT></o:p><o:p><FONT face="Times New Roman" size=2>{!Account.OwnerFullName}</FONT></o:p></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT face="Times New Roman" size=2>{!Account.OwnerTitle}<BR>{!Account.OwnerPhone}<BR></FONT></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT face="Times New Roman" size=2>American Student Assistance<BR><BR></FONT></P>]]></td>
+</tr>
+<tr height="50" valign="top" >
+<td locked="1" style=" font-family:arial; bLabel:main; color:#000000; font-size:12pt; bEditID:r3st1; background-color:#FFFFFF;" aEditID="c1r3" tEditID="c1r3" >
+<![CDATA[<FONT face=Geneva,Arial,Sans-Serif size=1>The content of this email is confidential and proprietary to American Student Assistance. It is intended only for the above-named individual or entity and for the purpose indicated and may not be reproduced or distributed without permission of the sender. Please notify the sender or ASA if you received this email in error.</FONT>]]></td>
+</tr>
+</table>

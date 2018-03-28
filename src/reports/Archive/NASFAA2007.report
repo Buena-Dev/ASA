@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CAMPAIGN_NAME</field>
+    </columns>
+    <columns>
+        <field>START_DATE</field>
+    </columns>
+    <columns>
+        <field>Campaign.BDAttending__c</field>
+    </columns>
+    <columns>
+        <field>Campaign.ProfesionalDevelopment_Training__c</field>
+    </columns>
+    <description>ASA employees attending NASFAA 2007</description>
+    <format>Tabular</format>
+    <name>NASFAA 2007</name>
+    <params>
+        <name>scopeid</name>
+        <value>701600000004kas</value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>0</value>
+    </params>
+    <reportType>CampaignList</reportType>
+    <scope>one</scope>
+    <showDetails>true</showDetails>
+</Report>

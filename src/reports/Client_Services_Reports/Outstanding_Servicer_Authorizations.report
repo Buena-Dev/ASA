@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>ACCOUNT.NAME</field>
+    </columns>
+    <columns>
+        <field>SALT_Servicers__c.Servicer__c</field>
+    </columns>
+    <columns>
+        <field>SALT_Servicers__c.Access__c</field>
+    </columns>
+    <columns>
+        <field>SALT_Servicers__c.Expiration_Date__c</field>
+    </columns>
+    <columns>
+        <field>USERS.NAME</field>
+    </columns>
+    <crossFilters>
+        <criteriaItems>
+            <column>CSA_Request__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>contains</operator>
+            <value>Prepare Servicer Authorization Forms</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Status__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Completed</value>
+        </criteriaItems>
+        <operation>with</operation>
+        <primaryTableColumn>ACCOUNT_ID</primaryTableColumn>
+        <relatedTable>CSARequests__c</relatedTable>
+        <relatedTableJoinColumn>Account__c</relatedTableJoinColumn>
+    </crossFilters>
+    <description>Identifies schools where authorization forms have been sent to school but not returned.</description>
+    <filter>
+        <criteriaItems>
+            <column>SALT_Servicers__c.Access__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Yes,Expired</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Outstanding Servicer Authorizations</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>AccountCustomEntity$SALT_Servicers__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>DUE_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

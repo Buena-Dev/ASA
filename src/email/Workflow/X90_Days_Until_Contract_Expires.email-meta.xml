@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>{!Account.Name}&apos;s Contract expires in three months, follow up required</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>90 Days Until Contract Expires</name>
+    <style>none</style>
+    <subject>{!Account.Name}&apos;s Contract expires in three months, follow up required</subject>
+    <type>text</type>
+</EmailTemplate>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Salt_School_Channel</letterhead>
+    <name>Casey Wallen Template</name>
+    <style>freeForm</style>
+    <subject>Casey Wallen Email Template</subject>
+    <textOnly>Casey Wallen | Manager, Higher Education Partnerships
+
+Salt | American Student Assistance
+
+P: 336.416.9636 | 800.999.9080, ext. 2610 | E: cwallen@asa.org
+
+513 Adams Gate Rd. Winston-Salem, NC 27107</textOnly>
+    <type>html</type>
+</EmailTemplate>

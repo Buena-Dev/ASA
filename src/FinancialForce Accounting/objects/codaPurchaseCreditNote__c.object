@@ -1,0 +1,1043 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <content>codapurchasecreditnoteedit</content>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Visualforce</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <content>codapurchasecreditnotenew</content>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Visualforce</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <content>codapurchasecreditnoteview</content>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Visualforce</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <customHelpPage>codahelppurchasecreditnote</customHelpPage>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <deprecated>false</deprecated>
+    <description>Holds information that applies to the whole payable credit note such as vendor account and payable credit note date.</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>Private</externalSharingModel>
+    <fieldSets>
+        <fullName>HeaderDetailsForManageLines</fullName>
+        <description>Used in the Manage Lines page for header detail</description>
+        <displayedFields>
+            <field>Account__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>CreditNoteDate__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>CreditNoteTotal__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>CreditNoteCurrency__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>Header Details for Manage Lines</label>
+    </fieldSets>
+    <fields>
+        <fullName>AccountAddress__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>Account__r.BillingStreet + &apos; &apos; + Account__r.BillingCity + &apos; &apos; + Account__r.BillingState + &apos; &apos; + Account__r.BillingPostalCode + &apos; &apos; + Account__r.BillingCountry</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Account Address</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AccountCreditNoteNumber__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Vendor Credit Note Number</label>
+        <length>24</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AccountECCountryCode__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>TEXT(Account__r.CODAECCountryCode__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Tax Country Code</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AccountInvoiceNumber__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Vendor Invoice Number</label>
+        <length>80</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Account__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Account</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Payable Credit Notes</relationshipLabel>
+        <relationshipName>PurchaseCreditNotes</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>CopyAccountValues__c</fullName>
+        <defaultValue>true</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Copy Account Values</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>CreditNoteCurrency__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Credit Note Currency</label>
+        <referenceTo>codaAccountingCurrency__c</referenceTo>
+        <relationshipLabel>Payable Credit Notes</relationshipLabel>
+        <relationshipName>PurchaseCreditNotes</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>CreditNoteDate__c</fullName>
+        <defaultValue>TODAY()</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Credit Note Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>CreditNoteDescription__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Credit Note Description</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>CreditNoteRate__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The document to home exchange rate.</description>
+        <externalId>false</externalId>
+        <label>Credit Note Rate</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>9</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CreditNoteReason__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Credit Note Reason</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Damaged Goods</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Goods Returned</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Incorrect Shipment</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Overcharge</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Retrospective Discount</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>CreditNoteStatus__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Credit Note Status</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>In Progress</fullName>
+                    <default>true</default>
+                </value>
+                <value>
+                    <fullName>Complete</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Discarded</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Ready To Post</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>CreditNoteTotal__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>NetTotal__c  +  TaxTotal__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Credit Note Total</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DeriveCurrency__c</fullName>
+        <defaultValue>true</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Derive Currency</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>DeriveDueDate__c</fullName>
+        <defaultValue>true</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Derive Due Date</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>DerivePeriod__c</fullName>
+        <defaultValue>true</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Derive Period</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Dimension1__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Dimension 1</label>
+        <referenceTo>codaDimension1__c</referenceTo>
+        <relationshipLabel>Payable Credit Notes</relationshipLabel>
+        <relationshipName>PurchaseCreditNotes</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Dimension2__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Dimension 2</label>
+        <referenceTo>codaDimension2__c</referenceTo>
+        <relationshipLabel>Payable Credit Notes</relationshipLabel>
+        <relationshipName>PurchaseCreditNotes</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Dimension3__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Dimension 3</label>
+        <referenceTo>codaDimension3__c</referenceTo>
+        <relationshipLabel>Payable Credit Notes</relationshipLabel>
+        <relationshipName>PurchaseCreditNotes</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Dimension4__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Dimension 4</label>
+        <referenceTo>codaDimension4__c</referenceTo>
+        <relationshipLabel>Payable Credit Notes</relationshipLabel>
+        <relationshipName>PurchaseCreditNotes</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>DiscardReason__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Discard Reason</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>DualRate__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The dual to home exchange rate.</description>
+        <externalId>false</externalId>
+        <label>Dual Rate</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>9</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DueDate__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Due Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>EnableReverseCharge__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Enable Reverse Charge</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>ExpensesNetTotal__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Total value of expense items on the credit note, before tax.
+SUM: Payable Credit Note Expense Line Item: NetValue</description>
+        <externalId>false</externalId>
+        <label>Expenses Net Total</label>
+        <summarizedField>codaPurchaseCreditNoteExpLineItem__c.NetValue__c</summarizedField>
+        <summaryForeignKey>codaPurchaseCreditNoteExpLineItem__c.PurchaseCreditNote__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>ExpensesOutputTaxTotal__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Expenses Output Tax Total</label>
+        <summarizedField>codaPurchaseCreditNoteExpLineItem__c.OutputTaxValue__c</summarizedField>
+        <summaryForeignKey>codaPurchaseCreditNoteExpLineItem__c.PurchaseCreditNote__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>ExpensesTax1Total__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Sum of tax 1 posted to Expense Line Items.</description>
+        <externalId>false</externalId>
+        <label>Expenses Tax 1 Total</label>
+        <summarizedField>codaPurchaseCreditNoteExpLineItem__c.TaxValue1__c</summarizedField>
+        <summaryForeignKey>codaPurchaseCreditNoteExpLineItem__c.PurchaseCreditNote__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>ExpensesTax2Total__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Sum of tax 2 posted to Expense Line Items.</description>
+        <externalId>false</externalId>
+        <label>Expenses Tax 2 Total</label>
+        <summarizedField>codaPurchaseCreditNoteExpLineItem__c.TaxValue2__c</summarizedField>
+        <summaryForeignKey>codaPurchaseCreditNoteExpLineItem__c.PurchaseCreditNote__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>ExternalId__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <deprecated>false</deprecated>
+        <externalId>true</externalId>
+        <label>External Id</label>
+        <length>32</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>IncomeTaxType__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Income Tax Type</description>
+        <externalId>false</externalId>
+        <label>Income Tax Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>1 - Rents</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>2 - Royalties</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>3 - Other Income</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>4 - Federal Income Tax Withheld</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>5 - Fishing Boat Proceeds</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>6 - Medical and Healthcare Payments</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>7 - Nonemployee Compensation</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>8 - Substitute Payments in Lieu of Dividends or Interest</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>9 - Payer Made Direct Sales of 5000 or More</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>10 - Crop Insurance Proceeds</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>11 - Unused 11</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>12 - Unused 12</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>13 - Excess Golden Parachute Payments</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>14 - Gross Proceeds Paid to an Attorney</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Not Reportable</fullName>
+                    <default>true</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>IntercompanyTransfer__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Intercompany Transfer</label>
+        <referenceTo>codaIntercompanyTransfer__c</referenceTo>
+        <relationshipLabel>Payable Credit Notes</relationshipLabel>
+        <relationshipName>PayableCreditNotes</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>InvoiceDate__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Invoice Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>ItemsNetTotal__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Total value of product items on the credit note, before tax.
+SUM: Payable Credit Note Line Item: NetValue</description>
+        <externalId>false</externalId>
+        <label>Items Net Total</label>
+        <summarizedField>codaPurchaseCreditNoteLineItem__c.NetValue__c</summarizedField>
+        <summaryForeignKey>codaPurchaseCreditNoteLineItem__c.PurchaseCreditNote__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>ItemsOutputTaxTotal__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Items Output Tax Total</label>
+        <summarizedField>codaPurchaseCreditNoteLineItem__c.OutputTaxValue__c</summarizedField>
+        <summaryForeignKey>codaPurchaseCreditNoteLineItem__c.PurchaseCreditNote__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>ItemsTax1Total__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Sum of tax 1 posted to Product Line Items.</description>
+        <externalId>false</externalId>
+        <label>Items Tax 1 Total</label>
+        <summarizedField>codaPurchaseCreditNoteLineItem__c.TaxValue1__c</summarizedField>
+        <summaryForeignKey>codaPurchaseCreditNoteLineItem__c.PurchaseCreditNote__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>ItemsTax2Total__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Sum of tax 2 posted to Product Line Items.</description>
+        <externalId>false</externalId>
+        <label>Items Tax 2 Total</label>
+        <summarizedField>codaPurchaseCreditNoteLineItem__c.TaxValue2__c</summarizedField>
+        <summaryForeignKey>codaPurchaseCreditNoteLineItem__c.PurchaseCreditNote__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>MatchType__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>TEXT(Transaction__r.MatchType__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Match Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>NetTotal__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>ItemsNetTotal__c  +  ExpensesNetTotal__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Net Total</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>OutstandingValue__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>Transaction__r.DocumentOutstandingTotal__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Outstanding Value</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>OwnerCompany__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Company</label>
+        <referenceTo>codaCompany__c</referenceTo>
+        <relationshipLabel>Payable Credit Notes</relationshipLabel>
+        <relationshipName>PurchaseCreditNotes</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>PaymentStatus__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>if( NOT( ISPICKVAL( CreditNoteStatus__c, &apos;Complete&apos; ) ),
+&apos;Not Applicable&apos;,
+if( Transaction__r.DocumentOutstandingTotal__c == 0, &apos;Paid&apos;,
+if( Transaction__r.DocumentTotal__c == Transaction__r.DocumentOutstandingTotal__c, &apos;Unpaid&apos;,
+&apos;Part Paid&apos; ) ) )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Payment Status</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Period__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Financial period</description>
+        <externalId>false</externalId>
+        <label>Period</label>
+        <referenceTo>codaPeriod__c</referenceTo>
+        <relationshipLabel>Payable Credit Notes</relationshipLabel>
+        <relationshipName>PurchaseCreditNotes</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>PurchaseInvoice__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Payable Invoice</label>
+        <referenceTo>codaPurchaseInvoice__c</referenceTo>
+        <relationshipLabel>Payable Credit Notes</relationshipLabel>
+        <relationshipName>PayableCreditNotes</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Reference1__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Reference 1</label>
+        <length>80</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Reference2__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Reference 2</label>
+        <length>80</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RegisteredDate__c</fullName>
+        <defaultValue>Today()</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Registered Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>TaxCode1__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Tax Code 1</label>
+        <referenceTo>codaTaxCode__c</referenceTo>
+        <relationshipLabel>Payable Credit Notes</relationshipLabel>
+        <relationshipName>PurchaseCreditNotesTC1</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>TaxDocumentCode__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>External Tax Document Code</label>
+        <length>80</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TaxStatus__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Tax status of the invoice.</description>
+        <externalId>false</externalId>
+        <label>External Tax Status</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Not Calculated</fullName>
+                    <default>true</default>
+                </value>
+                <value>
+                    <fullName>Calculated</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Finalized</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>TaxTotal__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>ItemsTax1Total__c  +  ExpensesTax1Total__c + ItemsTax2Total__c + ExpensesTax2Total__c - ItemsOutputTaxTotal__c - ExpensesOutputTaxTotal__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Tax Total</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Transaction__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Transaction</label>
+        <referenceTo>codaTransaction__c</referenceTo>
+        <relationshipLabel>Payable Credit Notes</relationshipLabel>
+        <relationshipName>PurchaseCreditNotes</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>UnitOfWork__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Unit of Work</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>VATRegistrationNumber__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>Account__r.CODAVATRegistrationNumber__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Tax Registration Number</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Year__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>Period__r.YearName__r.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Year</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Payable Credit Note</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Account__c</columns>
+        <columns>AccountCreditNoteNumber__c</columns>
+        <columns>CreditNoteDate__c</columns>
+        <columns>Period__c</columns>
+        <columns>DueDate__c</columns>
+        <columns>CreditNoteCurrency__c</columns>
+        <columns>CreditNoteTotal__c</columns>
+        <columns>AccountInvoiceNumber__c</columns>
+        <columns>CreditNoteReason__c</columns>
+        <columns>CreditNoteStatus__c</columns>
+        <columns>DiscardReason__c</columns>
+        <columns>PaymentStatus__c</columns>
+        <columns>OutstandingValue__c</columns>
+        <columns>OwnerCompany__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <displayFormat>PCR{000000}</displayFormat>
+        <label>Credit Note Number</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Payable Credit Notes</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>Account__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>AccountCreditNoteNumber__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>CreditNoteDate__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Period__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>DueDate__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>CreditNoteCurrency__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>CreditNoteTotal__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>CreditNoteStatus__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>OwnerCompany__c</customTabListAdditionalFields>
+    </searchLayouts>
+    <sharingModel>Private</sharingModel>
+    <webLinks>
+        <fullName>BackgroundPost</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Background Post</masterLabel>
+        <openType>sidebar</openType>
+        <page>pcnbackgroundpostconfirm</page>
+        <protected>false</protected>
+        <requireRowSelection>false</requireRowSelection>
+    </webLinks>
+    <webLinks>
+        <fullName>BulkCalculateTax</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Calculate Tax</masterLabel>
+        <openType>sidebar</openType>
+        <page>bulkcalculatetaxpayablecreditnote</page>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+    </webLinks>
+    <webLinks>
+        <fullName>CalculateTax</fullName>
+        <availability>online</availability>
+        <description>Call Avalara to calculate tax</description>
+        <displayType>button</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Calculate Tax</masterLabel>
+        <openType>sidebar</openType>
+        <page>payablecreditnotecalculatetax</page>
+        <protected>false</protected>
+    </webLinks>
+    <webLinks>
+        <fullName>ClassicEdit</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Classic Edit</masterLabel>
+        <openType>sidebar</openType>
+        <page>payablecreditnoteclassicedit</page>
+        <protected>false</protected>
+    </webLinks>
+    <webLinks>
+        <fullName>ClassicView</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Classic View</masterLabel>
+        <openType>sidebar</openType>
+        <page>codapurchasecreditnoteview</page>
+        <protected>false</protected>
+    </webLinks>
+    <webLinks>
+        <fullName>Manage_Expense_Lines</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Manage Expense Lines</masterLabel>
+        <openType>sidebar</openType>
+        <page>payablecreditnotemanageexp</page>
+        <protected>false</protected>
+    </webLinks>
+    <webLinks>
+        <fullName>Manage_Product_Lines</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Manage Product Lines</masterLabel>
+        <openType>sidebar</openType>
+        <page>payablecreditnotemanageprd</page>
+        <protected>false</protected>
+    </webLinks>
+    <webLinks>
+        <fullName>Post</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Post</masterLabel>
+        <openType>sidebar</openType>
+        <page>payablecreditnotepost</page>
+        <protected>false</protected>
+    </webLinks>
+    <webLinks>
+        <fullName>PostMatch</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Post &amp; Match</masterLabel>
+        <openType>sidebar</openType>
+        <page>purchaseCreditNotePostAndMatchConfirm</page>
+        <protected>false</protected>
+    </webLinks>
+</CustomObject>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>RI Spring Training event  2009 Invitation</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>EmailLetterhead</letterhead>
+    <name>RI - 2009 Spring Training (Invitation)</name>
+    <style>freeForm</style>
+    <subject>Invitation to an American Student Assistance Training Event</subject>
+    <textOnly>Join ASA! 
+
+Rhode Island Training Event
+
+
+National FFELP guarantor American Student Assistance®  has designed a 
+half day event to discuss some of the key concerns of financial aid administrators.   
+
+3/17/2009  Bristol, RI  – Roger Williams University School of Law
+ 
+Agenda 
+
+10:00am Regulatory Update 
+
+12:00pm Lunch 
+
+12:30 Question &amp; Answer Session regarding graduate concerns
+ 
+1:00pm Ten Key Ideas
+
+2:30pm Adjourn
+ 
+Course Descriptions: 
+ 
+HEA Reauthorization Update - Preferred Lender Lists and School Codes of Conduct.
+Join us for an in-depth discussion on implementing the changes drafted into the Higher Education Act Reauthorization Bill. Our regulatory analysts will focus on Preferred Lender Lists and School Codes of Conduct. This session will include an opportunity for question and answers.
+  
+Ten Key Ideas
+Participants will explore ten ideas every financial aid office should know when implementing/enhancing a program of financial literacy education on your campus. this stimulating and lively session will cover a broad range of topics from, why the financial aid office should play a role in financial literacy programs to how the school and students will benefit from implementing a program. This session explores the big picture and helps create a vision for development of a program on your campus.
+ 
+Who Should Attend 
+Any financial aid administrator interested in the most up to date information.
+ 
+How to register or for additional information, including driving directions 
+
+· Register Online at http://www.amsa.com/fap/training 
+· Email: send your name, phone number and enrollment details to 
+training@amsa.com 
+· Phone: call the Training Department at (800) 999-9080, ext. 3099 
+
+All American Student Assistance training events are offered free of charge.</textOnly>
+    <type>html</type>
+</EmailTemplate>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>SALUTATION</field>
+    </columns>
+    <columns>
+        <field>FIRST_NAME</field>
+    </columns>
+    <columns>
+        <field>LAST_NAME</field>
+    </columns>
+    <columns>
+        <field>TITLE</field>
+    </columns>
+    <columns>
+        <field>PHONE1</field>
+    </columns>
+    <columns>
+        <field>EMAIL</field>
+    </columns>
+    <columns>
+        <field>OWNER_FULL_NAME</field>
+    </columns>
+    <columns>
+        <field>ACCOUNT.NAME</field>
+    </columns>
+    <columns>
+        <field>ADDRESS2_STATE</field>
+    </columns>
+    <description>Lenders to invite to school_Lender dialogues</description>
+    <filter>
+        <criteriaItems>
+            <column>TYPE</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Lender,Lender &amp; School Services,Lender - ASA - Commercial Bank,Lender - ASA - Cooperative Bank,Lender - ASA - Credit Union,Lender - ASA - Mutual Savings,Lender - ASA - Other</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>ADDRESS2_STATE</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>IL,IN,OH,MA,NC,DC,MD,AZ</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Lender contacts report</name>
+    <params>
+        <name>co</name>
+        <value>0</value>
+    </params>
+    <reportType>ContactList</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <sortColumn>ADDRESS2_STATE</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

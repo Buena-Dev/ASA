@@ -1,0 +1,38 @@
+<!-- codacurrencyRevalCancel -->
+<apex:page controller="c2g.CODACurrencyRevalCancelController" tabStyle="c2g__codaCurrencyRevaluation__c" extensions="c2g.CODAHelpLoaderController">
+<script src="{!URLFOR($Resource.coda2go,'coda2go/web/script/lib.js')}" type="text/javascript"></script>
+	<apex:stylesheet value="{!URLFOR($Resource.c2g__coda2go,'coda2go/web/css/style.css')}"/>
+	<script>
+		var CODA2GoButtons = new CODA2GoPage();
+		var CODA2GoBtnSaveValue = "{!$Label.codaProcessing}";
+	</script>
+	<apex:form onsubmit="if(CODA2GoButtons.disableSaveButtons){ return CODA2GoButtons.disableSaveButtons(); }">
+		<!-- Header -->
+		<apex:sectionHeader title="{!$Label.c2g__currencyrevaluationcanceltitle}" help="{!redirectForHelp1085}"/>
+		<!-- PurchaseInvoice Status -->
+		<apex:pageBlock >
+			<apex:pageBlockButtons >
+				<!-- Hidden Buttons -->
+				<apex:commandButton value="{!$Label.c2g__codacurrevalcancelcommit}" action="{!viewState.cancel}" rendered="{!(validateCompanyAndOrg && viewState.canCancel)}" id="cancelRevaluation_h" styleclass="hiddensubmit"/>
+				<apex:commandButton value="{!$Label.c2g__codacurrevalcancelcancel}" action="{!goBack}" id="cancel_h" rendered="{!(validateCompanyAndOrg && viewState.canCancel)}" styleclass="hiddensubmit" immediate="true" reRender=""/>
+				<apex:commandButton value="{!$Label.c2g__nativeuibuttongoback}" action="{!goBack}" id="goBack_h" rendered="{!!(validateCompanyAndOrg && viewState.canCancel)}" styleclass="hiddensubmit" immediate="true" reRender=""/>
+				<!-- End of Hidden Buttons -->
+				<apex:commandButton value="{!$Label.c2g__codacurrevalcancelcommit}" id="cancelRevaluation" rendered="{!(validateCompanyAndOrg && viewState.canCancel)}" onclick="document.getElementById('{!$Component.cancelRevaluation_h}').click();return false;" rerender=""/>				
+				<apex:commandButton value="{!$Label.c2g__codacurrevalcancelcancel}" id="cancel" rerender="" rendered="{!(validateCompanyAndOrg && viewState.canCancel)}" onclick="if(!CODA.queing()){document.getElementById('{!$Component.cancel_h}').click()};return false;"/>
+				<apex:commandButton value="{!$Label.c2g__nativeuibuttongoback}" id="goBack" rerender="" rendered="{!!(validateCompanyAndOrg && viewState.canCancel)}" onclick="if(!CODA.queing()){document.getElementById('{!$Component.goBack_h}').click()};return false;"/>
+				<script>            
+	                CODA2GoButtons.initButtons(["{!$Component.cancelRevaluation}","{!$Component.cancel}","{!$Component.goBack}"]);
+				</script>
+			</apex:pageBlockButtons>
+			<!-- Messages --> 
+			<apex:outputPanel id="messagePanel" layout="block">
+					<apex:pageMessages id="messages"/>
+				</apex:outputPanel>
+			
+			<apex:pageBlockSection columns="1" rendered="{!(validateCompanyAndOrg && viewState.canCancel)}"> 
+				<apex:inputField id="CancelPeriod" value="{!viewState.cancelPeriodLookup.c2g__Period__c}" required="true"/>
+				<apex:inputField value="{!viewState.currencyRevaluation.c2g__CancellationReason__c}" required="true"/>
+			</apex:pageBlockSection>
+		</apex:pageBlock>
+	</apex:form>
+</apex:page>

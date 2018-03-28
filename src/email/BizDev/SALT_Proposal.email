@@ -1,0 +1,25 @@
+<table height="400" width="600" cellpadding="5" border="0" cellspacing="5" >
+<tr height="50" valign="top" >
+<td style=" color:#000000; font-size:12pt; background-color:#FFFFFF; font-family:arial; bLabel:main; bEditID:r3st1;" tEditID="c1r1" locked="0" aEditID="c1r1" >
+<![CDATA[]]></td>
+</tr>
+<tr height="300" valign="top" >
+<td style=" color:#000000; font-size:12pt; background-color:#FFFFFF; font-family:arial; bLabel:main; bEditID:r3st1;" tEditID="c1r2" locked="0" aEditID="c1r2" >
+<![CDATA[<P><FONT size=2 face=Arial,Sans-Serif>Dear {!Contact.FirstName},</FONT></P>
+<P><FONT size=2 face=Arial,Sans-Serif></FONT>&nbsp;</P>
+<P><FONT size=2 face=Arial,Sans-Serif>I am pleased to provide you with the attached SALT Proposal for your consideration.</FONT></P>
+<P><FONT size=2 face=Arial,Sans-Serif></FONT>&nbsp;</P>
+<P><FONT size=2 face=Arial,Sans-Serif>Please contact me if you have any questions or require further information.</FONT></P>
+<P><FONT size=2 face=Arial,Sans-Serif></FONT>&nbsp;</P>
+<P><FONT size=2 face=Arial,Sans-Serif>Best regards,</FONT></P>
+<P><FONT size=2 face=Arial,Sans-Serif></FONT>&nbsp;</P>
+<P><FONT size=2 face=Arial,Sans-Serif>{!User.Name}</FONT></P>
+<P><FONT size=2 face=Arial,Sans-Serif>{!User.Title}</FONT></P>
+<P><FONT size=2 face=Arial,Sans-Serif>Phone: {!User.Phone}</FONT></P>
+<P><FONT size=2 face=Arial,Sans-Serif>Fax: {!User.Fax}</FONT></P>]]></td>
+</tr>
+<tr height="50" valign="top" >
+<td style=" color:#000000; font-size:12pt; background-color:#FFFFFF; font-family:arial; bLabel:main; bEditID:r3st1;" tEditID="c1r3" locked="0" aEditID="c1r3" >
+<![CDATA[]]></td>
+</tr>
+</table>

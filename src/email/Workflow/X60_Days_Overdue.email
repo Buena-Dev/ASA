@@ -1,0 +1,5 @@
+{!c2g__codaTransactionLineItem__c.c2g__Account__c} has an overdue Invoice: {!c2g__codaTransactionLineItem__c.Link}
+
+Due Date:  {!c2g__codaTransactionLineItem__c.c2g__DueDate__c}
+
+Due Amount: $ {!c2g__codaTransactionLineItem__c.c2g__AccountOutstandingValue__c}

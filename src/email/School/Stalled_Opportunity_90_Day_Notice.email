@@ -1,0 +1,10 @@
+Hello, 
+
+The opportunity with {!Opportunity.Account} has not had a stage change for 90 days: {!Opportunity.Link}. The last activity happened {!Opportunity.of_days_stalled__c} days ago.
+
+Opportunity Owner: {!Opportunity.OwnerFullName}
+
+The below applies only if this is a renewal opportunity:
+
+Current Contract expiration date: 
+{!Account.Contract_End__c}

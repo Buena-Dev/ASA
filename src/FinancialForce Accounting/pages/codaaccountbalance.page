@@ -1,0 +1,51 @@
+<apex:page standardController="Account" readOnly="true" extensions="c2g.CODAAccountBalanceController" sidebar="true" showHeader="false" standardStylesheets="true" >
+	<apex:stylesheet value="{!URLFOR($Resource.c2g__coda2go,'coda2go/web/css/style.css')}"/>
+	<c:CODALocaleJS /> 
+    
+	<apex:pageMessages />
+
+	<apex:pageBlock >
+		<apex:pageBlockTable id="dtAcountBalance" rendered="{!!viewstate.hasErrorMessages}" value="{!viewstate.balanceLines}" var="balanceLine">
+			
+			<apex:column >
+				<apex:facet name="header">
+					{!$Label.c2g__codaaccountbalancecompanycolum}
+				</apex:facet> 
+
+				<apex:outputText value="{!balanceLine.CompanyName}" id="companyName"/>
+
+				<apex:facet name="footer">
+					{!$Label.c2g__codaaccountbalancetotal}
+				</apex:facet>
+			</apex:column>
+							   
+			<apex:column headerClass="alignright" footerClass="alignright" styleClass="alignright">
+				<apex:facet name="header">
+					{!$Label.c2g__codaaccountbalancebalancecolum}
+				</apex:facet>
+
+				<apex:outputLink disabled="{!!viewstate.hasReport}" value="{!balanceLine.ReportId}" id="accBalanceLnk1" target="_parent">
+					<apex:outputText rendered="{!!viewstate.CurrencyMismatch}" value="{0, number, ###,###,###,##0.00}" styleClass="formatNumber">
+						<apex:param value="{!balanceLine.AccountBalanceAsDecimal}"/>
+					</apex:outputText>
+					<apex:outputText rendered="{!viewstate.CurrencyMismatch}" value="{!viewstate.CurrencyName}" id="currencyNameMismatchLnk1"/>
+				</apex:outputLink>
+				&nbsp;
+				<apex:outputText rendered="{!!viewstate.CurrencyMismatch}" value="{!viewstate.CurrencyName}" id="currencyNameLnk1"/> 
+
+				<apex:facet name="footer">
+					<apex:outputPanel >
+						<apex:outputLink disabled="{!!viewstate.hasReport}" value="{!viewstate.ReportIdTotal}" id="accBalanceLnk2Total" target="_parent">
+							<apex:outputText rendered="{!!viewstate.CurrencyMismatch}" value="{0, number, ###,###,###,##0.00}" styleClass="formatNumber">
+								<apex:param value="{!viewstate.AccountBalanceTotalAsDecimal}"/>
+							</apex:outputText>
+							<apex:outputText rendered="{!viewstate.CurrencyMismatch}" value="{!viewstate.CurrencyName}" id="currencyNameMismatchLnk4"/>
+						</apex:outputLink>
+						&nbsp;
+						<apex:outputText rendered="{!!viewstate.CurrencyMismatch}" value="{!viewstate.CurrencyName}" id="currencyNameLnk4"/>
+					</apex:outputPanel>
+				</apex:facet>
+			</apex:column>
+		</apex:pageBlockTable>
+	</apex:pageBlock>
+</apex:page>

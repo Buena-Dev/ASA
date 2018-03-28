@@ -1,0 +1,4 @@
+{!Account.Name}  ({!Account.OE_Code__c}) has been implemented.
+
+Account Type: {!Account.Type}
+Account details: {!Account.Link}

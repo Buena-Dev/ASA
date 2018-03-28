@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<HomePageComponent xmlns="http://soap.sforce.com/2006/04/metadata">
+    <body>&lt;strong&gt;Please call Salesforce Premier Support for assistance:&lt;/strong&gt;&lt;br&gt;(866) 614-7375, and then enter ASA&amp;#39;s Passcode: 250494&lt;br&gt;Hours: 24 x 7&lt;br&gt;&lt;br&gt;&lt;p&gt;
+	&lt;b&gt;If your issue is &lt;font color=&quot;red&quot;&gt;urgent&lt;/font&gt;, you can contact Andrew at ext. 4274.&lt;/b&gt;&lt;/p&gt;</body>
+    <pageComponentType>htmlArea</pageComponentType>
+    <width>narrow</width>
+</HomePageComponent>

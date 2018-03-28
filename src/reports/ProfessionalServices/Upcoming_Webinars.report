@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>RT1__ReadyTalkMeeting__c.RT1__MeetingDateTime__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>RT1__ReadyTalkMeeting__c.RT1__ConfirmedMeetingMembers__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>RT1__ReadyTalkMeeting__c.RT1__CCMeetingStatus__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>notEqual</operator>
+            <value>Cancelled</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CUST_NAME</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>notContain</operator>
+            <value>All BD Call,Joint Regional Call</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <name>Upcoming Webinars</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$RT1__ReadyTalkMeeting__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>RT1__ReadyTalkMeeting__c.RT1__MeetingDateTime__c</dateColumn>
+        <interval>INTERVAL_NEXT90</interval>
+    </timeFrameFilter>
+</Report>

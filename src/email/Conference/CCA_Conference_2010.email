@@ -1,0 +1,23 @@
+<table height="400" width="550" cellpadding="5" border="0" cellspacing="5" >
+<tr height="400" valign="top" >
+<td style=" color:#000000; font-size:12pt; background-color:#FFFFFF; font-family:arial; bLabel:main; bEditID:r3st1;" tEditID="c1r1" locked="0" aEditID="c1r1" >
+<![CDATA[<P class=MsoNormal style="MARGIN: 0in 0in 0pt"><SPAN style="FONT-SIZE: 11pt; FONT-FAMILY: Arial"></SPAN>&nbsp;</P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt"><SPAN style="FONT-SIZE: 11pt; FONT-FAMILY: Arial">Dear {!Contact.FirstName}:</SPAN></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt"><SPAN style="FONT-SIZE: 11pt; FONT-FAMILY: Arial"><?xml:namespace prefix = o ns = "urn:schemas-microsoft-com:office:office" /><o:p>&nbsp;</o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt"><SPAN style="FONT-SIZE: 11pt; FONT-FAMILY: Arial">It was a pleasure speaking with you at the CCA conference. Thank you for taking the time to hear about the products and services American Student Assistance<SUP>®</SUP> (ASA) can offer your school and your students.<o:p></o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt"><SPAN style="FONT-SIZE: 11pt; FONT-FAMILY: Arial"><o:p>&nbsp;</o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt"><SPAN style="FONT-SIZE: 11pt; FONT-FAMILY: Arial">At ASA<SUP>®</SUP>, the cornerstone of our success is the proactive borrower counseling we provide throughout the lives of their loans. Our holistic default prevention and financial literacy approach sets borrowers on the path to successful repayment and lifelong financial stability. As a result of working with us, you can decrease your school’s default rates and increase the value of your school’s degrees—all while projecting a positive public brand image. <o:p></o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt"><SPAN style="FONT-SIZE: 11pt; FONT-FAMILY: Arial"><o:p>&nbsp;</o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt"><SPAN style="FONT-SIZE: 11pt; FONT-FAMILY: Arial">I would like to continue our conversation and discuss how ASA can contribute to your school’s enrollment and retention efforts. I’ll be in your area on <B style="mso-bidi-font-weight: normal"><SPAN style="COLOR: #3366ff">[insert date]</SPAN></B> and will contact you so we can sit down, assess your current approach, and discuss examples of how ASA’s unique offerings can make a real difference for your school and your students.<o:p></o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt"><SPAN style="FONT-SIZE: 11pt; FONT-FAMILY: Arial"><o:p>&nbsp;</o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt"><SPAN style="FONT-SIZE: 11pt; FONT-FAMILY: Arial">Sincerely,</SPAN></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt"><SPAN style="FONT-SIZE: 11pt; FONT-FAMILY: Arial"></SPAN>&nbsp;</P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt"><SPAN style="FONT-SIZE: 11pt; FONT-FAMILY: Arial">{!Contact.OwnerFullName}</SPAN></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt"><SPAN style="FONT-SIZE: 11pt; FONT-FAMILY: Arial">{!Contact.OwnerTitle}</SPAN></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt"><SPAN style="FONT-SIZE: 11pt; FONT-FAMILY: Arial">{!Contact.OwnerEmail}</SPAN></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt"><SPAN style="FONT-SIZE: 11pt; FONT-FAMILY: Arial"></SPAN>&nbsp;</P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt"><SPAN style="FONT-SIZE: 11pt; FONT-FAMILY: Arial"></SPAN>&nbsp;</P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt"><SPAN style="FONT-SIZE: 11pt; FONT-FAMILY: Arial"></SPAN>&nbsp;</P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt"><SPAN style="FONT-SIZE: 11pt; FONT-FAMILY: Arial"><o:p></o:p></SPAN>&nbsp;</P>]]></td>
+</tr>
+</table>

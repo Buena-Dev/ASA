@@ -1,0 +1,33 @@
+<apex:page standardController="c2g__codaCompany__c" extensions="c2g.CODAHelpLoaderController,c2g.UpdateExchangeRateController">
+	<apex:stylesheet value="{!URLFOR($Resource.c2g__coda2go,'coda2go/web/css/style.css')}"/>
+	<script src="{!URLFOR($Resource.coda2go,'coda2go/web/script/lib.js')}" type="text/javascript"></script>
+    <script>
+        var CODA2GoButtons = new CODA2GoPage();
+        var CODA2GoBtnSaveValue = "{!$Label.codaProcessing}";
+    </script>
+    <apex:form onsubmit="if(CODA2GoButtons.disableSaveButtons){ return CODA2GoButtons.disableSaveButtons(); }">
+		<apex:sectionHeader title="{!$Label.c2g__updateexchangeratepagetitle}" subtitle="{!viewstate.CompanyName}" help="{!redirectForHelp1144}"/>
+		<apex:pageBlock id="mainBlock">
+			<apex:pageMessages id="messagePanel"/>
+			<apex:pageBlockButtons location="bottom">
+	            <!-- Hidden Buttons -->
+                <apex:commandButton value="{!$Label.c2g__updateexchangeratepagetitle}" action="{!updateExchangeRate}" id="update_h" styleclass="hiddensubmit" rendered="{!viewState.canShowButton}" rerender="mainBlock" oncomplete="CODA2GoButtons.enableSaveButtons()"/>
+                <apex:commandButton value="{!$Label.c2g__nativeuibuttongoback}" action="{!back}" id="back_h" styleclass="hiddensubmit" immediate="true" rendered="{!viewState.canShowGoBackButton}"/>
+                <!-- End of Hidden Buttons -->
+                <apex:commandButton value="{!$Label.c2g__updateexchangeratepagetitle}" id="update" onclick="document.getElementById('{!$Component.update_h}').click();return false;" rendered="{!viewState.canShowButton}"/>         
+                <apex:commandButton value="{!$Label.c2g__nativeuibuttongoback}" id="back" rerender="" onclick="if(!CODA.queing()){document.getElementById('{!$Component.back_h}').click()};return false;" rendered="{!viewState.canShowGoBackButton}"/>
+                <script>
+                    CODA2GoButtons.initButtons(["{!$Component.update}","{!$Component.back}"]);
+                </script>
+			</apex:pageBlockButtons>
+            <apex:pageBlockSection columns="1" rendered="{!viewState.canShowEffDatePicker}">
+            <apex:pageBlockSectionItem >
+             	<apex:outputLabel value="{!$ObjectType.c2g__codaCompany__c.fields.c2g__OrgWideEffectiveDate__c.label}" for="companyOrgWideEffectiveDate"/>
+                <apex:outputPanel >
+                    <apex:inputfield id="companyOrgWideEffectiveDate" value="{!viewState.company.dto.c2g__OrgWideEffectiveDate__c}" required="true"/>
+                </apex:outputPanel>
+            </apex:pageBlockSectionItem>
+        </apex:pageBlockSection>
+		</apex:pageBlock>
+	</apex:form>
+</apex:page>

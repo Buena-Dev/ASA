@@ -1,0 +1,123 @@
+<apex:page showHeader="true" sidebar="false" standardStylesheets="false" tabStyle="CfBuilder__tab" docType="html-5.0" controller="c2g.CustomFormController">
+
+	<!-- User Locale -->
+	<c:fflib_bridgeUserInfo />
+
+	<!-- ExtJS Application -->
+	<c:fflib_extBootstrap applicationName="Editor" staticResource="{!$Resource.c2g__CustomFormEditor}" developmentPrefix="{!$Setup.ClientDeveloperSettings__c.ResourcePrefix__c}">
+	<c:TranslationHelper />
+	<script type="text/javascript">
+		var $RemoteAction = $RemoteAction || {},
+			$Params = $Params || {},
+			$Label = $Label || {};
+
+		$RemoteAction.CustomFormController = {
+			loadAllFields: '{!$RemoteAction.CustomFormController.loadAllFields}',
+            loadLayout: '{!$RemoteAction.CustomFormController.loadLayout}',
+			saveLayout: '{!$RemoteAction.CustomFormController.saveLayout}',
+			deleteLayouts: '{!$RemoteAction.CustomFormController.deleteLayouts}',
+			getAllLayoutHeaders: '{!$RemoteAction.CustomFormController.getAllLayoutHeaders}',
+			getConfigOptions: '{!$RemoteAction.CustomFormController.getConfigOptions}',
+			loadRelatedListFields : '{!$RemoteAction.CustomFormController.loadRelatedListFields}'
+	   	};
+
+		$Params.objectTypes = {!knownObjectTypesConfig};
+		$Params.locale = '{!JSENCODE(UserLocale)}';
+		
+		$Label.cf_BuilderLeaveConfirmation = '{!JSENCODE($Label.cf_BuilderLeaveConfirmation)}';
+		$Label.Leave = '{!JSENCODE($Label.Leave)}';
+		$Label.Stay = '{!JSENCODE($Label.Stay)}';
+		$Label.cf_ModeViewDesc = '{!JSENCODE($Label.cf_ModeViewDesc)}';
+		$Label.cf_ModeInputDesc = '{!JSENCODE($Label.cf_ModeInputDesc)}';
+		$Label.cf_ModeBothDesc = '{!JSENCODE($Label.cf_ModeBothDesc)}';
+		$Label.cf_BuilderAll = '{!JSENCODE($Label.cf_BuilderAll)}';
+		$Label.cf_BuilderTitle = '{!JSENCODE($Label.cf_BuilderTitle)}';
+		$Label.cf_BuilderBackToList = '{!JSENCODE($Label.cf_BuilderBackToList)}';
+		$Label.cf_BuilderSaveButton = '{!JSENCODE($Label.cf_BuilderSaveButton)}';
+		$Label.cf_BuilderFieldTab = '{!JSENCODE($Label.cf_BuilderFieldTab)}';
+		$Label.cf_BuilderHeader = '{!JSENCODE($Label.cf_BuilderHeader)}';
+		$Label.cf_BuilderHeaderSummary = '{!JSENCODE($Label.cf_BuilderHeaderSummary)}';
+		$Label.cf_BuilderHeaderItems = '{!JSENCODE($Label.cf_BuilderHeaderItems)}';
+		$Label.cf_BuilderLine = '{!JSENCODE($Label.cf_BuilderLine)}';
+		$Label.cf_BuilderRelatedLists = '{!JSENCODE($Label.cf_BuilderRelatedLists)}';
+		$Label.cf_BuilderRelatedListsMsg = '{!JSENCODE($Label.cf_BuilderRelatedListsMsg)}';
+		$Label.cf_BuilderComboEmptyTextSearch = '{!JSENCODE($Label.cf_BuilderComboEmptyTextSearch)}';
+		$Label.cf_BuilderSelected = '{!JSENCODE($Label.cf_BuilderSelected)}';
+		$Label.cf_BuilderSettingsTab = '{!JSENCODE($Label.cf_BuilderSettingsTab)}';
+		$Label.codaNewButton = '{!JSENCODE($Label.codaNewButton)}';
+		$Label.CloneButton = '{!JSENCODE($Label.CloneButton)}';
+		$Label.cf_BuilderMandatoryErrorTitle = '{!JSENCODE($Label.cf_BuilderMandatoryErrorTitle)}';
+		$Label.cf_BuilderMandatoryErrorMsg = '{!JSENCODE($Label.cf_BuilderMandatoryErrorMsg)}';
+		$Label.codaEditButton = '{!JSENCODE($Label.codaEditButton)}';
+		$Label.codaDeleteButton = '{!JSENCODE($Label.codaDeleteButton)}';
+		$Label.cf_ManagerFormName = '{!JSENCODE($Label.cf_ManagerFormName)}';
+		$Label.cf_ManagerAllAssignedErrorSolutionClickSelectValues = '{!JSENCODE($Label.cf_ManagerAllAssignedErrorSolutionClickSelectValues)}';
+		$Label.cf_ManagerAllAssignedErrorSolutionRemoveValues = '{!JSENCODE($Label.cf_ManagerAllAssignedErrorSolutionRemoveValues)}';
+		$Label.cf_ManagerAllAssignedErrorSolutionRemoveValuesMultiple = '{!JSENCODE($Label.cf_ManagerAllAssignedErrorSolutionRemoveValuesMultiple)}';
+		$Label.cf_ManagerAllAssignedErrorSolutionDeactivateForms = '{!JSENCODE($Label.cf_ManagerAllAssignedErrorSolutionDeactivateForms)}';
+		$Label.cf_ManagerAllAssignedErrorSolutionDeactivateFormsMultiple = '{!JSENCODE($Label.cf_ManagerAllAssignedErrorSolutionDeactivateFormsMultiple)}';
+		$Label.cf_ManagerAlreadyAssigned = '{!JSENCODE($Label.cf_ManagerAlreadyAssigned)}';
+		$Label.cf_ManagerAlreadyAssignedMultiple = '{!JSENCODE($Label.cf_ManagerAlreadyAssignedMultiple)}';
+		$Label.cf_ManagerAlreadyAssignedSolutionRemoveValue = '{!JSENCODE($Label.cf_ManagerAlreadyAssignedSolutionRemoveValue)}';
+		$Label.cf_ManagerAlreadyAssignedSolutionRemoveValueMultiple = '{!JSENCODE($Label.cf_ManagerAlreadyAssignedSolutionRemoveValueMultiple)}';
+		$Label.cf_ManagerAssignmentActivate = '{!JSENCODE($Label.cf_ManagerAssignmentActivate)}';
+		$Label.cf_ManagerAssignmentDeactivate = '{!JSENCODE($Label.cf_ManagerAssignmentDeactivate)}';
+		$Label.cf_ManagerAssignments = '{!JSENCODE($Label.cf_ManagerAssignments)}';
+		$Label.cf_ManagerAssignmentSelect = '{!JSENCODE($Label.cf_ManagerAssignmentSelect)}';
+		$Label.cf_ManagerAssignmentMakeSelection = '{!JSENCODE($Label.cf_ManagerAssignmentMakeSelection)}';
+		$Label.cf_ManagerAllAssignedError = '{!JSENCODE($Label.cf_ManagerAllAssignedError)}';
+		$Label.cf_ManagerCompany = '{!JSENCODE($Label.cf_ManagerCompany)}';
+		$Label.cf_ManagerDescription = '{!JSENCODE($Label.cf_ManagerDescription)}';
+		$Label.cf_ManagerDocumentType = '{!JSENCODE($Label.cf_ManagerDocumentType)}';
+		$Label.cf_ManagerListTitle = '{!JSENCODE($Label.cf_ManagerListTitle)}';
+		$Label.cf_ManagerTemplateType = '{!JSENCODE($Label.cf_ManagerTemplateType)}';
+		$Label.cf_ManagerLastModified = '{!JSENCODE($Label.cf_ManagerLastModified)}';
+		$Label.cf_ManagerLastModifiedBy = '{!JSENCODE($Label.cf_ManagerLastModifiedBy)}';
+		$Label.cf_ManagerStatus = '{!JSENCODE($Label.cf_ManagerStatus)}';
+		$Label.cf_ManagerStatusActive = '{!JSENCODE($Label.cf_ManagerStatusActive)}';
+		$Label.cf_ManagerStatusInactive = '{!JSENCODE($Label.cf_ManagerStatusInactive)}';
+		$Label.cf_ManagerNewTitle = '{!JSENCODE($Label.cf_ManagerNewTitle)}';
+		$Label.cf_ManagerNewObjectLabel = '{!JSENCODE($Label.cf_ManagerNewObjectLabel)}';
+		$Label.cf_ManagerNewModeLabel = '{!JSENCODE($Label.cf_ManagerNewModeLabel)}';
+		$Label.cf_ManagerDeleteTitle = '{!JSENCODE($Label.cf_ManagerDeleteTitle)}';
+		$Label.cf_ManagerDeleteMessage = '{!JSENCODE($Label.cf_ManagerDeleteMessage)}';
+		$Label.codaCancelButton = '{!JSENCODE($Label.codaCancelButton)}';
+		$Label.codaContinue = '{!JSENCODE($Label.codaContinue)}';
+		$Label.PunctuationComma = '{!JSENCODE($Label.PunctuationComma)}';
+		$Label.pleaseSelect = '{!JSENCODE($Label.pleaseSelect)}';
+		$Label.cf_TemplateNameMustBeSet = '{!JSENCODE($Label.cf_TemplateNameMustBeSet)}';
+		$Label.cf_TemplateNameSavingErrorTitle = '{!JSENCODE($Label.cf_TemplateNameSavingErrorTitle)}';
+		$Label.cf_BuilderRelatedListComponentConfigTitle = '{!JSENCODE($Label.cf_BuilderRelatedListComponentConfigTitle)}';
+		$Label.cf_BuilderRelatedListLabel = '{!JSENCODE($Label.cf_BuilderRelatedListLabel)}';
+		$Label.cf_BuilderRelatedList = '{!JSENCODE($Label.cf_BuilderRelatedList)}';
+		$Label.cf_BuilderRelatedListSortFieldLabel = '{!JSENCODE($Label.cf_BuilderRelatedListSortFieldLabel)}';
+		$Label.cf_BuilderRelatedListSortDirectionLabel = '{!JSENCODE($Label.cf_BuilderRelatedListSortDirectionLabel)}';
+		$Label.cf_BuilderRelatedListAvailableFieldsHeader = '{!JSENCODE($Label.cf_BuilderRelatedListAvailableFieldsHeader)}';
+		$Label.cf_BuilderRelatedListDisplayedFieldsHeader = '{!JSENCODE($Label.cf_BuilderRelatedListDisplayedFieldsHeader)}';
+		$Label.codaCancel = '{!JSENCODE($Label.codaCancel)}';
+		$Label.codaApplyButton = '{!JSENCODE($Label.codaApplyButton)}';
+		$Label.cf_BuilderRelatedListNoDisplayFields = '{!JSENCODE($Label.cf_BuilderRelatedListNoDisplayFields)}';
+		$Label.cf_BuilderItemGridSelectorTop = '{!JSENCODE($Label.cf_BuilderItemGridSelectorTop)}';
+		$Label.cf_BuilderItemGridSelectorUp = '{!JSENCODE($Label.cf_BuilderItemGridSelectorUp)}';
+		$Label.cf_BuilderItemGridSelectorAdd = '{!JSENCODE($Label.cf_BuilderItemGridSelectorAdd)}';
+		$Label.cf_BuilderItemGridSelectorAddAll = '{!JSENCODE($Label.cf_BuilderItemGridSelectorAddAll)}';
+		$Label.cf_BuilderItemGridSelectorRemove = '{!JSENCODE($Label.cf_BuilderItemGridSelectorRemove)}';
+		$Label.cf_BuilderItemGridSelectorRemoveAll = '{!JSENCODE($Label.cf_BuilderItemGridSelectorRemoveAll)}';
+		$Label.cf_BuilderItemGridSelectorDown = '{!JSENCODE($Label.cf_BuilderItemGridSelectorDown)}';
+		$Label.cf_BuilderItemGridSelectorBottom = '{!JSENCODE($Label.cf_BuilderItemGridSelectorBottom)}';
+		$Label.cf_BuilderAddEditRelatedList = '{!JSENCODE($Label.cf_BuilderAddEditRelatedList)}';
+		$Label.cf_BuilderCreateNewRelatedList = '{!JSENCODE($Label.cf_BuilderCreateNewRelatedList)}';
+		$Label.cf_BuilderRelatedListUpdate = '{!JSENCODE($Label.cf_BuilderRelatedListUpdate)}';
+		$Label.cf_EditRecord = '{!JSENCODE($Label.cf_EditRecord)}';
+		$Label.cf_DeleteRecord = '{!JSENCODE($Label.cf_DeleteRecord)}';
+		$Label.Error = '{!JSENCODE($Label.Error)}';
+		$Label.cf_CannotDragSelectedItem = '{!JSENCODE($Label.cf_CannotDragSelectedItem)}';
+		$Label.cf_CannotDragSelectedItemTitle = '{!JSENCODE($Label.cf_CannotDragSelectedItemTitle)}';
+		$Label.cf_DeleteAreYouSureTitle = '{!JSENCODE($Label.cf_DeleteAreYouSureTitle)}';
+		$Label.cf_DeleteRelatedListSureMessage = '{!JSENCODE($Label.cf_DeleteRelatedListSureMessage)}';
+		$Label.cf_BuilderRelatedListConfigInfoMsg ='{!JSENCODE($Label.cf_BuilderRelatedListConfigInfoMsg)}';
+	</script>
+
+	</c:fflib_extBootstrap>
+
+</apex:page>

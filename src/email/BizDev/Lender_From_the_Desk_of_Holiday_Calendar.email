@@ -1,0 +1,45 @@
+<table width="550" cellpadding="5" height="400" border="0" cellspacing="5" >
+<tr height="400" valign="top" >
+<td locked="0" style=" font-family:arial; bLabel:main; color:#000000; font-size:12pt; bEditID:r3st1; background-color:#FFFFFF;" aEditID="c1r1" tEditID="c1r1" >
+<![CDATA[<TABLE height=400 cellSpacing=5 cellPadding=5 width=600 border=0>
+<TBODY>
+<TR vAlign=top height=50>
+<TD style="FONT-SIZE: 12pt; COLOR: #000000; FONT-FAMILY: arial; BACKGROUND-COLOR: #ffffff; bLabel: main; bEditID: r3st1" tEditID="c1r1" aEditID="c1r1" locked="1"><FONT face="Times New Roman,Times,Serif" color=#000000 size=5>News from ASA<BR>From the Desk of Bill Fortier</FONT></TD></TR>
+<TR vAlign=top height=300>
+<TD style="FONT-SIZE: 12pt; COLOR: #000000; FONT-FAMILY: arial; BACKGROUND-COLOR: #ffffff; bLabel: main; bEditID: r3st1" tEditID="c1r2" aEditID="c1r2" locked="0">
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT face="Times New Roman,Times,Serif" color=#000000>Dear {!Contact.FirstName}, </FONT></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT face="Times New Roman,Times,Serif" color=#000000></FONT><SPAN style="COLOR: black; FONT-FAMILY: Geneva; mso-bidi-font-family: Arial"><?xml:namespace prefix = o ns = "urn:schemas-microsoft-com:office:office" /><o:p><SPAN style="FONT-FAMILY: Arial"><o:p><SPAN style="FONT-FAMILY: 'Palatino Linotype'"><SPAN style="FONT-FAMILY: 'Palatino Linotype'"><SPAN style="FONT-FAMILY: Arial"><o:p><SPAN style="FONT-FAMILY: Arial"><SPAN style="FONT-FAMILY: 'Palatino Linotype'; mso-bidi-font-family: Arial"><SPAN style="FONT-FAMILY: 'Palatino Linotype'; mso-bidi-font-family: Arial"><o:p><SPAN style="FONT-FAMILY: Arial"><o:p><SPAN style="FONT-FAMILY: Arial"><SPAN style="FONT-FAMILY: Arial"><o:p></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt"><SPAN style="FONT-FAMILY: Arial"><o:p><FONT face="Times New Roman,Times,Serif" color=#000000></FONT></o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT face="Times New Roman,Times,Serif" color=#000000></FONT><SPAN style="FONT-SIZE: 11pt; FONT-FAMILY: Arial">
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt"><SPAN style="COLOR: black; FONT-FAMILY: Arial"><o:p><FONT face="Times New Roman,Times,Serif" color=#000000 size=3></FONT></o:p></SPAN></P><SPAN style="COLOR: black; FONT-FAMILY: Arial"><o:p></o:p></SPAN>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT face="Times New Roman,Times,Serif" color=#000000 size=3></FONT>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt"><SPAN style="FONT-FAMILY: Arial"><FONT face="Times New Roman,Times,Serif" color=#000000 size=3><o:p></o:p></FONT></SPAN></P>
+<P><FONT face="Times New Roman,Times,Serif" color=#000000 size=3></FONT><SPAN style="FONT-FAMILY: Arial"><o:p></P>
+<P><FONT face="Times New Roman,Times,Serif" color=#000000 size=3></FONT></P></o:p></SPAN>
+<P><FONT face="Times New Roman,Times,Serif" color=#000000 size=3></FONT></P>
+<P><FONT face="Times New Roman,Times,Serif" color=#000000>&nbsp;</FONT><SPAN style="FONT-FAMILY: Arial"><SPAN style="mso-spacerun: yes"><FONT size=3><FONT face="Times New Roman,Times,Serif" color=#000000>&nbsp;</FONT><SPAN style="FONT-SIZE: 10pt; COLOR: #333333; FONT-FAMILY: Arial"><BR></SPAN></P><SPAN style="FONT-SIZE: 10pt; COLOR: #333333; FONT-FAMILY: Arial"><o:p><FONT color=#000000><SPAN style="FONT-SIZE: 12pt">
+<P class=MsoPlainText><SPAN style="FONT-SIZE: 10pt"><FONT face="Times New Roman,Times,Serif"><FONT size=3>ASA is proud to announce that new additions and enhancements to the lender portion of our website (www.amsa.com/lenders/index) are now live.&nbsp; <o:p></o:p></FONT></FONT></SPAN></P>
+<P class=MsoPlainText><FONT face="Times New Roman,Times,Serif" size=3><SPAN style="FONT-SIZE: 10pt"><o:p>&nbsp;</o:p></SPAN></FONT></P>
+<P class=MsoPlainText><SPAN style="FONT-SIZE: 10pt"><FONT face="Times New Roman,Times,Serif"><FONT size=3>The Strategic Lender Services team has revised these webpages to focus on your needs as ASA’s valued lender partners. The webpages include details about our Wellness services, training sessions, and your personal customer service contacts. We’re also excited to announce that all previous issues of The Partnership Exchange, ASA’s lender-focused quarterly newsletter, are now available in PDF format online. <o:p></o:p></FONT></FONT></SPAN></P>
+<P class=MsoPlainText><FONT face="Times New Roman,Times,Serif" size=3><SPAN style="FONT-SIZE: 10pt"><o:p>&nbsp;</o:p></SPAN></FONT></P>
+<P class=MsoPlainText><FONT face="Times New Roman,Times,Serif" size=3><SPAN style="FONT-SIZE: 10pt"><o:p>&nbsp;</o:p></SPAN></FONT><SPAN style="FONT-SIZE: 10pt"><FONT face="Times New Roman,Times,Serif"><FONT size=3>Remember to check our website often, as we will be updating it frequently, and be sure to visit The Partnership Exchange webpage in January when we will be publishing the newsletter’s winter 2010 edition.<o:p></o:p></FONT></FONT></SPAN></P>
+<P class=MsoPlainText><FONT face="Times New Roman,Times,Serif" size=3><SPAN style="FONT-SIZE: 10pt"><o:p>&nbsp;</o:p></SPAN></FONT></P>
+<P class=MsoPlainText><SPAN style="FONT-SIZE: 10pt"><FONT face="Times New Roman,Times,Serif"><FONT size=3>We hope that this revised portion of our website will be a valuable resource for you. Please feel free to contact us with any question, concerns, or additional information you would like to see online.&nbsp; <o:p></o:p></FONT></FONT></SPAN></P>
+<P class=MsoNormal></SPAN><SPAN style="FONT-SIZE: 12pt"><FONT face="Times New Roman,Times,Serif">&nbsp;<o:p></o:p></FONT></SPAN></P>
+<P class=MsoNormal><FONT face="Times New Roman,Times,Serif"><SPAN style="FONT-SIZE: 12pt"><o:p></o:p></SPAN></FONT></P>
+<P class=MsoNormal><FONT face="Times New Roman"><SPAN style="FONT-SIZE: 12pt"><FONT face="Times New Roman,Times,Serif">Thank you; we hope you have a happy holiday.</FONT>&nbsp;&nbsp;</SPAN></FONT></P>
+<P class=MsoNormal><FONT face="Times New Roman" size=3><SPAN style="FONT-SIZE: 12pt"></SPAN></FONT>&nbsp;</P><FONT face="Times New Roman" size=3><SPAN style="FONT-SIZE: 12pt">
+<P class=MsoNormal><STRONG><B><I><FONT face="Times New Roman" size=3><SPAN style="FONT-SIZE: 12pt; FONT-STYLE: italic">Bill Fortier</SPAN></FONT></I></B></STRONG><o:p></o:p></P>
+<P class=MsoNormal><FONT face="Times New Roman" size=3><SPAN style="FONT-SIZE: 12pt">&nbsp;<o:p></o:p></SPAN></FONT></P>
+<P class=MsoNormal><STRONG><B><I><FONT face="Times New Roman" size=3><SPAN style="FONT-SIZE: 12pt; FONT-STYLE: italic">ASA, Lender Relationship Manager</SPAN></FONT></I></B></STRONG><o:p></o:p></P>
+<P class=MsoNormal><EM><I><FONT face="Times New Roman" size=3><SPAN lang=FR style="FONT-SIZE: 12pt">100 Cambridge Street, Suite 1600</SPAN></FONT></I></EM><o:p></o:p></P>
+<P class=MsoNormal><EM><I><FONT face="Times New Roman" size=3><SPAN lang=FR style="FONT-SIZE: 12pt">Boston, MA&nbsp; 02114</SPAN></FONT></I></EM><o:p></o:p></P>
+<P class=MsoNormal><EM><I><FONT face="Times New Roman" size=3><SPAN lang=FR style="FONT-SIZE: 12pt">Phone: 617-728-4692</SPAN></FONT></I></EM><o:p></o:p></P>
+<P class=MsoNormal><EM><I><FONT face="Times New Roman" size=3><SPAN lang=FR style="FONT-SIZE: 12pt">Fax: 617-521-6154</SPAN></FONT></I></EM><o:p></o:p></P>
+<P class=MsoNormal><EM><I><FONT face="Times New Roman" size=3><SPAN lang=FR style="FONT-SIZE: 12pt">E-mail: </SPAN><A title=mailto:wfortier@amsa.com href="mailto:wfortier@amsa.com"><SPAN lang=FR title=mailto:wfortier@amsa.com><SPAN title=mailto:wfortier@amsa.com>wfortier@amsa.c</SPAN><SPAN lang=FR title=mailto:wfortier@amsa.com>o</SPAN></SPAN><SPAN lang=FR title=mailto:wfortier@amsa.com>m</SPAN></A></FONT></I></EM></P></SPAN></FONT></FONT></o:p></SPAN>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt">
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt"><SPAN style="FONT-SIZE: 10pt; COLOR: #333333; FONT-FAMILY: Arial"><FONT color=#000000><o:p></o:p></FONT></SPAN></P>
+<P></FONT></P></SPAN></SPAN></SPAN></o:p></SPAN></SPAN></o:p></SPAN></o:p></SPAN></SPAN></SPAN></o:p></SPAN></SPAN></SPAN></o:p></SPAN></o:p></SPAN><FONT face="Times New Roman"><EM><SPAN style="FONT-SIZE: 12pt; mso-no-proof: yes; mso-ansi-language: EN-US; mso-fareast-font-family: 'Times New Roman'; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"></SPAN></EM></FONT><FONT face=Geneva,Arial,Sans-Serif><BR></FONT><FONT face=Geneva,Arial,Sans-Serif size=1>The content of this email is confidential and proprietary to American Student Assistance. It is intended only for the above-named individual or entity and for the purpose indicated and may not be reproduced or distributed without permission of the sender. Please notify the sender or ASA if you received this email in error.</FONT> 
+<P></P></TD></TR></TBODY></TABLE>]]></td>
+</tr>
+</table>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Industry &amp; Regulatory Update Series Springfield Registration Confirmation</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>EmailLetterhead</letterhead>
+    <name>Industry &amp; Regulatory Updates Springfield Registration Confirmation</name>
+    <style>promotionRight</style>
+    <subject>ASA Industry and Regulatory Update – Registration Confirmation</subject>
+    <textOnly>This is a friendly reminder of your registration for ASA’s upcoming Industry and Regulatory Update with Paul Combe, President and CEO, and Betsy Mayotte, Director of Regulatory Compliance and Privacy.  
+ 
+Tuesday, April 29, 2008
+8:30 am – 12:00 pm (Continental breakfast will be provided.)
+Springfield College
+Manley Room, Beveridge Center
+Directions
+Campus Map (#40 on map)
+ 
+We encourage you to submit any relevant questions you would like Paul or Betsy to discuss at this session.  To do so, please email your questions to training@amsa.com.
+
+Canceling Your Registration
+If you need to cancel or change your training registration please email training@amsa.com or call the Training Department at (800) 999-9080, ext. 3099.
+
+Other Information
+All of ASA&apos;s training programs are offered free of charge.  Please contact us at training@amsa.com or (800) 999-9080, ext. 3099 with any questions about our training program.
+ 
+We look forward to seeing you!</textOnly>
+    <type>html</type>
+</EmailTemplate>

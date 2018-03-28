@@ -1,0 +1,7 @@
+<apex:page standardController="c2g__codaInvoice__c" tabstyle="CommunitiesMyAccount__tab">
+
+	<apex:sectionHeader title="{!$Label.c2g__communitiesinvoicedetail}" subtitle="{!c2g__codaInvoice__c.Name}"/>
+	<chatter:feed entityid="{!c2g__codaInvoice__c.Id}"/>
+	<apex:detail subject="{!c2g__codaInvoice__c.Id}" title="false"/> 
+
+</apex:page>

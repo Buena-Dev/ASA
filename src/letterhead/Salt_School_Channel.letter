@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Letterhead xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <backgroundColor>#CCCCCC</backgroundColor>
+    <bodyColor>#FFFFFF</bodyColor>
+    <bottomLine>
+        <color>#FFFFFF</color>
+        <height>5</height>
+    </bottomLine>
+    <description>Salt header/footer email to be used for communications with the School Channel.
+(New Logo 8-2016)</description>
+    <footer>
+        <backgroundColor>#FFFFFF</backgroundColor>
+        <height>100</height>
+        <horizontalAlignment>Left</horizontalAlignment>
+        <logo>Logos_Identity/Salt_Email_Footer.png</logo>
+        <verticalAlignment>Top</verticalAlignment>
+    </footer>
+    <header>
+        <backgroundColor>#FFFFFF</backgroundColor>
+        <height>100</height>
+        <horizontalAlignment>Left</horizontalAlignment>
+        <logo>Logos_Identity/Salt_Logo_for_Invoice.jpg</logo>
+        <verticalAlignment>Top</verticalAlignment>
+    </header>
+    <middleLine>
+        <color>#5bc500</color>
+        <height>5</height>
+    </middleLine>
+    <name>Salt School Channel</name>
+    <topLine>
+        <color>#003763</color>
+        <height>5</height>
+    </topLine>
+</Letterhead>

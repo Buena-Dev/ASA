@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Servicer Form expiration is approaching - sent 60 and 30 days prior to expiration date</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Servicer Form Expiration</name>
+    <style>none</style>
+    <subject>{!SALT_Servicers__c.Account__c} has Servicer Access approaching expiration!</subject>
+    <type>text</type>
+</EmailTemplate>

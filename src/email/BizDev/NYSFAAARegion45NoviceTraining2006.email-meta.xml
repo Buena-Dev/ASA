@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>false</available>
+    <description>Thank you letter for the 2006 NYSFAAA Region 4&amp;5 Novice Training event</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>EmailLetterhead</letterhead>
+    <name>NYSFAAA Region 4&amp;5 Novice Training - 2006</name>
+    <style>freeForm</style>
+    <subject>Thank you for attending the NYSFAAA Region 4 &amp; 5 Novice Training Event</subject>
+    <textOnly>Dear {!Contact.FirstName},
+On behalf of American Student Assistance, thank you for taking time out of your busy schedule to attend the NYSFAAA Region 4 &amp; 5 Novice Training Event.  Now that you’ve returned to the office, you’re probably thinking about ways you can make the upcoming year less stressful for your students and your staff.  I would like to take this opportunity to tell you how we can assist you in that goal.  
+American Student Assistance has developed a comprehensive series of trainings and workshops on topics that matter most to the financial aid professional.  We’ve designed our trainings with your needs in mind.  All ASA trainings are offered free of charge to schools and partners because we know that budgets are tight.  ASA courses are perfect for state association events, staff retreats, and office planning days.  We can also design customized trainings to meet your institution’s specific needs.
+If you are interested in learning more about ASA or would like to schedule an individual training at your institution, we invite you to view our website at www.amsa.com or feel free to contact me directly if you have any questions.  I look forward to speaking with you soon.
+Sincerely,
+
+{!Contact.OwnerFullName}
+{!Contact.OwnerTitle}
+{!Contact.OwnerPhone}
+American Student Assistance</textOnly>
+    <type>html</type>
+</EmailTemplate>

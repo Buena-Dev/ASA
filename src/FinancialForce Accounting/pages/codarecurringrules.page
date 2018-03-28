@@ -1,0 +1,148 @@
+<!-- codarecurringrules -->
+<apex:page controller="c2g.CODARecurringRulesController" tabStyle="c2g__codaInvoice__c" extensions="c2g.CODAHelpLoaderController">
+    <script src="{!URLFOR($Resource.coda2go,'coda2go/web/script/lib.js')}" type="text/javascript"></script>
+    <apex:stylesheet value="{!URLFOR($Resource.c2g__coda2go,'coda2go/web/css/style.css')}"/>
+    <script>
+		var CODA2GoButtons = new CODA2GoPage();
+		var CODA2GoBtnSaveValue = '{!$Label.codaProcessing}';
+	</script>
+   	<apex:form onsubmit="if(CODA2GoButtons.disableSaveButtons){ return CODA2GoButtons.disableSaveButtons(); }">
+   		<DIV id="indicator"><img src="/s.gif" align="absMiddle"/><span id="indicatortext"></span></DIV>
+   		
+        <!-- Header -->
+        <apex:sectionHeader title="{!$Label.c2g__codapagerecurringrulesrecurringinvoices}" subtitle="{!$Label.c2g__codapagerecurringrulesnew}" help="{!redirectForHelp1010}"/>
+
+        <!-- Messages -->
+		<apex:pageMessages id="messagePanel"/>
+		
+		<!-- Action Functions -->
+		<apex:actionfunction name="reloadAlternateAccount" action="{!populateAlternateAccountOnDimensionsChange}" oncomplete="CODA2GoButtons.enableSaveButtons();CODA.resumeQueueProcessing();CODA.indicatorOff();" rerender="dtProducts">
+			<apex:param name="lineNumber" value=""/>
+		</apex:actionfunction>
+
+        <!-- Recurring Rules Detail -->
+        <apex:pageBlock title="{!$Label.c2g__codapagerecurringrulesinvoicefromopportunity}" mode="edit">
+            <!-- Buttons -->
+            <apex:pageBlockButtons >
+               	<!-- Hidden Buttons -->
+				<apex:commandButton value="{!$Label.c2g__codarecurringrulessavebutton}" action="{!save}" id="save_h" onClick="javascript:alert('{!$Label.c2g__codapagerecurringrulesviewalert}');" styleclass="hiddensubmit"/>
+				<apex:commandButton value="{!$Label.c2g__codarecurringrulessaveandpostbutton}" action="{!saveAndPost}" id="save_post_h" onClick="javascript:alert('{!$Label.c2g__codapagerecurringrulesviewalert}');" styleclass="hiddensubmit"/>
+				<apex:commandButton value="{!$Label.c2g__codarecurringrulescancelbutton}" action="{!cancel}" id="cancel_h" styleclass="hiddensubmit" immediate="true"/>
+				<!--  End of Hidden Buttons-->
+				<apex:commandButton value="{!$Label.c2g__codarecurringrulessavebutton}" id="save" rerender="" onclick="if(!CODA.queing()){document.getElementById('{!$Component.save_h}').click()};return false;" rendered="{!$Permission.c2g__SalesInvoiceSave || $Setup.codaAccountingSettings__c.DisableCustomPermissions__c}"/>
+				<apex:commandButton value="{!$Label.c2g__codarecurringrulessaveandpostbutton}" id="save_post" rerender="" onclick="if(!CODA.queing()){document.getElementById('{!$Component.save_post_h}').click()};return false;" rendered="{!($Permission.c2g__SalesInvoiceSave && $Permission.c2g__SalesInvoicePost) || $Setup.codaAccountingSettings__c.DisableCustomPermissions__c}"/>
+				<apex:commandButton value="{!$Label.c2g__codarecurringrulescancelbutton}" id="cancel" rerender="" onclick="if(!CODA.queing()){document.getElementById('{!$Component.cancel_h}').click()};return false;"/>
+                <script>
+	                CODA2GoButtons.initButtons(["{!$Component.save}", "{!$Component.save_post}","{!$Component.cancel}"]);
+				</script>
+            </apex:pageBlockButtons>
+	        <!-- Account Detail Section -->
+	        <apex:pageBlockSection title="{!$Label.c2g__codapagerecurringrulesaccountdetail}" collapsible="false">
+	        	<apex:pageBlockSectionItem >
+        			<apex:outputLabel id="accountNameLabel" value="{!$Label.c2g__codapagecashentrynewaccount}" for="accountName" />
+					<apex:outputPanel id="outputPanelHolder">
+						<apex:outputPanel id="accountPanel">
+    	    				<apex:outputField id="accountName" value="{!viewstate.invoiceObject.c2g__Account__c}" />
+    	    			</apex:outputPanel>
+						<c:AnalysisPopup >
+							<c:SubAnalysis record="{!viewstate.invoiceObject}"
+                            	title="{!$Label.c2g__codaaccountanalysis}"
+                            	id="headerDimensionBlock"
+                            	readOnly="false"
+                            	amend="false"/>
+						</c:AnalysisPopup>
+					</apex:outputPanel>		
+	   			</apex:pageBlockSectionItem>
+				<apex:outputField id="opportunity" value="{!viewState.invoiceObject.c2g__Opportunity__c}" />
+				<apex:pageBlockSectionItem >
+					<apex:outputLabel value="{!$Label.c2g__codapagerecurringrulesbillingaddress}" for="billingAddress" />
+					<apex:outputText id="billingAddress" value="{!viewstate.billingAddress}" />
+				</apex:pageBlockSectionItem>
+				<apex:pageBlockSectionItem >
+					<apex:outputLabel value="{!$Label.c2g__codapagerecurringrulesshippingaddress}" for="shippingAddress" />
+					<apex:outputText id="shippingAddress" value="{!viewstate.shippingAddress}" />
+				</apex:pageBlockSectionItem>
+	        </apex:pageBlockSection>
+	        <!-- Invoice Detail Section -->
+	        <apex:pageBlockSection title="{!$Label.c2g__codapagerecurringrulesinvoicedetail}" collapsible="false">
+	        	<apex:inputField id="customerReference" value="{!viewState.invoiceObject.c2g__CustomerReference__c}" />
+	        	<apex:inputField id="shippingMethod" value="{!viewState.InvoiceObject.c2g__ShippingMethod__c}" />
+	        	<apex:inputField id="invoiceDescription" value="{!viewState.InvoiceObject.c2g__InvoiceDescription__c}" styleClass="largeTextArea"/>
+	        </apex:pageBlockSection>
+	 		<!--  Recurring Invoices Details Section -->
+	    	<apex:pageBlockSection title="{!$Label.c2g__codapagerecurringrulesrecurringinvoicedetails}" columns="1" collapsible="false">   
+	     		<apex:pageBlockTable id="dtProducts" value="{!viewState.ProductLineItem}" var="pRecurringRules">
+	     			<apex:column styleClass="widthauto">
+	                    <apex:facet name="header">{!$Label.c2g__codapagerecurringrulesproduct}</apex:facet>
+	                    <apex:outputField id="productCode" value="{!pRecurringRules.Product.Dto.ProductCode}"/>                    
+	                </apex:column>
+	                <apex:column styleClass="widthauto">
+	                    <apex:facet name="header">{!$Label.c2g__codapagerecurringrulesproductdescription}</apex:facet>
+	                    <apex:outputField id="description" value="{!pRecurringRules.InvoiceLineItem.Dto.c2g__Product__c}"/>
+	                </apex:column>
+	                <apex:column styleClass="widthauto" rendered="{!viewstate.EnableOverrideProductGLA}">
+	                    <apex:facet name="header">{!$ObjectType.c2g__codaInvoiceLineItem__c.fields.c2g__GeneralLedgerAccount__c.label}</apex:facet>
+	                    <apex:outputField id="gla" value="{!pRecurringRules.InvoiceLineItem.Dto.c2g__GeneralLedgerAccount__c}"/>
+	                </apex:column>
+	                <apex:column styleClass="widthauto" rendered="{!viewstate.EnableOverrideProductGLA}">
+	                    <apex:facet name="header">{!$ObjectType.c2g__codaInvoiceLineItem__c.fields.c2g__LocalGLA__c.label}</apex:facet>
+	                    <apex:outputField id="localGla" value="{!pRecurringRules.InvoiceLineItem.Dto.c2g__LocalGLA__c}"/>
+	                </apex:column>
+	                <apex:column styleClass="widthmedium">
+	                    <apex:facet name="header">{!$Label.c2g__codapagecashmatchingdimension1}</apex:facet>
+	                    <apex:inputField id="dimension1" value="{!pRecurringRules.InvoiceLineItem.Dto.c2g__Dimension1__c}" styleClass="lookupColumnWidth"/>
+	                    <script>
+                            CODA.addQueuedOnBlurEventWithParam(null, "{!$Component.dimension1}", "{!$Label.c2g__chartofaccountsmappingsretrieving}", reloadAlternateAccount, {!pRecurringRules.InvoiceLineItem.dto.c2g__LineNumber__c}, true);
+                        </script>
+	                </apex:column>
+	                <apex:column styleClass="widthmedium">
+	                    <apex:facet name="header">{!$Label.c2g__codapagecashmatchingdimension2}</apex:facet>
+	                    <apex:inputField id="dimension2" value="{!pRecurringRules.InvoiceLineItem.Dto.c2g__Dimension2__c}" styleClass="lookupColumnWidth"/>
+	                    <script>
+                            CODA.addQueuedOnBlurEventWithParam(null, "{!$Component.dimension2}", "{!$Label.c2g__chartofaccountsmappingsretrieving}", reloadAlternateAccount, {!pRecurringRules.InvoiceLineItem.dto.c2g__LineNumber__c}, true);
+                        </script>
+	                </apex:column>
+	                <apex:column styleClass="widthmedium">
+	                    <apex:facet name="header">{!$Label.c2g__codapagecashmatchingdimension3}</apex:facet>
+	                    <apex:inputField id="dimension3" value="{!pRecurringRules.InvoiceLineItem.Dto.c2g__Dimension3__c}" styleClass="lookupColumnWidth"/>
+	                    <script>
+                            CODA.addQueuedOnBlurEventWithParam(null, "{!$Component.dimension3}", "{!$Label.c2g__chartofaccountsmappingsretrieving}", reloadAlternateAccount, {!pRecurringRules.InvoiceLineItem.dto.c2g__LineNumber__c}, true);
+                        </script>
+	                </apex:column>
+	                <apex:column styleClass="widthmedium">
+	                    <apex:facet name="header">{!$Label.c2g__codapagecashmatchingdimension4}</apex:facet>
+	                    <apex:inputField id="dimension4" value="{!pRecurringRules.InvoiceLineItem.Dto.c2g__Dimension4__c}" styleClass="lookupColumnWidth"/>
+	                    <script>
+                            CODA.addQueuedOnBlurEventWithParam(null, "{!$Component.dimension4}", "{!$Label.c2g__chartofaccountsmappingsretrieving}", reloadAlternateAccount, {!pRecurringRules.InvoiceLineItem.dto.c2g__LineNumber__c}, true);
+                        </script>
+	                </apex:column>
+				</apex:pageBlockTable>
+			</apex:pageBlockSection>
+	        <!-- Invoices to be generated section -->
+	        <apex:pageBlockSection title="{!$Label.c2g__codainvoicestobegenerated}" columns="1" collapsible="false">
+	            <apex:pageBlockTable id="dtRecurringRules" value="{!viewState.ruleLineItems}" var="recurringRules">
+	                <apex:column >
+	                    <apex:facet name="header">{!$Label.c2g__codapagerecurringrulesinvoicedate}</apex:facet>
+	                    <apex:outputField id="invDate" value="{!recurringRules.LookupInvoiceDate.Dto.c2g__LookupDate__c}"/>
+	                </apex:column>
+	                <apex:column >
+	                    <apex:facet name="header">{!$Label.c2g__codapagerecurringrulesyearperiod}</apex:facet>
+	                    <apex:outputText id="period" value="{!recurringRules.YearPeriod}"/>
+	                </apex:column>
+	                <apex:column >
+	                    <apex:facet name="header">{!$Label.c2g__codapagerecurringrulesduedate}</apex:facet>
+	                    <apex:inputField id="dueDate" value="{!recurringRules.LookupDueDate.Dto.c2g__LookupDate__c}" styleClass="columnWidth" required="true"/>
+	                </apex:column>                  
+	                <apex:column >
+	                    <apex:facet name="header">{!$Label.c2g__codapagerecurringrulescurrency}</apex:facet>
+	                    <apex:outputText id="currency" value="{!recurringRules.Currency}"/>
+	                </apex:column>                  
+	                <apex:column >
+	                    <apex:facet name="header">{!$Label.c2g__codapagerecurringrulestotalamount}</apex:facet>
+	                    <apex:outputText styleClass="alignright widthauto" id="totalAmount" value="{!recurringRules.Amount}"/>
+	                </apex:column>                  
+	            </apex:pageBlockTable>
+	        </apex:pageBlockSection>
+	    </apex:pageBlock>      
+    </apex:form>
+</apex:page>

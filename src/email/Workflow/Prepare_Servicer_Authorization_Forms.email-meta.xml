@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Request to School Implementation Specialist to prepare servicer authorization forms for renewing school partners.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Prepare Servicer Authorization Forms</name>
+    <style>none</style>
+    <subject>Prepare Servicer Authorization Forms for {!Account.Name}</subject>
+    <type>text</type>
+</EmailTemplate>

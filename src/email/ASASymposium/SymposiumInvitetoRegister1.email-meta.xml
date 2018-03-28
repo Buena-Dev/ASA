@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>false</available>
+    <description>Invitation for ASA Symp206 to register on line (1)</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>EmailLetterhead</letterhead>
+    <name>Symposium Invite to Register 1</name>
+    <style>freeForm</style>
+    <subject>Registration now available for ASA Symposium</subject>
+    <textOnly>June 19 &amp; 20, 2006
+American Student Assistance
+Annual Symposium · Boston, MA
+Insights:  A Conversation on Student Debt
+Join your colleagues from around the country in a thoughtful discussion on the short- and long-term impact of debt on students.  Does the possibility of excessive debt play a role in students’ college and career decisions?  For some students, do the drawbacks of debt actually cancel out the benefits of a higher education?  Let’s talk about what we as an industry can do to lessen the impact of debt—so that students make the life choices they want rather than those they must for financial reasons.
+Symposium highlights will include:
+
+Juan Williams, senior correspondent for NPR and political analyst for Fox Television 
+Tamara Draut, author of Strapped: Why America&apos;s 20- and 30-Somethings Can&apos;t Get Ahead 
+Anya Kamenetz, author of Generation Debt: Why Now Is a Terrible Time to Be Young 
+A specific session track for graduate/professional school financial aid administrators 
+Our student panel - back by popular demand!  Panelists will share their own real life student debt experiences. 
+ The symposium will be conveniently located at the Hyatt Harborside at Boston’s Logan Airport—minutes away from downtown Boston, Faneuil Hall Marketplace and more!  
+Online registration is now availablle at www.amsa.com/events 
+Keep an eye out for more symposium details and a full agenda in the coming weeks.  See you in June!</textOnly>
+    <type>html</type>
+</EmailTemplate>

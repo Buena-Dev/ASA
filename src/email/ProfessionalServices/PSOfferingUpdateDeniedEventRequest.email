@@ -1,0 +1,4 @@
+This event was recently denied, however additional information about the denial must be added to the Event record.  Specifically, the Event Owner should be reset back to the user who requested the event and the Sub-Status needs to be updated.
+
+You may use this link to access the event:
+{!Pro_Services_Offering__c.Link}

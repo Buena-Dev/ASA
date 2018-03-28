@@ -1,0 +1,20 @@
+The following Opportunity has been WON!  This win means that the school has chosen ASA and SALT.  This account is now ready to begin Implementation.  The Win detail is below for you review. 
+
+Primary Win Reason:  {!Opportunity.Primary_Win_Reason__c}
+
+Secondary Win Reason: {!
+
+Opportunity.Secondary_Win_Reason__c}
+
+Analysis:  {!Opportunity.Win_Loss_Analysis__c}
+
+Loss Stage:  {!Opportunity.Loss_Stage__c}
+
+For more detailed information click the link below:
+{!Opportunity.Link}
+
+
+Sincerely,
+
+{!Opportunity.OwnerFullName}
+via Salesforce

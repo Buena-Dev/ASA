@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Press Release</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>EmailLetterhead</letterhead>
+    <name>Public Relations</name>
+    <style>formalLetter</style>
+    <subject>American Student Assistance Saves Additional 15,000 Borrowers from Consequences of Student Loan Default</subject>
+    <textOnly>For Immediate Release – January 15, 2008
+ 
+Contact:  Allesandra Lanza, 617 728 4631, lanza@amsa.com
+ 
+AMERICAN STUDENT ASSISTANCE EXCEEDS DEFAULT PREVENTION PERFORMANCE GOALS
+ 
+Saves Additional 15,000 Borrowers from Consequences of Student Loan Default
+ 
+Boston, MA – Federal student loan guarantor American Student Assistance®, pioneer of the concept of financial wellness for student loans, has once again surpassed its default prevention performance goals set by the U.S. Department of Education, thanks to its special Voluntary Flexible Agreement.
+ 
+According to statistics just released by the Department, ASA’s annual default “trigger” rate for federal fiscal year 2007 stands at 1.13 percent, over 40 percent better than the national average.  That means in the last year ASA prevented an additional $272 million in student loan defaults, saving more than 15,000 additional borrowers from a damaged credit record and adverse collection methods like wage garnishment and seizure of tax refunds.
+ 
+ASA’s VFA set in place a “baseline index,” a performance incentive associated with improving the default rate on ASA guaranteed loans as compared to the FFELP industry on a national basis.  2007 will mark the fifth year in a row that the organization exceeded this performance goal.
+ 
+The trigger rate represents the amount of loans in a guarantor’s portfolio that default in one fiscal year, as a percentage of the amount of loans in repayment in that same fiscal year.  The Department uses the trigger rate to monitor a guarantor’s success at default aversion. The lower a guarantor’s trigger rate, the better its success in default prevention.
+ 
+ASA’s trigger rate has consistently been well below the national trigger rate, on average by 44 percent, each year since the implementation of its VFA in 2001.  Voluntary Flexible Agreements between a FFELP guarantor and the Department of Education transition the guarantor financing model from one focused on default collection to proactive delinquency and default prevention.
+ 
+In just the first six years of operating its VFA, ASA has documented savings to the federal government and taxpayers of millions of dollars per year in prevented student loan defaults; achieved the lowest Cohort Default Rate of any guarantor in the nation, at just 1.5 percent; and helped thousands of borrowers avoid payment problems before they occur.
+ 
+“Our 2007 trigger rate is more proof that the VFA model accomplishes what it set out to do – help students and parents better manage their education loan debt,” said Paul Combe, ASA president and CEO.  “The VFA aligns our federal funding with our public purpose mission of preventing repayment problems before they begin.  In a time when rising student debt has become a national social issue, ASA’s VFA has more than proven its worth.”
+ 
+About American Student Assistance
+American Student Assistance helps college students and their parents to manage higher education debt successfully. Its unique Wellness programs give borrowers the support they need to avoid default. Incorporated in 1956, ASA was the nation’s first student loan guarantee agency and a model for the federal student loan guarantee program. The company ensures that the public policy purposes and regulatory requirements of the Federal Family Education Loan Program (FFELP) are met. ASA delivers quality FFELP default prevention, guarantee, origination and fund delivery services to students, parents, schools and lenders nationwide. ASA guarantees more than $2 billion in student loans annually and currently manages a student loan portfolio worth more than $40 billion. Based in Boston, ASA employs more than 600 associates nationwide. Visit www.amsa.com &lt;http://www.amsa.com/&gt; or call 800.999.9080 for more information.
+###</textOnly>
+    <type>html</type>
+</EmailTemplate>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>false</available>
+    <description>Breakfast Series Phoenix invite 2006</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>EmailLetterhead</letterhead>
+    <name>Breakfast Series Invite - Phoenix</name>
+    <style>freeForm</style>
+    <subject>Mark your calendar for a chance to give us your feedback</subject>
+    <textOnly>Dear {!Contact.FirstName},
+ 
+SAVE THE DATE
+October 18, 2006, 9 – 11 a.m.
+Phoenix, AZ
+
+HAVE BREAKFAST WITH US!
+
+American Student Assistance® is always looking for ways to incorporate 
+your suggestions into our business.
+
+What are our strengths?  How can we improve?  
+We want to hear from you!
+
+So mark your calendars for an interactive feedback session.  
+Unable to attend?  WebEx is provided to link you live with the participants!  
+More information to come.</textOnly>
+    <type>html</type>
+</EmailTemplate>

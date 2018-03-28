@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Account.Contacts__r$LastName</field>
+    </columns>
+    <columns>
+        <field>Account.Contacts__r$FirstName</field>
+    </columns>
+    <columns>
+        <field>Account.Contacts__r$Name</field>
+    </columns>
+    <columns>
+        <field>Account.Contacts__r$Title</field>
+    </columns>
+    <columns>
+        <field>Account.Contacts__r$Email</field>
+    </columns>
+    <columns>
+        <field>Account.Contacts__r$Academic_Year__c</field>
+    </columns>
+    <columns>
+        <field>Account.Contacts__r$Ambassador_Certified__c</field>
+    </columns>
+    <columns>
+        <field>Account.Contacts__r$HasOptedOutOfEmail</field>
+    </columns>
+    <description>Full Listing of All Salt Ambassadors, by school</description>
+    <filter>
+        <criteriaItems>
+            <column>Account.Contacts__r$Title</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>SALT Ambassador</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account$Name</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>notEqual</operator>
+            <value>ASA University</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Account$Name</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Salt Ambassador Report &amp; Accounts</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Ambassador_Contacts__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <sortColumn>Account.Contacts__r$LastName</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>Account$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

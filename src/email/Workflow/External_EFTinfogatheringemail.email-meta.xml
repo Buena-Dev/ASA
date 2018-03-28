@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Send to school to gather EFT information for profile set up</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>SALTClientLetterhead</letterhead>
+    <name>External_EFT info gathering email</name>
+    <style>formalLetter</style>
+    <subject>Information Gathering EFT</subject>
+    <textOnly>School Name: {!Account.Name}
+School Code: {!Account.OE_Code__c}
+Please complete the following banking information for the EFT set up.
+
+EFT Account Information
+Bank Name: 
+ABA Routing Number:
+Deposit Account Number: 
+Deposit Account Type:  {Savings or Checking}
+Federal Tax ID Number:</textOnly>
+    <type>html</type>
+</EmailTemplate>

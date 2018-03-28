@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>OK PD Day 2008 Save the date</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>EmailLetterhead</letterhead>
+    <name>PD Day - OK -  2008 (Save the Date)</name>
+    <style>promotionRight</style>
+    <subject>Save the Date!  ASA Training Event</subject>
+    <textOnly>Save the date for a workshop that helps refine your skills and keeps you informed.  
+
+ 
+Keep up with some of the latest happenings in the financial aid industry. 
+National FFELP guarantor American Student Assistance® has designed a full day training event to discuss some of the hottest topics affecting financial aid offices! 
+ 
+Agenda: 
+
+8:30am Continental Breakfast 
+9:00am Understanding the Millennial Generation
+12:00pm Lunch 
+1:00pm Where is it Written?
+3:30pm Adjourn
+ 
+
+
+May 13, 2008
+(8:30am  - 3:30pm)
+ 
+Understanding the Millennial Generation and their Impact on Campus
+Throughout the course of this workshop, we will provide you with the necessary tools for bridging the communication gap between your office and the high population of millennial students in academia today. We will also discuss specific tools to assist you in dealing with “helicopter parents” who are often intimately involved in the financial aid decision-making process with these students. In addition, we will explore the new expectations your students have when communicating with your office by mail, telephone, or e-mail.
+ 
+Where is it Written?
+Update your Title IV regulation and process research skills; learn to navigate the Internet effectively for the most up-to-date FFELP information and resources, such as the Common Manual, Federal Registers, and useful websites; increase your problem solving skills; and discover useful industry tools for administering Title IV. You&apos;ll also find out how a proposed regulation becomes law.
+ 
+Continental breakfast and lunch will be provided. 
+ 
+For more information please contact 
+Steve Greenough
+Regional Account Executive 
+American Student Assistance 
+800-999-9080 Ext. 6154 
+sgreenough@amsa.com
+www.amsa.com
+ 
+ 
+
+May 13, 2008
+ 
+We are offering two sessions in our full day workshop. Please join us!
+
+8:30am  - 3:30pm 
+Continental breakfast and lunch will be provided
+ 
+       
+
+ 
+How to register or for additional information, including driving directions
+ 
+Register Online at 
+http://www.amsa.com/fap/training
+ 
+ 
+May 13, 2008
+(8:30am  - 3:30pm)
+David L Boren Student Union at The University of Oklahoma Health Sciences Center
+1106 N. Stonewall Avenue
+Oklahoma City, Oklahoma 73126
+ 
+http://student-affairs.ouhsc.edu/union/index.asp</textOnly>
+    <type>html</type>
+</EmailTemplate>

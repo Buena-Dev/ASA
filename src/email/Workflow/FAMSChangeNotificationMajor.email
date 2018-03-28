@@ -1,0 +1,9 @@
+{!Receiving_User.FirstName},
+{!Case.Account} is changing their process.  Please review the Case below and report the progress throughout the customer's process change / revised implementation.
+
+School Process Flow: {!Case.School_Process_Flow__c}
+
+Case Details: {!Case.Link}
+
+Thank you
+ASA

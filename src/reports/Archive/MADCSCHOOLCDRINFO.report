@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>ACCOUNT.NAME</field>
+    </columns>
+    <columns>
+        <field>Account.OE_Code__c</field>
+    </columns>
+    <columns>
+        <field>ACCOUNT.ADDRESS1_STATE</field>
+    </columns>
+    <columns>
+        <field>TYPE</field>
+    </columns>
+    <filter>
+        <booleanFilter>1 AND ( 2 OR 3)</booleanFilter>
+        <criteriaItems>
+            <column>TYPE</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>contains</operator>
+            <value>School - ASA</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>ACCOUNT.ADDRESS1_STATE</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>contains</operator>
+            <value>MA</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>ACCOUNT.ADDRESS1_STATE</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>DC</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>MA/DC SCHOOL CDR INFO</name>
+    <params>
+        <name>co</name>
+        <value>0</value>
+    </params>
+    <reportType>ContactList</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Friendly Reminder of registration sent to all attendees</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>EmailLetterhead</letterhead>
+    <name>Exit Counseling Train the trainer webex reminder</name>
+    <style>freeForm</style>
+    <subject>Courtesy Reminder</subject>
+    <textOnly>This is a friendly reminder of your registration for an ASA training event
+
+ 
+You&apos;ve been registered for the Exit Counseling Train the Trainer Webex. 
+
+Date: 
+Time: 
+Location: Webex 
+ 
+Directions to logon: 
+ 
+To join the online meeting 
+------------------------------------------------------- 
+1. Go to 
+2. Enter your name and email address. 
+3. Enter the meeting password: regupdate1 
+4. Click &quot;Join Now&quot;. 
+5. Follow the instructions that appear on your screen. 
+
+------------------------------------------------------- 
+To join the teleconference only 
+------------------------------------------------------- 
+1-866-279-4742    
+Access Code:7284655   
+------------------------------------------------------- 
+For assistance 
+------------------------------------------------------- 
+1. Go to https://amsa.webex.com/amsa/mc 
+2. On the left navigation bar, click &quot;Support&quot;. 
+
+If you have never signed in to our webex before please allow 5-10 minutes to login. 
+
+Canceling Your Registration
+If you need to cancel or change your training registration please email training@amsa.com or 1-800-999-9080, ext. 3099.
+
+Other Information
+All of ASA&apos;s training programs are offered free of charge.  Please contact us at training@amsa.com or 1-800-999-9080, ext. 3099 with any questions about our training program.</textOnly>
+    <type>html</type>
+</EmailTemplate>

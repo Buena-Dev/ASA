@@ -1,0 +1,207 @@
+<apex:page standardController="c2g__codaJournal__c" extensions="c2g.CODAHelpLoaderController,c2g.RecurringJournalController" action="{!validateSourceJournal}" >
+
+	<!-- Includes -->
+	<apex:stylesheet value="{!URLFOR($Resource.c2g__coda2go,'coda2go/web/css/style.css')}"/>
+	<script src="{!URLFOR($Resource.coda2go,'coda2go/web/script/lib.js')}" type="text/javascript"></script>
+	<!-- End includes -->
+	
+	<!-- page specific code and style     -->
+	<script type="text/javascript">
+
+		function setFocusOnLoad() {
+			// I assume Visualforce calls this
+			document.getElementById('{!$Component.theForm.mainPageBlock.journalInformationBlock.numRecurrencesSelect}').focus();
+		}
+
+		var CODA2GoButtons = new CODA2GoPage();
+
+		CODA2GoBtnSaveValue = "{!$Label.codaPageCashEntryNewProcessing}";
+
+	</script>
+
+	<style>
+		.recurringJournalTable span.dateFormat { display: none; }
+		.commandLinkHolder a{ style: inline-block; margin: 1em 1em 1em 0em }
+	</style>
+	<!-- End page specific code and style -->
+
+	<!-- Main form -->
+	<apex:form id="theForm">
+		<!-- Indicator -->
+		<div id="indicator">
+			<img src="/s.gif" align="absMiddle"/>
+			<span id="indicatortext"></span>
+		</div>
+		
+		<!-- Header -->
+		<apex:sectionHeader title="{!$Label.c2g__recurringjournalsrecurringjournaltitle}" subtitle="{!viewstate.journal.dto.Name}" help="{!redirectForHelp1346}" />
+		 <apex:pageBlock id="recurringJournalBatchInfo" rendered="{!batchStarted}">
+            <apex:pagemessage severity="info" summary="{!$Label.c2g__codajournalcreatesuccess}" strength="3"/>
+            <apex:commandButton value="{!$Label.c2g__nativeuibuttongoback}" action="{!gotoListView}" id="goBack_h"/>
+		</apex:pageBlock>
+
+		<!-- Back to Journals -->
+		<apex:outputpanel styleClass="goBreadcrumb" rendered="{!batchStarted ==false}">
+			&nbsp;&#171;<apex:commandLink action="{!cancel}" value="{!$Label.c2g__codapagejournalviewbacktolistjournals}"/>
+		</apex:outputpanel>
+		
+		<apex:pageBlock id="mainPageBlock" title="{!$Label.c2g__recurringjournalsrecurringjournaltitle}" rendered="{!batchStarted ==false}">
+			<apex:pageBlockButtons >
+
+				<!-- Hidden Buttons -->
+				<apex:commandButton value="{!$Label.c2g__codapagejournalnewsave}" action="{!save}" id="save_h" styleclass="hiddensubmit" rerender=""/>
+				<apex:commandButton value="{!$Label.c2g__codapagejournalsaveandpost}" action="{!saveAndPost}" id="save_post_h" styleclass="hiddensubmit" rerender=""/>
+				<apex:commandButton value="{!$Label.c2g__codapagejournalnewcancel}" action="{!cancel}" id="cancel_h" styleclass="hiddensubmit" immediate="true"/>
+
+				<!--  End of Hidden Buttons-->
+				<apex:commandButton value="{!$Label.c2g__codapagejournalnewsave}" id="save" rerender="" onclick="if(!CODA.queing()){CODA2GoButtons.disableSaveButtons();document.getElementById('{!$Component.save_h}').click()};return false;" rendered="{!$Permission.c2g__JournalSave || $Setup.codaAccountingSettings__c.DisableCustomPermissions__c}"/>
+				<apex:commandButton value="{!$Label.c2g__codapagejournalsaveandpost}" id="save_post" rerender="" onclick="if(!CODA.queing()){CODA2GoButtons.disableSaveButtons();document.getElementById('{!$Component.save_post_h}').click()};return false;" rendered="{!($Permission.c2g__JournalSave && $Permission.c2g__JournalPost) || $Setup.codaAccountingSettings__c.DisableCustomPermissions__c}"/>
+				<apex:commandButton value="{!$Label.c2g__codapagejournalnewcancel}" id="cancel" rerender="" onclick="if(!CODA.queing()){CODA2GoButtons.disableSaveButtons();document.getElementById('{!$Component.cancel_h}').click()};return false;" />
+				<script>
+					CODA2GoButtons.initButtons(["{!$Component.save}", "{!$Component.save_post}", "{!$Component.cancel}"]);
+				</script>
+
+			</apex:pageBlockButtons>
+
+			<!-- Messages -->
+            <apex:pagemessages id="messagePanel"/>
+
+			<apex:pageBlockSection title="{!$Label.c2g__codapagejournalsourcejournaldetail}" columns="1">
+				<!-- Journal Detail -->
+				<apex:outputField id="date" value="{!viewstate.journal.dto.c2g__JournalDate__c}" />
+				<apex:outputField id="currency" value="{!viewstate.journal.dto.c2g__JournalCurrency__c}" />
+				<apex:outputField id="reference" value="{!viewstate.journal.dto.c2g__Reference__c}" />
+				<apex:outputField id="period" value="{!viewstate.journal.dto.c2g__Period__c}"/>
+				<apex:outputField id="journalNo" value="{!viewstate.journal.dto.Name}" />
+				<apex:outputField id="journalStatus" value="{!viewstate.journal.dto.c2g__JournalStatus__c}" />
+			</apex:pageBlockSection>
+
+			<!-- Recurring journal details table-->
+			<apex:pageBlockSection id="journalInformationBlock" title="{!$Label.c2g__recurringjournalsjournalinformationtitle}" columns="1">
+				<apex:pageBlockSectionItem >
+					<apex:outputpanel style="width:100%;">
+						<apex:outputLabel value="{!$Label.c2g__recurringjournalsnumberofrecurrences}" for="numRecurrencesSelect" style="margin-left:45px;"/>
+						<apex:selectList id="numRecurrencesSelect" value="{!viewstate.numRecurring}" multiselect="false" size="1" style="margin-left:10px;">
+							<apex:selectOptions value="{!viewstate.numRecurringItems}" />
+							<apex:actionSupport event="onchange" action="{!setRecurrences}" onsubmit="CODA2GoButtons.disableSaveButtons(); CODA.indicatorOn('{!$Label.c2g__recurringjournalsgeneratingjournalsindicator}');" oncomplete="CODA2GoButtons.enableSaveButtons(); CODA.indicatorOff(); initPage();" rerender="recurringLinesTable,messagePanel" />
+						</apex:selectList>
+						<apex:outputLabel value="{!$Label.c2g__frequency}" for="frequencySelect" style="margin-left:90px;"/>
+						<apex:selectList id="frequencySelect" value="{!viewstate.Frequency}" multiselect="false" size="1" style="margin-left:10px;" >
+							<apex:selectOption itemValue="Weekly" itemLabel="{!$Label.c2g__weekly}"></apex:selectOption>
+							<apex:selectOption itemValue="BiWeekly" itemLabel="{!$Label.c2g__recurringfrequencybiweekly}"></apex:selectOption>
+							<apex:selectOption itemValue="Monthly" itemLabel="{!$Label.c2g__monthly}"></apex:selectOption>
+							<apex:selectOption itemValue="ByPeriod" itemLabel="{!$Label.c2g__recurringfrequencybyperiod}"></apex:selectOption>
+							<apex:selectOption itemValue="Quarterly" itemLabel="{!$Label.c2g__quarterly}"></apex:selectOption>
+							<apex:actionSupport event="onchange" action="{!setRecurrences}" onsubmit="CODA2GoButtons.disableSaveButtons(); CODA.indicatorOn('{!$Label.c2g__recurringjournalsgeneratingjournalsindicator}');" oncomplete="CODA2GoButtons.enableSaveButtons(); CODA.indicatorOff(); initPage();" rerender="recurringLinesTable,messagePanel" />
+						</apex:selectList>
+					</apex:outputpanel>
+				</apex:pageBlockSectionItem>
+				
+				<apex:outputPanel id="recurringLinesTable">
+                    <apex:variable var="index" value="{!0}"/> 
+                    <apex:pageBlockTable value="{!viewstate.recurringLines}" var="lineItem" id="editRecurringLinesTable"  styleClass="recurringJournalTable" columnsWidth="80px,40px,160px,,40px,10px">
+                        <apex:column headerValue="{!$Label.c2g__recurringjournalstransactiondateheader}">
+                            <apex:inputField value="{!lineItem.lookupData.c2g__LookupDate__c}"/>
+                        </apex:column>
+                        <apex:column >
+                            <apex:commandbutton action="{!refreshRecurrences}"
+                            	id="refreshButton"
+                            	image="{!URLFOR($Resource.c2g__coda2go, 'coda2go/web/images/refresh.png')}"
+                            	style="height: 16px; width:16px"
+                            	value=""
+                            	onclick="CODA2GoButtons.disableSaveButtons(); CODA.indicatorOn('{!$Label.c2g__recurringjournalsgeneratingjournalsindicator}');"
+                            	oncomplete="CODA2GoButtons.enableSaveButtons(); CODA.indicatorOff(); initPage();"
+                            	rerender="recurringLinesTable,messagePanel"
+                            	title="{!$Label.c2g__recurringrefreshbuttontitle}"
+                            	rendered="{!index==0}">
+							</apex:commandbutton>
+                        </apex:column>
+                        <apex:column headerValue="{!$Label.c2g__recurringjournalsperiodheader}">
+                            <apex:inputField value="{!lineItem.lookupData.c2g__Period__c}" styleClass="lookupColumnWidth" id="period"/>
+                        </apex:column>
+                        <apex:column headerValue="{!$Label.c2g__recurringjournalsdescriptionheader}">
+	                            <apex:inputText value="{!lineItem.journalDescription}" maxlength="{!descriptionLength}" style="width: 99%"/>
+                        </apex:column>
+                        <apex:column >
+                            <apex:commandbutton action="{!propagateDescription}"
+                            	id="descriptionlink"
+                            	image="{!URLFOR($Resource.c2g__coda2go, 'coda2go/web/images/multicopy-icon.png')}"
+                            	style="height: 16px; width:16px"
+                            	value=""
+                            	onclick="CODA2GoButtons.disableSaveButtons(); CODA.indicatorOn('{!$Label.c2g__copyingjournaldescription}');" 
+                            	oncomplete="CODA2GoButtons.enableSaveButtons(); CODA.indicatorOff(); initPage();"
+                            	rerender="recurringLinesTable"
+                            	title="{!$Label.c2g__copydescriptiontorecurringjournal}">
+                            	<apex:param name="param1" assignTo="{!selectedDescriptionLineIndex}" value="{!index}" />	
+							</apex:commandbutton>
+							<apex:variable var="index" value="{!index+1}"/>
+                        </apex:column>
+                        <apex:column headerValue="{!$Label.c2g__recurringjournalstotaldebitamountheader}" value="{!lineItem.formattedJournalAmount}"/>
+                    </apex:pageBlockTable>
+                </apex:outputPanel>
+
+			</apex:pageBlockSection>
+
+
+			<!-- Source journal line items table-->
+			<apex:pageBlockSection id="journalLineItemsBlock" title="{!$Label.c2g__recurringjournalssourcejournallineitemstitle}" columns="1">
+				<apex:pageBlockTable value="{!sourceLineItems}" var="lineItem" id="displayLineItems" styleClass="recurringJournalTable">
+					<apex:column >
+						<apex:outputField value="{!lineItem.LineItem.dto.c2g__LineNumber__c}"/>
+					</apex:column>
+					<apex:column headerValue="{!$ObjectType.c2g__codaJournalLineItem__c.fields.c2g__LineType__c.label}">
+						<apex:outputField value="{!lineItem.LineItem.dto.c2g__LineType__c}"/>
+					</apex:column>
+					<apex:column >
+						<apex:facet name="header">{!$Label.c2g__codalineitem}</apex:facet>
+						<apex:outputPanel id="accountPanel" layout="block" rendered="{!lineItem.isAccountLine}">
+							<apex:outputField id="account_cancel" value="{!lineItem.LineItem.dto.c2g__Account__c}"/>
+						</apex:outputPanel>
+						<apex:outputPanel id="bankPanel" layout="block" rendered="{!lineItem.isBankAccountLine}">
+							<apex:outputField id="bank_cancel" value="{!lineItem.LineItem.dto.c2g__BankAccount__c}"/>
+						</apex:outputPanel>
+						<apex:outputPanel id="productPanel" layout="block" rendered="{!lineItem.isProductLine}">
+							<apex:outputField id="product_cancel" value="{!lineItem.LineItem.dto.c2g__Product__c}"/>
+						</apex:outputPanel>
+						<apex:outputPanel id="taxcodePanel" layout="block" rendered="{!lineItem.isTaxcodeLine}">
+							<apex:outputField id="taxcode_cancel" value="{!lineItem.LineItem.dto.c2g__TaxCode__c}"/>
+						</apex:outputPanel>
+						<apex:outputPanel id="destcompanyPanel" layout="block" rendered="{!lineItem.IsIntercompanyLine}">
+							<apex:outputField id="destcompany" value="{!lineItem.LineItem.dto.c2g__DestinationCompany__c}"/>
+						</apex:outputPanel>
+					</apex:column>
+					<apex:column headerValue="{!$ObjectType.c2g__codaJournalLineItem__c.fields.c2g__GeneralLedgerAccount__c.label}">
+						<apex:outputField value="{!lineItem.LineItem.dto.c2g__GeneralLedgerAccount__c}"/>
+					</apex:column>
+					<apex:column headerValue="{!$ObjectType.c2g__codaJournalLineItem__c.fields.c2g__Value__c.label}">
+						<apex:outputField value="{!lineItem.LineItem.dto.c2g__Value__c}"/>
+					</apex:column>
+					<apex:column headerValue="{!$ObjectType.c2g__codaJournalLineItem__c.fields.c2g__LineDescription__c.label}">
+						<apex:outputField value="{!lineItem.LineItem.dto.c2g__LineDescription__c}"/>
+					</apex:column>
+					<apex:column headerValue="{!$ObjectType.c2g__codaJournalLineItem__c.fields.c2g__Dimension1__c.label}">
+						<apex:outputField value="{!lineItem.LineItem.dto.c2g__Dimension1__c}"/>
+					</apex:column>
+					<apex:column headerValue="{!$ObjectType.c2g__codaJournalLineItem__c.fields.c2g__Dimension2__c.label}">
+						<apex:outputField value="{!lineItem.LineItem.dto.c2g__Dimension2__c}"/>
+					</apex:column>
+					<apex:column headerValue="{!$ObjectType.c2g__codaJournalLineItem__c.fields.c2g__Dimension3__c.label}">
+						<apex:outputField value="{!lineItem.LineItem.dto.c2g__Dimension3__c}"/>
+					</apex:column>
+					<apex:column headerValue="{!$ObjectType.c2g__codaJournalLineItem__c.fields.c2g__Dimension4__c.label}">
+						<apex:outputField value="{!lineItem.LineItem.dto.c2g__Dimension4__c}"/>
+					</apex:column>
+				</apex:pageBlockTable>
+
+				<!-- double left angles = &#171; double right angles = &#187; -->
+				<apex:outputPanel layout="block" id="lineItemsExpanderHolderId" styleClass="commandLinkHolder">
+					<apex:commandLink action="{!showLess}" value="{!showLessBtnLabel}" id="lessLineItems" reRender="displayLineItems, lineItemsExpanderHolderId" rendered="{!showLessBtnValue > 0}"/>
+					<apex:commandLink action="{!showMore}" value="{!showMoreBtnLabel}" id="moreLineItems" reRender="displayLineItems, lineItemsExpanderHolderId" rendered="{!showMoreBtnValue > 0}"/>
+					<apex:commandLink action="{!showAll}" value="{!showAllBtnLabel}" id="allLineItems" reRender="displayLineItems,  lineItemsExpanderHolderId" rendered="{!showMoreBtnValue > 0}"/>
+				</apex:outputPanel>
+
+			</apex:pageBlockSection>
+
+		</apex:pageBlock>
+	</apex:form>
+</apex:page>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>false</available>
+    <description>Initial save the date email for the 2007 ASA Symposium</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>EmailLetterhead</letterhead>
+    <name>2007 ASA Symposium - Save the date</name>
+    <style>freeForm</style>
+    <subject>Save the date - American Student Assistance 2007 Symposium</subject>
+    <textOnly>You are invited to the American Student Assistance 2007 Symposium, 
+“Continuing the Conversation on Student Debt:  Moving from Policy to Practice.”
+ 
+June 18 – 19, 2007
+ 
+The Westin Boston Waterfront * New location *
+425 Summer Street
+Boston, Massachusetts
+ 
+Symposium Themes Include:
+ 
+·         Communication
+·         Partnership
+·         Compassion
+ 
+Confirmed Speaker:
+ 
+·         Barbara Ehrenreich, Journalist and Author of the million-copy best-seller Nickel and Dimed: On (Not) Getting By In America and the New York Times best-seller Bait &amp; Switch: The (Futile) Pursuit of the American Dream.
+ 
+For more information or to register for this complimentary Symposium, please visit: www.amsa.com/symposium</textOnly>
+    <type>html</type>
+</EmailTemplate>

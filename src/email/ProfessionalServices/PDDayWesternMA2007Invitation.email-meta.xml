@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>false</available>
+    <description>Western MA PD Day Invitation</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>EmailLetterhead</letterhead>
+    <name>PD Day - Western MA - 2007 (Invitation)</name>
+    <style>freeForm</style>
+    <subject>American Student Assistance Training Event</subject>
+    <textOnly>Join ASA next month! We are coming to Western Massachusetts with our popular professional development workshop. 
+
+Western Massachusetts Training Event 
+
+National FFELP guarantor American Student Assistance® has designed a full-day training event for Western Massachusetts.  Now is the time to improve your skills at our training event. Join us to enhance core skills and stay ahead of evolving trends. 
+ 1/07/2008 South Hadley, MA – Mount Holyoke College   http://www.mtholyoke.edu/ 
+ 
+Training Event: Negotiation Skills &amp; Regulatory Update 
+ 
+We are offering a full day workshop designed for all college administrators who are looking to improve their performance at work and add skills to their personal “tool box.” 
+ 
+Please join us.
+
+8:30am - 4:00pm 
+Continental breakfast and lunch will be provided 
+
+Course Descriptions: 
+Based on the principles developed at the Harvard Negotiation Project and by Roger Fisher, coauthor of the bestseller Getting to Yes, ASA&apos;s training programs build each participants capacity to transform adversarial approaches to conflict into problem-solving collaborations, producing better outcomes for all parties while enhancing long-term working relationships. 
+
+
+How You Will Benefit 
+Enhance participants&apos; negotiation skills through hands-on experience and feedback. 
+ 
+How to register or for additional information, including driving directions 
+
+· Register Online at http://www.amsa.com/fap/training 
+· Email: send your name, phone number and enrollment details to 
+training@amsa.com 
+· Phone: call the Training Department at (800) 999-9080, ext. 3099 
+
+All American Student Assistance training events are offered free of charge</textOnly>
+    <type>html</type>
+</EmailTemplate>

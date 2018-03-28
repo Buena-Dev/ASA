@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Account$Name</field>
+    </columns>
+    <columns>
+        <field>Account.File_Processing_del__r$Name</field>
+    </columns>
+    <columns>
+        <field>Account.File_Processing_del__r$Status__c</field>
+    </columns>
+    <columns>
+        <field>Account.File_Processing_del__r$Status_Date__c</field>
+    </columns>
+    <columns>
+        <field>Account.File_Processing_del__r$LastModifiedBy</field>
+    </columns>
+    <description>Data related to the processing of third-party files</description>
+    <filter>
+        <criteriaItems>
+            <column>Account.File_Processing_del__r$Source__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>ACS,ACS-Perkins,AES/PHEAA,Aspire,Campus Partners,Cornerstone (UT),COSTEP,DELQ,Demographic File,DER,ECSI,EdFinancial,EDGEucation Loans.,EdManage (SC),Granite State (NH),Great Lakes Higher Education,KHESLC (KY),MOHELA (MO),Nelnet,OSLA (OK),Sallie Mae,UAS,VSAC (VT)</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>SALT File Processing</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Accounts_with_File_Processing_Info__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Account.File_Processing_del__r$Status_Date__c</dateColumn>
+        <endDate>2013-03-22</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2013-03-01</startDate>
+    </timeFrameFilter>
+</Report>

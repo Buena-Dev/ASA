@@ -1,0 +1,12 @@
+The following Offering request cannot be accomodated at this time:
+
+{!Pro_Services_Offering__c.Name}
+Date:  {!Pro_Services_Offering__c.PS_OfferingTargetDate__c}
+Topic:  {!Pro_Services_Offering__c.PS_OfferingTopic__c}
+Delivery Method: {!Pro_Services_Offering__c.PS_OfferingDeliveryMethod__c}
+
+Reason: {!Pro_Services_Offering__c.PS_OfferingSubStatus__c}
+
+For questions or concerns, please contact Gina Lucente-Cole at gcole@amsa.com. Please feel free to submit a new Offering request with a different date or topic to see if we can accomodate you.
+
+Thank you!

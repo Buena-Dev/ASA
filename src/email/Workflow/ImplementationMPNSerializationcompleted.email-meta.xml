@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Alert notifying Account Team that MPN Serialization has been completed</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Implementation MPN Serialization completed</name>
+    <style>none</style>
+    <subject>NOTIFICATION: MPN Serialization completed for {!Case.Account}</subject>
+    <type>text</type>
+</EmailTemplate>

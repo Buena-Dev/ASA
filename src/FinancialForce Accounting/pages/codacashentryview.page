@@ -1,0 +1,318 @@
+<!-- codacashentryview -->
+<apex:page standardController="c2g__codaCashEntry__c" extensions="c2g.CODAHelpLoaderController,c2g.CODACashEntryController">
+	<script src="{!URLFOR($Resource.coda2go,'coda2go/web/script/lib.js')}" type="text/javascript"></script>
+	<apex:stylesheet value="{!URLFOR($Resource.c2g__coda2go,'coda2go/web/css/style.css')}"/>
+	<script>
+		var CODA2GoButtons = new CODA2GoPage();
+		var CODA2GoBtnSaveValue = "{!$Label.codaPageCashEntryViewProcessing}";
+	</script>
+	<apex:form onsubmit="if(CODA2GoButtons.disableSaveButtons){ return CODA2GoButtons.disableSaveButtons(); }">
+		<!-- Header -->
+		<apex:sectionHeader title="{!$Label.c2g__codapagecashentryviewcashentry}" subtitle="{!viewstate.cashentry.dto.Name}" help="{!redirectForHelp1017}"/>
+		<!-- Back to Listing -->
+		<div class="goBreadcrumb">
+			&nbsp;&#171;<a href="{!URLFOR($Action.codaCashEntry__c.Tab,$ObjectType.codaCashEntry__c)}">{!$Label.codaPageCashEntryViewBackToList}</a>
+		</div>
+
+		<!-- CashEntry Detail -->
+		<apex:pageBlock title="{!$Label.c2g__codapagecashentryviewcashentrydetail}">
+			<!-- Buttons -->
+			<apex:pageBlockButtons >
+				<!-- Hidden Buttons -->
+				<apex:commandButton value="{!$Label.c2g__codapagecashentryviewamend}" id="amend_h" action="{!gotoAmendDocument}" rendered="{!viewstate.cashentry.canAmendDocument}" styleclass="hiddensubmit"/>
+				<apex:commandButton value="{!$Label.c2g__codapagecashentryviewedit}" action="{!edit}" rendered="{!viewstate.cashentry.canEdit}" id="edit_h" styleclass="hiddensubmit"/>
+				<apex:commandButton value="{!$Label.c2g__codapagecashentryviewdiscard}" action="{!gotoDiscard}" rendered="{!viewstate.cashentry.canDiscard}" id="discard_h" styleclass="hiddensubmit"/>
+				<apex:commandButton value="{!$Label.c2g__codapagecashentryviewpost}" action="{!post}" rendered="{!viewstate.cashentry.canPost}" id="post_h" styleclass="hiddensubmit"/>
+				<apex:commandButton value="{!$Label.c2g__codapagecashentryviewpostmatch}" action="{!postAndMatch}" rendered="{!viewstate.cashentry.canPostAndMatch}" id="post_match_h" styleclass="hiddensubmit"/>
+				<apex:commandButton value="{!$Label.c2g__codapagecashentryviewpost}" action="{!postVal}" rendered="{!viewstate.cashentry.canPostVal}" id="postVal_h" styleclass="hiddensubmit"/>
+				<apex:commandButton value="{!$Label.c2g__codapagecashentryviewpostmatch}" action="{!postAndMatchVal}" rendered="{!viewstate.cashentry.canPostAndMatchVal}" id="post_matchVal_h" styleclass="hiddensubmit"/>
+				<apex:commandButton value="{!$Label.c2g__cancelcashentrybutton}" action="{!cancelCashEntry}" rendered="{!viewstate.cashentry.canCancel}" id="cancelCashEntry_h" styleclass="hiddensubmit"/>
+
+				<!-- End of Hidden Buttons -->
+				<apex:commandButton value="{!$Label.c2g__codapagecashentryviewamend}" id="amend" rendered="{!viewstate.cashentry.canAmendDocument && ($Permission.c2g__CashEntryAmend || $Setup.codaAccountingSettings__c.DisableCustomPermissions__c)}" onclick="document.getElementById('{!$Component.amend_h}').click();return false;" rerender=""/>
+				<apex:commandButton value="{!$Label.c2g__codapagecashentryviewedit2}" onclick="document.getElementById('{!$Component.edit_h}').click();return false;" rendered="{!viewstate.cashentry.canEdit && ($Permission.c2g__CashEntryEdit || $Setup.codaAccountingSettings__c.DisableCustomPermissions__c)}" id="edit" rerender=""/>
+				<apex:commandButton value="{!$Label.c2g__codapagecashentryviewdiscard2}" onclick="document.getElementById('{!$Component.discard_h}').click();return false;" rendered="{!viewstate.cashentry.canDiscard && ($Permission.c2g__CashEntryDiscard || $Setup.codaAccountingSettings__c.DisableCustomPermissions__c)}" id="discard" rerender=""/>
+				<apex:commandButton value="{!$Label.c2g__codapagecashentryviewpost2}" onclick="document.getElementById('{!$Component.post_h}').click();return false;" rendered="{!viewstate.cashentry.canPost && ($Permission.c2g__CashEntryPost || $Setup.codaAccountingSettings__c.DisableCustomPermissions__c)}" id="post" rerender="post, post_match, postVal, post_matchVal"/>
+				<apex:commandButton value="{!$Label.c2g__codapagecashentryviewpostmatch2}" onclick="document.getElementById('{!$Component.post_match_h}').click();return false;" rendered="{!viewstate.cashentry.canPostAndMatch && (($Permission.c2g__CashEntryPost && $Permission.c2g__CashEntryMatch) || $Setup.codaAccountingSettings__c.DisableCustomPermissions__c)}" id="post_match" rerender="post, post_match, postVal, post_matchVal"/>
+				<apex:commandButton value="{!$Label.c2g__codapagecashentryviewpost2}" onclick="document.getElementById('{!$Component.postVal_h}').click();return false;" rendered="{!viewstate.cashentry.canPostVal && ($Permission.c2g__CashEntryPost || $Setup.codaAccountingSettings__c.DisableCustomPermissions__c)}" id="postVal" rerender="post, post_match, postVal, post_matchVal"/>
+				<apex:commandButton value="{!$Label.c2g__codapagecashentryviewpostmatch2}" onclick="document.getElementById('{!$Component.post_matchVal_h}').click();return false;" rendered="{!viewstate.cashentry.canPostAndMatchVal && ($Permission.c2g__CashEntryMatch || $Setup.codaAccountingSettings__c.DisableCustomPermissions__c)}" id="post_matchVal" rerender="post, post_match, postVal, post_matchVal"/>
+				<apex:commandButton value="{!$Label.c2g__cancelcashentrybutton}" onclick="document.getElementById('{!$Component.cancelCashEntry_h}').click();return false;" rendered="{!viewstate.cashentry.canCancel && ($Permission.c2g__CashEntryCancelCashEntry || $Setup.codaAccountingSettings__c.DisableCustomPermissions__c)}" id="cancelCashEntry" rerender=""/>
+
+				<script>
+					var CODA2GoButtonArray = "";
+
+					if(document.getElementById("{!$Component.amend}"))
+						CODA2GoButtonArray = CODA2GoButtonArray + ',' + "{!$Component.amend}";
+					
+					if(document.getElementById("{!$Component.edit}"))
+						CODA2GoButtonArray = CODA2GoButtonArray + ',' + "{!$Component.edit}";
+
+					if(document.getElementById("{!$Component.discard}"))
+						CODA2GoButtonArray = CODA2GoButtonArray + ',' + "{!$Component.discard}";
+
+					if(document.getElementById("{!$Component.post}"))
+						CODA2GoButtonArray = CODA2GoButtonArray + ',' + "{!$Component.post}";
+
+					if(document.getElementById("{!$Component.postVal}"))
+						CODA2GoButtonArray = CODA2GoButtonArray + ',' + "{!$Component.postVal}";
+
+					if(document.getElementById("{!$Component.post}"))
+						CODA2GoButtonArray = CODA2GoButtonArray + ',' + "{!$Component.post_match}";
+
+					if(document.getElementById("{!$Component.postVal}"))
+						CODA2GoButtonArray = CODA2GoButtonArray + ',' + "{!$Component.post_matchVal}";
+
+					if(document.getElementById("{!$Component.cancelCashEntry}"))
+						CODA2GoButtonArray = CODA2GoButtonArray + ',' + "{!$Component.cancelCashEntry}";
+
+					var myCODA2GoButtonArray = CODA2GoButtonArray.substr(1).split(",");
+					CODA2GoButtons.initButtons(myCODA2GoButtonArray);
+				</script>
+			</apex:pageBlockButtons>
+
+			<!-- Messages -->
+			<apex:include pageName="c2g__codamulticompanymodewarning" rendered="{!viewstate.isMultiCompanyMode}"/>
+			<apex:include pageName="c2g__codacompanymismatchwarning" rendered="{!viewstate.ownerCmpErr}"/>
+			<apex:pageMessages id="messagePanel"/>
+
+			<!-- Main Section -->
+			<apex:pageBlockSection title="{!$Label.c2g__codapagecashentryviewdetail}" columns="2" collapsible="false">
+				<apex:outputField value="{!viewstate.cashentry.dto.c2g__Type__c}"/>
+
+				<apex:pageBlockSectionItem >&nbsp;</apex:pageBlockSectionItem>
+
+				<apex:pageBlockSectionItem >
+					<apex:outputLabel value="{!$Label.c2g__codapagecashentryviewbankaccount}"/>
+					<apex:outputPanel styleClass="holder">
+						<apex:outputField value="{!viewstate.cashentry.dto.c2g__BankAccount__c}"/>
+						<span class="isoCode">
+							<apex:outputText id="bankAccountCurrencyAsString" value="{!BankAccountCurrencyAsString}"/>
+						</span>
+						<c:AnalysisPopup id="popupHeader">
+                            <c:SubAnalysis record="{!viewstate.cashentry.dto}"
+                            	title="{!$Label.c2g__codapagecashentryviewbankaccountanalys}"
+                            	id="headerDimensionBlock"
+                            	dimPrefix="BankAccount"
+                            	readOnly="true"
+                            	amend="false"/>
+						</c:AnalysisPopup>
+					</apex:outputPanel>
+				</apex:pageBlockSectionItem>
+
+				<apex:pageBlockSectionItem >
+					<apex:outputLabel value="{!$Label.c2g__codapagecashentryviewvalue}" for="cashValue"/>
+					<apex:outputPanel >
+						<apex:outputText id="cashValue" value="{!viewstate.cashentry.value}" styleClass="currencyOutput goblock"/>
+						<span class="isoCode">
+							<apex:outputText id="CashCurrency1" value="{!CashEntryCurrencyAsString}"/>
+						</span>
+					</apex:outputPanel>
+				</apex:pageBlockSectionItem>
+
+				<apex:outputField id="cashEntryDate" value="{!viewstate.cashentry.dto.c2g__Date__c}"/>
+
+				<apex:pageBlockSectionItem >&nbsp;</apex:pageBlockSectionItem>
+
+				<apex:outputField value="{!viewstate.cashentry.dto.c2g__Period__c}" id="period"/>
+
+				<apex:pageBlockSectionItem >
+					<apex:outputLabel value="{!$ObjectType.c2g__codaCashEntry__c.fields.c2g__BankAccountValue__c.label}" for="BankAccountValue"/>
+					<apex:outputPanel >
+						<apex:outputText value="{!viewstate.cashentry.BankAccountValue}" id="BankAccountValue" styleClass="currencyOutput goblock"/>
+						<span class="isoCode">
+							<apex:outputText id="bankAccountValueCurrency" value="{!BankAccountCurrencyAsString}"/>
+						</span>
+					</apex:outputPanel>
+				</apex:pageBlockSectionItem>
+
+				<apex:pageBlockSectionItem >
+					<apex:outputLabel value="{!$Label.c2g__codapagecashentryviewreference}"/>
+					<apex:outputPanel >
+						<apex:outputField value="{!viewstate.cashentry.dto.c2g__Reference__c}"/>&nbsp;
+					</apex:outputPanel>
+				</apex:pageBlockSectionItem>
+
+				<apex:pageBlockSectionItem >
+					<apex:outputLabel value="{!$ObjectType.c2g__codaCashEntry__c.fields.c2g__LineCharges__c.label}" for="LineCharges"/>
+					<apex:outputPanel >
+						<apex:outputText value="{!viewstate.cashentry.LineCharges}" id="LineCharges" styleClass="currencyOutput goblock"/>
+						<span class="isoCode">
+							<apex:outputText id="lineChargesCurrency" value="{!BankAccountCurrencyAsString}"/>
+						</span>
+					</apex:outputPanel>
+				</apex:pageBlockSectionItem>
+
+				<apex:pageBlockSectionItem id="currencyBlock">
+					<apex:outputLabel value="{!$ObjectType.c2g__codaCashEntry__c.fields.c2g__CashEntryCurrency__c.label}" for="cashentrycurrency"/>
+					<apex:outputPanel id="currencyPanel">
+						<apex:outputField id="cashentrycurrency" value="{!viewstate.cashentry.dto.c2g__CashEntryCurrency__c}"/>
+						<c:ExchangeRateOverrides id="currencyRates" rateData="{!viewstate.cashentry.exchangeRateData}" readOnly="true"/>
+					</apex:outputPanel>
+				</apex:pageBlockSectionItem>
+
+				<apex:pageBlockSectionItem >
+					<apex:outputLabel value="{!$ObjectType.c2g__codaCashEntry__c.fields.c2g__NetValue__c.label}" for="TotalNetValue"/>
+					<apex:outputPanel >
+						<apex:outputText value="{!viewstate.cashentry.NetValue}" id="TotalNetValue" styleClass="currencyOutput goblock"/>
+						<span class="isoCode">
+							<apex:outputText id="netValueCurrency" value="{!BankAccountCurrencyAsString}"/>
+						</span>
+					</apex:outputPanel>
+				</apex:pageBlockSectionItem>
+
+				<apex:outputField value="{!viewstate.cashentry.dto.c2g__PaymentMethod__c}"/>
+
+				<apex:pageBlockSectionItem >
+					<apex:outputLabel value="{!$ObjectType.c2g__codaCashEntry__c.fields.c2g__ChargesAmount__c.label}" for="ChargesAmount"/>
+					<apex:outputPanel >
+						<apex:outputText value="{!viewstate.cashentry.ChargesAmount}" id="ChargesAmount" styleClass="currencyOutput goblock"/>
+						<span class="isoCode">
+							<apex:outputText id="bankChargeCurrency" value="{!BankAccountCurrencyAsString}"/>
+						</span>
+					</apex:outputPanel>
+				</apex:pageBlockSectionItem>
+
+				<apex:pageBlockSectionItem >
+					<apex:outputLabel value="{!if(allowLocalGLA && showLocalGLA, $ObjectType.c2g__codaCashEntry__c.fields.c2g__ChargesLocalGLA__c.label, $ObjectType.c2g__codaCashEntry__c.fields.c2g__ChargesGLA__c.label)}"/>
+					<apex:outputPanel styleClass="holder">
+						<apex:outputField value="{!viewstate.cashentry.dto.c2g__ChargesGLA__c}" rendered="{!!showLocalGLA}"/>
+						<apex:outputField value="{!viewstate.cashentry.dto.c2g__ChargesLocalGLA__c}" rendered="{!allowLocalGLA && showLocalGLA}"/>
+						<c:AnalysisPopup id="popupHeader">
+							<apex:pageBlockSection title="{!$Label.c2g__alternateaccount}" collapsible="false" columns="2" html-sac="1" rendered="{!allowLocalGLA}">
+						        <apex:pageBlockSectionItem html-sac="1" rendered="{!showLocalGLA}">	
+						        	<apex:outputLabel value="{!$ObjectType.c2g__codaCashEntry__c.fields.c2g__ChargesGLA__c.label}" styleClass="fieldLabel"/>
+						        	<apex:outputPanel >
+										<span class="popupDataFieldOutput">
+											<apex:outputField value="{!viewstate.cashentry.dto.c2g__ChargesGLA__c}"/>
+										</span>
+									</apex:outputPanel>	
+						        </apex:pageBlockSectionItem>
+						        <apex:pageBlockSectionItem html-sac="1" rendered="{!allowLocalGLA && !showLocalGLA}">	
+						        	<apex:outputLabel value="{!$ObjectType.c2g__codaCashEntry__c.fields.c2g__ChargesLocalGLA__c.label}" styleClass="fieldLabel"/>
+						        	<apex:outputPanel >
+										<span class="popupDataFieldOutput">
+											<apex:outputField value="{!viewstate.cashentry.dto.c2g__ChargesLocalGLA__c}"/>
+										</span>
+									</apex:outputPanel>	
+						        </apex:pageBlockSectionItem>
+							</apex:pageBlockSection>
+                            <c:SubAnalysis record="{!viewstate.cashentry.dto}"
+                            	title="{!$Label.c2g__codapagecashentrynewchargesglaanalysi}"
+                            	id="headerDimensionBlock"
+                            	dimPrefix="ChargesGLA"
+                            	readOnly="true"
+                            	amend="false"/>
+						</c:AnalysisPopup>
+					</apex:outputPanel>
+				</apex:pageBlockSectionItem>
+
+				<apex:pageBlockSectionItem >
+					<apex:outputLabel value="{!$ObjectType.c2g__codaCashEntry__c.fields.c2g__NetBanked__c.label}" for="NetBanked"/>
+					<apex:outputPanel >
+						<apex:outputText value="{!NetValueAsDecimal2}" id="NetBanked" styleClass="currencyOutput goblock"/>
+						<span class="isoCode">
+							<apex:outputText id="netBankedCurrency" value="{!BankAccountCurrencyAsString}"/>
+						</span>
+					</apex:outputPanel>
+				</apex:pageBlockSectionItem>
+
+				<apex:pageBlockSectionItem >
+					<apex:outputLabel value="{!$Label.c2g__codapagecashentryviewdescription}"/>
+					<apex:outputPanel >
+						<apex:outputField value="{!viewstate.cashentry.dto.c2g__Description__c}"/>&nbsp;
+					</apex:outputPanel>
+				</apex:pageBlockSectionItem>
+
+				<apex:pageBlockSectionItem >
+					<apex:outputPanel >
+						<br/>
+						<apex:outputLabel value="{!$ObjectType.c2g__codaCashEntry__c.fields.c2g__TotalCharges__c.label}" for="totalCharges"/>
+					</apex:outputPanel>
+					<apex:outputPanel >
+						<br/>
+						<apex:outputText value="{!viewstate.cashentry.TotalCharges}" id="totalCharges" styleClass="currencyOutput goblock"/>
+						<span class="isoCode">
+							<apex:outputText id="totalChargesCurrency" value="{!BankAccountCurrencyAsString}"/>
+						</span>
+					</apex:outputPanel>
+				</apex:pageBlockSectionItem>
+
+				<apex:outputField value="{!viewstate.cashentry.dto.c2g__Transaction__c}"/>
+
+				<apex:pageBlockSectionItem >&nbsp;</apex:pageBlockSectionItem>
+
+				<apex:outputField value="{!viewstate.cashentry.dto.c2g__PaymentNumber__c}" id="paymentNumber" rendered="{!viewstate.cashentry.dto.c2g__PaymentNumber__c != null}"/>
+
+				<apex:outputField value="{!viewstate.cashentry.dto.c2g__OriginalCashEntry__c}" rendered="{!viewState.CashEntry.showOriginalCashEntry}"/>
+				<apex:outputField value="{!viewstate.cashentry.dto.c2g__CancelingCashEntry__c}" rendered="{!viewState.CashEntry.showCancelingCashEntry}"/>
+
+			</apex:pageBlockSection>
+
+			<apex:pageBlockSection title="{!$Label.c2g__codapagecashentryviewaccountlines}" columns="1" collapsible="false">
+				<apex:pageBlockTable id="dtLineItems" styleClass="noHover" value="{!viewstate.cashEntry.cashEntryLineItems}" var="cashEntryLineItem">
+
+					<apex:column styleClass="widthlinenumbers">
+						<apex:facet name="header">&nbsp;</apex:facet>
+						<apex:outputField value="{!cashEntryLineItem.dto.c2g__LineNumber__c}"/>
+						<c:AnalysisPopup id="popupHeader">
+                            <c:SubAnalysis record="{!cashEntryLineItem.dto}"
+                            	title="{!$Label.c2g__codanotesandanalysis}"
+                            	id="headerDimensionBlock"
+                            	dimPrefix="Account"
+                            	readOnly="true"
+                            	amend="false"/>
+						</c:AnalysisPopup>
+					</apex:column>
+
+					<apex:column >
+						<apex:facet name="header">{!$ObjectType.c2g__codaCashEntryLineItem__c.fields.c2g__Account__c.label}</apex:facet>
+						<apex:outputField id="account" value="{!cashEntryLineItem.dto.c2g__Account__c}"/>
+					</apex:column>
+
+					<apex:column >
+						<apex:facet name="header">{!$ObjectType.c2g__codaCashEntryLineItem__c.fields.c2g__AccountReference__c.label}</apex:facet>
+						<apex:outputField id="accountReference" value="{!cashEntryLineItem.dto.c2g__AccountReference__c}"/>
+					</apex:column>
+
+					<apex:column >
+						<apex:facet name="header">{!$Label.c2g__codacashentrypaymentmethod}</apex:facet>
+						<apex:outputField id="accountPaymentMethod" value="{!cashEntryLineItem.dto.c2g__AccountPaymentMethod__c}"/>
+					</apex:column>
+
+					<apex:column headerClass="alignright" styleClass="alignright">
+						<apex:facet name="header">{!$ObjectType.c2g__codaCashEntryLineItem__c.fields.c2g__CashEntryValue__c.label}</apex:facet>
+						<apex:outputField id="CashEntryValue" value="{!cashEntryLineItem.dto.c2g__CashEntryValue__c}"/>
+					</apex:column>
+
+					<apex:column headerClass="alignright" styleClass="alignright">
+						<apex:facet name="header">{!$ObjectType.c2g__codaCashEntryLineItem__c.fields.c2g__BankAccountValue__c.label}</apex:facet>
+						<apex:outputField id="LineBankAccountValue" value="{!cashEntryLineItem.dto.c2g__BankAccountValue__c}"/>
+					</apex:column>
+
+					<apex:column headerClass="alignright" styleClass="alignright">
+						<apex:facet name="header">{!$ObjectType.c2g__codaCashEntryLineItem__c.fields.c2g__Charges__c.label}</apex:facet>
+						<apex:outputField id="Charges" value="{!cashEntryLineItem.dto.c2g__Charges__c}"/>
+					</apex:column>
+
+					<apex:column headerClass="alignright" styleClass="alignright">
+						<apex:facet name="header">{!$ObjectType.c2g__codaCashEntryLineItem__c.fields.c2g__NetValue__c.label}</apex:facet>
+						<apex:outputField id="NetValue" value="{!cashEntryLineItem.dto.c2g__NetValue__c}"/>
+					</apex:column>
+
+				</apex:pageBlockTable>
+			</apex:pageBlockSection>
+
+			<!-- Status -->
+			<apex:pageBlockSection title="{!$Label.c2g__codapagecashentryviewcashentrystatus}" columns="2" collapsible="false">
+				<apex:outputField value="{!viewstate.cashentry.dto.c2g__Status__c}"/>
+				<apex:outputField value="{!viewstate.cashentry.dto.c2g__DiscardReason__c}"/>
+			</apex:pageBlockSection>
+
+			<c:MatchedPayments payments="{!payments}" collapsible="false"/>
+
+		</apex:pageBlock>
+	</apex:form>
+
+	<!-- Notes and Attachments -->
+	<apex:relatedList list="CombinedAttachments"/>
+</apex:page>

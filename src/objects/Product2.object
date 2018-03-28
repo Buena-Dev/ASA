@@ -1,0 +1,1353 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Add</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>Additional_Products_Services__c</fullName>
+        <externalId>false</externalId>
+        <label>Additional Products/ Services</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Same day funding available</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Audience__c</fullName>
+        <description>Training Class  Audience, who is the class ment for and who will benefit</description>
+        <externalId>false</externalId>
+        <label>Training Class  Audience</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Novice Aid Administrator</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Intermediate Aid Administrator</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Experienced Aid Administrator</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Bursar/Student Financial Svcs.</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Student Borrowers</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>CanUseQuantitySchedule</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>CanUseRevenueSchedule</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>DNU_Activity_Code__c</fullName>
+        <externalId>false</externalId>
+        <label>DNU_Activity Code</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>50000</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>20000</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>20251</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>10000</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Description</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>Dimension_1__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Department Code</label>
+        <referenceTo>c2g__codaDimension1__c</referenceTo>
+        <relationshipLabel>Products</relationshipLabel>
+        <relationshipName>Products</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Dimension_3__c</fullName>
+        <externalId>false</externalId>
+        <label>Activity Code</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>50000</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>20000</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>20251</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>10000</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Disbursement_Services__c</fullName>
+        <externalId>false</externalId>
+        <label>Disbursement Services</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Disubrsement through the NDN</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>EFT disbursements on behalf of lenders</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Discount_Amount_1__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF((CONTAINS(ProductCode,&quot;DISC-10&quot;)),0.10,IF((CONTAINS(ProductCode,&quot;DISC&quot;)),0.15,0))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Discount Amount 1</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Discount_Eligible__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Discount Eligible</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>DisplayUrl</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>Duration_Min__c</fullName>
+        <description>Minimum time needed for this training</description>
+        <externalId>false</externalId>
+        <label>Duration Min</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ExternalDataSourceId</fullName>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ExternalId</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>Family</fullName>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>General_Information__c</fullName>
+        <externalId>false</externalId>
+        <label>General Information</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Demo on company website</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Web-based</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>24-hours Access</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Real Time</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Instant Guarantee</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Interfaces__c</fullName>
+        <externalId>false</externalId>
+        <label>Interfaces</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Interfaces w/ lenders</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Interfaces w/ guarantors</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Able to accept major FAMS files</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Able to accept ISIR files</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Able to accept Direct Loan files</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>IsActive</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>Loan_Products_Delivery__c</fullName>
+        <externalId>false</externalId>
+        <label>Loan Products/Delivery</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Alternative Loan Processing</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Ability to manually create loan</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>CommonLine Compliant</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>On-Line MPN application for students</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Max__c</fullName>
+        <description>What is the max duration for the training</description>
+        <externalId>false</externalId>
+        <label>Duration Max</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Misc_Products_Services__c</fullName>
+        <externalId>false</externalId>
+        <label>Misc Products/Services</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>OnLine Awarding</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>OnLine entrance/exit interviews</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Name</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>ProductCode</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>QuantityUnitOfMeasure</fullName>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>StockKeepingUnit</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>c2g__CODAAllowDeleteInUse__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Allow Deletion of Product in Use</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>c2g__CODAExternalId__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <deprecated>false</deprecated>
+        <externalId>true</externalId>
+        <label>External Id</label>
+        <length>32</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>c2g__CODAIncludeInIncomeSchedule__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Deprecated: Include in Income Schedule</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>c2g__CODAIncomeSchedule__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Income Schedule</label>
+        <referenceTo>c2g__codaIncomeScheduleDefinition__c</referenceTo>
+        <relationshipLabel>Products</relationshipLabel>
+        <relationshipName>Products</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>c2g__CODAInputTaxCode__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Input VAT/GST Code</label>
+        <referenceTo>c2g__codaTaxCode__c</referenceTo>
+        <relationshipLabel>Products (Purchase Tax Code)</relationshipLabel>
+        <relationshipName>ProductsPurchase</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>c2g__CODAPurchaseAnalysisAccount__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Purchase Analysis Account</label>
+        <lookupFilter>
+            <active>true</active>
+            <booleanFilter>1 OR 2</booleanFilter>
+            <errorMessage>The selected GLA does not exist or is not valid. It must be a corporate GLA.</errorMessage>
+            <filterItems>
+                <field>c2g__codaGeneralLedgerAccount__c.c2g__ChartOfAccountsStructure__r.Name</field>
+                <operation>equals</operation>
+                <value></value>
+            </filterItems>
+            <filterItems>
+                <field>c2g__codaGeneralLedgerAccount__c.c2g__ChartOfAccountsStructure__r.c2g__IsCorporate__c</field>
+                <operation>equals</operation>
+                <value>True</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>c2g__codaGeneralLedgerAccount__c</referenceTo>
+        <relationshipLabel>Products (Purchase Analysis Account)</relationshipLabel>
+        <relationshipName>ProductsPurchase</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>c2g__CODASalesRevenueAccount__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>The general ledger account to which sales revenues for this product be posted.</description>
+        <externalId>false</externalId>
+        <label>Sales Revenue Account</label>
+        <lookupFilter>
+            <active>true</active>
+            <booleanFilter>1 OR 2</booleanFilter>
+            <errorMessage>The selected GLA does not exist or is not valid. It must be a corporate GLA.</errorMessage>
+            <filterItems>
+                <field>c2g__codaGeneralLedgerAccount__c.c2g__ChartOfAccountsStructure__r.Name</field>
+                <operation>equals</operation>
+                <value></value>
+            </filterItems>
+            <filterItems>
+                <field>c2g__codaGeneralLedgerAccount__c.c2g__ChartOfAccountsStructure__r.c2g__IsCorporate__c</field>
+                <operation>equals</operation>
+                <value>True</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>c2g__codaGeneralLedgerAccount__c</referenceTo>
+        <relationshipLabel>Products</relationshipLabel>
+        <relationshipName>Products</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>c2g__CODASalesTaxRule__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>External Tax Code</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>c2g__CODASalesTaxStatus__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Sales Tax Status</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Taxable</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Exempt</fullName>
+                    <default>true</default>
+                </value>
+                <value>
+                    <fullName>Exempt for Qualifying Accounts</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>c2g__CODATaxCode__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Output VAT/GST Code</label>
+        <referenceTo>c2g__codaTaxCode__c</referenceTo>
+        <relationshipLabel>Products</relationshipLabel>
+        <relationshipName>Products</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>c2g__CODAUnitOfWork__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Unit of Work</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>c2g__Email__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Deprecated: XXX Email</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>c2g__PlaceOfSupply__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>VAT/GST Place of Supply Rules</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>With Account</fullName>
+                    <default>true</default>
+                </value>
+                <value>
+                    <fullName>With Customer</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>c2g__ReverseCharge__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>VAT/GST Reverse Charge</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <listViews>
+        <fullName>ASAProducts</fullName>
+        <columns>PRODUCT2.NAME</columns>
+        <columns>PRODUCT2.CUSTOMER_PRODUCT_ID</columns>
+        <columns>PRODUCT2.DESCRIPTION</columns>
+        <columns>PRODUCT2.FAMILY</columns>
+        <columns>c2g__CODASalesRevenueAccount__c</columns>
+        <columns>DNU_Activity_Code__c</columns>
+        <columns>Dimension_1__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>PRODUCT2.FAMILY</field>
+            <operation>equals</operation>
+            <value>SALT Services,Charter Program,Fee For Service</value>
+        </filters>
+        <label>ASA Products</label>
+    </listViews>
+    <listViews>
+        <fullName>AllProducts</fullName>
+        <columns>PRODUCT2.NAME</columns>
+        <columns>PRODUCT2.CUSTOMER_PRODUCT_ID</columns>
+        <columns>PRODUCT2.ACTIVE</columns>
+        <columns>PRODUCT2.FAMILY</columns>
+        <columns>Dimension_1__c</columns>
+        <columns>c2g__CODASalesRevenueAccount__c</columns>
+        <columns>PRODUCT2.RECORD_TYPE</columns>
+        <columns>c2g__CODASalesTaxStatus__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All Products</label>
+    </listViews>
+    <listViews>
+        <fullName>All_Active_Products</fullName>
+        <columns>PRODUCT2.NAME</columns>
+        <columns>PRODUCT2.CUSTOMER_PRODUCT_ID</columns>
+        <columns>PRODUCT2.DESCRIPTION</columns>
+        <columns>PRODUCT2.FAMILY</columns>
+        <columns>PRODUCT2.REV_SCHEDULE_TYPE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>PRODUCT2.ACTIVE</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <label>All Active Products</label>
+    </listViews>
+    <listViews>
+        <fullName>Discounts</fullName>
+        <columns>PRODUCT2.NAME</columns>
+        <columns>PRODUCT2.CUSTOMER_PRODUCT_ID</columns>
+        <columns>PRODUCT2.FAMILY</columns>
+        <columns>DNU_Activity_Code__c</columns>
+        <columns>Dimension_1__c</columns>
+        <columns>c2g__CODASalesRevenueAccount__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>PRODUCT2.FAMILY</field>
+            <operation>equals</operation>
+            <value>Discounts</value>
+        </filters>
+        <label>Discounts</label>
+    </listViews>
+    <listViews>
+        <fullName>Discounts_Active</fullName>
+        <columns>PRODUCT2.NAME</columns>
+        <columns>PRODUCT2.CUSTOMER_PRODUCT_ID</columns>
+        <columns>PRODUCT2.FAMILY</columns>
+        <columns>DNU_Activity_Code__c</columns>
+        <columns>Dimension_1__c</columns>
+        <columns>c2g__CODASalesRevenueAccount__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>PRODUCT2.FAMILY</field>
+            <operation>equals</operation>
+            <value>Discounts</value>
+        </filters>
+        <filters>
+            <field>PRODUCT2.ACTIVE</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <label>Active Discounts</label>
+    </listViews>
+    <listViews>
+        <fullName>zz_Beginning_Balance_Accounts</fullName>
+        <columns>PRODUCT2.NAME</columns>
+        <columns>PRODUCT2.FAMILY</columns>
+        <columns>Dimension_1__c</columns>
+        <columns>c2g__CODASalesRevenueAccount__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>PRODUCT2.NAME</field>
+            <operation>contains</operation>
+            <value>zz</value>
+        </filters>
+        <label>zz Beginning Balance Accounts</label>
+        <sharedTo>
+            <group>FinancialForce_Team</group>
+        </sharedTo>
+    </listViews>
+    <recordTypeTrackHistory>false</recordTypeTrackHistory>
+    <recordTypes>
+        <fullName>ASATrainingCourses</fullName>
+        <active>false</active>
+        <description>ASA training courses offered</description>
+        <label>ASA Training Courses</label>
+        <picklistValues>
+            <picklist>Additional_Products_Services__c</picklist>
+            <values>
+                <fullName>Same day funding available</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Audience__c</picklist>
+            <values>
+                <fullName>Bursar%2FStudent Financial Svcs%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Experienced Aid Administrator</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Intermediate Aid Administrator</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Novice Aid Administrator</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Student Borrowers</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Dimension_3__c</picklist>
+            <values>
+                <fullName>50000</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Disbursement_Services__c</picklist>
+            <values>
+                <fullName>Disubrsement through the NDN</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>EFT disbursements on behalf of lenders</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Family</picklist>
+            <values>
+                <fullName>SALT Services</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>General_Information__c</picklist>
+            <values>
+                <fullName>24-hours Access</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Demo on company website</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Instant Guarantee</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Real Time</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Web-based</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Interfaces__c</picklist>
+            <values>
+                <fullName>Able to accept Direct Loan files</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Able to accept ISIR files</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Able to accept major FAMS files</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Interfaces w%2F guarantors</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Interfaces w%2F lenders</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Loan_Products_Delivery__c</picklist>
+            <values>
+                <fullName>Ability to manually create loan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Alternative Loan Processing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CommonLine Compliant</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>On-Line MPN application for students</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Misc_Products_Services__c</picklist>
+            <values>
+                <fullName>OnLine Awarding</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>OnLine entrance%2Fexit interviews</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Competition</fullName>
+        <active>true</active>
+        <description>Description of what other Guarantor(s) and Industry Competion have</description>
+        <label>Competition</label>
+        <picklistValues>
+            <picklist>Additional_Products_Services__c</picklist>
+            <values>
+                <fullName>Same day funding available</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Audience__c</picklist>
+            <values>
+                <fullName>Bursar%2FStudent Financial Svcs%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Experienced Aid Administrator</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Intermediate Aid Administrator</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Novice Aid Administrator</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Student Borrowers</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Dimension_3__c</picklist>
+            <values>
+                <fullName>50000</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Disbursement_Services__c</picklist>
+            <values>
+                <fullName>Disubrsement through the NDN</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>EFT disbursements on behalf of lenders</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Family</picklist>
+            <values>
+                <fullName>SALT Services</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>General_Information__c</picklist>
+            <values>
+                <fullName>24-hours Access</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Demo on company website</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Instant Guarantee</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Real Time</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Web-based</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Interfaces__c</picklist>
+            <values>
+                <fullName>Able to accept Direct Loan files</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Able to accept ISIR files</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Able to accept major FAMS files</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Interfaces w%2F guarantors</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Interfaces w%2F lenders</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Loan_Products_Delivery__c</picklist>
+            <values>
+                <fullName>Ability to manually create loan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Alternative Loan Processing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CommonLine Compliant</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>On-Line MPN application for students</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Misc_Products_Services__c</picklist>
+            <values>
+                <fullName>OnLine Awarding</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>OnLine entrance%2Fexit interviews</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Government_Services</fullName>
+        <active>true</active>
+        <description>This record type is designated for use in Government Services</description>
+        <label>Government Services</label>
+        <picklistValues>
+            <picklist>Additional_Products_Services__c</picklist>
+            <values>
+                <fullName>Same day funding available</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Audience__c</picklist>
+            <values>
+                <fullName>Bursar%2FStudent Financial Svcs%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Experienced Aid Administrator</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Intermediate Aid Administrator</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Novice Aid Administrator</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Student Borrowers</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Dimension_3__c</picklist>
+            <values>
+                <fullName>50000</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Disbursement_Services__c</picklist>
+            <values>
+                <fullName>Disubrsement through the NDN</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>EFT disbursements on behalf of lenders</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Family</picklist>
+            <values>
+                <fullName>Guarantor</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>General_Information__c</picklist>
+            <values>
+                <fullName>24-hours Access</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Demo on company website</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Instant Guarantee</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Real Time</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Web-based</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Interfaces__c</picklist>
+            <values>
+                <fullName>Able to accept Direct Loan files</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Able to accept ISIR files</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Able to accept major FAMS files</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Interfaces w%2F guarantors</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Interfaces w%2F lenders</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Loan_Products_Delivery__c</picklist>
+            <values>
+                <fullName>Ability to manually create loan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Alternative Loan Processing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CommonLine Compliant</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>On-Line MPN application for students</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Misc_Products_Services__c</picklist>
+            <values>
+                <fullName>OnLine Awarding</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>OnLine entrance%2Fexit interviews</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Products_and_Services</fullName>
+        <active>true</active>
+        <description>This record type is designated for use in Consumer Services.</description>
+        <label>Products and Services</label>
+        <picklistValues>
+            <picklist>Additional_Products_Services__c</picklist>
+            <values>
+                <fullName>Same day funding available</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Audience__c</picklist>
+            <values>
+                <fullName>Bursar%2FStudent Financial Svcs%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Experienced Aid Administrator</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Intermediate Aid Administrator</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Novice Aid Administrator</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Student Borrowers</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Dimension_3__c</picklist>
+            <values>
+                <fullName>10000</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>20000</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>20251</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>50000</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Disbursement_Services__c</picklist>
+            <values>
+                <fullName>Disubrsement through the NDN</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>EFT disbursements on behalf of lenders</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Family</picklist>
+            <values>
+                <fullName>Charter Program</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Discounts</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Donorship</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fee For Service</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Foundation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Grants</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Guarantor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SALT Services</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sponsorship</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sublease</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Vendor</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>General_Information__c</picklist>
+            <values>
+                <fullName>24-hours Access</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Demo on company website</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Instant Guarantee</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Real Time</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Web-based</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Interfaces__c</picklist>
+            <values>
+                <fullName>Able to accept Direct Loan files</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Able to accept ISIR files</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Able to accept major FAMS files</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Interfaces w%2F guarantors</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Interfaces w%2F lenders</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Loan_Products_Delivery__c</picklist>
+            <values>
+                <fullName>Ability to manually create loan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Alternative Loan Processing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CommonLine Compliant</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>On-Line MPN application for students</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Misc_Products_Services__c</picklist>
+            <values>
+                <fullName>OnLine Awarding</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>OnLine entrance%2Fexit interviews</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>c2g__CODASalesTaxStatus__c</picklist>
+            <values>
+                <fullName>Exempt</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Exempt for Qualifying Accounts</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Taxable</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts>
+        <customTabListAdditionalFields>PRODUCT2.NAME</customTabListAdditionalFields>
+        <customTabListAdditionalFields>PRODUCT2.CUSTOMER_PRODUCT_ID</customTabListAdditionalFields>
+        <customTabListAdditionalFields>PRODUCT2.DESCRIPTION</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>PRODUCT2.NAME</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>PRODUCT2.CUSTOMER_PRODUCT_ID</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>PRODUCT2.DESCRIPTION</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>PRODUCT2.FAMILY</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>PRODUCT2.NAME</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>PRODUCT2.CUSTOMER_PRODUCT_ID</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>PRODUCT2.DESCRIPTION</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>PRODUCT2.FAMILY</lookupPhoneDialogsAdditionalFields>
+        <searchResultsAdditionalFields>PRODUCT2.NAME</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>PRODUCT2.DESCRIPTION</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>PRODUCT2.FAMILY</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>PRODUCT2.CUSTOMER_PRODUCT_ID</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Audience__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+</CustomObject>

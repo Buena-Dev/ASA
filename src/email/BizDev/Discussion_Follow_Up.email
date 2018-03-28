@@ -1,0 +1,21 @@
+<table border="0" cellpadding="5" width="550" cellspacing="5" height="400" >
+<tr valign="top" height="400" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[<font face="arial"><span style="font-size: 12pt;">Greetings {!Contact.FirstName}, </span></font><br><br><font face="arial"><span style="font-size: 12pt;">As a follow up to our discussion yesterday, you can create a 
+SALT account and access the full on-line experience by visiting </span></font><a href="http://www.saltmoney.org/" target="_blank" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;">https://www.saltmoney.org</a><font face="arial"><span style="font-size: 12pt;"> and 
+using ASA University as your school affiliation. This will give you the 
+opportunity to navigate the site and take</span></font><span id="ext-gen3" class="cxmorecontainer" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"> an in-depth look at 
+our content and curriculum. <br><br>In addition, I wanted to share links for our 
+SALT blog, Twitter and Facebook page. The blog is a great resource and it 
+displays our approach to deliver useful information in a relate able tone. We have 
+a diverse group of knowledgeable contributors including students and recent 
+graduates. <br><br>SALT Blog: &nbsp;<a href="http://blog.saltmoney.org/" target="_blank">http://blog.saltmoney.org/</a> <br>Twitter: &nbsp; &nbsp; &nbsp; &nbsp;<a href="https://twitter.com/SALT_MONEY" target="_blank">https://twitter.com/SALT_MONEY<wbr><span class="wbr"></span></a> 
+<br>Facebook: &nbsp;&nbsp;<a href="https://www.facebook.com/saltmoney" target="_blank">https://www.facebook.com/saltm<wbr><span class="wbr"></span>oney</a> 
+<br><br>Also, we've recently created a video that introduces the SALT program 
+and more specifically provides a guided tour of the platform. {!Contact.FirstName}, this could be 
+useful as you look to introduce our efforts to folks on your team and then, we 
+may consider including this in a member communication about our partnership. The 
+link is below. <br><br><a href="https://www.youtube.com/user/getSALTmoney" target="_blank">https://www.youtube.com/user/g<wbr><span class="wbr"></span>etSALTmoney</a> <br><br>If you have any questions as you peruse 
+the site, please pass them my way.&nbsp;<br></span><div style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span class="cxmorecontainer"><br></span></div><div style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span class="cxmorecontainer">Best regards,</span></div><div><span class="cxmorecontainer"><font face="arial">{!User.FirstName}</font></span></div><div><span class="cxmorecontainer"><font face="arial">{!User.Email}</font></span></div><div style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span class="cxmorecontainer"><br></span></div>]]></td>
+</tr>
+</table>

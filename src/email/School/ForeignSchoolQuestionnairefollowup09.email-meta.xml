@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>false</available>
+    <description>Foreign School Questionnaire Follow up to Financial Aid Professionals</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>EmailLetterhead</letterhead>
+    <name>Foreign School Questionnaire - Follow up 09</name>
+    <style>freeForm</style>
+    <subject>Melior Survey - U.S. Bank account follow-up question</subject>
+    <textOnly>Hello {!Contact.FirstName},
+  
+I wanted to thank you for taking time to complete the Melior Group Survey this past June.  It has come to our attention that there may have been some confusion around one of the questions and we would like to clarify.
+ 
+Question #11 asked if your university currently has a U.S. Bank account.  We want to define what was meant by U.S. Bank account.
+ 
+This question was intended to determine if your university currently has an account set up with a bank that is physically located in the U.S. and not a bank account for your U.S. students (located in your specific country).
+ 
+If you had previously answered YES to this question (where you indicated that your university has a U.S. Bank account) and you would like to change your answer to NO, or if you need additional clarification, please email me directly at cmenendez@amsa.com.
+ 
+ 
+Thank you,
+ 
+Caroline Menendez
+
+ 
+ 
+The content of the e-mail is confidential and proprietary to American Student Assistance. It is intended only for the above-named individual or entity and for the purpose indicated and may not be reproduced or distributed without permission of the sender. Please notify the sender or ASA if you received this e-mail in error.
+American Student Assistance® is a non-profit organization that helps students and their families manage higher education debt.  
+ 
+American Student Assistance and ASA are registered trademarks of American Student Assistance.  All rights reserved.
+
+ 
+ </textOnly>
+    <type>html</type>
+</EmailTemplate>

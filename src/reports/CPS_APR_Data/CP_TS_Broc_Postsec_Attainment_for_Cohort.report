@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CAMPAIGN_MEMBER_ID</field>
+    </columns>
+    <columns>
+        <field>CAMPAIGN_NAME</field>
+    </columns>
+    <columns>
+        <field>CampaignMember.TS_Postsecondary_Tracking_Cohort__c</field>
+    </columns>
+    <columns>
+        <field>CampaignMember.Post_Secondary_Enrollment_Status__c</field>
+    </columns>
+    <columns>
+        <field>CampaignMember.Education_Status_at_End_Senior__c</field>
+    </columns>
+    <columns>
+        <field>CampaignMember.Postsecondary_Attainment_Completion__c</field>
+    </columns>
+    <description>Run this report to see who is being reported for TS Brockton, and what values they have entered for Objective E</description>
+    <filter>
+        <criteriaItems>
+            <column>CampaignMember.Post_Secondary_Enrollment_Status__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>notEqual</operator>
+            <value></value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CAMPAIGN_NAME</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>TS Brockton (2011-2012)</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>CP TS Broc Postsec Attainment for Cohort</name>
+    <params>
+        <name>scopeid</name>
+        <value></value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CampaignWithCampaignMembers</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+</Report>

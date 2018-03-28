@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>ExemptionCertificate__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Tax exemption certificate for the account. We recommend that you use the tax exemption features of Avalara. Use this field only when you are not required to collect tax for the account and your finance team tracks and verifies tax exemption certificates manually.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Tax exemption certificate for the account. Enter a value if you are not required to collect tax for the account and your finance team tracks and verifies tax exemption certificates manually.</inlineHelpText>
+        <label>Exemption Certificate</label>
+        <length>25</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>IsBillingAddressValidated__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Indicates whether the billing address has been validated against the addresses in the external tax calculation service.</description>
+        <externalId>false</externalId>
+        <formula>NOT
+            ( ISBLANK(BillingStreet) &amp;&amp;
+              ISBLANK(BillingCity) &amp;&amp; 
+              ISBLANK(BillingState) &amp;&amp;
+              ISBLANK(BillingPostalCode) &amp;&amp;
+              ISBLANK(BillingCountry) 
+            ) &amp;&amp; 
+            ( BillingStreet  =  ValidatedBillingStreet__c ) &amp;&amp;
+            ( BillingCity =  ValidatedBillingCity__c ) &amp;&amp;
+            ( BillingState =  ValidatedBillingState__c ) &amp;&amp;  
+            ( BillingPostalCode =  ValidatedBillingPostalCode__c ) &amp;&amp;
+            ( BillingCountry =  ValidatedBillingCountry__c )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Indicates whether the billing address has been validated against the addresses in the external tax calculation service.</inlineHelpText>
+        <label>Billing Address Validated</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>IsShippingAddressValidated__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Indicates whether the shipping address has been validated against the addresses in the external tax calculation service.</description>
+        <externalId>false</externalId>
+        <formula>NOT
+            ( ISBLANK(ShippingStreet) &amp;&amp;
+              ISBLANK(ShippingCity) &amp;&amp; 
+              ISBLANK(ShippingState) &amp;&amp;
+              ISBLANK(ShippingPostalCode) &amp;&amp;
+              ISBLANK(ShippingCountry) 
+            ) &amp;&amp; 
+            ( ShippingStreet  =  ValidatedShippingStreet__c ) &amp;&amp;
+            ( ShippingCity =  ValidatedShippingCity__c ) &amp;&amp;
+            ( ShippingState =  ValidatedShippingState__c ) &amp;&amp;  
+            ( ShippingPostalCode =  ValidatedShippingPostalCode__c ) &amp;&amp;
+            ( ShippingCountry =  ValidatedShippingCountry__c )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Indicates whether the shipping address has been validated against the addresses in the external tax calculation service.</inlineHelpText>
+        <label>Shipping Address Validated</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>ValidatedBillingCity__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Validated Billing City</label>
+        <length>40</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ValidatedBillingCountry__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Validated Billing Country</label>
+        <length>40</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ValidatedBillingPostalCode__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Validated Billing Zip/Postal Code</label>
+        <length>20</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ValidatedBillingState__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Validated Billing State/Province</label>
+        <length>20</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ValidatedBillingStreet__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Validated Billing Street</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>ValidatedShippingCity__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Validated Shipping City</label>
+        <length>40</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ValidatedShippingCountry__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Validated Shipping Country</label>
+        <length>40</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ValidatedShippingPostalCode__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Validated Shipping Zip/Postal Code</label>
+        <length>20</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ValidatedShippingState__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Validated Shipping State/Province</label>
+        <length>20</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ValidatedShippingStreet__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Validated Shipping Street</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>TextArea</type>
+    </fields>
+    <webLinks>
+        <fullName>ValidateBillingAddress</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Validate Billing Address</masterLabel>
+        <openType>sidebar</openType>
+        <page>AccountBillingAddressValidation</page>
+        <protected>false</protected>
+    </webLinks>
+    <webLinks>
+        <fullName>ValidateShippingAddress</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Validate Shipping Address</masterLabel>
+        <openType>sidebar</openType>
+        <page>AccountShippingAddressValidation</page>
+        <protected>false</protected>
+    </webLinks>
+</CustomObject>

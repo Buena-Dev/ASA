@@ -1,0 +1,43 @@
+<apex:page standardController="c2g__codaJournal__c" extensions="c2g.CODAHelpLoaderController,c2g.CreateCancelJournalsController" recordSetVar="codaJournals">
+    <script src="{!URLFOR($Resource.coda2go,'coda2go/web/script/lib.js')}" type="text/javascript"></script>
+    <apex:stylesheet value="{!URLFOR($Resource.c2g__coda2go,'coda2go/web/css/style.css')}"/>
+    <script>
+		var CODA2GoButtons = new CODA2GoPage();
+		var CODA2GoBtnSaveValue = "{!$Label.codaProcessing}";
+	</script>
+    <apex:form id="form" onsubmit="if(CODA2GoButtons.disableSaveButtons){ return CODA2GoButtons.disableSaveButtons(); }">
+        <apex:sectionHeader title="{!$Label.c2g__codapagejournalcanceljournals}"  help="{!redirectForHelp1347}"/>
+        <apex:pageBlock >
+            <apex:pagemessages />
+            <apex:pageBlockTable value="{!selectedJournals}" var="journal" rendered="{!CanShowButton}">
+                <apex:column headerValue="{!$ObjectType.c2g__codaJournal__c.fields.Name.label}">
+                    <apex:outputLink value="/{!journal.id}"><apex:outputText value="{!journal.Name}" /></apex:outputLink>
+                </apex:column>
+                <apex:column value="{!journal.c2g__RecurringJournalSourceJournal__c}"/>
+                <apex:column value="{!journal.c2g__Type__c}"/>
+                <apex:column value="{!journal.c2g__JournalDate__c}"/>
+                <apex:column value="{!journal.c2g__Period__c}"/>
+                <apex:column value="{!journal.c2g__Reference__c}"/>
+                <apex:column value="{!journal.c2g__JournalCurrency__c}"/>
+                <apex:column value="{!journal.c2g__Credits__c}"/>
+                <apex:column value="{!journal.c2g__Debits__c}"/>
+                <apex:column value="{!journal.c2g__JournalStatus__c}"/>
+                <apex:column value="{!journal.c2g__OwnerCompany__c}"/>
+            </apex:pageBlockTable>
+            <apex:pageBlockButtons location="bottom">
+                <apex:commandButton value="{!$Label.c2g__savebutton}" action="{!cancelJournals}" id="Save_h" styleclass="hiddensubmit"/>
+                <apex:commandButton value="{!$Label.c2g__codasaveandpostbutton}" action="{!cancelAndPostJournals}" id="SaveAndPost_h" styleclass="hiddensubmit"/>
+                <apex:commandButton value="{!$Label.c2g__cancel}" action="{!cancel}" id="cancel_h" styleclass="hiddensubmit" immediate="true" reRender=""/>
+                <apex:commandButton value="{!$Label.c2g__nativeuibuttongoback}" action="{!cancel}" id="goBack_h" styleclass="hiddensubmit" immediate="true" reRender=""/>
+                <!-- End of Hidden Buttons -->
+                <apex:commandButton value="{!$Label.c2g__savebutton}" id="Save" onclick="document.getElementById('{!$Component.Save_h}').click();return false;" rendered="{!CanShowButton}" reRender="form"/>
+                <apex:commandButton value="{!$Label.c2g__codasaveandpostbutton}" id="SaveAndPost" onclick="document.getElementById('{!$Component.SaveAndPost_h}').click();return false;" rendered="{!CanShowButton}" reRender="form"/>           
+                <apex:commandButton value="{!$Label.c2g__cancel}" id="cancel" onclick="if(!CODA.queing()){document.getElementById('{!$Component.cancel_h}').click()};return false;" rendered="{!CanShowButton}"/>
+                <apex:commandButton value="{!$Label.c2g__nativeuibuttongoback}" id="goBack" onclick="if(!CODA.queing()){document.getElementById('{!$Component.goBack_h}').click()};return false;" rendered="{!(!CanShowButton)}"/>
+                <script>
+                    CODA2GoButtons.initButtons(["{!$Component.Save}","{!$Component.SaveAndPost}","{!$Component.Cancel}"]);
+                </script>
+            </apex:pageBlockButtons>
+        </apex:pageBlock>   
+    </apex:form>
+</apex:page>

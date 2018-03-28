@@ -1,0 +1,14 @@
+<apex:page standardController="fferpcore__ScheduledJob__c" extensions="fferpcore.ScheduledJobController">
+	<apex:sectionHeader title="{!$Label.fferpcore__erpscheduledjobunschedulejobtitle}"/>
+	<apex:form >
+		<apex:pageBlock >
+    		<apex:pageBlockButtons >
+				<apex:commandButton rendered="{!hasattemptedschedule == false}" value="{!$Label.fferpcore__erpscheduledjobunschedulejobbutton}" action="{!unschedulejob}" />
+				<apex:commandButton value="{!cancelbuttontext}" action="{!cancel}" />
+			</apex:pageBlockButtons>
+			<apex:pageBlockSection >
+				{!unsheduleprocessdisplaymessage}
+			</apex:pageBlockSection>
+		</apex:pageBlock>
+	</apex:form>
+</apex:page>

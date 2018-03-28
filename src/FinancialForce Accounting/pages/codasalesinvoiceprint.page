@@ -1,0 +1,31 @@
+<apex:page standardController="c2g__codaInvoice__c"  showHeader="false" sidebar="false" standardStylesheets="false" 
+renderas="{!if($CurrentPage.parameters.p == null, null, 'pdf')}" applyBodyTag="false" applyHtmlTag="false">
+	<!-- 
+		INSTRUCTIONS FOR CUSTOMIZATIONS:
+		The PDF generation code has been placed in a component called "codaSalesInvoiceStandardAttachEmail". If you want to use own Visualforce page:
+		- Create a new component and copy the code of "codaSalesInvoiceStandardAttachEmail" into it.
+		- Create a new Visualforce page and copy this code into it, replacing c:codaSalesInvoiceStandardAttachEmail by c:yourNewComponentName.
+		- Set “Custom Sales Invoice Note Print Template” custom setting to use your new Visualforce page.
+		- Make any customizations to the new Visualforce page or new component.
+		Note: if you are only going to change the styles, you can use the provided component instead of creating a new one.
+	-->
+	<!-- Styles -->
+	<html>
+		<head>
+			<style type="text/css">
+				@page {
+						@bottom-right {content:"{!$Label.PaginationBeforePageText} " counter(page) " {!$Label.PaginationAfterPageText} " counter(pages);
+								font-family:Verdana, Arial, Helvetica, Arial Unicode MS, sans-serif;
+								font-size:7.5pt;
+								font-weight:bold;
+								padding-bottom;25px;
+						}
+					}
+			</style>
+		</head>
+		<apex:stylesheet value="{!URLFOR($Resource.c2g__print_template,'print_template/css/print.css')}"/>
+
+		<!-- Component -->
+		<c:codaSalesInvoiceStandardAttachEmail invoiceObj="{!c2g__codaInvoice__c}"/>
+	</html>
+</apex:page>

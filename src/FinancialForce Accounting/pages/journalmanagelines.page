@@ -1,0 +1,242 @@
+<apex:page standardController="c2g__codaJournal__c" extensions="c2g.JournalManageLinesController" sidebar="false" action="{!loadLines}">
+    <apex:variable var="fieldsInFieldSet" value="{!0}"/>
+    <apex:variable var="lineType" value="{!SObjectFields[fieldNameLineType].describe.name}"/>
+    <apex:variable var="destinationLineType" value="{!SObjectFields[fieldNameDestinationLineType].describe.name}"/>
+    <apex:variable var="account" value="{!SObjectFields[fieldNameAccount].describe.name}"/>
+    <apex:variable var="bankAccount" value="{!SObjectFields[fieldNameBankAccount].describe.name}"/>
+    <apex:variable var="product" value="{!SObjectFields[fieldNameProduct].describe.name}"/>
+    <apex:variable var="taxCode" value="{!SObjectFields[fieldNameTaxCode].describe.name}"/>
+    <apex:variable var="destCompany" value="{!SObjectFields[fieldNameDestinationCompany].describe.name}"/>
+
+    <script src="{!URLFOR($Resource.coda2go,'coda2go/web/script/lib.js')}" type="text/javascript"></script>
+    <script type="text/javascript" src="{!$Resource.front_journal}/front_journal/base/frameworks/jquery-1.5.min.js"></script>
+    <script src="{!URLFOR($Resource.coda2go,'coda2go/web/script/UberGrid.js')}" type="text/javascript"></script>
+
+    <script>
+        CODA.documentFunctionTimer("keyup", CODA.executeQueue, 1500);
+        CODA.documentFunctionTimer("click", CODA.executeQueue, 1500);
+        var CODA2GoButtons = new CODA2GoPage();
+        var CODA2GoBtnSaveValue = "{!$Label.Processing}";
+    </script>
+    
+    <apex:stylesheet value="{!URLFOR($Resource.c2g__coda2go,'coda2go/web/css/style.css')}"/>
+    <apex:stylesheet value="{!URLFOR($Resource.c2g__coda2go,'coda2go/web/css/UberGrid.css')}"/>
+    <apex:stylesheet value="{!URLFOR($Resource.c2g__coda2go,'coda2go/web/css/managelines.css')}"/>
+    
+    <style type="text/css">
+    .datePicker{
+        z-index:2000 !important;
+    }
+    </style>
+ 
+    <apex:form onsubmit="if(CODA2GoButtons.disableSaveButtons){return CODA2GoButtons.disableSaveButtons();};">
+        <div id="indicator"><img src="/s.gif" align="absMiddle"/><span id="indicatortext"></span></div>
+        <!-- PAGE TITLE -->
+        <apex:sectionHeader title="{!$Label.c2g__managelinestitle}" subtitle="{!c2g__codaJournal__c.Name}"/>
+            <apex:pageBlock title="{!$Label.c2g__journallines}">
+                
+                <apex:pageBlockButtons >
+                    <!-- Hidden Buttons -->
+                    <apex:commandButton action="{!saveAll}" id="save_h" value="{!$Label.c2g__save}" onclick="CODA.forceDeleteQueue();CODA.indicatorOn('{!$Label.c2g__saving}');" styleclass="hiddensubmit"/>
+                    <apex:commandButton action="{!cancel}" id="cancel_h" value="{!$Label.c2g__cancel}" immediate="true"  styleclass="hiddensubmit"/>
+
+
+                    <apex:outputPanel rendered="{!!hasPageLoadError}" layout="none">
+                        <apex:commandButton value="{!$Label.c2g__save}" id="save" onclick="if(!CODA.queing()){document.getElementById('{!$Component.save_h}').click()};return false;" />
+                    </apex:outputPanel>
+                    <apex:commandButton value="{!$Label.c2g__cancel}" id="cancel" onclick="if(!CODA.queing()){document.getElementById('{!$Component.cancel_h}').click()};return false;" />
+
+                    <script>
+                        CODA2GoButtons.initButtons(["{!$Component.save}","{!$Component.cancel}"]);
+                    </script>
+                </apex:pageBlockButtons>
+                
+                <apex:PageMessages id="errorMessages"/>
+                
+                <!-- HARD SET FIELDS -->
+                <div class="uberGridWrapper hideGrid_{!hasPageLoadError}">
+                    <table cellpadding="0" cellspacing="0" border="0" class="uberGrid managelines" id="uberGrid">
+                        <thead>
+                            <tr>
+                                <th class="aCenter ignorecol_true" width="30">
+                                    <div class="headerInner">&nbsp;</div>
+                                </th>
+                                
+                                <th class="picklist ignorecol_false">
+                                    <div class="headerInner required">
+                                        {!SObjectFields[fieldNameLineType].describe.label}
+                                    </div>
+                                </th>
+                                
+                                <th class="reference ignorecol_false">
+                                    <div class="headerInner required JournalItem">
+                                        {!$Label.codaPageJournalLineItem}
+                                    </div>
+                                </th>
+                                <apex:repeat value="{!LineFieldSetFields}" var="f">
+                                    <apex:variable var="fieldName" value="{!SObjectFields[f].describe.name}"/>
+                                    <apex:outputPanel >
+                                        <apex:variable var="fieldsInFieldSet" value="{!fieldsInFieldSet+1}"/>
+                                        <th class="{!SObjectFields[f].describe.type} ignorecol_{!$ObjectType.codaJournalLineItem__c.fields[f].calculated}">
+                                            <div class="headerInner {!IF(OR(f.required,f.dbrequired),'required','')} {!IF(fieldName==lineType,'required','')} {!SObjectFields[f].describe.localName}" >
+                                                {!SObjectFields[f].describe.label}
+                                            </div>
+                                        </th>
+                                    </apex:outputPanel>   
+                                    <apex:outputText rendered="{!fieldName==destinationLineType}">
+                                        <apex:variable var="fieldsInFieldSet" value="{!fieldsInFieldSet+1}"/>
+                                        <th class="reference ignorecol_false">
+                                            <div class="headerInner DestinationLineItem" >
+                                                {!$Label.DestinationLineItem}
+                                            </div>
+                                        </th>
+                                    </apex:outputText>
+                                    
+                                </apex:repeat>
+                                
+                                <th class="aCenter ignorecol_true" width="30">
+                                    <div class="headerInner">&nbsp;</div>
+                                </th>
+                                
+                            </tr>
+                        </thead>
+                        
+                        <tbody>
+                            <apex:variable var="lineNumber" value="{!0}"/>
+                            
+                            <apex:repeat var="viewLine" value="{!JournalLines}">
+                            <apex:variable var="lineNumber" value="{!lineNumber+1}"/>
+                                <tr class="{!IF(viewLine.deleted,'hiddenRow','')}">
+                                    <td class="aCenter" width="30">
+                                        <div class="cellInnerText lineNumber"><apex:outputText value="{0,number,###}"><apex:param value="{!lineNumber}" /></apex:outputText></div>
+                                        <apex:inputCheckbox value="{!viewLine.deleted}" styleClass="deleted"/>
+                                    </td>
+                                    
+                                    <td class="picklist inputCell">
+                                        <div class="{!fieldNameLineType} picklist cellInner">
+                                            <apex:inputField value="{!viewLine.line.c2g__LineType__c}" styleClass="input input_{!lineType}"/>
+                                        </div>
+                                    </td>
+                                    <c:JournalManageItemField line="{!viewLine.Line}" cellCls="reference inputCell js-item" isDestination="false" nmspPrefix="{!NameSpace}"/>
+
+                                    <apex:repeat value="{!LineFieldSetFields}" var="fieldName">
+                                    <apex:outputPanel >
+                                            <td class="{!SObjectFields[fieldName].describe.type} {!IF(!$ObjectType.codaJournalLineItem__c.fields[fieldName].calculated,'inputCell','')}"
+                                            html-data-required="{!fieldName.required}" html-data-role="{!fieldName}">
+                                                <div class="{!fieldName} {!SObjectFields[fieldName].describe.type} {!IF(!$ObjectType.codaJournalLineItem__c.fields[fieldName].calculated,'cellInner','cellInnerText')}">
+                                                    <apex:inputField value="{!viewLine.line[fieldName]}" styleClass="input input_{!fieldName}
+                                                    {!IF(!fieldName.required,'js-required','')}"
+                                                    required="{!OR(fieldName.required, fieldName.dbrequired)}" onchange="ML.populateRequiredLookUpFields(this)">
+                                                        <apex:message />
+                                                    </apex:inputField>
+                                                </div>
+                                            </td>
+                                    </apex:outputPanel>
+                                        <c:JournalManageItemField line="{!viewLine.DestinationLine}" cellCls="reference inputCell js-destination-item" rendered="{!fieldName==destinationLineType}" isDestination="true" nmspPrefix="{!NameSpace}"/>
+                                    </apex:repeat>
+                                    
+                                    <td class="aCenter" width="30">
+                                        <a href="#" class="removeLine" title="{!$Label.RemoveLine}">{!$Label.RemoveLine}</a>
+                                    </td>
+                                </tr>
+                            </apex:repeat>
+                            
+                        </tbody>
+                        
+                        <apex:outputPanel layout="none">
+                        <tfoot>
+                            <tr>
+                                <td></td>
+                                <td rowSpan="3">
+                                    <div class="cellInnerText">
+                                        <input type="button" class="newlinebutton addLine" value="{!$Label.codaNewLine}"/>
+                                    </div>
+                                </td>
+                                <td></td>
+                                <td colspan="{!fieldsInFieldSet-2}"></td>
+                                <td class="hiddenCell"></td>
+                                <td class="aRight">
+                                    <div class="cellInnerText">{!$Label.Debits}</div>
+                                </td>
+                                <td class="aRight">
+                                    <div class="cellInnerText" id="debitTotal">0.00</div>
+                                </td>
+                                <td>&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td colspan="{!fieldsInFieldSet-2}"></td>
+                                <td class="hiddenCell"></td>
+                                <td class="aRight">
+                                    <div class="cellInnerText">{!$Label.Credits}</div>
+                                </td>
+                                <td class="aRight">
+                                    <div class="cellInnerText" id="creditTotal">0.00</div>
+                                </td>
+                                <td>&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td colspan="{!fieldsInFieldSet-2}"></td>
+                                <td class="hiddenCell"></td>
+                                <td class="aRight">
+                                    <div class="cellInnerText">{!$Label.Total}</div>
+                                </td>
+                                <td class="aRight">
+                                    <div class="cellInnerText total" id="journalTotal">0.00</div>
+                                </td>
+                                <td>&nbsp;</td>
+                            </tr>
+                        </tfoot>
+                        </apex:outputPanel> 
+                    </table>
+                </div>
+                
+                <div id="defaultRowFields" class="defaultRowFields">
+                    <apex:repeat value="{!LineFieldSetFields}" var="f">
+                        <apex:variable var="fieldName" value="{!SObjectFields[f].describe.name}"/>
+                        <div html-data-role="{!fieldName}">
+                            {!SObjectFields[f].describe.label}:<apex:inputField value="{!DefaultJournalLine[f]}" styleClass="input input_{!SObjectFields[f].describe.name} js-defaultField"/><br/>
+                            <apex:outputText rendered="{!IF(fieldName==lineType,true,false)}">
+                                {!$Label.c2g__codavoidpaymentaccount}<apex:inputField value="{!DefaultJournalLine.c2g__Account__c}" styleClass="input input_{!account}"/><br/>
+                                {!SObjectFields[fieldNameBankAccount].describe.Label}<apex:inputField value="{!DefaultJournalLine.c2g__BankAccount__c}" styleClass="input input_{!bankAccount}"/><br/>
+                                {!SObjectFields[fieldNameProduct].Label}<apex:inputField value="{!DefaultJournalLine.c2g__Product__c}" styleClass="input input_{!product}"/><br/>
+                                {!SObjectFields[fieldNameTaxCode].Label}<apex:inputField value="{!DefaultJournalLine.c2g__TaxCode__c}" styleClass="input input_{!taxCode}"/><br/>
+                                {!$Label.c2g__intercompany}<apex:inputField value="{!DefaultJournalLine.c2g__DestinationCompany__c}" styleClass="input input_{!destCompany}"/><br/>
+                            </apex:outputText>  
+                        </div> 
+                    </apex:repeat>
+                </div>
+            </apex:pageBlock>
+    </apex:form>
+    
+    
+    <script type="text/javascript" src="{!$Resource.front_journal}/front_journal/utils/utilNumeric.js"></script>
+
+    <script type="text/javascript" src="{!$Resource.front_journal}/front_journal/pages/journalmanagelines/calculations.js"></script>
+
+    <script type="text/javascript">
+        var FFDCGlobalThousandSeperator = "{!ThousandSeparator}",
+            FFDCGlobalDecimalSeperator = "{!DecimalSeparator}",
+            FFDCGlobalIsDebitCreditIndicatorOn = "{!IsDebitCreditIndicatorOn}",
+            FFDCNameSpace = "{!NameSpace}",
+            $Label = $Label || {};
+
+        /** Picklist Labels **/
+        $Label.AccountCustomer = '{!JSENCODE(LINETYPE_ACCOUNTCUSTOMER)}';
+        $Label.AccountVendor = '{!JSENCODE(LINETYPE_ACCOUNTVENDOR)}';
+        $Label.BankAccount = '{!JSENCODE(LINETYPE_BANKACCOUNT)}';
+        $Label.GLA = '{!JSENCODE(LINETYPE_GENERALLEDGERACCOUNT)}';
+        $Label.ProductPurchases = '{!JSENCODE(LINETYPE_PRODUCTPURCHASES)}';
+        $Label.ProductSales = '{!JSENCODE(LINETYPE_PRODUCTSALES)}';
+        $Label.TaxCode = '{!JSENCODE(LINETYPE_TAXCODE)}';
+        $Label.Intercompany = '{!JSENCODE(LINETYPE_INTERCOMPANY)}';
+        
+    </script>
+
+    <apex:outputPanel rendered="{!!hasPageLoadError}" layout="none">
+        <script type="text/javascript" src="{!$Resource.front_journal}/front_journal/pages/journalmanagelines/page.js"></script>
+    </apex:outputPanel>
+</apex:page>

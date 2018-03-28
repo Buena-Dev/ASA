@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>false</available>
+    <description>Constitution Day email 2007</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>EmailLetterhead</letterhead>
+    <name>Constitution Day</name>
+    <style>freeForm</style>
+    <subject>Constitution Day Resources from American Student Assistance</subject>
+    <textOnly>Dear {!Contact.FirstName},
+ 
+In mid-September, schools throughout the country will celebrate Constitution Day, commemorating the signing of the U.S. Constitution.   American Student Assistance® (ASA) is your resource for this important celebration!
+ 
+In 2004, legislation that created Constitution Day required all educational institutions who are receiving federal aid to implement educational programs about the U.S. Constitution on September 17th of each year, the anniversary of the actual signing of the Constitution in 1787.
+ 
+Since September 17 falls on a Monday, celebrations can occur the week before or the week after, providing schools greater flexibility.
+ 
+ASA has a page dedicated to Constitution Day complete with an implementation guide and resources to help you plan your celebration.
+ 
+While you are on www.amsa.com, be sure to check out the Common Manual e-Collection, read highlights from the 2007 Symposium, or stock up on federal forms and ASA publications.
+ 
+If you have questions about Constitution Day or about any of ASA&apos;s services, please let me know!  
+ 
+
+Regards,
+{!Contact.OwnerFullName}
+{!Contact.OwnerEmail}
+ 
+The content of this email is confidential and proprietary to American Student Assistance. It is intended only for the above-named individual or entity and for the purpose indicated and may not be reproduced or distributed without permission of the sender. Please notify the sender or ASA if you received this email in error.</textOnly>
+    <type>html</type>
+</EmailTemplate>

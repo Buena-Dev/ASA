@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Salt Ambassador &amp; Advisor Program Bulletin Dec</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Salt_School_Channel</letterhead>
+    <name>Salt AmbAdv Prog Bulletin- Dec</name>
+    <style>freeForm</style>
+    <subject>Salt Ambassador Program Bulletin - December 2016 / January 2017</subject>
+    <textOnly>Salt Ambassador Program Bulletin
+
+December 2016/January 2017
+
+
+
+Greetings to our Salt® Ambassadors and Advisors!
+
+
+Welcome to the December/January 2016 Salt Ambassador Program Bulletin, the vehicle that provides you with money tips to share and tools to increase awareness about Salt. Here are things you can do this month to help promote money management and spread the word about Salt. Share the suggestions below through your school and personal social media channels.
+
+
+Share Salt Courses with students to help them with their financial well-being
+
+These interactive money courses help you take control of your finances and student loans. Saltmoney.org/saltcourses
+
+Promote Salt article - How To Give Gifts Without Spending Too Much Money
+
+Giving a gift can become stressful if you&apos;re not sure how much to spend—or can&apos;t afford to spend much. By setting limits and being creative, you can keep your experience (and your recipient) happy.
+
+
+Check out the most popular content on Saltmoney.org last month
+
+Know What You Owe is a resource that helps you keep track of your debt in one place. saltmoney.org/KWYO
+
+
+
+
+
+
+General Updates
+
+
+The Ambassador Experience – for Salt Clients (online seminar) January 25th at 1:00 pm Eastern
+
+If you are interested in sharing your experience (success stories) as a Salt Ambassador please contact Lorinda Diehl at ldiehl@asa.org and register for the training here.
+
+
+Salt Community has a fresh look, improved features, and a new experience
+
+Check out it out and read these useful posts.
+
+Avoid Becoming the ‘Broke College Kid’ – What I learned My Freshman Year, Should That Year-End Bonus Go to Debt or Retirement, and Upcoming College Scholarship Deadlines: January 2017
+
+
+
+Do you have questions or have a tip you think should be in the February Salt Ambassador Bulletin?  We’d love to hear from you at engagement@asa.org.</textOnly>
+    <type>html</type>
+</EmailTemplate>

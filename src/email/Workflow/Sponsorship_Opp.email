@@ -1,0 +1,8 @@
+Good day.
+
+
+ {!User.FirstName} {!User.LastName} has indicated that {!Account.Name} currently has a Sponsorship Opportunity with the following sponsor(s):
+
+{!Account.Sponsor_Name_s__c}.
+
+Click here to view the account:  http://na4.salesforce.com/{!Account.Id}.

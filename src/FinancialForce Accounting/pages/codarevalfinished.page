@@ -1,0 +1,19 @@
+<apex:page standardController="c2g__codaCurrencyRevaluation__c" tabStyle="c2g__codaCurrencyRevaluation__c" extensions="c2g.CODACurrencyRevalController,c2g.CODAHelpLoaderController">
+
+    <apex:sectionHeader title="{!$Label.c2g__codarevalwizardtitle}" help="{!redirectForHelp1150}"/>
+
+    <apex:form >
+   
+        <apex:pageBlock mode="edit">
+   
+           <apex:pageMessages id="messages"/>
+        
+            <apex:pageBlockButtons location="bottom">
+                <apex:commandButton value="{!$Label.c2g__ok}" id="ok" action="{!cancel}" immediate="true" /> 
+            </apex:pageBlockButtons>            
+       
+       </apex:pageBlock>
+       
+    </apex:form>
+
+</apex:page>

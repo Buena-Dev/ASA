@@ -1,0 +1,27 @@
+<table cellpadding="5" width="550" height="400" cellspacing="5" border="0" >
+<tr height="400" valign="top" >
+<td locked="0" style=" font-family:arial; bLabel:main; color:#000000; font-size:12pt; bEditID:r3st1; background-color:#FFFFFF;" aEditID="c1r1" tEditID="c1r1" >
+<![CDATA[<P>Dear {!Contact.FirstName},</P>
+<P><?xml:namespace prefix = o ns = "urn:schemas-microsoft-com:office:office" /><o:p>&nbsp;</o:p></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt">In mid-September, schools throughout the country will celebrate <SPAN style="mso-bidi-font-weight: bold">Constitution Day, </SPAN>commemorating the signing of the U.S. Constitution.<SPAN style="mso-spacerun: yes">&nbsp; </SPAN><SPAN style="mso-spacerun: yes">&nbsp;</SPAN>American Student Assistance<SPAN style="mso-bidi-font-family: Arial">®</SPAN> (ASA) is your resource for this important celebration!</P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt"><o:p>&nbsp;</o:p></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt">In 2004, legislation that created Constitution Day required <SPAN style="mso-bidi-font-weight: bold">all educational institutions who are receiving federal aid </SPAN>to implement educational programs about the U.S. Constitution on September 17<SUP>th</SUP> of each year, the anniversary of the actual signing of the Constitution in 1787.</P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt"><o:p>&nbsp;</o:p></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt">Since September 17 falls on a Monday, celebrations can occur the week before or the week after, providing schools greater flexibility.</P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt"><o:p>&nbsp;</o:p></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt">ASA has a page dedicated to <A href="http://www.amsa.com/fap/resources/constitutionday.cfm"><SPAN style="COLOR: windowtext">Constitution Day</SPAN></A> complete with an implementation guide and resources to help you plan your celebration.</P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt"><o:p>&nbsp;</o:p></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt">While you are on www.amsa.com, be sure to check out the <A href="http://www.amsa.com/fap/policies/manual.cfm"><SPAN style="COLOR: windowtext">Common Manual e-Collection</SPAN></A>, read highlights from the <A href="http://www.amsa.com/events/symposium/2007/index.cfm"><SPAN style="COLOR: windowtext">2007 Symposium</SPAN></A>, or stock up on <A href="http://www.amsa.com/fap/forms/index.cfm"><SPAN style="COLOR: windowtext">federal forms and ASA publications</SPAN></A>.</P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt"><o:p>&nbsp;</o:p></P>
+<P style="MARGIN: 0in 0in 0pt; LINE-HEIGHT: normal"><SPAN style="FONT-SIZE: 12pt; FONT-FAMILY: Arial">If you have questions about Constitution Day or about any of ASA's services, please let me know!&nbsp; </SPAN>
+<P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt">
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt"><SPAN style="COLOR: navy"><FONT color=#000000><o:p></o:p></FONT></SPAN></P><FONT color=#000000>&nbsp;</FONT> </P>
+<P></P>
+<P><FONT color=#000000>Regards,</FONT></P>
+<P><FONT color=#000000>{!Contact.OwnerFullName}</FONT></P>
+<P><FONT color=#000000>{!Contact.OwnerEmail}</FONT></P>
+<P><FONT color=#000000>&nbsp;</FONT></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt"><SPAN style="FONT-SIZE: 8pt; FONT-FAMILY: Arial; mso-no-proof: yes">The content of this email is confidential and proprietary to American Student Assistance. It is intended only for the above-named individual or entity and for the purpose indicated and may not be reproduced or distributed without permission of the sender. Please notify the sender or ASA if you received this email in error.</SPAN><SPAN style="mso-no-proof: yes"><o:p></o:p></SPAN></P>]]></td>
+</tr>
+</table>

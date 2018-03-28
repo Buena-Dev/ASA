@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Secondary Risk/Lost Reason</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Secondary Risk/Lost Reasons</value>
+    </caseValues>
+    <fields>
+        <label><!-- Account --></label>
+        <name>ParentId__c</name>
+        <relationshipLabel><!-- Secondary Risk/Lost Reasons --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Sort Order --></label>
+        <name>Sort_Order__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

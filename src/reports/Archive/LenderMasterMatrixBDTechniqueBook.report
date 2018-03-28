@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Account.OE_Code__c</field>
+    </columns>
+    <columns>
+        <field>P_ACCOUNT.NAME</field>
+    </columns>
+    <columns>
+        <field>P_ROLE</field>
+    </columns>
+    <columns>
+        <field>USERS.NAME</field>
+    </columns>
+    <description>Lender Master Matrix customized for the BD Technique Book</description>
+    <filter>
+        <criteriaItems>
+            <column>P_ROLE</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Servicer</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>ACCOUNT.NAME</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Lender Master Matrix-BD Technique Book</name>
+    <params>
+        <name>co</name>
+        <value>0</value>
+    </params>
+    <reportType>AccountPartner</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

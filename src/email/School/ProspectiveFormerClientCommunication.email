@@ -1,0 +1,117 @@
+<table height="400" width="600" cellpadding="5" border="0" cellspacing="5" >
+<tr height="50" valign="top" >
+<td style=" color:#000000; font-size:12pt; background-color:#FFFFFF; font-family:arial; bLabel:main; bEditID:r3st1;" tEditID="c1r1" locked="1" aEditID="c1r1" >
+<![CDATA[<FONT face=Geneva,Arial,Sans-Serif size=5>ASA News from<BR>{!Account.OwnerFullName} </FONT>]]></td>
+</tr>
+<tr height="300" valign="top" >
+<td style=" color:#000000; font-size:12pt; background-color:#FFFFFF; font-family:arial; bLabel:main; bEditID:r3st1;" tEditID="c1r2" locked="0" aEditID="c1r2" >
+<![CDATA[<P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT face=Arial,Sans-Serif>Dear {!Contact.FirstName},</FONT></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt">&nbsp; </P>
+<P class=MsoPlainText style="MARGIN: 0in 0in 0pt"><SPAN style="FONT-FAMILY: Arial">American Student Assistance<SUP>®</SUP> (ASA) would like to ensure that our school contacts are aware of the following information and announcements from the Department of Education.<?xml:namespace prefix = o ns = "urn:schemas-microsoft-com:office:office" /><o:p></o:p></SPAN></P>
+<P class=MsoPlainText style="MARGIN: 0in 0in 0pt"><SPAN style="FONT-FAMILY: Arial"><o:p>&nbsp;</o:p></SPAN></P>
+<P class=MsoPlainText style="MARGIN: 0in 0in 0pt"><B style="mso-bidi-font-weight: normal"><SPAN style="FONT-FAMILY: Arial">Final Rules Webinars<o:p></o:p></SPAN></B></P>
+<P class=MsoPlainText style="MARGIN: 0in 0in 0pt"><SPAN style="FONT-FAMILY: Arial">The Department will hold two webinars this month to provide information about the changes to the FFEL, Direct Loan, and Perkins Loan programs, which were recently published in the Final Rules. To register for one of the webinars, which will take place on Friday, November 13 and again on Wednesday, November 18 from 2:30-4:00 p.m. ET, visit the dedicated <A href="http://www.fsaregistration.ed.gov/profile/web/index.cfm?PKwebID=0x112117fce&amp;varPage=register"><SPAN style="COLOR: windowtext">registration page</SPAN></A>. <SPAN style="mso-spacerun: yes">&nbsp;</SPAN><o:p></o:p></SPAN></P>
+<P class=MsoPlainText style="MARGIN: 0in 0in 0pt"><SPAN style="FONT-FAMILY: Arial"><o:p>&nbsp;</o:p></SPAN></P>
+<P class=MsoPlainText style="MARGIN: 0in 0in 0pt"><SPAN style="FONT-FAMILY: Arial">The Department will also provide webinars about the changes to Federal Pell Grants, Federal Work-Study, and the TEACH Grant program. To register for one of the webinars, which will take place on November 10 and again on November 16 from 2:30-4:00 p.m. ET, visit the dedicated <A href="http://www.fsaregistration.ed.gov/profile/web/index.cfm?PKwebID=0x11458119d&amp;varPage=location"><SPAN style="COLOR: windowtext">registration page</SPAN></A>. <o:p></o:p></SPAN></P>
+<P class=MsoPlainText style="MARGIN: 0in 0in 0pt"><SPAN style="FONT-FAMILY: Arial"><o:p>&nbsp;</o:p></SPAN></P>
+<P class=MsoPlainText style="MARGIN: 0in 0in 0pt"><B style="mso-bidi-font-weight: normal"><SPAN style="FONT-FAMILY: Arial">Red Flags Rule Delayed Again<o:p></o:p></SPAN></B></P>
+<P class=MsoPlainText style="MARGIN: 0in 0in 0pt"><SPAN style="FONT-FAMILY: Arial">At the request of Congress, the Federal Trade Commission (FTC) recently announced that the Red Flags Rule, which became effective January 1, 2008, will not enforce the requirements until June 1, 2010, in order to give lawmakers more time to address the concerns of industry groups.<SPAN style="mso-spacerun: yes">&nbsp; </SPAN><o:p></o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt"><SPAN style="FONT-SIZE: 12pt; FONT-FAMILY: Arial"><o:p>&nbsp;</o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt"><SPAN style="FONT-SIZE: 12pt; FONT-FAMILY: Arial">As always, schools should consult with their institution's legal counsel to ensure that they are in compliance since this rule may impact other areas of the institution in addition to the Federal Perkins Loan program.<o:p></o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt"><SPAN style="FONT-SIZE: 12pt; FONT-FAMILY: Arial"><o:p>&nbsp;</o:p></SPAN></P>
+<P class=MsoPlainText style="MARGIN: 0in 0in 0pt"><SPAN style="FONT-FAMILY: Arial">For more information and resources, visit the FTC’s <A href="http://www.ftc.gov/bcp/edu/microsites/redflagsrule/index.shtml"><SPAN style="COLOR: windowtext">Red Flags Rule website</SPAN></A>.<o:p></o:p></SPAN></P>
+<P class=MsoPlainText style="MARGIN: 0in 0in 0pt"><SPAN style="FONT-FAMILY: Arial"><o:p>&nbsp;</o:p></SPAN></P>
+<P class=MsoPlainText style="MARGIN: 0in 0in 0pt"><B style="mso-bidi-font-weight: normal"><SPAN style="FONT-FAMILY: Arial">Net Price Calculator<o:p></o:p></SPAN></B></P>
+<P class=MsoPlainText style="MARGIN: 0in 0in 0pt"><SPAN style="FONT-FAMILY: Arial">As a result of the Higher Education Act of 2008 (HEOA), all schools will be required to provide a tool on their websites so that students can calculate the net price of the institution. Although not required until October 29, 2011, the Department recently provided a <A href="http://npc.inovas.net/institution/"><SPAN style="COLOR: windowtext">Net Price Calculator template</SPAN></A>. Training sessions about the requirement were conducted at NASFAA and are available on their <A href="http://www.nasfaa.org/publications/2009/CTNPCVideo082609.html"><SPAN style="COLOR: windowtext">website</SPAN></A> for NASFAA members. <o:p></o:p></SPAN></P>
+<P class=MsoPlainText style="MARGIN: 0in 0in 0pt"><SPAN style="FONT-FAMILY: Arial"><o:p>&nbsp;</o:p></SPAN></P>
+<P class=MsoPlainText style="MARGIN: 0in 0in 0pt"><SPAN style="FONT-FAMILY: Arial">NASFAA recently announced that they received informal guidance from the Department that the net price calculator requirement applies to schools that enroll first-time, full time students and as a result would not apply to graduate and professional schools.<o:p></o:p></SPAN></P>
+<P class=MsoPlainText style="MARGIN: 0in 0in 0pt"><SPAN style="FONT-FAMILY: Arial"><o:p>&nbsp;</o:p></SPAN></P>
+<P class=MsoPlainText style="MARGIN: 0in 0in 0pt"><B style="mso-bidi-font-weight: normal"><SPAN style="FONT-FAMILY: Arial">Disclosure Requirements<o:p></o:p></SPAN></B></P>
+<P class=MsoPlainText style="MARGIN: 0in 0in 0pt"><SPAN style="FONT-FAMILY: Arial">The National Postsecondary Education Cooperative (NPEC) Working Group on the Higher Education Opportunity Act of 2008 (HEOA) recently published a report intended to help schools identify and comply with the disclosure requirements required under the Higher Education Act of 1965 (HEA), as amended by the HEOA. For more information, visit the <A href="http://nces.ed.gov/pubsearch/pubsinfo.asp?pubid=2010831"><SPAN style="COLOR: windowtext">dedicated page</SPAN></A> on the Department’s <?xml:namespace prefix = st1 ns = "urn:schemas-microsoft-com:office:smarttags" /><st1:place w:st="on"><st1:PlaceType w:st="on">Institute</st1:PlaceType> of <st1:PlaceName w:st="on">Education Science</st1:PlaceName></st1:place>’s website.</SPAN><SPAN style="FONT-FAMILY: Arial; mso-bidi-font-size: 10.0pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt"><SPAN style="FONT-FAMILY: Arial; mso-bidi-font-size: 10.0pt"><o:p><FONT size=2>&nbsp;</FONT></o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt"><SPAN style="FONT-SIZE: 12pt; FONT-FAMILY: Arial">If you have questions about any of the information above, please contact me or ASA’s <st1:place w:st="on"><st1:PlaceName w:st="on">Call</st1:PlaceName> <st1:PlaceType w:st="on">Center</st1:PlaceType></st1:place> at customerservice@amsa.com or 800.999.9080 and select Option 1.<SPAN style="mso-spacerun: yes">&nbsp; </SPAN>The <st1:place w:st="on"><st1:PlaceName w:st="on">Call</st1:PlaceName> <st1:PlaceType w:st="on">Center</st1:PlaceType></st1:place>’s normal hours of operation are Monday through Friday from 8:30 a.m. to 9:00 p.m. ET.<o:p></o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt"><SPAN style="mso-bidi-font-size: 10.0pt"><o:p><FONT face="Times New Roman" size=2>&nbsp;</FONT></o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt"><SPAN style="FONT-SIZE: 12pt; FONT-FAMILY: Arial"><FONT face=Arial,Sans-Serif>Sincerely,</FONT></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt">
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt"><SPAN style="COLOR: black; FONT-FAMILY: Geneva; mso-bidi-font-family: Arial"><o:p><SPAN style="FONT-FAMILY: Arial"><o:p><SPAN style="FONT-FAMILY: 'Palatino Linotype'"><SPAN style="FONT-FAMILY: 'Palatino Linotype'"><SPAN style="FONT-FAMILY: Arial"><o:p><SPAN style="FONT-FAMILY: Arial"><SPAN style="FONT-FAMILY: 'Palatino Linotype'; mso-bidi-font-family: Arial"><SPAN style="FONT-FAMILY: 'Palatino Linotype'; mso-bidi-font-family: Arial"><o:p><SPAN style="FONT-FAMILY: Arial"><o:p><FONT face=Arial,Sans-Serif>&nbsp;</FONT></o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt"><SPAN style="FONT-FAMILY: Arial"><o:p><FONT face=Arial,Sans-Serif></FONT></o:p></SPAN></o:p></P>
+<P><FONT face=Arial,Sans-Serif></FONT></P>
+<P><FONT face=Arial,Sans-Serif></FONT></P>
+<P><FONT face=Arial,Sans-Serif></FONT></P>
+<P><FONT face=Arial,Sans-Serif></FONT></P>
+<P><FONT face=Arial,Sans-Serif></FONT></P>
+<P><FONT face=Arial,Sans-Serif></FONT></P>
+<P><FONT face=Arial,Sans-Serif></FONT></P>
+<P><FONT face=Arial,Sans-Serif></FONT></P>
+<P><FONT face=Arial,Sans-Serif></FONT></P>
+<P><FONT face=Arial,Sans-Serif></FONT></P>
+<P><FONT face=Arial,Sans-Serif></FONT></P>
+<P><FONT face=Arial,Sans-Serif></FONT></P>
+<P><FONT face=Arial,Sans-Serif></FONT></P>
+<P><FONT face=Arial,Sans-Serif></FONT></P>
+<P><FONT face=Arial,Sans-Serif></FONT></P>
+<P><FONT face=Arial,Sans-Serif></FONT></P>
+<P><FONT face=Arial,Sans-Serif></FONT></P>
+<P><FONT face=Arial,Sans-Serif></FONT></P>
+<P><FONT face=Arial,Sans-Serif></FONT></P>
+<P><FONT face=Arial,Sans-Serif></FONT></P>
+<P><FONT face=Arial,Sans-Serif></FONT></P>
+<P><FONT face=Arial,Sans-Serif></FONT></P>
+<P><FONT face=Arial,Sans-Serif></FONT></P>
+<P><FONT face=Arial,Sans-Serif></FONT></P>
+<P><FONT face=Arial,Sans-Serif></FONT></P>
+<P><FONT face=Arial,Sans-Serif></FONT></P>
+<P><FONT face=Arial,Sans-Serif></FONT></P>
+<P><FONT face=Arial,Sans-Serif></FONT></P>
+<P><FONT face=Arial,Sans-Serif></FONT></P>
+<P><FONT face=Arial,Sans-Serif></FONT></P>
+<P><FONT face=Arial,Sans-Serif></FONT></P>
+<P><FONT face=Arial,Sans-Serif></FONT></P>
+<P><FONT face=Arial,Sans-Serif></FONT></P>
+<P><FONT face=Arial,Sans-Serif></FONT></P>
+<P><FONT face=Arial,Sans-Serif></FONT></P>
+<P><FONT face=Arial,Sans-Serif></FONT></P>
+<P><FONT face=Arial,Sans-Serif></FONT></P>
+<P><FONT face=Arial,Sans-Serif></FONT></P>
+<P><FONT face=Arial,Sans-Serif></FONT></P>
+<P><FONT face=Arial,Sans-Serif></FONT></P>
+<P><FONT face=Arial,Sans-Serif></FONT></P>
+<P><FONT face=Arial,Sans-Serif></FONT></P>
+<P><FONT face=Arial,Sans-Serif></FONT></P>
+<P><FONT face=Arial,Sans-Serif></FONT></P>
+<P><FONT face=Arial,Sans-Serif></FONT></P>
+<P><FONT face=Arial,Sans-Serif></FONT></P>
+<P><FONT face=Arial,Sans-Serif></FONT></P>
+<P><FONT face=Arial,Sans-Serif></FONT></P>
+<P><FONT face=Arial,Sans-Serif></FONT></P>
+<P><FONT face=Arial,Sans-Serif></FONT></P>
+<P><FONT face=Arial,Sans-Serif></FONT></P>
+<P><FONT face=Arial,Sans-Serif></FONT></P>
+<P><FONT face=Arial,Sans-Serif></FONT></P>
+<P></P>
+<P></P>
+<P></P>
+<P></P>
+<P></P>
+<P></P>
+<P></P>
+<P></P>
+<P></P>
+<P></P>
+<P></P>
+<P></P>
+<P></P></P></SPAN></SPAN></SPAN></o:p></SPAN></SPAN></SPAN></o:p></SPAN></o:p></SPAN>
+<P><FONT face=Arial,Sans-Serif></FONT></P>
+<P><FONT face=Arial,Sans-Serif></FONT></P>
+<P><FONT face=Arial,Sans-Serif></FONT></P>
+<P><FONT face=Arial,Sans-Serif></FONT></P>
+<DIV class=MsoNormal style="MARGIN: 0in 0in 0pt; mso-list: l0 level1 lfo1; tab-stops: list .5in"><FONT face=Arial,Sans-Serif>{!Account.OwnerFullName}<BR>{!Account.OwnerTitle}<BR>American Student Assistance</FONT></DIV>
+<DIV class=MsoNormal style="MARGIN: 0in 0in 0pt; mso-list: l0 level1 lfo1; tab-stops: list .5in"><FONT face=Arial,Sans-Serif>100 Cambridge Street<BR>Boston, MA 02114<BR>{!Account.OwnerPhone}<BR>{!Account.OwnerEmail}</FONT></DIV>
+<P><FONT face=Arial,Sans-Serif>&nbsp;</FONT></P><FONT face=Geneva,Arial,Sans-Serif><FONT face=Geneva,Arial,Sans-Serif>
+<DIV class=MsoNormal style="MARGIN: 0in 0in 0pt; mso-list: l0 level1 lfo1; tab-stops: list .5in"></FONT></FONT><FONT face=Geneva,Arial,Sans-Serif size=1>The content of this email is confidential and proprietary to American Student Assistance. It is intended only for the above-named individual or entity and for the purpose indicated and may not be reproduced or distributed without permission of the sender. Please notify the sender or ASA if you received this email in error.</FONT></DIV>]]></td>
+</tr>
+<tr height="50" valign="top" >
+<td style=" color:#000000; font-size:12pt; background-color:#FFFFFF; font-family:arial; bLabel:main; bEditID:r3st1;" tEditID="c1r3" locked="1" aEditID="c1r3" >
+<![CDATA[<P><FONT face=Geneva,Arial,Sans-Serif size=1></FONT>&nbsp;</P>]]></td>
+</tr>
+</table>

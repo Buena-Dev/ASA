@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>false</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>BlankLetterhead</letterhead>
+    <name>WA_OR Reminder Training Letter</name>
+    <style>freeForm</style>
+    <subject>*Reminder* American Student Assistance Northwest Training Sessions</subject>
+    <textOnly>Need to make sure that you are complying with the regulatory requirements of FERPA and the Gramm-Leach-Bliley Act?  Did you know that the GLBA requires that staff with access to students’ personal information must receive training on information security?  Join us for a free session that will help ensure your compliance, as well as updates on financial aid management practices and communication techniques during this full-day training session. 
+ 
+ASA is proud to host complimentary educational sessions in the northwest on Tuesday, March 7th and Wednesday, March 8th from 8:30a.m. to 4:30p.m. To register for these trainings click here. Breakfast and lunch are provided for all attendees. 
+ 
+Topics we will cover include: 
+FERPA &amp; GLB
+Expand your knowledge of the Family Educational Rights and Privacy Act (FERPA) and the Gramm-Leach-Bliley (GLB) Act. Increase your awareness of basic requirements of the Acts and understand the technological tools necessary to protect and secure student information.
+Top Ten Financial Aid Pitfalls and How to Avoid Them
+Are you aware of the most common pitfalls in the administration of financial aid?  Join us as we review the most frequent errors and omissions.  Learn how to detect potential problems in your office and how to correct them.  This course was created in response to client request and feedback from training evaluation surveys.  Walk away with a checklist to evaluate your institution and a resource list to guide your next steps.
+What’s My Communication Style?
+Uncover preferred styles of verbal and nonverbal communication with the fast and fun &quot;What&apos;s My Communication Style?”. By responding to a simple 24-item inventory, participants will learn their preference for one of four communication styles, recognize the various facets of communication, and learn how to use their own style to enhance communication.
+Ø        Tuesday, March 7, 2006 – Newburg, OR
+Ø        Wednesday, March 8, 2006 – Bellevue, WA
+ 
+To reserve your seat, or for more information, please visit www.amsa.com/events
+ 
+We look forward to seeing you!
+ 
+Kelley Bauman 
+American Student Assistance
+Regional Account Executive
+American Student Assistance (ASA) is a nonprofit, federally funded organization that assists education loan borrowers to successfully complete a program of education financing and repayment. As a guarantor in the Federal Family Education Loan Program (FFELP), ASA delivers quality FFELP default prevention, guarantee, origination, and fund delivery services to students, parents, schools and lenders nationwide. Incorporated in 1956, ASA was the nation&apos;s first student loan guarantee agency and a model for the federal student loan guarantee program. ASA guarantees more than $1 billion in student loans annually and currently manages a student loan portfolio worth more than $20 billion. Based in Boston, ASA employs more than 500 associates nationwide. Visit www.amsa.com or call (800) 999-9080 for more information about ASA.</textOnly>
+    <type>html</type>
+</EmailTemplate>

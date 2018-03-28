@@ -1,0 +1,3 @@
+NOTIFICATION:   Lender/3rd party set up for {!Case.Account}
+has been completed.  See link for details.
+{!Case.Link}

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>false</available>
+    <description>WA  PD Day 2007 Save the date</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>EmailLetterhead</letterhead>
+    <name>PD Day - WA - 2007 (Save the Date)</name>
+    <style>promotionRight</style>
+    <subject>Save the Date!  ASA Training Event</subject>
+    <textOnly>Save the date for a workshop that helps refine your skills and keeps you informed.  
+
+National FFELP guarantor American Student Assistance®  has designed a half day event to discuss some of the key concerns of financial aid administrators.  Two of our most requested topics will be covered. 
+ 
+ 
+Let’s Talk Loans  
+In this session we’ll go over some changes affecting loan certifications, answer any loan questions you may have, and finish off with case studies to hone your loan certification skills. 
+ 
+  
+So Much To Do – So Little Time 
+In this session we’ll examine some simple tricks to help you manage your tasks within the time that you have.  
+
+ 
+ 
+For more information please contact:
+Kelley Bauman 
+Regional Account Executive 
+American Student Assistance 
+800-999-9080 Ext. 6248 
+kbauman@amsa.com 
+www.amsa.com
+
+August 21, 2007
+ 
+We are offering two courses in our half day workshop. Please join us!
+
+8:30am  - 12:00pm 
+Continental breakfast and lunch will be provided
+ 
+       
+
+ 
+How to register or for additional information, including driving directions
+ 
+Register Online at 
+http://www.amsa.com/fap/training
+ 
+ 
+Saint Martin’s University 
+5300 Pacific Ave SE
+Lacey, WA 98503-1297
+ 
+http://www.stmartin.edu/about/drivinghere.htm</textOnly>
+    <type>html</type>
+</EmailTemplate>

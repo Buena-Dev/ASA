@@ -1,0 +1,7 @@
+<apex:page standardController="c2g__codaCurrencyRevaluationGroup__c">
+	<apex:stylesheet value="{!URLFOR($Resource.c2g__coda2go,'coda2go/web/css/progressInfo.css')}"/>
+    <apex:form >
+		<c:fflib_batchInfo id="jobStatus" batchControlRecordId="{!Id}"
+	                                 batchJobClass="CurrencyRevaluationGenerateBatch" progressInfoLabel="{!$Label.c2g__currencyrevalprogressinfo}" />
+    </apex:form>
+</apex:page>

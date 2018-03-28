@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Letterhead xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <backgroundColor>#CCCCCC</backgroundColor>
+    <bodyColor>#FFFFFF</bodyColor>
+    <bottomLine>
+        <color>#C0C0C0</color>
+        <height>5</height>
+    </bottomLine>
+    <description>Email template letterhead for the 2016 Client Forum series.</description>
+    <footer>
+        <backgroundColor>#FFFFFF</backgroundColor>
+        <height>100</height>
+        <horizontalAlignment>Left</horizontalAlignment>
+        <logo>Logos_Identity/Client_Forum_2016_Footer_Image.png</logo>
+        <verticalAlignment>Top</verticalAlignment>
+    </footer>
+    <header>
+        <backgroundColor>#FFFFFF</backgroundColor>
+        <height>100</height>
+        <horizontalAlignment>Left</horizontalAlignment>
+        <logo>Logos_Identity/Client_Forum_2016.png</logo>
+        <verticalAlignment>Top</verticalAlignment>
+    </header>
+    <middleLine>
+        <color>#C0C0C0</color>
+        <height>5</height>
+    </middleLine>
+    <name>SALT Client Forum 2016</name>
+    <topLine>
+        <color>#C0C0C0</color>
+        <height>5</height>
+    </topLine>
+</Letterhead>

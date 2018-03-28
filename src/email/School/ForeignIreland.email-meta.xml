@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>false</available>
+    <description>Foreign School Communication</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Foreign - Ireland</name>
+    <style>none</style>
+    <subject>Dept. of Education Updates</subject>
+    <type>text</type>
+</EmailTemplate>

@@ -1,0 +1,9 @@
+A new Pro Service Offering record has been created for {!Account.Name}.  
+
+Pro Services Offering Name: {!Pro_Services_Offering__c.Name}
+
+Target Date: {!Pro_Services_Offering__c.PS_OfferingTargetDate__c} 
+
+Please click on below link for other Details :
+
+Link: {!Pro_Services_Offering__c.Link}

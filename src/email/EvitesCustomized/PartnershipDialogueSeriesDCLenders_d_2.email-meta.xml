@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>false</available>
+    <description>Lender Invite to AK Partnership Dialogue</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>BlankLetterhead</letterhead>
+    <name>Partnership Dialogue Series - DC Lenders</name>
+    <style>freeForm</style>
+    <subject>Save the Date!</subject>
+    <textOnly>ASA’s Partnership Dialogue Series: A Focus on Consolidation
+ 
+Come enjoy a discussion with the financial aid community on consolidation later this month.
+ 
+Dear {!Contact.FirstName},
+ 
+I wanted to make you aware of a new series we’re kicking off for schools and our Strategic Lender Partners.  We understand the hectic and demanding days our school partners face, often making it difficult to keep up with the latest financial aid industry news.  So we’ve designed efficient half-day forums that ensure they won’t waste valuable time out of the office.  As part of our Partnership Dialogue Series, we’re proud to host an exchange between colleagues on the topic of consolidation.  This series will afford schools the opportunity to discuss, ask questions, and receive feedback on one of the hottest topics affecting lenders and financial aid offices around the country.  And as one of our Strategic Lender Partners, we’d like to invite you to join us on January 31, 2007 in Arlington, Virginia.
+ 
+Our dialogue on consolidation will begin at 8:30 am, with the schools staying with us throughout the morning and into lunch.  We then invite you to stay after lunch to learn more about what ASA has to offer, why the guarantor you choose matters, and how we can help you promote ASA in the marketplace.  
+ 
+Wednesday, January 31, 2007
+08:30 – 09:00    Continental Breakfast (schools &amp; lenders)
+09:00 – 12:00    Discussion and Exchange of Ideas (schools &amp; lenders)
+12:00 – 01:00    Lunch (schools &amp; lenders)
+01:00 – 03:00    Understanding ASA (Lenders only)
+ 
+Hyatt Regency Crystal City
+at Regan National Airport  
+2700 Jefferson Davis Highway
+Arlington, Virginia
+ 
+Please RSVP to me by January 19.  I hope you are able to join us, and look forward to seeing you there.  Please also feel free to share this with others at {!Account.Name} who may not have received this email.  Let me know if you have any questions about the agenda.
+ 
+
+Thank you, 
+
+Nancy 
+ 
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Nancy M. Jordan
+Manager of Strategic Lender Partnerships
+American Student Assistance
+800.999.9080 x.4677
+617.728.4677 direct
+617.645.2225 cell
+njordan@amsa.com 
+www.amsa.com 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+The content of the e-mail is confidential and proprietary to American Student Assistance. It is intended only for the above-named individual or entity and for the purpose indicated and may not be reproduced or distributed without permission of the sender. Please notify the sender or ASA if you received this e-mail in error.</textOnly>
+    <type>html</type>
+</EmailTemplate>

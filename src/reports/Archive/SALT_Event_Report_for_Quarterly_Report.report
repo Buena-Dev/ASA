@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>Pro_Services_Offering__c.PS_OfferingTopic__c</field>
+    </columns>
+    <columns>
+        <field>Pro_Services_Offering__c.PS_OfferingTargetDate__c</field>
+    </columns>
+    <columns>
+        <field>Pro_Services_Offering__c.PS_OfferingActualAttendees__c</field>
+    </columns>
+    <columns>
+        <field>Pro_Services_Offering__c.PS_OfferingAssignedTo__c</field>
+    </columns>
+    <description>List of SALT events for quarterly report card.</description>
+    <filter>
+        <booleanFilter>((1 AND ((2 or (3 OR 4 OR 5 OR 6 OR 7)))) AND 8) AND 9</booleanFilter>
+        <criteriaItems>
+            <column>FK_$Account.Campus_Consultant__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>notEqual</operator>
+            <value></value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CUST_RECORDTYPE</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Pro_Services_Offering__c.Training</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Pro_Services_Offering__c.PS_OfferingTopic__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Campus Engagement Stakeholders Meeting</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Pro_Services_Offering__c.PS_OfferingTopic__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Campus Engagement Event</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Pro_Services_Offering__c.PS_OfferingTopic__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>SALT Faculty &amp; Staff Training</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Pro_Services_Offering__c.PS_OfferingTopic__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>SALT Ambassador Program</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Pro_Services_Offering__c.PS_OfferingTopic__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>SALT Student Ambassador Training</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Pro_Services_Offering__c.College_Access_br_Challenge_Grant__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>notEqual</operator>
+            <value>1</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Pro_Services_Offering__c.PS_OfferingCompleted__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>1</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>FK_NAME</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>SALT Event Report for Quarterly Report</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$Pro_Services_Offering__c@Pro_Services_Offering__c.PS_OfferingAccount__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Pro_Services_Offering__c.PS_OfferingTargetDate__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2011-09-01</startDate>
+    </timeFrameFilter>
+</Report>

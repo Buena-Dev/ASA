@@ -1,0 +1,5 @@
+{!Pro_Services_Offering__c.PS_OfferingRequestedBy__c},
+
+The article request you submitted, {!Pro_Services_Offering__c.Name}, has been denied. For more information, please view the record in Salesforce.
+
+{!Pro_Services_Offering__c.Link}

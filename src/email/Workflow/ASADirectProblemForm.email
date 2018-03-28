@@ -1,0 +1,14 @@
+<table cellpadding="5" width="600" height="400" cellspacing="5" border="0" >
+<tr height="50" valign="top" >
+<td locked="0" style=" font-family:arial; bLabel:main; color:#000000; font-size:12pt; bEditID:r3st1; background-color:#FFFFFF;" aEditID="c1r1" tEditID="c1r1" >
+<![CDATA[]]></td>
+</tr>
+<tr height="300" valign="top" >
+<td locked="0" style=" font-family:arial; bLabel:main; color:#000000; font-size:12pt; bEditID:r3st1; background-color:#FFFFFF;" aEditID="c1r2" tEditID="c1r2" >
+<![CDATA[User ID/Password:&nbsp; &nbsp; <BR>Name {!Contact.Name}&nbsp; &nbsp; <BR>OE Code:&nbsp; {!Account.OE_Code__c}&nbsp;&nbsp; <BR>Phone: {!Contact.Phone}&nbsp; &nbsp; <BR>Email:&nbsp; {!Contact.Email}&nbsp; &nbsp; <BR>Date &amp; Time: {!Today}&amp; &nbsp; <BR>Problem:&nbsp; &nbsp; &nbsp;<BR>Menu/Function:&nbsp; &nbsp; <BR>Error Message/Results&nbsp;:&nbsp; <BR>Browser Type/Version:&nbsp; &nbsp; <BR>Operating System:&nbsp; &nbsp; <BR>CPU speed:&nbsp; &nbsp; <BR>Call Ctr./Client Svcs. Rep: {!User.Name}]]></td>
+</tr>
+<tr height="50" valign="top" >
+<td locked="0" style=" font-family:arial; bLabel:main; color:#000000; font-size:12pt; bEditID:r3st1; background-color:#FFFFFF;" aEditID="c1r3" tEditID="c1r3" >
+<![CDATA[]]></td>
+</tr>
+</table>

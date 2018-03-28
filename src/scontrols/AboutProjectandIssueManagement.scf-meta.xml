@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Scontrol xmlns="http://soap.sforce.com/2006/04/metadata">
+    <contentSource>HTML</contentSource>
+    <description>Information about the application.</description>
+    <encodingKey>UTF-8</encodingKey>
+    <fileName>scontrol.txt</fileName>
+    <name>About Project and Issue Management</name>
+    <supportsCaching>true</supportsCaching>
+</Scontrol>

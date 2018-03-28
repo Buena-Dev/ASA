@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Product Offerings</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Product Offerings</value>
+    </caseValues>
+    <fields>
+        <help><!-- This data element shows the account owner&apos;s name. --></help>
+        <label><!-- Account Owner --></label>
+        <name>Account_Owner__c</name>
+    </fields>
+    <fields>
+        <label><!-- Account Type --></label>
+        <name>Account_Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- Account --></label>
+        <name>Account__c</name>
+        <relationshipLabel><!-- Product Offerings --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- This data element shows the Campus Consultant for the account. --></help>
+        <label><!-- Campus Consultant --></label>
+        <name>Campus_Consultant__c</name>
+    </fields>
+    <fields>
+        <label><!-- Co-Branding? --></label>
+        <name>Co_Branding__c</name>
+        <picklistValues>
+            <masterLabel>Logo Only</masterLabel>
+            <translation><!-- Logo Only --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Logo and Banner</masterLabel>
+            <translation><!-- Logo and Banner --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Customer Type --></label>
+        <name>Customer_Type__c</name>
+        <picklistValues>
+            <masterLabel>Existing Customer</masterLabel>
+            <translation><!-- Existing Customer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Prospect</masterLabel>
+            <translation><!-- Prospect --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- EDMS --></label>
+        <name>EDMS__c</name>
+        <picklistValues>
+            <masterLabel>Proactive</masterLabel>
+            <translation><!-- Proactive --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Responsive</masterLabel>
+            <translation><!-- Responsive --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Financial Literacy --></label>
+        <name>Financial_Literacy__c</name>
+        <picklistValues>
+            <masterLabel>Community</masterLabel>
+            <translation><!-- Community --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Job/Internship Search</masterLabel>
+            <translation><!-- Job/Internship Search --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SALT Courses</masterLabel>
+            <translation><!-- SALT Courses --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Scholarship Search</masterLabel>
+            <translation><!-- Scholarship Search --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- NSLDS Files --></label>
+        <name>NSLDS_Files__c</name>
+        <picklistValues>
+            <masterLabel>Access Granted</masterLabel>
+            <translation><!-- Access Granted --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Access Lost</masterLabel>
+            <translation><!-- Access Lost --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>School Provides</masterLabel>
+            <translation><!-- School Provides --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Promo Tile --></label>
+        <name>Promo_Tile__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Promotional Items --></label>
+        <name>Promotional_Items__c</name>
+        <picklistValues>
+            <masterLabel>Access to PDFs / eDocs</masterLabel>
+            <translation><!-- Access to PDFs / eDocs --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SALT Store</masterLabel>
+            <translation><!-- SALT Store --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- A checkmark in this box will send an email alert to Della. She will review the item and, when approved, will submit it to Business Analysis for entry into the SALT Shaker. --></help>
+        <label><!-- Ready To Submit --></label>
+        <name>Ready_To_Submit__c</name>
+    </fields>
+    <fields>
+        <help><!-- This field indicates whether or not the customer provides us with a SALT Demographic File. --></help>
+        <label><!-- Sends Demog File? --></label>
+        <name>Sends_Demog_File__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes - w/ SS#</masterLabel>
+            <translation><!-- Yes - w/ SS# --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes - w/ Unique ID</masterLabel>
+            <translation><!-- Yes - w/ Unique ID --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Submit to BA --></label>
+        <name>Submit_to_BA__c</name>
+    </fields>
+    <fields>
+        <label><!-- Training --></label>
+        <name>Training__c</name>
+        <picklistValues>
+            <masterLabel>Faculty/Staff</masterLabel>
+            <translation><!-- Faculty/Staff --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Student</masterLabel>
+            <translation><!-- Student --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- This field indicates whether or not the customer is using a SALT vanity URL. --></help>
+        <label><!-- Vanity URL --></label>
+        <name>Vanity_URL__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <layouts>
+        <layout>Credit Union</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Fields --></label>
+            <section>Fields</section>
+        </sections>
+        <sections>
+            <label><!-- Product Offerings --></label>
+            <section>Product Offerings</section>
+        </sections>
+        <sections>
+            <label><!-- SALT Communications --></label>
+            <section>SALT Communications</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Engagement Partner</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Fields --></label>
+            <section>Fields</section>
+        </sections>
+        <sections>
+            <label><!-- Product Offerings --></label>
+            <section>Product Offerings</section>
+        </sections>
+        <sections>
+            <label><!-- SALT Communications --></label>
+            <section>SALT Communications</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>School</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Fields --></label>
+            <section>Fields</section>
+        </sections>
+        <sections>
+            <label><!-- Product Offerings --></label>
+            <section>Product Offerings</section>
+        </sections>
+        <sections>
+            <label><!-- SALT Communications --></label>
+            <section>SALT Communications</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- Credit Union --></label>
+        <name>Credit_Union</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Engagement Partner --></label>
+        <name>Engagement_Partner</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- School --></label>
+        <name>School</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- You must provide a response for NSLDS Files if EDMS = Proactive. --></errorMessage>
+        <name>Proactive_EDMS_Requires_NSLDS_Info</name>
+    </validationRules>
+</CustomObjectTranslation>

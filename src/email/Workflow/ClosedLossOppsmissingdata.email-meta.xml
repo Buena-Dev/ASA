@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Email to indicate that Closed Loss Opps fields have not been populated</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Closed Loss Opps missing data</name>
+    <style>none</style>
+    <subject>NOTIFICATION: Missing data in Closed Lost Opportunity for {!Opportunity.Account}</subject>
+    <type>text</type>
+</EmailTemplate>

@@ -1,0 +1,25 @@
+<table width="600" cellpadding="5" height="400" border="0" cellspacing="5" >
+<tr height="50" valign="top" >
+<td locked="0" style=" font-family:arial; bLabel:main; color:#000000; font-size:12pt; bEditID:r3st1; background-color:#FFFFFF;" aEditID="c1r1" tEditID="c1r1" >
+<![CDATA[<font style="font-family: geneva,arial,sans-serif;" face="Geneva,Arial,Sans-Serif" size="2">Dear {!Contact.FirstName}</font>]]></td>
+</tr>
+<tr height="300" valign="top" >
+<td locked="0" style=" font-family:arial; bLabel:main; color:#000000; font-size:12pt; bEditID:r3st1; background-color:#FFFFFF;" aEditID="c1r2" tEditID="c1r2" >
+<![CDATA[<p style="font-family: geneva,arial,sans-serif;" class="MsoNormal"><font size="2"><span style="font-size: 10pt;">Attached
+is our new serialization spreadsheet template (designed for automatic
+electronic processing).&nbsp; Both Stafford and PLUS can be entered on
+the same sheet by indicating GS in the Record identifier column for <st1:place w:st="on">Stafford</st1:place> borrowers and PL for PLUS borrowers. All columns should be kept in the exact order as in the template.<o:p></o:p></span></font></p>
+
+<p style="font-family: geneva,arial,sans-serif;" class="MsoNormal"><font size="2"><font size="2"><span style="font-size: 10pt;"><o:p>I </o:p></span></font><font size="2"><span style="font-size: 10pt;">am also attaching the layout specs which give the acceptable format for each field.<o:p></o:p></span></font><span style="font-size: 10pt;"><o:p>&nbsp;</o:p></span></font></p>
+<p style="font-family: geneva,arial,sans-serif;" class="MsoNormal"><font size="2"><span style="font-size: 10pt;">Please let me know if you have any questions.<o:p></o:p></span></font></p>
+
+<p class="MsoNormal"><font face="Verdana" size="2"><span style="font-size: 10pt; font-family: Verdana;"><o:p style="font-family: geneva,arial,sans-serif;">&nbsp;</o:p><br style="font-family: geneva,arial,sans-serif;">
+<font style="font-family: geneva,arial,sans-serif;" face="Geneva,Arial,Sans-Serif">Thank you,<br></font><o:p><span style="font-family: geneva,arial,sans-serif;">{!User.Name}</span><br style="font-family: geneva,arial,sans-serif;">
+<span style="font-family: geneva,arial,sans-serif;">{!User.Title}</span><br>
+</o:p></span></font></p>]]></td>
+</tr>
+<tr height="50" valign="top" >
+<td locked="1" style=" font-family:arial; bLabel:main; color:#000000; font-size:12pt; bEditID:r3st1; background-color:#FFFFFF;" aEditID="c1r3" tEditID="c1r3" >
+<![CDATA[<SPAN style="FONT-WEIGHT: bold"><FONT face=Geneva,Arial,Sans-Serif size=1>The content of this email is confidential and proprietary to American Student Assistance. It is intended only for the above-named individual or entity and for the purpose indicated and may not be reproduced or distributed without permission of the sender. Please notify the sender or ASA if you received this email in error.</FONT></SPAN>]]></td>
+</tr>
+</table>

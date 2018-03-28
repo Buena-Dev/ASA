@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>false</available>
+    <description>Partnership Dialogue Series School Invite CA Combined Feb 2008</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>EmailLetterhead</letterhead>
+    <name>Partnership Dialogue Series School Invite CA Combined - Feb 2008</name>
+    <style>freeForm</style>
+    <subject>You are invited!</subject>
+    <textOnly>You’re invited to ASA’s Partnership Dialogue Series: A Focus on Communication.
+ 
+Dear {!Contact.FirstName},
+ 
+We know you’re busy.  We know your inbox and voicemail boxes are full.  That’s why we’ve designed efficient, half-day forums that ensure you won’t waste valuable time out of the office. Choose the location that works best for you!
+ 
+As part of our Partnership Dialogue Series, we’re proud to host an exchange among our colleagues in San Francisco, CA on February 21, 2008 and Santa Ana, CA on February 22, 2008.  In this upcoming series, we will explore the challenges of effectively communicating with students and families today. With the overwhelming array of media available, ranging from podcasts to phone calls and text messages, which methods do you feel comfortable using? And which methods are the most effective for your millennial students and Baby Boomer parents? 
+ 
+This series will encompass a broad discussion of the communication challenges you face, the scope and message of your communication mission, what resources you need to succeed in that mission, and which outreach experiments to students and families have yielded the best results. Participants will trade ideas on how to best speak to on-campus, distance-learning, and adult students, from individualized messaging to campaigns in various media. Most importantly, you will gain the chance to learn from your peers’ experiences—from successful strategies you will want to adopt, to the cautionary tales that will keep you from wasting precious time and resources
+ 
+Our Partnership Dialogue Series will afford you the opportunity to join in an interactive presentation followed by round table discussions.  Be educated, ask questions, and receive feedback from colleagues American Student Assistance on one of the hottest topics affecting financial aid offices across the country.
+ 
+
+
+Proposed Agenda:
+8:30 – 9:00 a.m. Continental Breakfast
+9:00 a.m. –12:00 p.m. Discussion and Exchange of Ideas
+12:00 – 1:00 p.m. Lunch
+ 
+Location #1:  Embassy Suites, Santa Ana 
+1325 East Dyer Road 
+Santa Ana, CA 92705
+http://www.embassysuites.com/en/es/hotels/maps_directions.jhtml?ctyhocn=STAESES#directions
+ 
+or 
+ 
+Loation #2: Embassy Suites, San Francisco
+250 Gateway Blvd
+South San Francisco, CA 94080
+http://embassysuites.hilton.com/en/es/hotels/maps_directions.jhtml;jsessionid=T3BYG0MJTRSEYCSGBIVMVCQ?ctyhocn=SFOSOES#directions
+ 
+Choose the location that works best for you!
+ 
+For registration and additional information, including driving directions, please visit www.amsa.com/fap/training, e-mail your name, phone number and enrollment details to training@amsa.com, or call the Training Department at 800.999.9080, ext. 3099.  I hope you can join us, and look forward to seeing you there.
+ 
+Thank you,
+{!Contact.OwnerFullName}
+{!Contact.OwnerEmail}</textOnly>
+    <type>html</type>
+</EmailTemplate>

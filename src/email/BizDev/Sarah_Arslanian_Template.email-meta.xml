@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Salt_School_Channel</letterhead>
+    <name>Sarah Arslanian Template</name>
+    <style>freeForm</style>
+    <subject>Sarah Arslanian Email Template</subject>
+    <textOnly>Sarah Arslanian | Manager, Higher Education Partnerships
+
+Salt® | American Student Assistance®
+
+P: 213.422.3509 | 800.999.9080, ext. 6178 | E: sarslanian@asa.org
+
+100 Cambridge Street, Suite 1600 | Boston, MA 02114</textOnly>
+    <type>html</type>
+</EmailTemplate>

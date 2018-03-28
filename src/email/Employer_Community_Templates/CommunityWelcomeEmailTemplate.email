@@ -1,0 +1,12 @@
+Hi {!Receiving_User.FirstName},
+
+Welcome to the American Student Assistance (ASA)  {!Community_Name}! 
+
+To get started, go to {!Community_Url}
+Your Username is: {!Receiving_User.Username}
+
+Thanks,
+Salt
+
+
+{!Organization.Name}

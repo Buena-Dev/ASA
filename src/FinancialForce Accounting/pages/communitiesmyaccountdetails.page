@@ -1,0 +1,87 @@
+<apex:page controller="c2g.CommunitiesMyAccountController" tabstyle="CommunitiesMyAccount__tab" sidebar="true">
+	<apex:stylesheet value="{!URLFOR($Resource.c2g__communities, 'communities/communities.css')}"/>
+	<apex:stylesheet value="{!URLFOR($Resource.c2g__coda2go,'coda2go/web/css/style.css')}"/>
+	<apex:includeScript value="{!URLFOR($Resource.c2g__coda2go,'coda2go/web/script/lib.js')}"/>
+	<apex:includeScript value="{!URLFOR($Resource.c2g__front,'front/base/frameworks/jquery-1.5.min.js')}"/>
+
+	<div id="indicator"><img src="/s.gif" align="absMiddle"/><span id="indicatortext"></span></div>
+	<apex:form id="filterForm" styleClass="myAccount-doc-type-filter">
+		<apex:pageMessages id="filterMessages"/>
+		<apex:outputPanel styleClass="myAccount-doc-type-filter-wrapper">
+			<apex:outputLabel value="{!$Label.c2g__communitiesdocumenttype}" styleClass="myAccount-doc-type-filter-label" for="documentTypes"/>
+			<apex:selectList value="{!view.documentType}" size="1" id="documentTypes">
+				<apex:selectOptions value="{!view.documentTypeOptions}"/>
+				<apex:actionSupport event="onchange" onsubmit="COMM.showLoading();COMM.cleanFilterInputs();" action="{!changeDocument}" oncomplete="refreshContent()" reRender="documentList,documentFields,filterMessages"/>
+			</apex:selectList>
+		</apex:outputPanel>
+		<apex:pageBlock id="secondaryFilter" html-data-id="secondaryFilter">
+			<apex:outputPanel id="documentFields">
+		        <apex:outputPanel styleClass="myAccount-doc-type-filter-wrapper" rendered="{!view.documentType != PAYMENT_DOC_OPTION}">
+		            <apex:outputLabel styleClass="myAccount-doc-type-filter-label" value="{!$Label.c2g__communitiespaymentstatus}" for="payment_status"/>
+		            <apex:selectList value="{!view.paymentStatus}" size="1" id="payment_status">
+						<apex:selectOptions value="{!view.paymentStatusOptions}"/>
+					</apex:selectList>
+		        </apex:outputPanel>
+		        <apex:outputPanel styleClass="myAccount-doc-type-filter-wrapper" rendered="{!view.documentType = PAYMENT_DOC_OPTION}">
+		            <apex:outputLabel styleClass="myAccount-doc-type-filter-label" value="{!$Label.c2g__communitiespaymenttype}" for="payment_type"/>
+		            <apex:selectList value="{!view.paymentType}" size="1" id="payment_type">
+						<apex:selectOptions value="{!view.paymentTypeOptions}"/>
+					</apex:selectList>
+		        </apex:outputPanel>
+		        <apex:outputPanel styleClass="myAccount-doc-type-filter-wrapper" html-data-id="inputCleanable" rendered="{!view.documentType = INVOICE_DOC_OPTION}">
+		            <apex:outputLabel styleClass="myAccount-doc-type-filter-label" value="{!$Label.c2g__communitiesdocumentnoform}" for="invoice_from"/>
+		            <apex:inputField value="{!view.LookupFrom.c2g__Invoice__c}" id="invoice_from"/> 
+		            <apex:outputLabel styleClass="myAccount-doc-type-filter-label" value="{!$Label.c2g__communitiesdocumentnoto}" for="invoice_to"/>
+		            <apex:inputField value="{!view.LookupTo.c2g__Invoice__c}" id="invoice_to"/> 
+		        </apex:outputPanel>
+		        <apex:outputPanel styleClass="myAccount-doc-type-filter-wrapper" html-data-id="inputCleanable" rendered="{!view.documentType = CREDITNOTE_DOC_OPTION}">
+		            <apex:outputLabel styleClass="myAccount-doc-type-filter-label" value="{!$Label.c2g__communitiesdocumentnoform}" for="creditNote_from"/>
+		            <apex:inputField value="{!view.LookupFrom.c2g__CreditNote__c}" id="creditNote_from"/> 
+		            <apex:outputLabel styleClass="myAccount-doc-type-filter-label" value="{!$Label.c2g__communitiesdocumentnoto}" for="creditNote_to"/>
+		            <apex:inputField value="{!view.LookupTo.c2g__CreditNote__c}" id="creditNote_to"/> 
+		        </apex:outputPanel>
+		        <apex:outputPanel styleClass="myAccount-doc-type-filter-wrapper" html-data-id="inputCleanable">
+		            <apex:outputLabel styleClass="myAccount-doc-type-filter-label" value="{!$Label.c2g__communitiesdaterangefrom}" for="start_date"/>
+		            <apex:inputField value="{!view.LookupFrom.c2g__LookupDate__c}" id="start_date"/> 
+		            <apex:outputLabel styleClass="myAccount-doc-type-filter-label" value="{!$Label.c2g__communitiesdaterangeto}" for="end_date"/>
+		            <apex:inputField value="{!view.LookupTo.c2g__LookupDate__c}" id="end_date"/> 
+		        </apex:outputPanel>
+		    </apex:outputPanel>
+		    <apex:outputPanel styleClass="myAccount-doc-type-filter-wrapper myAccount-doc-type-filter-buttons">
+		    	<apex:commandButton id="clearButton" action="{!clearFilter}" value="{!$Label.c2g__communitiesclearfilters}" reRender="documentList,documentFields,filterMessages" onclick="COMM.cleanFilterInputs(); COMM.showLoading()" oncomplete="refreshContent()"/>
+		    	<apex:commandButton id="applyButton" action="{!applyFilters}" value="{!$Label.c2g__communitiesapplyfilters}" reRender="documentList,documentFields,filterMessages" onclick="COMM.showLoading();" oncomplete="refreshContent()"/>
+		    </apex:outputPanel>
+		</apex:pageBlock>
+	</apex:form>
+
+	<apex:outputPanel id="documentList">
+		<c:communitiescashentrylist query="{!filterQuery}" initFn="refreshContent" completeFn="COMM.hideLoading" rendered="{!view.documentType = PAYMENT_DOC_OPTION}"/>
+		<c:communitiessalescreditnotelist query="{!filterQuery}" initFn="refreshContent" completeFn="COMM.hideLoading" rendered="{!view.documentType = CREDITNOTE_DOC_OPTION}"/>
+		<c:communitiessalesinvoicelist query="{!filterQuery}" initFn="refreshContent" completeFn="COMM.hideLoading" rendered="{!view.documentType = INVOICE_DOC_OPTION}"/>
+	</apex:outputPanel>
+
+	<script>
+		$(function(){
+			var CODA2GoBtn = new CODA2GoPage(),
+				applyingFilterLabel = '{!JSINHTMLENCODE($Label.CommunitiesApplyingFilters)}',
+				clearButtonId = '{!$Component.filterForm.secondaryFilter.clearButton}',
+				applyButtonId = '{!$Component.filterForm.secondaryFilter.applyButton}';
+
+			window.COMM = window.COMM || {};
+			COMM.showLoading = function(){
+				CODA2GoBtn.disableSaveButtons();
+				CODA.indicatorOn(applyingFilterLabel);
+			}
+
+			COMM.hideLoading = function(){
+				CODA.indicatorOff();
+				CODA2GoBtn.enableSaveButtons();
+			}
+			COMM.cleanFilterInputs = function(){
+				$('[data-id=secondaryFilter] [data-id=inputCleanable] input').val('');
+			};
+			window.CODA2GoBtnSaveValue = applyingFilterLabel;
+			CODA2GoBtn.initButtons([clearButtonId,applyButtonId]);
+		});		
+	</script>
+</apex:page>

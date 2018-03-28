@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>false</available>
+    <description>Reminder Invitation to attend the training event in Oregon</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>EmailLetterhead</letterhead>
+    <name>PD Day - OR - 2007 (Reminder)</name>
+    <style>freeForm</style>
+    <subject>There&apos;s still time to register!  American Student Assistance Training Event</subject>
+    <textOnly>Join ASA this month! We are coming to Oregon with our popular professional development workshop. 
+
+Oregon Training Event 
+
+National FFELP guarantor American Student Assistance® has designed two half-day training events for Oregon.  Now is the time to improve your skills at our training event. Join us to enhance core skills and stay ahead of evolving trends. 
+ 8/22/2007 Coos Bay, OR – Southwestern Oregon Community College  
+ 
+Training Event:  Navigating the IRS Tax Return &amp; Understanding the Millennial Generation and Its Impact on the Admission and Financial Aid Process 
+ 
+We are offering two courses in each half day workshop classes designed for all college administrators who are looking to improve their performance at work and add skills to their personal “tool box.” 
+ 
+You can choose to join us for the morning or afternoon session. 
+
+9:00am - 12:00pm 
+Continental breakfast and lunch will be provided 
+
+- OR - 
+
+1:00pm - 4:00pm 
+Lunch will be provided
+Course Descriptions: 
+
+Navigating the IRS Tax Return 
+Join us in this session to learn about tax returns from a financial aid application perspective. What fields you should be looking at? What are some of the common mistakes that families make when completing the financial aid application? This course was created to simplify the verification process. Walk away with a better understanding IRS Tax Returns and the verification process. 
+
+Understanding the Millennial Generation and Its Impact on the Admission and Financial Aid Process 
+If you recruit, retain or serve traditional college-aged students, this training is essential to understanding the newest generation of customers. Through a review of the books Millennials Rising and Millennials Go to College, you will learn how these students are likely to view the admission and aid process and how you can adapt to their unique perspective.
+
+Who Should Attend 
+
+Any Financial Aid Professionals who wish to gain more knowledge about the new generation of students entering college.
+ 
+How You Will Benefit 
+You will gain a better understanding of tax forms in relationship to financial aid applications and learn simple ways to connect with your students.
+ 
+How to register or for additional information, including driving directions 
+
+· Register Online at http://www.amsa.com/fap/training 
+· Email: send your name, phone number and enrollment details to 
+training@amsa.com 
+· Phone: call the Training Department at (800) 999-9080, ext. 3099 
+
+All American Student Assistance training events are offered free of charge</textOnly>
+    <type>html</type>
+</EmailTemplate>

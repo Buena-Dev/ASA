@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>This template is used to alert the CM Manager to update the Opp when a client has implemented, either partially or fully</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Implemented - Close Case</name>
+    <style>none</style>
+    <subject>{!Case.Account} is now {!Case.Status} - Please Update the Opportunity to In Production</subject>
+    <type>text</type>
+</EmailTemplate>

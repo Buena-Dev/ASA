@@ -1,0 +1,121 @@
+<apex:page controller="c2g.BalanceUpdateController" extensions="c2g.CODAHelpLoaderController">
+	<apex:stylesheet value="{!URLFOR($Resource.c2g__coda2go,'coda2go/web/css/style.css')}"/>
+	<apex:stylesheet value="{!URLFOR($Resource.c2g__front,'front/components/LoadingOverlay/LoadingOverlay.css')}"/>
+	<apex:stylesheet value="{!URLFOR($Resource.c2g__front,'front/pages/balanceupdate/balanceupdate.css')}"/>
+
+	<apex:variable var="disableCustomPermissions" value="{!$Setup.codaAccountingSettings__c.DisableCustomPermissions__c}"/>
+	<apex:variable var="renderSynchronizationSection" value="{!$Permission.c2g__BalanceUpdateSynchronization || disableCustomPermissions}"/>
+	<apex:variable var="renderRebuildSection" value="{!$Permission.c2g__BalanceUpdateRun || disableCustomPermissions}"/>
+	<apex:variable var="renderMergedAccountsSection" value="{!$Permission.c2g__BalanceUpdateRunMergedAccount || disableCustomPermissions}"/>
+
+	<apex:form >
+		<apex:sectionHeader title="{!$Label.c2g__codabuildbalancestitle}" help="{!redirectForHelp1113}"/>
+		<apex:outputPanel styleClass="display-messages">
+			<apex:pageMessages id="balanceUpdateMessages"/>
+		</apex:outputPanel>
+
+		<apex:pageBlock title="{!SynchronizationSectionTitle}" rendered="{!renderSynchronizationSection}">
+
+			<apex:outputPanel styleClass="aligncenter" layout="block">
+				<apex:commandButton action="{!runIncrementalBalanceUpdate}" styleclass="hiddensubmit runIncremental"/> 
+				<input id="incrementalButton" class="btn" value="{!$Label.BalanceUpdateIncrementalSynchronization}" type="button" onclick="$FFDC.disableButtons(['#incrementalButton', '#fullButton', '#rebuildBalancesButton', '#mergeAccountsButton'], '{!$Label.codaSelectionDefinitionNewPageProcessing}', 'runIncremental');"/>
+				<apex:commandButton action="{!runFullBalanceUpdate}" styleclass="hiddensubmit runFull"/> 
+				<input id="fullButton" class="btn" value="{!$Label.BalanceUpdateFullSynchronization}" type="button" onclick="$FFDC.showWarning();"/>
+			</apex:outputPanel>
+
+			<c:ModalPopup popup="{!FullSyncPopup}"/>
+		</apex:pageBlock>
+
+		<apex:pageBlock title="{!LiveBalancesUpdateSectionTitle}" rendered="{!renderRebuildSection || renderMergedAccountsSection}">
+			<apex:tabPanel switchType="client" value="{!SelectedTab}" id="live-balances-update" activeTabClass="tab-active" contentClass="tab-content" inactiveTabClass="tab-inactive" tabClass="tab-common">
+				<apex:tab label="{!$Label.c2g__balanceupdaterebuildbalances}" name="{!RebuildBalancesTab}" id="rebuild-balances-tab" rendered="{!renderRebuildSection}">
+					<apex:pageMessage title="{!$Label.c2g__error}" rendered="{!!ISBLANK(CompanyModeError)}" strength="2" severity="error" summary="{!CompanyModeError}"/>
+					<apex:outputPanel styleClass="rebuild-balances-overlay" rendered="{!ISBLANK(CompanyModeError)}">
+						<table class="tab-grid">
+							<tbody>
+								<tr>
+									<td class="label">
+										<apex:outputText value="{!$Label.c2g__balanceupdateintersects}"/>
+									</td>
+									<td colspan="2" class="intersects-radio">
+										<apex:selectRadio styleClass="intersects-radio-button" value="{!View.IntersectsRadio}" onchange="$FFDC.showHideSpecificIntersectSelect('{!$Label.c2g__balanceupdateallintersects}');">
+											<apex:selectOptions value="{!IntersectsRadioOptions}"/>
+										</apex:selectRadio>
+									</td>
+									<td>
+										<apex:selectList id="specific-intersect" styleClass="specific-intersect" disabled="{!SpecificIntersectDisabled}" size="1" value="{!View.SelectedIntersect}">
+											<apex:selectOptions value="{!IntersectDefinitions}"/>
+										</apex:selectList>
+									</td>
+								</tr>
+								<tr>
+									<td class="label">
+										<apex:outputText value="{!$Label.c2g__codacompanyselectionlabel}"/>
+									</td>
+									<td>
+										<apex:outputText value="{!CurrentCompany.dto.Name}"/>
+									</td>
+									<td class="label">
+										<apex:outputLabel value="{!$Label.c2g__codabuildbalancesfromperiodlabel}" for="from-period"/>
+									</td>
+									<td>
+										<apex:selectList id="from-period" styleClass="from-period" size="1" value="{!View.SelectedFromPeriod}">
+											<apex:selectOptions value="{!Periods}"/>
+										</apex:selectList>
+									</td>
+								</tr>
+								<tr>
+									<td class="label">
+										<apex:outputLabel value="{!$Label.c2g__codabuildbalancesyearlabel}" for="year"/>
+									</td>
+									<td>
+										<apex:selectList id="year" styleClass="year" size="1" value="{!View.SelectedYear}" onchange="ffdc.go.loadingOverlay.createLoadingOverlay($FFDC('.rebuild-balances-overlay').get(0),'{!$Label.c2g__codaprocessing}',1);$FFDC('.year_h').click();">
+											<apex:selectOptions value="{!Years}"/>
+										</apex:selectList>
+										<apex:commandButton id="year_h" action="{!refreshPeriodsBasedOnSelectedYearAndSelectDefaultPeriod}" rerender="from-period,to-period,balanceUpdateMessages" oncomplete="ffdc.go.loadingOverlay.removeLoadingOverlay();" styleclass="hiddensubmit year_h"/> 
+									</td>
+									<td class="label">
+										<apex:outputLabel value="{!$Label.c2g__codabuildbalancestoperiodlabel}" for="to-period"/>
+									</td>
+									<td>
+										<apex:selectList id="to-period" styleClass="to-period" size="1" value="{!View.SelectedToPeriod}">
+											<apex:selectOptions value="{!Periods}"/>
+										</apex:selectList>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<apex:outputPanel styleclass="aligncenter" layout="block">
+							<apex:commandButton action="{!runRebuildBalances}" value="{!$Label.c2g__balanceupdaterebuildbalances}" styleclass="hiddensubmit run-rebuild-balances-button"/>
+							<input id="rebuildBalancesButton" class="btn" value="{!$Label.c2g__balanceupdaterebuildbalances}" type="button" onclick="$FFDC.disableButtons(['#rebuildBalancesButton', '#incrementalButton', '#fullButton', '#mergeAccountsButton'], '{!$Label.codaSelectionDefinitionNewPageProcessing}', 'run-rebuild-balances-button');"/>
+						</apex:outputPanel>
+					</apex:outputPanel>
+				</apex:tab>
+				<apex:tab label="{!$Label.c2g__codabuildbalancesupdatebalanceslabel}" name="{!UpdateBalancesForMergedAccountsTab}" id="update-balances-for-merged-accounts-tab" rendered="{!renderMergedAccountsSection}">
+					<table class="tab-grid">
+						<tbody>
+							<tr>
+								<td class="label">
+									<apex:outputLabel value="{!$Label.c2g__codabuildbalancesmasteraccountlabel}" for="master-account"/>
+								</td>
+								<td>
+									<apex:inputField id="master-account" styleClass="master-account" value="{!View.MasterAccount.dto.c2g__Account__c}"/>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<apex:outputPanel styleclass="aligncenter" layout="block">
+						<apex:commandButton value="{!$Label.c2g__balanceupdateupdatebalances}" action="{!runUpdateBalancesForMergedAccounts}" styleClass="hiddensubmit update-balances-merged-accounts-button"/>
+						<input id="mergeAccountsButton" class="btn" value="{!$Label.c2g__balanceupdateupdatebalances}" type="button" onclick="$FFDC.disableButtons(['#rebuildBalancesButton', '#incrementalButton', '#fullButton', '#mergeAccountsButton'], '{!$Label.codaSelectionDefinitionNewPageProcessing}', 'update-balances-merged-accounts-button');"/>
+					</apex:outputPanel>
+				</apex:tab>
+			</apex:tabPanel>
+		</apex:pageBlock>
+	</apex:form>
+	<apex:outputPanel rendered="{!!renderSynchronizationSection}">
+		<apex:includeScript value="{!URLFOR($Resource.c2g__front,'front/base/frameworks/jquery-1.5.min.js')}"/>
+	</apex:outputPanel>
+	<apex:includeScript value="{!URLFOR($Resource.c2g__front,'front/base/frameworks/ext-core-3.1.0.js')}"/>
+	<apex:includeScript value="{!URLFOR($Resource.c2g__front,'front/components/LoadingOverlay/LoadingOverlay.js')}"/>
+	<apex:includeScript value="{!URLFOR($Resource.c2g__front,'front/pages/balanceupdate/balanceupdate.js')}"/>
+</apex:page>

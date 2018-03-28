@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Industry &amp; Regulatory Update Series 2008 Reminder</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>EmailLetterhead</letterhead>
+    <name>Industry &amp; Regulatory Updates *Reminder* MA 04/2008</name>
+    <style>promotionRight</style>
+    <subject>ASA Industry and Regulatory Update – it’s not too late to register!</subject>
+    <textOnly>It&apos;s not too late for you to RSVP to attend ASA’s Industry and Regulatory Update with Paul Combe, President and CEO, and Betsy Mayotte, Director of Regulatory Compliance and Privacy.  We are looking forward to speaking with school financial aid administrators about the current industry climate, expected regulatory changes, and major ASA initiatives.  
+ 
+With three events in Massachusetts, you can choose the date and location that works best for you!
+ 
+Date, Time, and Location:
+Tuesday, April 22, 2008
+8:30 am – 12:00 pm (Continental breakfast will be provided.)
+College of the Holy Cross
+ 
+Tuesday, April 29, 2008
+8:30 am – 12:00 pm (Continental breakfast will be provided.)
+Springfield College
+ 
+Wednesday, April 30, 2008
+8:30 am – 12:00 pm (Continental breakfast will be provided.)
+American Student Assistance
+ 
+How to Register 
+-          Online at http://www.amsa.com/fap/training
+-          Email your name, institution, and phone number to training@amsa.com
+-          Call ASA&apos;s Training Department at (800) 999-9080 ext. 3099
+ 
+All of ASA&apos;s training events are offered free of charge.  Training is considered one of the guarantor&apos;s core responsibilities and ASA is dedicated to providing informative and useful training events for our industry colleagues.</textOnly>
+    <type>html</type>
+</EmailTemplate>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>ACCOUNT.NAME</field>
+    </columns>
+    <columns>
+        <field>Account.OE_Code__c</field>
+    </columns>
+    <columns>
+        <field>ACCOUNT.OWNER</field>
+    </columns>
+    <columns>
+        <field>Case.Delinquency_Cohorts__c</field>
+    </columns>
+    <columns>
+        <field>Account.Contract_Start__c</field>
+    </columns>
+    <columns>
+        <field>Account.Contract_End__c</field>
+    </columns>
+    <description>Shows contract start/end and cohort years.</description>
+    <filter>
+        <criteriaItems>
+            <column>RECORDTYPE</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Case.Implementation_Consumer_Services</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>ACCOUNT.OWNER</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>notContain</operator>
+            <value>Marley</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Implementation Cases for PM</name>
+    <params>
+        <name>units</name>
+        <value>h</value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CaseList</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATEONLY</dateColumn>
+        <interval>INTERVAL_PREVCURFY</interval>
+    </timeFrameFilter>
+</Report>

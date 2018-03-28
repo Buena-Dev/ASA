@@ -1,0 +1,13 @@
+{!Contact.FirstName} {!Contact.LastName} from {!Account.Name} has changed their "Strategic Services" response on their contact record. 
+
+The new value(s) for Strategic Services = {!Contact.Strategic_Services__c}. 
+
+Launch the link to review {!Contact.FirstName} {!Contact.LastName}'s contact record: {!Contact.Link} or  accecss the contact through their account: {!Account.Link}. 
+
+
+
+Changed by:
+{!User.Name} 
+{!User.Phone} 
+
+via Salesforce

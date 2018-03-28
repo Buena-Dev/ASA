@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>Mutually_Agreed_to_Objectives__c.objective_plan_date__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Mutually_Agreed_to_Objectives__c.Targeted_Substantive_Visits_for_Month__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Mutually_Agreed_to_Objectives__c.Actual_Substantive_Visits_for_Month__c</field>
+    </columns>
+    <description>For David A to assist Mike F</description>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Mutually_Agreed_to_Objectives__c.Regional_Account_Executive__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>FY &apos;17 M2O Visits</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$Mutually_Agreed_to_Objectives__c</reportType>
+    <scope>organization</scope>
+    <showDetails>false</showDetails>
+    <sortColumn>Mutually_Agreed_to_Objectives__c.objective_plan_date__c</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>Mutually_Agreed_to_Objectives__c.objective_plan_date__c</dateColumn>
+        <interval>INTERVAL_PREVFY</interval>
+    </timeFrameFilter>
+</Report>

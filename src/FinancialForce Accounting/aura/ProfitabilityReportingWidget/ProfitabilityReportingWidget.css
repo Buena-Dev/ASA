@@ -1,0 +1,29 @@
+/*
+ * Copyright (c) 2015 FinancialForce.com, inc. All rights reserved.
+ */
+
+.THIS .booleanIcon {
+    background-color: #54698d;
+    height: 15px;
+    margin-left: 5px;
+    padding: 1px;
+    border-radius: 50%;
+}
+
+/* Colors copied from existing ProfitabilityReportingWidget Visualforce component */
+.THIS .groupingLevel0 {
+    background-color: #067FCC;
+    color: #FFFFFF;
+}
+.THIS .groupingLevel1 {
+    background-color: #B4CDE5;
+    color: #333333;
+}
+.THIS .groupingLevel2 {
+    background-color: #F0F1F2;
+    color: #333333;
+}
+.THIS .groupingLevel3 {
+    background-color: #FFFFFF;
+    color: #333333;
+}

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Ambassador Bulletin - Template for Monthly Email</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>SALTClientLetterhead</letterhead>
+    <name>Ambassador Bulletin_March 2016</name>
+    <style>freeForm</style>
+    <subject>SALT Ambassador Bulletin - March 2016</subject>
+    <textOnly>Dear {!Contact.FirstName}:
+
+Welcome to the March 2016 Ambassador Program Bulletin, the vehicle that provides you with money tips to share and tools to increase awareness about SALT. Here are things you can do this month to help promote money management and spread the word about SALT.
+
+
+Spread the Word: Veterans Twitter Chat
+
+Know some ROTC students or veterans? On March 24th at 2pm ET, we’ll be hosting a Twitter chat on educational benefits for veterans. Spread the word and join the conversation on Twitter and use the hashtag #VetDebt!
+
+
+Share Some Tax Tips
+
+Help others get more money back or just knock a few bucks off your bill with these smart tax credits and deductions.
+
+
+Here is the social media language:
+
+Facebook:  Get more money back or just knock a few bucks off your bill with these smart tax credits and deductions. http://bit.ly/SALTTaxInfo
+
+
+Twitter:  Check out these Education Tax Credits and Deductions for College Costs
+http://bit.ly/SALTTaxInfo
+
+
+Join Our Social Media #SALTsquad!
+
+It’s not too late to join the #SALTsquad! Post about SALT on your social media four times this month using the hashtag #SALTsquad and win exclusive SALT swag! This month, you can get your hands on a SALT hoodie! Want to learn more about joining the #SALTsquad? Email Brittany Broderick at bbroderick@asa.org!</textOnly>
+    <type>html</type>
+</EmailTemplate>

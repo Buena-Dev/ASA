@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>This email is triggered when the MPN % reaches at least 92% - considered to have met goal.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>MPN Complete Goal Reached</name>
+    <style>none</style>
+    <subject>Great News!  {!Account.Name} has reached their goal for Completed MPNs!</subject>
+    <type>text</type>
+</EmailTemplate>

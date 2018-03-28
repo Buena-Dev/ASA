@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <chart>
+        <chartSummaries>
+            <column>Top_Targeted_School__c.Substantive_Visits__c</column>
+        </chartSummaries>
+        <chartType>None</chartType>
+        <enableHoverLabels>false</enableHoverLabels>
+        <expandOthers>false</expandOthers>
+        <groupingColumn>FK_NAME</groupingColumn>
+        <showAxisLabels>false</showAxisLabels>
+        <showPercentage>false</showPercentage>
+        <showTotal>false</showTotal>
+        <showValues>false</showValues>
+    </chart>
+    <columns>
+        <field>CHILD_NAME</field>
+    </columns>
+    <columns>
+        <field>FK_NAME</field>
+    </columns>
+    <columns>
+        <field>Top_Targeted_School__c.Substantive_Visits__c</field>
+    </columns>
+    <description>Targeted Accounts for the current Month</description>
+    <format>Tabular</format>
+    <name>M2Os - Targeted Accounts for Month</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntityCustomEntity$Mutually_Agreed_to_Objectives__c$Top_Targeted_School__c@Top_Targeted_School__c.Account__c</reportType>
+    <rowLimit>20</rowLimit>
+    <scope>user</scope>
+    <showDetails>true</showDetails>
+    <sortColumn>FK_NAME</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>Mutually_Agreed_to_Objectives__c.objective_plan_date__c</dateColumn>
+        <interval>INTERVAL_THISMONTH</interval>
+    </timeFrameFilter>
+</Report>

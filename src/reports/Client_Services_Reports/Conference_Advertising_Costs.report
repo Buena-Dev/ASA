@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CAMPAIGN_NAME</field>
+    </columns>
+    <columns>
+        <field>START_DATE</field>
+    </columns>
+    <columns>
+        <field>Campaign.Sponsorship_Level__c</field>
+    </columns>
+    <columns>
+        <field>Campaign.Mktg_Banner_Ad_Cost__c</field>
+    </columns>
+    <columns>
+        <field>Campaign.Ad_Specifications__c</field>
+    </columns>
+    <description>To collect the cost of advertising.</description>
+    <filter>
+        <criteriaItems>
+            <column>RECORDTYPE</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Campaign.Conference</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>START_DATE</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>greaterThan</operator>
+            <value>TODAY</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Conference Advertising Costs</name>
+    <params>
+        <name>scopeid</name>
+        <value></value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CampaignList</reportType>
+    <scope>org</scope>
+    <showDetails>true</showDetails>
+</Report>

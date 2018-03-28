@@ -1,0 +1,15 @@
+Please forward to Manoug Beurekjian
+
+
+Please disable Portal Access for user: 
+
+{!Contact.FirstName} {!Contact.LastName}
+
+Username:  {!Contact.Email}
+
+Account: {!Account.Name} 
+
+
+
+
+Powered by Salesforce.com

@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <deprecated>false</deprecated>
+    <description>This object is deprecated.</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ControlledByParent</externalSharingModel>
+    <fields>
+        <fullName>Aggregatable__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Aggregatable</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>CommonName__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Common Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Account</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Account Number</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Bank Account</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Budget and Balance</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Cash Entry Currency</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Cash Entry Number</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Company</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Credit Note Account</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Credit Note Currency</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Credit Note Dimension 1</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Credit Note Dimension 2</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Credit Note Dimension 3</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Credit Note Dimension 4</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Credit Note Number</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Credit Note Opportunity</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Credit Note Period</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Credit Note Tax Code 1</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Credit Note Tax Code 2</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Credit Note Tax Code 3</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Credit Note Total</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Currency</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Dimension 1</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Dimension 2</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Dimension 3</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Dimension 4</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Document Currency</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Document Number</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Dual Currency</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Expense</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Expense Dimension 1</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Expense Dimension 2</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Expense Dimension 3</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Expense Dimension 4</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Expense General Ledger Account</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Expense Line Number</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Expense Tax Code</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>General Ledger Account</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Home Currency</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>ID</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Invoice Currency</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Invoice Number</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Invoice Total</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Journal Currency</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Journal Number</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Line Dimension 1</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Line Dimension 2</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Line Dimension 3</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Line Dimension 4</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Line General Ledger Account</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Line Number</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Line Tax Code</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Line Tax Code 2</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Line Tax Code 3</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Opportunity</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Original Transaction</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Period</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Product</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Purchase Credit Note Currency</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Purchase Credit Note Number</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Purchase Invoice Currency</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Purchase Invoice Number</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Reverse Transaction</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Tax Code</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Tax Code 1</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Tax Code 2</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Tax Code 3</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Transaction level Account</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Year</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Document Due Date</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Transaction Line Due Date</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>DataViewJoin__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>DataView Join</label>
+        <referenceTo>DataViewJoin__c</referenceTo>
+        <relationshipLabel>DataView Fields</relationshipLabel>
+        <relationshipName>DataViewFields</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>DataView__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>DataView</label>
+        <referenceTo>DataView__c</referenceTo>
+        <relationshipLabel>DataView Fields</relationshipLabel>
+        <relationshipName>DataViewFields</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>KeyPriority__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Key</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ObjectField__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Object Field</label>
+        <length>60</length>
+        <required>true</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Presentable__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Presentable</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Reversible__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Reversible</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Selectable__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Selectable</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <label>zDeprecated:Dataview Fields</label>
+    <nameField>
+        <label>Field Name</label>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Dataview Fields</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+</CustomObject>

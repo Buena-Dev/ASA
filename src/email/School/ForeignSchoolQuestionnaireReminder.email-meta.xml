@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>false</available>
+    <description>Foreign School Questionnaire to Financial Aid Professionals - Reminder E-mail</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>EmailLetterhead</letterhead>
+    <name>Foreign School Questionnaire - Reminder 2009</name>
+    <style>freeForm</style>
+    <subject>Survey reminder: Direct Lending -- How will this affect International Institutions?</subject>
+    <textOnly>Dear {!Contact.FirstName}:
+ 
+We hope you received our initial e-mail asking if you would participate in a survey regarding the impact of Direct Lending.  If you have already responded to the survey, we thank you for your participation.  If not, we ask that you please take a few minutes to complete the survey.
+ 
+Like you, we are paying attention to the U.S. initiatives regarding a possible move to 100 percent Direct Lending.  American Student Assistance® (ASA), one of the premier student loan guarantors, is exploring how we might be able to assist international institutions in making the transition.
+ 
+In order to be as responsive as possible, we would like to hear directly from you about what the critical issues are that must be addressed should the move to Direct Lending occur.  
+ 
+To that end, we have contracted with an independent research firm, The Melior Group, to conduct an objective survey for us.  We hope you will spend a few minutes completing the survey at the following link http://www.torfasttrack.com/i222/, all results will be returned to The Melior Group for analysis.  We will be pleased to send you a summary of the results thanking you for your participation.
+ 
+If you have any questions, please contact Linda McAleer, President of The Melior Group, at lmcaleer@meliorgroup.com.
+ 
+ 
+Sincerely, 
+Caroline Menendez
+  
+ 
+The content of the e-mail is confidential and proprietary to American Student Assistance. It is intended only for the above-named individual or entity and for the purpose indicated and may not be reproduced or distributed without permission of the sender. Please notify the sender or ASA if you received this e-mail in error.
+American Student Assistance® is a non-profit organization that helps students and their families manage higher education debt.  
+ 
+American Student Assistance and ASA are registered trademarks of American Student Assistance.  All rights reserved.
+
+ 
+ </textOnly>
+    <type>html</type>
+</EmailTemplate>

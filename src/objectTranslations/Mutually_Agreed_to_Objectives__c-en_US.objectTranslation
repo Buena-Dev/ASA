@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Mutually Agreed to Objectives</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Mutually Agreed to Objectives</value>
+    </caseValues>
+    <fields>
+        <label><!-- Actual Substantive Visits for Month --></label>
+        <name>Actual_Substantive_Visits_for_Month__c</name>
+    </fields>
+    <fields>
+        <label><!-- Actual # Visits with Current Clients --></label>
+        <name>Actual_Visits_with_Current_Clients__c</name>
+    </fields>
+    <fields>
+        <label><!-- Annual Sales Plan --></label>
+        <name>Annual_Sales_Plan__c</name>
+        <relationshipLabel><!-- Mutually Agreed to Objectives --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- RAE Comments --></label>
+        <name>Comments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Expected Contract 1 Recv&apos;d/Closed? --></label>
+        <name>Expected_Contract_1_Recv_d_Closed__c</name>
+    </fields>
+    <fields>
+        <label><!-- Expected Contract 1 --></label>
+        <name>Expected_Contract_1__c</name>
+        <relationshipLabel><!-- Mutually Agreed to Objectives (Expected Contract 1) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Expected Contract 2 Recv&apos;d/Closed? --></label>
+        <name>Expected_Contract_2_Recv_d_Closed__c</name>
+    </fields>
+    <fields>
+        <label><!-- Expected Contract 2 --></label>
+        <name>Expected_Contract_2__c</name>
+        <relationshipLabel><!-- Mutually Agreed to Objectives (Expected Contract 2) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Expected Contract 3 Recv&apos;d/Closed? --></label>
+        <name>Expected_Contract_3_Recv_d_Closed__c</name>
+    </fields>
+    <fields>
+        <label><!-- Expected Contract 3 --></label>
+        <name>Expected_Contract_3__c</name>
+        <relationshipLabel><!-- Mutually Agreed to Objectives (Expected Contract 3) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Is Current Running User --></label>
+        <name>Is_Current_Running_User__c</name>
+    </fields>
+    <fields>
+        <label><!-- Manager&apos;s Month End Comments --></label>
+        <name>Month_End_Comments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Number of Contracts Received --></label>
+        <name>Number_of_Contracts_Received__c</name>
+    </fields>
+    <fields>
+        <label><!-- Number of Expected Contracts --></label>
+        <name>Number_of_Expected_Contracts__c</name>
+    </fields>
+    <fields>
+        <label><!-- Expected # Visits with Current Clients --></label>
+        <name>Number_of_visits_with_current_clients__c</name>
+    </fields>
+    <fields>
+        <label><!-- Regional Account Executive --></label>
+        <name>Regional_Account_Executive__c</name>
+        <relationshipLabel><!-- Mutually Agreed to Objectives (Regional Account Executive) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Regional Manager --></label>
+        <name>Regional_Manager__c</name>
+        <relationshipLabel><!-- Mutually Agreed to Objectives (Regional Manager) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Substantive Call/Booth Meeting --></label>
+        <name>Secondary_Visits_Score__c</name>
+    </fields>
+    <fields>
+        <label><!-- On-Campus/Online Meeting Score --></label>
+        <name>Substantive_Visits_Score__c</name>
+    </fields>
+    <fields>
+        <label><!-- Targeted Substantive Visits for Month --></label>
+        <name>Targeted_Substantive_Visits_for_Month__c</name>
+    </fields>
+    <fields>
+        <label><!-- Top Targeted School Count --></label>
+        <name>Top_Targeted_School_Count__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Visits Score --></label>
+        <name>Total_Visits_Score__c</name>
+    </fields>
+    <fields>
+        <help><!-- # of visits remaining against target --></help>
+        <label><!-- Visits Remaining --></label>
+        <name>Visits_Remaining__c</name>
+    </fields>
+    <fields>
+        <label><!-- Objective Plan Date --></label>
+        <name>objective_plan_date__c</name>
+    </fields>
+    <layouts>
+        <layout>Mutually Agreed to Objectives Layout</layout>
+        <sections>
+            <label><!-- Contracts This Month --></label>
+            <section>Contracts This Month</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Events This Month --></label>
+            <section>Events This Month</section>
+        </sections>
+        <sections>
+            <label><!-- Top Targeted Client Visit Chart --></label>
+            <section>Top Targeted Client Visit Chart</section>
+        </sections>
+        <sections>
+            <label><!-- Top Targeted Clients --></label>
+            <section>Top Targeted Clients</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- M2O --></label>
+        <name>M2O</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- You are not allowed to change the value of &quot;Number of Contracts Received&quot;. --></errorMessage>
+        <name>Lock_No_of_Contracts_Rcvd</name>
+    </validationRules>
+</CustomObjectTranslation>

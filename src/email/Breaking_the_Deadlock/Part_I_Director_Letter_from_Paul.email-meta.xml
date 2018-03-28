@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>false</available>
+    <description>FAD letter from Paul addressing recent industry changes and states ASA’s commitment to clients and Wellness</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>SALTClientLetterhead</letterhead>
+    <name>Part I Director Letter from Paul</name>
+    <style>freeForm</style>
+    <subject>Letter to Our Schools from ASA President Paul Combe</subject>
+    <textOnly>March 10, 2009
+ 
+ 
+
+Dear {!Contact.FirstName},
+ 
+
+You may have read or heard that President Obama’s proposed budget would eliminate private lenders as a funding source for federal education loans beginning in 2010. As you know, the president’s budget proposal is the beginning of a lengthy process that will not be complete until Congress weighs in. While it is too soon to speculate on the final outcome, we want to assure you that American Student Assistance is here for your students and your institution.
+ 
+As an administrator for your school’s federal education loan program, ASA will work with you and your staff to ensure a stable student loan process in the upcoming year. We will strive to ensure that none of your student loan borrowers are adversely impacted by any changes in the federal student loan program. 
+ 
+Like President Obama, ASA too believes that student loan reform is desperately needed. We invite you to visit www.amsa.com/reform to read our proposal for redesigning student lending. ASA has long believed that all education loan borrowers, regardless of whether they borrow directly from the government or from a private lender, are entitled to receive education debt management guidance. Our education debt management services range from working with financial aid professionals to advise students on their borrowing options, to counseling borrowers through repayment long after they’ve left your campus, to acting as a neutral mediator when serious issues arise.
+ 
+Since 2001, ASA’s education debt management programs have focused on ensuring the financial “wellness” of borrowers, and the results speak for themselves: ASA has achieved the lowest default rates of any student loan guarantor in the nation and more than 95 percent of all loans in our portfolio are being repaid on time. Working directly with your institution to develop strategies that help your students become financially healthy alumni is a priority for ASA.
+ 
+Thank you for your consideration. We will continue to provide your institution with additional information over the coming weeks, and we look forward to continuing to work together toward student financial wellness.
+ 
+ 
+Sincerely,
+ 
+Paul C. Combe
+President and CEO</textOnly>
+    <type>html</type>
+</EmailTemplate>

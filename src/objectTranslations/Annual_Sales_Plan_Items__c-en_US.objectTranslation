@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Annual Sales Plan Items</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Annual Sales Plan Items</value>
+    </caseValues>
+    <fields>
+        <label><!-- Aggregators Status Update --></label>
+        <name>Aggregators_Status_Update__c</name>
+    </fields>
+    <fields>
+        <label><!-- Annual Sales Plan --></label>
+        <name>Annual_Sales_Plan__c</name>
+        <relationshipLabel><!-- Annual Sales Plan Items --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Approved Aggregator Name --></label>
+        <name>Approved_Aggregator_Name__c</name>
+        <relationshipLabel><!-- Annual Sales Plan Items (Approved Aggregator Name) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Attending --></label>
+        <name>Attending__c</name>
+    </fields>
+    <fields>
+        <label><!-- Audience --></label>
+        <name>Audience__c</name>
+        <picklistValues>
+            <masterLabel>Academic</masterLabel>
+            <translation><!-- Academic --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Admissions</masterLabel>
+            <translation><!-- Admissions --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Advancement</masterLabel>
+            <translation><!-- Advancement --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Alumni</masterLabel>
+            <translation><!-- Alumni --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Career Services</masterLabel>
+            <translation><!-- Career Services --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Enrollment Management</masterLabel>
+            <translation><!-- Enrollment Management --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Financial Aid</masterLabel>
+            <translation><!-- Financial Aid --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Registrar</masterLabel>
+            <translation><!-- Registrar --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Student Life</masterLabel>
+            <translation><!-- Student Life --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Veterans Affairs</masterLabel>
+            <translation><!-- Veterans Affairs --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Conference Name/Presentation Proposed --></label>
+        <name>Conference_Name_Presentation_Proposed__c</name>
+        <relationshipLabel><!-- Annual Sales Plan Items --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Conference Name --></label>
+        <name>Conference_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Dates --></label>
+        <name>Dates__c</name>
+    </fields>
+    <fields>
+        <label><!-- Location --></label>
+        <name>Location__c</name>
+    </fields>
+    <fields>
+        <label><!-- Opportunity --></label>
+        <name>Opportunity__c</name>
+        <relationshipLabel><!-- Annual Sales Plan Items --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- PCA Record --></label>
+        <name>PCA_Record__c</name>
+    </fields>
+    <fields>
+        <label><!-- Presenting --></label>
+        <name>Presenting__c</name>
+    </fields>
+    <fields>
+        <label><!-- Proposed --></label>
+        <name>Proposed__c</name>
+    </fields>
+    <fields>
+        <label><!-- School Name --></label>
+        <name>School_Name__c</name>
+        <relationshipLabel><!-- Annual Sales Plan Items --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Target Aggregator Name --></label>
+        <name>Target_Aggregator_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Target ESSS Status Update --></label>
+        <name>Target_ESSS_Status_Update__c</name>
+        <picklistValues>
+            <masterLabel>Awaiting signed contract</masterLabel>
+            <translation><!-- Awaiting signed contract --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Providing Proposal</masterLabel>
+            <translation><!-- Providing Proposal --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Target Record --></label>
+        <name>Target_Record__c</name>
+        <picklistValues>
+            <masterLabel>Target ESSS Schools</masterLabel>
+            <translation><!-- Target ESSS Schools --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Target School</masterLabel>
+            <translation><!-- Target School --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Total Enrollment --></label>
+        <name>Total_Enrollments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Membership --></label>
+        <name>Total_Membership__c</name>
+    </fields>
+    <fields>
+        <label><!-- # of Targeted Schools in Territory --></label>
+        <name>of_Targets_in_Territory__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

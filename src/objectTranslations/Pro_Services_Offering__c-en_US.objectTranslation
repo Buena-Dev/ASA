@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Pro Services Offering</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Pro Services Offerings</value>
+    </caseValues>
+    <fields>
+        <label><!-- Case --></label>
+        <name>Case__c</name>
+        <relationshipLabel><!-- Pro Services Offerings --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Check this box if  this Professional Services event is for an organization who has received funds from the College Access Challenge Grant. --></help>
+        <label><!-- College Access &lt;br&gt; Challenge Grant --></label>
+        <name>College_Access_br_Challenge_Grant__c</name>
+    </fields>
+    <fields>
+        <label><!-- End Date --></label>
+        <name>End_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Expected Attendees --></label>
+        <name>Expected_Attendees__c</name>
+    </fields>
+    <fields>
+        <help><!-- If this Offering is related to a specific Account (college, university, lender or association), please use this lookup field to select the appropriate Account. --></help>
+        <label><!-- Account --></label>
+        <name>PS_OfferingAccount__c</name>
+        <relationshipLabel><!-- Pro Services Offerings --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Please indicate the number of individuals expected to attend this Offering. Once this Offering has been completed, this field will be updated to indicate the actual number of individuals who attended this Offering. --></help>
+        <label><!-- Actual Attendees --></label>
+        <name>PS_OfferingActualAttendees__c</name>
+    </fields>
+    <fields>
+        <label><!-- Address (line 1) --></label>
+        <name>PS_OfferingAddress1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Address (line 2) --></label>
+        <name>PS_OfferingAddress2__c</name>
+    </fields>
+    <fields>
+        <help><!-- This is the ProServices@ASA team member who has been assigned to conduct this Offering. --></help>
+        <label><!-- Assigned To --></label>
+        <name>PS_OfferingAssignedTo__c</name>
+        <relationshipLabel><!-- Pro Services Offerings (Assigned To) --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- If this Offering is related to a specific Campaign, please use this lookup field to select the appropriate Campaign. --></help>
+        <label><!-- Campaign --></label>
+        <name>PS_OfferingCampaign__c</name>
+        <relationshipLabel><!-- Pro Services Offerings --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- City --></label>
+        <name>PS_OfferingCity__c</name>
+    </fields>
+    <fields>
+        <label><!-- Completed? --></label>
+        <name>PS_OfferingCompleted__c</name>
+    </fields>
+    <fields>
+        <help><!-- Please select the desired delivery method for this Offering. --></help>
+        <label><!-- Delivery Method --></label>
+        <name>PS_OfferingDeliveryMethod__c</name>
+        <picklistValues>
+            <masterLabel>Conference Call</masterLabel>
+            <translation><!-- Conference Call --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Email</masterLabel>
+            <translation><!-- Email --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In Person</masterLabel>
+            <translation><!-- In Person --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Postal Mail</masterLabel>
+            <translation><!-- Postal Mail --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Webex</masterLabel>
+            <translation><!-- Webex --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Description --></label>
+        <name>PS_OfferingDescriptoin__c</name>
+    </fields>
+    <fields>
+        <help><!-- What is the name of the site where the offering will be held? (This is used for tracking purposes and to help ensure the ProServices@ASA team member shows up at the correct location.) --></help>
+        <label><!-- Location Name --></label>
+        <name>PS_OfferingLocationName__c</name>
+    </fields>
+    <fields>
+        <help><!-- If this Offering is related to a specific Opportunity, please use this lookup field to select that Opportunity. --></help>
+        <label><!-- Opportunity --></label>
+        <name>PS_OfferingOpportunity__c</name>
+        <relationshipLabel><!-- Pro Services Offerings --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Who is the primary external contact (non-ASA) for this Offering? If the individual does not have their contact information already in Salesforce, you may need to add them to the appropriate Account. --></help>
+        <label><!-- Primary Contact --></label>
+        <name>PS_OfferingPrimaryContact__c</name>
+        <relationshipLabel><!-- Pro Services Offerings (Primary Contact) --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Please identify the ASA team member who is requesting this event. --></help>
+        <label><!-- Requested By (ASA) --></label>
+        <name>PS_OfferingRequestedBy__c</name>
+        <relationshipLabel><!-- Pro Services Offerings (Requested By (ASA)) --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- If there is a specific individual that you would like to conduct this offering, please indicate your choice here. Otherwise, leave this blank. --></help>
+        <label><!-- Requested Presenter --></label>
+        <name>PS_OfferingRequestedPresenter__c</name>
+        <relationshipLabel><!-- Pro Services Offerings (Requested Presenter) --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Please enter the 2 character state abbreviation for this Offering. This is primarily used for reporting by the ProServices@ASA team. --></help>
+        <label><!-- State --></label>
+        <name>PS_OfferingState__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>PS_OfferingStatus__c</name>
+        <picklistValues>
+            <masterLabel>Approved</masterLabel>
+            <translation><!-- Approved --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cancelled</masterLabel>
+            <translation><!-- Cancelled --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Denied</masterLabel>
+            <translation><!-- Denied --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Submitted</masterLabel>
+            <translation><!-- Submitted --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Sub-Status --></label>
+        <name>PS_OfferingSubStatus__c</name>
+        <picklistValues>
+            <masterLabel>Additional Information Requested</masterLabel>
+            <translation><!-- Additional Information Requested --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Changed Topic</masterLabel>
+            <translation><!-- Changed Topic --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Event Cancelled</masterLabel>
+            <translation><!-- Event Cancelled --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>High Priority</masterLabel>
+            <translation><!-- High Priority --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lack of Registration</masterLabel>
+            <translation><!-- Lack of Registration --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lack of Resources</masterLabel>
+            <translation><!-- Lack of Resources --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Low Priority</masterLabel>
+            <translation><!-- Low Priority --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No Response From Contact</masterLabel>
+            <translation><!-- No Response From Contact --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Priority Override</masterLabel>
+            <translation><!-- Priority Override --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Standard Priority</masterLabel>
+            <translation><!-- Standard Priority --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Submitted for ProServices Approval</masterLabel>
+            <translation><!-- Submitted for ProServices Approval --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Waiting for ProServices Approval</masterLabel>
+            <translation><!-- Waiting for ProServices Approval --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Waiting for Strategic Services Approval</masterLabel>
+            <translation><!-- Waiting for Strategic Services Approval --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Waiting to be Submitted for Approval</masterLabel>
+            <translation><!-- Waiting to be Submitted for Approval --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- This field contains the date requested for this Offering. This date may change depending on intervening factors and the availability of resources to accommodate your request. --></help>
+        <label><!-- Target Date --></label>
+        <name>PS_OfferingTargetDate__c</name>
+    </fields>
+    <fields>
+        <help><!-- Each offering must be related to a specific Topic offered by the ProServices@ASA team. If an existing Topic does not meet your needs, you may select New Topic Request to request that the ProServices@ASA team create a new Topic for you. --></help>
+        <label><!-- Pro Services Topic --></label>
+        <name>PS_OfferingTopic__c</name>
+        <relationshipLabel><!-- Pro Services Offerings --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Price --></label>
+        <name>Price__c</name>
+    </fields>
+    <fields>
+        <label><!-- Proposal Submission Details --></label>
+        <name>Proposal_Submission_Details__c</name>
+    </fields>
+    <fields>
+        <label><!-- Proposed Co-Presenter --></label>
+        <name>Proposed_Co_Presenter__c</name>
+        <relationshipLabel><!-- Pro Services Offerings (Proposed Co-Presenter) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Proposed Presenter --></label>
+        <name>Proposed_Presenter__c</name>
+        <relationshipLabel><!-- Pro Services Offerings (Proposed Presenter) --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Is the session being delivered in Spanish? If yes check box --></help>
+        <label><!-- Spanish --></label>
+        <name>Spanish__c</name>
+    </fields>
+    <fields>
+        <label><!-- Start Date --></label>
+        <name>Start_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Submission Deadline --></label>
+        <name>Submission_Deadline__c</name>
+    </fields>
+    <fields>
+        <label><!-- Suggested Topic --></label>
+        <name>Suggested_Topic__c</name>
+    </fields>
+    <layouts>
+        <layout>PS - Article - Administrator Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Details --></label>
+            <section>Details</section>
+        </sections>
+        <sections>
+            <label><!-- Instructions --></label>
+            <section>Instructions</section>
+        </sections>
+        <sections>
+            <label><!-- Status --></label>
+            <section>Status</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>PS - Article - Creator/Editor Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Details --></label>
+            <section>Details</section>
+        </sections>
+        <sections>
+            <label><!-- Instructions --></label>
+            <section>Instructions</section>
+        </sections>
+        <sections>
+            <label><!-- Status --></label>
+            <section>Status</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>PS - Offering - Administrator Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Details --></label>
+            <section>Details</section>
+        </sections>
+        <sections>
+            <label><!-- Location --></label>
+            <section>Location</section>
+        </sections>
+        <sections>
+            <label><!-- Status --></label>
+            <section>Status</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>PS - Offering - Creator/Editor Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Details --></label>
+            <section>Details</section>
+        </sections>
+        <sections>
+            <label><!-- Instructions --></label>
+            <section>Instructions</section>
+        </sections>
+        <sections>
+            <label><!-- Location --></label>
+            <section>Location</section>
+        </sections>
+        <sections>
+            <label><!-- Status --></label>
+            <section>Status</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- Advisory Board --></label>
+        <name>Advisory_Board</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Article --></label>
+        <name>Article</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Campus Engagement --></label>
+        <name>Campus_Engagement</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Client Events --></label>
+        <name>Client_Events</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Community Outreach --></label>
+        <name>Community_Outreach</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Conference Presentation --></label>
+        <name>ConferencePresentation</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Consultation --></label>
+        <name>Consultation</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Financial Education Messaging --></label>
+        <name>Financial_Education_Messaging</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- My Money 101 --></label>
+        <name>My_Money_101</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Other --></label>
+        <name>Other</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Partner Engagement --></label>
+        <name>Partner_Engagement</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Pre-Sales Support --></label>
+        <name>Pre_Sales_Support</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Training --></label>
+        <name>Training</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- WebEx --></label>
+        <name>WebEx</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Workshop --></label>
+        <name>Workshop</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- An Offering MUST be tied to either an Account, an Opportunity or a Campaign. Please use one of these fields to link to this Offering. --></errorMessage>
+        <name>AccountOpportunityorCampaignRequired</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please select a ProServices Topic that does not have Status of Archived or Removed --></errorMessage>
+        <name>PS_Topic_NOT_Archived_or_Removed</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Target Date is a required field --></errorMessage>
+        <name>Target_date_validation_rule</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- This title must contain a date (2014 - 2020) and should be in the format:  &lt;Org Name&gt; - &lt;Topic&gt; - &lt;Date&gt;  
+For example, MASFAA (MS) - Newsletter Article - Fall 2016 would be correct. --></errorMessage>
+        <name>Title_Naming_Convention</name>
+    </validationRules>
+</CustomObjectTranslation>

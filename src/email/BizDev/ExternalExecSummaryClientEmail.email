@@ -1,0 +1,25 @@
+{!Contact.FirstName} {!Contact.LastName}
+{!Contact.Title}
+{!Contact_FullMailingAddress
+
+
+Dear {!Contact_FirstName},
+
+I would like to first thank you for choosing ASA as your guarantor of choice.  ASA understands that many choices exist in this industry and we are flattered to be chosen as a preferred partner.  
+
+Attached is a copy of the executive summary defining the discussed process flow.  This summary provides you an opportunity to examine how{!Account.Name} will interact with ASA to receive guarantees for your students and parents.  This summary is also ASA’s commitment to exceptional customer service for {!Account.Name}.
+
+Please take a few moments to review this document and determine if  {!Account.Name}'s needs are met.  Also, please do not hesitate to call me if you have questions regarding the executive summary or want clarification on the established process.
+
+Once again, we thank you for the opportunity to partner with {!Account.Name} and the ASA team looks forward to working closely with you and your staff for many years. 
+
+
+Sincerely,
+
+
+
+{!Account.OwnerFullName}
+{!Account.OwnerTitle}
+{!Account.OwnerPhone}
+{!Account.OwnerEmail}
+American Student Assistance

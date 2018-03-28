@@ -1,0 +1,18 @@
+<messaging:emailTemplate subject="{!relatedTo.Account__r.Name} {!$Label.c2g__communitiesemailsalesinvoice} {!relatedTo.Name}" recipientType="Contact" relatedToType="c2g__codaInvoice__c">
+<messaging:plainTextEmailBody >
+{!$Label.c2g__communitiesemailsalesinvoicenumber} {!relatedTo.Name}
+
+{!$Label.c2g__communitiesemailbodysignup} {!$Label.c2g__communitiesemailbodycommunity} {!$Label.c2g__communitiesemailbodytoviewandprintsinv}
+
+{!$Label.c2g__communitiesemailfootertext}
+{!$Label.c2g__communitiesemailfooterfurl}
+</messaging:plainTextEmailBody>
+<messaging:HtmlEmailBody >
+{!$Label.c2g__communitiesemailsalesinvoicenumber} {!relatedTo.Name}<br/><br/>
+
+{!$Label.c2g__communitiesemailbodysignup} <a href="CommunityURL">{!$Label.c2g__communitiesemailbodycommunity}</a> {!$Label.c2g__communitiesemailbodytoviewandprintsinv}<br/><br/>
+
+{!$Label.c2g__communitiesemailfootertext}<br/>
+<a href="http://www.financialforce.com">{!$Label.c2g__communitiesemailfooterfurl}</a>
+</messaging:HtmlEmailBody>
+</messaging:emailTemplate>

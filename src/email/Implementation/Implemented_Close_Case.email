@@ -1,0 +1,5 @@
+{!Case.Account} has an Implementation Case in {!Case.Status} status.
+
+Please update the Opportunity:  {!Opportunity.Link}
+
+This is the Account for this Case: {!Account.Link}

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Pro_Services_Offering__c.PS_OfferingAccount__c</field>
+    </columns>
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>Pro_Services_Offering__c.PS_OfferingAssignedTo__c</field>
+    </columns>
+    <columns>
+        <field>Pro_Services_Offering__c.PS_OfferingActualAttendees__c</field>
+    </columns>
+    <columns>
+        <field>Pro_Services_Offering__c.PS_OfferingTargetDate__c</field>
+    </columns>
+    <columns>
+        <field>Pro_Services_Offering__c.PS_OfferingCompleted__c</field>
+    </columns>
+    <columns>
+        <field>Pro_Services_Offering__c.PS_OfferingLocationName__c</field>
+    </columns>
+    <description>A list of all training sessions associated with the MA College Access Challenge Grant</description>
+    <filter>
+        <criteriaItems>
+            <column>Pro_Services_Offering__c.College_Access_br_Challenge_Grant__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>1</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>MA College Access Challenge Grant</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$Pro_Services_Offering__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Pro_Services_Offering__c.PS_OfferingTargetDate__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

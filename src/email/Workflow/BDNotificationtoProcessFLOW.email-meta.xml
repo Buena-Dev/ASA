@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>BD Notiication Process approved internally send the DRAFT Exuctive SUMM</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>BD Notification to Process FLOW</name>
+    <style>none</style>
+    <subject>NOTIFICATION: Exec Summary appoved for {!Opportunity.Account}</subject>
+    <type>text</type>
+</EmailTemplate>

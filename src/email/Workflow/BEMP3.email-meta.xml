@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>This email will be sent to Marketing whenever the &quot;BEMP&quot; field on a Contact changes.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Borrower Entitlement Marketing Plan Update</name>
+    <style>none</style>
+    <subject>{!Contact.FirstName} {!Contact.LastName} from {!Account.Name} has changed their &quot;Borrower Entitlement Marketing Plan&quot; field response</subject>
+    <type>text</type>
+</EmailTemplate>

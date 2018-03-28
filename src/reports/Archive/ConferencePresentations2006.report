@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Campaign.Presenting__c</field>
+    </columns>
+    <columns>
+        <field>Campaign.Session_s_Presented__c</field>
+    </columns>
+    <columns>
+        <field>Campaign.Primary_BD__c</field>
+    </columns>
+    <columns>
+        <field>Campaign.BDAttending__c</field>
+    </columns>
+    <columns>
+        <field>Campaign.Number_of_Attendess__c</field>
+    </columns>
+    <columns>
+        <field>START_DATE</field>
+    </columns>
+    <columns>
+        <field>END_DATE</field>
+    </columns>
+    <description>Who, What, Where for the fall 2006 conference season</description>
+    <filter>
+        <criteriaItems>
+            <column>CAMPAIGN_TYPE</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Seminar / Conference</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Campaign.Presenting__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>notEqual</operator>
+            <value></value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>CAMPAIGN_NAME</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Conference Presentations 2006</name>
+    <params>
+        <name>scopeid</name>
+        <value></value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CampaignList</reportType>
+    <scope>org</scope>
+    <showDetails>true</showDetails>
+    <sortColumn>START_DATE</sortColumn>
+    <sortOrder>Asc</sortOrder>
+</Report>

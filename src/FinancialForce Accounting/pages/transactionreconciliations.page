@@ -1,0 +1,118 @@
+<apex:page standardController="c2g__TransactionReconciliation__c" extensions="c2g.TransactionReconciliationsController" sidebar="false" showHeader="true" standardStylesheets="false" docType="html-5.0">
+    <!-- User Locale -->
+    <c:fflib_bridgeUserInfo />
+
+
+    <!-- ExtJS Application -->
+    <c:fflib_extBootstrap applicationName="TransactionReconciliations" staticResource="{!$Resource.c2g__TransactionReconciliations}" developmentPrefix="{!$Setup.ClientDeveloperSettings__c.ResourcePrefix__c}" frameworkPath="../../ext">
+    	<c:TranslationHelper />
+    	<script>
+			window.$RemoteAction = window.$RemoteAction || {};
+			window.$Params = window.$Params || {};
+			window.$Label = window.$Label || {};
+
+
+			/** Remote Actions **/
+			$RemoteAction.TransactionReconciliationsController = $RemoteAction.TransactionReconciliationsController || {};
+			$RemoteAction.TransactionReconciliationsController.getFilterValuesByAPIName = '{!$RemoteAction.TransactionReconciliationsController.getFilterValuesMap}';
+			$RemoteAction.TransactionReconciliationsController.retrieveTransactions = '{!$RemoteAction.TransactionReconciliationsController.retrieveTransactions}';
+			$RemoteAction.TransactionReconciliationsController.autoMatchTransactions = '{!$RemoteAction.TransactionReconciliationsController.autoMatchTransactions}';
+			$RemoteAction.TransactionReconciliationsController.saveReconciliation = '{!$RemoteAction.TransactionReconciliationsController.saveReconciliation}';
+			$RemoteAction.TransactionReconciliationsController.getAccountsWithFilter = '{!$RemoteAction.TransactionReconciliationsController.getAccountsWithFilter}';
+
+
+			/** Labels **/
+			//Toolbar
+			$Label.Title = '{!JSENCODE($Label.TransactionReconciliationPageTitle)}';
+			$Label.FiltersButton = '{!JSENCODE($Label.TransactionReconciliationPageFiltersButton)}';
+			$Label.RetrieveButton = '{!JSENCODE($Label.TransactionReconciliationPageRetrieveButton)}';
+			$Label.AutoMatchButton = '{!JSENCODE($Label.TransactionReconciliationPageAutoMatchButton)}';
+			$Label.ClearSelectionButton = '{!JSENCODE($Label.TransactionReconciliationPageClearSelectionButton)}';
+			$Label.SaveButton = '{!JSENCODE($Label.TransactionReconciliationPageSaveButton)}';
+			$Label.BackToList = '{!JSENCODE($Label.TransactionReconciliationPageBackToListButton)}';
+			
+			//Search
+			$Label.TransactionReconciliationSearch = '{!JSENCODE($Label.TransactionReconciliationSearch)}';
+			$Label.TransactionReconciliationsFindNextRow = '{!JSENCODE($Label.TransactionReconciliationsFindNextRow)}';
+			$Label.TransactionReconciliationsFindPreviousRow = '{!JSENCODE($Label.TransactionReconciliationsFindPreviousRow)}';
+			$Label.TransactionReconciliationsResultsFound = '{!JSENCODE($Label.TransactionreconciliationsResultsFound)}';
+			$Label.ShowAll = '{!JSENCODE($Label.ShowAll)}';
+			$Label.ShowSelected = '{!JSENCODE($Label.ShowSelected)}';
+			$Label.ShowDeselected = '{!JSENCODE($Label.ShowDeselected)}';
+			
+			//Filters
+			$Label.Company = '{!JSENCODE($Label.TransactionReconciliationPageCompanyField)}';
+			$Label.Account = '{!JSENCODE($Label.TransactionReconciliationPageAccountField)}';
+			$Label.GLA = '{!JSENCODE($Label.TransactionReconciliationPageGLAField)}';
+			$Label.Period = '{!JSENCODE($Label.TransactionReconciliationPagePeriodField)}';
+			$Label.TypeToSearch = '{!JSENCODE($Label.TransactionReconciliationPageFieldsInlineHelp)}';
+			$Label.MustEnterValueMessage = '{!JSENCODE($Label.TransactionReconciliationPageMandatoryFieldMessage)}';
+			$Label.MultiSelectCriteria = '{!JSENCODE($Label.TransactionReconciliationPageFiltersCriteriaMultiselect)}';
+			$Label.FromToCriteria = '{!JSENCODE($Label.TransactionReconciliationPageFiltersCriteriaFromTo)}';
+			$Label.FromLabel = '{!JSENCODE($Label.FilterFrom)}';
+			$Label.ToLabel = '{!JSENCODE($Label.FilterTo)}';
+			
+			//Reconciliation
+			$Label.Reconciled = '{!JSENCODE($Label.TransactionReconciliationPageReconciledAmount)}';
+			$Label.Date = '{!JSENCODE($Label.TransactionReconciliationPageDateColumn)}';
+			$Label.DocReference = '{!JSENCODE($Label.TransactionReconciliationPageDocReferenceColumn)}';
+			$Label.Description = '{!JSENCODE($Label.TransactionReconciliationPageDescriptionColumn)}';
+			$Label.ICT = '{!JSENCODE($Label.TransactionReconciliationPageICTColumn)}';
+			$Label.TLI = '{!JSENCODE($Label.TransactionReconciliationPageTLIColumn)}';
+			$Label.Currency = '{!JSENCODE($Label.TransactionReconciliationPageCurrencyColumn)}';
+			$Label.Amount = '{!JSENCODE($Label.TransactionReconciliationPageTitleAmountColumn)}';
+			$Label.TransactionsRetrieved = '{!JSENCODE($Label.TransactionReconciliationPageTLIs)}';
+			$Label.TotalRetrieved = '{!JSENCODE($Label.TransactionReconciliationPageRetrievedAmount)}';
+			$Label.Unreconciled = '{!JSENCODE($Label.TransactionReconciliationPageUnreconciledAmount)}';
+			$Label.NoResultsFound = '{!JSENCODE($Label.TransactionReconciliationPageNoResultsFound)}';
+			$Label.CompanyNotSelectedMessage = '{!JSENCODE($Label.TransactionReconciliationPageCompanyNotSelectedMessage)}';
+			$Label.CompanyNotSelectedTitle = '{!JSENCODE($Label.TransactionReconciliationPageCompanyNotSelectedTitle)}';
+			
+			//Pop Ups
+			$Label.ConfigPopUpTitle = '{!JSENCODE($Label.TransactionReconciliationPageConfigTitle)}';
+			$Label.ConfigPopUpMatchOnDate = '{!JSENCODE($Label.TransactionReconciliationPageConfigMatchOnDate)}';
+			$Label.ConfigPopUpMatchOnAmountAndCurrency = '{!JSENCODE($Label.TransactionReconciliationPageConfigMatchOnAmountAndCurrency)}';
+			$Label.ConfigPopUpMatchOnICTRef = '{!JSENCODE($Label.TransactionReconciliationPageConfigMatchOnICTRef)}';
+			$Label.SavePopUpTitle = '{!JSENCODE($Label.TransactionReconciliationPageSavePopUpTitle)}';
+			$Label.SavePopUpName = '{!JSENCODE($Label.TransactionReconciliationPageSavePopUpName)}';
+			$Label.SavePopUpDescription = '{!JSENCODE($Label.TransactionReconciliationPageSavePopUpDescription)}';
+			$Label.CancelButton = '{!JSENCODE($Label.TransactionReconciliationPageCancelButton)}';
+			$Label.OverrideChangesTitle = '{!JSENCODE($Label.TransactionReconciliationPageOverrideChangesTitle)}';
+			$Label.OverrideChangesMessage = '{!JSENCODE($Label.TransactionReconciliationPageOverrideChangesMessage)}';
+			
+			//For Summary line
+			$Label.MultipleGLAs = '{!JSENCODE($Label.TransactionReconciliationPageMultipleGLAs)}';
+			$Label.MultiplePeriods = '{!JSENCODE($Label.TransactionReconciliationPageMultiplePeriods)}';
+			$Label.MultipleAccounts = '{!JSENCODE($Label.TransactionReconciliationPageMultipleAccounts)}';
+
+			/** Params **/
+			/* Filters Mapping */
+			$Params.ItemCompany = '{!JSENCODE(ITEM_COMPANY)}';
+			$Params.ItemId = '{!JSENCODE(ITEM_ID)}';
+			$Params.ItemName = '{!JSENCODE(ITEM_NAME)}';
+
+			/* Filters data keys */
+			$Params.CompanyFilterName = '{!JSENCODE(COMPANY_KEY)}';
+			$Params.PeriodFilterName = '{!JSENCODE(PERIOD_KEY)}';
+			$Params.GLAFilterName = '{!JSENCODE(GLA_KEY)}';
+			$Params.CCPFilterName = '{!JSENCODE(COMPANY_CURRENT_PERIOD_KEY)}';
+			$Params.AccountFilterName = '{!JSENCODE(ACCOUNT_KEY)}';
+
+			/* Locale formatting */
+			$Params.dateFormat = '{!JSENCODE(SenchaDateLocaleFormat)}';
+			$Params.decimalSeparator = '{!JSENCODE(DecimalSeparator)}';
+			$Params.thousandSeparator = '{!JSENCODE(ThousandSeparator)}';
+			
+			/*Existing filter, name, description and transaction data*/
+			$Params.getReconciliationView = '{!JSENCODE(ReconciliationView)}';
+			
+			/*Variable for checking save and edit permission for the user*/
+			$Params.HasSaveEditPermissions = Boolean({!HasSaveEditPermissions});
+			/*List view URL*/
+			$Params.listViewURL = '{!JSENCODE(ListViewUrl)}';
+
+			$Params.AccountRecordsLimit = {!AccountRecordsLimit};
+			
+		</script>
+	</c:fflib_extBootstrap>
+</apex:page>

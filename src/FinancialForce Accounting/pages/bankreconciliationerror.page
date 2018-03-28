@@ -1,0 +1,13 @@
+<apex:page standardController="c2g__codaBankReconciliation__c" extensions="c2g.CODAHelpLoaderController,c2g.BankReconciliationConfimationController">
+	<apex:stylesheet value="{!URLFOR($Resource.c2g__coda2go,'coda2go/web/css/style.css')}"/>
+    <apex:form >
+        <apex:sectionHeader title="{!ErrorPageTitle}" subtitle="{!c2g__codaBankReconciliation__c.Name}" help="{!redirectForHelp1130}"/>
+        <apex:pageBlock id="mainBlock">
+            <apex:pageMessages />
+            <apex:pageBlockButtons location="bottom">
+                <apex:commandButton action="{!returnFromError}" value="{!$Label.c2g__ok}"/>
+            </apex:pageBlockButtons>
+        </apex:pageBlock>                
+    </apex:form>
+    
+</apex:page>

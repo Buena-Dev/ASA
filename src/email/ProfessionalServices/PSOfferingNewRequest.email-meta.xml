@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>New Event Request for Professional Services @ ASA</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>PS Offering - New Request</name>
+    <style>none</style>
+    <subject>New Event Request: {!Pro_Services_Offering__c.Name} on {!Pro_Services_Offering__c.PS_OfferingTargetDate__c}</subject>
+    <type>text</type>
+</EmailTemplate>

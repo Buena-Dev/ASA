@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>Account</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Account</shortDescription>
+        <value>Account:</value>
+    </labels>
+    <labels>
+        <fullName>AlertPostingJournalSpecialPeriod</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AlertPostingJournalSpecialPeriod</shortDescription>
+        <value>You are posting a document into a special period, click Save and Post if you are sure you want to do it. Note the year end process cannot be run if you post into period 101.</value>
+    </labels>
+    <labels>
+        <fullName>BankAccount</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>BankAccount</shortDescription>
+        <value>Bank Account:</value>
+    </labels>
+    <labels>
+        <fullName>Intercompany</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Intercompany</shortDescription>
+        <value>Intercompany:</value>
+    </labels>
+    <labels>
+        <fullName>Product</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Product</shortDescription>
+        <value>Product:</value>
+    </labels>
+    <labels>
+        <fullName>TaxCode</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TaxCode</shortDescription>
+        <value>Tax Code:</value>
+    </labels>
+</CustomLabels>

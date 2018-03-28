@@ -1,0 +1,17 @@
+<apex:page standardController="c2g__codaBankReconciliationLineItem__c" extensions="c2g.CODAHelpLoaderController,c2g.CODABankReconciliationLineItemExtension" recordSetVar="codaBankReconciliationLineItems">
+	<apex:stylesheet value="{!URLFOR($Resource.c2g__coda2go,'coda2go/web/css/style.css')}"/>
+	<apex:form >
+		<apex:sectionHeader title="{!$Label.c2g__bankreconciliationremovelinesremovebtn}" help="{!redirectForHelp1130}"/>
+		<apex:pageBlock >
+			<apex:pageMessages showDetail="true"/>
+			<apex:pageMessage title="{!$Label.c2g__allocationschedulewarninglabel}" severity="warning" detail="{!confirmMessage}" rendered="{!render}" strength="2"/>
+			
+			<apex:pageBlockButtons location="bottom">
+				<apex:commandButton value="{!$Label.c2g__bankreconciliationremovelinesremovebtn}" action="{!onRemoveSelectedLineItems}" rendered="{!render}"/>
+				<apex:commandButton value="{!$Label.c2g__bankreconciliationremovelinescancelbtn}" action="{!onCancelRemove}" rendered="{!render}"/>
+				<apex:commandButton value="{!$Label.c2g__ok}" action="{!onCancelRemove}" rendered="{!render == false}"/>
+			</apex:pageBlockButtons>
+            
+        	</apex:pageBlock>
+	</apex:form>
+</apex:page>

@@ -1,0 +1,735 @@
+<apex:page standardController="c2g__codaCurrencyRevaluation__c" tabStyle="c2g__codaCurrencyRevaluation__c" extensions="c2g.CODACurrencyRevalController,c2g.CODAHelpLoaderController">
+    <apex:stylesheet value="{!URLFOR($Resource.c2g__front,'front/pages/currency_reval/currency_revaluation.css')}"/>
+    <apex:stylesheet value="{!URLFOR($Resource.c2g__coda2go,'coda2go/web/css/style.css')}"/>
+    <apex:stylesheet value="{!URLFOR($Resource.c2g__front,'front/base/base.css')}"/>
+    
+    <script src="{!URLFOR($Resource.front,'front/base/frameworks/jquery-1.4.2.min.js')}" type="text/javascript"></script>
+    <script src="{!URLFOR($Resource.coda2go,'coda2go/web/script/lib.js')}" type="text/javascript"></script>
+    <script src="{!URLFOR($Resource.front,'front/pages/currency_reval/currency_revaluation.js')}" type="text/javascript"></script>
+	<c:CODALocaleJS />
+    <script>
+		CurrReval = CurrReval || {};
+    
+        CurrReval.controller = {
+	    	specifyDimension : "{!viewState.specifyDimension}",
+	        revalDetailLeval : "{!viewState.revalDetailLeval}",
+	        TRAN_LIMIT			: {!transactionLineLimit}
+	    };
+	    
+	    CurrReval.remoteAction = {
+	    	loadTransDetails	: "{!$RemoteAction.CODACurrencyRevalController.retrieveCurrencyDetail}",
+			saveAction       : "{!$RemoteAction.CODACurrencyRevalController.validateTemplateName}" 
+	    };
+	    
+	    CurrReval.label = {
+	    	loadingTranLines	: "{!$Label.LoadingTranLines}"
+	    };
+	    
+	    $FFDC(document).ready(function(){
+			$FFDC("[id$='dialog-form-wrapper']").hide();
+			$FFDC("[id$='dialog-mask']").hide();
+			$FFDC("[id$='limitMsg']").addClass("tli-msgbox");
+			rerenderDimensions('displayDim', 'dimensionSelect');
+			rerenderAnalysisOptions('analysisType', 'analysisBreakdown');
+			calculateRate();
+		});
+		
+        <apex:repeat value="{!Viewstate.selectedGLAs}" var="gla">
+        	CurrReval.selectedGLAs.push("{!gla}");
+        </apex:repeat>
+        
+    	var CODA2GoBtnSaveValue	= "{!$Label.codaProcessing}";
+    	var CODA2GoButtons = new CODA2GoPage();
+    	var CODA2GoButtonsGeneratePost = new CODA2GoPage();
+    	var CODA2GoButtonsGenerate = new CODA2GoPage();
+	    CODA.documentFunctionTimer("keyup", CODA.executeQueue, 1500);
+	    CODA.documentFunctionTimer("click", CODA.executeQueue, 1500);
+	    
+	    CurrReval.config.toPeriodBalanceSheet = blankValue("{!viewState.ToPeriodBalanceSheet.dto.Period__c}");
+	    CurrReval.config.toPeriodIncomeStatement = blankValue("{!viewState.toPeriodIncomeStatement.dto.Period__c}");
+	    CurrReval.config.fromPeriodBalanceSheet = blankValue("{!viewState.fromPeriodBalanceSheet.dto.Period__c}");
+	    CurrReval.config.fromPeriodIncomeStatement = blankValue("{!viewState.fromPeriodIncomeStatement.dto.Period__c}");
+	    CurrReval.config.reversalPeriodBalanceSheet = blankValue("{!viewState.reversalPeriodBalanceSheet.dto.Period__c}");
+	    CurrReval.config.reversalPeriodIncomeStatement = blankValue("{!viewState.reversalPeriodIncomeStatement.dto.Period__c}");
+	    CurrReval.config.postingPeriodBalanceSheet = blankValue("{!viewState.postingPeriodBalanceSheet.dto.Period__c}");
+	    CurrReval.config.postingPeriodIncomeStatement = blankValue("{!viewState.postingPeriodIncomeStatement.dto.Period__c}");
+	    CurrReval.config.excludeRevalued = {!viewState.excludeRevalued};
+	    CurrReval.config.IsSpecificPeriod = {!viewState.IsSpecificPeriod};
+	    CurrReval.config.homeCurrency = "{!viewState.HomeCurrency}";
+	    CurrReval.config.isIncomeStatement = {!viewState.isIncomeStatement};
+	    CurrReval.config.isBalanceSheet = {!viewState.isBalanceSheet};
+	    CurrReval.config.selectedGLAs = CurrReval.selectedGLAs;
+    </script>
+    
+    <!-- Display the title of Currency Revaluation and show help -->
+    <apex:sectionHeader title="{!$Label.c2g__codarevalwizardtitle}" subtitle="{!$Label.c2g__codarevalwizardstep6title}" help="{!redirectForHelp1150}"/>
+    
+    <!-- Display the form and form elements -->
+    <apex:form onsubmit="if(CODA2GoButtons.disableSaveButtons){ return CODA2GoButtons.disableSaveButtons(); }">
+        <div id="indicator"><img src="{!URLFOR($Resource.coda2go, 'coda2go/web/images/waiting.gif')}" align="absMiddle"/><span id="indicatortext"></span></div>
+        <apex:outputPanel id="messagePanel" layout="block">
+            <apex:pageMessages id="msgs"></apex:pageMessages>
+        </apex:outputPanel>
+        
+        <apex:actionFunction name="validateRate" action="{!validateRates}" oncomplete="CODA.resumeQueueProcessing();CODA.setExpanderIconState('edit');CODA2GoButtons.enableSaveButtons();" reRender="messagePanel"/> 
+        <apex:actionFunction name="getTemplateData" action="{!viewState.showTemplateInformation}" oncomplete="renderTemplateDialog('template-dialog-wrapper');CODA.resumeQueueProcessing();CODA.setExpanderIconState('edit');" rerender="showTemplate"/>
+
+        <apex:pageBlock title="{!$Label.c2g__codarevalwizardstep6title}" mode="edit" >
+            <!-- Display page buttons  -->
+            <apex:pageBlockButtons >
+                <!-- Hidden Buttons -->
+                <apex:commandButton value="{!$Label.c2g__codacurrrevaluationbuttoncancel}" action="{!cancel}" id="cancel_h" styleclass="hiddensubmit" immediate="true" reRender=""/>
+				<apex:commandButton value="{!$Label.c2g__allocationsavetemplate}" onclick="getTemplateData();CODA2GoButtons.enableSaveButtons();" id="saveTemplate_h" styleclass="hiddensubmit" reRender="none" rendered="true"/>
+                <apex:commandButton value="{!$Label.c2g__codacurrrevaluationbuttonprevious}" action="{!previous}" id="previous_h" styleclass="hiddensubmit" immediate="true" reRender=""/>
+                <!-- End of Hidden Buttons -->
+                <apex:commandButton value="{!$Label.c2g__generate}" id="generate" action="{!donothing}" oncomplete="renderDialog({!isPageValid},'dialog-form-wrapper-generate')" rendered="true" rerender="messagePanel"/>
+                <apex:commandButton value="{!$Label.c2g__generateandpost}" id="generateAndPost" action="{!donothing}" oncomplete="renderDialog({!isPageValid},'dialog-form-wrapper')" rendered="true" rerender="messagePanel"/>    
+                <apex:commandButton value="{!$Label.c2g__allocationsavetemplate}" id="saveTemplate" rerender="" onclick="if(!CODA.queing()){document.getElementById('{!$Component.saveTemplate_h}').click()};return false;" rendered="true"/>     
+                <apex:commandButton value="{!$Label.c2g__codacurrrevaluationbuttonprevious}" id="previous" rerender="" onclick="if(!CODA.queing()){document.getElementById('{!$Component.previous_h}').click()};return false;" rendered="true"/>
+                <apex:commandButton value="{!$Label.c2g__codacurrrevaluationbuttoncancel}" id="cancel" rendered="true" rerender="" onclick="if(!CODA.queing()){document.getElementById('{!$Component.cancel_h}').click()};return false;"/>
+                <script>
+                CODA2GoButtons.initButtons(["{!$Component.cancel}","{!$Component.previous}","{!$Component.generate}","{!$Component.generateAndPost}","{!$Component.saveTemplate}"]);
+                </script>
+            </apex:pageBlockButtons>
+            <apex:outputPanel id="mainBlock">
+            </apex:outputPanel>
+            
+            <!-- Section to display Document To Home Values -->
+            
+            <apex:pageBlockSection id="docToHomeSection" title="{!HTMLENCODE($Label.c2g__doctohome)}" columns="1" collapsible="false"> <!-- Main Section Start, Document to home   -->
+                <apex:pageBlockSectionItem >	<!-- Inner Section Start, Document to home -->
+                    <apex:dataTable value="{!viewState.DocumentToHomeRates}" var="rate" styleClass="ffdcTable" id="doc_rates" align="center"> 
+                        
+                        <!-- First column to display checkbox -->
+                        <apex:column style="text-align:center;">
+                            <apex:facet name="header">
+                                <apex:outputPanel >
+                                    <apex:outputLabel value="{!$Label.c2g__codarevalwizardstep6title}"/>
+                                </apex:outputPanel>
+                            </apex:facet>
+                            <apex:inputCheckbox value="{!rate.selected}" styleClass="rateChkBox" id="rateSelectChkBoxDoc2Home" onclick="showHomeRateField(this); validateRate();"/>
+                        </apex:column>
+                        
+                        <!-- Second column to display currencies -->
+                        <apex:column >
+                            <apex:facet name="header"><apex:outputLabel value="{!$Label.c2g__documentcurrencies}"/></apex:facet>
+                            <apex:commandLink value="{!rate.CurrencyPairLabel}" styleClass="curLinks" onclick="invokeTransactionData('{!rate.CurrencyPairLabel}', '{!rate.SourceCurrencyRate}', '{!rate.selected}')" reRender="none"/>
+                        </apex:column>
+                        
+                        <!-- Third column to Enter new Rate -->
+                        <apex:column >
+                            <apex:facet name="header"><apex:outputLabel value="{!$Label.c2g__revalrate}"/></apex:facet>
+                            <apex:outputLabel value="{!rate.SourceCurrencyRate}" id="outTxtHomeDoc" styleClass="calcHomeDoc" rendered="{!rate.isHome}"/>
+                            <apex:inputtext value="{!rate.SourceCurrencyRate}" maxlength="19" id="txtHomeDoc" styleClass="calcHomeDoc" disabled="{!!rate.selected}" rendered="{!!rate.isHome}" onkeypress="return validateExchangeRate(event)"/>
+                            <script>
+                            $FFDC("[id='{!$Component.rateSelectChkBoxDoc2Home}']").ready(function(){
+                            	if(!$FFDC("[id='{!$Component.rateSelectChkBoxDoc2Home}']"))
+                                	$FFDC("[id='{!$Component.txtHomeDoc}']")[0].disabled = !$FFDC("[id='{!$Component.rateSelectChkBoxDoc2Home}']")[0].checked;
+                                if(!$FFDC("[id='{!$Component.rateSelectChkBoxDoc2Home}']")[0].checked)
+                                	$FFDC("[id='{!$Component.txtHomeDoc}']")[0].setAttribute("style", "background-color: #E6E6E6");
+                            });
+                            CODA.addQueuedOnBlurEvent(null, "{!$Component.txtHomeDoc}", "{!$Label.ValidatingExchangeRate}", validateRate);
+                            </script>
+                        </apex:column>
+                        
+                        <!-- Fourth column to display original Exchange Rate -->
+                        <apex:column >
+                            <apex:facet name="header"><apex:outputLabel value="{!$Label.c2g__latestexchangerate}"/></apex:facet>
+                            <apex:outputLabel value="{!rate.SourceOriginalCurrencyRate}" id="txtCurrentRate" styleClass="calcHomeDoc"/>
+                        </apex:column>
+                        
+                        <!-- Fifth column to display new Rate Conversion -->
+                        <apex:column style="width:210px;">
+                            <apex:facet name="header"><apex:outputLabel value="{!$Label.c2g__codacurrencyrevaluationconversion}"/></apex:facet>
+                            <span>1 {!rate.SourceCurrencyCode} = <b><span class="calculation">{!rate.ConvertedRate}</span></b> {!rate.homeCurrencyCode}</span>
+                        </apex:column>
+                        
+                    </apex:dataTable>
+                </apex:pageBlockSectionItem>	<!-- Inner Section End, Document to home -->	
+            </apex:pageBlockSection>	<!-- Main Section End, Document to home   -->
+            
+            <!-- Section to display Home To Dual Values -->
+            
+            <apex:pageBlockSection id="homeToDualSection" title="{!HTMLENCODE($Label.c2g__hometodual)}" columns="1" collapsible="false">
+                <apex:pageBlockSectionItem >
+                    <apex:dataTable value="{!viewState.HomeToDualRates}" var="rate" rowClasses="odd,even" styleClass="ffdcTable" align="center">
+                        
+                        <!-- First column to display checkbox -->
+                        <apex:column style="text-align:center;">
+                            <apex:facet name="header">
+                                <apex:outputPanel >
+                                    <apex:outputLabel value="{!$Label.c2g__codarevalwizardstep6title}"/>
+                                </apex:outputPanel>
+                            </apex:facet>
+                            <apex:inputCheckbox value="{!rate.selected}" styleClass="rateChkBox" id="rateSelectChkBoxHome2Dual" onclick="showHomeRateField(this); validateRate();"/>
+                        </apex:column>
+                        
+                        <!-- Second column to display currencies -->
+                        <apex:column >
+                        	<div style="width:115px">
+	                            <apex:facet name="header"><apex:outputLabel value="{!$Label.c2g__codarevalwizarddualcurrency}"/></apex:facet>
+	                            <apex:outputLabel value="{!rate.homeCurrencyCode}" id="txtHomeLabel" styleClass="calcHomeDoc"/>
+                            </div>
+                        </apex:column>
+                        
+                        <!-- Third column to Enter new Rate -->
+                        <apex:column >
+                            <apex:facet name="header"><apex:outputLabel value="{!$Label.c2g__revalrate}"/></apex:facet>
+                            <apex:outputLabel value="{!rate.SourceCurrencyRate}" id="outTxtHomeDoc" styleClass="calcHomeDoc" rendered="{!rate.isHome}"/>
+                            <apex:inputtext value="{!rate.SourceCurrencyRate}" maxlength="19" id="txtHomeDoc" styleClass="calcHomeDoc" disabled="{!rate.disableRate}" rendered="{!!rate.isHome}" onkeypress="return validateExchangeRate(event)"/>
+                        	<script>
+                            	$FFDC("[id='{!$Component.rateSelectChkBoxHome2Dual}']").ready(function(){
+                            		if(!$FFDC("[id='{!$Component.rateSelectChkBoxHome2Dual}']"))
+                                    	$FFDC("[id='{!$Component.txtHomeDoc}']")[0].disabled = !$FFDC("[id='{!$Component.rateSelectChkBoxHome2Dual}']")[0].checked;
+                                    if(!$FFDC("[id='{!$Component.rateSelectChkBoxHome2Dual}']")[0].checked)
+                                		$FFDC("[id='{!$Component.txtHomeDoc}']")[0].setAttribute("style", "background-color: #E6E6E6");
+                                });
+                            	CODA.addQueuedOnBlurEvent(null, "{!$Component.txtHomeDoc}", "{!$Label.ValidatingExchangeRate}", validateRate);
+                            </script>
+                        </apex:column>
+                        
+                        <!-- Fourth column to display original Exchange Rate -->
+                        <apex:column >
+                            <apex:facet name="header"><apex:outputLabel value="{!$Label.c2g__latestexchangerate}"/></apex:facet>
+                            <apex:outputLabel value="{!rate.SourceOriginalCurrencyRate}" id="txtCurrentRate" styleClass="calcHomeDoc"/>
+                        </apex:column>
+                        
+                        <!-- Fifth column to display new Rate Conversion -->
+                        <apex:column style="width:210px;">
+                            <apex:facet name="header"><apex:outputLabel value="{!$Label.c2g__codacurrencyrevaluationconversion}"/></apex:facet>
+                            <span>1 {!rate.homeCurrencyCode} = <b><span class="calculation">{!rate.ConvertedRate}</span></b> {!rate.sourceCurrencyCode}</span>
+                        </apex:column>
+                    </apex:dataTable>
+                </apex:pageBlockSectionItem>
+            </apex:pageBlockSection>
+            
+            <!-- Analysis section -->
+            <div class="analysis-section">
+            <apex:pageBlockSection title="{!$Label.c2g__codarevalwizardanalysis}" columns="1" collapsible="false" >
+                <apex:pageBlockSectionItem >
+                    <apex:outputPanel styleClass="fieldLevelHelp" style="text-align:left;">
+                        <apex:outputLabel value="{!$Label.c2g__codarevalwizardgainslosses}" for="GLAinput" />
+                    </apex:outputPanel>
+                    <apex:inputField value="{!viewState.GLA.dto.c2g__GeneralLedgerAccount__c}" id="GLAinput"/>
+                </apex:pageBlockSectionItem>
+            </apex:pageBlockSection>
+            </div>
+            <div class="borderDiv">
+            	<apex:pageBlockSection columns="1">
+                    <apex:pageBlockSectionItem >
+                        <apex:outputPanel styleClass="fieldLevelHelp" style="text-align:left;">
+                            <apex:outputLabel value="{!$Label.c2g__codarevalwizarddimensionanalysis}" for="DimensionAnalysisSelect" />
+                        </apex:outputPanel>
+                        <apex:outputPanel styleClass="fieldLevelHelp">
+                            <div class="displayRadio" id="displayDim">
+                                <apex:selectRadio value="{!viewState.dimAnalysisType}" id="DimensionAnalysisSelect" required="true" onchange="rerenderDimensions('displayDim', 'dimensionSelect')">
+                                    <apex:selectOptions value="{!viewState.dimAnalysisTypeItems}"/>
+                                </apex:selectRadio>
+                            </div>
+                        </apex:outputPanel>
+                    </apex:pageBlockSectionItem>
+            	</apex:pageBlockSection>
+            </div>
+            <apex:outputLabel styleClass="dimClass" id="dimensionSelect">
+                <div class="dimData">
+                    <apex:pageBlockSection columns="2">
+                        <apex:pageBlockSectionItem >
+                            <apex:outputLabel value="{!$Label.c2g__codarevalwizarddimensionanalysis1}" for="dim1" />
+                            <apex:inputField value="{!viewState.Dimension1.dto.c2g__Dimension1__c}" id="dim1" styleClass="dimension"/>
+                        </apex:pageBlockSectionItem>
+                        
+                        <apex:pageBlockSectionItem >
+                            <apex:outputLabel value="{!$Label.c2g__codarevalwizarddimensionanalysis2}" for="dim2" />
+                            <apex:inputField value="{!viewState.Dimension2.dto.c2g__Dimension2__c}" id="dim2" styleClass="dimension"/>
+                        </apex:pageBlockSectionItem>
+                        
+                        <apex:pageBlockSectionItem >
+                            <apex:outputLabel value="{!$Label.c2g__codarevalwizarddimensionanalysis3}" for="dim3" />
+                            <apex:inputField value="{!viewState.Dimension3.dto.c2g__Dimension3__c}" id="dim3" styleClass="dimension"/>
+                        </apex:pageBlockSectionItem>
+                        
+                        <apex:pageBlockSectionItem >
+                            <apex:outputLabel value="{!$Label.c2g__codarevalwizarddimensionanalysis4}" for="dim4" />
+                            <apex:inputField value="{!viewState.Dimension4.dto.c2g__Dimension4__c}" id="dim4" styleClass="dimension"/>
+                        </apex:pageBlockSectionItem>
+                    </apex:pageBlockSection>
+                </div>
+            </apex:outputLabel>
+            <div class="borderDivs">
+                <apex:pageBlockSection columns="1">
+                    <apex:pageBlockSectionItem >
+                        <apex:outputPanel styleClass="fieldLevelHelp" style="text-align:left;">
+                            <apex:outputLabel value="{!$Label.c2g__summarydetailanalysistype}" for="GroupLevelSelect" />
+                        </apex:outputPanel>
+                        <apex:outputPanel styleClass="fieldLevelHelp">
+                            <div>
+                                <div id="analysisType" class="analysisType">
+                                    <div class="displayRadio">
+                                        <apex:selectRadio value="{!viewState.groupingLevel}" id="GroupLevelSelect" required="true" onchange="rerenderAnalysisOptions('analysisType', 'analysisBreakdown');">
+                                            <apex:selectOptions value="{!viewState.groupingLevelItems}"/>
+                                        </apex:selectRadio>
+                                    </div>
+                                </div>
+                                <div id="analysisBreakdown" class="analysisBreakdown">
+                                    <apex:outputLabel >
+                                        <apex:selectList id="chooseAnalysis" value="{!viewState.analysisBreakdown}" size="1">
+                                            <apex:selectOptions value="{!viewState.AnalysisBreakdownOptions}"/>
+                                        </apex:selectList>
+                                    </apex:outputLabel>
+                                    
+                                </div>
+                                <div style="clear:both">
+                                    
+                                </div>
+                            </div>
+                        </apex:outputPanel> 
+                    </apex:pageBlockSectionItem>
+                </apex:pageBlockSection>
+                <div class="schedular-section">
+		            <apex:pageBlockSection title="{!$Label.c2g__currencyrevalschedulartitle}" columns="1" collapsible="false" >
+		                <apex:pageBlockSectionItem >
+		                    <apex:outputPanel styleClass="fieldLevelHelp" style="text-align:left;">
+		                        <apex:outputLabel value="{!$Label.c2g__scheduleat}" for="scheduledTime" />
+		                    </apex:outputPanel>
+		                    <apex:inputField value="{!viewState.revalDto.c2g__ScheduledTime__c}" id="scheduledTime"/>
+		                </apex:pageBlockSectionItem>
+		            </apex:pageBlockSection>
+                </div>
+            </div>
+        </apex:pageBlock>
+    </apex:form>
+    <!-- code to display dialog box -->
+    
+    <div id='dialog-form-wrapper' class="currr-reval-mask" style="display:none;">
+        <div id="dialog-form" style=" height: 136px; width: 580px;">
+           <apex:form onsubmit="if(CODA2GoButtonsGeneratePost.disableSaveButtons){ return CODA2GoButtonsGeneratePost.disableSaveButtons(); }">
+                <apex:pageBlock mode="maindetail">
+                    <apex:pageBlockButtons location="bottom" styleClass="button-div">
+                        <!-- Hidden Buttons -->
+                        <apex:commandButton value="{!$Label.c2g__generateandpost}" action="{!postNow}" id="postNow_h" styleclass="hiddensubmit"/>
+                        <!-- End of Hidden Buttons -->
+                        <apex:commandButton value="{!$Label.c2g__codapageinvoiceamendcancel}" id="cancel" rerender="mainBlock" onclick="hideDialog('dialog-form-wrapper');" oncomplete="CODA2GoButtonsGeneratePost.enableSaveButtons();" rendered="true"/>
+                        <apex:commandButton value="{!$Label.c2g__generateandpost}" id="postNow" reRender="messages" onclick="document.getElementById('{!$Component.postNow_h}').click();return false;" rendered="true" oncomplete="hideDialog('dialog-form-wrapper');"/>
+                    	<script>
+			                CODA2GoButtonsGeneratePost.initButtons(["{!$Component.cancel}","{!$Component.postNow}"]);
+		                </script>
+                    </apex:pageBlockButtons>
+                    <div class='revaluate-div'>
+                        <b><apex:outputLabel value="{!$Label.c2g__revaluation} : {!$Label.c2g__generateandpost}"/> </b>
+                    </div>
+                    <div class='table-details-panel'>
+                        <div class='revaluate-divs'>
+                        	<apex:outputLabel value="{!$Label.c2g__currencyrevaldescription}" for="groupName"/>                            
+                    	</div>
+                        <div class='revaluate-text'>
+                            <apex:inputText value="{!viewState.GroupName}" id="groupName" maxlength="{!viewState.groupNameMaxLength}" style="width: 315px;"/>
+                        </div><br/>
+                        <div class="revaluate-divs" style="margin-top: 20px; position: absolute;">
+                            <apex:outputLabel value="{!$Label.c2g__codacurrencyrevaluationignoreunusedcurrencies}" for="ignoreUnusedCurrencies"/>
+                        </div>
+                        <div class='revaluate-text' style="margin-top: 18px; position: absolute; margin-left: 250px;">    
+                        	<apex:inputCheckbox value="{!ViewState.IgnoreUnusedCurrencies}" id="ignoreUnusedCurrencies" disabled="{!viewState.disableIngoreUnusedCurrency}"/> 
+                        </div>
+                        <div class="revaluate-none" style="margin-top: 12px;">
+                            
+                        </div>
+                    </div>
+                </apex:pageBlock>
+            </apex:form>
+        </div>
+    </div>
+    
+    <!-- Popup on the click of Generate button -->
+    <div id='dialog-form-wrapper-generate' class="currr-reval-mask" style="display:none;">
+        <div class='overlay'>
+        </div>
+        <div id="dialog-form" style="height: 136px; width: 580px;">
+            <apex:form onsubmit="if(CODA2GoButtonsGenerate.disableSaveButtons){ return CODA2GoButtonsGenerate.disableSaveButtons(); }">
+                <apex:pageBlock mode="maindetail">
+                    <apex:pageBlockButtons location="bottom" styleClass="button-div">
+                        <!-- Hidden Buttons -->
+                        <apex:commandButton value="{!$Label.c2g__generate}" action="{!generate}" id="generate_h" styleclass="hiddensubmit"/>
+                        <!-- End of Hidden Buttons -->
+                        <apex:commandButton value="{!$Label.c2g__codapageinvoiceamendcancel}" id="cancel" rerender="mainBlock" onclick="hideDialog('dialog-form-wrapper-generate')" oncomplete="CODA2GoButtonsGenerate.enableSaveButtons();" rendered="true"/>
+                        <apex:commandButton value="{!$Label.c2g__generate}" id="generate" reRender="messages" onclick="document.getElementById('{!$Component.generate_h}').click();return false;" rendered="true" oncomplete="hideDialog('dialog-form-wrapper-generate');"/>
+                    	<script>
+			                CODA2GoButtonsGenerate.initButtons(["{!$Component.cancel}","{!$Component.generate}"]);
+		                </script>
+                    </apex:pageBlockButtons>
+                    <div class='revaluate-div'>
+                        <b><apex:outputLabel value="{!$Label.c2g__revaluation} : {!$Label.c2g__generate}"/> </b>
+                    </div>
+                    <div class='table-details-panel'>
+                        <div class='revaluate-divs'>
+                        	<apex:outputLabel value="{!$Label.c2g__currencyrevaldescription}" for="groupName"/>                            
+                    	</div>
+                        <div class='revaluate-text'>
+                            <apex:inputText value="{!viewState.GroupName}" id="groupName" maxlength="{!viewState.groupNameMaxLength}" style="width: 315px;"/>
+                        </div><br/>
+                        <div class="revaluate-divs" style="margin-top: 20px; position: absolute;">
+                            <apex:outputLabel value="{!$Label.c2g__codacurrencyrevaluationignoreunusedcurrencies}" for="ignoreUnusedCurrencies"/>
+                        </div>
+                        <div class='revaluate-text' style="margin-top: 18px; position: absolute; margin-left: 250px;">   
+                        	<apex:inputCheckbox value="{!ViewState.IgnoreUnusedCurrencies}" id="ignoreUnusedCurrencies" disabled="{!viewState.disableIngoreUnusedCurrency}"/> 
+                        </div>
+                        <div class="revaluate-none" style="margin-top: 12px;">
+                            
+                        </div>
+                    </div>
+                </apex:pageBlock>
+            </apex:form>
+        </div>
+    </div>
+    <div id="showTrans">
+	    <div id="dialog-mask" class="currr-reval-mask" style="display:none">
+		    <div id="dialog-transactions">
+		    	<!-- Transaction details template -->
+	            <apex:form target="_blank">
+            		<input type="hidden" id="currencyValue" name="currencyValue" value=""/>
+            		<input type="hidden" id="documentCurrencyRate" name="documentCurrencyRate" value=""/>
+            		<input type="hidden" id="hasRateSelected" name="hasRateSelected" value=""/>
+            		<input type="hidden" id="reportType" name="reportType" value=""/>
+                    <apex:actionFunction name="generateReport" action="{!generateReport}"/>
+                    <apex:pageMessage id="limitMsg" summary="{!transactionLineLimitMessage}" severity="info" strength="3"/>	            	
+	                <apex:pageBlock mode="maindetail">
+	                    <apex:pageBlockButtons location="bottom" styleClass="button-div tran-popup-buttonpanel">
+	                        <!-- Hidden Buttons -->
+	                        <apex:commandButton value="{!$Label.c2g__groupstructurecompanypopupclose}" action="{!doNothing}" id="cancel_h" styleclass="hiddensubmit" immediate="true" rendered="true" oncomplete="CODA2GoButtons.enableSaveButtons()"/>
+	                        <!-- End of Hidden Buttons -->
+	                        <apex:commandButton value="{!$Label.c2g__groupstructurecompanypopupclose}" id="cancel" rerender="mainBlock" onclick="hideTransDialog('dialog-mask')" rendered="true"/>
+                            <apex:commandButton id="exportReportBtn" onblur="hideExportMenu();" onclick="showExportMenu(); return false;" value="{!$Label.c2g__crvreportingexportaslabel}"/>
+                            <div class="export-menu" id="exportMenu">
+                                <div onmousedown="exportReport('csv')">{!$Label.DataExportAsCSV}</div>
+                                <div onmousedown="exportReport('xls')">{!$Label.DataExportAsExcel}</div>
+                                <div onmousedown="exportReport('pdf')">{!$Label.DataExportAsPDF}</div>
+                            </div>
+	                    </apex:pageBlockButtons>
+	                    <div class='revaluate-div'>
+	                        <b>{!$Label.TransactionLinesFound}&nbsp;<span id="noOfTranlines"></span></b>
+	                    </div>
+                    	<div class="transTableDisplays">
+			                    <apex:pageBlockTable value="{!viewState.TransData}" id="transDetailTable" var="tran"  styleClass="ffdcTable" align="center" style="border:1px solid lightGray; width:100%; border-top:none;"> 
+			                        <apex:column style="width:99px;text-align:center">
+			                        	<apex:facet name="header">
+			                                <apex:outputPanel >
+			                                    <apex:outputLabel value="{!$ObjectType.c2g__codaTransaction__c.fields.c2g__Period__c.label}"/>
+			                                </apex:outputPanel>
+			                            </apex:facet>
+			                            <apex:outputLabel value="{!tran.period}"></apex:outputLabel>
+			                        </apex:column>
+			                        <apex:column style="width:99px;text-align:center">
+			                        	<apex:facet name="header">
+			                                <apex:outputPanel >
+			                                    <apex:outputLabel value="{!$ObjectType.c2g__codaTransaction__c.fields.c2g__DocumentNumber__c.label}"/>
+			                                </apex:outputPanel>
+			                            </apex:facet>
+			                            <apex:outputLabel value="{!tran.documentNumber}"></apex:outputLabel>
+			                        </apex:column>
+			                        <apex:column style="width:99px;text-align:center">
+			                        	 <apex:facet name="header">
+			                                <apex:outputPanel >
+			                                    <apex:outputLabel value="{!$ObjectType.c2g__codaTransactionLineItem__c.fields.Name.label}"/>
+			                                </apex:outputPanel>
+			                            </apex:facet>
+			                            <apex:outputLabel value="{!tran.lineItemId}"></apex:outputLabel>
+			                        </apex:column>
+			                        <apex:column style="width:200px;text-align:left">
+			                        	 <apex:facet name="header">
+			                                <apex:outputPanel >
+			                                    <apex:outputLabel value="{!$ObjectType.c2g__codaTransaction__c.fields.c2g__DocumentDescription__c.label}"/>
+			                                </apex:outputPanel>
+			                            </apex:facet>
+			                           <apex:outputLabel value="{!tran.documentDescription}"></apex:outputLabel>
+			                        </apex:column>
+			                        <apex:column style="width:99px;text-align:center">
+			                        	<apex:facet name="header">
+			                                <apex:outputPanel >
+			                                    <apex:outputLabel value="{!$ObjectType.c2g__codaTransactionLineItem__c.fields.c2g__DocumentCurrency__c.label}"/>
+			                                </apex:outputPanel>
+			                            </apex:facet>
+			                           <apex:outputLabel value="{!tran.documentCurrency}"></apex:outputLabel>
+			                        </apex:column>
+			                        <apex:column style="width:99px;text-align:right">
+			                        	<apex:facet name="header">
+			                                <apex:outputPanel >
+			                                    <apex:outputLabel value="{!$ObjectType.c2g__codaTransactionLineItem__c.fields.c2g__DocumentValue__c.label}"/>
+			                                </apex:outputPanel>
+			                            </apex:facet>
+			                            <apex:outputLabel value="{!tran.documentValue}"></apex:outputLabel>
+			                        </apex:column>
+			                        <apex:column style="width:99px;text-align:right">
+			                        	<apex:facet name="header">
+			                                <apex:outputPanel >
+			                                    <apex:outputLabel value="{!$ObjectType.c2g__codaTransactionLineItem__c.fields.c2g__HomeValue__c.label}"/>
+			                                </apex:outputPanel>
+			                            </apex:facet>
+			                            <apex:outputLabel value="{!tran.homeValue}"></apex:outputLabel>
+			                        </apex:column>
+			                        <apex:column style="width:100px;text-align:right">
+			                        	<apex:facet name="header">
+			                                <apex:outputPanel >
+			                                    <apex:outputLabel value="{!$ObjectType.c2g__codaTransactionLineItem__c.fields.c2g__DualValue__c.label}"/>
+			                                </apex:outputPanel>
+			                            </apex:facet>
+			                            <apex:outputLabel value="{!tran.dualValue}"></apex:outputLabel>
+			                        </apex:column>
+			                    </apex:pageBlockTable>
+		                    </div>
+	                </apex:pageBlock>
+	            </apex:form>
+	        </div>
+       	</div>
+    </div>
+    <apex:outputPanel id="showTemplate">
+       <div id='template-dialog-wrapper' style="display:none" class="currr-reval-mask">
+           <div id="dialog-form">
+                <apex:form >
+                    <apex:actionFunction name="saveTemplateDetails" action="{!viewState.insertTemplateDetails}" rerender="none">
+                        <apex:param name="isTemplateUpdate" value=""/>
+                    </apex:actionFunction>
+                    
+                    <apex:pageBlock mode="maindetail">
+                        <apex:pageBlockButtons location="bottom" styleClass="button-div">
+                            <!-- Hidden Buttons -->
+                            <apex:commandButton value="{!$Label.c2g__cancel}" id="cancel_h" styleclass="hiddensubmit" rendered="true" oncomplete="CODA2GoButtons.enableSaveButtons()"/>
+                            <apex:commandButton value="{!$Label.c2g__save}" id="save_h" styleclass="hiddensubmit" rendered="true" oncomplete="CODA2GoButtons.enableSaveButtons()"/>
+                            <!-- End of Hidden Buttons -->
+                            <apex:commandButton value="{!$Label.c2g__cancel}" id="cancel" rerender="none" onclick="hideTemplateDialog('template-dialog-wrapper')" rendered="true"/>
+                            <apex:commandButton value="{!$Label.c2g__save}" id="save" rerender="none" onclick="saveTemplateInformation(); return false;" rendered="true"/>
+                        </apex:pageBlockButtons>
+                        <div class='revaluate-div'>
+                            <b><apex:outputLabel value="{!$Label.c2g__allocationsavetemplate}"/></b>
+                        </div> 
+                        <div class='criteria-main-block'>
+                            <div class='template-criteria'>
+                                <apex:outputLabel value="{!$Label.c2g__criteria}"></apex:outputLabel>
+                            </div>
+                            <div>
+                                <div class="rowSelectorGLA">
+                                    <div class="FirstRow">
+                                        <div class="leftRow">
+                                            <apex:outputLabel value="{!$Label.c2g__codarevalwizardrevaluationtype}"></apex:outputLabel>
+                                        </div>
+                                        <div class="rightRow">
+                                            <apex:outputLabel value="{! viewState.revaluationType}" escape="false"></apex:outputLabel>
+                                        </div>
+                                        <div style="clear:both"> </div>
+                                    </div>
+                                    <div class="SecondRow">
+                                        <div class="leftRow">
+                                        </div>
+                                        <div class="rightRow">
+                                            <apex:inputTextarea disabled="true" value="{! viewState.selectedGLAsName}" cols="25" rows="3" rendered="{! len(viewState.selectedGLAsName) > 0}"></apex:inputTextarea>
+                                        </div>
+                                        <div style="clear:both"> </div>
+                                    </div>
+                                </div>
+                                <div class="div-horizontal">
+                        		</div>
+                                
+                                <!-- section to display Lines Already Revalued -->
+                                <div class="rowSelector">
+                                    <div class="leftRow">
+                                        <apex:outputLabel value="{!$Label.c2g__linesalreadyrevalued}"></apex:outputLabel>
+                                    </div>
+                                    <div class="rightRow">
+                                        <apex:outputLabel value="{!viewState.linesAlreadyRevalued}"></apex:outputLabel>
+                                    </div>
+                                    <div style="clear:both"> </div>
+                                </div>
+                                
+                                <!-- section to display Ignore Unused Currency -->
+                                <div class="rowSelector">
+                                    <div class="leftRow">
+                                        <apex:outputLabel value="{!$Label.c2g__codacurrencyrevaluationignoreunusedcurrencies}"></apex:outputLabel>
+                                    </div>
+                                    <div class="rightRow">
+                                        <apex:outputLabel value="- {!IF(viewState.IgnoreUnusedCurrencies == true, $Label.c2g__filterbooleantrue, $Label.c2g__filterbooleanfalse)}"></apex:outputLabel>
+                                    </div>
+                                    <div style="clear:both"> </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Template Analysis Section -->
+                        <div class='analysis-main-block'>
+                            <div class='template-analysis'>
+                                <apex:outputLabel value="{!$Label.c2g__codaanalysis}"></apex:outputLabel>
+                            </div>
+                            <div>
+                                <div class="rowSelector">
+                                    <div class="leftRow">
+                                        <apex:outputLabel value="{!$Label.c2g__codarevalwizardgainslosses}"></apex:outputLabel>
+                                    </div>
+                                    <div class="rightRow">
+                                        <apex:outputLabel value="{!viewState.unrealizedGLA}"></apex:outputLabel>
+                                    </div>
+                                    <div style="clear:both"> </div>
+                                </div>
+                                
+                                <!-- section to display Dimension Analysis -->
+                                <div class="rowSelector">
+                                    <div class="testRow1">
+                                        <div class="leftRow">
+                                            <apex:outputLabel value="{!$Label.c2g__codarevalwizarddimensionanalysis}"></apex:outputLabel>
+                                        </div>
+                                        <div class="rightRow">
+                                            <apex:outputLabel value="{!viewState.dimensionAnalysisValue}"></apex:outputLabel>
+                                        </div>
+                                        <div style="clear:both"> </div>
+                                    </div>
+                                    <div class="testRow2">
+                                        <div class="leftRow">
+                                        </div>
+                                        <div class="rightRow">
+                                            <apex:outputLabel value="{!viewState.dimensionValues}" escape="false" rendered="{!len(viewState.dimensionValues) > 0}"></apex:outputLabel>
+                                        </div>
+                                        <div style="clear:both"> </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- section to display Detail Analysis -->
+                                <div class="rowSelector">
+                                    <div class="firstRow">
+                                        <div class="leftRow">
+                                            <apex:outputLabel value="{!$Label.c2g__summarydetailanalysistype}"></apex:outputLabel>
+                                        </div>
+                                        <div class="rightRow">
+                                            <apex:outputLabel value="{!viewState.summaryValue}"></apex:outputLabel>
+                                        </div>
+                                        <div style="clear:both"> </div>
+                                    </div>
+                                    <div class="secondRow">
+                                        <div class="leftRow">
+                                        </div>
+                                        <div class="rightRow">
+                                            <apex:outputLabel value="{!viewState.analysisValue}"></apex:outputLabel>
+                                        </div>
+                                        <div style="clear:both"> </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Template Save Section -->
+                        <div class='save-main-block'>
+                            <div class='template-save'>
+                                <apex:outputLabel value="{!$Label.c2g__saveas}"></apex:outputLabel>
+                            </div>
+                            <div class='template-name-title'>
+                                <apex:outputLabel value="{!$Label.c2g__templatename}"></apex:outputLabel>
+                            </div>
+                            <div>
+                                <apex:inputText styleClass="template-name" id="templateNames" value="{!viewState.templateName}" maxlength="80"></apex:inputText>
+                            </div>
+                        </div>
+                    </apex:pageBlock>
+                </apex:form>
+           </div> 
+        </div>
+    </apex:outputPanel>
+    
+    <!-- Custom Dialog box, display when Unrealized Gains/Losses GLA is blank -->
+    <div id='alert-dialog-wrapper-GLA' style="display:none" class="currr-reval-mask">
+        <div id="alert-dialog">
+            <apex:form >
+                <apex:pageBlock mode="mainDetail">
+                    <apex:pageBlockButtons location="bottom" styleClass="button-div">
+                        <!-- Hidden Buttons -->
+                        <apex:commandButton value="{!$Label.c2g__dataviewok}" id="ok_h" styleclass="hiddensubmit" rendered="true" oncomplete="CODA2GoButtons.enableSaveButtons()"/>
+                        <!-- End of Hidden Buttons -->
+                        <apex:commandButton value="{!$Label.c2g__dataviewok}" id="ok" rerender="none" onclick="hideTemplateDialog('alert-dialog-wrapper-GLA')" rendered="true" styleClass="templateBtn"/>
+                    </apex:pageBlockButtons>
+                    <apex:pageMessage summary="{!$Label.c2g__error}" detail="{!$Label.c2g__unrealizedgainlossesglafieldrequiredvalidation}" severity="error" strength="3"/>
+                </apex:pageBlock>
+            </apex:form>
+        </div> 
+    </div>
+    
+    <!-- Custom Dialog box, display when Dimensions are blank on Specify Dimension option -->
+    <div id='alert-dialog-wrapper-Dimension' style="display:none" class="currr-reval-mask">
+        <div id="alert-dialog">
+            <apex:form >
+                <apex:pageBlock mode="mainDetail">
+                    <apex:pageBlockButtons location="bottom" styleClass="button-div">
+                        <!-- Hidden Buttons -->
+                        <apex:commandButton value="{!$Label.c2g__dataviewok}" id="ok_h" styleclass="hiddensubmit" rendered="true" oncomplete="CODA2GoButtons.enableSaveButtons()"/>
+                        <!-- End of Hidden Buttons -->
+                        <apex:commandButton value="{!$Label.c2g__dataviewok}" id="ok" rerender="none" onclick="hideTemplateDialog('alert-dialog-wrapper-Dimension')" rendered="true" styleClass="templateBtn"/>
+                    </apex:pageBlockButtons>
+                    <apex:pageMessage summary="{!$Label.c2g__error}" detail="{!$Label.c2g__dimensionshouldnotblank}" severity="error" strength="3"/>
+                </apex:pageBlock>
+            </apex:form>
+        </div> 
+    </div>
+    
+    <!-- Custom Dialog box, display when Template name is blank -->
+    <div id='alert-dialog-wrapper-TemplateName' style="display:none" class="currr-reval-mask">
+        <div id="alert-dialog">
+            <apex:form >
+                <apex:pageBlock mode="mainDetail">
+                    <apex:pageBlockButtons location="bottom" styleClass="button-div">
+                        <!-- Hidden Buttons -->
+                        <apex:commandButton value="{!$Label.c2g__dataviewok}" id="ok_h" styleclass="hiddensubmit" rendered="true" oncomplete="CODA2GoButtons.enableSaveButtons()"/>
+                        <!-- End of Hidden Buttons -->
+                        <apex:commandButton value="{!$Label.c2g__dataviewok}" id="ok" rerender="none" onclick="toggleTemplateDialog('alert-dialog-wrapper-TemplateName', 'template-dialog-wrapper')" rendered="true" styleClass="templateBtn"/>
+                    </apex:pageBlockButtons>
+                    <apex:pageMessage summary="{!$Label.c2g__error}" detail="{!$Label.c2g__currencyrevaluationtemplatenotblank}" severity="error" strength="3"/>
+                </apex:pageBlock>
+            </apex:form>
+        </div> 
+    </div>
+    
+    <!-- Custom Confirm Dialog box, display when Duplicate name is need to save -->
+    <div id='confirm-dialog-wrapper' style="display:none" class="currr-reval-mask">
+        <div id="alert-dialog">
+            <apex:form >
+                <apex:pageBlock mode="mainDetail">
+                    <apex:pageBlockButtons location="bottom" styleClass="button-div">
+                        <!-- Hidden Buttons -->
+                        <apex:commandButton value="{!$Label.c2g__dataviewok}" id="ok_h" styleclass="hiddensubmit" rendered="true" oncomplete="CODA2GoButtons.enableSaveButtons()"/>
+                        <apex:commandButton value="{!$Label.c2g__cancel}" id="cancel_h" styleclass="hiddensubmit" rendered="true" oncomplete="CODA2GoButtons.enableSaveButtons()"/>
+                        <!-- End of Hidden Buttons -->
+                        <apex:commandButton value="{!$Label.c2g__dataviewok}" id="ok" rerender="none" onclick="saveInfo('confirm-dialog-wrapper','alert-dialog-wrapper-update');" rendered="true" styleClass="templateBtn"/>
+                    	<apex:commandButton value="{!$Label.c2g__cancel}" id="cancel" rerender="none" onclick="toggleTemplateDialog('confirm-dialog-wrapper','template-dialog-wrapper')" rendered="true"/>
+                    </apex:pageBlockButtons>
+                    <apex:pageMessage summary="{!$Label.c2g__dataviewwarning}" detail="{!$Label.c2g__templatealreadyexist}" severity="warning" strength="3"/>
+                </apex:pageBlock>
+            </apex:form>
+        </div> 
+    </div>
+    
+	<!-- Custom Success box, display when template save successfully  -->
+	<div id='alert-dialog-wrapper-success' style="display:none" class="currr-reval-mask">    
+	    <div id="alert-dialog">
+	    	<apex:form >
+		      	<apex:pageBlock mode="mainDetail">
+		      		<apex:pageBlockButtons location="bottom" styleClass="button-div">
+		            	<!-- Hidden Buttons -->
+		                <apex:commandButton value="{!$Label.c2g__dataviewok}" id="ok_h" styleclass="hiddensubmit" rendered="true" oncomplete="CODA2GoButtons.enableSaveButtons()"/>
+		                <!-- End of Hidden Buttons -->
+		               <apex:commandButton value="{!$Label.c2g__dataviewok}" id="ok" rerender="none" onclick="hideTemplateDialog('alert-dialog-wrapper-success')" rendered="true" styleClass="templateBtn"/>
+		            </apex:pageBlockButtons>
+		   			<apex:pageMessage summary="{!$Label.c2g__success}" detail="{!$Label.c2g__currencyrevaluationtemplatesavesuccess}" severity="confirm" strength="3"/>
+		    	</apex:pageBlock>
+	    	</apex:form>
+	    </div>
+    </div>
+    
+    <!-- Custom Success box, display when template update successfully  -->
+    <div id='alert-dialog-wrapper-update' style="display:none" class="currr-reval-mask">    
+	    <div id="alert-dialog">
+	    	<apex:form >
+		      	<apex:pageBlock mode="mainDetail">
+		      		<apex:pageBlockButtons location="bottom" styleClass="button-div">
+		            	<!-- Hidden Buttons -->
+		                <apex:commandButton value="{!$Label.c2g__dataviewok}" id="ok_h" styleclass="hiddensubmit" rendered="true" oncomplete="CODA2GoButtons.enableSaveButtons()"/>
+		                <!-- End of Hidden Buttons -->
+		               <apex:commandButton value="{!$Label.c2g__dataviewok}" id="ok" rerender="none" onclick="hideTemplateDialog('alert-dialog-wrapper-update')" rendered="true" styleClass="templateBtn"/>
+		            </apex:pageBlockButtons>
+		   			<apex:pageMessage summary="{!$Label.c2g__success}" detail="{!$Label.c2g__currencyrevaluationtemplateupdatesuccess}" severity="confirm" strength="3"/>
+		    	</apex:pageBlock>
+	    	</apex:form>
+	    </div>
+    </div>
+</apex:page>

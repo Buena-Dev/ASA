@@ -1,0 +1,30 @@
+<apex:page controller="c2g.CurrencyRevaluationPostController" tabStyle="c2g__codaCurrencyRevaluation__c" extensions="c2g.CODAHelpLoaderController">
+
+	<script src="{!URLFOR($Resource.coda2go,'coda2go/web/script/lib.js')}" type="text/javascript"></script>
+	<apex:stylesheet value="{!URLFOR($Resource.c2g__coda2go,'coda2go/web/css/style.css')}"/>
+	<script>
+		var CODA2GoButtons = new CODA2GoPage();
+		var CODA2GoBtnSaveValue = "{!$Label.codaProcessing}";
+	</script>
+	<apex:form onsubmit="if(CODA2GoButtons.disableSaveButtons){ return CODA2GoButtons.disableSaveButtons(); }">
+		<!-- Header -->
+		<apex:sectionHeader title="{!$Label.c2g__codacurrencyrevaluationposttitle}" help="{!redirectForHelp1155}"/>
+		<!-- CurrencyRevaluation Status -->
+		<apex:pageBlock >
+			<apex:pageMessages id="messages"/>
+			<apex:pageBlockButtons location="bottom" >
+				<!-- Hidden Buttons --> 
+				<apex:commandButton value="{!$Label.c2g__codapostbutton}" action="{!post}" id="post_h" styleclass="hiddensubmit" rendered="{!validateCompanyAndOrg}"/>
+				<apex:commandButton value="{!$Label.c2g__codacancelbutton}" action="{!cancelPost}" id="cancel_h" styleclass="hiddensubmit" immediate="true" reRender="" rendered="{!validateCompanyAndOrg}"/>
+				<apex:commandButton value="{!$Label.c2g__nativeuibuttongoback}" action="{!cancelPost}" id="goBack_h" styleclass="hiddensubmit" immediate="true" reRender="" rendered="{!!validateCompanyAndOrg}"/>
+				<!-- End of Hidden Buttons -->
+				<apex:commandButton value="{!$Label.c2g__codapostbutton}" id="post" rendered="{!validateCompanyAndOrg}" onclick="document.getElementById('{!$Component.post_h}').click();return false;" rerender=""/>				
+				<apex:commandButton value="{!$Label.c2g__codacancelbutton}" id="cancel" rerender="" rendered="{!validateCompanyAndOrg}" onclick="if(!CODA.queing()){document.getElementById('{!$Component.cancel_h}').click()};return false;"/>
+				<apex:commandButton value="{!$Label.c2g__nativeuibuttongoback}" id="goBack" rerender="" rendered="{!!validateCompanyAndOrg}" onclick="if(!CODA.queing()){document.getElementById('{!$Component.goBack_h}').click()};return false;"/>
+				<script>	                
+	                CODA2GoButtons.initButtons(["{!$Component.post}","{!$Component.cancel}","{!$Component.goBack}"]);
+				</script>
+			</apex:pageBlockButtons>
+		</apex:pageBlock>
+	</apex:form>
+</apex:page>

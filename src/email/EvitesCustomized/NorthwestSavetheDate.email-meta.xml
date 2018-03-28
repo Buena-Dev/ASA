@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>false</available>
+    <description>SAVE THE DATE NW</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>BlankLetterhead</letterhead>
+    <name>Northwest Save the Date</name>
+    <style>freeForm</style>
+    <subject>Save the date - ASA Training Event</subject>
+    <textOnly>Keep up with some of the latest happenings in the financial aid industry.
+National FFELP guarantor American Student Assistance® has designed an all-day training event to discuss some of the hottest topics affecting financial aid offices!
+
+Agenda:
+The Basics of FERPA and GLB Featuring Internet Security
+Expand your knowledge of the Family Educational Rights and Privacy Act
+(FERPA) and the Gramm-Leach-Bliley (GLB) Act. You will increase your
+awareness of basic requirements of the Acts and understand the
+technological tools necessary to protect and secure student information.
+
+Top 10 Financial Aid Pitfalls and How to Avoid Them
+Are you aware of the most common pitfalls in the administration of financial aid? Join us as we review the most frequent errors and omissions. Learn how to detect potential problems in your office and how to correct them. This course was created in response to client requests and feedback from training evaluation surveys. Walk away with a checklist to evaluate your institution and a resource list to guide your next steps.
+.
+What&apos;s My Communication Style?
+Uncover preferred styles of verbal and nonverbal communication with the
+fast and fun &quot;What’s My Communication Style?”. By responding to a simple 24-item inventory, participants will learn their preference for one of four communication styles, recognize the various facets of communication, and learn how to use their own style to enhance  communication.
+
+March 7
+(8:30 - 4:30)
+George Fox University
+Bauman Auditorium, Green Room
+414 N. Meridian Street
+Newberg, OR 97132
+www.georgefox.edu/maps_loca/newberg.htm
+
+March 8
+(8:30 - 4:30)
+City University
+Building F, Room 1029
+11900 NE First Street
+Bellevue, WA 98005
+www.cityu.edu/loc_bellevue.aspx
+
+Continental breakfast and lunch will be provided.
+
+For more information please contact
+Kelley Bauman
+Regional Account Executive
+American Student Assistance
+800-999-9080 Ext. 6248
+kbauman@amsa.com
+www.amsa.com</textOnly>
+    <type>html</type>
+</EmailTemplate>

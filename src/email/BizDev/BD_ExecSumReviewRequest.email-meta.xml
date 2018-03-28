@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>false</available>
+    <description>Email sent with Executive Summary for School to Review and Accept</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>SALTClientLetterhead</letterhead>
+    <name>BD_Exec.Sum. Review Request</name>
+    <style>formalLetter</style>
+    <subject>Executive Summary Review</subject>
+    <textOnly>{!Contact.Name}
+{!Contact.Title}
+{!Contact.MailingAddress}
+ 
+Dear {!Contact.FirstName},
+
+I would like to first thank you for choosing ASA as your guarantor of choice.  ASA understands that many choices exist in this industry and we are flattered to be chosen as a preferred partner.  
+ 
+Attached is a copy of the executive summary defining the discussed process flow.  This summary provides you an opportunity to examine how {!Account.Name}will interact with ASA to receive guarantees for your students and parents.  This summary is also ASA’s commitment to exceptional customer service for {!Account.Name}.
+ 
+Please take a few moments to review this document and determine if {!Account.Name}s needs are met.  Also, please do not hesitate to call me if you have questions regarding the executive summary or want clarification on the established process.
+ 
+Once again, we thank you for the opportunity to partner with {!Account.Name} and the ASA team looks forward to working closely with you and your staff for many years. 
+ 
+Sincerely,
+ {!Account.OwnerFullName}
+{!Account.OwnerTitle}
+{!Account.OwnerPhone}
+
+American Student Assistance
+
+The content of this email is confidential and proprietary to American Student Assistance. It is intended only for the above-named individual or entity and for the purpose indicated and may not be reproduced or distributed without permission of the sender. Please notify the sender or ASA if you received this email in error.</textOnly>
+    <type>html</type>
+</EmailTemplate>

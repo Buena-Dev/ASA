@@ -1,0 +1,31 @@
+<!-- intercompany transfer reject confirm page -->
+<apex:page standardController="c2g__codaIntercompanyTransfer__c" extensions="c2g.CODAHelpLoaderController,c2g.IntercompanyTransferController">
+	<script src="{!URLFOR($Resource.coda2go,'coda2go/web/script/lib.js')}" type="text/javascript"></script>
+	<apex:stylesheet value="{!URLFOR($Resource.c2g__coda2go,'coda2go/web/css/style.css')}"/>
+	<script>
+		var CODA2GoButtons = new CODA2GoPage();
+		var CODA2GoBtnSaveValue = "{!$Label.codaProcessing}";
+	</script>
+	<apex:form onsubmit="if(CODA2GoButtons.disableSaveButtons){ return CODA2GoButtons.disableSaveButtons(); }" >
+		<apex:sectionHeader title="{!$Label.c2g__intercompanytransferrejecttitle}" help="{!redirectForHelp1198}" subtitle="{!viewstate.intercompanyTransfer.Dto.Name}"/>
+		<apex:pageBlock >
+			<apex:pageMessages />
+			<apex:pageBlockButtons >
+				<!-- Hidden Buttons -->
+				<apex:commandButton value="{!$Label.c2g__intercompanytransferconfirmrejectionbutton}" action="{!rejectICTs}" id="reject_h" styleclass="hiddensubmit"/>
+				<apex:commandButton value="{!$Label.c2g__intercompanytransfercancelbutton}" action="{!cancel}" id="cancel_h" styleclass="hiddensubmit" immediate="true"/>
+				<!-- End of Hidden Buttons -->
+
+				<apex:commandButton value="{!$Label.c2g__intercompanytransferconfirmrejectionbutton}" id="reject" rendered="{!ShowRejectButton}" onclick="document.getElementById('{!$Component.reject_h}').click();return false;" reRender=""/>
+				<apex:commandButton value="{!$Label.c2g__intercompanytransfercancelbutton}" id="cancel" onclick="document.getElementById('{!$Component.cancel_h}').click();return false;" reRender=""/>
+
+				<script>
+                    CODA2GoButtons.initButtons(["{!$Component.reject}","{!$Component.cancel}"]);
+                </script>
+			</apex:pageBlockButtons>
+			<apex:pageBlockSection >
+				<apex:inputField value="{!viewstate.intercompanyTransfer.Dto.c2g__RejectReason__c}" rendered="{!ShowRejectButton}" required="true" html-data-val-length-max="255" style="width:90%;height:60px;"/>
+			</apex:pageBlockSection>
+		</apex:pageBlock>
+	</apex:form>
+</apex:page>

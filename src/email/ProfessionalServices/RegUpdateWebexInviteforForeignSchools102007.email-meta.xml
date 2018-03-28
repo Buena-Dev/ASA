@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Reg Update Webex Invite for foreign schools 10-2007</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>EmailLetterhead</letterhead>
+    <name>Reg Update Webex Invite for Foreign Schools 10-2007</name>
+    <style>freeForm</style>
+    <subject>You are invited to an ASA Regulatory Update via webex!</subject>
+    <textOnly>Join ASA! 
+
+Regulatory Update for Foreign Schools Webex
+
+National FFELP guarantor American Student Assistance® has designed a regulatory update via webex. Join us for an in-depth discussion on the anticipated changes that will result from Negotiated Rulemaking; both the General Provisions and loan issues including changes to preferred lender lists.
+
+Dates and Time:
+ 
+Thursday 10/16/2007  9:00 a.m. - 10:15 a.m. EST 
+
+Course Description: Our regulatory analysts will focus on any changes that we anticipate may impact your day-to-day job responsibilities. Note that this training will be speculative based on the draft language published to date but we want you to be prepared! Don&apos;t worry, we&apos;ll be offering lots of additional training opportunities once the final rules are out! (ACG/Smart Grants and accreditation will not be covered.) 
+ 
+Who Should Attend 
+
+Any financial aid administrator interested in the most up to date information related to Negotiated Rulemaking. 
+
+How You Will Benefit 
+Know what changes to anticipate as a result of Negotiated Rulemaking. Learn what aspects of the act could affect the way you administer Title IV funds. 
+
+How to register or for additional information.
+
+· Register Online at http://www.amsa.com/fap/training 
+· Email: send your name, phone number and enrollment details to 
+training@amsa.com 
+· Phone: call the Training Department at (800) 999-9080, ext. 3099 
+
+All American Student Assistance training events are offered free of charge.</textOnly>
+    <type>html</type>
+</EmailTemplate>

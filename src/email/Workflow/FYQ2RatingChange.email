@@ -1,0 +1,5 @@
+Hello,
+
+{!Account.Name}, (OE Code: {!Account.OE_Code__c}) has had a rating change. The new rating for FY Q2 is: {!Account.Current_Contract_Year_Q2_Rating__c}.
+
+http://na4.salesforce.com/{!Account.Id}

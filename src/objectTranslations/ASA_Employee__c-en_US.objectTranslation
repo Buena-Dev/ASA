@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>ASA Employee</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>ASA Employees</value>
+    </caseValues>
+    <fields>
+        <label><!-- Legal Business Sponsor Contact --></label>
+        <name>Legal_Business_Sponsor__c</name>
+        <relationshipLabel><!-- Contract Business Sponsor --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Contract Business Sponsor --></label>
+        <name>Legal_Contract_Business_Sponsor__c</name>
+        <relationshipLabel><!-- Contract Business Sponsor --></relationshipLabel>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

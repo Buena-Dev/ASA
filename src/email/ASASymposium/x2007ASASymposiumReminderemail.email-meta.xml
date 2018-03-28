@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>false</available>
+    <description>Reminder email sent to all contacts yet to register to attend the 2007 Symposium</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>EmailLetterhead</letterhead>
+    <name>2007 ASA Symposium - Reminder email</name>
+    <style>freeForm</style>
+    <subject>There&apos;s still time!</subject>
+    <textOnly>It&apos;s not too late to register for ASA&apos;s annual Symposium! “Continuing the Conversation on Student Debt: Moving from Policy to Practice” will take place June 17 – 19 at the Boston Convention and Exhibition Center.
+ 
+Symposium Themes Include:
+ 
+–        Communication 
+–        Partnership 
+–        Compassion 
+ 
+Confirmed Speakers:
+ 
+–        Barbara Ehrenreich, journalist and author of the million-copy best-seller Nickel and Dimed: On (Not) Getting By in America and the New York Times best-seller Bait &amp; Switch: The (Futile) Pursuit of the American Dream. 
+ 
+–        Deborah Tannen, professor and author of The New York Times best-seller You Just Don’t Understand and You’re Wearing That? Understanding Mothers and Daughters in Conversations. 
+ 
+Accommodations at The Westin Boston Waterfront are available for $199 plus tax per night and rooms must be booked by May 17, 2007 to enjoy this reduced rate. To reserve your room, please call 1.888.627.7115 and reference Westin Boston Waterfront Hotel and American Student Assistance and the dates June 17 – 19, 2007.
+ 
+For more information about the Symposium, speakers, agenda, and registration, please visit http://www.amsa.com/symposium or contact your ASA client manager or regional representative for a first hand account of this once a year experience.  
+ 
+See you next month!
+ 
+American Student Assistance</textOnly>
+    <type>html</type>
+</EmailTemplate>

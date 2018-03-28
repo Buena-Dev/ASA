@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>false</available>
+    <description>Maine Fall Conference email 2008</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>EmailLetterhead</letterhead>
+    <name>Caroline&apos;s ME E-mail 2008</name>
+    <style>freeForm</style>
+    <subject>ASA Is Proud to Be a Sponsor of MASFAA</subject>
+    <textOnly>Dear {!Contact.FirstName},
+ 
+American Student Assistance® (ASA) is excited to attend and help sponsor MASFAA. We would like to remind you not to miss the October 20 session featuring our president and CEO, Paul Combe, discussing the future of the FFELP industry. Also, remember to stop by our booth to talk with our representatives—including our newest associate, Wesley Alston—about how ASA can help you succeed. 
+ 
+Wesley will be joining our new team of New England regional account executives as a dedicated resource for Maine educational institutions. He started at ASA as a member of our call center 4 years ago and then transitioned to our Inside Sales team. Working with these teams gave him the opportunity to interact with borrowers regarding their day-to-day issues and with college officials for the coordination of various financial literacy-based events.
+ 
+Wesley will be joined at our booth by Caroline Menendez, Bob Cole, and one of your long-time colleagues who recently started at ASA. Stop by to say hello to them—and to learn how ASA can act as a trusted agent for your schools and borrowers.   
+
+
+  
+
+
+ 
+ 
+The content of this email is confidential and proprietary to American Student Assistance. It is intended only for the above-named individual or entity and for the purpose indicated and may not be reproduced or distributed without permission of the sender. Please notify the sender or ASA if you received this email in error.</textOnly>
+    <type>html</type>
+</EmailTemplate>

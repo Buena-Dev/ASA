@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Salt Ambassador &amp; Advisor Program Bulletin Nov</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Salt_School_Channel</letterhead>
+    <name>Salt AmbAdv Prog Bulletin</name>
+    <style>freeForm</style>
+    <subject>Salt Ambassador Program Bulletin - November 2016</subject>
+    <textOnly>Salt Ambassador Program Bulletin
+
+November 2016
+
+
+
+
+Greetings to our Salt® Ambassadors and Advisors!
+
+
+Welcome to the November 2016 Salt Ambassador Program Bulletin, the vehicle that provides you with money tips to share and tools to increase awareness about Salt. Here are things you can do this month to help promote money management and spread the word about Salt. Share suggestions below through your school and personal social media channels.
+
+
+
+Share military educational and student loan repayment benefits with students
+
+We’re committed to educating service members and veterans about their educational and student loan repayment benefits. Check out our one stop shop for military members and join us in spreading the word.
+
+
+Promote Salt article - 10 Things 20-Somethings Should Not Spend Money On
+
+If money is tight (and even if it isn&apos;t), make sure you make the most of it and avoid purchasing things you don&apos;t need!
+
+
+Check out the most popular content on Saltmoney.org last month
+
+Check out the ebook 100+ Ways To Get Rid Of Student Loans (Without Paying Them). This guide includes information about paying for college and student loan repayment options. www.saltmoney.org/forgivenessebook
+
+
+
+
+
+General Updates
+
+
+Know Your Money Day - results
+
+Last month Salt encouraged schools to participate in the third annual Know Your Money Day (www.saltmoney.org/kymd) on October 4th.  Thank you to the 66 schools who participated!  Check out some of the events here.
+
+
+Salt Community – Check out these useful posts
+
+6 Skills That Can Earn You Extra Cash on Campus, How I Prepare For Job Interviews, and Upcoming Scholarship Deadlines: December 2016
+
+
+
+
+Do you have questions or have a tip you think should be in the December/January Salt Ambassador Bulletin?  We’d love to hear from you at engagement@asa.org.</textOnly>
+    <type>html</type>
+</EmailTemplate>

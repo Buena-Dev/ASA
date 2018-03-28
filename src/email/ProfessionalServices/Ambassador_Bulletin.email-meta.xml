@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Ambassador Bulletin - Template for Monthly Email</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>SALTClientLetterhead</letterhead>
+    <name>Ambassador Bulletin</name>
+    <style>freeForm</style>
+    <subject>SALT Ambassador Bulletin - February 2016</subject>
+    <textOnly>Dear {!Contact.FirstName}:
+
+Welcome to the February 2016 Ambassador Bulletin, the vehicle that provides you with money tips to share and tools to increase awareness about SALT.  Here are things you can do this month to help promote money management and spread the word about SALT.
+
+Promote Finding Free Money for School
+
+Everyone likes free money, and the SALT scholarship search is a great tool to find ways to cover education costs.
+
+Here is the social media language:
+
+Facebook:  Find free money for school!  Find awards you qualify for based on your hobbies, interests, academic background, and more with the SALT scholarship search engine.
+www.saltmoney.org/scholarshipsearch
+
+Twitter:  Find free money for school with the SALT scholarship search engine!
+www.saltmoney.org/scholarshipsearch
+
+
+Join Our Social Media #SALTsquad!
+
+We’re creating a social media movement with the goal of helping as many people as possible, and we want you to be a part of it! Join us in posting information about SALT on your personal social media pages with the hashtag #SALTsquad. Post four times a month, and we will send you some exclusive SALT swag each month.
+
+It’s simple! We’ll send you some social media language that you can use, or you can create your own posts by sharing articles or tools on saltmoney.org that have benefited you the most.
+
+Want to join the #SALTsquad?  If you’re not already, follow SALT on Facebook and Twitter. Then, email ambassador@asa.org to let us know you’re interested, and include your social channels so we can follow you back.</textOnly>
+    <type>html</type>
+</EmailTemplate>

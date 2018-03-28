@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>false</available>
+    <description>Spring Calendar Invite</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>EmailLetterhead</letterhead>
+    <name>Training Calendar - 2007 (Spring)</name>
+    <style>freeForm</style>
+    <subject>ASA Spring Training Calendar</subject>
+    <textOnly>Subject: ASA&apos;s Spring Training Schedule
+
+
+ASA’s Training and Development Department is pleased to announce our Spring 2007 course schedule. We have planned our curriculum to assist both the novice financial aid administrator and the seasoned professional. 
+
+•	Student Retention — What’s the Big Deal? Institutions are realizing that while recruiting the “right” students is important, providing support to encourage their success is crucial. In this session we’ll discuss the costs of attrition for both the institution as well as the student.
+•	Cash Management Rules and Regulations- We&apos;ll review the regulations regarding funding disbursements, posting requirements to student accounts, and timeframes for returning funds. 
+•	An Introduction to FFELP - Whether you&apos;re new to the industry or just need a refresher on the basics of FFELP, this session is for you. We&apos;ll cover the life of a FFELP loan from the application process through final repayment. 
+
+All ASA Training Events are Complimentary and Registration is Easy:  
+•	Online! Find the course date and location at http://www.amsa.com/training that best suits you and then click Register!
+•	Email!  Send your name, phone number, and enrollment details to training@amsa.com.
+•	Call!  Contact the Training Department at (800) 999-9080, Ext. 3099.
+
+Customized Training
+If you have another course in mind for your staff, we can customize any of our available courses and bring our trainers right to your office.  For a full listing of available courses, please visit our website.  We are eager to help assess your needs – just call or send an email.
+
+We look forward to seeing you this spring!</textOnly>
+    <type>html</type>
+</EmailTemplate>

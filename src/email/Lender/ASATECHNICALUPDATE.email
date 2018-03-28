@@ -1,0 +1,9 @@
+<table cellpadding="5" width="550" height="400" cellspacing="5" border="0" >
+<tr height="400" valign="top" >
+<td locked="0" style=" font-family:arial; bLabel:main; color:#000000; font-size:12pt; bEditID:r3st1; background-color:#FFFFFF;" aEditID="c1r1" tEditID="c1r1" >
+<![CDATA[<FONT size=3><SPAN style="FONT-FAMILY: geneva,arial,sans-serif">Dear {!Contact.FirstName},<BR><SPAN style="FONT-WEIGHT: bold">
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt">&nbsp;</P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt"><SPAN style="FONT-SIZE: 11pt; FONT-FAMILY: 'Palatino Linotype'">Several enhancements will be added to American Student Assistance's<SUP>®</SUP> (ASA) guarantee processing system and ASA Direct<SUP>®</SUP> in the <FONT color=#ff0000>&lt;&lt;2005.03&gt;&gt; </FONT>system release scheduled to deploy on July 15, 2005. Below is a comprehensive list of enhancements that will affect our lenders and servicers.&nbsp; </SPAN></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt"><SPAN style="FONT-SIZE: 11pt; FONT-FAMILY: 'Palatino Linotype'">&nbsp;</SPAN><SPAN style="FONT-SIZE: 11pt; FONT-FAMILY: 'Palatino Linotype'">If you have any questions regarding these changes, please do not hesitate to contact your ASA Client Manager or e-mail us at <U>lenderrelations@amsa.com</U>.&nbsp; <BR></SPAN></P><BR>INSERT UPDATES HERE<BR><BR></SPAN>{!User.Name}<BR>{!User.Title}<BR>{!User.CompanyName}<BR><BR><BR><SPAN style="FONT-WEIGHT: bold"><FONT face=Geneva,Arial,Sans-Serif size=1>The content of this email is confidential and proprietary to American Student Assistance. It is intended only for the above-named individual or entity and for the purpose indicated and may not be reproduced or distributed without permission of the sender. Please notify the sender or ASA if you received this email in error.</FONT></SPAN></SPAN></FONT>]]></td>
+</tr>
+</table>

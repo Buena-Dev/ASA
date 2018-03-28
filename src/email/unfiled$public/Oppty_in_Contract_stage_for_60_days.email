@@ -1,0 +1,12 @@
+Hi,
+
+{!Opportunity.Name}  is in  'Contract' stage for 60 days. Please change the Stage or close it.
+
+Related Information for this Opportunity :
+
+Name : {!Opportunity.Name}
+Account Name : {!Opportunity.Account}
+Opportunity Owner : {!Opportunity.OwnerFullName}
+Link to Opportunity : https://cs43.salesforce.com/{!Opportunity.Id}
+
+Thanks

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>false</available>
+    <description>Thank you for registering to attend the PDS in MD, Oct 2007</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>SALTClientLetterhead</letterhead>
+    <name>Partnership Dialogue Series, Thank you for registering - DC/MD - Oct 2007</name>
+    <style>freeForm</style>
+    <subject>Registration Confirmation to attend ASA&apos;s Partnership Dialogue Series!</subject>
+    <textOnly>Dear {!Contact.FirstName},
+  
+Thank you for registering to attend ASA’s Partnership Dialogue Series: 
+A Focus on Communication. 
+  
+Date:  Thursday, October 11, 2007 
+Start Time:  8:30 am 
+Location:University of Maryland, College Park 
+Crist Room, Samuel Riggs IV Alumni Center Building
+College Park, MD 20742
+http://www.umd.edu/visitors/#directions
+ 
+(Parking – we recommend parking in The Stadium Drive parking garage adjacent to the Samuel Riggs IV Alumni Center Building.  Parking vouchers will be provided at the event) 
+   
+Canceling Your Registration
+If you need to cancel or change your registration please email training@amsa.com or 1-800-999-9080, ext. 3099.
+
+We look forward to seeing you!</textOnly>
+    <type>html</type>
+</EmailTemplate>

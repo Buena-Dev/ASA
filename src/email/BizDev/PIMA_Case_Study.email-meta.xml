@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Case Study with the contents of PIMA</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>SALTClientLetterhead</letterhead>
+    <name>PIMA Case Study</name>
+    <style>freeForm</style>
+    <subject>Salt Integration - Case Study PIMA</subject>
+    <textOnly>Greetings,
+
+
+
+
+I thought you would be interested in seeing ASA’s recent case study on how PIMA (http://www.asa.org/docs/colleges_universities/case_study_pima_college.pdf) successfully integrated financial education using the Salt program.
+
+
+
+
+
+
+Sincerely,</textOnly>
+    <type>html</type>
+</EmailTemplate>

@@ -1,0 +1,5 @@
+Hello {!Receiving_User.FirstName},
+
+{!Account.Name} (OE Code: {!Account.OE_Code__c}) has had a rating change.  The account has a rating change to {!Account.Rating}.
+
+http://na4.salesforce.com/{!Account.Id}

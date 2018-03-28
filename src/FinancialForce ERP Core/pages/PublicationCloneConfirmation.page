@@ -1,0 +1,23 @@
+<apex:page standardController="fferpcore__MessagingPublication__c" extensions="fferpcore.EndPointCloneController">
+    <apex:sectionHeader title="{!$Label.fferpcore__erppublicationcloneconfirmationtitle}"/>
+    <apex:form >
+        <apex:inputHidden value="{!fferpcore__MessagingPublication__c.Name}"/>
+        <apex:inputHidden value="{!fferpcore__MessagingPublication__c.fferpcore__Custom__c}"/>
+        <apex:inputHidden value="{!fferpcore__MessagingPublication__c.fferpcore__SendingHook__c}"/>
+        <apex:pageBlock >
+            <apex:pageBlockButtons location="bottom">
+                <apex:commandButton value="{!$Label.fferpcore__erpvisualforceclonebutton}" action="{!deepClone}" rendered="{!CanClone}"/>
+                <apex:commandButton value="{!$Label.fferpcore__erpvisualforcecancelbutton}" action="{!cancel}"/>
+            </apex:pageBlockButtons>
+            <apex:pageBlockSection columns="1" rendered="{!CanClone}">
+                {!message}
+            </apex:pageBlockSection>
+            <apex:pageBlockSection columns="1" rendered="{!HasInsufficientPermissions}">
+                {!$Label.fferpcore__erppublicationcloneinsufficientpermissions}
+            </apex:pageBlockSection>
+            <apex:pageBlockSection columns="1" rendered="{!IsInvalidRecord}">
+                {!$Label.fferpcore__erppublicationcloneinvalidrecord}
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

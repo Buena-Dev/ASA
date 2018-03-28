@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>This template is used when sending a SALT Proposal to a potential client</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>SALTClientLetterhead</letterhead>
+    <name>SALT Proposal</name>
+    <style>formalLetter</style>
+    <subject>SALT Proposal is attached</subject>
+    <textOnly>Dear {!Contact.FirstName},
+
+
+I am pleased to provide you with the attached SALT Proposal for your consideration.
+
+
+Please contact me if you have any questions or require further information.
+
+
+Best regards,
+
+
+{!User.Name}
+
+{!User.Title}
+
+Phone: {!User.Phone}
+
+Fax: {!User.Fax}</textOnly>
+    <type>html</type>
+</EmailTemplate>

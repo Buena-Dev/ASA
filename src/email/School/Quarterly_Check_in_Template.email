@@ -1,0 +1,6 @@
+<table height="400" width="550" cellpadding="5" border="0" cellspacing="5" >
+<tr height="400" valign="top" >
+<td style=" color:#000000; font-size:12pt; background-color:#FFFFFF; font-family:arial; bLabel:main; bEditID:r3st1;" tEditID="c1r1" locked="0" aEditID="c1r1" >
+<![CDATA[<font size="6" color="#33ccff" face="Times New Roman, Times, serif">SALT Check-In:&nbsp;{!Account.Name}</font><div style="font-size: 12pt;"><br></div><div><font face="Times New Roman, Times, serif">Date:&nbsp;</font>{!Quarterly_Update__c.Quarterly_Check_in_Date__c}</div><div><ol><li>Welcome:&nbsp;{!Contact.FirstName}</li><li>SALT Program Updates:&nbsp;{!Quarterly_Update__c.Key_Information__c}</li><li>Revisit SALT Program Goals:&nbsp;{!Quarterly_Update__c.Call_Follow_Up__c}</li><li>Current Stats (see Quarterly SALT Summary Report in email invite):</li><li>Engagement Initiatives and Strategies:&nbsp;{!Quarterly_Update__c.Call_Discussion_Points__c}</li><li>Promotional Material:&nbsp;</li><li>SALT Program Management:&nbsp;{!Quarterly_Update__c.SALT_Program_Management__c}</li><li>Open Forum:</li><li>Next SALT Check-in:&nbsp;</li></ol><div>Thanks,&nbsp;</div></div><div>{!User.FirstName}</div>]]></td>
+</tr>
+</table>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Salt Ambassador &amp; Advisor Program Bulletin Feb 2017</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Salt_School_Channel</letterhead>
+    <name>Salt AmbAdv Prog Bulletin- Feb 2017</name>
+    <style>freeForm</style>
+    <subject>Salt Ambassador Program Bulletin - February</subject>
+    <textOnly>Salt Ambassador Program Bulletin
+
+Greetings to our Salt® Ambassadors and Advisors!
+
+Welcome to the February 2017 Salt Ambassador Program Bulletin, the vehicle that provides you with money tips to share and tools to increase awareness about Salt. Here are things you can do this month to help promote money management and spread the word about Salt.  Share the suggestions below through your school and personal social media channels.
+
+Plan a Salt event – Now is the time to look at the calendar and decide how you are going to sprinkle Salt across campus.  Maybe this month name your event “Love Salt”, next month “Spring into Salt Money”, and don’t forget April is Financial Literacy month (such as: Money Smart Week, Money Smart Mondays, or Be Money Smart with Salt).  If you need help with event planning send an email to engagement@asa.org.
+
+Promote Salt article - How To Manage Your Time Effectively In College - Depending on your situation, going to college may give you more or less free time. Either way, you’ll want to create a schedule that ensures you achieve everything you need to in the time you have.
+
+Check out the most popular content on Saltmoney.org last month - How To Craft Your Elevator Pitch - A successful elevator pitch should include who you are, what you want, and what value you can provide to an employer—and only last as long as an elevator ride takes.
+
+General Updates
+
+New “My Salt” Features - At the end of this month, students will begin seeing new personalized functionality when they log into Salt.  These new “My Salt” features will ask users to identify their main financial goals and then content will be suggested based on their needs. View the PDF highlighting the new features.
+
+Salt Community has a fresh look, improved features, and a new experience - Check it out and share these useful posts. Upcoming College Scholarship Deadlines: March 2016, What can you do when your roommate isn&apos;t paying the rent?, and 2017 New Year Scholarship Challenge
+
+Do you have questions or have a tip you think should be in the March Salt Ambassador Bulletin?  We’d love to hear from you at engagement@asa.org.</textOnly>
+    <type>html</type>
+</EmailTemplate>

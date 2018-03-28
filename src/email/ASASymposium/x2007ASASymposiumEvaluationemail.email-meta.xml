@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>false</available>
+    <description>Email to all contacts who registered for the 2007 Symposium.  Includes a link to the online eval survey.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>EmailLetterhead</letterhead>
+    <name>2007 ASA Symposium - Evaluation email</name>
+    <style>freeForm</style>
+    <subject>We want your feedback - ASA Symposium Evaluation</subject>
+    <textOnly>Dear Colleague:
+ 
+Thank you for attending the 2007 American Student Assistance® Symposium:  Continuing the Conversation on Student Debt:  Moving from Policy to Practice. The speakers, the attendees’ enthusiasm and active participation combined to make this Symposium a memorable learning experience.  
+ 
+Now that the 2007 Symposium is history, it’s time for us to start thinking about next year’s event – and how we can make it even better.  We want to hear from you.  Please take a moment to tell us what you thought about this year’s Symposium.  Your feedback is valuable to us.  The online evaluation  http://www.keysurvey.com/survey/158072/19f8/ takes about 5 minutes to complete and will be available through Monday, July 2, 2007.  You can also forward any comments and suggestions to your ASA representative.
+ 
+Also, please check www.amsa.com in the coming days for our Symposium Wrap-Up.  We will be posting session handouts, as well as audio recordings of several sessions.  
+ 
+Again, thank you for joining us this year and we look forward to seeing you next year.
+ 
+Sincerely,
+ 
+American Student Assistance</textOnly>
+    <type>html</type>
+</EmailTemplate>

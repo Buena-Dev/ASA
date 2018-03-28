@@ -1,0 +1,46 @@
+<table height="550" width="650" cellpadding="5" border="0" cellspacing="0" >
+<tr height="100" valign="top" >
+<td style=" color:#000000; font-size:12pt; background-color:#FFFFFF; font-family:arial; bLabel:main; bEditID:r3st1;" >
+<table height="100%" width="100%" cellpadding="5" border="0" cellspacing="0" >
+<tr height="100" valign="top" >
+<td style=" color:#000000; font-size:12pt; background-color:#FFFFFF; font-family:arial; bLabel:main; bEditID:r3st1;" width="650" tEditID="c1r1" locked="0" aEditID="c1r1" >
+<![CDATA[<P>Hello {!Receiving_User.FirstName}:</P>
+<P>&nbsp;</P>
+<P>Salesforce will be implementing an upgrade this weekend.&nbsp; When you log into the system on Monday the 17th and access the Reports tab, you'll notice a very different interface.</P>
+<P>&nbsp;</P>
+<P>This enhancement will allow you to create and customize reports in a faster, easier manner.</P>
+<P>&nbsp;</P>
+<P>If you have any questions, please contact me at ext. 4274.</P>
+<P>&nbsp;</P>
+<P>Regards,</P>
+<P>Andrew</P>
+<P>&nbsp;</P>
+<P>&nbsp;</P>
+<P>&nbsp;</P>]]></td>
+</tr>
+<tr height="15" >
+<td style=" color:#000000; font-size:12pt; background-color:#FFFFFF; font-family:arial; bLabel:main; bEditID:r3st1;" >
+<![CDATA[]]></td>
+</tr>
+</table>
+</td>
+</tr>
+<tr height="450" valign="top" >
+<td style=" color:#000000; font-size:12pt; background-color:#FFFFFF; font-family:arial; bLabel:main; bEditID:r3st1;" >
+<table height="100%" width="100%" cellpadding="5" border="0" cellspacing="5" >
+<tr height="225" valign="top" >
+<td style=" color:#000000; font-size:12pt; background-color:#FFFFFF; font-family:arial; bLabel:main; bEditID:r3st1;" width="50%" tEditID="c1r2" locked="0" aEditID="c1r2" >
+<![CDATA[<IMG alt="" src="/servlet/servlet.ImageServer?id=01560000000JhMf&amp;oid=00D300000000ufT" align=left border=0>]]></td>
+<td style=" color:#000000; font-size:12pt; background-color:#FFFFFF; font-family:arial; bLabel:main; bEditID:r3st1;" width="50%" tEditID="c2r2" locked="0" aEditID="c2r2" >
+<![CDATA[]]></td>
+</tr>
+<tr height="225" valign="top" >
+<td style=" color:#000000; font-size:12pt; background-color:#FFFFFF; font-family:arial; bLabel:main; bEditID:r3st1;" width="50%" tEditID="c1r3" locked="0" aEditID="c1r3" >
+<![CDATA[]]></td>
+<td style=" color:#000000; font-size:12pt; background-color:#FFFFFF; font-family:arial; bLabel:main; bEditID:r3st1;" width="50%" tEditID="c2r3" locked="0" aEditID="c2r3" >
+<![CDATA[]]></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>

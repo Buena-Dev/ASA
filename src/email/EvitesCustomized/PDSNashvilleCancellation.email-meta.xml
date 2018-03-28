@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>false</available>
+    <description>Cancellation notice for Nashville Session</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>SALTClientLetterhead</letterhead>
+    <name>PDS Nashville Cancellation</name>
+    <style>freeForm</style>
+    <subject>Nashville Partnership Dialogue Series - Cancellation Notice</subject>
+    <textOnly>Dear {!Contact.FirstName},
+ 
+
+Due to a scheduling issue, American Student Assistance unfortunately has cancelled the March 13, 2008 Nashville, Tennessee Partnership Dialogue Series.
+ 
+We would like to thank you for your interest in attending this event and apologize for any inconvenience this cancellation may have caused.  We hope to reschedule at later date. 
+ 
+Thanks again for your willingness to take time out of your busy schedule to join us; we look forward to seeing you at future events.  If you have any questions, please feel free to contact us at any time. 
+ 
+ 
+Sincerely,
+American Student Assistance</textOnly>
+    <type>html</type>
+</EmailTemplate>

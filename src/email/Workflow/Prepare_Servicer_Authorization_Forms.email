@@ -1,0 +1,8 @@
+{!Account.Name}, OE Code {!Account.OE_Code__c}, will renew its contract for the period {!Opportunity.Contract_Start_Date__c} to {!Opportunity.Contract_End_Date__c}.  Please prepare new servicer authorization forms.  The school's address is:
+
+{!Account.BillingAddress}
+
+
+Thank you,
+
+{!Account.OwnerFullName}

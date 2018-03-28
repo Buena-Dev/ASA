@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Know Your Money Day 2016 Invite Email</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Salt_School_Channel</letterhead>
+    <name>Know Your Money Day 2016</name>
+    <style>freeForm</style>
+    <subject>Salt: Know Your Money Day Update</subject>
+    <textOnly>Dear {!Contact.FirstName}:
+
+
+
+Know Your Money Day is tomorrow, October 4th, and we are excited you are partnering with us.  This year we are focusing on increasing student’s knowledge around credit and have created a landing page to highlight four pieces of credit related Salt content.  During your event, or through any communications, please direct all students to saltmoney.org/kymd.  Students can login or create an account from the page, and this is how we will measure traffic and page views for the Know Your Money Day prizes.
+
+
+
+If you are planning an event and want to be considered for the “Most Creative Event” prize, send an email to engagement@asa.org with photos and a short paragraph describing your event by October 10th.  Winners will be announced on October 17th.
+
+
+Thanks for participating in Know Your Money Day; we are thrilled to have you partner with us!
+
+
+
+Sincerely,
+
+The Professional Services Team
+
+engagement@asa.org</textOnly>
+    <type>html</type>
+</EmailTemplate>

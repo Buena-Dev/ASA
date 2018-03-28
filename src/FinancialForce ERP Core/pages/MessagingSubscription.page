@@ -1,0 +1,145 @@
+<apex:page standardController="fferpcore__MessagingSubscription__c" extensions="fferpcore.SubscriptionMessageTypesController,fferpcore.SubscriptionDescriptionController,fferpcore.SubscriptionController,fferpcore.EndPointController,fferpcore.SubscriptionFiltersController">
+    <apex:messages />
+    <apex:detail subject="{!fferpcore__MessagingSubscription__c.Id}" relatedList="true"/> 
+    <c:fflib_extBootstrap applicationName="Subscription" staticResource="{!$Resource.fferpcore__Subscription}" developmentPrefix="{!$Setup.ErpProtectedSettings__c.LocalServer__c}" frameworkPath="../../ext">
+        <script type="text/javascript">
+
+        window.$RemoteAction = window.$RemoteAction || {};
+        window.$Params = window.$Params || {};
+        window.$Label = window.$Label || {};
+
+        $Params.SubscriptionId = '{!JSENCODE(subscriptionId)}';
+        $Params.SubscriptionEnabled = {!subscriptionEnabled};
+        $Params.CanEditChildSubscriptions = {!canEditChildSubscriptions};
+        $Params.SubscriptionMessageTypes = JSON.parse('{!JSENCODE(subscriptionMessageTypes)}');
+
+        $RemoteAction.SubscriptionController = $RemoteAction.SubscriptionController || {};
+        $RemoteAction.EndPointController = $RemoteAction.EndPointController || {};
+        $RemoteAction.SubscriptionFiltersController = $RemoteAction.SubscriptionFiltersController || {};
+        $RemoteAction.SubscriptionDescriptionController = $RemoteAction.SubscriptionDescriptionController || {};
+        $RemoteAction.SubscriptionController.save = '{!$RemoteAction.SubscriptionController.save}';
+        $RemoteAction.EndPointController.getObjectTypes = '{!$RemoteAction.EndPointController.getObjectTypes}';
+        $RemoteAction.EndPointController.getFieldsForObjectType = '{!$RemoteAction.EndPointController.getFieldsForObjectType}';
+        $RemoteAction.SubscriptionDescriptionController.load = '{!$RemoteAction.SubscriptionDescriptionController.load}';
+        $RemoteAction.SubscriptionDescriptionController.save = '{!$RemoteAction.SubscriptionDescriptionController.save}';
+        $RemoteAction.SubscriptionDescriptionController.getTargets = '{!$RemoteAction.SubscriptionDescriptionController.getTargets}';
+        $RemoteAction.SubscriptionDescriptionController.getDataTransformationTables = '{!$RemoteAction.SubscriptionDescriptionController.getDataTransformationTables}';
+        $RemoteAction.SubscriptionDescriptionController.getMessageKeys = '{!$RemoteAction.SubscriptionDescriptionController.getMessageKeys}';
+        $RemoteAction.SubscriptionFiltersController.load = '{!$RemoteAction.SubscriptionFiltersController.load}';
+        $RemoteAction.SubscriptionFiltersController.save = '{!$RemoteAction.SubscriptionFiltersController.save}';
+
+        $Label.ERPVisualForceAddButton = '{!JSENCODE($Label.fferpcore__erpvisualforceaddbutton)}';
+        $Label.ERPVisualForceSaveButton = '{!JSENCODE($Label.fferpcore__erpvisualforcesavebutton)}';
+
+        $Label.ErpSubscriptionDescriptionTargetObject = '{!JSENCODE($Label.fferpcore__erpsubscriptiondescriptiontargetobject)}';
+        $Label.ErpSubscriptionDescriptionTargetObjectHelp = '{!JSENCODE($Label.fferpcore__erpsubscriptiondescriptiontargetobjecthelp)}';
+        $Label.ErpSubscriptionDescriptionTargetText = '{!JSENCODE($Label.fferpcore__erpsubscriptiondescriptiontargettext)}';
+        $Label.ErpSubscriptionDescriptionTargetObjectLabel = '{!JSENCODE($Label.fferpcore__erpsubscriptiondescriptiontargetobjectlabel)}';
+        $Label.ErpSubscriptionDescriptionCorrelationFieldLabel = '{!JSENCODE($Label.fferpcore__erpsubscriptiondescriptioncorrelationfieldlabel)}';
+        $Label.ErpSubscriptionDescriptionTargetObjectWindowCancel = '{!JSENCODE($Label.fferpcore__erpsubscriptiondescriptiontargetobjectwindowcancel)}';
+        $Label.ErpSubscriptionDescriptionTargetObjectWindowConfirm = '{!JSENCODE($Label.fferpcore__erpsubscriptiondescriptiontargetobjectwindowconfirm)}';
+        $Label.ErpSubscriptionDescriptionTargetObjectWindowTitle = '{!JSENCODE($Label.fferpcore__erpsubscriptiondescriptiontargetobjectwindowtitle)}';
+        $Label.ErpSubscriptionDescriptionTargetObjectMessageLabel = '{!JSENCODE($Label.fferpcore__erpsubscriptiondescriptiontargetobjectmessagelabel)}';
+        $Label.ErpSubscriptionDescriptionHelp = '{!JSENCODE($Label.fferpcore__erpsubscriptiondescriptionhelp)}';
+        $Label.ErpSubscriptionDescriptionTargetFieldColumn = '{!JSENCODE($Label.fferpcore__erpsubscriptiondescriptiontargetfieldcolumn)}';
+        $Label.ErpSubscriptionDescriptionMessageKeysColumn = '{!JSENCODE($Label.fferpcore__erpsubscriptiondescriptionmessagekeyscolumn)}';
+        $Label.ErpSubscriptionDescriptionNoMappings = '{!JSENCODE($Label.fferpcore__erpsubscriptiondescriptionnomappings)}';
+        $Label.ErpSubscriptionDescriptionMappingPropertiesTitle = '{!JSENCODE($Label.fferpcore__erpsubscriptiondescriptionmappingpropertiestitle)}';
+        $Label.ErpSubscriptionDescriptionPropertiesNameColumn = '{!JSENCODE($Label.fferpcore__erpsubscriptiondescriptionpropertiesnamecolumn)}';
+        $Label.ErpSubscriptionDescriptionPropertiesValueColumn = '{!JSENCODE($Label.fferpcore__erpsubscriptiondescriptionpropertiesvaluecolumn)}';
+        $Label.ErpSubscriptionDescriptionPropertiesTooltip = '{!JSENCODE($Label.fferpcore__erpsubscriptiondescriptionpropertiestooltip)}';
+        $Label.ErpSubscriptionDescriptionMappingFormCreateTitle = '{!JSENCODE($Label.fferpcore__erpsubscriptiondescriptionmappingformcreatetitle)}';
+        $Label.ErpSubscriptionDescriptionMappingFormEditTitle = '{!JSENCODE($Label.fferpcore__erpsubscriptiondescriptionmappingformedittitle)}';
+        $Label.ErpSubscriptionDescriptionMappingFormTargetField = '{!JSENCODE($Label.fferpcore__erpsubscriptiondescriptionmappingformtargetfield)}';
+        $Label.ErpSubscriptionDescriptionMappingFormMessageKey = '{!JSENCODE($Label.fferpcore__erpsubscriptiondescriptionmappingformmessagekey)}';
+        $Label.ErpSubscriptionDescriptionMappingFormCancel = '{!JSENCODE($Label.fferpcore__erpsubscriptiondescriptionmappingformcancel)}';
+        $Label.ErpSubscriptionDescriptionMappingFormPublication = '{!JSENCODE($Label.fferpcore__erpsubscriptiondescriptionmappingformpublication)}';
+        $Label.ErpSubscriptionDescriptionEditTooltip = '{!JSENCODE($Label.fferpcore__erpsubscriptiondescriptionedittooltip)}';
+        $Label.ErpSubscriptionDescriptionDeleteTooltip = '{!JSENCODE($Label.fferpcore__erpsubscriptiondescriptiondeletetooltip)}';
+        $Label.ErpSubscriptionDescriptionMappingFormOverrideWarning = '{!JSENCODE($Label.fferpcore__erpsubscriptiondescriptionmappingformoverridewarning)}';
+        $Label.ErpAdminUnloadConfirmation = '{!JSENCODE($Label.fferpcore__erpadminunloadconfirmation)}';
+        $Label.ErpSubscriptionDescriptionDeleteConfirmTitle = '{!JSENCODE($Label.fferpcore__erpsubscriptiondescriptiondeleteconfirmtitle)}';
+        $Label.ErpSubscriptionDescriptionDeleteConfirmMessage = '{!JSENCODE($Label.fferpcore__erpsubscriptiondescriptiondeleteconfirmmessage)}';
+        $Label.ErpSubscriptionDescriptionMappingFormSubmitAdd = '{!JSENCODE($Label.fferpcore__erpsubscriptiondescriptionmappingformsubmitadd)}';
+        $Label.ErpSubscriptionDescriptionMappingFormSubmitEdit = '{!JSENCODE($Label.fferpcore__erpsubscriptiondescriptionmappingformsubmitedit)}';
+        $Label.ErpSubscriptionDescriptionDataTransformationTableColumn = '{!JSENCODE($Label.fferpcore__erpsubscriptiondescriptiondatatransformationtablecolumn)}';
+        $Label.ErpSubscriptionDescriptionMappingFormAdditionalMessageKey = '{!JSENCODE($Label.fferpcore__erpsubscriptiondescriptionmappingformadditionalmessagekey)}';
+        $Label.ErpSubscriptionDescriptionMappingFormDataTransformationTable = '{!JSENCODE($Label.fferpcore__erpsubscriptiondescriptionmappingformdatatransformationtable)}';
+        $Label.ErpSavingLabel = '{!JSENCODE($Label.fferpcore__erpsavinglabel)}';
+        $Label.ErpSubscriptionDescriptionDeleteButtonLabel = '{!JSENCODE($Label.fferpcore__erpsubscriptiondescriptiondeletebuttonlabel)}';
+        $Label.ErpSubscriptionDescriptionCancelButtonLabel = '{!JSENCODE($Label.fferpcore__erpsubscriptiondescriptioncancelbuttonlabel)}';
+        $Label.ErpSubscriptionDescriptionDeliveryInProgress = '{!JSENCODE($Label.fferpcore__erpsubscriptiondescriptiondeliveryinprogress)}';
+        $Label.ErpSubscriptionDescriptionPlaceholderAdditionalMessageKey = '{!JSENCODE($Label.fferpcore__erpsubscriptiondescriptionplaceholderadditionalmessagekey)}';
+        $Label.ErpSubscriptionDescriptionPlaceholderDataTransformationTable = '{!JSENCODE($Label.fferpcore__erpsubscriptiondescriptionplaceholderdatatransformationtable)}';
+        $Label.ErpSubscriptionDescriptionPlaceholderMessageKey = '{!JSENCODE($Label.fferpcore__erpsubscriptiondescriptionplaceholdermessagekey)}';
+        $Label.ErpSubscriptionDescriptionPlaceholderTarget = '{!JSENCODE($Label.fferpcore__erpsubscriptiondescriptionplaceholdertarget)}';
+        $Label.ErpSubscriptionDescriptionTargetTypeField = '{!JSENCODE($Label.fferpcore__erpsubscriptiondescriptiontargettypefield)}';
+        $Label.ErpSubscriptionDescriptionTargetTypeRelatedList = '{!JSENCODE($Label.fferpcore__erpsubscriptiondescriptiontargettyperelatedlist)}';
+        $Label.ErpSubscriptionDescriptionColumnManaged = '{!JSENCODE($Label.fferpcore__erpsubscriptiondescriptioncolumnmanaged)}';
+        $Label.ErpSubscriptionDescriptionColumnErrors = '{!JSENCODE($Label.fferpcore__erpsubscriptiondescriptioncolumnerrors)}';
+        $Label.ErpSubscriptionDescriptionColumnActions = '{!JSENCODE($Label.fferpcore__erpsubscriptiondescriptioncolumnactions)}';
+        $Label.ErpSubscriptionDescriptionButtonHideProperties = '{!JSENCODE($Label.fferpcore__erpsubscriptiondescriptionbuttonhideproperties)}';
+        $Label.ErpSubscriptionDescriptionButtonShowProperties = '{!JSENCODE($Label.fferpcore__erpsubscriptiondescriptionbuttonshowproperties)}';
+        $Label.ErpSubscriptionDescriptionButtonUpdateNew = '{!JSENCODE($Label.fferpcore__erpsubscriptiondescriptionbuttonupdatenew)}';
+        $Label.ErpSubscriptionDescriptionTooltipActionAdd = '{!JSENCODE($Label.fferpcore__erpsubscriptiondescriptiontooltipactionadd)}';
+        $Label.ErpSubscriptionDescriptionTooltipCorrelationStrategyAppend = '{!JSENCODE($Label.fferpcore__erpsubscriptiondescriptiontooltipcorrelationstrategyappend)}';
+        $Label.ErpSubscriptionDescriptionTooltipCorrelationStrategyReplace = '{!JSENCODE($Label.fferpcore__erpsubscriptiondescriptiontooltipcorrelationstrategyreplace)}';
+        $Label.ErpSubscriptionDescriptionTooltipCorrelationStrategyUpdate = '{!JSENCODE($Label.fferpcore__erpsubscriptiondescriptiontooltipcorrelationstrategyupdate)}';
+        $Label.ErpSubscriptionDescriptionTooltipCorrelationStrategyUpdateTotal = '{!JSENCODE($Label.fferpcore__erpsubscriptiondescriptiontooltipcorrelationstrategyupdatetotal)}';
+        $Label.ErpSubscriptionDescriptionCorrelationStrategyAppend = '{!JSENCODE($Label.fferpcore__erpsubscriptiondescriptioncorrelationstrategyappend)}';
+        $Label.ErpSubscriptionDescriptionCorrelationStrategyReplace = '{!JSENCODE($Label.fferpcore__erpsubscriptiondescriptioncorrelationstrategyreplace)}';
+        $Label.ErpSubscriptionDescriptionCorrelationStrategyUpdate = '{!JSENCODE($Label.fferpcore__erpsubscriptiondescriptioncorrelationstrategyupdate)}';
+        $Label.ErpSubscriptionDescriptionCorrelationStrategyUpdateTotal = '{!JSENCODE($Label.fferpcore__erpsubscriptiondescriptioncorrelationstrategyupdatetotal)}';
+        $Label.ErpSubscriptionDescriptionFieldCorrelationField = '{!JSENCODE($Label.fferpcore__erpsubscriptiondescriptionfieldcorrelationfield)}';
+        $Label.ErpSubscriptionDescriptionFieldCorrelationKey = '{!JSENCODE($Label.fferpcore__erpsubscriptiondescriptionfieldcorrelationkey)}';
+        $Label.ErpSubscriptionDescriptionFieldCorrelationStrategy = '{!JSENCODE($Label.fferpcore__erpsubscriptiondescriptionfieldcorrelationstrategy)}';
+        $Label.ErpSubscriptionDescriptionPlaceholderCorrelationField = '{!JSENCODE($Label.fferpcore__erpsubscriptiondescriptionplaceholdercorrelationfield)}';
+        $Label.ErpSubscriptionDescriptionPlaceholderCorrelationKey = '{!JSENCODE($Label.fferpcore__erpsubscriptiondescriptionplaceholdercorrelationkey)}';
+        $Label.ErpSubscriptionDescriptionPlaceholderCorrelationStrategy = '{!JSENCODE($Label.fferpcore__erpsubscriptiondescriptionplaceholdercorrelationstrategy)}';
+        $Label.ERPVisualForceCancelButton = '{!JSENCODE($Label.fferpcore__erpvisualforcecancelbutton)}';
+        $Label.ErpVisualForceConfirmButton = '{!JSENCODE($Label.fferpcore__erpvisualforceconfirmbutton)}';
+        $Label.ErpSubscriptionDescriptionTooltipOverridden = '{!JSENCODE($Label.fferpcore__erpsubscriptiondescriptiontooltipoverridden)}';
+
+        $Label.ErpSubscriptionFiltersEmpty = '{!JSENCODE($Label.fferpcore__erpsubscriptionfiltersempty)}';
+        $Label.ErpSubscriptionFiltersConnectorAnd = '{!JSENCODE($Label.fferpcore__erpsubscriptionfiltersconnectorand)}';
+        $Label.ErpSubscriptionFiltersColumnMessageKey = '{!JSENCODE($Label.fferpcore__erpsubscriptionfilterscolumnmessagekey)}';
+        $Label.ErpSubscriptionFiltersColumnOperator = '{!JSENCODE($Label.fferpcore__erpsubscriptionfilterscolumnoperator)}';
+        $Label.ErpSubscriptionFiltersColumnValue = '{!JSENCODE($Label.fferpcore__erpsubscriptionfilterscolumnvalue)}';
+        $Label.ErpSubscriptionFiltersPlaceholderMessageKey = '{!JSENCODE($Label.fferpcore__erpsubscriptionfiltersplaceholdermessagekey)}';
+        $Label.ErpSubscriptionFiltersPlaceholderValue = '{!JSENCODE($Label.fferpcore__erpsubscriptionfiltersplaceholdervalue)}';
+        $Label.ErpSubscriptionFiltersValueOptionDate = '{!JSENCODE($Label.fferpcore__erpsubscriptionfiltersvalueoptiondate)}';
+        $Label.ErpSubscriptionFiltersValueOptionFalse = '{!JSENCODE($Label.fferpcore__erpsubscriptionfiltersvalueoptionfalse)}';
+        $Label.ErpSubscriptionFiltersValueOptionTrue = '{!JSENCODE($Label.fferpcore__erpsubscriptionfiltersvalueoptiontrue)}';
+        $Label.ErpSubscriptionFiltersTooltipActionDelete = '{!JSENCODE($Label.fferpcore__erpsubscriptionfilterstooltipactiondelete)}';
+        $Label.ErpSubscriptionFiltersTooltipButtonRemoveLogic = '{!JSENCODE($Label.fferpcore__erpsubscriptionfilterstooltipbuttonremovelogic)}';
+        $Label.ErpSubscriptionFiltersOperatorLabelEqual = '{!JSENCODE($Label.fferpcore__erpsubscriptionfiltersoperatorlabelequal)}';
+        $Label.ErpSubscriptionFiltersOperatorLabelNotEqual = '{!JSENCODE($Label.fferpcore__erpsubscriptionfiltersoperatorlabelnotequal)}';
+        $Label.ErpSubscriptionFiltersOperatorLabelGreaterThan = '{!JSENCODE($Label.fferpcore__erpsubscriptionfiltersoperatorlabelgreaterthan)}';
+        $Label.ErpSubscriptionFiltersOperatorLabelLessThan = '{!JSENCODE($Label.fferpcore__erpsubscriptionfiltersoperatorlabellessthan)}';
+        $Label.ErpSubscriptionFiltersOperatorLabelGreaterThanEqual = '{!JSENCODE($Label.fferpcore__erpsubscriptionfiltersoperatorlabelgreaterthanequal)}';
+        $Label.ErpSubscriptionFiltersOperatorLabelLessThanEqual = '{!JSENCODE($Label.fferpcore__erpsubscriptionfiltersoperatorlabellessthanequal)}';
+        $Label.ErpSubscriptionFiltersOperatorLabelContains = '{!JSENCODE($Label.fferpcore__erpsubscriptionfiltersoperatorlabelcontains)}';
+        $Label.ErpSubscriptionFiltersOperatorLabelNotContains = '{!JSENCODE($Label.fferpcore__erpsubscriptionfiltersoperatorlabelnotcontains)}';
+        $Label.ErpSubscriptionFiltersOperatorLabelStartsWith = '{!JSENCODE($Label.fferpcore__erpsubscriptionfiltersoperatorlabelstartswith)}';
+        $Label.ErpSubscriptionFiltersOperatorLabelEndsWith = '{!JSENCODE($Label.fferpcore__erpsubscriptionfiltersoperatorlabelendswith)}';
+        $Label.ErpSubscriptionFiltersButtonAddLogic = '{!JSENCODE($Label.fferpcore__erpsubscriptionfiltersbuttonaddlogic)}';
+
+        $Label.ErpSubscriptionMessageTypesMessageTypeColumn = '{!JSENCODE($Label.fferpcore__erpsubscriptionmessagetypesmessagetypecolumn)}';
+        $Label.ErpSubscriptionMessageTypesEnabledColumn = '{!JSENCODE($Label.fferpcore__erpsubscriptionmessagetypesenabledcolumn)}';
+        $Label.ErpSubscriptionMessageTypesEnabledColumn = '{!JSENCODE($Label.fferpcore__erpsubscriptionmessagetypesenabledcolumn)}';
+        $Label.ErpSubscriptionMessageTypesAdditionalChangesTitle = '{!JSENCODE($Label.fferpcore__erpsubscriptionmessagetypesadditionalchangestitle)}';
+        $Label.ErpSubscriptionMessageTypesAdditionalChangesYes = '{!JSENCODE($Label.fferpcore__erpsubscriptionmessagetypesadditionalchangesyes)}';
+        $Label.ErpSubscriptionMessageTypesAdditionalChangesNo = '{!JSENCODE($Label.fferpcore__erpsubscriptionmessagetypesadditionalchangesno)}';
+        $Label.ErpSubscriptionMessageTypesUpdateDescriptionConfirmation = '{!JSENCODE($Label.fferpcore__erpsubscriptionmessagetypesupdatedescriptionconfirmation)}';
+        $Label.ErpSubscriptionMessageTypesUpdateMessageTypesConfirmation = '{!JSENCODE($Label.fferpcore__erpsubscriptionmessagetypesupdatemessagetypesconfirmation)}';
+
+        document.addEventListener('DOMContentLoaded', function (e) {
+            var el = document.getElementsByClassName('pbBottomButtons')[0];
+            if (el) {
+                el.hidden = true;
+            }
+        });
+
+        </script>
+    </c:fflib_extBootstrap>
+</apex:page>

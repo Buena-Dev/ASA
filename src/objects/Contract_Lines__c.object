@@ -1,0 +1,552 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ControlledByParent</externalSharingModel>
+    <fields>
+        <fullName>Account_Elements__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>This field is added but not displayed....it&apos;s only used to gain access to the Account object and its fields.</description>
+        <externalId>false</externalId>
+        <label>Account Elements</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Contract Lines</relationshipLabel>
+        <relationshipName>Contract_Lines</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Account__c</fullName>
+        <externalId>false</externalId>
+        <formula>Contract__r.Account.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Account</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Active__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Used by trigger that scans contract lines looking at Next Invoice Dates and turning Ready to Invoice to True when Next Invoice Date &lt;= TODAY. By adding this field, closed Contract with no more billing can be turned Inactive and the trigger doesn&apos;t have to scan them.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Used by trigger that scans contract lines looking at Nxt Inv Dates and turns Ready to Invoice to Y when Next Invoice Date&lt;=TODAY. By adding this field, closed Contract with no more billing can be turned Inactive and the trigger doesn&apos;t have to scan them.</inlineHelpText>
+        <label>Active</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Base_Invoice_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Base Invoice Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Contract_Elements__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Contract_Elements</label>
+        <referenceTo>Contract</referenceTo>
+        <relationshipLabel>Contract Lines (Contract_Elements)</relationshipLabel>
+        <relationshipName>Contract_Lines</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Contract_End_Date__c</fullName>
+        <description>This date is automatically populated based on the Contract object - Contract End Date</description>
+        <externalId>false</externalId>
+        <formula>Contract__r.EndDate</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>This date is automatically populated based on the Contract object - Contract End Date</inlineHelpText>
+        <label>Contract End Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Contract_End_Date_do_not_use_2__c</fullName>
+        <externalId>false</externalId>
+        <label>Contract End Date do not use 2</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Contract_Start_Date__c</fullName>
+        <description>This date is automatically populated based on the Contract object - Contract Start Date</description>
+        <externalId>false</externalId>
+        <formula>Contract__r.StartDate</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>This date is automatically populated based on the Contract object - Contract Start Date</inlineHelpText>
+        <label>Contract Start Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Contract_Start_Date_do_not_use_2__c</fullName>
+        <externalId>false</externalId>
+        <label>Contract Start Date do  not use 2</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Contract__c</fullName>
+        <externalId>false</externalId>
+        <label>Contract</label>
+        <referenceTo>Contract</referenceTo>
+        <relationshipName>Invoice_Lines</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>DNU_Next_Invoice_Date__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF (TEXT( Invoice_Frequency__c )=&apos;Daily&apos;, Date_Last_Invoice_Generated__c +1, 
+if( TEXT(Invoice_Frequency__c)=&apos;Monthly&apos;, Date_Last_Invoice_Generated__c +30, 
+if( TEXT(Invoice_Frequency__c)=&apos;Quarterly&apos;, Date_Last_Invoice_Generated__c +90, 
+if( TEXT(Invoice_Frequency__c)=&apos;Semi-Annually&apos;, Date_Last_Invoice_Generated__c +180, 
+if( TEXT(Invoice_Frequency__c)=&apos;Annually&apos;, Date_Last_Invoice_Generated__c +365, 
+null)))))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>After invoicing, updates to next invoice date based on frequency</inlineHelpText>
+        <label>DNU Next Invoice Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Date_Last_Invoice_Generated__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Auto filled with system date the last invoice generated.  Informational only.</inlineHelpText>
+        <label>Date Last Invoice Generated</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Frequency_of_Invoicing__c</fullName>
+        <externalId>false</externalId>
+        <label>Frequency of Invoicing</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Monthly</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Quarterly</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Semi-Annually</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Annually</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Has_Been_Invoiced__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Automatically turned on when invoice has been generated.   Then automatically turned off awaiting next invoice.</inlineHelpText>
+        <label>Has Been Invoiced</label>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Income_Schedule_Definition__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Income Schedule Definition lookup name</label>
+        <referenceTo>c2g__codaIncomeScheduleDefinition__c</referenceTo>
+        <relationshipLabel>Contract Lines</relationshipLabel>
+        <relationshipName>Contract_Lines</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Income_Schedule__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates number of months between billing.  Should be in sync with Invoice Frequency.</inlineHelpText>
+        <label>Income Schedule</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Invoice_Count__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Auto generated count of how many invoices have been generated for this line</inlineHelpText>
+        <label>Invoice Count</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Invoice_Freq__c</fullName>
+        <externalId>false</externalId>
+        <label>Invoice Freq #</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Invoice_Frequency__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Billing frequency for this line</inlineHelpText>
+        <label>Invoice Frequency</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Monthly</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Quarterly</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Semi-Annually</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Annually</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Daily</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>2 Year (Single Payment)</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>3 Year (Single Payment)</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>1 Time</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Invoice_has_been_created__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Invoice has been created?</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Last_Invoice_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Last Invoice Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Max_Count__c</fullName>
+        <externalId>false</externalId>
+        <label>Max Count</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Next_Invoice_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Next Invoice Date</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Product__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Product</label>
+        <referenceTo>Product2</referenceTo>
+        <relationshipName>Invoices</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Quantity__c</fullName>
+        <defaultValue>1</defaultValue>
+        <externalId>false</externalId>
+        <label>Quantity</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Ready_to_Invoice__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Automatically flagged when a contract line reaches it&apos;s Next Invoice date</inlineHelpText>
+        <label>Ready to Invoice</label>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Ready_to_Process__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Ready to Process?</label>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Remaining_Invoices__c</fullName>
+        <externalId>false</externalId>
+        <formula>Total_number_invoices__c - Invoice_Count__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Number of future invoices still to generate for this line</inlineHelpText>
+        <label>Remaining Invoices</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Sales_Invoice_Line__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <inlineHelpText>Link to line item on last invoice generated for this contract line</inlineHelpText>
+        <label>Sales Invoice Line</label>
+        <referenceTo>c2g__codaInvoiceLineItem__c</referenceTo>
+        <relationshipLabel>Contract Lines</relationshipLabel>
+        <relationshipName>Contract_Lines</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Sales_Invoice_Number__c</fullName>
+        <externalId>false</externalId>
+        <formula>Sales_Invoice_Line__r.c2g__Invoice__r.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Last invoice number generated for this line</inlineHelpText>
+        <label>Sales Invoice Number</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Total_number_invoices__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Total number of invoices that will generate over life of line</inlineHelpText>
+        <label>Total # Invoices</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Unit_Price__c</fullName>
+        <externalId>false</externalId>
+        <label>Unit Price</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <label>Contract Lines</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Contract__c</columns>
+        <columns>Next_Invoice_Date__c</columns>
+        <columns>Invoice_Count__c</columns>
+        <columns>Remaining_Invoices__c</columns>
+        <columns>Ready_to_Invoice__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>False_Date_Audit</fullName>
+        <columns>NAME</columns>
+        <columns>Contract__c</columns>
+        <columns>Next_Invoice_Date__c</columns>
+        <columns>Invoice_Count__c</columns>
+        <columns>Remaining_Invoices__c</columns>
+        <columns>Ready_to_Invoice__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Ready_to_Invoice__c</field>
+            <operation>equals</operation>
+            <value>0</value>
+        </filters>
+        <filters>
+            <field>Remaining_Invoices__c</field>
+            <operation>notEqual</operation>
+            <value>0</value>
+        </filters>
+        <label>Ready to Invoice</label>
+    </listViews>
+    <listViews>
+        <fullName>False_Date_Audit1</fullName>
+        <columns>NAME</columns>
+        <columns>Contract__c</columns>
+        <columns>Next_Invoice_Date__c</columns>
+        <columns>Invoice_Count__c</columns>
+        <columns>Remaining_Invoices__c</columns>
+        <columns>Ready_to_Process__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Remaining_Invoices__c</field>
+            <operation>notEqual</operation>
+            <value>0</value>
+        </filters>
+        <filters>
+            <field>Next_Invoice_Date__c</field>
+            <operation>equals</operation>
+        </filters>
+        <label>False Date Audit</label>
+    </listViews>
+    <nameField>
+        <displayFormat>IL-{0000}</displayFormat>
+        <label>Contract Line Name</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Contract Lines</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+    <startsWith>Vowel</startsWith>
+</CustomObject>

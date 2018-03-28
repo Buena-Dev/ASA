@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>false</available>
+    <description>Reminder email sent to all contacts yet to register to attend the 2008 Symposium</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>EmailLetterhead</letterhead>
+    <name>2008 ASA Symposium - Reminder email</name>
+    <style>freeForm</style>
+    <subject>There&apos;s still time to register for American Student Assistance 2008 Symposium, June 16-17, 2008</subject>
+    <textOnly>Greetings!
+ 
+American Student Assistance® (ASA) invites you to join us at our 23rd annual Symposium June 16-17 at the Boston Convention &amp; Exhibition Center and Westin Boston Waterfront Hotel in Boston, Massachusetts. 
+ 
+The ASA Symposium attracts national and international higher education decision makers and provides opportunities for you to exchange ideas with colleagues, network with experts in various fields, and catch up on the latest industry buzz. The theme of this year&apos;s 2-day event is Building Futures—Measuring Success.
+ 
+Each year we strive to stage an event that is lively and informative, with stimulating keynote speakers, interactive breakout and concurrent sessions on timely topics, relevant roundtable discussions, and the ever-popular student panel, a talk show-style information session. 
+ 
+Our program of speakers and panels for the 2008 Annual Symposium is exceptional. Here are a few examples of the sessions you will enjoy:
+ 
+Forging Partnerships for Default Prevention
+Justin Draeger, Assistant Director for Communication, NASFAA
+Pending legislation will likely change the way default rates are measured and hold schools to new standards. This could open the door for the financial aid community to forge stronger relationships with schools to decrease the number of students in default.
+ 
+Getting Ready, Getting In, and Getting Through College 
+Dr. Ann Coles, Senior College Access Advisor, The Education Resources Institute
+Explore financial aid strategies that your institution can implement to assist low-income students to prepare for, enroll in, and graduate from college.
+ 
+Piecing Together the Student Success Puzzle
+Jillian Kinzie, Associate Director, Center for Postsecondary Research &amp; NSSE Institute
+With many moving parts, the keys to a student’s success can be a challenge. Jillian Kinzie shares her insight from her book, Piecing Together the Student Success Puzzle and reveals new ideas that you can take with you and implement on campus.
+
+Working With Your High Risk Borrowers
+Ann Brieck, M.A., Post Graduate Student Affairs and Financial Aid Consultant, Sense and Centsibility
+This session aims to assist financial aid professionals in identifying and understanding their high-risk borrowers. Ann Brick also provides strategies and new approaches to connect with members of the Millennial Generation.
+ 
+Please visit http://www.amsa.com/symposium/2008/ to register and view the entire agenda for this year&apos;s complimentary Symposium. 
+ 
+Be sure to book your room at the Westin Boston Waterfront Hotel now to take advantage of the Symposium group rate.
+ 
+We look forward to seeing you this June in Boston!</textOnly>
+    <type>html</type>
+</EmailTemplate>

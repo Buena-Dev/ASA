@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>EmailLetterhead</letterhead>
+    <name>Mass Notice to Users</name>
+    <style>newsletter</style>
+    <subject>Salesforce - System Upgrade this Weekend</subject>
+    <textOnly>Hello {!Receiving_User.FirstName}:
+ 
+Salesforce will be implementing an upgrade this weekend.  When you log into the system on Monday the 17th and access the Reports tab, you&apos;ll notice a very different interface.
+ 
+This enhancement will allow you to create and customize reports in a faster, easier manner.
+ 
+If you have any questions, please contact me at ext. 4274.
+ 
+Regards,
+Andrew
+ 
+ 
+ </textOnly>
+    <type>html</type>
+</EmailTemplate>

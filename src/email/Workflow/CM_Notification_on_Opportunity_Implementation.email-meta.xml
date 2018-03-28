@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>This sends an email to the CM and backup CM that the opportunity has reached implementation stage</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>CM Notification on Opportunity = Implementation</name>
+    <style>none</style>
+    <subject>Your account {!Account.Name} has moved to Implementation stage.</subject>
+    <type>text</type>
+</EmailTemplate>

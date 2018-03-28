@@ -1,0 +1,373 @@
+<!-- codajournalamenddocument -->
+<apex:page standardController="c2g__codaJournal__c" extensions="c2g.CODAHelpLoaderController,c2g.CODAJournalController">
+	<script src="{!URLFOR($Resource.coda2go,'coda2go/web/script/lib.js')}" type="text/javascript"></script>
+	<apex:stylesheet value="{!URLFOR($Resource.c2g__coda2go,'coda2go/web/css/style.css')}"/>
+	<style>
+		.inline_block
+		{
+			display: inline-block;
+		}
+		.relative
+		{
+			position: relative;
+		}
+		.taxTotalsLink
+		{
+			margin-left: 5%;
+		}
+		.bPageBlock .detailList .labelCol
+		{
+			width: 12%;
+		}
+		.bPageBlock .detailList .dataCol
+		{
+			width: 21%;
+		}
+		.widthTotals
+		{
+			width: 70px;
+		}
+		.customAnalysisPopup
+		{
+			text-align: left;
+		}
+	</style>
+	
+	<script>
+		var CODA2GoButtons = new CODA2GoPage();
+		var CODA2GoBtnSaveValue = "{!$Label.codaPageJournalViewProcessing}";
+	</script>
+	<apex:form onsubmit="if(CODA2GoButtons.disableSaveButtons){ return CODA2GoButtons.disableSaveButtons(); }">
+		<!-- Header -->
+		<apex:sectionHeader title="{!$Label.c2g__codapagejournalamenddocument}" subtitle="{!viewstate.journal.dto.Name}" help="{!redirectForHelp1032}"/>
+		<!-- Journal Detail -->
+		<apex:pageBlock title="{!$Label.c2g__codapagejournalviewjournaldetail2}">
+			<!-- Buttons -->
+			<apex:pageBlockButtons >
+				<!-- Hidden Buttons -->
+				<apex:commandButton value="{!$Label.c2g__codapagejournalamendsave}" action="{!amendDocument}" id="save_h" styleclass="hiddensubmit"/>
+				<apex:commandButton value="{!$Label.c2g__codapagejournalamendcancel}" action="{!cancel}" id="cancel_h" styleclass="hiddensubmit" immediate="true" reRender=""/>
+				<!-- End of Hidden Buttons -->
+				<apex:commandButton value="{!$Label.c2g__codapagejournalamendsave}" id="save" onclick="if(!CODA.queing()){document.getElementById('{!$Component.save_h}').click()};return false;" rerender=""/>
+				<apex:commandButton value="{!$Label.c2g__codapagejournalamendcancel}" id="cancel" rerender="" onclick="if(!CODA.queing()){document.getElementById('{!$Component.cancel_h}').click()};return false;"/>
+				<script>
+					CODA2GoButtons.initButtons(["{!$Component.save}","{!$Component.cancel}"]);
+				</script>
+			</apex:pageBlockButtons>
+
+			<!-- Messages -->
+			<apex:include pageName="c2g__codamulticompanymodewarning" rendered="{!viewstate.isMultiCompanyMode}"/>
+			<apex:pageMessages id="messagePanel"/>
+			
+			<!-- Journal Detail -->
+			<apex:pageBlockSection title="{!$Label.c2g__codapagejournalviewjournaldetail3}" columns="3">
+				<!-- Journal Header Info -->
+				<apex:outputField id="type" value="{!viewstate.journal.dto.c2g__Type__c}" />
+				<apex:outputField id="journalNo" value="{!viewstate.journal.dto.Name}" />
+				<apex:outputText value=" "/>
+				<apex:outputField id="date" value="{!viewstate.journal.dto.c2g__JournalDate__c}" />
+				<apex:outputField value="{!viewstate.journal.dto.c2g__Period__c}" id="period"/>
+				<apex:outputText value=" "/>
+				<apex:outputField id="currency" value="{!viewstate.journal.dto.c2g__JournalCurrency__c}"/>
+				<apex:outputField id="externalCounterparty" value="{!viewstate.journal.dto.c2g__ExternalCounterparty__c}">
+					<apex:outputPanel id="analysislink" title="{!$Label.c2g__externalcounterpartyfieldinfo}" style="cursor:pointer">
+						<apex:image id="infoIcon" styleClass="lineIcon" value="{!URLFOR($Resource.c2g__coda2go, 'coda2go/web/images/tax_off.png')}"/>
+					</apex:outputPanel>
+				</apex:outputField>
+				<apex:outputText value=" "/>
+				<!-- Journal Reference, Debits and Analysis Header -->
+				<apex:pageBlockSectionItem >
+					<apex:outputLabel value="{!$ObjectType.c2g__codaJournal__c.fields.c2g__Reference__c.label}"/>
+					<apex:outputPanel >
+						<apex:inputField id="reference" value="{!viewstate.journal.dto.c2g__Reference__c}" />&nbsp;
+					</apex:outputPanel>
+				</apex:pageBlockSectionItem>
+				<apex:pageBlockSectionItem >
+					<apex:outputLabel value="{!$ObjectType.c2g__codaJournal__c.fields.c2g__Debits__c.label}"/>
+					<apex:outputText id="debits" styleClass="alignright widthstandard goblock" value="{!viewstate.journal.Debits}" />
+				</apex:pageBlockSectionItem>
+				<apex:pageBlockSectionItem >
+					<apex:outputLabel value="{!$Label.c2g__journalanalysisdetailspopuptaxanalysissection}:"/>
+					<apex:outputText value=" "/>
+				</apex:pageBlockSectionItem>
+				<!-- Journal Description, Credits and Tax Totals Detail -->
+				<apex:pageBlockSectionItem >
+					<apex:outputPanel style="white-space: nowrap;">
+						<apex:outputLabel value="{!$ObjectType.c2g__codaJournal__c.fields.c2g__JournalDescription__c.label}"/>
+						<!-- Custom Analysis popup -->
+						<apex:outputPanel rendered="{!viewstate.ShowHeaderCustomAnalysisFields}">
+							<c:AnalysisPopup containerClass="headerExpander" tooltip="{!$Label.c2g__codatoggleanalysisarea}" allowConcurrentPopups="true" id="popupHeader">
+								<apex:pageBlockSection title="{!$Label.c2g__codaanalysis}" collapsible="false" columns="1">
+									<apex:repeat value="{!HeaderAnalysisFields}" var="analysisField">
+							        	<apex:pageBlockSectionItem >
+							        		<apex:outputLabel value="{!$ObjectType.c2g__codaJournal__c.fields[analysisField].label}" style="white-space: nowrap;"/>
+							        		<apex:outputPanel >
+							        			<apex:inputField value="{!viewstate.journal.dto[analysisField]}" rendered="{!viewstate.CanAmendAnalysis}" styleClass="popupDataFieldInput"/>
+							        			<span class="popupDataFieldOutput">
+							        				<apex:outputField value="{!viewstate.journal.dto[analysisField]}" rendered="{!!viewstate.CanAmendAnalysis}"/>
+							        			</span>
+							        		</apex:outputPanel>
+							        	</apex:pageBlockSectionItem>
+							        </apex:repeat>
+								</apex:pageBlockSection>
+							</c:AnalysisPopup>
+						</apex:outputPanel>
+					</apex:outputPanel>
+					<apex:outputPanel >
+						<apex:inputField id="description" value="{!viewstate.journal.dto.c2g__JournalDescription__c}" />&nbsp;
+					</apex:outputPanel>
+				</apex:pageBlockSectionItem>
+				<apex:pageBlockSectionItem >
+					<apex:outputLabel value="{!$ObjectType.c2g__codaJournal__c.fields.c2g__Credits__c.label}"/>
+					<apex:outputText id="credits" styleClass="alignright widthstandard goblock" value="{!viewstate.journal.Credits}" />
+				</apex:pageBlockSectionItem>
+				<apex:pageBlockSectionItem >
+					<apex:outputLabel value="{!$ObjectType.c2g__codaJournal__c.fields.c2g__TaxTotal__c.label}"/>
+					<apex:pageBlockSectionItem >
+					 	<apex:outputpanel >
+					 		<apex:outputpanel styleClass="alignright widthTotals inline_block">
+								<apex:outputField id="taxTotal" value="{!viewstate.journal.dto.c2g__TaxTotal__c}" />
+							</apex:outputpanel>
+							<apex:outputPanel styleClass="relative" rendered="{!!viewstate.journal.IsVATOrGST}">
+								<apex:outputPanel styleClass="holder">
+									<a href="#" onclick="CODA.toggleHeaderExpand(this,'taxTotalsDetail'); setExpanderPosition(this); return false;" title="{!$Label.c2g__codapagejournaltaxtotalsdetail}" class="taxTotalsLink">
+										{!$Label.c2g__codapagejournaltaxtotalsdetail}
+										<img src="/s.gif" width="16" height="16" class="extracollapsed_h" title="{!$Label.c2g__codapagejournaltaxtotalsdetail}"/>
+									</a>
+									<div id="taxTotalsDetail" class="headerexpander">
+										<apex:pageBlockSection title="{!$Label.c2g__codapagejournaltaxtotalsdetail}" collapsible="false" columns="1">
+											<apex:outputField value="{!viewstate.journal.dto.c2g__Tax1Total__c}"/>
+											<apex:outputField value="{!viewstate.journal.dto.c2g__Tax2Total__c}"/>
+											<apex:outputField value="{!viewstate.journal.dto.c2g__Tax3Total__c}"/>
+										</apex:pageBlockSection>
+									</div>
+								</apex:outputPanel>
+							</apex:outputPanel>
+						</apex:outputpanel>
+					</apex:pageBlockSectionItem>
+				</apex:pageBlockSectionItem>
+				<!-- Journal Transaction, Total and Taxable Value Total -->
+				<apex:outputField id="transactionNo" value="{!viewstate.journal.dto.c2g__Transaction__c}"/>
+				<apex:pageBlockSectionItem >
+					<apex:outputLabel value="{!$ObjectType.c2g__codaJournal__c.fields.c2g__Total__c.label}"/>
+					<apex:outputText id="total" styleClass="alignright widthstandard goblock" value="{!viewstate.journal.Total}" />
+				</apex:pageBlockSectionItem>
+				<apex:pageBlockSectionItem rendered="{!viewstate.journal.IsVATOrGST}">
+					<apex:outputLabel value="{!$ObjectType.c2g__codaJournal__c.fields.c2g__TaxableValueTotal__c.label}"/>
+					<apex:outputPanel styleClass="alignright widthTotals goblock">
+						<apex:outputField id="taxableValueTotal" value="{!viewstate.journal.dto.c2g__TaxableValueTotal__c}" />
+					</apex:outputPanel>	
+				</apex:pageBlockSectionItem>
+				<!-- Journal Cancel, Reversing, Income info -->
+				<apex:pageBlockSectionItem >
+					<apex:outputPanel >
+						<apex:outputLabel value="{!$Label.c2g__codaoriginaljournalnumber}" rendered="{!viewstate.journal.TypeCancel}"/>
+						<apex:outputLabel value="{!$Label.c2g__codasourcejournalnumber}" rendered="{!viewstate.journal.showSourceJournal}"/>
+					</apex:outputPanel>
+					<apex:outputPanel >
+						<apex:outputField id="sourceJournalNumber" value="{!viewstate.journal.dto.c2g__SourceJournal__c}" rendered="{!viewstate.journal.showSourceJournal}"/>
+						<apex:outputField id="original_journal_number" value="{!viewstate.journal.dto.c2g__OriginalJournal__c}" rendered="{!viewstate.journal.TypeCancel}"/>
+					</apex:outputPanel>
+				</apex:pageBlockSectionItem>
+				<apex:pageBlockSectionItem >
+					<apex:outputLabel value="{!$Label.c2g__codacancellingjournalnumber}" rendered="{!viewstate.journal.WasCancel}"/>
+					<apex:outputField id="cancelling_journal_number" value="{!viewstate.cancellingJournalLookup.dto.c2g__Journal__c}" rendered="{!viewstate.journal.WasCancel}" />
+				</apex:pageBlockSectionItem>
+				<apex:pageBlockSectionItem >
+					<apex:outputLabel value="{!$Label.c2g__codareversingjournalnumber}" rendered="{!viewstate.journal.showReversingJournal}" />
+					<apex:outputField id="reversingJournalNumber" value="{!viewstate.reversingJournalLookup.dto.c2g__Journal__c}" rendered="{!viewstate.journal.showReversingJournal}" />
+				</apex:pageBlockSectionItem>
+				<apex:pageBlockSectionItem >
+					<apex:outputLabel value="{!$ObjectType.c2g__codaJournal__c.fields.c2g__IncomeScheduleGroup__c.label}" rendered="{!viewstate.journal.haveIncome}" />
+					<apex:outputField id="incScheduleGroup" value="{!viewstate.journal.dto.c2g__IncomeScheduleGroup__c}" rendered="{!viewstate.journal.haveIncome}" /> 
+				</apex:pageBlockSectionItem>
+			</apex:pageBlockSection>
+			<!-- Journal Line Items -->
+			<apex:pageBlockSection title="{!$Label.c2g__codapagejournalviewjournallineitems}" columns="1">
+				<apex:pageBlockTable id="dtLineItems" styleClass="noHover" value="{!viewstate.journal.lineItems}" var="lineItem">
+					<apex:column styleClass="widthlinenumbers" style="white-space: nowrap;">
+						<apex:facet name="header">&nbsp;</apex:facet>
+						<apex:outputField value="{!lineItem.dto.c2g__LineNumber__c}"/>
+						<!-- Custom Analysis amend popup -->
+						<apex:outputPanel rendered="{!viewstate.ShowLineCustomAnalysisFields}">
+							<c:AnalysisPopup tooltip="{!$Label.c2g__codatoggleanalysisarea}" id="popupLine">
+								<apex:pageBlockSection title="{!$Label.c2g__codaanalysis}" collapsible="false" columns="1" id="lineAnalysis">
+									<apex:repeat value="{!LineAnalysisFields}" var="analysisField">
+							        	<apex:pageBlockSectionItem >
+							        		<apex:outputLabel value="{!$ObjectType.c2g__codaJournalLineItem__c.fields[analysisField].label}" style="white-space: nowrap;"/>
+							        		<apex:outputPanel >
+							        			<apex:inputField value="{!lineItem.dto[analysisField]}" rendered="{!viewstate.CanAmendAnalysis}" styleClass="popupDataFieldInput"/>
+							        			<span class="popupDataFieldOutput">
+							        				<apex:outputField value="{!lineItem.dto[analysisField]}" rendered="{!!viewstate.CanAmendAnalysis}"/>
+							        			</span>
+							        		</apex:outputPanel>
+							        	</apex:pageBlockSectionItem>
+							        </apex:repeat>
+								</apex:pageBlockSection>
+							</c:AnalysisPopup>
+						</apex:outputPanel>
+					</apex:column>
+
+					<apex:column styleClass="widthauto">
+						<apex:facet name="header">{!$ObjectType.c2g__codaJournalLineItem__c.fields.c2g__LineType__c.label}</apex:facet>
+						<apex:outputField id="linetype_cancel" value="{!lineItem.dto.c2g__LineType__c}" />
+					</apex:column>
+
+					<apex:column styleClass="widthauto">
+						<apex:facet name="header">{!$Label.c2g__codalineitem}</apex:facet>
+						<apex:outputPanel id="accountPanel" layout="block" rendered="{!lineItem.isAccountLine}">
+							<apex:outputField id="account_cancel" value="{!lineItem.dto.c2g__Account__c}"/>
+						</apex:outputPanel>
+						<apex:outputPanel id="bankPanel" layout="block" rendered="{!lineItem.isBankAccountLine}">
+							<apex:outputField id="bank_cancel" value="{!lineItem.dto.c2g__BankAccount__c}"/>
+						</apex:outputPanel>
+						<apex:outputPanel id="productPanel" layout="block" rendered="{!lineItem.isProductLine}">
+							<apex:outputField id="product_cancel" value="{!lineItem.dto.c2g__Product__c}"/>
+						</apex:outputPanel>
+						<apex:outputPanel id="taxcodePanel" layout="block" rendered="{!lineItem.isTaxcodeLine}">
+							<apex:outputField id="taxcode_cancel" value="{!lineItem.dto.c2g__TaxCode__c}"/>
+						</apex:outputPanel>
+						<apex:outputPanel id="destcompanyPanel" layout="block" rendered="{!lineItem.IsIntercompanyLine}">
+							<apex:outputField id="destcompany" value="{!lineItem.dto.c2g__DestinationCompany__c}"/>
+						</apex:outputPanel>
+					</apex:column>
+
+					<apex:column rendered="{!!viewstate.showLocalGLA}">
+						<apex:facet name="header">{!$ObjectType.c2g__codaJournalLineItem__c.fields.c2g__GeneralLedgerAccount__c.label}</apex:facet>
+						<apex:outputField id="gla" value="{!lineItem.dto.c2g__GeneralLedgerAccount__c}"/>
+					</apex:column>	
+					
+					<apex:column rendered="{!viewstate.showLocalGLA}">
+						<apex:facet name="header">{!$ObjectType.c2g__codaJournalLineItem__c.fields.c2g__LocalGLA__c.label}</apex:facet>
+						<apex:outputField id="localGla" value="{!lineItem.dto.c2g__LocalGLA__c}"/>
+					</apex:column>
+
+					<apex:column styleClass="widthauto" rendered="{!viewstate.IsDebitCreditIndicatorOn}">
+						<apex:facet name="header">{!$ObjectType.c2g__codaJournalLineItem__c.fields.c2g__DebitCredit__c.label}</apex:facet>
+						<apex:outputField id="lineDebitCredit_cancel" value="{!lineItem.dto.c2g__DebitCredit__c}"/>
+					</apex:column>
+
+					<apex:column styleClass="widthauto alignright" headerClass="alignright">
+						<apex:facet name="header">{!$Label.c2g__codapagejournaleditamount}</apex:facet>
+						<apex:outputText id="value" value="{!lineItem.Value}" styleClass="alignright" />
+					</apex:column>
+					<apex:column >
+						<apex:facet name="header">{!$ObjectType.c2g__codaJournalLineItem__c.fields.c2g__LineDescription__c.label}</apex:facet>
+						<apex:inputField id="lineDescription_cancel" styleClass="columnWidth" value="{!lineItem.dto.c2g__LineDescription__c}"/>
+					</apex:column>
+
+					<apex:column styleClass="widthauto">
+						<apex:facet name="header">{!$ObjectType.c2g__codaJournalLineItem__c.fields.c2g__Dimension1__c.label}</apex:facet>
+						<apex:inputField id="lineDim1_cancel" styleClass="lookupColumnWidth" value="{!lineItem.dto.c2g__Dimension1__c}" rendered="{!viewstate.EnableEditDimensions}"/>
+						<apex:outputField id="lineDim1_cancel2" value="{!lineItem.dto.c2g__Dimension1__c}" rendered="{!!viewstate.EnableEditDimensions}"/>
+					</apex:column>
+
+					<apex:column styleClass="widthauto">
+						<apex:facet name="header">{!$ObjectType.c2g__codaJournalLineItem__c.fields.c2g__Dimension2__c.label}</apex:facet>
+						<apex:inputField id="lineDim2_cancel" styleClass="lookupColumnWidth" value="{!lineItem.dto.c2g__Dimension2__c}" rendered="{!viewstate.EnableEditDimensions}"/>
+						<apex:outputField id="lineDim2_cancel2" value="{!lineItem.dto.c2g__Dimension2__c}" rendered="{!!viewstate.EnableEditDimensions}"/>
+					</apex:column>
+
+					<apex:column styleClass="widthauto">
+						<apex:facet name="header">{!$ObjectType.c2g__codaJournalLineItem__c.fields.c2g__Dimension3__c.label}</apex:facet>
+						<apex:inputField id="lineDim3_cancel" styleClass="lookupColumnWidth" value="{!lineItem.dto.c2g__Dimension3__c}" rendered="{!viewstate.EnableEditDimensions}"/>
+						<apex:outputField id="lineDim3_cancel2" value="{!lineItem.dto.c2g__Dimension3__c}" rendered="{!!viewstate.EnableEditDimensions}"/>
+					</apex:column>
+
+					<apex:column styleClass="widthauto">
+						<apex:facet name="header">{!$ObjectType.c2g__codaJournalLineItem__c.fields.c2g__Dimension4__c.label}</apex:facet>
+						<apex:inputField id="lineDim4_cancel" styleClass="lookupColumnWidth" value="{!lineItem.dto.c2g__Dimension4__c}" rendered="{!viewstate.EnableEditDimensions}"/>
+						<apex:outputField id="lineDim4_cancel2" value="{!lineItem.dto.c2g__Dimension4__c}" rendered="{!!viewstate.EnableEditDimensions}"/>
+					</apex:column>
+				</apex:pageBlockTable>
+			</apex:pageBlockSection>
+			<!-- Journal Status -->
+			<apex:pageBlockSection title="{!$Label.c2g__codapagejournalviewjournalstatus}">
+				<apex:outputField value="{!viewstate.journal.dto.c2g__JournalStatus__c}"/>
+				<apex:outputField value="{!viewstate.journal.dto.c2g__DiscardReason__c}"/>
+			</apex:pageBlockSection>
+		</apex:pageBlock>
+	</apex:form>
+	<!-- Notes and Attachments -->
+	<apex:relatedList list="CombinedAttachments"/>
+
+	<script type="text/javascript" src="{!URLFOR($Resource.front_journal,'front_journal/base/frameworks/jquery-1.5.min.js')}"></script>
+	<script type="text/javascript">
+		var $FFDC = jQuery.noConflict();
+
+		function setExpanderPosition(linkDom)
+		{
+			var expanderDom = $FFDC('#taxTotalsDetail'),
+				taxValues = expanderDom.find('.data2Col'),
+				length = taxValues.length,
+				existsTaxes = false,
+				styleArray = {},
+				arrowBgPositionX = '0px',
+				arrowBgPositionY = '0px',
+				i;
+
+			if(expanderDom.is(':visible')) {
+				styleArray = {
+					'min-width': '175px',
+					'left': '-25px',
+					'top': '27px'
+				};
+				expanderDom.css(styleArray);
+				arrowBgPositionX = '20px';
+			}
+
+			for (i = 0; i < length && !existsTaxes; i++) {
+				if ($FFDC(taxValues[i]).html() !== '0.00'){
+					existsTaxes = true;
+				}
+			}
+
+			// Manage arrow color
+			if(existsTaxes) {
+				arrowBgPositionY = '-20px';
+			}
+
+			$FFDC(linkDom).find('img').css('background-position', arrowBgPositionX + " " + arrowBgPositionY);
+		}
+
+		/**
+		* Required to correct the position and width of the custom analysis popup on the header, calling CODA.toggleHeaderExpand() will expand the header
+		* and deal with changing the rotating triangle icon but for some reason for both header popups (this one and tax total detail) it guesses
+		* the completely wrong top and left values, moving the popup off the screen to the bottom right
+		* @param {Element} linkEl The javascript object representing the anchor tag that called this method
+		*/
+		function setHeaderAnalysisExpanderPosition(linkEl)
+		{
+			var expanderEl = $FFDC($FFDC(linkEl).siblings('.headerexpander')[0]),
+				xPos = $FFDC(linkEl).position().left,
+				yPos = $FFDC(linkEl).position().top,
+				currentWidth = parseInt($FFDC(expanderEl).css('width'));
+
+			expanderEl.css('left', xPos - 50);
+			expanderEl.css('top', yPos + 20);
+			expanderEl.css('width', currentWidth / 2);
+		}
+
+		/**
+		* Required to correct the width of the line item popups.  CODA.showExtraArea() guesses the width of the popup based on the width of the data table
+		* minus 40 pixels.  The data table on this page is much wider than normal (because of the dimensions on the row) so the width was almost the same
+		* width of the screen, this method halfs the default width that showExtraArea() has set to make the page look better
+		* @param {String} expanderId The HTML ID for the expander div
+		*/
+		function fixPopupWidth(expanderId)
+		{
+			var expander = document.getElementById(expanderId),
+				expanderEl = $FFDC(expander),
+				currentWidth = parseInt(expanderEl.css('width')),
+				currentLeft = parseInt(expanderEl.css('left'));
+
+			expanderEl.css('width', currentWidth / 2);
+			expanderEl.css('left', currentLeft + 100);
+		}
+
+		$FFDC(document).ready(function() {
+			setExpanderPosition($FFDC('.taxTotalsLink'));
+			CODA.setExpanderIconState('view');
+		});
+	</script>
+</apex:page>

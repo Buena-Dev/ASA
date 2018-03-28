@@ -1,0 +1,89 @@
+<!-- CODACacheManagement -->
+<apex:page controller="c2g.CODACacheManagementController">
+	<script src="{!URLFOR($Resource.coda2go,'coda2go/web/script/lib.js')}" type="text/javascript"></script>
+	<script>
+		CODA.documentFunctionTimer("keyup", CODA.executeQueue, 1500);
+		CODA.documentFunctionTimer("click", CODA.executeQueue, 1500);
+		var CODA2GoButtons = new CODA2GoPage();
+		var CODA2GoBtnSaveValue = "{!$Label.codaCacheManagementPageBtnEventProcessing}";
+	</script>
+	<apex:stylesheet value="{!URLFOR($Resource.c2g__coda2go,'coda2go/web/css/style.css')}"/>
+	
+	<apex:form onsubmit="if(CODA2GoButtons.disableSaveButtons){ return CODA2GoButtons.disableSaveButtons(); }">
+		<div id="indicator"><img src="/s.gif" align="absMiddle"/><span id="indicatortext"></span></div>
+		<!-- Header -->
+		<apex:sectionHeader title="{!$Label.c2g__codacachemanagementpagetitle}" subtitle="{!$Label.c2g__codacachemanagementpagesubtitle}"/>
+		
+		<apex:pageBlock id="CacheManagementBlock" mode="edit">
+
+			<!-- Messages -->
+			<!--id is given for rerendering -->
+            <apex:pageMessages id="messagePanel"/>
+			
+            <!-- Buttons -->
+            <apex:pageBlockButtons location="top" rendered="{!!viewstate.isInfo}" id="cacheButtons">
+				<table border="0">
+					<tr>
+						<td width="120px"><apex:commandButton value="{!$Label.c2g__codacachemanagementpagebtnpurgetax}" id="purgeTax" action="{!purgeTaxCache}" onclick="CODA.indicatorOn('{!$Label.c2g__codacachemanagementpagebtneventpurgetax}');" oncomplete="CODA.indicatorOff();" reRender="CacheManagementBlock"/></td>
+						<td><apex:commandButton value="{!$Label.c2g__codacachemanagementpagebtnpurgeex}" id="purgeEx" action="{!purgeExCache}" onclick="CODA.indicatorOn('{!$Label.c2g__codacachemanagementpagebtneventpurgeex}');" oncomplete="CODA.indicatorOff();" reRender="CacheManagementBlock"/></td>
+					</tr>
+					<tr>
+						<td><apex:commandButton value="{!$Label.c2g__codacachemanagementpagebtnrebuildtax}" id="rebuildTax" action="{!rebuildTaxCache}" onclick="CODA.indicatorOn('{!$Label.c2g__codacachemanagementpagebtneventrebuildtax}');" oncomplete="CODA.indicatorOff();" reRender="CacheManagementBlock"/></td>
+						<td><apex:commandButton value="{!$Label.c2g__codacachemanagementpagebtnrebuildex}" id="rebuildEx" action="{!rebuildExCache}" onclick="CODA.indicatorOn('{!$Label.c2g__codacachemanagementpagebtneventrebuildex}');" oncomplete="CODA.indicatorOff();" reRender="CacheManagementBlock"/></td>
+					</tr>
+				</table>
+                <script>
+                    CODA2GoButtons.initButtons(["{!$Component.purgeTax}","{!$Component.purgeEx}","{!$Component.rebuildTax}","{!$Component.rebuildEx}"]);
+                </script>
+            </apex:pageBlockButtons>
+            
+            <apex:pageBlockSection id="IDfields" title="{!$Label.c2g__codacachemanagementsectiontitle}" columns="2" rendered="{!!viewstate.isInfo}">
+				
+				<apex:pageBlockSectionItem >
+                    <apex:outputLabel value="{!$Label.c2g__codacachemanagementcurrencyfield}"/>
+                    <apex:outputPanel id="currencyIDPanel" styleClass="widthauto floatleft">
+                        <apex:inputText value="{!viewstate.currency}" styleClass="floatleft"/>
+                        <apex:commandButton value="{!$Label.c2g__codacachemanagementgetcurrencybutton}" id="currCacheBtn" action="{!getCurrencyCache}" onclick="CODA.indicatorOn('{!$Label.c2g__codacachemanagementretieveevent}');" oncomplete="CODA.indicatorOff();" reRender="messagePanel,cacheContentSection,cacheContentPanel" styleClass="btntextwrap"/>
+                        <script>
+		                    CODA2GoButtons.initButtons(["{!$Component.currCacheBtn}"]);
+		                </script>
+                    </apex:outputPanel>
+                </apex:pageBlockSectionItem>
+				
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="{!$Label.c2g__codacachemanagementtaxfield}"/>
+                    <apex:outputPanel id="taxCodeIDPanel" styleClass="widthauto floatleft">
+                        <apex:inputText value="{!viewstate.taxCode}" styleClass="floatleft"/>
+                        <apex:commandButton value="{!$Label.c2g__codacachemanagementgettaxbutton}" id="taxCacheBtn" action="{!getTaxCache}" onclick="CODA.indicatorOn('{!$Label.c2g__codacachemanagementcachecontentfield}');" oncomplete="CODA.indicatorOff();" reRender="messagePanel,cacheContentSection,cacheContentPanel" styleClass="btntextwrap"/>
+                        <script>
+		                    CODA2GoButtons.initButtons(["{!$Component.taxCacheBtn}"]);
+		                </script>
+                    </apex:outputPanel>
+                </apex:pageBlockSectionItem>
+                
+			</apex:pageBlockSection>
+			
+			<apex:pageBlockSection id="cacheContentSection" columns="1" rendered="{!!viewstate.isInfo}">
+			
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel id="CacheLabel" value="{!$Label.c2g__codacachemanagementcachecontentfield}"/>
+                    <apex:outputPanel id="cacheContentPanel" styleClass="widthauto floatleft">
+                        <apex:inputTextarea value="{!cacheContent}" id="CacheValue" rows="10" cols="115" disabled="true" styleClass="floatleft"/>
+                    </apex:outputPanel>
+				</apex:pageBlockSectionItem>
+				
+            </apex:pageBlockSection>
+            
+            
+            <apex:pageBlockButtons location="bottom" rendered="{!viewstate.isInfo}" id="backBlockButton">
+				<apex:commandButton value="{!$Label.c2g__codacachemanagementpagebtnback}" id="back" action="{!back}" onclick="CODA.indicatorOn('{!$Label.c2g__codacachemanagementpageeventback}');" oncomplete="CODA.indicatorOff();" reRender="CacheManagementBlock"/>
+                <script>
+                    CODA2GoButtons.initButtons(["{!$Component.back}"]);
+                </script>
+            </apex:pageBlockButtons>
+            
+		</apex:pageBlock>
+	
+	</apex:form>
+	
+</apex:page>

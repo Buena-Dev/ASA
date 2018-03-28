@@ -1,0 +1,16 @@
+<table border="0" cellpadding="5" width="550" cellspacing="5" height="400" >
+<tr valign="top" height="400" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[<p class="MsoNormal"><br></p><p class="MsoNormal">Dear {!Receiving_User.FirstName}:</p><p class="MsoNormal"><span style="font-size: 12pt;"><br></span></p><p class="MsoNormal"><span style="font-size: 12pt;">Thank you for registering to use to the Salt Administrator
+Portal.</span></p><p class="MsoNormal"><span style="font-size: 12pt;"><br></span></p>
+
+<p class="MsoNormal">As we continue to develop and add new features to the Admin
+Portal we’d love to get your input on how we’re doing so far. Please <a href="http://app.keysurvey.com/f/1134406/87f5/">take this
+short survey</a> to provide us feedback on the Admin Portal and what additional
+features you might want to see added.</p><p class="MsoNormal"><br></p><p class="MsoNormal"><br></p>
+
+<p class="MsoNormal">Thank You,<o:p></o:p></p>
+
+<p class="MsoNormal">Salt Admin Portal Team<o:p></o:p></p>]]></td>
+</tr>
+</table>

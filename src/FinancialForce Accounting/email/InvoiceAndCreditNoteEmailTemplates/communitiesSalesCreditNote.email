@@ -1,0 +1,18 @@
+<messaging:emailTemplate subject="{!relatedTo.Account__r.Name} {!$Label.c2g__communitiesemailsalescreditnote} {!relatedTo.Name}" recipientType="Contact" relatedToType="c2g__codaCreditNote__c">
+<messaging:plainTextEmailBody >
+{!$Label.c2g__communitiesemailsalescreditnotenumber} {!relatedTo.Name}
+
+{!$Label.c2g__communitiesemailbodysignup} {!$Label.c2g__communitiesemailbodycommunity} {!$Label.c2g__communitiesemailbodytoviewandprintscrn}
+
+{!$Label.c2g__communitiesemailfootertext}
+{!$Label.c2g__communitiesemailfooterfurl}
+</messaging:plainTextEmailBody>
+<messaging:HtmlEmailBody >
+{!$Label.c2g__communitiesemailsalescreditnotenumber} {!relatedTo.Name}<br/><br/>
+
+{!$Label.c2g__communitiesemailbodysignup} <a href="CommunityURL">{!$Label.c2g__communitiesemailbodycommunity}</a> {!$Label.c2g__communitiesemailbodytoviewandprintscrn}<br/><br/>
+
+{!$Label.c2g__communitiesemailfootertext}<br/>
+<a href="http://www.financialforce.com">{!$Label.c2g__communitiesemailfooterfurl}</a>
+</messaging:HtmlEmailBody>
+</messaging:emailTemplate>

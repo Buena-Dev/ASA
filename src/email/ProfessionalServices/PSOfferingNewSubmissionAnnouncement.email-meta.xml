@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Message is sent to Account Team when new ProService Event is submitted.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>PS Offering - New Submission Announcement</name>
+    <style>none</style>
+    <subject>New ProService Event for {!Pro_Services_Offering__c.PS_OfferingAccount__c}</subject>
+    <type>text</type>
+</EmailTemplate>

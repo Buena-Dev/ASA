@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Industry &amp; Regulatory Update Series 2008 Save The Date</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>EmailLetterhead</letterhead>
+    <name>Industry &amp; Regulatory Updates Mass Locations (Save the Date)</name>
+    <style>promotionRight</style>
+    <subject>Save the Date!  ASA Invites you to an Industry and Regulatory Update</subject>
+    <textOnly>Are you struggling to manage your day-to-day responsibilities and stay on top of all of the industry happenings and imminent regulatory changes?
+ 
+American Student Assistance (ASA) can help.  We would like to invite you to an informal, half-day industry and regulatory update with Paul Combe, President and CEO, and Betsy Mayotte, Director of Regulatory Compliance and Privacy.  In addition, we will update you on major ASA initiatives and we would like to get your feedback on how we can best serve you during this challenging time.  
+ 
+Date, Time, and Location:
+ 
+Tuesday, April 22, 2008
+8:30 am – 12:00 pm (Continental breakfast will be provided.)
+College of the Holy Cross, Worcester
+ 
+Tuesday, April 29, 2008
+8:30 am – 12:00 pm (Continental breakfast will be provided.)
+Springfield College, Springfield
+ 
+Wednesday, April 30, 2008
+8:30 am – 12:00 pm (Continental breakfast will be provided.)
+American Student Assistance, Boston
+ 
+Who Should Attend
+School financial aid administrators interested in the most up-to-date information related to the current industry climate and expected regulatory changes in 2008.
+ 
+How You Will Benefit
+After attending, you will know what changes to anticipate as a result of negotiated rulemaking and how the changes may affect the way you administer Title IV funds.  You will also have the opportunity to have your questions answered and your concerns heard.
+ 
+How to Register 
+-          Online at http://www.amsa.com/fap/training
+-          Email your name, institution, and phone number to training@amsa.com
+-          Call ASA&apos;s Training Department at (800) 999-9080 ext. 3099
+ 
+All of ASA&apos;s training events are offered free of charge.  Training is considered one of the guarantor&apos;s core responsibilities and ASA is dedicated to providing informative and useful training events for our industry colleagues.</textOnly>
+    <type>html</type>
+</EmailTemplate>

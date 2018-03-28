@@ -1,0 +1,3066 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Reason for Contact</value>
+        </caseValues>
+        <name>case_reason</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <label><!-- ASA Launch Email --></label>
+        <name>ASA_Activation_Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- Account Email --></label>
+        <name>Account_Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- Account Server URL --></label>
+        <name>Account_Server_URL__c</name>
+    </fields>
+    <fields>
+        <label><!-- Account Team Meeting --></label>
+        <name>Account_Team_Meeting__c</name>
+    </fields>
+    <fields>
+        <label><!-- Engagement Materials Requested --></label>
+        <name>Activation_Materials_Requested__c</name>
+    </fields>
+    <fields>
+        <label><!-- Engagement Materials Sent --></label>
+        <name>Activation_Materials_Sent__c</name>
+    </fields>
+    <fields>
+        <label><!-- Engagement Plan to Client --></label>
+        <name>Activation_Plan_to_Client__c</name>
+    </fields>
+    <fields>
+        <label><!-- Engagement Process? --></label>
+        <name>Activation_Process__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- (Alumni) SALT Connect Date --></label>
+        <name>Actual_Alumni_SALT_Connect_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- (Enrolled) SALT Connect Date --></label>
+        <name>Actual_Enrolled_SALT_Connect_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Actual Go-Live Date - EDMS --></label>
+        <name>Actual_Go_Live_Date_EDMS__c</name>
+    </fields>
+    <fields>
+        <label><!-- Go-Live Date --></label>
+        <name>Actual_Go_Live_Date__c</name>
+    </fields>
+    <fields>
+        <help><!-- Select one or many topics covered with the Contact. --></help>
+        <label><!-- Actual Topics --></label>
+        <name>Actual_Topics__c</name>
+        <picklistValues>
+            <masterLabel>Beginning student loan repayment</masterLabel>
+            <translation><!-- Beginning student loan repayment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>College planning/paying for college (parents and students)</masterLabel>
+            <translation><!-- College planning/paying for college (parents and students) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Comparing_repayment_plans_and_or_postponing_payments</masterLabel>
+            <translation><!-- Comparing_repayment_plans_and_or_postponing_payments --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Consolidation and refinance</masterLabel>
+            <translation><!-- Consolidation and refinance --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Forgiveness for student loans</masterLabel>
+            <translation><!-- Forgiveness for student loans --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>General financial information (budgeting, credit, saving, etc.)</masterLabel>
+            <translation><!-- General financial information (budgeting, credit, saving, etc.) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>General student loan information</masterLabel>
+            <translation><!-- General student loan information --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Resolving delinquent student loans</masterLabel>
+            <translation><!-- Resolving delinquent student loans --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- BOS Set Up --></label>
+        <name>BOS_Set_Up__c</name>
+        <picklistValues>
+            <masterLabel>Complete</masterLabel>
+            <translation><!-- Complete --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In-Progress</masterLabel>
+            <translation><!-- In-Progress --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- BPMS: Create Initiatives --></label>
+        <name>BPMS_Create_Initiatives__c</name>
+        <picklistValues>
+            <masterLabel>Delinquency</masterLabel>
+            <translation><!-- Delinquency --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Intro</masterLabel>
+            <translation><!-- Intro --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Repayment</masterLabel>
+            <translation><!-- Repayment --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- BPMS Profile Creation Date --></label>
+        <name>BPMS_Profile_Creation_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Secondary Barrier Reasons --></label>
+        <name>Barrier__c</name>
+        <picklistValues>
+            <masterLabel>Connect Date NOT Set</masterLabel>
+            <translation><!-- Connect Date NOT Set --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Connect Date in Future</masterLabel>
+            <translation><!-- Connect Date in Future --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Demographic File</masterLabel>
+            <translation><!-- Demographic File --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Demographic File and NSLDS Access</masterLabel>
+            <translation><!-- Demographic File and NSLDS Access --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lack Of Campus Support</masterLabel>
+            <translation><!-- Lack Of Campus Support --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NSLDS Access</masterLabel>
+            <translation><!-- NSLDS Access --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No Implementation Call</masterLabel>
+            <translation><!-- No Implementation Call --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Select the value that best describes the primary reason for Barrier to Implementation. --></help>
+        <label><!-- Barrier to Implementation --></label>
+        <name>Barrier_to_Implementation__c</name>
+        <picklistValues>
+            <masterLabel>Connect Date In Future</masterLabel>
+            <translation><!-- Connect Date In Future --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Connect Date Not Set</masterLabel>
+            <translation><!-- Connect Date Not Set --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Demographic File</masterLabel>
+            <translation><!-- Demographic File --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Demographic File and NSLDS Access</masterLabel>
+            <translation><!-- Demographic File and NSLDS Access --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lack of Campus Support</masterLabel>
+            <translation><!-- Lack of Campus Support --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NSLDS Access</masterLabel>
+            <translation><!-- NSLDS Access --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No Implementation Call</masterLabel>
+            <translation><!-- No Implementation Call --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Billing Set Up Form --></label>
+        <name>Billing_Set_Up_Form__c</name>
+        <picklistValues>
+            <masterLabel>N/A</masterLabel>
+            <translation><!-- N/A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Received</masterLabel>
+            <translation><!-- Received --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sent</masterLabel>
+            <translation><!-- Sent --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Borrower Populations: Entered Repayment --></label>
+        <name>Borrower_Population__c</name>
+        <picklistValues>
+            <masterLabel>Existing: Prior to 10/1/2009</masterLabel>
+            <translation><!-- Existing: Prior to 10/1/2009 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New: 10/1/2009 - 9/30/2010 or later</masterLabel>
+            <translation><!-- New: 10/1/2009 - 9/30/2010 or later --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Branch Codes --></label>
+        <name>Branch_Codes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Business Impact --></label>
+        <name>Business_Impact__c</name>
+        <picklistValues>
+            <masterLabel>Major</masterLabel>
+            <translation><!-- Major --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Minor</masterLabel>
+            <translation><!-- Minor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Moderate</masterLabel>
+            <translation><!-- Moderate --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- A check in this field indicates the Client Manager has established a SALT account for this client. --></help>
+        <label><!-- CM SALT Member Account --></label>
+        <name>CM_SALT_Member_Account__c</name>
+    </fields>
+    <fields>
+        <label><!-- Campus Engagement Visit --></label>
+        <name>Campus_Activation_Visit__c</name>
+    </fields>
+    <fields>
+        <label><!-- Campus re-engagement meeting --></label>
+        <name>Campus_re_engagement_meeting__c</name>
+    </fields>
+    <fields>
+        <label><!-- Client Ad on SALT --></label>
+        <name>Client_Ad_on_SALT__c</name>
+        <picklistValues>
+            <masterLabel>Large</masterLabel>
+            <translation><!-- Large --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Small</masterLabel>
+            <translation><!-- Small --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Client Onboarding Folder Set Up Status --></label>
+        <name>Client_Onboarding_Folder_Set_Up_Status__c</name>
+        <picklistValues>
+            <masterLabel>Complete</masterLabel>
+            <translation><!-- Complete --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Submitted</masterLabel>
+            <translation><!-- Submitted --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- A check in this field indicates the customer established has an account on the Client Portal. --></help>
+        <label><!-- Client Portal Access --></label>
+        <name>Client_Portal_Access__c</name>
+    </fields>
+    <fields>
+        <help><!-- access to saltmoney.org --></help>
+        <label><!-- Client SALT Access granted --></label>
+        <name>Client_SALT_Access_granted__c</name>
+    </fields>
+    <fields>
+        <label><!-- Closed By --></label>
+        <name>Closed_By__c</name>
+        <relationshipLabel><!-- Cases --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Co-Branded Communications --></label>
+        <name>Co_Branded_Communications__c</name>
+        <picklistValues>
+            <masterLabel>N/A</masterLabel>
+            <translation><!-- N/A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes - Intiated</masterLabel>
+            <translation><!-- Yes - Intiated --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes – Completed</masterLabel>
+            <translation><!-- Yes – Completed --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Co-Branded Website --></label>
+        <name>Co_Branded_Website__c</name>
+        <picklistValues>
+            <masterLabel>N/A</masterLabel>
+            <translation><!-- N/A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes - Completed</masterLabel>
+            <translation><!-- Yes - Completed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes - Intiated</masterLabel>
+            <translation><!-- Yes - Intiated --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Collateral Setup --></label>
+        <name>Collateral_Setup__c</name>
+        <picklistValues>
+            <masterLabel>Completed</masterLabel>
+            <translation><!-- Completed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>N/A</masterLabel>
+            <translation><!-- N/A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pending</masterLabel>
+            <translation><!-- Pending --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>WIP</masterLabel>
+            <translation><!-- WIP --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Comm Materials Sent --></label>
+        <name>Comm_Materials_Sent__c</name>
+    </fields>
+    <fields>
+        <label><!-- Comm Mktg Materials Requested --></label>
+        <name>Comm_Mktg_Materials_Requested__c</name>
+        <picklistValues>
+            <masterLabel>Banner Ad</masterLabel>
+            <translation><!-- Banner Ad --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Email Copy</masterLabel>
+            <translation><!-- Email Copy --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fliers</masterLabel>
+            <translation><!-- Fliers --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Letter Copy</masterLabel>
+            <translation><!-- Letter Copy --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Print Ad</masterLabel>
+            <translation><!-- Print Ad --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>URL</masterLabel>
+            <translation><!-- URL --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Communications Calendar Sent --></label>
+        <name>Communications_Calendar__c</name>
+    </fields>
+    <fields>
+        <label><!-- Confidentiality Agreement Status --></label>
+        <name>Confidentiality_Agreement_Status__c</name>
+        <picklistValues>
+            <masterLabel>Received</masterLabel>
+            <translation><!-- Received --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sent</masterLabel>
+            <translation><!-- Sent --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Contract End Date --></label>
+        <name>Contract_End_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contract Start Date --></label>
+        <name>Contract_Start_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contract requested --></label>
+        <name>Contract_requested__c</name>
+    </fields>
+    <fields>
+        <help><!-- This field calculates the number of days remaining for the Implementation to complete while the Status = WIP.  The standard is 60 days. --></help>
+        <label><!-- Count Down --></label>
+        <name>Count_Down__c</name>
+    </fields>
+    <fields>
+        <label><!-- Customer Type --></label>
+        <name>CustomerType__c</name>
+    </fields>
+    <fields>
+        <label><!-- Customer Code --></label>
+        <name>Customer_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Customer ID --></label>
+        <name>Customer_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Deprecated Customer Type --></label>
+        <name>Customer_Type__c</name>
+        <picklistValues>
+            <masterLabel>Charter</masterLabel>
+            <translation><!-- Charter --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fee for Service</masterLabel>
+            <translation><!-- Fee for Service --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>For-Profit</masterLabel>
+            <translation><!-- For-Profit --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Foundation</masterLabel>
+            <translation><!-- Foundation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lender</masterLabel>
+            <translation><!-- Lender --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>School</masterLabel>
+            <translation><!-- School --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sponsor</masterLabel>
+            <translation><!-- Sponsor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Standard</masterLabel>
+            <translation><!-- Standard --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>State Agency</masterLabel>
+            <translation><!-- State Agency --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Strategic Partner</masterLabel>
+            <translation><!-- Strategic Partner --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Date Digitial Welcome Guide Sent --></label>
+        <name>Date_Digitial_Welcome_Guide_Sent__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date Welcome Guide Sent --></label>
+        <name>Date_Welcome_Guide_Sent__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date to Send SALT Intro Letter --></label>
+        <name>Date_to_Send_SALT_Intro_Letter__c</name>
+    </fields>
+    <fields>
+        <label><!-- Delinquency Cohorts --></label>
+        <name>Delinquency_Cohorts__c</name>
+        <picklistValues>
+            <masterLabel>2011</masterLabel>
+            <translation><!-- 2011 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2012</masterLabel>
+            <translation><!-- 2012 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2013</masterLabel>
+            <translation><!-- 2013 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2014</masterLabel>
+            <translation><!-- 2014 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2015</masterLabel>
+            <translation><!-- 2015 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2016</masterLabel>
+            <translation><!-- 2016 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2017</masterLabel>
+            <translation><!-- 2017 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Demog File Processed Date --></label>
+        <name>Demog_File_Processed_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Demog File Received Date --></label>
+        <name>Demog_File_Received_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Demog File Status --></label>
+        <name>Demog_File_Status__c</name>
+        <picklistValues>
+            <masterLabel>Complete</masterLabel>
+            <translation><!-- Complete --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Testing</masterLabel>
+            <translation><!-- Testing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Validated</masterLabel>
+            <translation><!-- Validated --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>WIP</masterLabel>
+            <translation><!-- WIP --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Demog Template Sent --></label>
+        <name>Demog_Template_Sent__c</name>
+    </fields>
+    <fields>
+        <label><!-- Destination Address --></label>
+        <name>Dest_Address__c</name>
+    </fields>
+    <fields>
+        <help><!-- THis is when the EDMS profile has been updated so communciations can begin. --></help>
+        <label><!-- EDMS Activated --></label>
+        <name>EDMS_Activated__c</name>
+    </fields>
+    <fields>
+        <label><!-- EDMS Custom On Board Email --></label>
+        <name>EDMS_Custom_On_Board_Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- EDM Communication Executed --></label>
+        <name>EDM_Communication_Executed__c</name>
+    </fields>
+    <fields>
+        <label><!-- Email2Case TO Address --></label>
+        <name>Email2Case_TO_Address__c</name>
+    </fields>
+    <fields>
+        <label><!-- Estimated Go-Live Date --></label>
+        <name>Estimated_Go_Live_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Expected Go-Live EDMS --></label>
+        <name>Expected_Go_Live_EDMS__c</name>
+    </fields>
+    <fields>
+        <label><!-- Expected Go-Live SALT Courses --></label>
+        <name>Expected_Go_Live_MM_101__c</name>
+    </fields>
+    <fields>
+        <label><!-- Feed File Handler Status --></label>
+        <name>FAMS_Sign_off__c</name>
+        <picklistValues>
+            <masterLabel>Completed</masterLabel>
+            <translation><!-- Completed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In Production</masterLabel>
+            <translation><!-- In Production --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In Testing</masterLabel>
+            <translation><!-- In Testing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>N/A</masterLabel>
+            <translation><!-- N/A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pre-Testing</masterLabel>
+            <translation><!-- Pre-Testing --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- File Format --></label>
+        <name>File_Format__c</name>
+        <picklistValues>
+            <masterLabel>CSV</masterLabel>
+            <translation><!-- CSV --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Excel</masterLabel>
+            <translation><!-- Excel --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>XML</masterLabel>
+            <translation><!-- XML --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- File Source --></label>
+        <name>File_Source__c</name>
+        <picklistValues>
+            <masterLabel>ASA</masterLabel>
+            <translation><!-- ASA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>School</masterLabel>
+            <translation><!-- School --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Servicer</masterLabel>
+            <translation><!-- Servicer --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- File Type --></label>
+        <name>File_Type__c</name>
+        <picklistValues>
+            <masterLabel>ACS</masterLabel>
+            <translation><!-- ACS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AES</masterLabel>
+            <translation><!-- AES --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Citibank</masterLabel>
+            <translation><!-- Citibank --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DELQ</masterLabel>
+            <translation><!-- DELQ --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DEMOG</masterLabel>
+            <translation><!-- DEMOG --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DER</masterLabel>
+            <translation><!-- DER --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ECSI</masterLabel>
+            <translation><!-- ECSI --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Great Lakes</masterLabel>
+            <translation><!-- Great Lakes --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mohela</masterLabel>
+            <translation><!-- Mohela --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nelnet</masterLabel>
+            <translation><!-- Nelnet --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sallie Mae</masterLabel>
+            <translation><!-- Sallie Mae --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wells Fargo</masterLabel>
+            <translation><!-- Wells Fargo --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>XLS</masterLabel>
+            <translation><!-- XLS --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- File Type(s): ASA Source --></label>
+        <name>File_Type_s_ASA_Source__c</name>
+        <picklistValues>
+            <masterLabel>ACS</masterLabel>
+            <translation><!-- ACS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AES</masterLabel>
+            <translation><!-- AES --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Citibank</masterLabel>
+            <translation><!-- Citibank --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ECSI</masterLabel>
+            <translation><!-- ECSI --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Great Lakes</masterLabel>
+            <translation><!-- Great Lakes --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mohela</masterLabel>
+            <translation><!-- Mohela --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nelnet</masterLabel>
+            <translation><!-- Nelnet --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sallie Mae</masterLabel>
+            <translation><!-- Sallie Mae --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wells Fargo</masterLabel>
+            <translation><!-- Wells Fargo --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>XLS</masterLabel>
+            <translation><!-- XLS --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- File Type(s): School Source --></label>
+        <name>File_Type_s_School_Source__c</name>
+        <picklistValues>
+            <masterLabel>ACS</masterLabel>
+            <translation><!-- ACS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AES</masterLabel>
+            <translation><!-- AES --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Citibank</masterLabel>
+            <translation><!-- Citibank --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DELQ</masterLabel>
+            <translation><!-- DELQ --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DEMOG</masterLabel>
+            <translation><!-- DEMOG --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DER</masterLabel>
+            <translation><!-- DER --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ECSI</masterLabel>
+            <translation><!-- ECSI --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Great Lakes</masterLabel>
+            <translation><!-- Great Lakes --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mohela</masterLabel>
+            <translation><!-- Mohela --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nelnet</masterLabel>
+            <translation><!-- Nelnet --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sallie Mae</masterLabel>
+            <translation><!-- Sallie Mae --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wells Fargo</masterLabel>
+            <translation><!-- Wells Fargo --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>XLS</masterLabel>
+            <translation><!-- XLS --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- File Type(s): Servicer Source --></label>
+        <name>File_Type_s_Servicer_Source__c</name>
+        <picklistValues>
+            <masterLabel>ACS</masterLabel>
+            <translation><!-- ACS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AES</masterLabel>
+            <translation><!-- AES --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Citibank</masterLabel>
+            <translation><!-- Citibank --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ECSI</masterLabel>
+            <translation><!-- ECSI --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Great Lakes</masterLabel>
+            <translation><!-- Great Lakes --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mohela</masterLabel>
+            <translation><!-- Mohela --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nelnet</masterLabel>
+            <translation><!-- Nelnet --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sallie Mae</masterLabel>
+            <translation><!-- Sallie Mae --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wells Fargo</masterLabel>
+            <translation><!-- Wells Fargo --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>XLS</masterLabel>
+            <translation><!-- XLS --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Files Tested --></label>
+        <name>Files_Tested__c</name>
+        <picklistValues>
+            <masterLabel>ACS</masterLabel>
+            <translation><!-- ACS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AES</masterLabel>
+            <translation><!-- AES --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Citibank</masterLabel>
+            <translation><!-- Citibank --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DELQQ</masterLabel>
+            <translation><!-- DELQQ --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DEMOG</masterLabel>
+            <translation><!-- DEMOG --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DER</masterLabel>
+            <translation><!-- DER --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ECSI</masterLabel>
+            <translation><!-- ECSI --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Great Lakes</masterLabel>
+            <translation><!-- Great Lakes --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mohela</masterLabel>
+            <translation><!-- Mohela --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nelnet</masterLabel>
+            <translation><!-- Nelnet --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PHEAA</masterLabel>
+            <translation><!-- PHEAA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Private / Ins. Loan</masterLabel>
+            <translation><!-- Private / Ins. Loan --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SLMA</masterLabel>
+            <translation><!-- SLMA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Student Loan Express</masterLabel>
+            <translation><!-- Student Loan Express --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wells Fargo</masterLabel>
+            <translation><!-- Wells Fargo --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Final Count Down Number --></label>
+        <name>Final_Count_Down_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Financial Education Buy-off --></label>
+        <name>Financial_Literacy_Buy_off__c</name>
+        <picklistValues>
+            <masterLabel>Completed</masterLabel>
+            <translation><!-- Completed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>N/A</masterLabel>
+            <translation><!-- N/A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pending</masterLabel>
+            <translation><!-- Pending --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>WIP</masterLabel>
+            <translation><!-- WIP --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Folder Setup Completion Date --></label>
+        <name>Folder_Setup_Completion_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Global Contact Exclusions --></label>
+        <name>Global_Contact_Exclusions__c</name>
+        <picklistValues>
+            <masterLabel>N/A</masterLabel>
+            <translation><!-- N/A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No Email  Cathleen Kellogg</masterLabel>
+            <translation><!-- No Email  Cathleen Kellogg --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No Outbound Phone</masterLabel>
+            <translation><!-- No Outbound Phone --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No Print  Cathleen Kellogg</masterLabel>
+            <translation><!-- No Print  Cathleen Kellogg --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Go Live Date --></label>
+        <name>Go_Live_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Implementation Notes: --></label>
+        <name>Implementation_Notes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Implementation Progress --></label>
+        <name>Implementation_Progress__c</name>
+    </fields>
+    <fields>
+        <label><!-- Implementation Training --></label>
+        <name>Implementation_Training__c</name>
+    </fields>
+    <fields>
+        <label><!-- Initial Engagement Call --></label>
+        <name>Initial_Activation_Call__c</name>
+    </fields>
+    <fields>
+        <label><!-- Initial Implementation Call --></label>
+        <name>Initial_Implementation_Call__c</name>
+    </fields>
+    <fields>
+        <label><!-- Initial Internal Implementation Meeting --></label>
+        <name>Initial_Internal_Implementation_Meeting__c</name>
+    </fields>
+    <fields>
+        <label><!-- Initiative Schedules --></label>
+        <name>Initiative_Schedules__c</name>
+        <picklistValues>
+            <masterLabel>Completed</masterLabel>
+            <translation><!-- Completed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>N/A</masterLabel>
+            <translation><!-- N/A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pending</masterLabel>
+            <translation><!-- Pending --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>WIP</masterLabel>
+            <translation><!-- WIP --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Initiatives --></label>
+        <name>Initiatives__c</name>
+        <picklistValues>
+            <masterLabel>Delinquency</masterLabel>
+            <translation><!-- Delinquency --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Intro</masterLabel>
+            <translation><!-- Intro --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Repayment</masterLabel>
+            <translation><!-- Repayment --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Invoicing Profile --></label>
+        <name>Invoicing_Profile__c</name>
+        <picklistValues>
+            <masterLabel>Completed</masterLabel>
+            <translation><!-- Completed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pending</masterLabel>
+            <translation><!-- Pending --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>WIP</masterLabel>
+            <translation><!-- WIP --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Invoicing Form --></label>
+        <name>Invoicing_Set_up_Form__c</name>
+        <picklistValues>
+            <masterLabel>Completed</masterLabel>
+            <translation><!-- Completed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>N/A</masterLabel>
+            <translation><!-- N/A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pending</masterLabel>
+            <translation><!-- Pending --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>WIP</masterLabel>
+            <translation><!-- WIP --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Last Inbound Message --></label>
+        <name>Last_Inbound_Message__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lender Code Conf Status --></label>
+        <name>Lender_Code_Conf_Status__c</name>
+        <picklistValues>
+            <masterLabel>Completed</masterLabel>
+            <translation><!-- Completed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>N/A</masterLabel>
+            <translation><!-- N/A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pending</masterLabel>
+            <translation><!-- Pending --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>WIP</masterLabel>
+            <translation><!-- WIP --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Loan Type --></label>
+        <name>Loan_Type__c</name>
+        <picklistValues>
+            <masterLabel>Grad PLUS</masterLabel>
+            <translation><!-- Grad PLUS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Institutional</masterLabel>
+            <translation><!-- Institutional --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MA - NIL</masterLabel>
+            <translation><!-- MA - NIL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PLUS</masterLabel>
+            <translation><!-- PLUS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Perkins</masterLabel>
+            <translation><!-- Perkins --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sub</masterLabel>
+            <translation><!-- Sub --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unsub</masterLabel>
+            <translation><!-- Unsub --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Logo Specs Sent --></label>
+        <name>Logo_Specs_Sent__c</name>
+    </fields>
+    <fields>
+        <label><!-- Logo Specs Status --></label>
+        <name>Logo_Specs_Status__c</name>
+        <picklistValues>
+            <masterLabel>Published</masterLabel>
+            <translation><!-- Published --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Received</masterLabel>
+            <translation><!-- Received --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sent</masterLabel>
+            <translation><!-- Sent --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Submitted</masterLabel>
+            <translation><!-- Submitted --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Logo Submitted --></label>
+        <name>Logo_Submitted__c</name>
+    </fields>
+    <fields>
+        <label><!-- Logos Received --></label>
+        <name>Logos_Received__c</name>
+    </fields>
+    <fields>
+        <label><!-- SALT Courses Buy off --></label>
+        <name>MM101_Buy_off__c</name>
+        <picklistValues>
+            <masterLabel>Completed</masterLabel>
+            <translation><!-- Completed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>N/A</masterLabel>
+            <translation><!-- N/A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pending</masterLabel>
+            <translation><!-- Pending --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>WIP</masterLabel>
+            <translation><!-- WIP --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- SALT Courses Customization Call --></label>
+        <name>MM_101_Customization_Call__c</name>
+    </fields>
+    <fields>
+        <label><!-- SALT Courses Customization Set Up Status --></label>
+        <name>MM_101_Customization_Set_Up_Status__c</name>
+        <picklistValues>
+            <masterLabel>Complete</masterLabel>
+            <translation><!-- Complete --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In-Progress</masterLabel>
+            <translation><!-- In-Progress --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- SALT Courses Demo Date --></label>
+        <name>MM_101_Demo_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- SALT Courses Staging Status --></label>
+        <name>MM_101_Staging_Status__c</name>
+        <picklistValues>
+            <masterLabel>Received</masterLabel>
+            <translation><!-- Received --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Requested</masterLabel>
+            <translation><!-- Requested --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sent</masterLabel>
+            <translation><!-- Sent --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- MPN Serialization Status --></label>
+        <name>MPN_Serialization_Status__c</name>
+        <picklistValues>
+            <masterLabel>Completed</masterLabel>
+            <translation><!-- Completed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>N/A</masterLabel>
+            <translation><!-- N/A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pending</masterLabel>
+            <translation><!-- Pending --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>WIP</masterLabel>
+            <translation><!-- WIP --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- MPN Serialization --></label>
+        <name>MPN_Serialization__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Serialization Parent Link --></label>
+        <name>MPN_Serialization_link__c</name>
+    </fields>
+    <fields>
+        <label><!-- Moment of Truth Cohorts --></label>
+        <name>Moment_of_Truth_Cohorts__c</name>
+        <picklistValues>
+            <masterLabel>2009</masterLabel>
+            <translation><!-- 2009 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2010</masterLabel>
+            <translation><!-- 2010 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2011</masterLabel>
+            <translation><!-- 2011 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2012</masterLabel>
+            <translation><!-- 2012 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2013</masterLabel>
+            <translation><!-- 2013 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2014</masterLabel>
+            <translation><!-- 2014 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2015</masterLabel>
+            <translation><!-- 2015 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2016</masterLabel>
+            <translation><!-- 2016 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2017</masterLabel>
+            <translation><!-- 2017 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Please enter the various OE branch codes that comprise the multi-campuses of SALT. --></help>
+        <label><!-- Multi-Campus Codes --></label>
+        <name>Multi_Campus_Codes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Multiple Campuses --></label>
+        <name>Multiple_Campuses__c</name>
+        <picklistValues>
+            <masterLabel>N/A</masterLabel>
+            <translation><!-- N/A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- SALT Courses --></label>
+        <name>My_Money_101_Courses__c</name>
+        <picklistValues>
+            <masterLabel>All</masterLabel>
+            <translation><!-- All --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Banking Basics</masterLabel>
+            <translation><!-- Banking Basics --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Budgeting</masterLabel>
+            <translation><!-- Budgeting --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Credit Cards</masterLabel>
+            <translation><!-- Credit Cards --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Credit Score</masterLabel>
+            <translation><!-- Credit Score --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Entrance Counseling</masterLabel>
+            <translation><!-- Entrance Counseling --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Financial Aid</masterLabel>
+            <translation><!-- Financial Aid --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Financial Goals</masterLabel>
+            <translation><!-- Financial Goals --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Grad level</masterLabel>
+            <translation><!-- Grad level --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Identity Theft</masterLabel>
+            <translation><!-- Identity Theft --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Repayment Options</masterLabel>
+            <translation><!-- Repayment Options --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Student Loans</masterLabel>
+            <translation><!-- Student Loans --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- NSLDS Access Status Date --></label>
+        <name>NSLDS_Access_Status_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- NSLDS Access Status --></label>
+        <name>NSLDS_Access_Status__c</name>
+        <picklistValues>
+            <masterLabel>1 - School Provided</masterLabel>
+            <translation><!-- 1 - School Provided --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2 - Confidentiality Auth Form Rcvd</masterLabel>
+            <translation><!-- 2 - Confidentiality Auth Form Rcvd --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3 - Bus Analysis NPI Provided</masterLabel>
+            <translation><!-- 3 - Bus Analysis NPI Provided --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4 - ASA Rcvd User Docs</masterLabel>
+            <translation><!-- 4 - ASA Rcvd User Docs --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5 - ASA Returns to SAIG</masterLabel>
+            <translation><!-- 5 - ASA Returns to SAIG --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>6 - Received SAIG Access</masterLabel>
+            <translation><!-- 6 - Received SAIG Access --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7 - Access Terminated</masterLabel>
+            <translation><!-- 7 - Access Terminated --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- NSLDS Auth Sent --></label>
+        <name>NSLDS_Authorization_Sent__c</name>
+    </fields>
+    <fields>
+        <label><!-- Need for campus meeting --></label>
+        <name>Need_for_campus_meeting__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Need for materials --></label>
+        <name>Need_for_materials__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Need for sponsorship assistance --></label>
+        <name>Need_for_sponsorship_assistance__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Netforum Profile Creation Date --></label>
+        <name>Netforum_Profile_Creation_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- New Message Indicator --></label>
+        <name>New_Message_Indicator__c</name>
+    </fields>
+    <fields>
+        <label><!-- New Message Received --></label>
+        <name>New_Message_Received__c</name>
+    </fields>
+    <fields>
+        <label><!-- ODS ID: --></label>
+        <name>ODS_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Opportunity Link --></label>
+        <name>Opportunity_Link__c</name>
+    </fields>
+    <fields>
+        <label><!-- Original Go-Live Date --></label>
+        <name>Original_Go_Live_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- PGP Email Setup --></label>
+        <name>PGP_Email_Setup__c</name>
+    </fields>
+    <fields>
+        <label><!-- PGP Set Up Date --></label>
+        <name>PGP_Set_Up_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- PGP Set Up --></label>
+        <name>PGP_Set_Up__c</name>
+    </fields>
+    <fields>
+        <label><!-- PS Offerings --></label>
+        <name>PS_Offerings__c</name>
+        <picklistValues>
+            <masterLabel>In Person</masterLabel>
+            <translation><!-- In Person --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>N/A</masterLabel>
+            <translation><!-- N/A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Webex</masterLabel>
+            <translation><!-- Webex --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Parent Code --></label>
+        <name>Parent_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Payment Method --></label>
+        <name>Payment_Method__c</name>
+        <picklistValues>
+            <masterLabel>ACH</masterLabel>
+            <translation><!-- ACH --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Check</masterLabel>
+            <translation><!-- Check --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Performance Based Fees --></label>
+        <name>Performance_Based_Fees__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- President Call --></label>
+        <name>President_Call__c</name>
+        <picklistValues>
+            <masterLabel>Completed</masterLabel>
+            <translation><!-- Completed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>N/A</masterLabel>
+            <translation><!-- N/A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pending</masterLabel>
+            <translation><!-- Pending --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>WIP</masterLabel>
+            <translation><!-- WIP --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- President&apos;s Welcome Call --></label>
+        <name>President_s_Welcome_Call__c</name>
+    </fields>
+    <fields>
+        <label><!-- President&apos;s Welcome Letter Sent --></label>
+        <name>President_s_Welcome_Letter_Sent__c</name>
+    </fields>
+    <fields>
+        <label><!-- Previous Owner Id --></label>
+        <name>Previous_Owner_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Previous Owner Name Support --></label>
+        <name>Previous_Owner_Name_Support__c</name>
+    </fields>
+    <fields>
+        <label><!-- Previous Owner Name --></label>
+        <name>Previous_Owner_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Previous Owner --></label>
+        <name>Previous_Owner__c</name>
+    </fields>
+    <fields>
+        <label><!-- Price Conversation --></label>
+        <name>Price_Conversation__c</name>
+    </fields>
+    <fields>
+        <label><!-- Profile Creation Status --></label>
+        <name>Profile_Creation_Status__c</name>
+        <picklistValues>
+            <masterLabel>Completed</masterLabel>
+            <translation><!-- Completed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>N/A</masterLabel>
+            <translation><!-- N/A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pending</masterLabel>
+            <translation><!-- Pending --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>WIP</masterLabel>
+            <translation><!-- WIP --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Profile Creation Date --></label>
+        <name>Profile_Creation_date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Promo Tile Published --></label>
+        <name>Promo_Tile_Published__c</name>
+    </fields>
+    <fields>
+        <label><!-- Promo Tile Status --></label>
+        <name>Promo_Tile_Status__c</name>
+        <picklistValues>
+            <masterLabel>Published</masterLabel>
+            <translation><!-- Published --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Received</masterLabel>
+            <translation><!-- Received --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sent</masterLabel>
+            <translation><!-- Sent --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Submitted</masterLabel>
+            <translation><!-- Submitted --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Promo Tile Submitted --></label>
+        <name>Promo_Tile_Submitted__c</name>
+    </fields>
+    <fields>
+        <label><!-- Reason For Contact --></label>
+        <name>Reason_For_First_Contact__c</name>
+        <picklistValues>
+            <masterLabel>Apprenticeships</masterLabel>
+            <translation><!-- Apprenticeships --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Career Counseling</masterLabel>
+            <translation><!-- Career Counseling --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Career Training</masterLabel>
+            <translation><!-- Career Training --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>College Counseling</masterLabel>
+            <translation><!-- College Counseling --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>College Planning/Paying For College</masterLabel>
+            <translation><!-- College Planning/Paying For College --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Consolidation and Refinance</masterLabel>
+            <translation><!-- Consolidation and Refinance --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Forgiveness For Student Loans</masterLabel>
+            <translation><!-- Forgiveness For Student Loans --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>General Financial Information (Budgeting, Credit, Saving, etc.)</masterLabel>
+            <translation><!-- General Financial Information (Budgeting, Credit, Saving, etc.) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>General Student Loan Repayment</masterLabel>
+            <translation><!-- General Student Loan Repayment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Product Enhancement</masterLabel>
+            <translation><!-- Product Enhancement --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Resolving Delinquent Student Loans</masterLabel>
+            <translation><!-- Resolving Delinquent Student Loans --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Salt Site Support</masterLabel>
+            <translation><!-- Salt Site Support --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Vocational Path Training</masterLabel>
+            <translation><!-- Vocational Path Training --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Reassignment Reason --></label>
+        <name>Reassignment_Reason__c</name>
+        <picklistValues>
+            <masterLabel>Manager Reassignment</masterLabel>
+            <translation><!-- Manager Reassignment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Out of Office</masterLabel>
+            <translation><!-- Out of Office --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Skillset</masterLabel>
+            <translation><!-- Skillset --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Repayment Cohorts --></label>
+        <name>Repayment_Cohorts__c</name>
+        <picklistValues>
+            <masterLabel>2009</masterLabel>
+            <translation><!-- 2009 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2010</masterLabel>
+            <translation><!-- 2010 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2011</masterLabel>
+            <translation><!-- 2011 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2012</masterLabel>
+            <translation><!-- 2012 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2013</masterLabel>
+            <translation><!-- 2013 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2014</masterLabel>
+            <translation><!-- 2014 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2015</masterLabel>
+            <translation><!-- 2015 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2016</masterLabel>
+            <translation><!-- 2016 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2017</masterLabel>
+            <translation><!-- 2017 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Reports --></label>
+        <name>Reports__c</name>
+        <picklistValues>
+            <masterLabel>Communication</masterLabel>
+            <translation><!-- Communication --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Communication Results</masterLabel>
+            <translation><!-- Communication Results --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Portfolio Details</masterLabel>
+            <translation><!-- Portfolio Details --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Portfolio Management</masterLabel>
+            <translation><!-- Portfolio Management --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Portfolio Profile</masterLabel>
+            <translation><!-- Portfolio Profile --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Projected CDR</masterLabel>
+            <translation><!-- Projected CDR --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Risk Analysis</masterLabel>
+            <translation><!-- Risk Analysis --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Request Type --></label>
+        <name>Request_Type__c</name>
+        <picklistValues>
+            <masterLabel>Dashboards</masterLabel>
+            <translation><!-- Dashboards --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Data Cleanup</masterLabel>
+            <translation><!-- Data Cleanup --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Development</masterLabel>
+            <translation><!-- Development --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>General Question</masterLabel>
+            <translation><!-- General Question --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mass transfer of Accounts</masterLabel>
+            <translation><!-- Mass transfer of Accounts --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Object Edits</masterLabel>
+            <translation><!-- Object Edits --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Process Change</masterLabel>
+            <translation><!-- Process Change --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Process Creation</masterLabel>
+            <translation><!-- Process Creation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Reports</masterLabel>
+            <translation><!-- Reports --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Training</masterLabel>
+            <translation><!-- Training --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Requested Files --></label>
+        <name>Requested_Files__c</name>
+        <picklistValues>
+            <masterLabel>ACS</masterLabel>
+            <translation><!-- ACS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AES</masterLabel>
+            <translation><!-- AES --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Citibank</masterLabel>
+            <translation><!-- Citibank --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DELQ</masterLabel>
+            <translation><!-- DELQ --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DEMOG</masterLabel>
+            <translation><!-- DEMOG --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DER</masterLabel>
+            <translation><!-- DER --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ECSI</masterLabel>
+            <translation><!-- ECSI --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Great Lakes</masterLabel>
+            <translation><!-- Great Lakes --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mohela</masterLabel>
+            <translation><!-- Mohela --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nelnet</masterLabel>
+            <translation><!-- Nelnet --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PHEAA</masterLabel>
+            <translation><!-- PHEAA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Private / Ins. Loan</masterLabel>
+            <translation><!-- Private / Ins. Loan --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SLMA</masterLabel>
+            <translation><!-- SLMA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Student Loan Express</masterLabel>
+            <translation><!-- Student Loan Express --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wells Fargo</masterLabel>
+            <translation><!-- Wells Fargo --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Requested Materials --></label>
+        <name>Requested_Materials__c</name>
+        <picklistValues>
+            <masterLabel>Budget Worksheet</masterLabel>
+            <translation><!-- Budget Worksheet --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Deferment/Forbearance Info</masterLabel>
+            <translation><!-- Deferment/Forbearance Info --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Entr/Exit Counsel Check</masterLabel>
+            <translation><!-- Entr/Exit Counsel Check --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pre-paid return envels</masterLabel>
+            <translation><!-- Pre-paid return envels --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Repayment Worksheet</masterLabel>
+            <translation><!-- Repayment Worksheet --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>STAFF Compl Directions</masterLabel>
+            <translation><!-- STAFF Compl Directions --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>STAFF Master Prom Notes</masterLabel>
+            <translation><!-- STAFF Master Prom Notes --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>STAFF Master Prom Notes - Imprint</masterLabel>
+            <translation><!-- STAFF Master Prom Notes - Imprint --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>STAFF School Cert Form</masterLabel>
+            <translation><!-- STAFF School Cert Form --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- SALT Vanity URL --></label>
+        <name>SALTVanity_URL__c</name>
+    </fields>
+    <fields>
+        <label><!-- SALT Intro Email Content: Alumni --></label>
+        <name>SALT_Intro_Email_Content_Alumni__c</name>
+    </fields>
+    <fields>
+        <label><!-- SALT Intro Email Content: Enrolled --></label>
+        <name>SALT_Intro_Email_Content_Enrolled__c</name>
+    </fields>
+    <fields>
+        <label><!-- SALT Intro Email Sent: Alumni --></label>
+        <name>SALT_Intro_Email_Sent_Alumni__c</name>
+    </fields>
+    <fields>
+        <label><!-- SALT Intro Email Sent: Enrolled --></label>
+        <name>SALT_Intro_Email_Sent_Enrolled__c</name>
+    </fields>
+    <fields>
+        <label><!-- SALT Profile Creation Date --></label>
+        <name>SALT_Profile_Creation_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- STAFF Effect Date --></label>
+        <name>STAFF_Effect_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Safelist IP Address Sent --></label>
+        <name>Safelist_IP_Address_Sent__c</name>
+    </fields>
+    <fields>
+        <label><!-- Satisfaction Surveys --></label>
+        <name>Satisfaction_Surveys__c</name>
+        <picklistValues>
+            <masterLabel>N/A</masterLabel>
+            <translation><!-- N/A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>WIP</masterLabel>
+            <translation><!-- WIP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes – Completed</masterLabel>
+            <translation><!-- Yes – Completed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes – Initiated</masterLabel>
+            <translation><!-- Yes – Initiated --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- School Co-Branded URL --></label>
+        <name>School_Co_Branded_URL__c</name>
+    </fields>
+    <fields>
+        <label><!-- School Email --></label>
+        <name>School_Email__c</name>
+        <picklistValues>
+            <masterLabel>CRC v1 Disb Forecast All</masterLabel>
+            <translation><!-- CRC v1 Disb Forecast All --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CRC v1 Disb Forecast School Hold</masterLabel>
+            <translation><!-- CRC v1 Disb Forecast School Hold --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CRC v1 SCR</masterLabel>
+            <translation><!-- CRC v1 SCR --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CRC v1 School Roster</masterLabel>
+            <translation><!-- CRC v1 School Roster --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Copay Check Roster</masterLabel>
+            <translation><!-- Copay Check Roster --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Credit Approval Letter Rpt</masterLabel>
+            <translation><!-- Credit Approval Letter Rpt --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Disb Roster</masterLabel>
+            <translation><!-- Disb Roster --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Email SCR Notification</masterLabel>
+            <translation><!-- Email SCR Notification --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FastFund Pre-Disb</masterLabel>
+            <translation><!-- FastFund Pre-Disb --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Indiv Check Roster</masterLabel>
+            <translation><!-- Indiv Check Roster --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Notice of Loan Approval</masterLabel>
+            <translation><!-- Notice of Loan Approval --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pre-Disb Rpt</masterLabel>
+            <translation><!-- Pre-Disb Rpt --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Preclaims For Schools</masterLabel>
+            <translation><!-- Preclaims For Schools --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Roster Dunning Rpt</masterLabel>
+            <translation><!-- Roster Dunning Rpt --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SSCR Outbound feed</masterLabel>
+            <translation><!-- SSCR Outbound feed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SSCR not returned Letter</masterLabel>
+            <translation><!-- SSCR not returned Letter --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>School - CL4 Unsol Resp</masterLabel>
+            <translation><!-- School - CL4 Unsol Resp --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>School - CRC v1 Unsol Resp</masterLabel>
+            <translation><!-- School - CRC v1 Unsol Resp --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>School - Proc Sum Rpt</masterLabel>
+            <translation><!-- School - Proc Sum Rpt --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>School Escrow Disb R/U</masterLabel>
+            <translation><!-- School Escrow Disb R/U --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>School Hold File</masterLabel>
+            <translation><!-- School Hold File --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>School Missing Prom Note Rpt</masterLabel>
+            <translation><!-- School Missing Prom Note Rpt --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>School Pending Cert Req</masterLabel>
+            <translation><!-- School Pending Cert Req --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>School Roster File</masterLabel>
+            <translation><!-- School Roster File --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- School OE Code(s) --></label>
+        <name>School_OE_Code_s__c</name>
+    </fields>
+    <fields>
+        <label><!-- School Portal Set Up Date --></label>
+        <name>School_Portal_Set_Up_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- School Process Flow --></label>
+        <name>School_Process_Flow__c</name>
+        <picklistValues>
+            <masterLabel>Full Service</masterLabel>
+            <translation><!-- Full Service --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Guarantee Only</masterLabel>
+            <translation><!-- Guarantee Only --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mix/Split</masterLabel>
+            <translation><!-- Mix/Split --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>N/A</masterLabel>
+            <translation><!-- N/A --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- School Provided Servicer Data --></label>
+        <name>School_Provided_Servicer_Data__c</name>
+        <picklistValues>
+            <masterLabel>ACS</masterLabel>
+            <translation><!-- ACS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ACS-Perkins</masterLabel>
+            <translation><!-- ACS-Perkins --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AES</masterLabel>
+            <translation><!-- AES --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Campus Partners-Perkins</masterLabel>
+            <translation><!-- Campus Partners-Perkins --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cornerstone</masterLabel>
+            <translation><!-- Cornerstone --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ECSI</masterLabel>
+            <translation><!-- ECSI --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Edfinancial</masterLabel>
+            <translation><!-- Edfinancial --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Great Lakes</masterLabel>
+            <translation><!-- Great Lakes --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MOHELA</masterLabel>
+            <translation><!-- MOHELA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nelnet</masterLabel>
+            <translation><!-- Nelnet --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sallie Mae</masterLabel>
+            <translation><!-- Sallie Mae --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UAS</masterLabel>
+            <translation><!-- UAS --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Check this box if the school requires students to complete My Money 101. --></help>
+        <label><!-- School Requirement --></label>
+        <name>School_Requirement__c</name>
+    </fields>
+    <fields>
+        <label><!-- Seed List --></label>
+        <name>Seed_List__c</name>
+        <picklistValues>
+            <masterLabel>N/A</masterLabel>
+            <translation><!-- N/A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>WIP</masterLabel>
+            <translation><!-- WIP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes – Completed</masterLabel>
+            <translation><!-- Yes – Completed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes – Initiated</masterLabel>
+            <translation><!-- Yes – Initiated --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Servicer Access Authorized --></label>
+        <name>Servicer_Access_Auth__c</name>
+        <picklistValues>
+            <masterLabel>ACS</masterLabel>
+            <translation><!-- ACS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ACS-Perkins</masterLabel>
+            <translation><!-- ACS-Perkins --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AES</masterLabel>
+            <translation><!-- AES --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Aspire</masterLabel>
+            <translation><!-- Aspire --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Campus Partners-Perkins</masterLabel>
+            <translation><!-- Campus Partners-Perkins --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cornerstone</masterLabel>
+            <translation><!-- Cornerstone --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ECSI</masterLabel>
+            <translation><!-- ECSI --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EdManage/SC Student Loan (NFP)</masterLabel>
+            <translation><!-- EdManage/SC Student Loan (NFP) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Edfinancial</masterLabel>
+            <translation><!-- Edfinancial --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Granite State (NFP)</masterLabel>
+            <translation><!-- Granite State (NFP) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Great Lakes</masterLabel>
+            <translation><!-- Great Lakes --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Kentucky (NFP)</masterLabel>
+            <translation><!-- Kentucky (NFP) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MOHELA</masterLabel>
+            <translation><!-- MOHELA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nelnet</masterLabel>
+            <translation><!-- Nelnet --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Oklahoma (NFP)</masterLabel>
+            <translation><!-- Oklahoma (NFP) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sallie Mae</masterLabel>
+            <translation><!-- Sallie Mae --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UAS</masterLabel>
+            <translation><!-- UAS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>VSAC (NFP)</masterLabel>
+            <translation><!-- VSAC (NFP) --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Servicer Access Requested --></label>
+        <name>Servicer_Access_Requested__c</name>
+        <picklistValues>
+            <masterLabel>ACS</masterLabel>
+            <translation><!-- ACS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ACS-Perkins</masterLabel>
+            <translation><!-- ACS-Perkins --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AES</masterLabel>
+            <translation><!-- AES --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Aspire</masterLabel>
+            <translation><!-- Aspire --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Campus Partners-Perkins</masterLabel>
+            <translation><!-- Campus Partners-Perkins --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cornerstone</masterLabel>
+            <translation><!-- Cornerstone --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ECSI</masterLabel>
+            <translation><!-- ECSI --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EdManage/SC Student Loan (NFP)</masterLabel>
+            <translation><!-- EdManage/SC Student Loan (NFP) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Edfinancial</masterLabel>
+            <translation><!-- Edfinancial --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Granite State (NFP)</masterLabel>
+            <translation><!-- Granite State (NFP) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Great Lakes</masterLabel>
+            <translation><!-- Great Lakes --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Kentucky (NFP)</masterLabel>
+            <translation><!-- Kentucky (NFP) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MOHELA</masterLabel>
+            <translation><!-- MOHELA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nelnet</masterLabel>
+            <translation><!-- Nelnet --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Oklahoma (NFP)</masterLabel>
+            <translation><!-- Oklahoma (NFP) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sallie Mae</masterLabel>
+            <translation><!-- Sallie Mae --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UAS</masterLabel>
+            <translation><!-- UAS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>VSAC (NFP)</masterLabel>
+            <translation><!-- VSAC (NFP) --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Sessions Scheduled --></label>
+        <name>Sessions_Scheduled__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sponsorhip meeting --></label>
+        <name>Sponsorhip_meeting__c</name>
+    </fields>
+    <fields>
+        <label><!-- Stage 1 Status --></label>
+        <name>Stage_1_Status__c</name>
+        <picklistValues>
+            <masterLabel>Complete</masterLabel>
+            <translation><!-- Complete --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In Progress</masterLabel>
+            <translation><!-- In Progress --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Late</masterLabel>
+            <translation><!-- Late --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not Started</masterLabel>
+            <translation><!-- Not Started --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Test File Received --></label>
+        <name>Test_File_Received__c</name>
+    </fields>
+    <fields>
+        <label><!-- Testing Buy-off --></label>
+        <name>Testing_Buy_off__c</name>
+    </fields>
+    <fields>
+        <label><!-- Testing Completed --></label>
+        <name>Testing_Completed__c</name>
+    </fields>
+    <fields>
+        <label><!-- Vanity URL Status --></label>
+        <name>Vanity_URL_Status__c</name>
+        <picklistValues>
+            <masterLabel>Published</masterLabel>
+            <translation><!-- Published --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Requested</masterLabel>
+            <translation><!-- Requested --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Welcome Package --></label>
+        <name>Welcom_Package__c</name>
+    </fields>
+    <fields>
+        <help><!-- Enter the code of the Welcome Guide sent to this customer.  The code is located on the back cover of the Guide. --></help>
+        <label><!-- Welcome Guide Code: --></label>
+        <name>Welcome_Guide_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- 3rd Party Process Status --></label>
+        <name>X3rd_Party_Process_Status__c</name>
+        <picklistValues>
+            <masterLabel>Completed</masterLabel>
+            <translation><!-- Completed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>N/A</masterLabel>
+            <translation><!-- N/A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pending</masterLabel>
+            <translation><!-- Pending --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>WIP</masterLabel>
+            <translation><!-- WIP --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- 3rd Party --></label>
+        <name>X3rd_Party__c</name>
+        <picklistValues>
+            <masterLabel>ELM</masterLabel>
+            <translation><!-- ELM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Global</masterLabel>
+            <translation><!-- Global --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>N/A</masterLabel>
+            <translation><!-- N/A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>None</masterLabel>
+            <translation><!-- None --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nteract</masterLabel>
+            <translation><!-- Nteract --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OpenNet (FMS)</masterLabel>
+            <translation><!-- OpenNet (FMS) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OpenNet (Web)</masterLabel>
+            <translation><!-- OpenNet (Web) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ScholarNet</masterLabel>
+            <translation><!-- ScholarNet --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Logo Published --></label>
+        <name>logo_published__c</name>
+    </fields>
+    <layouts>
+        <layout>Case Layout</layout>
+        <sections>
+            <label><!-- Agreement --></label>
+            <section>Agreement</section>
+        </sections>
+        <sections>
+            <label><!-- Common LIne Transmission 2 --></label>
+            <section>Common LIne Transmission 2</section>
+        </sections>
+        <sections>
+            <label><!-- CommonLine4 Transmission --></label>
+            <section>CommonLine4 Transmission</section>
+        </sections>
+        <sections>
+            <label><!-- Contact Information --></label>
+            <section>Contact Information</section>
+        </sections>
+        <sections>
+            <label><!-- Implementation --></label>
+            <section>Implementation</section>
+        </sections>
+        <sections>
+            <label><!-- Implementation Check List (Process Flow Manager) --></label>
+            <section>Implementation Check List (Process Flow Manager)</section>
+        </sections>
+        <sections>
+            <label><!-- Implementation Check List (School CM) --></label>
+            <section>Implementation Check List (School CM)</section>
+        </sections>
+        <sections>
+            <label><!-- Lender Output Items --></label>
+            <section>Lender Output Items</section>
+        </sections>
+        <sections>
+            <label><!-- School Disbursement Cycle --></label>
+            <section>School Disbursement Cycle</section>
+        </sections>
+        <sections>
+            <label><!-- School Output Items --></label>
+            <section>School Output Items</section>
+        </sections>
+        <sections>
+            <label><!-- School Process Change --></label>
+            <section>School Process Change</section>
+        </sections>
+        <sections>
+            <label><!-- TBD --></label>
+            <section>TBD</section>
+        </sections>
+        <sections>
+            <label><!-- Useful Links --></label>
+            <section>Useful Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Case Layout - Call Center</layout>
+        <sections>
+            <label><!-- Contact Information --></label>
+            <section>Contact Information</section>
+        </sections>
+        <sections>
+            <label><!-- Useful Links --></label>
+            <section>Useful Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Case Layout - Issues</layout>
+        <sections>
+            <label><!-- Contact Information --></label>
+            <section>Contact Information</section>
+        </sections>
+        <sections>
+            <label><!-- Useful Links --></label>
+            <section>Useful Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Case Layout - School Process Change</layout>
+        <sections>
+            <label><!-- Agreement --></label>
+            <section>Agreement</section>
+        </sections>
+        <sections>
+            <label><!-- Common LIne Transmission 2 --></label>
+            <section>Common LIne Transmission 2</section>
+        </sections>
+        <sections>
+            <label><!-- CommonLine4 Transmission --></label>
+            <section>CommonLine4 Transmission</section>
+        </sections>
+        <sections>
+            <label><!-- Contact Information --></label>
+            <section>Contact Information</section>
+        </sections>
+        <sections>
+            <label><!-- Implementation Check List (Process Flow Manager) --></label>
+            <section>Implementation Check List (Process Flow Manager)</section>
+        </sections>
+        <sections>
+            <label><!-- Implementation Check List (School CM) --></label>
+            <section>Implementation Check List (School CM)</section>
+        </sections>
+        <sections>
+            <label><!-- MPN Serialization --></label>
+            <section>MPN Serialization</section>
+        </sections>
+        <sections>
+            <label><!-- School Disbursement Cycle --></label>
+            <section>School Disbursement Cycle</section>
+        </sections>
+        <sections>
+            <label><!-- School Output Items --></label>
+            <section>School Output Items</section>
+        </sections>
+        <sections>
+            <label><!-- School Process Change Form --></label>
+            <section>School Process Change Form</section>
+        </sections>
+        <sections>
+            <label><!-- School Process Request Change(s) --></label>
+            <section>School Process Request Change(s)</section>
+        </sections>
+        <sections>
+            <label><!-- Useful Links --></label>
+            <section>Useful Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Collect Contract Addenda</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Fields --></label>
+            <section>Fields</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Contract Renewal</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Fields --></label>
+            <section>Fields</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Email To Case</layout>
+        <sections>
+            <label><!-- Useful Links --></label>
+            <section>Useful Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Employer Community:External</layout>
+        <sections>
+            <label><!-- Contact Information --></label>
+            <section>Contact Information</section>
+        </sections>
+        <sections>
+            <label><!-- Detail --></label>
+            <section>Detail</section>
+        </sections>
+        <sections>
+            <label><!-- Useful Links --></label>
+            <section>Useful Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Employer Community:Internal</layout>
+        <sections>
+            <label><!-- Contact Information --></label>
+            <section>Contact Information</section>
+        </sections>
+        <sections>
+            <label><!-- Useful Links --></label>
+            <section>Useful Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Implementation (Consumer Services)</layout>
+        <sections>
+            <label><!-- Contact Information --></label>
+            <section>Contact Information</section>
+        </sections>
+        <sections>
+            <label><!-- Contract --></label>
+            <section>Contract</section>
+        </sections>
+        <sections>
+            <label><!-- SALT Connect - Alumni --></label>
+            <section>SALT Connect - Alumni</section>
+        </sections>
+        <sections>
+            <label><!-- SALT Connect - Enrolled --></label>
+            <section>SALT Connect - Enrolled</section>
+        </sections>
+        <sections>
+            <label><!-- SALT Live --></label>
+            <section>SALT Live</section>
+        </sections>
+        <sections>
+            <label><!-- Useful Links --></label>
+            <section>Useful Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Implementation (Engagement Partner)</layout>
+        <sections>
+            <label><!-- Contact Information --></label>
+            <section>Contact Information</section>
+        </sections>
+        <sections>
+            <label><!-- Contract --></label>
+            <section>Contract</section>
+        </sections>
+        <sections>
+            <label><!-- SALT Connect - Alumni --></label>
+            <section>SALT Connect - Alumni</section>
+        </sections>
+        <sections>
+            <label><!-- SALT Connect - Enrolled --></label>
+            <section>SALT Connect - Enrolled</section>
+        </sections>
+        <sections>
+            <label><!-- SALT Live --></label>
+            <section>SALT Live</section>
+        </sections>
+        <sections>
+            <label><!-- Useful Links --></label>
+            <section>Useful Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Salesforce Support Request</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Fields --></label>
+            <section>Fields</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>_Case Layout - Implementation</layout>
+        <sections>
+            <label><!-- Agreement --></label>
+            <section>Agreement</section>
+        </sections>
+        <sections>
+            <label><!-- Common LIne Transmission 2 --></label>
+            <section>Common LIne Transmission 2</section>
+        </sections>
+        <sections>
+            <label><!-- CommonLine4 Transmission --></label>
+            <section>CommonLine4 Transmission</section>
+        </sections>
+        <sections>
+            <label><!-- Contact Information --></label>
+            <section>Contact Information</section>
+        </sections>
+        <sections>
+            <label><!-- Implementation Check List (Process Flow Manager) --></label>
+            <section>Implementation Check List (Process Flow Manager)</section>
+        </sections>
+        <sections>
+            <label><!-- Implementation Check List (School CM) --></label>
+            <section>Implementation Check List (School CM)</section>
+        </sections>
+        <sections>
+            <label><!-- School Disbursement Cycle --></label>
+            <section>School Disbursement Cycle</section>
+        </sections>
+        <sections>
+            <label><!-- School Implementation --></label>
+            <section>School Implementation</section>
+        </sections>
+        <sections>
+            <label><!-- School Output Items --></label>
+            <section>School Output Items</section>
+        </sections>
+        <sections>
+            <label><!-- Useful Links --></label>
+            <section>Useful Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>_Case Layout - Implementation (GO)</layout>
+        <sections>
+            <label><!-- Contact Information --></label>
+            <section>Contact Information</section>
+        </sections>
+        <sections>
+            <label><!-- Implementation Check List (Process Flow Manager) --></label>
+            <section>Implementation Check List (Process Flow Manager)</section>
+        </sections>
+        <sections>
+            <label><!-- Implementation Check List (School CM) --></label>
+            <section>Implementation Check List (School CM)</section>
+        </sections>
+        <sections>
+            <label><!-- School Implementation --></label>
+            <section>School Implementation</section>
+        </sections>
+        <sections>
+            <label><!-- School Output Items --></label>
+            <section>School Output Items</section>
+        </sections>
+        <sections>
+            <label><!-- Useful Links --></label>
+            <section>Useful Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>_Case Layout - Lender Issues</layout>
+        <sections>
+            <label><!-- Additional Information --></label>
+            <section>Additional Information</section>
+        </sections>
+        <sections>
+            <label><!-- Case Information --></label>
+            <section>Case Information</section>
+        </sections>
+        <sections>
+            <label><!-- Contact Information --></label>
+            <section>Contact Information</section>
+        </sections>
+        <sections>
+            <label><!-- Description Information --></label>
+            <section>Description Information</section>
+        </sections>
+        <sections>
+            <label><!-- System Information --></label>
+            <section>System Information</section>
+        </sections>
+        <sections>
+            <label><!-- Useful Links --></label>
+            <section>Useful Links</section>
+        </sections>
+        <sections>
+            <label><!-- Web Information --></label>
+            <section>Web Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>_Case Layout - MPN Serialization</layout>
+        <sections>
+            <label><!-- Contact Information --></label>
+            <section>Contact Information</section>
+        </sections>
+        <sections>
+            <label><!-- Useful Links --></label>
+            <section>Useful Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>_Case Layout -Implementation (Cons Svcs)</layout>
+        <sections>
+            <label><!-- Contact Information --></label>
+            <section>Contact Information</section>
+        </sections>
+        <sections>
+            <label><!-- Contract --></label>
+            <section>Contract</section>
+        </sections>
+        <sections>
+            <label><!-- Customer Implementation --></label>
+            <section>Customer Implementation</section>
+        </sections>
+        <sections>
+            <label><!-- Data Exchange (Product) --></label>
+            <section>Data Exchange (Product)</section>
+        </sections>
+        <sections>
+            <label><!-- Data Files --></label>
+            <section>Data Files</section>
+        </sections>
+        <sections>
+            <label><!-- EDMS Cohort Population(s)- Federal Fiscal Year --></label>
+            <section>EDMS Cohort Population(s)- Federal Fiscal Year</section>
+        </sections>
+        <sections>
+            <label><!-- Implementation Check List (Borrower Services) --></label>
+            <section>Implementation Check List (Borrower Services)</section>
+        </sections>
+        <sections>
+            <label><!-- Implementation Check List (CM) --></label>
+            <section>Implementation Check List (CM)</section>
+        </sections>
+        <sections>
+            <label><!-- Implementation Check List (FEDS) --></label>
+            <section>Implementation Check List (FEDS)</section>
+        </sections>
+        <sections>
+            <label><!-- Useful Links --></label>
+            <section>Useful Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>_Case Layout -Implementation (Cons. Svcs.)</layout>
+        <sections>
+            <label><!-- Contact Information --></label>
+            <section>Contact Information</section>
+        </sections>
+        <sections>
+            <label><!-- Contract --></label>
+            <section>Contract</section>
+        </sections>
+        <sections>
+            <label><!-- Customer Implementation --></label>
+            <section>Customer Implementation</section>
+        </sections>
+        <sections>
+            <label><!-- Data Exchange (Product) --></label>
+            <section>Data Exchange (Product)</section>
+        </sections>
+        <sections>
+            <label><!-- Data Files --></label>
+            <section>Data Files</section>
+        </sections>
+        <sections>
+            <label><!-- EDMS Cohort Population(s)- Federal Fiscal Year --></label>
+            <section>EDMS Cohort Population(s)- Federal Fiscal Year</section>
+        </sections>
+        <sections>
+            <label><!-- Implementation Check List (Borrower Services) --></label>
+            <section>Implementation Check List (Borrower Services)</section>
+        </sections>
+        <sections>
+            <label><!-- Implementation Check List (CM) --></label>
+            <section>Implementation Check List (CM)</section>
+        </sections>
+        <sections>
+            <label><!-- Implementation Check List (FEDS) --></label>
+            <section>Implementation Check List (FEDS)</section>
+        </sections>
+        <sections>
+            <label><!-- Useful Links --></label>
+            <section>Useful Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>_ELM Issue</layout>
+        <sections>
+            <label><!-- Additional Information --></label>
+            <section>Additional Information</section>
+        </sections>
+        <sections>
+            <label><!-- Case Information --></label>
+            <section>Case Information</section>
+        </sections>
+        <sections>
+            <label><!-- Contact Information --></label>
+            <section>Contact Information</section>
+        </sections>
+        <sections>
+            <label><!-- Description Information --></label>
+            <section>Description Information</section>
+        </sections>
+        <sections>
+            <label><!-- System Information --></label>
+            <section>System Information</section>
+        </sections>
+        <sections>
+            <label><!-- Useful Links --></label>
+            <section>Useful Links</section>
+        </sections>
+        <sections>
+            <label><!-- Web Information --></label>
+            <section>Web Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>_Lender Test Case</layout>
+        <sections>
+            <label><!-- Common LIne Transmission 2 --></label>
+            <section>Common LIne Transmission 2</section>
+        </sections>
+        <sections>
+            <label><!-- CommonLine4 Transmission --></label>
+            <section>CommonLine4 Transmission</section>
+        </sections>
+        <sections>
+            <label><!-- Contact Information --></label>
+            <section>Contact Information</section>
+        </sections>
+        <sections>
+            <label><!-- Useful Links --></label>
+            <section>Useful Links</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- NewChildCase --></label>
+        <name>NewChildCase</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Send An Email --></label>
+        <name>Send_An_Email</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- SocialPublisher --></label>
+        <name>SocialPublisher</name>
+    </quickActions>
+    <recordTypes>
+        <label><!-- Call Center --></label>
+        <name>CallCenter</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Collect Contract Addendum --></label>
+        <name>Collect_Contract_Addendum</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Contract Renewal --></label>
+        <name>Contract_Renewal</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- ELM Issues --></label>
+        <name>ELM_Issues</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Email To Case --></label>
+        <name>Email_To_Case</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Counseling Services Case --></label>
+        <name>Employer_Community_Case_From_Employee</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Employer Community Case: From HR Manager --></label>
+        <name>Employer_Community_Case_From_HR_Manager</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Implementation --></label>
+        <name>Implementation</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Implementation (GO) --></label>
+        <name>ImplementationGO</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Implementation Consumer Services --></label>
+        <name>Implementation_Consumer_Services</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Implementation Engagement Partner --></label>
+        <name>Implementation_Engagement_Partner</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Issues --></label>
+        <name>Issues</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Lender Issues --></label>
+        <name>LenderIssues</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Lender-Testing --></label>
+        <name>LenderTesting</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- MPN Serialization --></label>
+        <name>MPNSerialization</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Salesforce Support Request --></label>
+        <name>Salesforce_Support_Request</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- School Process Change --></label>
+        <name>SchoolProcessChange</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage><!-- The Demog File Processed Date field must contain a date when the Status = Complete. --></errorMessage>
+        <name>Demog_File_Processed_Date_Required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- The Demog File Received Date field must contain a date. --></errorMessage>
+        <name>Demog_File_Rcvd_Date_Required</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- LOOP --></label>
+        <name>Loop__LOOP</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- LOOP_Merge --></label>
+        <name>Loop__LOOP_Merge</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- LOOPlus --></label>
+        <name>Loop__LOOPlus</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Mass_LOOP_Merge --></label>
+        <name>Loop__Mass_LOOP_Merge</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Mass_LOOPlus --></label>
+        <name>Loop__Mass_LOOPlus</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- New_Case --></label>
+        <name>New_Case</name>
+    </webLinks>
+</CustomObjectTranslation>

@@ -1,0 +1,5 @@
+NOTIFICATION:  {!Contract.Account}, (OE Code: {!Account.OE_Code__c}) has been signed and returned and has start date as of {!Contract.StartDate}.
+
+{!Contract.Link}
+
+Please assign a Lender Client Manager to this account.

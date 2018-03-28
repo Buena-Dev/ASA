@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>FY Q Rating Change to No Longer in FFELP/Not Processing</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>FY Q Rating Change to No Longer In FFELP/Not Processing</name>
+    <style>none</style>
+    <subject>{!Account.Name}, OE Code: {!Account.OE_Code__c} -- Has had a Rating Change = No Longer in FFELP / Not Processing</subject>
+    <type>text</type>
+</EmailTemplate>

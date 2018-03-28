@@ -1,0 +1,45 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<script type="text/javascript"> 
+<!-- hide from browsers
+// Simple VCS generator (partially tested) 
+function SimpleVCS(strDate_start, strDate_end, strLocation, strDescription, strSummary, strCategories) { 
+  function FormatDate(strDate) { 
+   var dte = new Date(strDate); 
+   var y = dte.getUTCFullYear(); 
+   var m = dte.getUTCMonth() + 1; 
+   var d = dte.getUTCDate(); 
+   var h = dte.getUTCHours(); 
+   var n = dte.getUTCMinutes(); 
+   var s = "" + y + (m < 10 ? "0"+m:m) + (d < 10 ? "0"+d:d); 
+   s += "T" + (h < 10 ? "0"+h:h) + (n < 10 ? "0"+n:n) + "00Z"; 
+   return s; 
+  } 
+
+
+  var objO = new Array(); 
+  var c = 0; 
+  objO[c++] = "BEGIN:VCALENDAR"; 
+  objO[c++] = "BEGIN:VEVENT"; 
+  objO[c++] = "DTSTART:" + FormatDate(strDate_start); 
+  objO[c++] = "DTEND:" + FormatDate(strDate_end); 
+  objO[c++] = "LOCATION;ENCODING=QUOTED-PRINTABLE:" + strLocation; 
+  objO[c++] = "DESCRIPTION;ENCODING=QUOTED-PRINTABLE:" + strDescription; 
+  objO[c++] = "SUMMARY;ENCODING=QUOTED-PRINTABLE:" + strSummary; 
+  objO[c++] = "CATEGORIES;ENCODING=QUOTED-PRINTABLE:" + strCategories; 
+  objO[c++] = "END:VEVENT"; 
+  objO[c++] = "END:VCALENDAR"; 
+  return objO.join("\r\n"); 
+
+}
+-->
+</script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>false</available>
+    <description>Top Ten Monthly Volume Report</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>EmailLetterhead</letterhead>
+    <name>Top Ten Monthly Volume Report</name>
+    <style>freeForm</style>
+    <subject>Top Ten Monthly Volume Report</subject>
+    <textOnly>{!Today}
+ 
+ 
+ 
+{!Contact.FirstName} {!Contact.LastName}      
+{!Contact.Title}
+{!Account.Name}
+{!Account.BillingStreet}
+{!Account.BillingCity}, {!Account.BillingState} {!Account.BillingPostalCode}
+ 
+Dear {!Contact.FirstName}:
+ 
+As a valued partner of American Student Assistance, ASA has created a “Top Ten Monthly Volume Report”.  In continuing with our commitment to our lender partners, we would like to offer you this detailed report which provides the list of Top Ten Lenders per month, including loan type and volume.  
+ 
+We are very excited to offer you this report; however we understand that you may not want your Lender name to be listed on reports sent to your competitors.  Below you will find an opt out form.  If you do not wish ASA to disclose your Lender name on the report we will leave this information blank.  
+ 
+If you wish to have the lender name left off the report please return the form no later then April 13th 2007.  You may also respond to me via e-mail at wfortier@amsa.com .  If we do not receive your response by the April 13th deadline we will assume your approval and move forward with the report.
+ 
+We look forward to providing you this service and look forward to a prosperous new year. 
+ 
+ 
+Sincerely,
+ 
+ 
+ 
+Bill Fortier
+Lender Account Executive
+
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+   ___      I wish to remain anonymous on the “Top Ten Monthly Volume Report”, but would like to receive the report for my company.
+ 
+   ___       I wish to remain anonymous on the “Top Ten Monthly Volume Report” and do 
+                 not wish to receive the report.
+ 
+ 
+Lender Name: _______________________  Authorized by: __________________________
+                                                                                  
+                                                                                   Title:       ______________________________</textOnly>
+    <type>html</type>
+</EmailTemplate>

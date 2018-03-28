@@ -1,0 +1,17 @@
+Now that the implementation has been completed for {!Case.Account} please reassign it to the named School CM.
+
+Case Details link:
+{!Case.Link}
+Account Details link:
+{!Account.Link}
+
+
+Instructions for Account reassignment:
+1. Locate the Account in question.
+2. (While in "Save mode") locate the link titled "change" adjacent to your name in the ownership field (upper left hand side of the Account page layout)
+3. Click on "change" and use the Lookup icon to identify the School CM.
+4. Check the "Send Notification Email" and "Keep Account Team" boxes.
+
+
+Thank  you
+Business Development Management

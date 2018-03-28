@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>false</available>
+    <description>School News from ASA Communcation Template</description>
+    <encodingKey>UTF-8</encodingKey>
+    <letterhead>EmailLetterhead</letterhead>
+    <name>Prospective/Former Client Communication</name>
+    <style>formalLetter</style>
+    <subject>ASA News from {!Account.OwnerFullName} - Department of Education Announcements</subject>
+    <textOnly>ASA News from
+{!Account.OwnerFullName}
+
+Dear {!Contact.FirstName},
+  
+American Student Assistance® (ASA) would like to ensure that our school contacts are aware of the following information and announcements from the Department of Education.
+ 
+Final Rules Webinars
+The Department will hold two webinars this month to provide information about the changes to the FFEL, Direct Loan, and Perkins Loan programs, which were recently published in the Final Rules. To register for one of the webinars, which will take place on Friday, November 13 and again on Wednesday, November 18 from 2:30-4:00 p.m. ET, visit the dedicated registration page.  
+ 
+The Department will also provide webinars about the changes to Federal Pell Grants, Federal Work-Study, and the TEACH Grant program. To register for one of the webinars, which will take place on November 10 and again on November 16 from 2:30-4:00 p.m. ET, visit the dedicated registration page. 
+ 
+Red Flags Rule Delayed Again
+At the request of Congress, the Federal Trade Commission (FTC) recently announced that the Red Flags Rule, which became effective January 1, 2008, will not enforce the requirements until June 1, 2010, in order to give lawmakers more time to address the concerns of industry groups.  
+ 
+As always, schools should consult with their institution&apos;s legal counsel to ensure that they are in compliance since this rule may impact other areas of the institution in addition to the Federal Perkins Loan program.
+ 
+For more information and resources, visit the FTC’s Red Flags Rule website.
+ 
+Net Price Calculator
+As a result of the Higher Education Act of 2008 (HEOA), all schools will be required to provide a tool on their websites so that students can calculate the net price of the institution. Although not required until October 29, 2011, the Department recently provided a Net Price Calculator template. Training sessions about the requirement were conducted at NASFAA and are available on their website for NASFAA members. 
+ 
+NASFAA recently announced that they received informal guidance from the Department that the net price calculator requirement applies to schools that enroll first-time, full time students and as a result would not apply to graduate and professional schools.
+ 
+Disclosure Requirements
+The National Postsecondary Education Cooperative (NPEC) Working Group on the Higher Education Opportunity Act of 2008 (HEOA) recently published a report intended to help schools identify and comply with the disclosure requirements required under the Higher Education Act of 1965 (HEA), as amended by the HEOA. For more information, visit the dedicated page on the Department’s Institute of Education Science’s website.
+ 
+If you have questions about any of the information above, please contact me or ASA’s Call Center at customerservice@amsa.com or 800.999.9080 and select Option 1.  The Call Center’s normal hours of operation are Monday through Friday from 8:30 a.m. to 9:00 p.m. ET.
+ 
+Sincerely,
+
+{!Account.OwnerFullName}
+{!Account.OwnerTitle}
+American Student Assistance
+100 Cambridge Street
+Boston, MA 02114
+{!Account.OwnerPhone}
+{!Account.OwnerEmail}
+ 
+The content of this email is confidential and proprietary to American Student Assistance. It is intended only for the above-named individual or entity and for the purpose indicated and may not be reproduced or distributed without permission of the sender. Please notify the sender or ASA if you received this email in error.
+ </textOnly>
+    <type>html</type>
+</EmailTemplate>

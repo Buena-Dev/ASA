@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>false</available>
+    <description>Thank you letter for those individuals who swung by the ASA booth at 2007 NASFAA Conference</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>EmailLetterhead</letterhead>
+    <name>Thany you for swinging by the 2007 NASFAA booth</name>
+    <style>freeForm</style>
+    <subject>Thank you for stopping by our booth at NASFAA</subject>
+    <textOnly>Dear {!Contact.FirstName},
+ 
+The 2007 NASFAA Conference in Washington, D.C. was a huge success. All of us at American Student Assistance® found it to be a valuable forum for learning more about the opportunities and challenges currently facing financial aid professionals. 
+ 
+This year the ASA booth spotlighted our Wellness services and we hope you were able to stop by and learn about our impressive Wellness results.   If you did, you likely heard the many ways that ASA’s “borrower-first” philosophy can make Wellness work for your school.
+ 
+Wellness takes a “prevention is the best medicine” approach to education loan repayment. Stopping repayment problems before they begin is the most effective solution to delinquency and default. With these proven services, each borrower in ASA’s portfolio receives the highest level of proactive and preventive care services, leading him or her down the path to sound financial health.
+ 
+I hope you enjoyed your time in D.C. and had a chance to experience some of the capital’s inspiring historic landmarks. If you would like to learn more about American Student Assistance or our Wellness services, please contact me at  or   We also invite you to visit us online at www.amsa.com.
+ 
+Sincerely,
+ 
+ 
+{!Contact.OwnerFullName}</textOnly>
+    <type>html</type>
+</EmailTemplate>

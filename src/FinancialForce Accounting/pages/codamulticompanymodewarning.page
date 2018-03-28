@@ -1,0 +1,4 @@
+<!-- codamulticompanymodewarning -->
+<apex:page >
+    <apex:pageMessage severity="info" strength="1" summary="{!$Label.c2g__codamulticompanymode}"/>
+</apex:page>

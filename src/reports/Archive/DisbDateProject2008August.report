@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <chart>
+        <backgroundColor1>#FFFFFF</backgroundColor1>
+        <backgroundColor2>#FFFFFF</backgroundColor2>
+        <backgroundFadeDir>Diagonal</backgroundFadeDir>
+        <chartSummaries>
+            <axisBinding>y</axisBinding>
+            <column>RowCount</column>
+        </chartSummaries>
+        <chartType>VerticalColumn</chartType>
+        <enableHoverLabels>false</enableHoverLabels>
+        <expandOthers>true</expandOthers>
+        <groupingColumn>ACCOUNT.NAME</groupingColumn>
+        <location>CHART_BOTTOM</location>
+        <showAxisLabels>false</showAxisLabels>
+        <showPercentage>false</showPercentage>
+        <showTotal>false</showTotal>
+        <showValues>false</showValues>
+        <size>Large</size>
+        <summaryAxisManualRangeEnd>100.0</summaryAxisManualRangeEnd>
+        <summaryAxisManualRangeStart>0.0</summaryAxisManualRangeStart>
+        <summaryAxisRange>Manual</summaryAxisRange>
+        <textColor>#000000</textColor>
+        <textSize>12</textSize>
+        <title>% of MPNs Completed  - August 2008</title>
+        <titleColor>#000000</titleColor>
+        <titleSize>18</titleSize>
+    </chart>
+    <columns>
+        <field>Account.OE_Code__c</field>
+    </columns>
+    <description>This is the August 2008 Disb Date Project Result</description>
+    <filter>
+        <booleanFilter>1  AND (2 OR 3)</booleanFilter>
+        <criteriaItems>
+            <column>RECORDTYPE</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Account.School</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.OE_Code__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>03066700,00211600,00212200,00396500,03409600,00552300,03095400,00396600,00212800,03194300,01172200,01121000,02182900,02220400,00728300,00213900,03100400,00836500,02316601,01195000,00214300,00148700,00156400,00214800,00215000,03255300,00492400,00218500,00144501,00180000,02305700,02288400,00371400,00215500,00180500,00207701,00633100,02235300,00669300,02143000,00171002,00182000,00687300,00217100,03235300,02163600,01315300,00667700,01031903,00736202,00736200,00212000,02174800,02063000,03504300</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.OE_Code__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>02579800,02163500,00219700,02197900,00279000,00125100,00884900,00279500,03091700,00295700,00140201,00850100,00850103,00280301,01059400,00341001,00218800,00220901,01238600,00157000,00221100,00379400,02541200,00736203,00221800,00284300,00286400,00352300,00788100,00684200,02546000,00221900,00683900,00838300,00142200,03824300,00210300,00850500,00183200,00846100,03067200,00670000,00289200,01207800,00884800,00222400,00222500,01057300,00218900,00222800,00223300,00223301,00219000</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>ACCOUNT.NAME</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Disb Date Project 2008 - August</name>
+    <params>
+        <name>co</name>
+        <value>0</value>
+    </params>
+    <reportType>AccountTeam</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>DUE_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

@@ -1,0 +1,791 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ControlledByParent</externalSharingModel>
+    <fields>
+        <fullName>Account_Owner__c</fullName>
+        <externalId>false</externalId>
+        <formula>(Account__r.Owner.FirstName &amp; &quot; &quot; &amp; Account__r.Owner.LastName)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>This data element shows the account owner&apos;s name.</inlineHelpText>
+        <label>Account Owner</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Account_Type__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(Account__r.Type)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Account Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Account__c</fullName>
+        <externalId>false</externalId>
+        <label>Account</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Product Offerings</relationshipLabel>
+        <relationshipName>Product_Offerings</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>true</reparentableMasterDetail>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Campus_Consultant__c</fullName>
+        <externalId>false</externalId>
+        <formula>Account__r.Campus_Consultant__r.FirstName &amp; &quot; &quot; &amp;  Account__r.Campus_Consultant__r.LastName</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>This data element shows the Campus Consultant for the account.</inlineHelpText>
+        <label>Campus Consultant</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Co_Branding__c</fullName>
+        <externalId>false</externalId>
+        <label>Co-Branding?</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Logo and Banner</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Logo Only</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Customer_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Customer Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Prospect</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Existing Customer</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>EDMS__c</fullName>
+        <externalId>false</externalId>
+        <label>EDMS</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Proactive</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Responsive</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Financial_Literacy__c</fullName>
+        <externalId>false</externalId>
+        <label>Financial Literacy</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>SALT Courses</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Scholarship Search</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Job/Internship Search</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Community</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>NSLDS_Files__c</fullName>
+        <externalId>false</externalId>
+        <label>NSLDS Files</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Access Granted</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>School Provides</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Access Lost</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Promo_Tile__c</fullName>
+        <externalId>false</externalId>
+        <label>Promo Tile</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Promotional_Items__c</fullName>
+        <externalId>false</externalId>
+        <label>Promotional Items</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>SALT Store</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Access to PDFs / eDocs</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Ready_To_Submit__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>A checkmark in this box will send an email alert to Della. She will review the item and, when approved, will submit it to Business Analysis for entry into the SALT Shaker.</inlineHelpText>
+        <label>Ready To Submit</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Sends_Demog_File__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>This field indicates whether or not the customer provides us with a SALT Demographic File.</inlineHelpText>
+        <label>Sends Demog File?</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes - w/ SS#</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Yes - w/ Unique ID</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Submit_to_BA__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Submit to BA</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Training__c</fullName>
+        <externalId>false</externalId>
+        <label>Training</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Student</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Faculty/Staff</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Vanity_URL__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>This field indicates whether or not the customer is using a SALT vanity URL.</inlineHelpText>
+        <label>Vanity URL</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>true</default>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <label>Product Offerings</label>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <label>Product Offerings  Name</label>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Product Offerings</pluralLabel>
+    <recordTypeTrackHistory>false</recordTypeTrackHistory>
+    <recordTypes>
+        <fullName>Credit_Union</fullName>
+        <active>true</active>
+        <label>Credit Union</label>
+        <picklistValues>
+            <picklist>Co_Branding__c</picklist>
+            <values>
+                <fullName>Logo Only</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Logo and Banner</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Customer_Type__c</picklist>
+            <values>
+                <fullName>Existing Customer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Prospect</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>EDMS__c</picklist>
+            <values>
+                <fullName>Responsive</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Financial_Literacy__c</picklist>
+            <values>
+                <fullName>Community</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Job%2FInternship Search</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SALT Courses</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Scholarship Search</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>NSLDS_Files__c</picklist>
+            <values>
+                <fullName>Access Granted</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Access Lost</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>School Provides</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Promo_Tile__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Promotional_Items__c</picklist>
+            <values>
+                <fullName>Access to PDFs %2F eDocs</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SALT Store</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Sends_Demog_File__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes - w%2F SS%23</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Yes - w%2F Unique ID</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Training__c</picklist>
+            <values>
+                <fullName>Faculty%2FStaff</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Student</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Vanity_URL__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Engagement_Partner</fullName>
+        <active>true</active>
+        <label>Engagement Partner</label>
+        <picklistValues>
+            <picklist>Co_Branding__c</picklist>
+            <values>
+                <fullName>Logo Only</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Logo and Banner</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Customer_Type__c</picklist>
+            <values>
+                <fullName>Existing Customer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Prospect</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>EDMS__c</picklist>
+            <values>
+                <fullName>Proactive</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Responsive</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Financial_Literacy__c</picklist>
+            <values>
+                <fullName>Community</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Job%2FInternship Search</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SALT Courses</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Scholarship Search</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>NSLDS_Files__c</picklist>
+            <values>
+                <fullName>Access Granted</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Access Lost</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>School Provides</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Promo_Tile__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Promotional_Items__c</picklist>
+            <values>
+                <fullName>Access to PDFs %2F eDocs</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SALT Store</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Sends_Demog_File__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes - w%2F SS%23</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Training__c</picklist>
+            <values>
+                <fullName>Faculty%2FStaff</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Student</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Vanity_URL__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>School</fullName>
+        <active>true</active>
+        <label>School</label>
+        <picklistValues>
+            <picklist>Co_Branding__c</picklist>
+            <values>
+                <fullName>Logo Only</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Logo and Banner</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Customer_Type__c</picklist>
+            <values>
+                <fullName>Existing Customer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Prospect</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>EDMS__c</picklist>
+            <values>
+                <fullName>Proactive</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Responsive</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Financial_Literacy__c</picklist>
+            <values>
+                <fullName>Community</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Job%2FInternship Search</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SALT Courses</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Scholarship Search</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>NSLDS_Files__c</picklist>
+            <values>
+                <fullName>Access Granted</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Access Lost</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>School Provides</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Promo_Tile__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Promotional_Items__c</picklist>
+            <values>
+                <fullName>Access to PDFs %2F eDocs</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SALT Store</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Sends_Demog_File__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes - w%2F SS%23</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Yes - w%2F Unique ID</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Training__c</picklist>
+            <values>
+                <fullName>Faculty%2FStaff</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Student</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Vanity_URL__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>Proactive_EDMS_Requires_NSLDS_Info</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND (ISPICKVAL(EDMS__c,&apos;Proactive&apos;),
+
+OR(ISPICKVAL(NSLDS_Files__c, &quot;&quot;)))</errorConditionFormula>
+        <errorDisplayField>NSLDS_Files__c</errorDisplayField>
+        <errorMessage>You must provide a response for NSLDS Files if EDMS = Proactive.</errorMessage>
+    </validationRules>
+</CustomObject>

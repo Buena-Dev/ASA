@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Member Stats</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Member Stats</value>
+    </caseValues>
+    <fields>
+        <label><!-- Account --></label>
+        <name>Account__c</name>
+        <relationshipLabel><!-- Member Stats --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Activation % Rate --></label>
+        <name>Activation_Rate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Avg Course Grade --></label>
+        <name>Avg_Course_Grade__c</name>
+    </fields>
+    <fields>
+        <label><!-- Avg Duration (Minutes) --></label>
+        <name>Avg_Duration_Minutes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Avg Page Views --></label>
+        <name>Avg_Page_Views__c</name>
+    </fields>
+    <fields>
+        <label><!-- Members Activated --></label>
+        <name>Members_Activated__c</name>
+    </fields>
+    <fields>
+        <label><!-- Members Deactivated --></label>
+        <name>Members_Deactivated__c</name>
+    </fields>
+    <fields>
+        <label><!-- Members Invited --></label>
+        <name>Members_Invited__c</name>
+    </fields>
+    <fields>
+        <label><!-- Month End --></label>
+        <name>Month_End__c</name>
+    </fields>
+    <fields>
+        <label><!-- Month --></label>
+        <name>Month_del__c</name>
+    </fields>
+    <fields>
+        <label><!-- Number Courses --></label>
+        <name>Number_Courses__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Page Views --></label>
+        <name>Total_Page_Views__c</name>
+    </fields>
+    <layouts>
+        <layout>Member Stats Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

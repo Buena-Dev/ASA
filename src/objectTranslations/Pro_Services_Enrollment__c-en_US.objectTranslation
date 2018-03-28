@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Pro Services Enrollment</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Pro Services Enrollments</value>
+    </caseValues>
+    <fields>
+        <label><!-- Organization --></label>
+        <name>Organization__c</name>
+    </fields>
+    <fields>
+        <help><!-- What event (or Offering) should this individual be associated with? --></help>
+        <label><!-- PS Attendee --></label>
+        <name>PS_Attendee__c</name>
+        <relationshipLabel><!-- Pro Services Enrollments --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Select the event (or Offering) this individual will be attending. --></help>
+        <label><!-- PS Offering --></label>
+        <name>PS_Offering__c</name>
+        <relationshipLabel><!-- Pro Services Enrollments --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Status of the individual with regard to this specific event (or Offering) --></help>
+        <label><!-- Status --></label>
+        <name>Status__c</name>
+        <picklistValues>
+            <masterLabel>Attended</masterLabel>
+            <translation><!-- Attended --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Invited</masterLabel>
+            <translation><!-- Invited --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Registered</masterLabel>
+            <translation><!-- Registered --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Viewed</masterLabel>
+            <translation><!-- Viewed --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Target Date --></label>
+        <name>Target_Date__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

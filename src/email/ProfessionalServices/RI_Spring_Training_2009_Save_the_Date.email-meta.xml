@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Ri Spring Trainging 2009 Save the date</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>EmailLetterhead</letterhead>
+    <name>RI Spring Training- 2009 (Save the Date)</name>
+    <style>promotionRight</style>
+    <subject>Save the Date!  ASA Training Event</subject>
+    <textOnly>Save the date for a workshop that helps refine your skills and keeps you informed.  
+
+
+National FFELP guarantor American Student Assistance®  has designed a 
+training event to discuss some of the key concerns of financial aid administrators.   
+  
+HEA Reauthorization Update - Preferred Lender Lists and School Codes of Conduct.
+Join us for an in-depth discussion on implementing the changes drafted into the Higher Education Act Reauthorization Bill. Our regulatory analysts will focus on Preferred Lender Lists and School Codes of Conduct. This session will include an opportunity for question and answers.
+ 
+Ten Key Ideas
+Participants will explore ten ideas every financial aid office should know when implementing/enhancing a program of financial literacy education on your campus. this stimulating and lively session will cover a broad range of topics from, why the financial aid office should play a role in financial literacy programs to how the school and students will benefit from implementing a program. This session explores the big picture and helps create a vision for development of a program on your campus.
+ 
+For more information please contact:
+Jeff Bentley
+Regional Account Executive 
+American Student Assistance 
+800-999-9080 Ext. 4524
+jbentley@amsa.com
+www.amsa.com
+ 
+
+March 17, 2009
+ 
+We are offering two courses and a graduate concerns Q &amp; A session in our half day workshop. Please join us!
+
+10:00am  - 2:00pm 
+Lunch will be provided
+ 
+       
+
+ 
+How to register or for additional information, including driving directions
+ 
+Register Online at 
+http://www.amsa.com/fap/training
+ 
+ 
+Roger Williams Unversity School of Law 
+
+
+
+http://law.rwu.edu/sites/visiting/maps/</textOnly>
+    <type>html</type>
+</EmailTemplate>

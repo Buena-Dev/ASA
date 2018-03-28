@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>false</available>
+    <description>Reminder email sent to all to take the Default Prevention Survey</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>EmailLetterhead</letterhead>
+    <name>Default Prevention Survey 2007 - Reminder</name>
+    <style>freeForm</style>
+    <subject>Last chance to weigh in on Default Prevention!</subject>
+    <textOnly>Dear {!Contact.FirstName}:
+ 
+ 
+Time is running out!  Our Default Prevention survey will be available only until June 15.  
+ 
+If you have not yet completed the survey, please take a few minutes and do so now:  
+http://www.keysurvey.com/survey/152865/2c68/
+ 
+American Student Assistance® (ASA) is interested in your honest opinions about default prevention.  Your answers will be reported only in aggregate and the specific information you supply will remain confidential, and will be used exclusively in the development of default prevention programs.  The results will be available this summer on www.amsa.com.   
+ 
+Thank you for your participation - we greatly appreciate your insight on this important topic.
+ 
+Please note that this is not a solicitation.  
+ 
+Sincerely,
+ 
+American Student Assistance</textOnly>
+    <type>html</type>
+</EmailTemplate>

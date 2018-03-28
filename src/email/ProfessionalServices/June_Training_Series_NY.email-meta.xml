@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>June Training Series - NY</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>EmailLetterhead</letterhead>
+    <name>June Training Series - NY</name>
+    <style>freeForm</style>
+    <subject>You are invited to an ASA Training Event!</subject>
+    <textOnly>Join ASA! 
+ 
+June Training Series - New York 
+
+National FFELP guarantor American Student Assistance® (ASA) has designed a training event to discuss some of the most pressing topics affecting financial aid. 
+ 
+Date, Time and Location:
+
+
+
+
+June 30, 2009  - Fashion Institute of Technology, New York, NY 
+ 
+Foreign School Agenda
+9:30 a.m. - 12:00 p.m. Regulatory Update for Foreign Schools
+1:00 p.m. -  3:30 p.m. Professional Judgment and Needs Analysis for Foreign Schools
+ 
+Domestic School Agenda
+9:30 a.m.   - 12:00 p.m. Professional Judgment and Needs Analysis for Domestic Schools
+1:00 p.m.   - 3:30 p.m. Regulatory Update for Domestic Schools 
+  
+Lunch will be provided with full day attendance.
+ 
+Please register for each topic you plan to attend.
+ 
+Topics:
+ 
+Regulatory Update 
+With the numerous changes these past few months, from Code of Conduct to School disclosures, make sure you’re on the right track to implementation of applicable regulations.  Ensure that you have the latest information, and join us while we discuss the overall changes that affect schools.
+ 
+Professional Judgment &amp; Needs Analysis During Difficult Economic Times 
+During these tough economics times College Staff will need to respond to difficult situations regarding job loss, retirement fund depletion and other financial loss.  This session will cover the basics of Professional Judgment and also how to use Professional Judgment to assist a family in financial crisis. 
+ 
+Who Should Attend 
+School financial aid administrators interested in the most up to date information.
+
+How to register or for additional information.
+
+· Register online: http://www.amsa.com/fap/training/index.cfm 
+   
+· Email: send your name, phone number and enrollment details to 
+training@amsa.com 
+
+· Phone: call the Training Department at (800) 999-9080, ext. 3099 (1-617-728-4200)
+
+Note: Please register for all the sessions you plan on attending.
+ 
+All American Student Assistance training events are offered free of charge.</textOnly>
+    <type>html</type>
+</EmailTemplate>

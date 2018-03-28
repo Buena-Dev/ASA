@@ -1,0 +1,13 @@
+School Name:  {!Account.Name}
+School OE Code:  {!Account.OE_Code__c}	
+User Name:  {!Contact.Name}	
+User ID:  {!Contact.Email}	
+Reset User ID? Yes or No
+Access:
+Please choose one and delete the other for each line. 
+-AddLoan Full R/W Access, Read Only Access, No Access
+-Addr Update Full R/W Access, Read Only Access, No Access
+-Monetary Adj  Full R/W Access, Read Only Access, No Access
+-Reports Full R/W Access, Read Only Access, No Access
+-Mult Updates Full R/W Access, Read Only Access, No Access
+-Cred Check Full R/W Access, No Access

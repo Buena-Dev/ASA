@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>false</available>
+    <description>Letter announcing our 2005 CDR</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>SALTClientLetterhead</letterhead>
+    <name>ASA&apos;s 2005 Cohort Default Rate</name>
+    <style>freeForm</style>
+    <subject>American Student Assistance posts lowest Guarantor Cohort Default Rate in the Nation</subject>
+    <textOnly>Dear {!Contact.FirstName}, 
+ 
+
+American Student Assistance® (ASA) is pleased to announce that we have achieved the lowest cohort default rate of all FFELP guarantors in the nation, demonstrating once again that Wellness works!
+ 
+ASA&apos;s 2005 cohort default rate of 1.5 percent is the lowest among the nation&apos;s 35 guarantors. This marks the seventh year in a row that ASA has achieved the lowest cohort rate among the nation’s 10 largest guarantors. 
+ When we adopted our Voluntary Flexible Agreement (VFA) with the U.S. Department of Education in 2001, our innovative financing structure was developed so that we are paid for keeping borrowers healthy, instead of the traditional model where guarantors benefit from borrower defaults. We then began creating our Wellness suite of products and services for borrowers. One example is Journeys, our interactive, electronic magazine sent to all borrowers with an ASA guarantee. Borrowers begin receiving Journeys during their grace periods, and they continue receiving it throughout the critical first 18 months of repayment.
+ 
+We credit much of our cohort default rate success to our relationships with our school and lender partners who embrace our Wellness philosophy and services.  If you have any questions or would like more information about Wellness, please contact me at {!Contact.OwnerPhone} or {!Contact.OwnerEmail}
+
+
+Sincerely, 
+
+{!Contact.OwnerFullName}
+{!Contact.OwnerTitle}
+American Student Assistance
+
+The content of this email is confidential and proprietary to American Student Assistance. It is intended only for the above-named individual or entity and for the purpose indicated and may not be reproduced or distributed without permission of the sender. Please notify the sender or ASA if you received this email in error.</textOnly>
+    <type>html</type>
+</EmailTemplate>

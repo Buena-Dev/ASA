@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Alert to Legal that a contracts Key Date is coming up</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Legal_Alert Contract Key Date Reminder</name>
+    <style>none</style>
+    <subject>ALERT:  {!Contract.Account} Key Date</subject>
+    <type>text</type>
+</EmailTemplate>

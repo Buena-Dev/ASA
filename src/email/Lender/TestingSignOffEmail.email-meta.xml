@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>false</available>
+    <description>This email is used to signify that a lender has completed testing and is nearing to Go Live.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Testing Sign Off Email</name>
+    <style>none</style>
+    <subject>{!Case.Account} is Prepared to Go Live</subject>
+    <type>text</type>
+</EmailTemplate>

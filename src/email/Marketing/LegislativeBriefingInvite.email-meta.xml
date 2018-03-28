@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>SALTClientLetterhead</letterhead>
+    <name>Legislative Briefing Invite</name>
+    <style>freeForm</style>
+    <subject>You&apos;re invited to a briefing on new ideas for managing higher ed debt</subject>
+    <textOnly>Dear {!Contact.Salutation} {!Contact.LastName}:
+ 
+Everyone’s talking about the federal student loan programs these days.  Ideas abound on how to streamline the process and ultimately better serve the needs of students and families.  But what’s most important to your constituents is that, regardless of how they take out a student loan, at the end of the day they must learn how to successfully manage that debt.  Whether the loan comes from the federal government or a private lender, it still ends up as a recurring payment that must be fit into a monthly budget.  And for some of today’s college graduates, that’s getting harder and harder.
+ 
+American Student Assistance, a Boston-based, federally funded, public purpose administrator of the Federal Family Education Loan Program, invites you to a legislative briefing:
+ 
+April 12
+2-4 pm
+Rayburn Building (Room TBD)
+Coffee and dessert will be provided.
+ 
+Come hear the lessons we’ve learned about teaching students financial literacy.  We’ll cover:
+
+The results of our experiments to positively affect borrower repayment.  
+Our initiatives to get students thinking about debt management, from informational direct mail to on-campus events and seminars in the high school classroom.  
+The best practices we’ve uncovered for communicating with today’s students who are on information overload. 
+ 
+Please RSVP to Allesandra Lanza at lanza@amsa.com or 617 728 4631.
+
+ 
+We look forward to seeing you on the 12th!
+ 
+The content of the e-mail is confidential and proprietary to American Student Assistance. It is intended only for the above-named individual or entity and for the purpose indicated and may not be reproduced or distributed without permission of the sender. Please notify the sender or ASA if you received this e-mail in error.</textOnly>
+    <type>html</type>
+</EmailTemplate>

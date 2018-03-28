@@ -1,0 +1,1137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ReadWrite</externalSharingModel>
+    <fields>
+        <fullName>Account__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Account</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Campus Engagement Tactic</relationshipLabel>
+        <relationshipName>Campus_Engagement_Tactic</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Ambassador_Program_Stage__c</fullName>
+        <externalId>false</externalId>
+        <label>Ambassador Program Stage</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Program Inquiry</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Pending Decision</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Recruiting/Planning</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Ambassador Training in Progress</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Certification in Progress</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Active Program</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Stagnant Activity</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Ambassador_Program__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>A check in this field means that the customer has an Ambassador Program for SALT.</inlineHelpText>
+        <label>Ambassador Program</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Campus_Event_Activations__c</fullName>
+        <externalId>false</externalId>
+        <label>Campus Event Activations</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Campus_Event_Cost__c</fullName>
+        <externalId>false</externalId>
+        <label>Campus Event Cost</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Campus_Event_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Campus Event Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Description__c</fullName>
+        <externalId>false</externalId>
+        <label>Description</label>
+        <length>100000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Office__c</fullName>
+        <externalId>false</externalId>
+        <label>Office</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Academic Advising</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Academic Affairs</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Admissions</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Alumni Relations</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Athletics</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Bursar</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Business Office</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Campus-Wide</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Career Services</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Development</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Enrollment Management</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Faculty</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Financial Aid</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>First-Year Experience</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Institutional Research</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Orientation</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>President&apos;s Office</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Registrar</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Residence Life</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Retention Office</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Scholarship Office</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Student Activities</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Student Affairs</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Student Government</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Student Leadership Programming</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Student Services</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>TRIO Program</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Veterans Affairs</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Pilot_Program__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Is this a pilot program?</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Is this a pilot program?</inlineHelpText>
+        <label>Pilot Program</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Promotional_Asset__c</fullName>
+        <externalId>false</externalId>
+        <label>Promotional Asset</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Amabassador Handbook</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Banner</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Buckslip</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Bulletin Board Kit</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Communication Kit</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Digital board presentation</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Event Resources</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Flyer</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Guide for Student Organizations</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Instructor’s Handbook</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Membership Card</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Orientation Kit</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Poster</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Press Kit</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Print Ad</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>SALT Flyer</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>SALT Overview Video</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Slide Deck</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Table Tent</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Web Ad</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Source__c</fullName>
+        <externalId>false</externalId>
+        <label>Source</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Consultation Call</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Stakeholder Meeting</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Post-Launch Call</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Quarterly Check-In-Call</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Tactic_Category__c</fullName>
+        <externalId>false</externalId>
+        <label>Tactic Category</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Core promotional initiatives</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Incorporate SALT into existing campus events/programming</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Multi-department engagement plan</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Adopted ongoing communication/promotional plan</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>SALT registration requirement</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Utilization of instructor handbook</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>SALT ambassador program</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Integration into the curriculum</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>SALT steering committee/task force</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>SALT incentive event/raffle</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Top down buy-in (President/C-Suite)</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>SALT Courses/Lesson requirement</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Engagement Meeting</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Re-Engagement Meeting</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Large-Scale Engagement Initiative</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>One-on-One Counseling</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Target__c</fullName>
+        <externalId>false</externalId>
+        <label>Target</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>All Alumni</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>All Students</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Faculty and Administrators</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>First-Year Student</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Graduating Student</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Student Leaders</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>TRIO</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Young Alumni</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Time_Frame__c</fullName>
+        <externalId>false</externalId>
+        <label>Time Frame</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Spring 2012</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Summer 2012</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Fall 2012</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Spring 2013</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Summer 2013</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Fall 2013</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Spring 2014</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Summer 2014</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Fall 2014</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Spring 2015</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Summer 2015</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Fall 2015</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Spring 2016</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Summer 2016</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Fall 2016</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Spring 2017</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Summer 2017</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Fall 2017</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <label>Campus Engagement Tactic</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Account__c</columns>
+        <columns>Time_Frame__c</columns>
+        <columns>Tactic_Category__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>Daryl_Conte</fullName>
+        <columns>Account__c</columns>
+        <columns>NAME</columns>
+        <columns>Source__c</columns>
+        <columns>Time_Frame__c</columns>
+        <columns>Description__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>OWNER.LAST_NAME</field>
+            <operation>equals</operation>
+            <value>Daryl</value>
+        </filters>
+        <label>Daryl Conte</label>
+    </listViews>
+    <listViews>
+        <fullName>New_View</fullName>
+        <columns>NAME</columns>
+        <columns>Account__c</columns>
+        <columns>Time_Frame__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Account__c</field>
+            <operation>notEqual</operation>
+        </filters>
+        <label>New View</label>
+    </listViews>
+    <nameField>
+        <label>Campus Engagement Tactic Name</label>
+        <trackHistory>true</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Campus Engagement Tactic</pluralLabel>
+    <recordTypeTrackHistory>true</recordTypeTrackHistory>
+    <recordTypes>
+        <fullName>campus_engagenement_tactic</fullName>
+        <active>true</active>
+        <label>Campus Engagement Tactic</label>
+        <picklistValues>
+            <picklist>Ambassador_Program_Stage__c</picklist>
+            <values>
+                <fullName>Active Program</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ambassador Training in Progress</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Certification in Progress</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pending Decision</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Program Inquiry</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Recruiting%2FPlanning</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Stagnant Activity</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Office__c</picklist>
+            <values>
+                <fullName>Academic Advising</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Academic Affairs</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Admissions</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Alumni Relations</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Athletics</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bursar</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Business Office</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Campus-Wide</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Career Services</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Development</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Enrollment Management</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Faculty</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Financial Aid</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>First-Year Experience</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Institutional Research</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Orientation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>President%27s Office</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Registrar</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Residence Life</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Retention Office</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Scholarship Office</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Student Activities</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Student Affairs</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Student Government</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Student Leadership Programming</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Student Services</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TRIO Program</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Veterans Affairs</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Promotional_Asset__c</picklist>
+            <values>
+                <fullName>Amabassador Handbook</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Banner</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Buckslip</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bulletin Board Kit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Communication Kit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Digital board presentation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Event Resources</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Flyer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Guide for Student Organizations</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Instructor%E2%80%99s Handbook</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Membership Card</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Orientation Kit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Poster</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Press Kit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Print Ad</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SALT Flyer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SALT Overview Video</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Slide Deck</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Table Tent</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Web Ad</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Source__c</picklist>
+            <values>
+                <fullName>Consultation Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Post-Launch Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Quarterly Check-In-Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Stakeholder Meeting</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Tactic_Category__c</picklist>
+            <values>
+                <fullName>Adopted ongoing communication%2Fpromotional plan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Core promotional initiatives</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Engagement Meeting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Incorporate SALT into existing campus events%2Fprogramming</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Integration into the curriculum</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Large-Scale Engagement Initiative</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Multi-department engagement plan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>One-on-One Counseling</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Re-Engagement Meeting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SALT Courses%2FLesson requirement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SALT ambassador program</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SALT incentive event%2Fraffle</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SALT registration requirement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SALT steering committee%2Ftask force</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Top down buy-in %28President%2FC-Suite%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Utilization of instructor handbook</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Target__c</picklist>
+            <values>
+                <fullName>All Alumni</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>All Students</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Faculty and Administrators</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>First-Year Student</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Graduating Student</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Student Leaders</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TRIO</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Young Alumni</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Time_Frame__c</picklist>
+            <values>
+                <fullName>Fall 2012</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fall 2013</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fall 2014</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fall 2015</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fall 2016</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fall 2017</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Spring 2012</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Spring 2013</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Spring 2014</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Spring 2015</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Spring 2016</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Spring 2017</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Summer 2012</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Summer 2013</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Summer 2014</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Summer 2015</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Summer 2016</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Summer 2017</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+</CustomObject>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>FY Q4 Rating Change</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>FY Q4 Rating Change</name>
+    <style>none</style>
+    <subject>{!Account.Name}, {!Account.OE_Code__c} -- FY Q4 Rating Change: {!Account.Current_Contract_Year_Q4_Rating__c}</subject>
+    <type>text</type>
+</EmailTemplate>

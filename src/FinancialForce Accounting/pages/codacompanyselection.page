@@ -1,0 +1,45 @@
+<!-- codacompanyselection -->
+<apex:page controller="c2g.CODACompanySelectionController" extensions="c2g.CODAHelpLoaderController">
+	<script src="{!URLFOR($Resource.c2g__coda2go,'coda2go/web/script/lib.js')}" type="text/javascript"/>
+	<apex:stylesheet value="{!URLFOR($Resource.c2g__coda2go,'coda2go/web/css/style.css')}"/>
+
+	<script>
+		var CODA2GoButtons = new CODA2GoPage();
+		var CODA2GoBtnSaveValue = "{!$Label.codaPageCompanyNewProcessing}";
+	</script>
+
+	<apex:form onsubmit="if(CODA2GoButtons.disableSaveButtons){ return CODA2GoButtons.disableSaveButtons(); }">
+		<!-- Header -->
+		<apex:sectionHeader title="{!$Label.c2g__codaselectcompany}" help="{!redirectForHelp1018}"/>
+		
+		<!-- CashEntry Detail -->
+		<apex:pageBlock mode="edit">
+			<!-- Buttons -->
+			<apex:pageBlockButtons >
+				<!-- Hidden Buttons -->
+				<apex:commandButton value="{!$Label.c2g__codacompanyselectionsave}" action="{!save}" id="save_h" styleclass="hiddensubmit"/>
+				<!-- End of Hidden Buttons -->
+				<apex:commandButton value="{!$Label.c2g__codacompanyselectionsave}" id="save" onclick="document.getElementById('{!$Component.save_h}').click();return false;"/>
+				<script>
+					CODA2GoButtons.initButtons(["{!$Component.save}"]);
+				</script>
+			</apex:pageBlockButtons>
+
+			<!-- Messages -->
+			<apex:pageMessages />
+
+			<!-- Main Section -->
+			<apex:pageBlockSection title="{!$Label.c2g__codayourcompanies}" columns="4">
+				<apex:pageBlockTable id="dtUserCompanySelector" value="{!viewstate.userCompanies}" var="userCompany" width="100%">
+					<apex:column headerValue="{!$Label.c2g__codacompanyselectionlabel}">
+						<apex:outputLabel value="{!userCompany.companyName}"/>
+					</apex:column>
+					<apex:column headerValue="{!$Label.c2g__codacompanyselectioncurrentlabel}">
+						<apex:inputCheckbox value="{!userCompany.current}"/>
+					</apex:column>
+				</apex:pageBlockTable>
+			</apex:pageBlockSection>
+			
+		</apex:pageBlock>
+	</apex:form>
+</apex:page>

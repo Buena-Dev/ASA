@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>false</available>
+    <description>TRIO Register reminder email</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>EmailLetterhead</letterhead>
+    <name>TRIO_Symp_NotReg_2ndletter</name>
+    <style>freeForm</style>
+    <subject>“Catch the Public Relations for Nonprofits Workshop at the ASA Symposium”</subject>
+    <textOnly>Dear TRIO Professional:
+ 
+Every day your office helps students from all walks of life achieve success through higher education.  But every day students also miss the opportunity to benefit from your services, because they don’t know about them.  Are you doing all you can to get your message out to the community?
+ 
+Once again TRIO programs face possible budget cuts or even total elimination.  Public sentiment can persuade the legislators who hold these programs’ future in their hands.  Does the public know about all the good work you do?
+ 
+Federal Family Education Loan Program administrator American Student Assistance® invites you to attend “How to Get Big Public Relations Results on Small Budgets:  A Brainstorming &amp; Strategy Workshop” at our annual symposium, June 19-20 in Boston, Mass.  Led by Art Feinglass, president of Access Communications, Inc. and author of the Public Relations Handbook for Nonprofits, this informative session will teach you how to use the media to your advantage.  Often nonprofits think they don’t have the time, budget, resources, expertise or even the need to invest in public relations efforts.  Learn why media outreach is so crucial to your organization and get some tips on how to easily (and cheaply!) reach out to the press.  
+ 
+The workshop will be held on June 20 from 1:45-4:15 pm.  Join us for just the workshop or plan on attending the entire symposium, Insights: A Conversation on Student Debt.  Registration is FREE!  For more information, call Allesandra Lanza at 800 999 9080, ext. 4631.  See you in June!</textOnly>
+    <type>html</type>
+</EmailTemplate>

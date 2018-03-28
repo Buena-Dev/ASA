@@ -1,0 +1,33 @@
+Business Analysis, 
+
+Please process the following profile set up for the customer information shown below:
+
+Account Name: {!Product_Offerings__c.Account__c} 
+
+Account Type: {!Product_Offerings__c.Account_Type__c} 
+
+Account Owner: {!Product_Offerings__c.Account_Owner__c} 
+
+Campus Consultant: {!Product_Offerings__c.Campus_Consultant__c} 
+
+Regional Account Executive: {!Product_Offerings__c.Regional_Account_Executive__c} 
+
+EDMS: {!Product_Offerings__c.EDMS__c} 
+
+NSLDS: {!Product_Offerings__c.NSLDS_Files__c} 
+
+Financial Literacy: {!Product_Offerings__c.Financial_Literacy__c} 
+
+Promotional Items: {!Product_Offerings__c.Promotional_Items__c} 
+
+Demographic File: {!Product_Offerings__c.Sends_Demog_File__c} 
+
+Training: {!Product_Offerings__c.Training__c} for: {!Product_Offerings__c.Customer_Type__c} 
+
+Vanity URL: {!Product_Offerings__c.Vanity_URL__c} 
+
+Co-Branding: {!Product_Offerings__c.Co_Branding__c} 
+
+
+
+Link to record: {!Product_Offerings__c.Link}

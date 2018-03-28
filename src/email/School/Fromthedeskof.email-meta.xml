@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>false</available>
+    <description>School Lender From the desk of  Communication Template</description>
+    <encodingKey>UTF-8</encodingKey>
+    <letterhead>EmailLetterhead</letterhead>
+    <name>From the desk of</name>
+    <style>formalLetter</style>
+    <subject>From the Desk of {!Account.OwnerFullName} - Holiday Hours and Disbursements</subject>
+    <textOnly>News from ASA
+From the Desk of {!Account.OwnerFullName}
+Dear {!Contact.FirstName},
+ 
+American Student Assistance® (ASA) would like to ensure that our school clients are aware of our Thanksgiving Day hours of operation and disbursement schedule.  We hope that by notifying you in advance there will be minimal effects on your operations.
+ 
+ASA will be closed from 2:00 p.m. ET on Wednesday, November 25 until 8:30 a.m. ET on Monday, November 30. No disbursements will be delivered on Thursday, November 26 or Friday, November 27.
+ 
+If you usually receive a disbursement on Thursday or Friday, you will receive your EFT disbursement roster on Wednesday, November 25 and the funds on Monday, November 30.
+ 
+Please note that all loan certifications and changes must be received by the end of the day on Tuesday, November 24 in order to be reflected in the EFT disbursement roster on Monday, November 30.
+ 
+We would like to wish all of our school clients a safe and happy holiday weekend!  If you have any questions, please contact me or ASA’s Call Center at customerservice@amsa.com or 800.999.9080 and select Option 1.  The Call Center’s normal hours of operation are Monday through Friday from 8:30 a.m. to 9:00 p.m. ET.
+ 
+
+Sincerely, 
+
+
+{!Account.OwnerFullName}
+{!Account.OwnerTitle}
+American Student Assistance
+100 Cambridge Street
+Boston, MA 02114
+{!Account.OwnerPhone}
+{!Account.OwnerEmail}
+ 
+The content of this email is confidential and proprietary to American Student Assistance. It is intended only for the above-named individual or entity and for the purpose indicated and may not be reproduced or distributed without permission of the sender. Please notify the sender or ASA if you received this email in error.
+ </textOnly>
+    <type>html</type>
+</EmailTemplate>

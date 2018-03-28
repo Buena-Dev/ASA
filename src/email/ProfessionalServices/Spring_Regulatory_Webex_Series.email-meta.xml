@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Summer Webex Series</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>EmailLetterhead</letterhead>
+    <name>Summer Webex Series</name>
+    <style>freeForm</style>
+    <subject>You are invited to an ASA Training Series via webex!</subject>
+    <textOnly>Join American Student Assistance® (ASA)
+ 
+National FFELP guarantor, American Student Assistance® (ASA), is pleased to offer an online training series focused on some of the most pressing topics affecting financial aid administrators today. 
+ 
+Please join your colleagues and ASA’s knowledgeable, experienced training staff for one or more of these timely and informative sessions.
+ 
+All sessions will be held conveniently via WebEx from 1:00 p.m. – 2:00 p.m. ET except July 29, 2009, and September 2, 2009, which will be held from 12:00 p.m. – 1:00 p.m. ET. 
+ 
+Below are the scheduled dates and the topics:  
+ 
+July 8, 2009                             Implementing a Program of Financial Literacy on
+                                                Campus
+ 
+July 15, 2009                           Financial Literacy – Getting Your Students to Pay
+                                                Attention
+ 
+July 22, 2009                           Ten Key Ideas FAO&apos;s Should Know When Implementing Financial Literacy Programs
+ 
+July 29, 2009                           Regulatory Update
+ 
+August 5, 2009                        Innovations in Entrance and Exit Counseling
+ 
+August 12, 2009                      Negotiated Rulemaking Update 
+ 
+August 19, 2009                      The A to Zs of Written Policy Requirements
+ 
+August 26, 2009                      SAFRA (HR 3221) Overview
+ 
+September 2, 2009                 Repayment Options: Featuring Income Based
+                                                Repayment
+ 
+September 9, 2009                 Lower Your CDR: Cohort Default Management Best Practices
+ 
+September 16, 2009              Helping Your Students Create a Financial
+                                               Roadmap
+ 
+September 23, 2009              Put Loans - The Impact on Institutions and 
+                                               Borrowers 
+ 
+For additional information or registration please:
+ 
+·         Go to:  http://www.amsa.com/fap/training/index.cfm
+·         E-mail us your name, phone number and enrollment details to:  training@amsa.com 
+·         Call our Training Department at (800) 999-9080, ext. 3099 (1-617-728-4200) 
+ 
+All of ASA’s training events are offered free of charge.</textOnly>
+    <type>html</type>
+</EmailTemplate>

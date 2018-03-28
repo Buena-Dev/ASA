@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>false</available>
+    <description>PD Day Follow Up Email LA</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>EmailLetterhead</letterhead>
+    <name>PD Day - LA -9-2007 follow up</name>
+    <style>freeForm</style>
+    <subject>Thank you for attending!</subject>
+    <textOnly>Thank you for attending American Student Assistance&apos;s Louisiana Professional Development Day on September 14, 2007.
+ 
+It was a pleasure to see so many friendly faces.
+ 
+I look forward to seeing you at the conference in Shreveport next month. 
+To attend another great ASA training, check your conference program for the ASA session &quot;Go With the Flows: Optimizing Your Loan Processing.&quot;
+ 
+Thanks,
+Steve
+ 
+Steve Greenough
+Regional Account Executive 
+American Student Assistance 
+800-999-9080 Ext. 4693 
+sgreenough@amsa.com
+www.amsa.com</textOnly>
+    <type>html</type>
+</EmailTemplate>

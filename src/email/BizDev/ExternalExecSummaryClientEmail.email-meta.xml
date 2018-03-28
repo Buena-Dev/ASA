@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>false</available>
+    <description>E-Mailed to School with Executive Summary Attatched</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>External Exec. Summary Client Email</name>
+    <style>none</style>
+    <subject>Executive Summary for your Review</subject>
+    <type>text</type>
+</EmailTemplate>

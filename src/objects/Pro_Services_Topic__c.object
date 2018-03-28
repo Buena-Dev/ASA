@@ -1,0 +1,909 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <customHelp>PSTopics_CustomHelp</customHelp>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Topics available for individual Offerings conducted by the Professional Services @ ASA team.</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>Read</externalSharingModel>
+    <fields>
+        <fullName>Brand_del__c</fullName>
+        <externalId>false</externalId>
+        <label>Brand?</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>SALT</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>ASA</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Both</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>PS_ConferenceOffering__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Indicates whether the topic will be submitted to conferences for the current year.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>If this box is checked, this Topic is considered part of the standard conference offerings for all state, regional and national _ASFAA conferences.</inlineHelpText>
+        <label>Conference Offering</label>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>PS_TopicAvailableDeliveryFormat__c</fullName>
+        <description>How this topic may be viewed/presented</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This field indicates the methods that may be used to deliver this content. Other options may be available, but may require additional development time.</inlineHelpText>
+        <label>Available Delivery Formats</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Article</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Presentation (in person)</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Presentation (web-based)</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>PS_TopicAvailablePresenters__c</fullName>
+        <description>Other members of the ProServices @ ASA team who are able to present this topic.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This field indicates the ProServices @ ASA team members who may be able to presnt on this topic.</inlineHelpText>
+        <label>Available Presenters</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Gina Lucente-Cole</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Jacquie Carroll</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Jen Schott</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Joanne Dashiell</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Lyssa Thaden</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Sabrina Mainini</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Non-PS ASA Staff</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Fidel Calero</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Daryl Conte</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Lorinda Diehl</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>PS_TopicCategory__c</fullName>
+        <description>The category or categories used to group topics together.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The Category is the general group or thematic area that this Topic falls under.</inlineHelpText>
+        <label>Category</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>ASA Products &amp; Services</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Campus Leadership</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Financial Literacy for Campus Staff</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Financial Literacy for Students</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Regulations &amp; Compliance</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Default Prevention and Management</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>SALT Specific</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>PS_TopicDescription__c</fullName>
+        <description>Describe this topic.</description>
+        <externalId>false</externalId>
+        <label>Description</label>
+        <length>5000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>10</visibleLines>
+    </fields>
+    <fields>
+        <fullName>PS_TopicHowWillYouBenefit__c</fullName>
+        <description>How will the user benefit from this topic?</description>
+        <externalId>false</externalId>
+        <label>How Will You Benefit</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>PS_TopicLevel__c</fullName>
+        <description>Target level for expected audience.</description>
+        <externalId>false</externalId>
+        <label>Level</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Beginner</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Intermediate</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Advanced</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Student</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>PS_TopicSubTitle__c</fullName>
+        <description>Sub-title for the topic.</description>
+        <externalId>false</externalId>
+        <label>Sub-Title</label>
+        <length>250</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PS_TopicSynopsis_del__c</fullName>
+        <description>Write a brief synopsis of this topic (suitable for publication in a conference program or in a flyer advertising this session).</description>
+        <externalId>false</externalId>
+        <label>Synopsis</label>
+        <length>1000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>PS_TopicTypicalLength__c</fullName>
+        <description>The typical lenght of a presentation.</description>
+        <externalId>false</externalId>
+        <label>Typical Length</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>30 minutes</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>60 minutes</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>90 minutes</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>2 hours</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>1/2 day</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Full day</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Varies</fullName>
+                    <default>true</default>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>PS_TopicWhoShouldAttend__c</fullName>
+        <description>Who should attend this topic?</description>
+        <externalId>false</externalId>
+        <label>Who Should Attend</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Status__c</fullName>
+        <description>What is the current status of this topic?</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This field indicates the current status of this Topic. In development = Future offering but not yet developed; Active = Available Topic; Archived = Available only upon request (may be outdated or no longer relevant); Removed = Not available.</inlineHelpText>
+        <label>Status</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>In Development</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Active</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Archived</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Removed</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Sub_Status_del__c</fullName>
+        <description>What is the current sub status of this topic?</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The Sub-Status is dependent upon the value of the Status field and provides more information about the current status of this Topic.</inlineHelpText>
+        <label>Sub-Status</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>High Priority</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Standard Priority</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Low Priority</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Initial Version</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Revised/Updated</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Limited Interest</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Few Requests</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Outdated</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Replaced</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Create On Request</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <label>Pro Services Topic</label>
+    <listViews>
+        <fullName>ASA_Brand</fullName>
+        <booleanFilter>1</booleanFilter>
+        <columns>NAME</columns>
+        <columns>Brand_del__c</columns>
+        <columns>PS_TopicCategory__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Brand_del__c</field>
+            <operation>equals</operation>
+            <value>ASA</value>
+        </filters>
+        <label>ASA Brand</label>
+    </listViews>
+    <listViews>
+        <fullName>AllTopics</fullName>
+        <columns>NAME</columns>
+        <columns>PS_TopicSubTitle__c</columns>
+        <columns>PS_TopicCategory__c</columns>
+        <columns>PS_TopicSynopsis_del__c</columns>
+        <columns>PS_TopicLevel__c</columns>
+        <columns>LAST_UPDATE</columns>
+        <filterScope>Everything</filterScope>
+        <label>All Topics</label>
+    </listViews>
+    <listViews>
+        <fullName>Articlesactivearchived</fullName>
+        <columns>NAME</columns>
+        <columns>PS_TopicSynopsis_del__c</columns>
+        <columns>Status__c</columns>
+        <columns>Sub_Status_del__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>LAST_UPDATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>PS_TopicAvailableDeliveryFormat__c</field>
+            <operation>includes</operation>
+            <value>Article</value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Active,Archived</value>
+        </filters>
+        <label>Articles (active &amp; archived)</label>
+    </listViews>
+    <listViews>
+        <fullName>Articlesactiveonly</fullName>
+        <columns>NAME</columns>
+        <columns>PS_TopicSynopsis_del__c</columns>
+        <columns>Status__c</columns>
+        <columns>Sub_Status_del__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>LAST_UPDATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>PS_TopicAvailableDeliveryFormat__c</field>
+            <operation>includes</operation>
+            <value>Article</value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Active</value>
+        </filters>
+        <label>Articles (active only)</label>
+    </listViews>
+    <listViews>
+        <fullName>Both_Brand</fullName>
+        <columns>NAME</columns>
+        <columns>Brand_del__c</columns>
+        <columns>PS_TopicCategory__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Brand_del__c</field>
+            <operation>equals</operation>
+            <value>Both</value>
+        </filters>
+        <label>Both Brand</label>
+    </listViews>
+    <listViews>
+        <fullName>ConfPresentationsactivearchived</fullName>
+        <columns>NAME</columns>
+        <columns>PS_TopicCategory__c</columns>
+        <columns>PS_TopicSynopsis_del__c</columns>
+        <columns>PS_TopicAvailablePresenters__c</columns>
+        <columns>Status__c</columns>
+        <columns>Sub_Status_del__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>PS_ConferenceOffering__c</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operation>contains</operation>
+            <value>Active,Archived</value>
+        </filters>
+        <label>Conf. Presentations (active &amp; archived)</label>
+    </listViews>
+    <listViews>
+        <fullName>ConfPresentationsactiveonly</fullName>
+        <columns>NAME</columns>
+        <columns>PS_TopicCategory__c</columns>
+        <columns>PS_TopicSynopsis_del__c</columns>
+        <columns>PS_TopicAvailablePresenters__c</columns>
+        <columns>Status__c</columns>
+        <columns>Sub_Status_del__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>PS_ConferenceOffering__c</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operation>contains</operation>
+            <value>Active</value>
+        </filters>
+        <label>Conf. Presentations (active only)</label>
+    </listViews>
+    <listViews>
+        <fullName>Financial_Literacy_for_Students</fullName>
+        <columns>NAME</columns>
+        <columns>PS_TopicDescription__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>PS_TopicCategory__c</field>
+            <operation>equals</operation>
+            <value>Financial Literacy for Students</value>
+        </filters>
+        <filters>
+            <field>PS_TopicAvailableDeliveryFormat__c</field>
+            <operation>notEqual</operation>
+            <value>Article</value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Active</value>
+        </filters>
+        <label>Topics - Financial Literacy for Students</label>
+    </listViews>
+    <listViews>
+        <fullName>ProfessionalServices</fullName>
+        <filterScope>Queue</filterScope>
+        <label>Professional Services</label>
+        <queue>ProfessionalServices</queue>
+    </listViews>
+    <listViews>
+        <fullName>ProfessionalServicesManagement</fullName>
+        <filterScope>Queue</filterScope>
+        <label>Professional Services Management</label>
+        <queue>ProfessionalServicesManagement</queue>
+    </listViews>
+    <listViews>
+        <fullName>SALT_Brand</fullName>
+        <columns>NAME</columns>
+        <columns>Brand_del__c</columns>
+        <columns>PS_TopicCategory__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Brand_del__c</field>
+            <operation>equals</operation>
+            <value>SALT</value>
+        </filters>
+        <label>SALT Brand</label>
+    </listViews>
+    <listViews>
+        <fullName>Topic_List_All_active</fullName>
+        <columns>NAME</columns>
+        <columns>OWNER.LAST_NAME</columns>
+        <columns>PS_TopicCategory__c</columns>
+        <columns>Status__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Status__c</field>
+            <operation>notEqual</operation>
+            <value>Archived,Removed</value>
+        </filters>
+        <label>Topic List - All active</label>
+    </listViews>
+    <listViews>
+        <fullName>Topic_Title_Revision_Aug_091</fullName>
+        <columns>NAME</columns>
+        <columns>UPDATEDBY_USER</columns>
+        <columns>LAST_UPDATE</columns>
+        <columns>CREATED_DATE</columns>
+        <filterScope>Queue</filterScope>
+        <filters>
+            <field>UPDATEDBY_USER</field>
+            <operation>contains</operation>
+            <value>ardagna</value>
+        </filters>
+        <filters>
+            <field>LAST_UPDATE</field>
+            <operation>greaterOrEqual</operation>
+            <value>8/11/2009 12:00 AM</value>
+        </filters>
+        <label>Topic - Title Revision (Aug. 09)</label>
+        <queue>ProfessionalServices</queue>
+        <sharedTo>
+            <group>ASAProfessionalServices</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>TopicsASAProductsServices</fullName>
+        <columns>NAME</columns>
+        <columns>PS_TopicSubTitle__c</columns>
+        <columns>PS_TopicCategory__c</columns>
+        <columns>PS_TopicSynopsis_del__c</columns>
+        <columns>Status__c</columns>
+        <columns>PS_TopicLevel__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>PS_TopicCategory__c</field>
+            <operation>includes</operation>
+            <value>ASA Products &amp; Services</value>
+        </filters>
+        <label>Topics - ASA Products &amp; Services</label>
+    </listViews>
+    <listViews>
+        <fullName>TopicsActiveNoArticles</fullName>
+        <columns>NAME</columns>
+        <columns>PS_TopicSubTitle__c</columns>
+        <columns>PS_TopicCategory__c</columns>
+        <columns>PS_TopicSynopsis_del__c</columns>
+        <columns>Status__c</columns>
+        <columns>PS_ConferenceOffering__c</columns>
+        <columns>PS_TopicAvailableDeliveryFormat__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Active</value>
+        </filters>
+        <filters>
+            <field>PS_TopicAvailableDeliveryFormat__c</field>
+            <operation>notEqual</operation>
+            <value>Article</value>
+        </filters>
+        <label>Topics (Active - No Articles)</label>
+    </listViews>
+    <listViews>
+        <fullName>TopicsCampusLeadershipSeries</fullName>
+        <columns>NAME</columns>
+        <columns>PS_TopicDescription__c</columns>
+        <columns>Status__c</columns>
+        <columns>PS_TopicAvailablePresenters__c</columns>
+        <columns>LAST_UPDATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>PS_TopicCategory__c</field>
+            <operation>includes</operation>
+            <value>Campus Leadership Series</value>
+        </filters>
+        <label>Topics - Campus Leadership Series</label>
+    </listViews>
+    <listViews>
+        <fullName>TopicsConferencePresentations</fullName>
+        <columns>NAME</columns>
+        <columns>PS_TopicSubTitle__c</columns>
+        <columns>PS_TopicSynopsis_del__c</columns>
+        <columns>PS_TopicAvailablePresenters__c</columns>
+        <columns>PS_TopicLevel__c</columns>
+        <columns>LAST_UPDATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>PS_ConferenceOffering__c</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Active</value>
+        </filters>
+        <label>Topics - Conference Presentations</label>
+    </listViews>
+    <listViews>
+        <fullName>TopicsFinancialAidTechnologies</fullName>
+        <columns>NAME</columns>
+        <columns>PS_TopicDescription__c</columns>
+        <columns>Status__c</columns>
+        <columns>PS_TopicAvailablePresenters__c</columns>
+        <columns>LAST_UPDATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>PS_TopicCategory__c</field>
+            <operation>includes</operation>
+            <value>Financial Aid Technologies</value>
+        </filters>
+        <label>Topics - Financial Aid Technologies</label>
+    </listViews>
+    <listViews>
+        <fullName>TopicsGeneralFinancialAid</fullName>
+        <columns>Status__c</columns>
+        <columns>NAME</columns>
+        <columns>PS_TopicSubTitle__c</columns>
+        <columns>PS_TopicSynopsis_del__c</columns>
+        <columns>PS_TopicAvailablePresenters__c</columns>
+        <columns>LAST_UPDATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>PS_TopicCategory__c</field>
+            <operation>includes</operation>
+            <value>General Financial Aid</value>
+        </filters>
+        <label>Topics - General Financial Aid</label>
+    </listViews>
+    <listViews>
+        <fullName>TopicsInDevelopment</fullName>
+        <columns>NAME</columns>
+        <columns>PS_TopicSubTitle__c</columns>
+        <columns>PS_TopicAvailableDeliveryFormat__c</columns>
+        <columns>Status__c</columns>
+        <columns>PS_TopicDescription__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>In Development</value>
+        </filters>
+        <label>Topics (In Development)</label>
+        <sharedTo>
+            <group>ASAProfessionalServices</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>TopicsRegulatoryCompliance</fullName>
+        <columns>NAME</columns>
+        <columns>PS_TopicDescription__c</columns>
+        <columns>Status__c</columns>
+        <columns>PS_TopicAvailablePresenters__c</columns>
+        <columns>LAST_UPDATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>PS_TopicCategory__c</field>
+            <operation>includes</operation>
+            <value>Regulations &amp; Compliance</value>
+        </filters>
+        <label>Topics - Regulatory &amp; Compliance</label>
+    </listViews>
+    <listViews>
+        <fullName>TopicsStudentFinancialLiteracy</fullName>
+        <columns>NAME</columns>
+        <columns>PS_TopicDescription__c</columns>
+        <columns>Status__c</columns>
+        <columns>PS_TopicAvailablePresenters__c</columns>
+        <columns>LAST_UPDATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>PS_TopicCategory__c</field>
+            <operation>includes</operation>
+            <value>Student Financial Literacy</value>
+        </filters>
+        <label>Topics - Student Financial Literacy</label>
+    </listViews>
+    <listViews>
+        <fullName>Topics_Campus_Leadership_Series</fullName>
+        <columns>NAME</columns>
+        <columns>PS_TopicDescription__c</columns>
+        <columns>Status__c</columns>
+        <columns>PS_TopicAvailablePresenters__c</columns>
+        <columns>LAST_UPDATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>PS_TopicCategory__c</field>
+            <operation>includes</operation>
+            <value>Campus Leadership Series</value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Active</value>
+        </filters>
+        <label>Topics - Campus Leadership Series-active</label>
+    </listViews>
+    <listViews>
+        <fullName>Topics_Financial_Literacy_for_Campus_S</fullName>
+        <columns>NAME</columns>
+        <columns>PS_TopicDescription__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>PS_TopicCategory__c</field>
+            <operation>equals</operation>
+            <value>Financial Literacy for Campus Staff</value>
+        </filters>
+        <filters>
+            <field>PS_TopicAvailableDeliveryFormat__c</field>
+            <operation>notEqual</operation>
+            <value>Article</value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Active</value>
+        </filters>
+        <label>Topics - Financial Literacy for Campus S</label>
+    </listViews>
+    <listViews>
+        <fullName>Topics_Train_the_Trainer</fullName>
+        <columns>NAME</columns>
+        <columns>PS_TopicDescription__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>PS_TopicCategory__c</field>
+            <operation>equals</operation>
+            <value>Train the Trainer</value>
+        </filters>
+        <filters>
+            <field>PS_TopicAvailableDeliveryFormat__c</field>
+            <operation>notEqual</operation>
+            <value>Article</value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Active</value>
+        </filters>
+        <label>Topics - Train the Trainer</label>
+    </listViews>
+    <nameField>
+        <label>Topic Title</label>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Pro Services Topics</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>PS_TopicSubTitle__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>PS_TopicAvailablePresenters__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>PS_TopicCategory__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>PS_TopicLevel__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Status__c</customTabListAdditionalFields>
+        <excludedStandardButtons>Accept</excludedStandardButtons>
+        <lookupDialogsAdditionalFields>PS_TopicSubTitle__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>PS_TopicAvailablePresenters__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>PS_TopicCategory__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>PS_TopicLevel__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Status__c</lookupDialogsAdditionalFields>
+        <searchFilterFields>NAME</searchFilterFields>
+        <searchFilterFields>PS_TopicSubTitle__c</searchFilterFields>
+        <searchFilterFields>PS_TopicAvailablePresenters__c</searchFilterFields>
+        <searchFilterFields>PS_TopicCategory__c</searchFilterFields>
+        <searchFilterFields>PS_TopicLevel__c</searchFilterFields>
+        <searchFilterFields>Status__c</searchFilterFields>
+        <searchResultsAdditionalFields>PS_TopicSubTitle__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>PS_TopicAvailablePresenters__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>PS_TopicCategory__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>PS_TopicLevel__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Status__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>Read</sharingModel>
+</CustomObject>

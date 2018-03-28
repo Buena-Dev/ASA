@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>false</available>
+    <description>Partnership Dialogue Series School Save the Date Template</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>EmailLetterhead</letterhead>
+    <name>Partnership Dialogue Series School Save the Date Template AZ Feb 2008</name>
+    <style>freeForm</style>
+    <subject>Save the Date - ASA Event</subject>
+    <textOnly>Save the date! 
+ 
+Keep up with some of the latest happenings in the financial aid industry. 
+National FFELP guarantor American Student Assistance® has designed a dialogue series to discuss some of the hottest topics affecting financial aid offices! 
+ 
+As part of our Partnership Dialogue Series, we’re proud to host an exchange among our colleagues in Phoenix Arizona on February 26, 2008.  In this upcoming series, we will explore the challenges of effectively communicating with students and families today. With the overwhelming array of media available, ranging from podcasts to phone calls and text messages, which methods do you feel comfortable using? And which methods are the most effective for your millennial students and Baby Boomer parents? 
+ 
+Our Partnership Dialogue Series will afford you the opportunity to join in an interactive presentation followed by round table discussions.  Be educated, ask questions, and receive feedback from colleagues American Student Assistance on one of the hottest topics affecting financial aid offices across the country.
+ 
+Agenda: 
+ 
+8:30 - 9:00   Continental Breakfast 
+9:00 - 12:00  Discussion and Exchange of Ideas 
+12:00 - 1:00  Lunch  
+ 
+February 26, 2008
+8:30 a.m. - 1:00 p.m.
+University of Phoenix, Hohokam Campus
+4635 East Elwood Street
+Room 101/102
+Phoenix, AZ 85040
+http://www.phoenix.edu/campus_locations/campus_locations.aspx 
+ 
+Continental breakfast and lunch will be provided. 
+ 
+For more information please contact 
+
+Jean M. Russell 
+Business Development
+American Student Assistance 
+800-999-9080 Ext. 6185
+jrussell@amsa.com
+www.amsa.com
+ 
+ 
+
+
+
+
+
+
+Event Date 
+ 
+Please join us!
+
+8:30am  - 1:00pm 
+Continental breakfast and lunch will be provided
+ 
+       
+
+ 
+How to register or for additional information, including driving directions
+ 
+Register Online at 
+http://www.amsa.com/fap/training
+ 
+ 
+February 26, 2008 
+
+
+8:30 a.m. - 1:00 p.m.
+University of Phoenix, Hohkam Campus
+
+4635 East Elwood St
+Room 101/102
+Phoenix, AZ 85040
+http://www.phoenix.edu 
+
+
+
+
+
+
+
+
+
+
+function init() {
+ var eteu = new EmailTemplateEditorUi(&apos;blank - ignore&apos;,false, &apos;editPage&apos;);
+eteu.init();
+}</textOnly>
+    <type>html</type>
+</EmailTemplate>

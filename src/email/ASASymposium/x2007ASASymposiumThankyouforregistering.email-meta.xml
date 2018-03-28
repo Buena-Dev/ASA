@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>false</available>
+    <description>Thank you email for registering for the 2007 ASA Symposium</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>EmailLetterhead</letterhead>
+    <name>2007 ASA Symposium - Thank you for registering</name>
+    <style>freeForm</style>
+    <subject>Thank you for registering for the American Student Assistance 2007 Symposium</subject>
+    <textOnly>Dear {!Contact.FirstName},
+ 
+We have assembled a wonderful program for the ASA 2007 Symposium and are excited that you will be joining us.
+ 
+Here’s information that will make your visit easier – and more fun.
+ 
+This year’s Symposium will be held at two new adjoining sites, The Westin Boston Waterfront Hotel and the Boston Convention and Exhibition Center EAST (BCEC), on June 17 – 19, 2007.
+ 
+If you arrive on Sunday, June 17, be sure to join us for early registration and an informal kick-off reception in The Westin Boston Waterfront Hotel on the lower level – look for ASA greeters in orange shirts and signs to direct you.
+ 
+Monday and Tuesday, June 18 and 19, all Symposium sessions will take place in The BCEC EAST, which is accessible from The Westin Boston Waterfront Hotel via the walkway on the second level. Again, our greeters and signs will direct you.
+ 
+On Monday evening, you are invited to a traditional New England clambake on the Moakley U.S. Courthouse lawn at Fan Pier – with its amazing views of Boston. Trolleys will depart from the Westin starting at 6:00 p.m. and return to the hotel beginning at 8:30 p.m.  Attire for this event will be casual.
+ 
+§                If you’re driving to the Symposium, you’ll find directions below that will help you get to the Westin Boston Waterfront Hotel, located at 425 Summer Street – look for ASA staff in orange shirts and signs along the streets heading toward the Westin to show you the way.
+o       Parking – we recommend parking in The Westin Boston Waterfront Hotel garage rather than the Center’s garage. ASA staff in orange shirts and signs will direct you to the Westin valet or self-parking. Please note that the Symposium is located in the BCEC EAST in the area closest to the Westin walkway.
+                        Parking cost:  All day, 24-hour self parking: $29
+                                              24-hour valet with in-and-out privileges: $39
+ 
+ 
+General Directions to the Westin Boston Waterfront Hotel
+425 Summer Street · Boston, Massachusetts 02210 · Phone: (617) 532-4600 
+ 
+From East
+Follow signs out of Boston Logan International Airport to Interstate 90 West/Massachusetts Turnpike West by way of the Ted Williams Tunnel. Take Exit 25 to South Boston. Keep right at the fork and exit onto Congress Street. Turn right on D Street. Turn right on Summer Street and the hotel is on the left. 
+ 
+From North
+Take Interstate Interstate 93 South to Exit 20A towards South Station. Turn left at the light onto Summer Street. The hotel is approximately 0.7 miles ahead on the right just past the convention center. 
+ 
+From West
+Take Interstate 90 East to Exit 24A (South Station). Go straight onto Atlantic Avenue. Turn right onto Summer Street. The hotel is approximately 0.7 miles ahead on the right, just past the convention center. 
+ 
+From South
+Take Interstate 93 North to Exit 20 (South Station). Turn right at the end of the ramp on Kneeland Street and then turn at the 2nd left onto Atlantic Avenue. Turn right on Summer Street and the hotel is ahead approximately 0.7 miles ahead on the right.  
+ 
+ 
+§                If you’re taking public transportation, the MBTA Silver Line Waterfront service – bus routes 7 and 11 – from South Station will take you there. 
+ 
+If you have any questions, please contact me at 800-999-9080, extension 4207.  We look forward to seeing you!
+ 
+Best regards,
+ 
+Nancy Meehan
+Events Manager
+American Student Assistance</textOnly>
+    <type>html</type>
+</EmailTemplate>

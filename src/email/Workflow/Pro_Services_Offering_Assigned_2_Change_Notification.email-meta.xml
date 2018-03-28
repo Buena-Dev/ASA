@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Pro Services Offering Assigned To Change Notification</name>
+    <style>none</style>
+    <subject>Pro Service Offering &quot;Assigned To&quot; has been changed for {!Pro_Services_Offering__c.PS_OfferingAccount__c}.</subject>
+    <textOnly>Pro Service Offering&apos;s &quot;Assigned To&quot; for {!Pro_Services_Offering__c.PS_OfferingAccount__c} has been changed  to {!Pro_Services_Offering__c.PS_OfferingAssignedTo__c}.
+
+Pro Services Topic: {!Pro_Services_Offering__c.PS_OfferingTopic__c}
+
+Target Date: {!Pro_Services_Offering__c.PS_OfferingTargetDate__c}
+
+Description: {!Pro_Services_Offering__c.PS_OfferingDescriptoin__c}
+
+Please click on below link for other Details :
+
+Link: {!Pro_Services_Offering__c.Link}</textOnly>
+    <type>custom</type>
+</EmailTemplate>

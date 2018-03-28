@@ -1,0 +1,734 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <customHelpPage>BillingDocumentHelp</customHelpPage>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <deprecated>false</deprecated>
+    <description>Contains sales invoice and sales credit note billing documents that enable you to bill and credit customers.</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>true</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ReadWrite</externalSharingModel>
+    <fields>
+        <fullName>Account__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Lookup to the Salesforce Account to which this document relates.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Lookup to the Salesforce Account to which this document relates.</inlineHelpText>
+        <label>Account</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Billing Documents</relationshipLabel>
+        <relationshipName>Billing_Documents1</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>BillingAccountName__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Name of the account to appear on the billing document as the account being billed.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Name of the account to appear on the billing document as the account being billed.</inlineHelpText>
+        <label>Billing Account</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>BillingCity__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Billing City</label>
+        <length>40</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>BillingCountry__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Billing Country</label>
+        <length>40</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>BillingPostalCode__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Billing Zip/Postal Code</label>
+        <length>20</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>BillingState__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Billing State/Province</label>
+        <length>20</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>BillingStreet__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Billing Street</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Company__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Lookup to the associated company.</description>
+        <externalId>false</externalId>
+        <label>Company</label>
+        <referenceTo>Company__c</referenceTo>
+        <relationshipLabel>Billing Documents</relationshipLabel>
+        <relationshipName>Billing_Documents</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>CompletionProcessTracking__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Lookup to the process tracking record to which this billing document currently relates.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Lookup to the process tracking record to which this billing document currently relates.</inlineHelpText>
+        <label>Completion Process</label>
+        <referenceTo>ProcessTracking__c</referenceTo>
+        <relationshipLabel>Billing Documents</relationshipLabel>
+        <relationshipName>BillingDocuments</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>CustomerReference__c</fullName>
+        <deprecated>false</deprecated>
+        <description>External customer reference.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>External customer reference.</inlineHelpText>
+        <label>Customer Reference</label>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>DateIssued__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Date on which the billing document was sent.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Date on which the billing document was sent.</inlineHelpText>
+        <label>Date Issued</label>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Description__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Description of the sales invoice or credit note.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Description of the sales invoice or credit note.</inlineHelpText>
+        <label>Description</label>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>DiscountTotal__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The total discount of all billing document line items associated with this billing document.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The total saving of all billing document line items associated with this billing document.</inlineHelpText>
+        <label>Discount Total</label>
+        <summarizedField>BillingDocumentLineItem__c.DiscountTotal__c</summarizedField>
+        <summaryForeignKey>BillingDocumentLineItem__c.BillingDocument__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>DocumentDate__c</fullName>
+        <defaultValue>TODAY()</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Date on which the document was created.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Date on which the document was created.</inlineHelpText>
+        <label>Document Date</label>
+        <required>true</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>DocumentDueDate__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Date on which payment is expected.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Date on which payment is expected.</inlineHelpText>
+        <label>Document Due Date</label>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>DocumentStatus__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Status of the billing document. The status can be Draft or Complete. When the status is complete, you can only edit the Document Due Date, Customer Reference and Description.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Status of the billing document. The status can be Draft or Complete. When the status is complete, you can only edit the Document Due Date, Customer Reference and Description.</inlineHelpText>
+        <label>Document Status</label>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Draft</fullName>
+                    <default>true</default>
+                </value>
+                <value>
+                    <fullName>Complete</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Discarded</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>DocumentTotal__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Total value of all the billing document line items on this billing document.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Total value of all the billing document line items on this billing document.</inlineHelpText>
+        <label>Document Total</label>
+        <summarizedField>BillingDocumentLineItem__c.TotalValue__c</summarizedField>
+        <summaryForeignKey>BillingDocumentLineItem__c.BillingDocument__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>DocumentType__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Indicates whether the document is a sales invoice or a sales credit note.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates whether the document is a sales invoice or a sales credit note.</inlineHelpText>
+        <label>Document Type</label>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Invoice</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Credit Note</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>FooterText__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Text to be shown at the end of printed billing documents.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Text to be shown at the end of printed billing documents.</inlineHelpText>
+        <label>Footer Text</label>
+        <length>131072</length>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>10</visibleLines>
+    </fields>
+    <fields>
+        <fullName>HeaderText__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Text to be shown at the start of printed billing documents.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Text to be shown at the start of printed billing documents.</inlineHelpText>
+        <label>Header Text</label>
+        <length>131072</length>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>10</visibleLines>
+    </fields>
+    <fields>
+        <fullName>IsBillingAddressValidated__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Indicates whether the billing address has been validated against the addresses in the external tax calculation service.</description>
+        <externalId>false</externalId>
+        <formula>NOT
+            ( ISBLANK(BillingStreet__c) &amp;&amp;
+              ISBLANK(BillingCity__c) &amp;&amp;
+              ISBLANK(BillingState__c) &amp;&amp;
+              ISBLANK(BillingPostalCode__c) &amp;&amp;
+              ISBLANK(BillingCountry__c)
+            ) &amp;&amp;
+            ( BillingStreet__c  =  ValidatedBillingStreet__c ) &amp;&amp;
+            ( BillingCity__c =  ValidatedBillingCity__c ) &amp;&amp;
+            ( BillingState__c =  ValidatedBillingState__c ) &amp;&amp;
+            ( BillingPostalCode__c =  ValidatedBillingPostalCode__c ) &amp;&amp;
+            ( BillingCountry__c =  ValidatedBillingCountry__c )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Indicates whether the billing address has been validated against the addresses in the external tax calculation service.</inlineHelpText>
+        <label>Billing Address Validated</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>IsShippingAddressValidated__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Indicates whether the shipping address has been validated against the addresses in the external tax calculation service.</description>
+        <externalId>false</externalId>
+        <formula>NOT
+            ( ISBLANK(ShippingStreet__c) &amp;&amp;
+              ISBLANK(ShippingCity__c) &amp;&amp;
+              ISBLANK(ShippingState__c) &amp;&amp;
+              ISBLANK(ShippingPostalCode__c) &amp;&amp;
+              ISBLANK(ShippingCountry__c)
+            ) &amp;&amp;
+            ( ShippingStreet__c  =  ValidatedShippingStreet__c ) &amp;&amp;
+            ( ShippingCity__c =  ValidatedShippingCity__c ) &amp;&amp;
+            ( ShippingState__c =  ValidatedShippingState__c ) &amp;&amp;
+            ( ShippingPostalCode__c =  ValidatedShippingPostalCode__c ) &amp;&amp;
+            ( ShippingCountry__c =  ValidatedShippingCountry__c )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Indicates whether the shipping address has been validated against the addresses in the external tax calculation service.</inlineHelpText>
+        <label>Shipping Address Validated</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>NetTotal__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The total net value of all billing document line items associated with this billing document.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The total net value of all billing document line items associated with this billing document.</inlineHelpText>
+        <label>Net Total</label>
+        <summarizedField>BillingDocumentLineItem__c.NetValue__c</summarizedField>
+        <summaryForeignKey>BillingDocumentLineItem__c.BillingDocument__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>NumberOfBillingDocumentLineItems__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Number of billing document line items currently associated with this billing document.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Number of billing document line items currently associated with this billing document.</inlineHelpText>
+        <label>Number Of Billing Document Line Items</label>
+        <summaryForeignKey>BillingDocumentLineItem__c.BillingDocument__c</summaryForeignKey>
+        <summaryOperation>count</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>RelatedDocument__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Lookup to the related invoice or credit note.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Lookup to the related invoice or credit note.</inlineHelpText>
+        <label>Related Document</label>
+        <referenceTo>BillingDocument__c</referenceTo>
+        <relationshipLabel>Related Documents</relationshipLabel>
+        <relationshipName>RelatedDocuments</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ReportingDocumentTotal__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Total value of all the billing document line items on this billing document based on the Document Type. If the document is an invoice, the value is the same as the Document Total. If the document is a credit note, the value is calculated using the formula: Document Total * -1.</description>
+        <externalId>false</externalId>
+        <formula>IF (ISPICKVAL(DocumentType__c, &quot;Credit Note&quot;),  DocumentTotal__c * -1, DocumentTotal__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Total value of all the billing document line items on this billing document based on the Document Type.</inlineHelpText>
+        <label>Reporting Document Total</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>ShippingAccountName__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Name of the account to appear on the billing document as the Shipping Account.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Name of the account to appear on the billing document as the Shipping Account.</inlineHelpText>
+        <label>Shipping Account</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ShippingCity__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Shipping City</label>
+        <length>40</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ShippingCountry__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Shipping Country</label>
+        <length>40</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ShippingPostalCode__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Shipping Zip/Postal Code</label>
+        <length>20</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ShippingState__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Shipping State/Province</label>
+        <length>20</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ShippingStreet__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Shipping Street</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>TaxValueTotal__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The total tax value of all billing document line items associated with this billing document.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The total tax value of all billing document line items associated with this billing document.</inlineHelpText>
+        <label>Tax Value Total</label>
+        <summarizedField>BillingDocumentLineItem__c.TaxValueTotal__c</summarizedField>
+        <summaryForeignKey>BillingDocumentLineItem__c.BillingDocument__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>ValidatedBillingCity__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Validated Billing City</label>
+        <length>40</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ValidatedBillingCountry__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Validated Billing Country</label>
+        <length>40</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ValidatedBillingPostalCode__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Validated Billing Zip/Postal Code</label>
+        <length>20</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ValidatedBillingState__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Validated Billing State/Province</label>
+        <length>20</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ValidatedBillingStreet__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Validated Billing Street</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>ValidatedShippingCity__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Validated Shipping City</label>
+        <length>40</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ValidatedShippingCountry__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Validated Shipping Country</label>
+        <length>40</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ValidatedShippingPostalCode__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Validated Shipping Zip/Postal Code</label>
+        <length>20</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ValidatedShippingState__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Validated Shipping State/Province</label>
+        <length>20</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ValidatedShippingStreet__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Validated Shipping Street</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <label>Billing Document</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>DocumentType__c</columns>
+        <columns>Account__c</columns>
+        <columns>DocumentStatus__c</columns>
+        <columns>DocumentDate__c</columns>
+        <columns>DocumentTotal__c</columns>
+        <columns>RelatedDocument__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <displayFormat>BD{0000000}</displayFormat>
+        <label>Document Number</label>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Billing Documents</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>Account__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>DocumentType__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>DocumentStatus__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>DocumentDate__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>DocumentTotal__c</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>Account__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>DocumentType__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>DocumentStatus__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>DocumentDate__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>DocumentTotal__c</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Account__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>DocumentType__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>DocumentStatus__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>DocumentDate__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>DocumentTotal__c</lookupPhoneDialogsAdditionalFields>
+        <searchResultsAdditionalFields>Account__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>DocumentType__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>DocumentStatus__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>DocumentDate__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>DocumentTotal__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+</CustomObject>

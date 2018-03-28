@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>WHONAME</field>
+    </columns>
+    <columns>
+        <field>EMAIL</field>
+    </columns>
+    <columns>
+        <field>PHONE</field>
+    </columns>
+    <columns>
+        <field>SUBJECT</field>
+    </columns>
+    <columns>
+        <field>SENDDATE</field>
+    </columns>
+    <columns>
+        <field>FIRSTOPENDATE</field>
+    </columns>
+    <columns>
+        <field>LASTOPENDATE</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>OPENED</field>
+    </columns>
+    <columns>
+        <field>TIMESOPENED</field>
+    </columns>
+    <description>Who at Columbia received and Opened emails</description>
+    <filter>
+        <booleanFilter>1 AND 2</booleanFilter>
+        <criteriaItems>
+            <column>EMAILTEMPLATENAME</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>ASA Symposium Save the Date Postcard1,Symposium Invite to Register 1</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>EMAIL</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>contains</operator>
+            <value>columbia</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>EMAILTEMPLATENAME</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Columbia Schools_Open Email</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>EmailStatus</reportType>
+    <showDetails>true</showDetails>
+    <sortColumn>OPENED</sortColumn>
+    <sortOrder>Desc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>SENDDATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

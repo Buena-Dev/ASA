@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>false</available>
+    <description>BD From the desk of Communcation Template</description>
+    <encodingKey>UTF-8</encodingKey>
+    <letterhead>EmailLetterhead</letterhead>
+    <name>From the desk of</name>
+    <style>formalLetter</style>
+    <subject>From the Desk of {!Contact.OwnerFullName}-Recent news</subject>
+    <textOnly>News from ASA
+From the Desk of {!Contact.OwnerFullName}
+Dear {!Contact.FirstName},
+ 
+We would like to remind you that ASA’s 2008 Customer Satisfaction Survey will only be available until Friday, October 24.  
+ 
+Please, take a few moments to tell us what you think about the customer service you received from our new group, Strategic Lender Services.  Our job is to make sure your experience with ASA is positive and that you are receiving relevant, up-to-date information from ASA.  
+ 
+Your feedback is extremely valuable to us and will help us enhance our services to you.  Please let us know if you have any recommendations or requests for how ASA can better meet your needs.   
+ 
+If you have any questions or problems with the personalized survey link that was sent to you, please don&apos;t hesitate to contact me. 
+ 
+Sincerely,
+ 
+{!Contact.OwnerFullName}
+{!Contact.OwnerTitle}
+American Student Assistance
+{!Contact.OwnerEmail}
+{!Contact.OwnerPhone}
+ 
+The content of this email is confidential and proprietary to American Student Assistance. It is intended only for the above-named individual or entity and for the purpose indicated and may not be reproduced or distributed without permission of the sender. Please notify the sender or ASA if you received this email in error.</textOnly>
+    <type>html</type>
+</EmailTemplate>

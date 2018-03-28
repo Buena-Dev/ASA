@@ -1,0 +1,890 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>ComposeGmail</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>LogCall</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>MailMerge</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>RequestUpdate</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SendEmail</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>ViewAll</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>Ad_Recieved__c</fullName>
+        <externalId>false</externalId>
+        <label>Ad Recieved</label>
+        <required>false</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Ad_Size__c</fullName>
+        <externalId>false</externalId>
+        <label>Ad Size</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Full Black/White</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>1/2 Black/White</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>1/4 Black/White</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Full Color</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>1/2 Color</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>1/4 Color</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Assigned_to_Opty_Owner__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>The moment the task is created and assigned to the opportunity owner this field is checked.</description>
+        <externalId>false</externalId>
+        <label>Assigned to Opportunity Owner</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Attended__c</fullName>
+        <description>How many people actually attended the event</description>
+        <externalId>false</externalId>
+        <label># Attended</label>
+        <precision>4</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Audience__c</fullName>
+        <description>Who is the training ment for?  Who is the audience, some information to customize the message of the training.</description>
+        <externalId>false</externalId>
+        <label>Audience</label>
+        <required>false</required>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Advanced</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>ASA Staff Only</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Bursar/SFS</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Intemediate</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Lender Clients</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Lender Ops</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Lender Rep&apos;s</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Mixed Knowledge Level</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Novice</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Registrar</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>School Clients</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Servicer Ops</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Students</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Support Staff</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Vendor</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>VIP&apos;s</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Delivery_Typer__c</fullName>
+        <description>How with the students revieve the Newsletter?</description>
+        <externalId>false</externalId>
+        <label>Delivery Type</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Paper</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Electronic</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Demo_Date_Time__c</fullName>
+        <description>This field shows the date and the time for the product demonstration.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This field shows the date and the time for the product demonstration.</inlineHelpText>
+        <label>Demo Date/Time</label>
+        <required>false</required>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Event__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(IsTask,false,true)</formula>
+        <label>Event</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Expected_of_Grad_s__c</fullName>
+        <description>Number of expected graduates that will be receiving the co branded newsletter</description>
+        <externalId>false</externalId>
+        <label>Expected # of Grads</label>
+        <precision>8</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Graduation_Periods__c</fullName>
+        <description>What months do students usually graduate in?</description>
+        <externalId>false</externalId>
+        <label>Graduation Periods</label>
+        <required>false</required>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Jan</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Feb</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Mar</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Apr</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>May</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Jun</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Jul</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Aug</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Sept</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Oct</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Nov</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Dec</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Interview_Date__c</fullName>
+        <description>The date of the interview also Status should be moved to Interview Scheduled.</description>
+        <externalId>false</externalId>
+        <label>Interview Date</label>
+        <required>false</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Invoice_Sent__c</fullName>
+        <description>Invoice for sponsorship sent on this date</description>
+        <externalId>false</externalId>
+        <label>Invoice Sent</label>
+        <required>false</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Length__c</fullName>
+        <description>How much time does the trainer have for this particulate session or workshop</description>
+        <externalId>false</externalId>
+        <label>Session Length</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>45 Min</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>60 Min</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>75 Min</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>90 Min</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Full Day</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>1/2 Day Morning</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>1/2 Day Afternoon</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Not_Assigned_to_Opty_Owner__c</fullName>
+        <defaultValue>true</defaultValue>
+        <externalId>false</externalId>
+        <label>Not Assigned to Opty Owner</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>OE_Code__c</fullName>
+        <externalId>false</externalId>
+        <label>OE Code</label>
+        <length>20</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Other_Trainer__c</fullName>
+        <description>Another person that may be training from ASA that does usually.</description>
+        <externalId>false</externalId>
+        <label>Other Trainer</label>
+        <required>false</required>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Payment_Rcvd__c</fullName>
+        <description>Date sponsorship payment was recieved</description>
+        <externalId>false</externalId>
+        <label>Payment Rcvd</label>
+        <required>false</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Payment_Recieved__c</fullName>
+        <externalId>false</externalId>
+        <label>Payment Recieved</label>
+        <required>false</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Previous_Owner_Id__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Previous Owner Id</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Activities</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Previous_Owner__c</fullName>
+        <externalId>false</externalId>
+        <formula>Previous_Owner_Id__r.Username</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Previous Owner</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Product_Management_Comments__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>This field holds instructions to the requestor related to the product demonstration.</inlineHelpText>
+        <label>Product Management Comments</label>
+        <required>false</required>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>RT1__ReadytalkAttendanceID__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <deprecated>false</deprecated>
+        <externalId>true</externalId>
+        <label>Readytalk Attendance ID</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>Related_to_Opportunity__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Related to Opportunity</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Requested_Materials__c</fullName>
+        <externalId>false</externalId>
+        <label>Requested Materials</label>
+        <required>false</required>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Budget Worksheet</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Deferment/Forbearance Info</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Entr/Exit Counsel Check</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Pre-paid return envels</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Repayment Worksheet</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>STAFF Compl Directions</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>STAFF Master Prom Notes</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>STAFF Master Prom Notes - Imprint</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>STAFF School Cert Form</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Service_type__c</fullName>
+        <description>required for CPS activities to support programs and contracts</description>
+        <externalId>false</externalId>
+        <label>Service type</label>
+        <required>false</required>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>ACT/SAT Registration</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Admissions Advising</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Admissions Advocacy</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Admissions Application Assistance</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Admissions Application Fee Waiver</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Admissions Info</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Attendance Support</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Career Exploration/Planning</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Career Interest Inventory/Assessment</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Classroom Workshops</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>College Visits</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Community Events</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Community Service Project</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Cultural Field-trip</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Education Advising</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Educational Field-trip</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Financial Aid Advising</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Financial Aid Advocacy</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Financial Aid Application Assistance</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Financial Aid Info</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Financial Literacy</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Follow-Up</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Loan Assistance</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>MCAS/SAT Preparation</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Parent Events</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Presentations/Workshops</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Referral</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Residential Summer Program</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Scholarship Search</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Senior Advising</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Stipends</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Test Prep</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Testing Fee Waiver</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Transfer Info</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Tutoring</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Signage__c</fullName>
+        <description>What sort of Signage will be at the sponsors table</description>
+        <externalId>false</externalId>
+        <label>Signage?</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Sign</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Banner</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Both</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>N/A</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Sponsored_Items__c</fullName>
+        <description>What is being sponsored</description>
+        <externalId>false</externalId>
+        <label>Sponsored Items</label>
+        <required>false</required>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Sponsorship_Amount__c</fullName>
+        <description>How much is the sponsorhsip cost</description>
+        <externalId>false</externalId>
+        <label>Sponsorship Amount</label>
+        <precision>6</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Time_Frame__c</fullName>
+        <description>When is the training for, please specify when the training is requested for from today the day the request is put in.  ex: You are requesting the training for July and today is May 1st.  60-90 days.</description>
+        <externalId>false</externalId>
+        <label>Time Frame/When</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>ASAP (next 30 days)</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>30-60 Days</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>60-90 Days</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>90+</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>WebExECMtgKey__c</fullName>
+        <description>The field holds WebEx Event Center Meeting Key</description>
+        <externalId>false</externalId>
+        <label>WebEx Event Center Meeting Key</label>
+        <length>32</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Why_Reassigned__c</fullName>
+        <externalId>false</externalId>
+        <label>Why Reassigned</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Skillset</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Out of Office</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Manager Reassignment</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Years_w_ASA__c</fullName>
+        <description>How many years has the school been a client with ASA</description>
+        <externalId>false</externalId>
+        <label>Years w/ ASA</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>pi__pardot_source_id__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <deprecated>false</deprecated>
+        <description>Identifies the Pardot record that caused this activity to be created.</description>
+        <externalId>true</externalId>
+        <label>Pardot Source Id</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>x2nd_Trainer__c</fullName>
+        <description>Other trainers involved with the event  NOTE:  Assinged TO: is the primary trainer</description>
+        <externalId>false</externalId>
+        <label>2nd Trainer</label>
+        <required>false</required>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Betsy Mayotte</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Brad Finger</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Brendan Furey</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Duane Quinn</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Gina Lucente-Cole</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Gretchen Bonfardine</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Jason Burke</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Jennifer Schott</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Martie Adler</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Nancy Jordan</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Sabrina Mainini</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Shawn Monk</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <listViews>
+        <fullName>MyActivities</fullName>
+        <filterScope>Mine</filterScope>
+        <label>My Activities</label>
+    </listViews>
+    <listViews>
+        <fullName>MyDelegatedActivities</fullName>
+        <filterScope>Delegated</filterScope>
+        <label>My Delegated Activities</label>
+    </listViews>
+    <listViews>
+        <fullName>TodaysTasks</fullName>
+        <filterScope>Mine</filterScope>
+        <filters>
+            <field>ACTIVITY.TASK</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <filters>
+            <field>TASK.CLOSED</field>
+            <operation>equals</operation>
+            <value>0</value>
+        </filters>
+        <filters>
+            <field>TASK.DUE_DATE</field>
+            <operation>lessThan</operation>
+            <value>TOMORROW</value>
+        </filters>
+        <label>Today&apos;s Tasks</label>
+    </listViews>
+    <listViews>
+        <fullName>UpcomingEvents</fullName>
+        <filterScope>Mine</filterScope>
+        <filters>
+            <field>ACTIVITY.TASK</field>
+            <operation>equals</operation>
+            <value>0</value>
+        </filters>
+        <filters>
+            <field>TASK.DUE_DATE</field>
+            <operation>greaterThan</operation>
+            <value>YESTERDAY</value>
+        </filters>
+        <label>Upcoming Events</label>
+    </listViews>
+    <searchLayouts>
+        <searchResultsAdditionalFields>TASK.SUBJECT</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>TASK.WHAT_NAME</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CORE.USERS.FIRST_NAME</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>TASK.TYPE</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>TASK.WHO_NAME</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>TASK.STATUS</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ControlledByParent</sharingModel>
+</CustomObject>

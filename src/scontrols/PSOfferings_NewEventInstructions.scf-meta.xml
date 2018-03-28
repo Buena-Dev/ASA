@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Scontrol xmlns="http://soap.sforce.com/2006/04/metadata">
+    <contentSource>HTML</contentSource>
+    <description>Reminds users to submit the new event into the Approval Workflow.</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>PS Offerings - New Event Instructions</name>
+    <supportsCaching>true</supportsCaching>
+</Scontrol>

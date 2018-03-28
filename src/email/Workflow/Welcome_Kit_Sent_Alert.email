@@ -1,0 +1,20 @@
+The following dates were reported for this account:
+
+Welcome Guide was (or will be) sent to {!Account.Name} on:  {!Case.Date_Welcome_Guide_Sent__c}
+
+Date for Fulfillment Kit:  {!Case.00N60000002FIb2}
+
+Date for School Letter to Introduce ASA to Member:  {!Case.Date_to_Send_SALT_Intro_Letter__c}
+
+Date for Welcome/Activation Email to Member:  {!Case.00N60000002FKW9}
+
+Expected Go-Live for MM 101:  {!Case.Expected_Go_Live_MM_101__c}
+
+Expected Go-Live for EDMS:  {!Case.Expected_Go_Live_EDMS__c}
+
+
+
+Click here to access the Implementation Case: {!Case.Link}
+
+{!User.FirstName} {!User.LastName}
+Ext. {!User.Extension}

@@ -1,0 +1,8 @@
+{!Opportunity.Account} has been implemented and Volume has been received the Opp has been closed as a WON!
+
+Please review the details using the link below.
+
+Opportunity Link: {!Opportunity.Link}
+
+{!User.Name}
+{!User.Phone}

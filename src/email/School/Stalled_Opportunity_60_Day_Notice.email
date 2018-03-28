@@ -1,0 +1,3 @@
+Hello, 
+
+The opportunity with {!Opportunity.Account} has not had a stage change for 60 days: {!Opportunity.Link}. The last activity happened {!Opportunity.of_days_stalled__c} days ago.

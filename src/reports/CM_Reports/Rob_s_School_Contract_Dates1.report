@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>ACCOUNT.NAME</field>
+    </columns>
+    <columns>
+        <field>Account.OE_Code__c</field>
+    </columns>
+    <columns>
+        <field>ACCOUNT.OWNER</field>
+    </columns>
+    <columns>
+        <field>Account.Regional_Account_Executive__c</field>
+    </columns>
+    <columns>
+        <field>Account.Campus_Consultant__c</field>
+    </columns>
+    <columns>
+        <field>Account.Charter_Client__c</field>
+    </columns>
+    <columns>
+        <field>Account.Contract_Start__c</field>
+    </columns>
+    <columns>
+        <field>Account.Contract_End__c</field>
+    </columns>
+    <description>Contract dates for schools managed by Rob</description>
+    <filter>
+        <criteriaItems>
+            <column>RECORDTYPE</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Case.Implementation_Consumer_Services</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>ACCOUNT.NAME</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>notEqual</operator>
+            <value>ASA University</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>ACCOUNT.OWNER</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Robert Tosh</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Rob&apos;s School Contract Dates</name>
+    <params>
+        <name>units</name>
+        <value>d</value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CaseList</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <sortColumn>Account.Contract_End__c</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATEONLY</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

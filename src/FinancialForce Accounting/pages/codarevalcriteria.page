@@ -1,0 +1,383 @@
+<apex:page standardController="c2g__codaCurrencyRevaluation__c" tabStyle="c2g__codaCurrencyRevaluation__c" extensions="c2g.CODACurrencyRevalController,c2g.CODAHelpLoaderController">
+    <apex:stylesheet value="{!URLFOR($Resource.c2g__front,'front/pages/currency_reval/currency_revaluation.css')}"/>
+    <apex:stylesheet value="{!URLFOR($Resource.c2g__coda2go,'coda2go/web/css/style.css')}"/>
+    
+    <script src="{!URLFOR($Resource.front,'front/base/frameworks/jquery-1.4.2.min.js')}" type="text/javascript"></script>
+    <script src="{!URLFOR($Resource.coda2go,'coda2go/web/script/lib.js')}" type="text/javascript"></script>
+    <script src="{!URLFOR($Resource.front,'front/pages/currency_reval/currency_revaluation.js')}" type="text/javascript"></script>
+    <script>
+        CurrReval = CurrReval || {};
+        
+        CurrReval.label = {
+            specificPeriod		: "{!$Label.SpecificPeriod}",
+            selectGLALabel		: "{!$Label.SearchForGLA}",
+            CODA2GoBtnSaveValue	: "{!$Label.codaProcessing}",
+            selectAll			: "{!$Label.DataViewMenuSelectAll}",
+            deselectAll			: "{!$Label.DataViewMenuDeselectAll}",
+            loadingGLAs			: "{!$Label.LoadingGLAs}"
+        };
+        CurrReval.remoteAction = {
+            loadGLA	: "{!$RemoteAction.CODACurrencyRevalController.loadGLAs}"
+        };
+    
+    	CurrReval.form.selectedGLAParam	= "{!selectedGLAStringParam}";
+    
+        <apex:repeat value="{!Viewstate.selectedGLAs}" var="gla">
+        	CurrReval.selectedGLAs.push("{!gla}");
+        </apex:repeat>
+        
+        $FFDC(document).ready(function(){
+            $FFDC(".errorMsg").hide();
+            rerenderBalanceSheetFromPeriod('customPeriodFrom', 'fromPeriodPanel');
+            storePeriodDefaults("BalanceSheet");
+            storePeriodDefaults("IncomeStatement");
+            checkManualGLAPanels();
+            checkGLABehaviour();
+        });    
+    	var CODA2GoBtnSaveValue	= "{!$Label.codaProcessing}";
+        var CODA2GoButtons = new CODA2GoPage();
+        CODA.documentFunctionTimer("keyup", CODA.executeQueue, 1500);
+        CODA.documentFunctionTimer("click", CODA.executeQueue, 1500);        
+    
+    </script>
+    <script>
+    	function fetchTemplatesInformation()
+		{
+			var radioObj;
+			radioObj = $FFDC("input[name=tempName]:checked");
+			$FFDC("[id$='theHiddenInput']").val(radioObj.attr('id'));
+		}
+    </script>
+     
+    <apex:sectionHeader title="{!$Label.c2g__codarevalwizardtitle}"  help="{!redirectForHelp1150}"/>
+    
+    <apex:form onsubmit="prepareFormForSubmit();if(CODA2GoButtons.disableSaveButtons){ return CODA2GoButtons.disableSaveButtons(); }">
+        <div id="indicator"><img src="{!URLFOR($Resource.coda2go, 'coda2go/web/images/waiting.gif')}" align="absMiddle"/><span id="indicatortext"></span></div>
+        
+        <apex:pageBlock mode="edit" title="{!$Label.c2g__select}" id="mainBlock">
+            <apex:outputPanel id="msgs">
+                <script>
+                $FFDC(".errorMsg").hide();
+                CurrReval.form.isValid = {!isValidationDone};
+                </script>
+                <apex:pageMessages id="ErMsg"></apex:pageMessages>
+            </apex:outputPanel>
+            <apex:actionFunction name="validateForm" action="{!validateForm}" reRender="msgs,balanceSheetPeriods,IncomeStatementPeriods" oncomplete="CurrReval.form.isProcessing=false;CODA2GoButtons.enableSaveButtons();checkGLABehaviour();trySubmit();enableRAInputs()" />            
+            <apex:actionFunction name="renderMsg" action="{!viewState.renderMsg}" reRender="msgs" oncomplete="CurrReval.form.isProcessing=false;CODA2GoButtons.enableSaveButtons();checkGLABehaviour();enableRAInputs()">
+                <apex:param name="errorMsg" value=""/>
+            </apex:actionFunction>
+            
+            <apex:pageBlockButtons >
+                <apex:commandButton value="{!$Label.c2g__retrievedata}" id="RetrieveData" rendered="{!loadViewState}" onclick="validateForm();return false;"/>
+                <apex:commandButton value="{!$Label.c2g__codacurrrevaluationbuttoncancel}" id="cancel" rendered="{!loadViewState}" rerender="" onclick="if(!CODA.queing()){document.getElementById('{!$Component.cancel_h}').click()};return false;"/>
+                <apex:commandButton value="{!$Label.c2g__nativeuibuttongoback}" id="goBack" rerender="" rendered="{!!loadViewState}" onclick="if(!CODA.queing()){document.getElementById('{!$Component.goBack_h}').click()};return false;"/>
+                <apex:commandButton value="{!$Label.c2g__loadtemplate}" id="loadTemplate" rerender="" rendered="{!loadViewState}" onclick="if(!CODA.queing()){document.getElementById('{!$Component.loadTemplate_h}').click()};return false;" disabled="{!viewState.isLoadTemplateDisable}"/>
+                
+                <!-- Hidden Buttons -->   
+                <apex:commandButton value="{!$Label.c2g__retrievedata}" action="{!RetrieveData}" id="RetrieveData_h" styleclass="hiddensubmit" rendered="{!loadViewState}"/>
+                <apex:commandButton value="{!$Label.c2g__codacurrrevaluationbuttoncancel}" action="{!cancel}" id="cancel_h" styleclass="hiddensubmit" immediate="true" reRender=""/>
+                <apex:commandButton value="{!$Label.c2g__nativeuibuttongoback}" action="{!cancel}" id="goBack_h" styleclass="hiddensubmit" immediate="true" reRender="" rendered="{!!loadViewState}"/>
+                <apex:commandButton value="{!$Label.c2g__loadtemplate}" onClick="loadTemplateInformation()" id="loadTemplate_h" styleclass="hiddensubmit" immediate="true" reRender="none" rendered="{!loadViewState}" disabled="{!viewState.isLoadTemplateDisable}"/>
+                <!--  End of Hidden Buttons-->
+                
+                <script>
+                    CODA2GoButtons.initButtons(["{!$Component.RetrieveData}","{!$Component.cancel}", "{!$Component.goBack}", "{!$Component.LoadTemplate}"]);
+                </script>
+            </apex:pageBlockButtons>
+            
+            <input type="hidden" name="{!selectedGLAStringParam}" id="{!selectedGLAStringParam}" value="" />
+            <apex:inputHidden id="haveGLAsLoaded" value="{!viewState.haveGLAsLoaded}"/>
+            <!-- Criteria section -->
+            <apex:pageBlockSection title="{!$Label.c2g__criteria}" columns="1" rendered="{!loadViewState}">
+                
+                <apex:pageBlockSectionItem >
+                    <apex:outputPanel styleClass="fieldLevelHelp label_align_left" style="width:178px;">
+                        <apex:outputLabel value="{!$Label.c2g__codarevalwizardrevaluationtype}" />
+                    </apex:outputPanel>
+                    <apex:outputPanel id="contentDiv">
+                        <apex:outputPanel styleClass="radio_button">
+                            <apex:inputCheckbox id="BalanceSheet" value="{!viewState.isBalanceSheet}" onclick="clearGLAs();checkGLABehaviour('BalanceSheet', this.checked);"/>
+                            <apex:outputLabel value="{!$Label.c2g__balancesheet}" for="BalanceSheet"/>
+                        </apex:outputPanel>
+                        <div>
+                            
+                        </div>
+                        <!-- Balance Sheet periods section -->
+                        <apex:outputPanel id="balanceSheetPeriods" style="display:none;">
+                            <apex:outputPanel styleClass="panel1">
+                                <apex:pageBlock mode="maindetail">
+                                    <apex:pageBlockSection columns="1">
+                                        <apex:pageBlockSectionItem >
+                                            <apex:outputPanel styleClass="fieldLevelHelp">
+                                                <apex:outputLabel value="{!$Label.c2g__balancesheetperiodsfrom}" for="fromPeriodBalanceSheet"  />
+                                            </apex:outputPanel>
+                                            <apex:outputPanel styleClass="fieldLevelHelp" style="float:left;">
+                                                <apex:selectList value="{!viewState.balanceSheetPeriodFrom}" id="customPeriodFrom" size="1" onchange="rerenderBalanceSheetFromPeriod('customPeriodFrom', 'fromPeriodPanel', 'glaContainer-BalanceSheet'); changeGLASelectionOption('BalanceSheet')" style="float:left;" styleClass="balancesheet-period-from raInput">
+                                                    <apex:selectOptions value="{!viewState.BalanceSheetPeriodFromOptions}"/>
+                                                </apex:selectList>
+                                                <!-- To avoid XSS scripting, encode the balanceSheetPeriodFrom value  -->
+                                                <apex:outputPanel id="fromPeriodPanel" style="{!JSINHTMLENCODE(viewState.balanceSheetPeriodFrom)};float:left;">
+                                                    <apex:inputField required="true" value="{!ViewState.FromPeriodBalanceSheet.dto.c2g__Period__c}" id="fromPeriodBalanceSheet" onchange="if(isLookupChanged('fromPeriodBalanceSheet'))changeGLASelectionOption('BalanceSheet')" styleClass="period fromPeriodBS fromPeriodBSinput raInput" />
+                                                    <script>
+                                                    $FFDC("[id$=':fromPeriodPanel']").ready(function(){
+                                                        if($FFDC("[id$='customPeriodFrom']").val() != "{!$Label.c2g__specificperiod}")
+                                                        {
+                                                            $FFDC("[id$=':fromPeriodPanel']").hide();
+                                                        }
+                                                    });
+                                                    </script>
+                                                </apex:outputPanel>
+                                                
+                                                <apex:outputLabel value="{!$Label.c2g__to}" for="toPeriodBalanceSheet" style="float:left;"/>
+                                                <apex:outputPanel style="float:left;">
+                                                    <apex:inputField required="true" value="{!ViewState.toPeriodBalanceSheet.dto.c2g__Period__c}" id="toPeriodBalanceSheet" onchange="if(isLookupChanged('toPeriodBalanceSheet'))changeGLASelectionOption('BalanceSheet')" styleClass="raInput"/>
+                                                </apex:outputPanel>
+                                            </apex:outputPanel>
+                                        </apex:pageBlockSectionItem>    
+                                        
+                                        <apex:pageBlockSectionItem >
+                                            <apex:outputPanel styleClass="fieldLevelHelp">
+                                                <apex:outputLabel value="{!$Label.c2g__transactionspostedinperiod}" for="postingPeriodBalanceSheet" /> 
+                                            </apex:outputPanel>
+                                            <apex:inputField required="true" value="{!ViewState.PostingPeriodBalanceSheet.dto.c2g__Period__c}" id="postingPeriodBalanceSheet" styleClass="period postingPeriodBS"/>
+                                        </apex:pageBlockSectionItem>
+                                        
+                                        <apex:pageBlockSectionItem >
+                                            <apex:outputPanel styleClass="fieldLevelHelp">
+                                                <apex:outputLabel value="{!$Label.c2g__reversaltransactionspostedperiod}" for="reversalPeriodBalanceSheet"/>
+                                            </apex:outputPanel>
+                                            <apex:outputPanel layout="block">
+                                                <apex:outputPanel layout="block" styleClass="requiredBlock"/>
+                                                <apex:inputField value="{!ViewState.reversalPeriodBalanceSheet.dto.c2g__Period__c}" id="reversalPeriodBalanceSheet" styleClass="period reversalPeriodBS"/>
+                                            </apex:outputPanel> 
+                                        </apex:pageBlockSectionItem>
+                                    </apex:pageBlockSection>   
+                                    
+                                    <apex:pageBlockSection id="glaBehaviourBalanceSheet" columns="1">
+                                        <apex:outputPanel styleClass="fieldLevelHelp">
+                                            <apex:outputLabel value="{!$Label.c2g__codarevalwizardactionglas}" for="glaBehaviourBalanceSheet" style="float:left;line-height: 27px;"/>
+                                            <apex:selectRadio id="glaContainer-BalanceSheet-GLA-Options" value="{!viewState.glaBehaviourBalanceSheet}" onchange="changeGLASelectionOption('BalanceSheet');">
+                                                <apex:selectOptions value="{!viewState.BalanceSheetGLABeharviourOptions}"/>
+                                            </apex:selectRadio>
+                                        </apex:outputPanel>
+                                    </apex:pageBlockSection> 
+                                    <apex:outputPanel id="ManualGLASelection-glaContainer-BalanceSheet" style="display:none;">
+                                        <apex:pageBlockSection columns="1">
+                                            <apex:pageBlockSectionItem >
+                                                <apex:outputPanel styleClass="fieldLevelHelp">
+                                                    <apex:outputLabel value="{!$Label.c2g__specifygla}" for="SpecifyGLA" />
+                                                    <script>
+                                                    $FFDC("[id$='list-glaContainer-BalanceSheet']").ready(function(){
+                                                        var bsGLAOp = $FFDC("input[id$='glaContainer-BalanceSheet-GLA-Options:1']")[0];
+                                                        if(bsGLAOp && bsGLAOp.checked && Object.keys(CurrReval.glasForSelection).length > 0)
+                                                        {
+                                                            prepareGLAList(CurrReval.glasForSelection, "BalanceSheet");
+                                                        }
+                                                    });
+                                                    </script>
+                                                </apex:outputPanel>
+                                                <apex:outputPanel layout="block" id="list-glaContainer-BalanceSheet" styleClass="specifyGLAselection">
+                                                </apex:outputPanel>
+                                            </apex:pageBlockSectionItem>
+                                        </apex:pageBlockSection>   
+                                    </apex:outputPanel>         
+                                </apex:pageBlock>
+                            </apex:outputPanel>
+                            <script>
+                            $FFDC("[id$=':balanceSheetPeriods']").ready(function(){
+                                if($FFDC("[id$=':BalanceSheet']")[0].checked)
+                                    $FFDC("[id$=':balanceSheetPeriods']").show();
+                                else
+                                	$FFDC("[id$=':balanceSheetPeriods']").hide();
+                            });
+                            </script>
+                        </apex:outputPanel> 
+                        <!-- Balance sheet period section end -->
+                        
+                        <apex:pageBlockSectionItem >
+                            <apex:outputPanel />
+                            <apex:outputPanel styleClass="radio_button">   
+                                <apex:inputCheckbox id="IncomeStatement" value="{!viewState.isIncomeStatement}" onclick="clearGLAs();checkGLABehaviour('IncomeStatement', this.checked);"/>
+                                <apex:outputLabel value="{!$Label.c2g__incomestatement}" for="IncomeStatement"/>
+                            </apex:outputPanel>
+                        </apex:pageBlockSectionItem>
+                        
+                        <!-- Income Statement Periods section -->
+                        <apex:outputPanel id="IncomeStatementPeriods" style="display:none;">
+                            <apex:outputPanel styleClass="panel2">
+                                <apex:pageBlock mode="maindetail">
+                                    <apex:pageBlockSection columns="1"  >
+                                        
+                                        <apex:pageBlockSectionItem >
+                                            <apex:outputPanel styleClass="fieldLevelHelp">
+                                                <apex:outputLabel value="{!$Label.c2g__incomestatementperiodsfrom}" for="fromPeriodIncomeStatement"  />
+                                            </apex:outputPanel>
+                                            <apex:outputPanel >
+                                                <apex:outputPanel layout="block" styleClass="periodPanel" style="float:left;">
+                                                    <apex:inputField required="true" value="{!ViewState.FromPeriodIncomeStatement.dto.c2g__Period__c}" id="fromPeriodIncomeStatement" onchange="if(isLookupChanged('fromPeriodIncomeStatement'))changeGLASelectionOption('IncomeStatement')" styleClass="period fromPeriodIS raInput"/>
+                                                </apex:outputPanel>
+                                                <apex:outputLabel value="{!$Label.c2g__to}" for="toPeriodIS" style="float:left;"/>
+                                                <apex:outputPanel layout="block" style="float:left;">
+                                                    <apex:inputField required="true" value="{!ViewState.toPeriodIncomeStatement.dto.c2g__Period__c}" id="toPeriodIncomeStatement" onchange="if(isLookupChanged('toPeriodIncomeStatement'))changeGLASelectionOption('IncomeStatement')" styleClass="period toPeriodIS raInput"/>
+                                                </apex:outputPanel>
+                                            </apex:outputPanel>
+                                        </apex:pageBlockSectionItem>  
+                                        
+                                        <apex:pageBlockSectionItem >
+                                            <apex:outputPanel styleClass="fieldLevelHelp">
+                                                <apex:outputLabel value="{!$Label.c2g__transactionspostedinperiod}" for="postingPeriodIncomeStatement" /> 
+                                            </apex:outputPanel>
+                                            <apex:inputField required="true" value="{!ViewState.PostingPeriodIncomeStatement.dto.c2g__Period__c}" id="postingPeriodIncomeStatement" styleClass="period postingPeriodIS"/>
+                                        </apex:pageBlockSectionItem>
+                                        
+                                        <apex:pageBlockSectionItem >
+                                            <apex:outputPanel styleClass="fieldLevelHelp">
+                                                <apex:outputLabel value="{!$Label.c2g__reversaltransactionspostedperiod}" for="reversalPeriodIncomeStatement"/>
+                                            </apex:outputPanel>
+                                            <apex:outputPanel layout="block">
+                                                <apex:inputField value="{!ViewState.reversalPeriodIncomeStatement.dto.c2g__Period__c}" id="reversalPeriodIncomeStatement" styleClass="period reversalPeriodIS"/>
+                                            </apex:outputPanel> 
+                                        </apex:pageBlockSectionItem>
+                                        
+                                    </apex:pageBlockSection>
+                                    
+                                    <apex:pageBlockSection id="glaBehaviourIncomeStatement" columns="1" >    
+                                        <apex:pageBlockSectionItem id="incomeStateGLA">
+                                            <apex:outputPanel styleClass="fieldLevelHelp">
+                                                <apex:outputLabel value="{!$Label.c2g__codarevalwizardactionglas}" for="glaBehaviourIncomeStatement" style="float:left;line-height: 27px;"/>
+                                                <apex:selectRadio id="glaContainer-IncomeStatement-GLA-Options" value="{!viewState.glaBehaviourIncomeStatement}" onchange="changeGLASelectionOption('IncomeStatement');">
+                                                    <apex:selectOptions value="{!viewState.IncomeStatementGLABeharviourOptions}"/>
+                                                </apex:selectRadio>
+                                            </apex:outputPanel>
+                                        </apex:pageBlockSectionItem> 
+                                    </apex:pageBlockSection> 
+                                    <apex:outputPanel id="ManualGLASelection-glaContainer-IncomeStatement" style="display:none;">
+                                        <apex:pageBlockSection columns="1">
+                                            <apex:pageBlockSectionItem >
+                                                <apex:outputPanel styleClass="fieldLevelHelp">
+                                                    <apex:outputLabel value="{!$Label.c2g__specifygla}" for="SpecifyGLA" />
+                                                    <script>
+                                                    $FFDC("[id$='list-glaContainer-IncomeStatement']").ready(function(){
+                                                        var isGLAOp = $FFDC("input[id$='glaContainer-IncomeStatement-GLA-Options:1']")[0];
+                                                        if(isGLAOp && isGLAOp.checked && Object.keys(CurrReval.glasForSelection).length > 0)
+                                                        {
+                                                            prepareGLAList(CurrReval.glasForSelection, "IncomeStatement");
+                                                        }
+                                                    });
+                                                    </script>
+                                                </apex:outputPanel>
+                                                <apex:outputPanel layout="block" id="list-glaContainer-IncomeStatement" styleClass="specifyGLAselection">
+                                                </apex:outputPanel>
+                                            </apex:pageBlockSectionItem>
+                                        </apex:pageBlockSection>
+                                    </apex:outputPanel>
+                                </apex:pageBlock>
+                            </apex:outputPanel>
+                            <script>
+                            $FFDC("[id$=':IncomeStatementPeriods']").ready(function(){
+                                if($FFDC("[id$=':IncomeStatement']")[0].checked)
+                                    $FFDC("[id$=':IncomeStatementPeriods']").show();
+                                else
+                                	$FFDC("[id$=':IncomeStatementPeriods']").hide();
+                            });
+                            </script>                            
+                        </apex:outputPanel>
+                    </apex:outputPanel>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <div class="divBorder"></div>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >                    
+                    <apex:outputPanel styleClass="fieldLevelHelp label_align_left">
+                        <apex:outputLabel value="{!$Label.c2g__linesalreadyrevalued}" for="alreadyRevaluedBehaviour" />
+                    </apex:outputPanel>
+                    <apex:outputPanel >
+                        <apex:outputPanel layout="block" styleClass="requiredBlock" styleclass="alreadyRavalued_radio">
+                            <div id="behaviourOptions">
+                                <apex:selectRadio id="alreadyRevaluedBehaviour" value="{!viewState.alreadyRevaluedBehaviour}">
+                                    <apex:selectOptions value="{!viewState.alreadyRevaluedOptions}"/>
+                                </apex:selectRadio>
+                            </div>
+                        </apex:outputPanel>
+                        
+                        <apex:outputPanel />
+                        <apex:outputPanel >  
+                            <div class="radio_button">
+                                <apex:inputCheckbox value="{!ViewState.IgnoreUnusedCurrencies}" id="ignoreUnusedCurrencies"/>
+                                <apex:outputLabel value="{!$Label.c2g__codacurrencyrevaluationignoreunusedcurrencies}" for="ignoreUnusedCurrencies"/>
+                            </div>
+                        </apex:outputPanel>
+                        
+                    </apex:outputPanel>
+                </apex:pageBlockSectionItem>
+            </apex:pageBlockSection>
+            <!-- Second Section End -->
+        </apex:pageBlock>
+    </apex:form>    
+    <apex:outputPanel id="loadTemplate">
+        <div id="templateWrapOuter" style="display:none" class="currr-reval-mask">
+            <div id="templateWrap">
+                <apex:form >
+                    <apex:actionFunction name="loadTemplateInformation" action="{!viewState.retrieveAllTemplates}" rerender="loadTemplate" oncomplete="showTemplateInformation('templateWrapOuter','template-filter')"/>
+                    <apex:actionFunction name="loadSpecificTemplate" action="{!viewState.getSpecificTemplate}"/>
+                    <apex:inputHidden value="{!viewState.paramTemplateId}" id="theHiddenInput"/>
+                    <apex:pageBlock mode="edit" >
+                        <apex:pageBlockButtons location="bottom">
+                            <apex:commandButton value="{!$Label.c2g__cancel}" id="cancel" rerender="none" onclick="hideTemplateInformation('templateWrapOuter')" rendered="true" style="margin-left:20px;width:60px;"/>
+                            <apex:commandButton value="{!$Label.c2g__allocationloadbuttonheader}" id="loadTemplates" onclick="fetchTemplatesInformation();loadSpecificTemplate();return false;" rendered="{!(viewState.templateDetailsList != null && viewState.templateDetailsList.size > 0)}" style="width:60px"/>
+                        </apex:pageBlockButtons>
+                        
+                       <div class="headerBlock">
+                  			<apex:pageBlockSection columns="1" collapsible="false">
+                                <apex:facet name="header">
+                                    <apex:outputLabel value="{!$Label.c2g__availabletemplates}"></apex:outputLabel>
+                                </apex:facet>
+                                <apex:pageBlockSectionItem >
+                                    <apex:outputPanel >
+                            			<apex:outputLabel value="{!$Label.c2g__actionviewssearch}"/>
+                            			<apex:inputText id="template-filter" onkeyup="searchTable('template-filter','sort');" styleClass="searchText" />
+                                    </apex:outputPanel>
+                                </apex:pageBlockSectionItem>
+                                <apex:pageBlockSectionItem >
+			                         <apex:outputPanel id="table-panel">
+				                         <div class="templateTableDisplay">
+				                             <apex:variable var="rowIndex" value="{!0}"/>
+				                             <apex:pageBlockTable value="{!viewState.templateDetailsList}" var="temp" styleClass="ffdcTable" id="sort" rendered="{!(viewState.templateDetailsList != null && viewState.templateDetailsList.size > 0)}" style="width:100%">
+				                                 <apex:column >
+			                               			 <apex:facet name="header">
+				                                 		 <apex:commandLink action="{!viewState.retrieveAllTemplates}" reRender="table-panel" value="{!$Label.c2g__allocationentertempaltename}{!IF(viewState.columnName=='name',IF(viewState.sortDirection=='ASC','▲','▼'),'')}">
+				                                      		 <apex:param value="name" name="column" assignTo="{!viewState.columnName}"></apex:param>
+				                                   	 </apex:commandLink>
+				                                 	 </apex:facet>
+				                                     <apex:variable var="rowIndex" value="{!rowIndex+1}" />
+				                                     <apex:outputPanel rendered="{!IF(rowIndex == 1,true,false)}">
+				                                         <input type="radio" name="tempName" id="{!temp.templateId}" checked="checked" />
+				                                         <label for="{!temp.templateId}">{!temp.templateName}</label>
+				                                     </apex:outputPanel>
+				                                     <apex:outputPanel rendered="{!IF(rowIndex > 1,true,false)}">
+				                                         <input type="radio" name="tempName" id="{!temp.templateId}"/>
+				                                         <label for="{!temp.templateId}">{!temp.templateName}</label>
+				                                     </apex:outputPanel>
+				                                 </apex:column>
+				                                 <apex:column >
+				                                 	 <apex:facet name="header">
+				                                 		 <apex:commandLink action="{!viewState.retrieveAllTemplates}" reRender="table-panel" value="{!$Label.c2g__createdon}{!IF(viewState.columnName=='createdDate',IF(viewState.sortDirection=='ASC','▲','▼'),'')}">
+				                                      		 <apex:param value="createdDate" name="column" assignTo="{!viewState.columnName}"></apex:param>
+				                                  		 </apex:commandLink>
+				                                 	 </apex:facet>
+				                                     <apex:outputPanel >
+				                                         <apex:outputLabel value="{!temp.createdOn}"/>
+				                                     </apex:outputPanel>
+				                                 </apex:column>
+				                             </apex:pageBlockTable>
+				                         </div>
+			                 		 </apex:outputPanel>
+                                </apex:pageBlockSectionItem>
+                            </apex:pageBlockSection>
+                        </div>
+                    </apex:pageBlock>
+                </apex:form>
+            </div>
+        </div>
+    </apex:outputPanel>
+</apex:page>

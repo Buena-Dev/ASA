@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>USERS.NAME</field>
+    </columns>
+    <columns>
+        <field>ACCOUNT.NAME</field>
+    </columns>
+    <description>2008</description>
+    <filter>
+        <criteriaItems>
+            <column>USERS.NAME</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>stephanie stone,john danila,della gibbons,diane johnson,trent watson,elizabeth troup</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>TYPE</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Lender - ASA - Commercial Bank,Lender - ASA - Cooperative Bank,Lender - ASA - Credit Union,Lender - ASA - Mutual Savings,Lender - ASA - Other,Lender - ASA - School Specific Benefit,Lender - ASA - Secondary Market,Lender - NON - ASA - Commercial Bank,Lender - NON - ASA - Cooperative Bank,Lender - NON - ASA - Credit Union,Lender - NON - ASA - Mutual Savings,Lender - NON - ASA - Other,Lender - NON - ASA - Secondary Market,Servicer</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <name>eric Managed Lenders &amp; Servicers</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>AccountList</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

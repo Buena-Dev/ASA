@@ -1,0 +1,3 @@
+<p>{!Pro_Services_Offering__c.PS_OfferingRequestedBy__c},</p>
+<p>The article request you submitted, {!Pro_Services_Offering__c.Name}, has been approved. For more information, please view the record in Salesforce.</p>
+<p>{!Pro_Services_Offering__c.Link}</p>
